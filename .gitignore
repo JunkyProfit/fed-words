@@ -15,3 +15,6 @@ env/
 *.bak
 *~
 .DS_Store
+# ...but keep site images
+!assets/
+!assets/*.png

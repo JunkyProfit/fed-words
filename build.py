@@ -171,6 +171,8 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <title>Fed Words — every word __SPEAKER__ said, ranked</title>
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--ink:#1d2433;--muted:#6b7385;--accent:#1f4e8c;--line:#e3e6ec}
@@ -179,7 +181,13 @@ html{scroll-behavior:smooth}
 header{background:var(--accent);color:#fff;padding:22px 28px;position:relative}
 header a.about-link{position:absolute;top:22px;right:28px;color:#fff;font-size:14px;opacity:.9;text-decoration:none;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:3px 12px}
 header a.about-link:hover{opacity:1;background:rgba(255,255,255,.12)}
-header h1{padding-right:90px}
+header .brand{display:flex;align-items:center;gap:18px;padding-right:90px}
+header .logo{flex:none;display:block;background:#fff;border-radius:10px;padding:6px 10px;box-shadow:0 1px 3px rgba(0,0,0,.25);line-height:0}
+header .logo img{height:44px;width:auto;display:block}
+header .titles{min-width:0}
+@media (max-width:640px){header{padding:16px}header a.about-link{top:16px;right:16px}
+ header .brand{flex-direction:column;align-items:flex-start;gap:10px;padding-right:0}
+ header .logo img{height:34px}header h1{font-size:20px}}
 #about{scroll-margin-top:16px}#about h2{font-size:18px}#about p{margin:0 0 10px;max-width:72ch}
 .notice{border:1px solid #e0b252;background:#fff8e6;border-left:5px solid #d99a1e;border-radius:8px;padding:10px 14px;margin-top:12px;max-width:72ch}
 .notice strong{color:#7a4d00}header h1{margin:0;font-size:24px}header p{margin:4px 0 0;opacity:.85}
@@ -219,8 +227,10 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f1f5fc}tr.active td{backg
 #pop .more{margin-top:10px;border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px}
 #pop .hint{font-size:12px;color:var(--muted);margin-top:8px}a{color:var(--accent)}.empty{padding:20px;text-align:center;color:var(--muted)}
 </style></head><body>
-<header><a class="about-link" href="#about">About</a><h1>Every word __SPEAKER__ said, ranked</h1>
-<p>Word frequencies across __N__ official transcripts from federalreserve.gov</p></header>
+<header><a class="about-link" href="#about">About</a>
+<div class="brand"><a class="logo" href="./" title="Fed Words home"><img src="assets/logo.png" width="342" height="104" alt="Fed Words"></a>
+<div class="titles"><h1>Every word __SPEAKER__ said, ranked</h1>
+<p>Word frequencies across __N__ official transcripts from federalreserve.gov</p></div></div></header>
 <main>
 <section class="card" id="timeframe"><h2>Timeframe</h2>
 <div class="tf-row"><span class="lbl">Quick</span>
