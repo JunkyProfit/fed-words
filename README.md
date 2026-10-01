@@ -70,10 +70,11 @@ run this every week:
   instead of saving it.
 - After changing the extraction rules, run `python3 fetch.py --refresh && python3 build.py`
   to re-extract all saved speeches.
-- Running it again with no new speeches leaves the data unchanged. Only the
-  "Built" timestamp in `index.html` changes. To keep it
-updated automatically, run both commands on a schedule (cron, or a GitHub Actions
-workflow with `on: schedule`) and commit the new `index.html`.
+- Running it again with no new speeches produces a byte-identical `index.html`.
+  The page shows "Data through <latest transcript date>", not the build time,
+  so there is nothing new to commit. To keep the site updated automatically,
+  run `./publish.sh` on a schedule (cron, or a GitHub Actions workflow with
+  `on: schedule`).
 
 ## Live site
 - Site: https://junkyprofit.github.io/fed-words/
@@ -82,12 +83,14 @@ workflow with `on: schedule`) and commit the new `index.html`.
 
 ### Publish updates
 ```bash
-python3 fetch.py && python3 build.py && git add -A && git commit -m 'Update' && git push
+./publish.sh
 ```
-GitHub Pages redeploys on its own about 1–2 minutes after the push. If there are
-no new speeches, `git commit` reports "nothing to commit" except for `index.html`'s
-"Built" timestamp. You can skip that commit. `.gitignore` keeps `raw/`, screenshots,
-and build logs out of the repo.
+This pulls the latest from GitHub, then runs `python3 fetch.py && python3 build.py`.
+If `git status --porcelain` shows changes, it commits "Add new transcript(s)
+<today's date>" and pushes. Otherwise it prints "No changes". GitHub Pages redeploys
+on its own about 1–2 minutes after a push. The manual equivalent is
+`python3 fetch.py && python3 build.py && git add -A && git commit -m 'Update' && git push`.
+`.gitignore` keeps `raw/`, screenshots, and build logs out of the repo.
 
 ## Deploy (it's a static site)
 - **GitHub Pages:** push this folder to a repo, then go to Settings → Pages →

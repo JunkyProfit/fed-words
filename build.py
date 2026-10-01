@@ -156,7 +156,8 @@ def main():
     for k, v in {
         "__SPEAKER__": html.escape(speaker),
         "__N__": str(len(meta)),
-        "__BUILT__": datetime.now().strftime("%b %d, %Y %H:%M"),
+        # Latest transcript date (not build time) so rebuilds without new speeches are byte-identical.
+        "__DATA_THROUGH__": "{d:%b} {d.day}, {d:%Y}".format(d=datetime.strptime(meta[0]["date"], "%Y-%m-%d")),
         "__NUMNOTE__": "included" if a.keep_numbers else "excluded",
         "__DATA__": json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"),
     }.items():
@@ -247,12 +248,12 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f1f5fc}tr.active td{backg
 <p class="muted">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
 possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. Footnotes and editorial notes excluded.
 Totals, ranks and counts are recomputed in your browser for the selected transcripts.
-Hover a word to see the sentences where it was used (click or tap to pin). Built __BUILT__.</p>
+Hover a word to see the sentences where it was used (click or tap to pin). Data through __DATA_THROUGH__.</p>
 <section class="card" id="about"><h2>About this site</h2>
 <p>This site was built by someone who believes in transparency and truth. It takes the official, publicly available
 speech and testimony transcripts of the Chair of the Federal Reserve, published on
 <a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>,
-and counts every word. Nothing is edited, selected, or interpreted. Every number comes straight from the transcripts,
+and counts every word. Nothing is edited or interpreted; footnotes and editorial notes are left out. Every number comes straight from the transcripts,
 and every sentence links back to its original source so you can check it yourself.</p>
 <p>Our goal is simply to offer a more fun way to explore what the Fed Chair says. We aren't pushing a viewpoint, and
 the word counts are presented without commentary.</p>
