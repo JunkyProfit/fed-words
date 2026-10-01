@@ -1,0 +1,17 @@
+# downloaded raw HTML/JSON (re-creatable via fetch.py)
+raw/
+# screenshots and local build logs
+*.png
+build_output.txt
+# temp files from atomic writes
+*.tmp
+# python / environments
+__pycache__/
+*.pyc
+.venv*/
+venv/
+env/
+# backups / editor / OS cruft
+*.bak
+*~
+.DS_Store

@@ -1,0 +1,22 @@
+[
+  {
+    "file": "warsh20260828a.txt",
+    "date": "2026-08-28",
+    "type": "speech",
+    "title": "In Our Time",
+    "speaker": "Chairman Kevin Warsh",
+    "location": "At \u201cFinancial Innovation: Implications for Payments and Policy,\u201d an economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming",
+    "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+    "fetched": "2026-10-01T15:13:28"
+  },
+  {
+    "file": "warsh20260714a.txt",
+    "date": "2026-07-14",
+    "type": "testimony",
+    "title": "Semiannual Monetary Policy Report to the Congress",
+    "speaker": "Chairman Kevin Warsh",
+    "location": "Before the Committee on Financial Services, U.S. House of Representatives",
+    "url": "https://www.federalreserve.gov/newsevents/testimony/warsh20260714a.htm",
+    "fetched": "2026-10-01T15:13:28"
+  }
+]
