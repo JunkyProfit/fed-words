@@ -174,7 +174,14 @@ TEMPLATE = r"""<!doctype html>
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--ink:#1d2433;--muted:#6b7385;--accent:#1f4e8c;--line:#e3e6ec}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
-header{background:var(--accent);color:#fff;padding:22px 28px}header h1{margin:0;font-size:24px}header p{margin:4px 0 0;opacity:.85}
+html{scroll-behavior:smooth}
+header{background:var(--accent);color:#fff;padding:22px 28px;position:relative}
+header a.about-link{position:absolute;top:22px;right:28px;color:#fff;font-size:14px;opacity:.9;text-decoration:none;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:3px 12px}
+header a.about-link:hover{opacity:1;background:rgba(255,255,255,.12)}
+header h1{padding-right:90px}
+#about{scroll-margin-top:16px}#about h2{font-size:18px}#about p{margin:0 0 10px;max-width:72ch}
+.notice{border:1px solid #e0b252;background:#fff8e6;border-left:5px solid #d99a1e;border-radius:8px;padding:10px 14px;margin-top:12px;max-width:72ch}
+.notice strong{color:#7a4d00}header h1{margin:0;font-size:24px}header p{margin:4px 0 0;opacity:.85}
 main{max-width:960px;margin:0 auto;padding:20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:16px}
 h2{font-size:16px;margin:0 0 10px}.muted{color:var(--muted);font-size:13px}
@@ -211,7 +218,7 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f1f5fc}tr.active td{backg
 #pop .more{margin-top:10px;border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px}
 #pop .hint{font-size:12px;color:var(--muted);margin-top:8px}a{color:var(--accent)}.empty{padding:20px;text-align:center;color:var(--muted)}
 </style></head><body>
-<header><h1>Every word __SPEAKER__ said, ranked</h1>
+<header><a class="about-link" href="#about">About</a><h1>Every word __SPEAKER__ said, ranked</h1>
 <p>Word frequencies across __N__ official transcripts from federalreserve.gov</p></header>
 <main>
 <section class="card" id="timeframe"><h2>Timeframe</h2>
@@ -241,6 +248,20 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f1f5fc}tr.active td{backg
 possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. Footnotes and editorial notes excluded.
 Totals, ranks and counts are recomputed in your browser for the selected transcripts.
 Hover a word to see the sentences where it was used (click or tap to pin). Built __BUILT__.</p>
+<section class="card" id="about"><h2>About this site</h2>
+<p>This site was built by someone who believes in transparency and truth. It takes the official, publicly available
+speech and testimony transcripts of the Chair of the Federal Reserve, published on
+<a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>,
+and counts every word. Nothing is edited, selected, or interpreted. Every number comes straight from the transcripts,
+and every sentence links back to its original source so you can check it yourself.</p>
+<p>Our goal is simply to offer a more fun way to explore what the Fed Chair says. We aren't pushing a viewpoint, and
+the word counts are presented without commentary.</p>
+<p><strong>How it works:</strong> words are lowercased and counted across the transcripts you select.
+“Hide common stopwords” removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
+<div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
+purposes only and is not financial, investment, or trading advice. It is not affiliated with or endorsed by the
+Federal Reserve.</div>
+</section>
 </main>
 <script id="data" type="application/json">__DATA__</script>
 <script>
@@ -276,7 +297,8 @@ function syncTimeframe(){
   $('selSummary').innerHTML=!ds.length?'<b>No transcripts selected.</b>':
     `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> transcript${(all?ds.length:DOCS.length)>1?'s':''}`+
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
-  history.replaceState(null,'',all?location.pathname:'#docs='+[...sel].join(','));
+  if(!all)history.replaceState(null,'','#docs='+[...sel].join(','));
+  else if(location.hash.startsWith('#docs='))history.replaceState(null,'',location.pathname); // keep #about etc.
 }
 
 // ---- counting / table ----
