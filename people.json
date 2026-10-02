@@ -1,0 +1,14 @@
+[
+  {"slug": "warsh", "name": "Kevin Warsh", "display": "Chairman Kevin Warsh", "category": "Fed Chair",
+   "role": "Chair of the Federal Reserve", "org": "Federal Reserve", "policy": "full",
+   "source": "federalreserve.gov", "doc_noun": "official transcripts"},
+  {"slug": "karp", "name": "Alex Karp", "display": "Alex Karp", "category": "CEOs",
+   "role": "Co-Founder & CEO, Palantir Technologies", "org": "Palantir", "policy": "excerpt",
+   "source": "palantir.com", "doc_noun": "shareholder letters"},
+  {"slug": "jassy", "name": "Andy Jassy", "display": "Andy Jassy", "category": "CEOs",
+   "role": "President & CEO, Amazon", "org": "Amazon", "policy": "excerpt",
+   "source": "aboutamazon.com", "doc_noun": "shareholder letters"},
+  {"slug": "abel", "name": "Greg Abel", "display": "Greg Abel", "category": "CEOs",
+   "role": "CEO, Berkshire Hathaway", "org": "Berkshire Hathaway", "policy": "excerpt",
+   "source": "berkshirehathaway.com", "doc_noun": "shareholder letters"}
+]

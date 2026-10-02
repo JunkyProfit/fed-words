@@ -18,7 +18,7 @@ from pathlib import Path
 BASE = "https://www.federalreserve.gov"
 FEEDS = {"speech": "/json/ne-speeches.json", "testimony": "/json/ne-testimony.json"}
 UA = {"User-Agent": "Mozilla/5.0 (fed-words prototype)"}
-OUT = Path(__file__).resolve().parent / "transcripts"
+OUT = Path(__file__).resolve().parent / "transcripts" / "warsh"   # person slug (see people.json)
 INDEX = OUT / "index.json"
 DEFAULT_SPEAKER = r"^Chair(man)?\s+Kevin\s+(M\.\s+)?Warsh$"   # as Chair only, not Governor
 MIN_WORDS = 50   # sanity check: refuse to save a "speech" shorter than this

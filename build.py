@@ -1,16 +1,30 @@
 #!/usr/bin/env python3
-"""Count every word the Fed Chair spoke in transcripts/*.txt and write index.html.
+"""Count every word each person said and write a single self-contained index.html.
 
-Usage: python3 build.py [--keep-numbers] [--top 15]
-Reads transcripts/index.json (written by fetch.py) for titles/dates/links.
+People are listed in people.json.
+  policy "full"    (Fed Chair; public domain): full transcripts in transcripts/<slug>/ (fetch.py);
+                    every sentence is embedded for the hover popover.
+  policy "excerpt" (CEO letters; copyrighted): the full text lives ONLY in the gitignored
+                    local_sources/<slug>/ (fetch_ceo.py). From it we write derived/<slug>.json,
+                    which is committed: word counts plus a limited excerpt set (<= EXCERPT_BUDGET of
+                    each letter's words; <= 10 excerpt sentences shown per word). If local_sources is
+                    absent (e.g. another machine), build.py uses the committed derived/<slug>.json.
+
+Usage: python3 build.py [--keep-numbers] [--top 10] [--split]
 """
-import argparse, html, json, re
+import argparse, html, json, os, re, sys
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).resolve().parent
 TDIR = ROOT / "transcripts"
+LOCAL = ROOT / "local_sources"
+DERIVED = ROOT / "derived"
+DATA_DIR = ROOT / "data"
+EXCERPT_BUDGET = 0.25        # max share of a letter's words that may be embedded as excerpts
+EXCERPTS_PER_WORD = 10       # max excerpt sentences listed per word per letter
+SPLIT_BYTES = 1_500_000      # above this, per-person data goes to data/<slug>.json (loaded on demand)
 
 # Contractions ending in 's that should NOT be treated as possessives.
 S_CONTRACTIONS = {"it's", "that's", "there's", "here's", "what's", "let's", "he's",
@@ -53,11 +67,12 @@ ABBREVIATIONS = {"mr", "mrs", "ms", "dr", "prof", "sr", "jr", "st", "vs", "no", 
 # Candidate break: sentence punctuation (+ closing quotes/brackets), whitespace, then a likely sentence start.
 BREAK_RE = re.compile("[.!?][\"'\u201d\u2019)\\]]*\\s+(?=[\"'\u201c\u2018(\\[]*[A-Z0-9])")
 
-def split_sentences(text):
+def split_sentences(text, with_para=False):
     """Split into sentences. Breaks only at whitespace, so tokens are never cut and
-    per-sentence token counts always add up to the whole-transcript count."""
+    per-sentence token counts always add up to the whole-transcript count.
+    with_para=True returns (paragraph_index, sentence) pairs."""
     out = []
-    for para in re.split(r"\n\s*\n", text):
+    for pi, para in enumerate(re.split(r"\n\s*\n", text)):
         para = " ".join(para.split())
         start = 0
         for m in BREAK_RE.finditer(para):
@@ -69,111 +84,211 @@ def split_sentences(text):
                 or re.fullmatch(r"(?:[A-Za-z]\.)*[A-Za-z]", core)  # U.S. e.g. i.e. N. (initials)
                 or (core == "" and before.endswith(". ."))):       # ". . ." ellipsis
                 continue
-            out.append(para[start:m.end()].strip())
+            out.append((pi, para[start:m.end()].strip()))
             start = m.end()
         if para[start:].strip():
-            out.append(para[start:].strip())
-    return out
+            out.append((pi, para[start:].strip()))
+    return out if with_para else [s for _, s in out]
+
+def write_if_changed(path, text):
+    """Atomic write; leaves the file (and its mtime) untouched if content is identical."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    tmp.replace(path)
+
+def word_index(sent_toks, embed):
+    """{word: [n, m, entries]}: n = occurrences, m = distinct sentences containing it,
+    entries = embedded-sentence positions (one per occurrence) for <= EXCERPTS_PER_WORD sentences
+    (all sentences when embed is None, i.e. full-text people)."""
+    pos = {si: k for k, si in enumerate(sorted(embed))} if embed is not None else None
+    idx = {}
+    for si, toks in enumerate(sent_toks):
+        c = Counter(toks)
+        for w, k in c.items():
+            e = idx.setdefault(w, [0, 0, []])
+            e[0] += k; e[1] += 1
+            if pos is None:
+                e[2] += [si] * k
+            elif si in pos and len(set(e[2])) < EXCERPTS_PER_WORD:
+                e[2] += [pos[si]] * k
+    return idx
+
+def choose_excerpts(sent_toks, total_words):
+    """Greedy: pick sentences that cover the most not-yet-covered content words per word of
+    text, until EXCERPT_BUDGET of the letter's words is used. Deterministic."""
+    budget = int(total_words * EXCERPT_BUDGET)
+    chosen, covered, used = set(), set(), 0
+    types = [set(t) - STOPWORDS for t in sent_toks]
+    while True:
+        best, best_score = None, 0.0
+        for si, toks in enumerate(sent_toks):
+            if si in chosen or not toks or used + len(toks) > budget:
+                continue
+            gain = len(types[si] - covered)
+            score = gain / len(toks)
+            if gain and score > best_score:
+                best, best_score = si, score
+        if best is None:
+            return chosen
+        chosen.add(best); covered |= types[best]; used += len(sent_toks[best])
+
+def build_excerpt_derived(P, keep_numbers):
+    """local_sources/<slug>/ (full text, never committed) -> derived/<slug>.json (committed)."""
+    src = LOCAL / P["slug"]
+    meta = json.loads((src / "index.json").read_text(encoding="utf-8"))
+    docs = []
+    for m in sorted(meta, key=lambda m: (m["date"], m["id"]), reverse=True):
+        text = (src / m["file"]).read_text(encoding="utf-8")
+        pairs = split_sentences(text, with_para=True)
+        sents = [s for _, s in pairs]
+        toks = [tokenize(s, keep_numbers) for s in sents]
+        assert Counter(t for ts in toks for t in ts) == Counter(tokenize(text, keep_numbers)), m["file"]
+        total = sum(len(t) for t in toks)
+        emb = choose_excerpts(toks, total)
+        idx = word_index(toks, emb)
+        d = {k: m[k] for k in ("id", "date", "title", "url", "type", "source")}
+        d.update(words=total, n_sentences=len(sents),
+                 excerpts=[sents[i] for i in sorted(emb)],
+                 counts={w: e[0] for w, e in sorted(idx.items())},
+                 msent={w: e[1] for w, e in sorted(idx.items())},
+                 entries={w: e[2] for w, e in sorted(idx.items()) if e[2]})
+        if m.get("para_pages"):
+            d["pages"] = [m["para_pages"][pairs[i][0]] for i in sorted(emb)]
+        docs.append(d)
+    out = {"slug": P["slug"], "note": "Derived data only: word counts and a limited excerpt set. "
+           "Full letter text is not included; see each document's url.", "keep_numbers": keep_numbers,
+           "excerpt_budget": EXCERPT_BUDGET, "excerpts_per_word": EXCERPTS_PER_WORD, "docs": docs}
+    write_if_changed(DERIVED / f"{P['slug']}.json", json.dumps(out, indent=1, ensure_ascii=False, sort_keys=True) + "\n")
+
+def load_person(P, keep_numbers):
+    """Return a list of uniform doc dicts: meta + s (sentences shown) + sp (pages) + idx {w: [n, m, entries]}."""
+    docs = []
+    if P["policy"] == "full":
+        for m in json.loads((TDIR / P["slug"] / "index.json").read_text(encoding="utf-8")):
+            path = TDIR / P["slug"] / m["file"]
+            if not path.exists():
+                print(f"WARN: {path} missing; skipped"); continue
+            text = path.read_text(encoding="utf-8")
+            sents = split_sentences(text)
+            toks = [tokenize(s, keep_numbers) for s in sents]
+            assert Counter(t for ts in toks for t in ts) == Counter(tokenize(text, keep_numbers)), m["file"]
+            docs.append({"id": Path(m["file"]).stem, "date": m["date"], "type": m["type"], "title": m["title"],
+                         "location": m.get("location", ""), "url": m["url"], "words": sum(map(len, toks)),
+                         "n_sentences": len(sents), "s": sents, "sp": None, "idx": word_index(toks, None)})
+    else:
+        if (LOCAL / P["slug"] / "index.json").exists():
+            build_excerpt_derived(P, keep_numbers)          # refresh committed derived data from local text
+        dpath = DERIVED / f"{P['slug']}.json"
+        if not dpath.exists():
+            print(f"WARN: no data for {P['slug']} (run fetch_ceo.py); skipped"); return []
+        der = json.loads(dpath.read_text(encoding="utf-8"))
+        if der.get("keep_numbers", False) != keep_numbers:
+            print(f"WARN: derived/{P['slug']}.json was built with keep_numbers={der.get('keep_numbers')}")
+        for d in der["docs"]:
+            idx = {w: [n, d["msent"][w], d["entries"].get(w, [])] for w, n in d["counts"].items()}
+            docs.append({"id": d["id"], "date": d["date"], "type": d["type"], "title": d["title"],
+                         "location": d["source"], "url": d["url"], "words": d["words"],
+                         "n_sentences": d["n_sentences"], "s": d["excerpts"], "sp": d.get("pages"), "idx": idx})
+    docs.sort(key=lambda d: (d["date"], d["url"]), reverse=True)
+    return docs
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep-numbers", action="store_true", help="count digit-only tokens like 2026")
-    ap.add_argument("--top", type=int, default=15)
+    ap.add_argument("--top", type=int, default=10)
+    ap.add_argument("--split", action="store_true", help="force per-person data files in data/")
     a = ap.parse_args()
 
-    meta = []
-    for m in json.loads((TDIR / "index.json").read_text(encoding="utf-8")):
-        if (TDIR / m["file"]).exists():
-            meta.append(m)
-        else:
-            print(f"WARN: {m['file']} listed in index.json but missing; skipped")
-    if not meta:
-        raise SystemExit("No transcripts found; run fetch.py first.")
-    meta.sort(key=lambda m: (m["date"], m["url"]), reverse=True)
-    total = Counter()
-    for m in meta:
-        text = (TDIR / m["file"]).read_text(encoding="utf-8")
-        m["sents"] = split_sentences(text)
-        m["sent_toks"] = [tokenize(x, a.keep_numbers) for x in m["sents"]]
-        c = Counter(t for toks in m["sent_toks"] for t in toks)
-        # Consistency guarantee: sentence-level occurrences == whole-text counts.
-        assert c == Counter(tokenize(text, a.keep_numbers)), f"sentence split changed counts in {m['file']}"
-        m["counts"], m["words"], m["unique"] = c, sum(c.values()), len(c)
-        m["id"], m["year"] = Path(m["file"]).stem, m["date"][:4]
-        total.update(c)
+    people_out, report = [], []
+    for P in json.loads((ROOT / "people.json").read_text(encoding="utf-8")):
+        docs = load_person(P, a.keep_numbers)
+        if not docs:
+            continue
+        total = Counter()
+        for d in docs:
+            total.update({w: e[0] for w, e in d["idx"].items()})
+        rows = sorted(total.items(), key=lambda kv: (-kv[1], kv[0]))
+        vocab = [w for w, _ in rows]
+        vidx = {w: i for i, w in enumerate(vocab)}
+        jdocs = []
+        for d in docs:
+            x = []
+            for w in sorted(d["idx"], key=vidx.get):
+                n, m, ent = d["idx"][w]
+                x += [vidx[w], n, m, len(ent)] + ent
+            jd = {k: d[k] for k in ("id", "date", "type", "title", "location", "url", "words", "n_sentences")}
+            jd.update(year=d["date"][:4], s=d["s"], x=x)
+            if d["sp"]:
+                jd["sp"] = d["sp"]
+            jdocs.append(jd)
+        people_out.append({k: P[k] for k in ("slug", "name", "display", "category", "role", "org", "policy",
+                                             "source", "doc_noun")} | {"vocab": vocab, "docs": jdocs})
 
-    rows = sorted(total.items(), key=lambda kv: (-kv[1], kv[0]))
-    n_total, n_unique = sum(total.values()), len(total)
-    non_stop = [(w, c) for w, c in rows if w not in STOPWORDS]
-    n_total_ns = sum(c for _, c in non_stop)
+        # ---- console report (all numbers come from here) ----
+        ns = [(w, c) for w, c in rows if w not in STOPWORDS]
+        print(f"== {P['display']} ({P['category']}; {P['policy']}): {len(docs)} document(s), "
+              f"{docs[-1]['date']} to {docs[0]['date']}")
+        for d in docs:
+            dn = {w: e[0] for w, e in d["idx"].items() if w not in STOPWORDS}
+            line = (f"  {d['date']} {d['type']:9s} {d['words']:5d} words {len(d['idx']):5d} unique | "
+                    f"stopwords hidden: {sum(dn.values()):5d} words {len(dn):5d} unique | "
+                    f"{d['n_sentences']:4d} sentences | {d['title']}")
+            print(line)
+            if P["policy"] == "excerpt":
+                ew = sum(len(tokenize(s, a.keep_numbers)) for s in d["s"])
+                cov = sum(1 for e in d["idx"].values() if e[2]) / len(d["idx"])
+                print(f"      embedded excerpts: {len(d['s'])}/{d['n_sentences']} sentences "
+                      f"({100 * len(d['s']) / d['n_sentences']:.1f}%), {ew}/{d['words']} words "
+                      f"({100 * ew / d['words']:.1f}%); words with >=1 excerpt: {100 * cov:.1f}%")
+                if len(d["s"]) > 0.5 * d["n_sentences"]:
+                    sys.exit(f"ERROR: {d['id']} would embed {len(d['s'])}/{d['n_sentences']} sentences (>50%); "
+                             f"lower EXCERPT_BUDGET / EXCERPTS_PER_WORD")
+        for y in sorted({d["date"][:4] for d in docs}, reverse=True):
+            yc = Counter()
+            for d in docs:
+                if d["date"][:4] == y:
+                    yc.update({w: e[0] for w, e in d["idx"].items()})
+            print(f"  Year {y}: {sum(yc.values())} words, {len(yc)} unique")
+        print(f"  All: total words: {sum(total.values())}   Unique words: {len(total)}")
+        print(f"  All, stopwords hidden: {sum(c for _, c in ns)} words, {len(ns)} unique")
+        print(f"  Top {a.top} (all words): " + ", ".join(f"{w} {c}" for w, c in rows[:a.top]))
+        print(f"  Top {a.top} (stopwords hidden): " + ", ".join(f"{w} {c}" for w, c in ns[:a.top]))
 
-    print(f"Transcripts: {len(meta)}  ({meta[-1]['date']} to {meta[0]['date']})")
-    for m in meta:
-        ns = {w: c for w, c in m["counts"].items() if w not in STOPWORDS}
-        top = sorted(m["counts"].items(), key=lambda kv: (-kv[1], kv[0]))[:5]
-        print(f"  {m['date']} {m['type']:9s} {m['words']:5d} words {m['unique']:5d} unique | "
-              f"stopwords hidden: {sum(ns.values()):5d} words {len(ns):5d} unique | "
-              f"{len(m['sents']):4d} sentences | {m['title']}")
-        print(f"      top5: " + ", ".join(f"{w} {c}" for w, c in top))
-    for y in sorted({m["year"] for m in meta}, reverse=True):
-        ms = [m for m in meta if m["year"] == y]
-        yc = Counter()
-        for m in ms:
-            yc.update(m["counts"])
-        print(f"  Year {y}: {len(ms)} transcript(s), {sum(yc.values())} words, {len(yc)} unique")
-    print(f"All: total words: {n_total}   Unique words: {n_unique}")
-    print(f"All, stopwords hidden: {n_total_ns} words, {len(non_stop)} unique")
-    print(f"\nTop {a.top} (all words):")
-    for i, (w, c) in enumerate(rows[: a.top], 1):
-        print(f"  {i:2d}. {w:15s} {c}")
-    print(f"\nTop {a.top} (stopwords hidden):")
-    for i, (w, c) in enumerate(non_stop[: a.top], 1):
-        print(f"  {i:2d}. {w:15s} {c}")
-
-    # Compact embedding: shared vocabulary; per transcript the sentence texts ("s") and a flat
-    # word->sentence index ("x") = [wordIndex, n, sent_1 .. sent_n, ...] with one sentence index
-    # per occurrence (so n == that word's count in the transcript; repeats = used twice in a sentence).
-    vocab = [w for w, _ in rows]
-    vidx = {w: i for i, w in enumerate(vocab)}
-    docs = []
-    for m in meta:
-        occ = {}
-        for si, toks in enumerate(m["sent_toks"]):
-            for t in toks:
-                occ.setdefault(vidx[t], []).append(si)
-        flat = []
-        for wi in sorted(occ):
-            flat += [wi, len(occ[wi])] + occ[wi]
-        d = {k: m[k] for k in ("id", "date", "year", "type", "title", "location", "url", "words")}
-        d["s"] = m["sents"]
-        d["x"] = flat
-        docs.append(d)
-    data = {"vocab": vocab, "docs": docs, "stop": sorted(STOPWORDS),
-            "sc": sorted(S_CONTRACTIONS), "keepNum": a.keep_numbers}
-
-    speaker = meta[0].get("speaker", "Fed Chair")
-    page = TEMPLATE
-    for k, v in {
-        "__SPEAKER__": html.escape(speaker),
-        "__N__": str(len(meta)),
-        # Latest transcript date (not build time) so rebuilds without new speeches are byte-identical.
-        "__DATA_THROUGH__": "{d:%b} {d.day}, {d:%Y}".format(d=datetime.strptime(meta[0]["date"], "%Y-%m-%d")),
-        "__NUMNOTE__": "included" if a.keep_numbers else "excluded",
-        "__DATA__": json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"),
-    }.items():
-        page = page.replace(k, v)
-    out = ROOT / "index.html"
-    tmp = ROOT / "index.html.tmp"
-    tmp.write_text(page, encoding="utf-8")
-    tmp.replace(out)                       # atomic: never leaves a half-written index.html
-    print(f"\nWrote {out} ({out.stat().st_size / 1024:.0f} KB)")
+    common = {"stop": sorted(STOPWORDS), "sc": sorted(S_CONTRACTIONS), "keepNum": a.keep_numbers}
+    def render(inline_people):
+        data = dict(common, people=inline_people)
+        return TEMPLATE.replace("__DEFAULT_TITLE__", html.escape(people_out[0]["display"])).replace(
+            "__NUMNOTE__", "included" if a.keep_numbers else "excluded").replace(
+            "__DATA__", json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"))
+    page = render(people_out)
+    split = a.split or len(page.encode("utf-8")) > SPLIT_BYTES
+    if split:   # keep the first (default) person inline; load the others on demand
+        inline = [people_out[0]]
+        for p in people_out[1:]:
+            write_if_changed(DATA_DIR / f"{p['slug']}.json", json.dumps(p, separators=(",", ":"), ensure_ascii=False) + "\n")
+            inline.append({k: p[k] for k in p if k not in ("vocab", "docs")} | {"external": f"data/{p['slug']}.json",
+                                                                               "ndocs": len(p["docs"])})
+        page = render(inline)
+    else:       # remove stale generated per-person files from a previous split build
+        for p in people_out:
+            f = DATA_DIR / f"{p['slug']}.json"
+            if f.exists():
+                f.unlink()
+        if DATA_DIR.exists() and not any(DATA_DIR.iterdir()):
+            DATA_DIR.rmdir()
+    write_if_changed(ROOT / "index.html", page)
+    print(f"\nWrote {ROOT / 'index.html'} ({len(page.encode('utf-8')) / 1024:.0f} KB"
+          f"{', per-person data in data/' if split else ', all data inline'})")
 
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<title>Fed Words — every word __SPEAKER__ said, ranked</title>
+<title>Fed Words — every word __DEFAULT_TITLE__ said, ranked</title>
 <style>
 :root{--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
@@ -228,22 +343,29 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f0f7f2}tr.active td{backg
 #pop .src{font-size:12px;margin-left:6px;white-space:nowrap}#pop .twice{font-size:11px;color:#8a5a00;background:#fff3cd;border-radius:4px;padding:0 4px;margin-left:4px}
 #pop .more{margin-top:10px;border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px}
 #pop .hint{font-size:12px;color:var(--muted);margin-top:8px}a{color:var(--accent)}.empty{padding:20px;text-align:center;color:var(--muted)}
+#picker .tf-row:last-of-type{margin-bottom:4px}#personInfo{margin-top:2px}
+#pop .cap{font-size:12px;color:var(--muted);margin-top:8px;padding-top:6px;border-top:1px dashed var(--line)}
 </style></head><body>
 <header><a class="about-link" href="#about">About</a>
 <div class="brand"><a class="logo" href="./" title="Fed Words home"><img src="assets/logo.png" width="342" height="104" alt="Fed Words"></a>
-<div class="titles"><h1>Every word __SPEAKER__ said, ranked</h1>
-<p>Word frequencies across __N__ official transcripts from federalreserve.gov</p></div></div></header>
+<div class="titles"><h1 id="h1">Every word __DEFAULT_TITLE__ said, ranked</h1>
+<p id="sub">Word frequencies from official sources</p></div></div></header>
 <main>
+<section class="card" id="picker"><h2>Who</h2>
+<div class="tf-row" id="cats"><span class="lbl">Category</span></div>
+<div class="tf-row" id="persons"><span class="lbl">Person</span></div>
+<div id="personInfo" class="muted"></div>
+</section>
 <section class="card" id="timeframe"><h2>Timeframe</h2>
 <div class="tf-row"><span class="lbl">Quick</span>
   <button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button></div>
 <div class="tf-row" id="years"><span class="lbl">By year</span></div>
-<div class="tf-row"><span class="lbl">Speeches</span><span class="muted">tick one or more · “only” selects just that one</span></div>
+<div class="tf-row"><span class="lbl">Documents</span><span class="muted">tick one or more · “only” selects just that one</span></div>
 <ul class="speeches" id="docList"></ul>
 <div id="selSummary"></div>
 </section>
 <section class="card stats">
-<div class="stat"><b id="sDocs">–</b>transcripts selected</div>
+<div class="stat"><b id="sDocs">–</b>documents selected</div>
 <div class="stat"><b id="sTotal">–</b>total words</div>
 <div class="stat"><b id="sUnique">–</b>unique words</div>
 <div class="stat"><b id="sShown">–</b>words shown</div>
@@ -257,49 +379,88 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f0f7f2}tr.active td{backg
 <tbody id="tb"></tbody></table>
 <p class="muted" id="more"></p>
 </section>
-<p class="muted">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
-possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. Footnotes and editorial notes excluded.
-Totals, ranks and counts are recomputed in your browser for the selected transcripts.
-Hover a word to see the sentences where it was used (click or tap to pin). Data through __DATA_THROUGH__.</p>
+<p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
+possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. Fed transcripts: footnotes and editorial notes excluded.
+CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded.
+Totals, ranks and counts are recomputed in your browser for the selected person and documents.
+Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span></p>
 <section class="card" id="about"><h2>About this site</h2>
 <p>This site was built by someone who believes in transparency and truth. It takes the official, publicly available
 speech and testimony transcripts of the Chair of the Federal Reserve, published on
 <a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>,
-and counts every word. Nothing is edited or interpreted; footnotes and editorial notes are left out. Every number comes straight from the transcripts,
-and every sentence links back to its original source so you can check it yourself.</p>
-<p>Our goal is simply to offer a more fun way to explore what the Fed Chair says. We aren't pushing a viewpoint, and
-the word counts are presented without commentary.</p>
-<p><strong>How it works:</strong> words are lowercased and counted across the transcripts you select.
+and shareholder letters written by the CEOs of well-known companies, and counts every word. Nothing is edited or
+interpreted; footnotes and editorial notes are left out. Every number comes straight from the source documents,
+and every sentence shown links back to its original source so you can check it yourself.</p>
+<p>CEO letters are publicly posted by each company on its own website; we show word counts and short excerpts with
+links to the original. This site is not affiliated with or endorsed by any company or person listed.</p>
+<p>Our goal is simply to offer a more fun way to explore what the Fed Chair and these CEOs say. We aren't pushing a
+viewpoint, and the word counts are presented without commentary.</p>
+<p><strong>How it works:</strong> words are lowercased and counted across the documents you select.
 “Hide common stopwords” removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
 <div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
 purposes only and is not financial, investment, or trading advice. It is not affiliated with or endorsed by the
-Federal Reserve.</div>
+Federal Reserve or by any company or person listed.</div>
 </section>
 </main>
 <script id="data" type="application/json">__DATA__</script>
 <script>
 const D=JSON.parse(document.getElementById('data').textContent);
-const STOP=new Set(D.stop), V=D.vocab, DOCS=D.docs;
+const STOP=new Set(D.stop),SC=new Set(D.sc),PEOPLE=D.people,BY=new Map(PEOPLE.map(p=>[p.slug,p]));
+const CATS=[...new Set(PEOPLE.map(p=>p.category))],DEFAULT=PEOPLE[0].slug;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-const YEARS=[...new Set(DOCS.map(d=>d.year))].sort().reverse();
-let sel=new Set(DOCS.map(d=>d.id)), sortK='count', sortDir=-1; const LIMIT=2000;
+let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10;
+const q=$('q'),hide=$('hideStop'),tb=$('tb');
+
+// ---- per-person data (inline, or data/<slug>.json when the page would be too large) ----
+async function loadPerson(p){
+  if(!p.docs){const r=await fetch(p.external);if(!r.ok)throw new Error('could not load '+p.external);Object.assign(p,await r.json())}
+  if(!p.ready){p.VI=new Map(p.vocab.map((w,i)=>[w,i]));
+    p.docs.forEach(d=>{d.cnt=new Map();d.ms=new Map();d.occ=new Map();const x=d.x;
+      for(let i=0;i<x.length;){const wi=x[i],n=x[i+1],m=x[i+2],k=x[i+3];d.cnt.set(wi,n);d.ms.set(wi,m);d.occ.set(wi,x.slice(i+4,i+4+k));i+=4+k}});
+    p.ready=true}
+  return p;
+}
+
+// ---- category / person picker ----
+function renderPicker(){
+  $('cats').innerHTML='<span class="lbl">Category</span>'+CATS.map(c=>`<button class="chip${P.category===c?' on':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+  $('persons').innerHTML='<span class="lbl">Person</span>'+PEOPLE.filter(p=>p.category===P.category).map(p=>
+    `<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}</button>`).join('');
+  $('personInfo').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?P.doc_noun.replace(/s$/,''):P.doc_noun} from ${P.source}`;
+  document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
+  document.querySelectorAll('#persons button').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
+}
+async function setPerson(slug,docIds){
+  hidePop();
+  const p=await loadPerson(BY.get(slug)||BY.get(DEFAULT));
+  P=p;V=p.vocab;VI=p.VI;DOCS=p.docs;YEARS=[...new Set(DOCS.map(d=>d.year))].sort().reverse();
+  const ids=(docIds||[]).filter(i=>DOCS.some(d=>d.id===i));
+  sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
+  $('h1').textContent=`Every word ${P.display} said, ranked`;
+  document.title=`Fed Words — every word ${P.display} said, ranked`;
+  const noun=n=>n===1?P.doc_noun.replace(/s$/,''):P.doc_noun;
+  $('sub').textContent=`Word frequencies across ${DOCS.length} ${noun(DOCS.length)} from ${P.source}`;
+  $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
+  renderPicker();buildTimeframe();update();
+}
 
 // ---- timeframe UI ----
-$('docList').innerHTML=DOCS.map(d=>`<li data-id="${d.id}"><input type="checkbox" id="cb_${d.id}" data-id="${d.id}">
+function buildTimeframe(){
+  $('docList').innerHTML=DOCS.map(d=>`<li data-id="${d.id}"><input type="checkbox" id="cb_${d.id}" data-id="${d.id}">
  <label for="cb_${d.id}"><span class="date">${fmtDate(d.date)}</span> <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>
  <span class="muted">(${d.type}, ${d.words.toLocaleString()} words) — ${esc(d.location)}</span></label>
  <a class="only" data-only="${d.id}">only</a></li>`).join('');
-$('years').insertAdjacentHTML('beforeend',YEARS.map(y=>{const n=DOCS.filter(d=>d.year===y).length;
- return `<label class="chip" id="yc_${y}"><input type="checkbox" data-year="${y}"> ${y} <span class="muted">(${n})</span></label>`}).join(''));
-document.querySelectorAll('#docList input').forEach(cb=>cb.onchange=()=>{cb.checked?sel.add(cb.dataset.id):sel.delete(cb.dataset.id);update()});
-document.querySelectorAll('#docList a.only').forEach(a=>a.onclick=()=>{sel=new Set([a.dataset.only]);update()});
-document.querySelectorAll('#years input').forEach(cb=>cb.onchange=()=>{
-  DOCS.filter(d=>d.year===cb.dataset.year).forEach(d=>cb.checked?sel.add(d.id):sel.delete(d.id));update()});
+  $('years').innerHTML='<span class="lbl">By year</span>'+YEARS.map(y=>{const n=DOCS.filter(d=>d.year===y).length;
+    return `<label class="chip" id="yc_${y}"><input type="checkbox" data-year="${y}"> ${y} <span class="muted">(${n})</span></label>`}).join('');
+  document.querySelectorAll('#docList input').forEach(cb=>cb.onchange=()=>{cb.checked?sel.add(cb.dataset.id):sel.delete(cb.dataset.id);update()});
+  document.querySelectorAll('#docList a.only').forEach(a=>a.onclick=()=>{sel=new Set([a.dataset.only]);update()});
+  document.querySelectorAll('#years input').forEach(cb=>cb.onchange=()=>{
+    DOCS.filter(d=>d.year===cb.dataset.year).forEach(d=>cb.checked?sel.add(d.id):sel.delete(d.id));update()});
+}
 $('btnAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
 $('btnNone').onclick=()=>{sel=new Set();update()};
-
 function syncTimeframe(){
   DOCS.forEach(d=>{const on=sel.has(d.id);$('cb_'+d.id).checked=on;document.querySelector(`li[data-id="${d.id}"]`).classList.toggle('sel',on)});
   YEARS.forEach(y=>{const ids=DOCS.filter(d=>d.year===y).map(d=>d.id),k=ids.filter(i=>sel.has(i)).length;
@@ -307,18 +468,20 @@ function syncTimeframe(){
     $('yc_'+y).classList.toggle('on',k===ids.length)});
   const all=sel.size===DOCS.length;$('btnAll').classList.toggle('on',all);$('btnNone').classList.toggle('on',sel.size===0);
   const ds=DOCS.filter(d=>sel.has(d.id));
-  $('selSummary').innerHTML=!ds.length?'<b>No transcripts selected.</b>':
-    `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> transcript${(all?ds.length:DOCS.length)>1?'s':''}`+
+  $('selSummary').innerHTML=!ds.length?'<b>No documents selected.</b>':
+    `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> document${(all?ds.length:DOCS.length)>1?'s':''}`+
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
-  if(!all)history.replaceState(null,'','#docs='+[...sel].join(','));
-  else if(location.hash.startsWith('#docs='))history.replaceState(null,'',location.pathname); // keep #about etc.
+  // URL state: #person=<slug>&docs=<id,...>; default person + all docs = clean URL. Leaves #about etc. alone.
+  const h=location.hash,ours=!h||/^#(person|docs)=/.test(h);
+  const want=(P.slug===DEFAULT&&all)?'':'#person='+P.slug+(all?'':'&docs='+[...sel].join(','));
+  if(want)history.replaceState(null,'',want);else if(ours&&h)history.replaceState(null,'',location.pathname+location.search);
 }
 
 // ---- counting / table ----
 let BASE=[];
 function aggregate(){
   const cnt=new Map();
-  DOCS.forEach(d=>{if(!sel.has(d.id))return;const x=d.x;for(let i=0;i<x.length;){cnt.set(x[i],(cnt.get(x[i])||0)+x[i+1]);i+=2+x[i+1]}});
+  DOCS.forEach(d=>{if(!sel.has(d.id))return;d.cnt.forEach((n,wi)=>cnt.set(wi,(cnt.get(wi)||0)+n))});
   BASE=[...cnt].map(([i,n])=>({word:V[i],count:n,stop:STOP.has(V[i])}));
 }
 function render(){
@@ -330,7 +493,7 @@ function render(){
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
   const max=base.length?base[0].count:1;
   tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
-    :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one transcript above.'}</td></tr>`;
+    :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
   $('sDocs').textContent=sel.size+' / '+DOCS.length;
   $('sTotal').textContent=base.reduce((t,x)=>t+x.count,0).toLocaleString();
   $('sUnique').textContent=base.length.toLocaleString();
@@ -338,17 +501,12 @@ function render(){
   $('more').textContent=list.length>LIMIT?`Showing first ${LIMIT} of ${list.length} — use the filter to find others.`:'';
   document.querySelectorAll('th[data-k]').forEach(th=>{th.textContent=th.textContent.replace(/ [▲▼]$/,'')+(th.dataset.k===sortK?(sortDir<0?' ▼':' ▲'):'')});
 }
-function update(){if(typeof hidePop==='function')hidePop();syncTimeframe();aggregate();render()}
-const q=$('q'),hide=$('hideStop'),tb=$('tb');
+function update(){hidePop();syncTimeframe();aggregate();render()}
 document.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{hidePop();const k=th.dataset.k;
   if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=k==='count'?-1:1}render()});
 q.oninput=()=>{hidePop();render()};hide.onchange=()=>{hidePop();render()};
-// restore selection from URL (#docs=id1,id2) so a view can be shared/bookmarked
-const m=location.hash.match(/docs=([^&]*)/);
-if(m){const ids=m[1].split(',').filter(i=>DOCS.some(d=>d.id===i));if(ids.length)sel=new Set(ids)}
+
 // ---- sentence popover (hover = preview, click/tap = pin) ----
-const SC=new Set(D.sc), VI=new Map(V.map((w,i)=>[w,i]));
-DOCS.forEach(d=>{d.occ=new Map();const x=d.x;for(let i=0;i<x.length;){const wi=x[i],n=x[i+1];d.occ.set(wi,x.slice(i+2,i+2+n));i+=2+n}});
 const TOK=/[a-z0-9]+(?:'[a-z]+)*/g;
 function highlight(sent,word){ // same tokenizer rules as build.py; returns html + number of matches
   const norm=sent.replace(/[\u2018\u2019`]/g,"'"),low=norm.toLowerCase(),same=low.length===sent.length;
@@ -365,29 +523,43 @@ function fragUrl(url,sent){ // Chrome/Edge/Safari text fragment: jumps to & high
   if(w.length<=10)return url+'#:~:text='+enc(trimP(sent));
   return url+'#:~:text='+enc(trimP(w.slice(0,5).join(' ')))+','+enc(trimP(w.slice(-5).join(' ')));
 }
-function occurrences(word){ // [{doc, si, n}] for selected transcripts, newest first
+function srcLink(d,si){ // PDFs can't take text fragments; link to the page instead
+  if(d.sp)return {href:d.url+'#page='+d.sp[si],label:'source ↗ (p. '+d.sp[si]+')'};
+  return {href:fragUrl(d.url,d.s[si]),label:'source ↗'};
+}
+function stats(word){ // occurrences / distinct sentences / docs, from counts (independent of excerpts)
+  const wi=VI.get(word);let n=0,m=0,docs=[];
+  DOCS.forEach(d=>{if(!sel.has(d.id)||!d.cnt.has(wi))return;n+=d.cnt.get(wi);m+=d.ms.get(wi);docs.push(d)});
+  return {n,m,docs};
+}
+function occurrences(word){ // [{doc, si, n}] embedded sentences for selected docs, newest first
   const wi=VI.get(word),items=[];
   DOCS.forEach(d=>{if(!sel.has(d.id))return;const a=d.occ.get(wi);if(!a)return;
     for(let i=0;i<a.length;){let j=i;while(j<a.length&&a[j]===a[i])j++;items.push({doc:d,si:a[i],n:j-i});i=j}});
   return items;
 }
 const pop=document.createElement('div');pop.id='pop';pop.hidden=true;pop.setAttribute('role','dialog');document.body.appendChild(pop);
-let pinned=false,curWord=null,curRow=null,showAll=false,hoverT=null,hideT=null;const FIRST=10;
+let pinned=false,curWord=null,curRow=null,showAll=false,hoverT=null,hideT=null;
 function popHTML(word){
-  const items=occurrences(word),occ=items.reduce((t,x)=>t+x.n,0),ndocs=new Set(items.map(x=>x.doc.id)).size;
-  const shown=showAll?items:items.slice(0,FIRST);let h=`<div class="ph"><div><b>${esc(word)}</b>
-   <div class="t" id="popCount">${occ.toLocaleString()} occurrence${occ===1?'':'s'} in ${items.length.toLocaleString()} sentence${items.length===1?'':'s'}`+
-   ` · ${ndocs} of ${sel.size} selected transcript${sel.size===1?'':'s'}${occ!==items.length?' · some sentences use it more than once':''}</div></div>
+  const st=stats(word),items=occurrences(word),excerpt=P.policy==='excerpt';
+  const shown=(showAll&&!excerpt)?items:items.slice(0,FIRST),noun=excerpt?'letter':'document';
+  let h=`<div class="ph"><div><b>${esc(word)}</b>
+   <div class="t" id="popCount">${st.n.toLocaleString()} occurrence${st.n===1?'':'s'} in ${st.m.toLocaleString()} sentence${st.m===1?'':'s'}`+
+   ` · ${st.docs.length} of ${sel.size} selected ${noun}${sel.size===1?'':'s'}${st.n!==st.m?' · some sentences use it more than once':''}</div></div>
    <button class="x" title="Close (Esc)" aria-label="Close">×</button></div>`;
   let lastDoc=null;
   shown.forEach(it=>{if(it.doc!==lastDoc){if(lastDoc)h+='</ol>';lastDoc=it.doc;
       h+=`<div class="doc">${fmtDate(it.doc.date)} · <a href="${esc(it.doc.url)}" target="_blank" rel="noopener">${esc(it.doc.title)}</a></div><ol>`}
-    const s=it.doc.s[it.si],hl=highlight(s,word);
+    const s=it.doc.s[it.si],hl=highlight(s,word),L=srcLink(it.doc,it.si);
     h+=`<li data-n="${it.n}" data-hl="${hl.n}">${hl.html}${it.n>1?`<span class="twice">×${it.n}</span>`:''}`+
-       `<a class="src" href="${esc(fragUrl(it.doc.url,s))}" target="_blank" rel="noopener" title="Open the speech at this sentence">source ↗</a></li>`});
+       `<a class="src" href="${esc(L.href)}" target="_blank" rel="noopener" title="Open the original at this sentence">${L.label}</a></li>`});
   if(lastDoc)h+='</ol>';
-  if(items.length>FIRST&&!showAll)h+=`<button class="more">Show all ${items.length.toLocaleString()} sentences (${occ.toLocaleString()} occurrences)</button>`;
-  h+=`<div class="hint">${pinned?'Pinned. Press Esc or × to close.':'Click the word to pin this panel.'} “source ↗” jumps to the sentence (Chrome/Edge/Safari); the title link opens the speech.</div>`;
+  if(excerpt){
+    const links=st.docs.map(d=>`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>`).join(', ');
+    h+=`<div class="cap" id="popCap">${shown.length?`Showing ${shown.length} of ${st.m.toLocaleString()} sentence${st.m===1?'':'s'}`:'No excerpt shown for this word'}`+
+       ` — read the full letter${st.docs.length>1?'s':''} at ${esc(P.source)}: ${links}</div>`;
+  }else if(items.length>FIRST&&!showAll)h+=`<button class="more">Show all ${items.length.toLocaleString()} sentences (${st.n.toLocaleString()} occurrences)</button>`;
+  h+=`<div class="hint">${pinned?'Pinned. Press Esc or × to close.':'Click the word to pin this panel.'} “source ↗” opens the original at that sentence${excerpt?' (PDFs: at that page)':' (Chrome/Edge/Safari)'}; the title link opens the document.</div>`;
   return h;
 }
 function placePop(){
@@ -412,14 +584,22 @@ pop.addEventListener('mouseleave',()=>{if(!pinned)hideT=setTimeout(hidePop,300)}
 tb.addEventListener('click',e=>{const tr=e.target.closest('tr[data-w]');if(!tr)return;clearTimeout(hoverT);clearTimeout(hideT);pinned=false;showPop(tr,true)});
 pop.addEventListener('click',e=>{e.stopPropagation(); // re-render detaches e.target; don't let the outside-click handler close us
   if(e.target.closest('.x')){hidePop();return}
-  if(e.target.closest('.more')){showAll=true;pinned=true;pop.innerHTML=popHTML(curWord);pop.classList.add('expanded');placePop()}});
+  if(e.target.closest('.more')&&P.policy!=='excerpt'){showAll=true;pinned=true;pop.innerHTML=popHTML(curWord);pop.classList.add('expanded');placePop()}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePop()});
 document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.target)&&!e.target.closest('tr[data-w]'))hidePop()});
 addEventListener('resize',placePop);
-// self-check used by tests: every highlighted match must equal the indexed occurrence count
-window.__fedwords={occurrences,highlight,fragUrl,checkAll(){let bad=[];V.forEach(w=>{occurrences(w).forEach(it=>{
-  if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push([w,it.doc.id,it.si])})});return bad}};
-update();
+// self-check used by tests: highlighted matches == indexed occurrences; full-text people: occurrences == counts
+window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
+  const its=occurrences(w);its.forEach(it=>{if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push(['hl',w,it.doc.id,it.si])});
+  const st=stats(w),o=its.reduce((t,i)=>t+i.n,0);
+  if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
+// initial state from URL: #person=<slug>&docs=<ids>  (old links: #docs=<ids> = default person)
+function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
+  return setPerson(hp.get('person')||DEFAULT,(hp.get('docs')||'').split(',').filter(Boolean)).catch(e=>{
+    tb.innerHTML=`<tr><td colspan="4" class="empty">Could not load data: ${esc(e.message)}</td></tr>`;console.error(e)})}
+fromHash();
+// pasted/edited #person= links and back/forward on an open page (in-page anchors like #about are ignored)
+addEventListener('hashchange',()=>{if(!location.hash||/^#(person|docs)=/.test(location.hash)){hidePop();fromHash()}});
 </script></body></html>
 """
 

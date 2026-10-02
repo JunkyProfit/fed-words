@@ -1,0 +1,6130 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "a": 16,
+    "acceleration": 1,
+    "accompanied": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "achievement": 1,
+    "against": 1,
+    "ago": 1,
+    "ai": 1,
+    "aligned": 1,
+    "alone": 1,
+    "alpha": 1,
+    "always": 2,
+    "an": 3,
+    "and": 23,
+    "another": 3,
+    "any": 1,
+    "approach": 1,
+    "are": 5,
+    "as": 3,
+    "aspired": 1,
+    "astonishing": 1,
+    "astonishment": 1,
+    "at": 3,
+    "awakening": 1,
+    "basis": 1,
+    "be": 3,
+    "become": 1,
+    "been": 4,
+    "before": 3,
+    "believe": 1,
+    "beneficiaries": 1,
+    "billion": 3,
+    "breakneck": 1,
+    "building": 1,
+    "business": 9,
+    "but": 2,
+    "by": 4,
+    "can": 1,
+    "capture": 2,
+    "cause": 1,
+    "chats": 1,
+    "civilization": 1,
+    "clear": 1,
+    "clicks": 1,
+    "commercial": 3,
+    "companies": 1,
+    "company": 1,
+    "complex": 1,
+    "compounding": 1,
+    "consequence": 1,
+    "consumption": 1,
+    "continue": 1,
+    "continues": 1,
+    "control": 1,
+    "conventional": 1,
+    "core": 1,
+    "created": 1,
+    "creation": 1,
+    "creators": 2,
+    "customers": 4,
+    "data": 1,
+    "days": 1,
+    "decades": 1,
+    "decline": 1,
+    "declined": 2,
+    "demand": 1,
+    "derivative": 1,
+    "designed": 1,
+    "development": 1,
+    "did": 1,
+    "discarded": 1,
+    "dispositive": 1,
+    "diverged": 1,
+    "do": 3,
+    "dominate": 1,
+    "doubled": 1,
+    "dramatically": 1,
+    "economic": 2,
+    "economy": 1,
+    "emerging": 1,
+    "entering": 1,
+    "entire": 2,
+    "essentially": 1,
+    "even": 2,
+    "every": 1,
+    "expand": 1,
+    "exposed": 1,
+    "faults": 1,
+    "favor": 1,
+    "few": 2,
+    "finding": 1,
+    "fire": 1,
+    "for": 9,
+    "from": 3,
+    "fully": 1,
+    "fundamentally": 1,
+    "gamification": 1,
+    "generated": 5,
+    "get": 1,
+    "gives": 1,
+    "global": 2,
+    "grew": 1,
+    "grown": 1,
+    "growth": 2,
+    "handing": 1,
+    "has": 4,
+    "have": 13,
+    "headcount": 1,
+    "hint": 1,
+    "history": 1,
+    "homes": 1,
+    "impression": 1,
+    "in": 21,
+    "including": 1,
+    "increase": 2,
+    "increasingly": 1,
+    "indeed": 1,
+    "independence": 1,
+    "industrial": 1,
+    "industry": 2,
+    "ingest": 1,
+    "ingesting": 1,
+    "institutions": 1,
+    "intelligence": 1,
+    "intend": 1,
+    "internally": 1,
+    "into": 1,
+    "is": 15,
+    "it": 5,
+    "its": 2,
+    "just": 1,
+    "keys": 1,
+    "knowingly": 1,
+    "labs": 2,
+    "language": 4,
+    "large": 1,
+    "last": 1,
+    "letting": 1,
+    "level": 1,
+    "limitations": 1,
+    "little": 1,
+    "longer": 1,
+    "loose": 1,
+    "many": 3,
+    "market": 2,
+    "marxist": 1,
+    "may": 1,
+    "means": 2,
+    "might": 1,
+    "million": 1,
+    "miniscule": 1,
+    "misplaced": 1,
+    "model": 1,
+    "models": 6,
+    "modern": 1,
+    "months": 1,
+    "more": 2,
+    "most": 1,
+    "movement": 1,
+    "must": 1,
+    "nascent": 1,
+    "nearly": 1,
+    "never": 1,
+    "no": 1,
+    "nonetheless": 1,
+    "not": 2,
+    "noted": 1,
+    "nothing": 1,
+    "now": 5,
+    "of": 26,
+    "often": 1,
+    "on": 4,
+    "one": 2,
+    "only": 2,
+    "operations": 1,
+    "or": 5,
+    "organization": 1,
+    "organizational": 1,
+    "others": 2,
+    "otherwise": 1,
+    "our": 19,
+    "out": 1,
+    "outside": 1,
+    "over": 4,
+    "overtake": 1,
+    "overtones": 1,
+    "own": 1,
+    "pace": 1,
+    "paid": 3,
+    "parasitic": 1,
+    "partners": 3,
+    "path": 1,
+    "period": 3,
+    "platform": 1,
+    "proceeds": 1,
+    "product": 1,
+    "production": 2,
+    "profit": 2,
+    "profits": 1,
+    "prompts": 1,
+    "purported": 1,
+    "put": 1,
+    "quarter": 7,
+    "quarterly": 1,
+    "rate": 2,
+    "ready": 1,
+    "record": 5,
+    "reflecting": 1,
+    "regard": 1,
+    "relationship": 1,
+    "represent": 1,
+    "representing": 1,
+    "require": 1,
+    "results": 3,
+    "revenue": 5,
+    "revolt": 1,
+    "revolution": 1,
+    "risks": 1,
+    "s": 3,
+    "sales": 1,
+    "same": 3,
+    "scale": 2,
+    "second": 3,
+    "seems": 1,
+    "set": 1,
+    "sharply": 1,
+    "shifting": 1,
+    "shrinking": 1,
+    "sights": 1,
+    "significant": 1,
+    "simply": 2,
+    "single": 1,
+    "size": 1,
+    "software": 1,
+    "some": 1,
+    "sovereignty": 1,
+    "span": 1,
+    "staggering": 1,
+    "states": 3,
+    "straightforward": 1,
+    "structurally": 1,
+    "submission": 1,
+    "subset": 1,
+    "such": 3,
+    "technology": 1,
+    "than": 1,
+    "that": 11,
+    "the": 47,
+    "their": 7,
+    "there": 1,
+    "these": 1,
+    "this": 3,
+    "those": 2,
+    "threatened": 1,
+    "thrived": 1,
+    "to": 15,
+    "token": 1,
+    "tokens": 1,
+    "total": 1,
+    "true": 1,
+    "twelve": 1,
+    "two": 1,
+    "u": 3,
+    "underfoot": 1,
+    "undertones": 1,
+    "underway": 2,
+    "unique": 1,
+    "united": 2,
+    "unrelenting": 1,
+    "unthinkable": 1,
+    "us": 1,
+    "usage": 2,
+    "value": 3,
+    "vassal": 1,
+    "way": 2,
+    "we": 16,
+    "well": 2,
+    "what": 1,
+    "which": 2,
+    "while": 1,
+    "will": 1,
+    "willing": 1,
+    "wisdom": 1,
+    "with": 4,
+    "within": 1,
+    "witnessed": 1,
+    "work": 1,
+    "working": 1,
+    "world": 2,
+    "would": 2,
+    "written": 1,
+    "year": 8,
+    "years": 1,
+    "yet": 2
+   },
+   "date": "2026-08-03",
+   "entries": {
+    "a": [
+     0,
+     6,
+     6,
+     7
+    ],
+    "ai": [
+     1
+    ],
+    "and": [
+     1,
+     2,
+     4,
+     11,
+     11
+    ],
+    "become": [
+     3
+    ],
+    "been": [
+     11
+    ],
+    "building": [
+     10
+    ],
+    "business": [
+     5
+    ],
+    "by": [
+     2
+    ],
+    "capture": [
+     10
+    ],
+    "chats": [
+     8
+    ],
+    "civilization": [
+     2
+    ],
+    "clicks": [
+     8
+    ],
+    "commercial": [
+     6
+    ],
+    "complex": [
+     11
+    ],
+    "created": [
+     7
+    ],
+    "customers": [
+     3,
+     7
+    ],
+    "declined": [
+     3
+    ],
+    "development": [
+     9
+    ],
+    "do": [
+     8
+    ],
+    "dominate": [
+     11
+    ],
+    "doubled": [
+     5
+    ],
+    "dramatically": [
+     4
+    ],
+    "economic": [
+     7,
+     9
+    ],
+    "economy": [
+     11
+    ],
+    "emerging": [
+     0
+    ],
+    "entire": [
+     2,
+     5
+    ],
+    "essentially": [
+     2
+    ],
+    "exposed": [
+     11
+    ],
+    "faults": [
+     11
+    ],
+    "for": [
+     1,
+     7,
+     8
+    ],
+    "gamification": [
+     9
+    ],
+    "generated": [
+     6
+    ],
+    "get": [
+     8
+    ],
+    "global": [
+     0
+    ],
+    "grown": [
+     2
+    ],
+    "has": [
+     7,
+     11
+    ],
+    "have": [
+     2,
+     3,
+     11
+    ],
+    "history": [
+     9
+    ],
+    "in": [
+     5,
+     6,
+     9
+    ],
+    "including": [
+     10
+    ],
+    "increase": [
+     6
+    ],
+    "increasingly": [
+     11
+    ],
+    "independence": [
+     1
+    ],
+    "industrial": [
+     11
+    ],
+    "ingesting": [
+     2
+    ],
+    "intend": [
+     10
+    ],
+    "is": [
+     0,
+     1,
+     4
+    ],
+    "knowingly": [
+     10
+    ],
+    "labs": [
+     3
+    ],
+    "language": [
+     3,
+     10
+    ],
+    "large": [
+     10
+    ],
+    "limitations": [
+     11
+    ],
+    "many": [
+     10
+    ],
+    "market": [
+     4
+    ],
+    "means": [
+     10
+    ],
+    "million": [
+     6
+    ],
+    "misplaced": [
+     9
+    ],
+    "models": [
+     2,
+     10
+    ],
+    "modern": [
+     9
+    ],
+    "months": [
+     5
+    ],
+    "most": [
+     9
+    ],
+    "movement": [
+     0
+    ],
+    "nearly": [
+     5
+    ],
+    "not": [
+     8
+    ],
+    "now": [
+     1,
+     4
+    ],
+    "of": [
+     2,
+     3,
+     5,
+     7,
+     9,
+     10,
+     10,
+     10,
+     11
+    ],
+    "or": [
+     8,
+     8,
+     10
+    ],
+    "others": [
+     10
+    ],
+    "otherwise": [
+     10
+    ],
+    "our": [
+     2,
+     3,
+     5,
+     7,
+     7,
+     7
+    ],
+    "over": [
+     6
+    ],
+    "overtake": [
+     11
+    ],
+    "paid": [
+     8
+    ],
+    "partners": [
+     10
+    ],
+    "product": [
+     2
+    ],
+    "production": [
+     10
+    ],
+    "purported": [
+     10
+    ],
+    "quarter": [
+     6
+    ],
+    "record": [
+     6
+    ],
+    "represent": [
+     7
+    ],
+    "results": [
+     7
+    ],
+    "revenue": [
+     6
+    ],
+    "revolution": [
+     1
+    ],
+    "s": [
+     6
+    ],
+    "seems": [
+     9
+    ],
+    "shifting": [
+     4
+    ],
+    "significant": [
+     9
+    ],
+    "software": [
+     7
+    ],
+    "sovereignty": [
+     1
+    ],
+    "span": [
+     5
+    ],
+    "states": [
+     3
+    ],
+    "subset": [
+     7
+    ],
+    "that": [
+     7
+    ],
+    "the": [
+     1,
+     2,
+     2,
+     3,
+     4,
+     5,
+     7,
+     9,
+     9,
+     10,
+     11,
+     11,
+     11
+    ],
+    "their": [
+     10
+    ],
+    "this": [
+     6
+    ],
+    "those": [
+     10
+    ],
+    "threatened": [
+     11
+    ],
+    "thrived": [
+     2
+    ],
+    "to": [
+     3,
+     9,
+     10,
+     11
+    ],
+    "token": [
+     11
+    ],
+    "tokens": [
+     8
+    ],
+    "twelve": [
+     5
+    ],
+    "u": [
+     6
+    ],
+    "underfoot": [
+     4
+    ],
+    "underway": [
+     1
+    ],
+    "us": [
+     9
+    ],
+    "value": [
+     7
+    ],
+    "vassal": [
+     3
+    ],
+    "we": [
+     6,
+     8
+    ],
+    "well": [
+     1
+    ],
+    "which": [
+     11
+    ],
+    "work": [
+     2
+    ],
+    "world": [
+     11
+    ],
+    "written": [
+     2
+    ],
+    "year": [
+     6,
+     6
+    ]
+   },
+   "excerpts": [
+    "A global movement is emerging.",
+    "The revolution for independence and AI sovereignty is now well underway.",
+    "The models have grown and thrived by essentially ingesting the entire written work product of our civilization.",
+    "Our customers have declined to become vassal states of the language labs.",
+    "And the market is now shifting dramatically underfoot.",
+    "Our entire business nearly doubled in the span of twelve months.",
+    "We generated a record $764 million in U.S. commercial revenue this quarter—a 149% year-over-year increase.",
+    "Our results represent a subset of the economic value that our software has created for our customers.",
+    "We do not get paid for clicks or tokens or chats.",
+    "The gamification of the most significant development in modern economic history seems to us misplaced.",
+    "Others, including many of those building large language models, intend, knowingly or otherwise, to capture the means of production of their purported partners.",
+    "The limitations and faults of the token industrial complex, which has threatened to overtake and dominate the world economy, have increasingly been exposed."
+   ],
+   "id": "pltr-q2-2026",
+   "msent": {
+    "a": 14,
+    "acceleration": 1,
+    "accompanied": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "achievement": 1,
+    "against": 1,
+    "ago": 1,
+    "ai": 1,
+    "aligned": 1,
+    "alone": 1,
+    "alpha": 1,
+    "always": 2,
+    "an": 3,
+    "and": 17,
+    "another": 3,
+    "any": 1,
+    "approach": 1,
+    "are": 5,
+    "as": 2,
+    "aspired": 1,
+    "astonishing": 1,
+    "astonishment": 1,
+    "at": 3,
+    "awakening": 1,
+    "basis": 1,
+    "be": 3,
+    "become": 1,
+    "been": 4,
+    "before": 3,
+    "believe": 1,
+    "beneficiaries": 1,
+    "billion": 3,
+    "breakneck": 1,
+    "building": 1,
+    "business": 9,
+    "but": 2,
+    "by": 4,
+    "can": 1,
+    "capture": 2,
+    "cause": 1,
+    "chats": 1,
+    "civilization": 1,
+    "clear": 1,
+    "clicks": 1,
+    "commercial": 3,
+    "companies": 1,
+    "company": 1,
+    "complex": 1,
+    "compounding": 1,
+    "consequence": 1,
+    "consumption": 1,
+    "continue": 1,
+    "continues": 1,
+    "control": 1,
+    "conventional": 1,
+    "core": 1,
+    "created": 1,
+    "creation": 1,
+    "creators": 2,
+    "customers": 4,
+    "data": 1,
+    "days": 1,
+    "decades": 1,
+    "decline": 1,
+    "declined": 2,
+    "demand": 1,
+    "derivative": 1,
+    "designed": 1,
+    "development": 1,
+    "did": 1,
+    "discarded": 1,
+    "dispositive": 1,
+    "diverged": 1,
+    "do": 3,
+    "dominate": 1,
+    "doubled": 1,
+    "dramatically": 1,
+    "economic": 2,
+    "economy": 1,
+    "emerging": 1,
+    "entering": 1,
+    "entire": 2,
+    "essentially": 1,
+    "even": 2,
+    "every": 1,
+    "expand": 1,
+    "exposed": 1,
+    "faults": 1,
+    "favor": 1,
+    "few": 2,
+    "finding": 1,
+    "fire": 1,
+    "for": 8,
+    "from": 3,
+    "fully": 1,
+    "fundamentally": 1,
+    "gamification": 1,
+    "generated": 5,
+    "get": 1,
+    "gives": 1,
+    "global": 2,
+    "grew": 1,
+    "grown": 1,
+    "growth": 2,
+    "handing": 1,
+    "has": 4,
+    "have": 12,
+    "headcount": 1,
+    "hint": 1,
+    "history": 1,
+    "homes": 1,
+    "impression": 1,
+    "in": 15,
+    "including": 1,
+    "increase": 2,
+    "increasingly": 1,
+    "indeed": 1,
+    "independence": 1,
+    "industrial": 1,
+    "industry": 2,
+    "ingest": 1,
+    "ingesting": 1,
+    "institutions": 1,
+    "intelligence": 1,
+    "intend": 1,
+    "internally": 1,
+    "into": 1,
+    "is": 14,
+    "it": 5,
+    "its": 2,
+    "just": 1,
+    "keys": 1,
+    "knowingly": 1,
+    "labs": 2,
+    "language": 4,
+    "large": 1,
+    "last": 1,
+    "letting": 1,
+    "level": 1,
+    "limitations": 1,
+    "little": 1,
+    "longer": 1,
+    "loose": 1,
+    "many": 3,
+    "market": 2,
+    "marxist": 1,
+    "may": 1,
+    "means": 2,
+    "might": 1,
+    "million": 1,
+    "miniscule": 1,
+    "misplaced": 1,
+    "model": 1,
+    "models": 5,
+    "modern": 1,
+    "months": 1,
+    "more": 2,
+    "most": 1,
+    "movement": 1,
+    "must": 1,
+    "nascent": 1,
+    "nearly": 1,
+    "never": 1,
+    "no": 1,
+    "nonetheless": 1,
+    "not": 2,
+    "noted": 1,
+    "nothing": 1,
+    "now": 5,
+    "of": 19,
+    "often": 1,
+    "on": 4,
+    "one": 2,
+    "only": 2,
+    "operations": 1,
+    "or": 4,
+    "organization": 1,
+    "organizational": 1,
+    "others": 2,
+    "otherwise": 1,
+    "our": 17,
+    "out": 1,
+    "outside": 1,
+    "over": 4,
+    "overtake": 1,
+    "overtones": 1,
+    "own": 1,
+    "pace": 1,
+    "paid": 2,
+    "parasitic": 1,
+    "partners": 3,
+    "path": 1,
+    "period": 3,
+    "platform": 1,
+    "proceeds": 1,
+    "product": 1,
+    "production": 2,
+    "profit": 2,
+    "profits": 1,
+    "prompts": 1,
+    "purported": 1,
+    "put": 1,
+    "quarter": 6,
+    "quarterly": 1,
+    "rate": 2,
+    "ready": 1,
+    "record": 4,
+    "reflecting": 1,
+    "regard": 1,
+    "relationship": 1,
+    "represent": 1,
+    "representing": 1,
+    "require": 1,
+    "results": 3,
+    "revenue": 5,
+    "revolt": 1,
+    "revolution": 1,
+    "risks": 1,
+    "s": 3,
+    "sales": 1,
+    "same": 3,
+    "scale": 2,
+    "second": 3,
+    "seems": 1,
+    "set": 1,
+    "sharply": 1,
+    "shifting": 1,
+    "shrinking": 1,
+    "sights": 1,
+    "significant": 1,
+    "simply": 2,
+    "single": 1,
+    "size": 1,
+    "software": 1,
+    "some": 1,
+    "sovereignty": 1,
+    "span": 1,
+    "staggering": 1,
+    "states": 3,
+    "straightforward": 1,
+    "structurally": 1,
+    "submission": 1,
+    "subset": 1,
+    "such": 2,
+    "technology": 1,
+    "than": 1,
+    "that": 10,
+    "the": 24,
+    "their": 4,
+    "there": 1,
+    "these": 1,
+    "this": 3,
+    "those": 2,
+    "threatened": 1,
+    "thrived": 1,
+    "to": 14,
+    "token": 1,
+    "tokens": 1,
+    "total": 1,
+    "true": 1,
+    "twelve": 1,
+    "two": 1,
+    "u": 3,
+    "underfoot": 1,
+    "undertones": 1,
+    "underway": 2,
+    "unique": 1,
+    "united": 2,
+    "unrelenting": 1,
+    "unthinkable": 1,
+    "us": 1,
+    "usage": 2,
+    "value": 3,
+    "vassal": 1,
+    "way": 2,
+    "we": 14,
+    "well": 2,
+    "what": 1,
+    "which": 2,
+    "while": 1,
+    "will": 1,
+    "willing": 1,
+    "wisdom": 1,
+    "with": 4,
+    "within": 1,
+    "witnessed": 1,
+    "work": 1,
+    "working": 1,
+    "world": 2,
+    "would": 2,
+    "written": 1,
+    "year": 6,
+    "years": 1,
+    "yet": 2
+   },
+   "n_sentences": 37,
+   "source": "palantir.com",
+   "title": "Q2 2026 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://www.palantir.com/q2-2026-letter/en/",
+   "words": 681
+  },
+  {
+   "counts": {
+    "a": 17,
+    "above": 1,
+    "accelerating": 1,
+    "accomplished": 1,
+    "accomplishment": 1,
+    "achieved": 1,
+    "across": 3,
+    "actually": 2,
+    "addendum": 1,
+    "administrations": 2,
+    "advances": 1,
+    "afford": 1,
+    "against": 2,
+    "agencies": 1,
+    "ago": 2,
+    "ai": 5,
+    "all": 4,
+    "almost": 1,
+    "alone": 1,
+    "america": 1,
+    "americans": 2,
+    "amongst": 1,
+    "an": 4,
+    "and": 16,
+    "annualized": 1,
+    "anything": 2,
+    "appear": 1,
+    "are": 10,
+    "around": 1,
+    "as": 4,
+    "ask": 1,
+    "assault": 1,
+    "at": 2,
+    "based": 1,
+    "basis": 1,
+    "battlefield": 1,
+    "be": 3,
+    "been": 1,
+    "before": 3,
+    "behalf": 2,
+    "believe": 1,
+    "best": 1,
+    "between": 1,
+    "billion": 2,
+    "borrow": 1,
+    "both": 1,
+    "building": 1,
+    "built": 3,
+    "business": 8,
+    "businesses": 1,
+    "can": 1,
+    "capabilities": 1,
+    "case": 1,
+    "category": 1,
+    "center": 1,
+    "clear": 1,
+    "commercial": 2,
+    "companies": 2,
+    "company": 3,
+    "competitive": 1,
+    "concept": 1,
+    "constant": 1,
+    "continues": 1,
+    "core": 1,
+    "corporate": 1,
+    "costs": 1,
+    "country": 1,
+    "create": 1,
+    "customers": 2,
+    "decline": 1,
+    "deep": 1,
+    "defense": 1,
+    "delivered": 1,
+    "delivering": 2,
+    "demand": 1,
+    "democratic": 1,
+    "demonstrate": 1,
+    "deserve": 1,
+    "dialectic": 1,
+    "did": 1,
+    "different": 1,
+    "differently": 1,
+    "direct": 1,
+    "discipline": 1,
+    "do": 1,
+    "done": 1,
+    "doubled": 2,
+    "down": 1,
+    "durable": 1,
+    "dwarfs": 1,
+    "ease": 1,
+    "employee": 1,
+    "enabled": 1,
+    "engage": 1,
+    "enhancements": 1,
+    "entire": 1,
+    "erupting": 1,
+    "especially": 1,
+    "essentially": 1,
+    "even": 3,
+    "ever": 1,
+    "every": 2,
+    "expose": 1,
+    "feat": 1,
+    "few": 1,
+    "figure": 1,
+    "financial": 1,
+    "firing": 1,
+    "firmly": 1,
+    "first": 4,
+    "five": 1,
+    "for": 3,
+    "founded": 1,
+    "four": 1,
+    "freedom": 1,
+    "from": 5,
+    "generated": 5,
+    "going": 1,
+    "government": 2,
+    "grasp": 1,
+    "greater": 2,
+    "ground": 1,
+    "growth": 5,
+    "harm": 1,
+    "has": 5,
+    "have": 6,
+    "headcount": 1,
+    "headwinds": 1,
+    "here": 1,
+    "hiring": 1,
+    "history": 3,
+    "hyperbolic": 1,
+    "if": 1,
+    "impactful": 1,
+    "in": 26,
+    "including": 1,
+    "increase": 1,
+    "increased": 1,
+    "increasing": 1,
+    "incremental": 1,
+    "indeed": 1,
+    "industry": 2,
+    "infrastructure": 1,
+    "inner": 1,
+    "insignificant": 1,
+    "institutions": 1,
+    "intelligence": 1,
+    "intensely": 1,
+    "into": 1,
+    "is": 13,
+    "it": 5,
+    "juggernaut": 1,
+    "just": 1,
+    "know": 1,
+    "knowledge": 1,
+    "lackluster": 1,
+    "largest": 1,
+    "last": 2,
+    "less": 2,
+    "level": 1,
+    "levels": 2,
+    "light": 1,
+    "likeness": 1,
+    "literally": 1,
+    "loadbearing": 1,
+    "losers": 1,
+    "lost": 1,
+    "magnitude": 1,
+    "making": 1,
+    "many": 1,
+    "marginal": 1,
+    "markets": 1,
+    "may": 1,
+    "merely": 1,
+    "military": 1,
+    "million": 5,
+    "mission": 1,
+    "model": 1,
+    "months": 5,
+    "more": 3,
+    "most": 1,
+    "much": 1,
+    "must": 1,
+    "n": 1,
+    "nation": 1,
+    "national": 1,
+    "nearly": 2,
+    "new": 1,
+    "nobody": 1,
+    "not": 5,
+    "nothing": 2,
+    "noting": 1,
+    "now": 4,
+    "numbers": 1,
+    "of": 33,
+    "on": 8,
+    "one": 2,
+    "only": 3,
+    "ontology": 1,
+    "or": 3,
+    "our": 18,
+    "ours": 1,
+    "over": 5,
+    "own": 1,
+    "palantir": 4,
+    "parties": 1,
+    "partners": 1,
+    "path": 1,
+    "people": 1,
+    "per": 1,
+    "performance": 1,
+    "period": 5,
+    "phase": 1,
+    "physics": 1,
+    "pistons": 1,
+    "places": 1,
+    "planet": 1,
+    "platform": 1,
+    "platforms": 1,
+    "political": 1,
+    "pride": 1,
+    "prior": 2,
+    "profit": 5,
+    "programs": 1,
+    "protect": 1,
+    "put": 1,
+    "quadrupled": 1,
+    "quarter": 7,
+    "quarterly": 1,
+    "quote": 1,
+    "race": 1,
+    "rare": 1,
+    "rate": 4,
+    "reached": 1,
+    "reality": 2,
+    "really": 1,
+    "record": 3,
+    "regard": 1,
+    "reiterating": 1,
+    "remains": 1,
+    "representing": 4,
+    "republican": 1,
+    "results": 4,
+    "revenue": 6,
+    "revenues": 1,
+    "revolutionary": 1,
+    "rose": 1,
+    "rotation": 1,
+    "s": 6,
+    "sales": 1,
+    "same": 5,
+    "sanctum": 1,
+    "say": 1,
+    "scale": 3,
+    "second": 1,
+    "sectors": 1,
+    "security": 1,
+    "seems": 1,
+    "seen": 2,
+    "sentinels": 1,
+    "serve": 1,
+    "shift": 1,
+    "should": 1,
+    "significance": 2,
+    "signs": 1,
+    "six": 1,
+    "size": 1,
+    "slop": 1,
+    "slow": 1,
+    "smaller": 1,
+    "so": 2,
+    "soaring": 1,
+    "society": 2,
+    "software": 3,
+    "some": 2,
+    "someone": 1,
+    "sort": 1,
+    "span": 1,
+    "spending": 1,
+    "staggering": 1,
+    "stand": 1,
+    "states": 4,
+    "step": 1,
+    "strength": 1,
+    "strengthen": 1,
+    "sublimation": 1,
+    "suffer": 1,
+    "suggest": 1,
+    "swap": 1,
+    "sync": 1,
+    "take": 1,
+    "tends": 1,
+    "than": 5,
+    "that": 12,
+    "the": 55,
+    "their": 3,
+    "there": 3,
+    "these": 3,
+    "they": 4,
+    "this": 9,
+    "thousandfold": 1,
+    "three": 1,
+    "times": 1,
+    "to": 16,
+    "today": 2,
+    "token": 1,
+    "too": 1,
+    "total": 1,
+    "tribal": 1,
+    "truth": 1,
+    "twelve": 4,
+    "twenty": 2,
+    "twin": 1,
+    "two": 1,
+    "u": 6,
+    "united": 4,
+    "unlike": 1,
+    "value": 1,
+    "version": 1,
+    "walls": 1,
+    "was": 3,
+    "way": 3,
+    "we": 19,
+    "what": 1,
+    "where": 1,
+    "which": 2,
+    "while": 2,
+    "who": 1,
+    "winners": 1,
+    "with": 3,
+    "within": 2,
+    "wittgenstein": 1,
+    "workflows": 1,
+    "world": 3,
+    "worth": 2,
+    "year": 9,
+    "years": 3,
+    "yet": 1
+   },
+   "date": "2026-05-04",
+   "entries": {
+    "a": [
+     0,
+     2,
+     4,
+     4,
+     4,
+     7
+    ],
+    "across": [
+     1
+    ],
+    "advances": [
+     6
+    ],
+    "afford": [
+     3
+    ],
+    "ai": [
+     4
+    ],
+    "all": [
+     1
+    ],
+    "almost": [
+     1
+    ],
+    "alone": [
+     7
+    ],
+    "americans": [
+     9
+    ],
+    "amongst": [
+     4
+    ],
+    "an": [
+     4
+    ],
+    "and": [
+     1,
+     2,
+     4,
+     4,
+     9
+    ],
+    "are": [
+     6,
+     8
+    ],
+    "ask": [
+     8
+    ],
+    "at": [
+     0
+    ],
+    "based": [
+     2
+    ],
+    "be": [
+     4
+    ],
+    "behalf": [
+     8
+    ],
+    "best": [
+     8
+    ],
+    "between": [
+     2
+    ],
+    "billion": [
+     7
+    ],
+    "business": [
+     1
+    ],
+    "can": [
+     3
+    ],
+    "commercial": [
+     1
+    ],
+    "companies": [
+     4
+    ],
+    "company": [
+     0
+    ],
+    "competitive": [
+     4
+    ],
+    "continues": [
+     10
+    ],
+    "costs": [
+     4
+    ],
+    "country": [
+     8
+    ],
+    "decline": [
+     4
+    ],
+    "demand": [
+     3
+    ],
+    "demonstrate": [
+     0
+    ],
+    "deserve": [
+     8
+    ],
+    "dialectic": [
+     2
+    ],
+    "differently": [
+     1
+    ],
+    "doubled": [
+     1
+    ],
+    "dwarfs": [
+     0
+    ],
+    "engage": [
+     4
+    ],
+    "enhancements": [
+     2
+    ],
+    "entire": [
+     1
+    ],
+    "essentially": [
+     0
+    ],
+    "every": [
+     0,
+     4
+    ],
+    "few": [
+     4
+    ],
+    "financial": [
+     0
+    ],
+    "firmly": [
+     2
+    ],
+    "founded": [
+     9
+    ],
+    "freedom": [
+     9
+    ],
+    "generated": [
+     1,
+     7
+    ],
+    "going": [
+     8
+    ],
+    "government": [
+     1
+    ],
+    "ground": [
+     2
+    ],
+    "harm": [
+     8
+    ],
+    "have": [
+     4
+    ],
+    "here": [
+     2
+    ],
+    "history": [
+     0
+    ],
+    "if": [
+     8
+    ],
+    "in": [
+     0,
+     1,
+     2,
+     4,
+     4,
+     7
+    ],
+    "increase": [
+     7
+    ],
+    "incremental": [
+     6
+    ],
+    "intensely": [
+     4
+    ],
+    "into": [
+     8
+    ],
+    "is": [
+     2,
+     2,
+     5
+    ],
+    "it": [
+     5
+    ],
+    "just": [
+     4
+    ],
+    "know": [
+     3
+    ],
+    "knowledge": [
+     2
+    ],
+    "last": [
+     7
+    ],
+    "less": [
+     3,
+     3
+    ],
+    "level": [
+     0
+    ],
+    "losers": [
+     4
+    ],
+    "marginal": [
+     6
+    ],
+    "mission": [
+     10
+    ],
+    "model": [
+     4
+    ],
+    "months": [
+     1,
+     4
+    ],
+    "national": [
+     9
+    ],
+    "not": [
+     6
+    ],
+    "nothing": [
+     3,
+     3
+    ],
+    "now": [
+     0
+    ],
+    "of": [
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     8
+    ],
+    "on": [
+     8
+    ],
+    "only": [
+     1
+    ],
+    "ontology": [
+     2
+    ],
+    "or": [
+     6
+    ],
+    "our": [
+     0,
+     1,
+     1,
+     8
+    ],
+    "over": [
+     4,
+     7
+    ],
+    "palantir": [
+     9
+    ],
+    "performance": [
+     0
+    ],
+    "period": [
+     7
+    ],
+    "places": [
+     4
+    ],
+    "prior": [
+     7
+    ],
+    "protect": [
+     9
+    ],
+    "put": [
+     1
+    ],
+    "quarter": [
+     7
+    ],
+    "race": [
+     4
+    ],
+    "reality": [
+     2
+    ],
+    "reiterating": [
+     5
+    ],
+    "representing": [
+     7
+    ],
+    "results": [
+     0
+    ],
+    "revenues": [
+     1
+    ],
+    "rotation": [
+     4
+    ],
+    "s": [
+     9
+    ],
+    "same": [
+     7
+    ],
+    "scale": [
+     0
+    ],
+    "sectors": [
+     1
+    ],
+    "security": [
+     9
+    ],
+    "seems": [
+     4
+    ],
+    "seen": [
+     4
+    ],
+    "six": [
+     4
+    ],
+    "size": [
+     1
+    ],
+    "society": [
+     3
+    ],
+    "software": [
+     0
+    ],
+    "someone": [
+     8
+    ],
+    "span": [
+     1
+    ],
+    "states": [
+     7
+    ],
+    "step": [
+     8
+    ],
+    "strength": [
+     0
+    ],
+    "strengthen": [
+     9
+    ],
+    "suffer": [
+     4
+    ],
+    "swap": [
+     4
+    ],
+    "that": [
+     0
+    ],
+    "the": [
+     0,
+     1,
+     1,
+     1,
+     2,
+     7,
+     7,
+     7,
+     8,
+     10
+    ],
+    "their": [
+     9
+    ],
+    "there": [
+     2,
+     4
+    ],
+    "these": [
+     6
+    ],
+    "they": [
+     3,
+     3,
+     8
+    ],
+    "this": [
+     0
+    ],
+    "thousandfold": [
+     4
+    ],
+    "to": [
+     4,
+     8,
+     8,
+     9,
+     9
+    ],
+    "token": [
+     4
+    ],
+    "tribal": [
+     2
+    ],
+    "truth": [
+     2
+    ],
+    "twelve": [
+     1
+    ],
+    "u": [
+     9
+    ],
+    "united": [
+     7
+    ],
+    "was": [
+     9
+    ],
+    "way": [
+     8
+    ],
+    "we": [
+     1,
+     4,
+     7,
+     8
+    ],
+    "where": [
+     4
+    ],
+    "which": [
+     4
+    ],
+    "who": [
+     4
+    ],
+    "winners": [
+     4
+    ],
+    "worth": [
+     5
+    ],
+    "year": [
+     7
+    ],
+    "years": [
+     4
+    ]
+   },
+   "excerpts": [
+    "Our financial results now demonstrate a level of strength that dwarfs the performance of essentially every software company in history at this scale.",
+    "Put differently, we almost doubled the size of our entire business, of all of our revenues generated across the government and commercial sectors, in the span of only twelve months.",
+    "The Ontology is based firmly in reality—there is, here, a dialectic between ground truth, tribal knowledge, and enhancements.",
+    "They demand nothing less; they know society can afford nothing less.",
+    "There seems to be a rotation amongst AI model companies who engage in an intensely competitive race in which we have seen token costs suffer a thousandfold decline over just a few years and where winners and losers swap places every six months.",
+    "It is worth reiterating.",
+    "These are not incremental or marginal advances.",
+    "We generated $1.3 billion in the United States alone last quarter, representing a 104% increase over the same period the prior year.",
+    "If we are going to ask someone to step into harm’s way on behalf of our country, they deserve the best.",
+    "Palantir was founded to strengthen U.S. national security, to protect Americans and their freedom.",
+    "The mission continues."
+   ],
+   "id": "pltr-q1-2026",
+   "msent": {
+    "a": 13,
+    "above": 1,
+    "accelerating": 1,
+    "accomplished": 1,
+    "accomplishment": 1,
+    "achieved": 1,
+    "across": 3,
+    "actually": 2,
+    "addendum": 1,
+    "administrations": 2,
+    "advances": 1,
+    "afford": 1,
+    "against": 2,
+    "agencies": 1,
+    "ago": 2,
+    "ai": 5,
+    "all": 4,
+    "almost": 1,
+    "alone": 1,
+    "america": 1,
+    "americans": 2,
+    "amongst": 1,
+    "an": 4,
+    "and": 13,
+    "annualized": 1,
+    "anything": 2,
+    "appear": 1,
+    "are": 9,
+    "around": 1,
+    "as": 3,
+    "ask": 1,
+    "assault": 1,
+    "at": 2,
+    "based": 1,
+    "basis": 1,
+    "battlefield": 1,
+    "be": 3,
+    "been": 1,
+    "before": 3,
+    "behalf": 2,
+    "believe": 1,
+    "best": 1,
+    "between": 1,
+    "billion": 2,
+    "borrow": 1,
+    "both": 1,
+    "building": 1,
+    "built": 3,
+    "business": 8,
+    "businesses": 1,
+    "can": 1,
+    "capabilities": 1,
+    "case": 1,
+    "category": 1,
+    "center": 1,
+    "clear": 1,
+    "commercial": 2,
+    "companies": 2,
+    "company": 3,
+    "competitive": 1,
+    "concept": 1,
+    "constant": 1,
+    "continues": 1,
+    "core": 1,
+    "corporate": 1,
+    "costs": 1,
+    "country": 1,
+    "create": 1,
+    "customers": 1,
+    "decline": 1,
+    "deep": 1,
+    "defense": 1,
+    "delivered": 1,
+    "delivering": 2,
+    "demand": 1,
+    "democratic": 1,
+    "demonstrate": 1,
+    "deserve": 1,
+    "dialectic": 1,
+    "did": 1,
+    "different": 1,
+    "differently": 1,
+    "direct": 1,
+    "discipline": 1,
+    "do": 1,
+    "done": 1,
+    "doubled": 2,
+    "down": 1,
+    "durable": 1,
+    "dwarfs": 1,
+    "ease": 1,
+    "employee": 1,
+    "enabled": 1,
+    "engage": 1,
+    "enhancements": 1,
+    "entire": 1,
+    "erupting": 1,
+    "especially": 1,
+    "essentially": 1,
+    "even": 2,
+    "ever": 1,
+    "every": 2,
+    "expose": 1,
+    "feat": 1,
+    "few": 1,
+    "figure": 1,
+    "financial": 1,
+    "firing": 1,
+    "firmly": 1,
+    "first": 4,
+    "five": 1,
+    "for": 2,
+    "founded": 1,
+    "four": 1,
+    "freedom": 1,
+    "from": 2,
+    "generated": 5,
+    "going": 1,
+    "government": 2,
+    "grasp": 1,
+    "greater": 2,
+    "ground": 1,
+    "growth": 5,
+    "harm": 1,
+    "has": 5,
+    "have": 6,
+    "headcount": 1,
+    "headwinds": 1,
+    "here": 1,
+    "hiring": 1,
+    "history": 3,
+    "hyperbolic": 1,
+    "if": 1,
+    "impactful": 1,
+    "in": 19,
+    "including": 1,
+    "increase": 1,
+    "increased": 1,
+    "increasing": 1,
+    "incremental": 1,
+    "indeed": 1,
+    "industry": 2,
+    "infrastructure": 1,
+    "inner": 1,
+    "insignificant": 1,
+    "institutions": 1,
+    "intelligence": 1,
+    "intensely": 1,
+    "into": 1,
+    "is": 10,
+    "it": 5,
+    "juggernaut": 1,
+    "just": 1,
+    "know": 1,
+    "knowledge": 1,
+    "lackluster": 1,
+    "largest": 1,
+    "last": 2,
+    "less": 1,
+    "level": 1,
+    "levels": 2,
+    "light": 1,
+    "likeness": 1,
+    "literally": 1,
+    "loadbearing": 1,
+    "losers": 1,
+    "lost": 1,
+    "magnitude": 1,
+    "making": 1,
+    "many": 1,
+    "marginal": 1,
+    "markets": 1,
+    "may": 1,
+    "merely": 1,
+    "military": 1,
+    "million": 4,
+    "mission": 1,
+    "model": 1,
+    "months": 5,
+    "more": 3,
+    "most": 1,
+    "much": 1,
+    "must": 1,
+    "n": 1,
+    "nation": 1,
+    "national": 1,
+    "nearly": 2,
+    "new": 1,
+    "nobody": 1,
+    "not": 5,
+    "nothing": 1,
+    "noting": 1,
+    "now": 4,
+    "numbers": 1,
+    "of": 24,
+    "on": 7,
+    "one": 2,
+    "only": 3,
+    "ontology": 1,
+    "or": 3,
+    "our": 14,
+    "ours": 1,
+    "over": 4,
+    "own": 1,
+    "palantir": 4,
+    "parties": 1,
+    "partners": 1,
+    "path": 1,
+    "people": 1,
+    "per": 1,
+    "performance": 1,
+    "period": 4,
+    "phase": 1,
+    "physics": 1,
+    "pistons": 1,
+    "places": 1,
+    "planet": 1,
+    "platform": 1,
+    "platforms": 1,
+    "political": 1,
+    "pride": 1,
+    "prior": 2,
+    "profit": 5,
+    "programs": 1,
+    "protect": 1,
+    "put": 1,
+    "quadrupled": 1,
+    "quarter": 6,
+    "quarterly": 1,
+    "quote": 1,
+    "race": 1,
+    "rare": 1,
+    "rate": 4,
+    "reached": 1,
+    "reality": 2,
+    "really": 1,
+    "record": 3,
+    "regard": 1,
+    "reiterating": 1,
+    "remains": 1,
+    "representing": 4,
+    "republican": 1,
+    "results": 4,
+    "revenue": 5,
+    "revenues": 1,
+    "revolutionary": 1,
+    "rose": 1,
+    "rotation": 1,
+    "s": 5,
+    "sales": 1,
+    "same": 4,
+    "sanctum": 1,
+    "say": 1,
+    "scale": 3,
+    "second": 1,
+    "sectors": 1,
+    "security": 1,
+    "seems": 1,
+    "seen": 2,
+    "sentinels": 1,
+    "serve": 1,
+    "shift": 1,
+    "should": 1,
+    "significance": 2,
+    "signs": 1,
+    "six": 1,
+    "size": 1,
+    "slop": 1,
+    "slow": 1,
+    "smaller": 1,
+    "so": 2,
+    "soaring": 1,
+    "society": 2,
+    "software": 3,
+    "some": 2,
+    "someone": 1,
+    "sort": 1,
+    "span": 1,
+    "spending": 1,
+    "staggering": 1,
+    "stand": 1,
+    "states": 4,
+    "step": 1,
+    "strength": 1,
+    "strengthen": 1,
+    "sublimation": 1,
+    "suffer": 1,
+    "suggest": 1,
+    "swap": 1,
+    "sync": 1,
+    "take": 1,
+    "tends": 1,
+    "than": 4,
+    "that": 11,
+    "the": 29,
+    "their": 3,
+    "there": 3,
+    "these": 3,
+    "they": 3,
+    "this": 8,
+    "thousandfold": 1,
+    "three": 1,
+    "times": 1,
+    "to": 12,
+    "today": 2,
+    "token": 1,
+    "too": 1,
+    "total": 1,
+    "tribal": 1,
+    "truth": 1,
+    "twelve": 4,
+    "twenty": 2,
+    "twin": 1,
+    "two": 1,
+    "u": 5,
+    "united": 4,
+    "unlike": 1,
+    "value": 1,
+    "version": 1,
+    "walls": 1,
+    "was": 3,
+    "way": 3,
+    "we": 17,
+    "what": 1,
+    "where": 1,
+    "which": 2,
+    "while": 2,
+    "who": 1,
+    "winners": 1,
+    "with": 3,
+    "within": 2,
+    "wittgenstein": 1,
+    "workflows": 1,
+    "world": 3,
+    "worth": 2,
+    "year": 6,
+    "years": 3,
+    "yet": 1
+   },
+   "n_sentences": 42,
+   "source": "palantir.com",
+   "title": "Q1 2026 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://www.palantir.com/q1-2026-letter/en/",
+   "words": 794
+  },
+  {
+   "counts": {
+    "a": 60,
+    "abandoned": 1,
+    "abilities": 1,
+    "ability": 2,
+    "about": 1,
+    "above": 1,
+    "acceleration": 1,
+    "access": 1,
+    "achieved": 1,
+    "achievement": 1,
+    "acknowledge": 1,
+    "across": 1,
+    "act": 1,
+    "action": 1,
+    "actors": 1,
+    "actual": 1,
+    "actually": 1,
+    "administrative": 1,
+    "admittedly": 1,
+    "adoption": 1,
+    "adrift": 1,
+    "advancing": 2,
+    "advantage": 1,
+    "advantages": 1,
+    "adversaries": 1,
+    "affection": 1,
+    "after": 1,
+    "again": 1,
+    "against": 3,
+    "agents": 1,
+    "aggrandizement": 1,
+    "ago": 1,
+    "akin": 1,
+    "alasdair": 1,
+    "all": 5,
+    "alone": 3,
+    "alongside": 1,
+    "also": 1,
+    "amalgamation": 1,
+    "ambition": 1,
+    "ambitious": 1,
+    "amendment": 2,
+    "amount": 1,
+    "an": 13,
+    "and": 91,
+    "antagonisms": 1,
+    "antagonists": 1,
+    "anticipation": 1,
+    "any": 4,
+    "anyone": 1,
+    "anything": 1,
+    "appeal": 1,
+    "appearance": 1,
+    "approach": 2,
+    "approaching": 1,
+    "architect": 1,
+    "architecture": 1,
+    "are": 13,
+    "around": 2,
+    "arrival": 1,
+    "arrived": 1,
+    "artificial": 4,
+    "artist": 1,
+    "as": 16,
+    "ascent": 1,
+    "aspire": 1,
+    "assess": 1,
+    "astonishing": 1,
+    "at": 10,
+    "attack": 1,
+    "attempts": 1,
+    "audit": 1,
+    "authentic": 1,
+    "authority": 1,
+    "backwater": 1,
+    "banishing": 1,
+    "banner": 1,
+    "be": 18,
+    "beach": 1,
+    "bearish": 1,
+    "been": 4,
+    "before": 4,
+    "beginning": 2,
+    "being": 2,
+    "belief": 1,
+    "beliefs": 2,
+    "believe": 4,
+    "bend": 1,
+    "between": 3,
+    "billion": 2,
+    "black": 1,
+    "blinding": 1,
+    "blithely": 1,
+    "both": 2,
+    "boundaries": 1,
+    "breach": 1,
+    "breathless": 1,
+    "brisk": 1,
+    "build": 1,
+    "building": 2,
+    "built": 5,
+    "business": 6,
+    "businesses": 1,
+    "but": 6,
+    "by": 7,
+    "byzantine": 1,
+    "can": 5,
+    "capabilities": 1,
+    "capable": 3,
+    "capital": 1,
+    "caricatures": 2,
+    "case": 1,
+    "cast": 1,
+    "cat": 2,
+    "catches": 2,
+    "celebrate": 1,
+    "century": 1,
+    "certain": 1,
+    "chattering": 1,
+    "china": 1,
+    "christopher": 1,
+    "citizens": 1,
+    "civilization": 1,
+    "class": 2,
+    "clear": 1,
+    "coercion": 1,
+    "collective": 2,
+    "colony": 1,
+    "comedy": 1,
+    "commentary": 1,
+    "commercial": 3,
+    "commitments": 2,
+    "common": 2,
+    "communal": 1,
+    "commune": 1,
+    "communist": 1,
+    "community": 2,
+    "companies": 3,
+    "company": 5,
+    "complexity": 1,
+    "concerned": 1,
+    "confined": 1,
+    "conflict": 1,
+    "confounding": 1,
+    "consequence": 1,
+    "constellation": 1,
+    "constitutes": 2,
+    "constitutionally": 1,
+    "constraints": 1,
+    "construction": 3,
+    "consultants": 1,
+    "contemporary": 1,
+    "continue": 1,
+    "contraction": 1,
+    "core": 1,
+    "corollary": 1,
+    "corporate": 1,
+    "corporation": 1,
+    "correctly": 1,
+    "cosmic": 1,
+    "could": 1,
+    "counsel": 1,
+    "country": 2,
+    "course": 1,
+    "covets": 1,
+    "crafting": 1,
+    "created": 1,
+    "creation": 1,
+    "creators": 1,
+    "credentialed": 1,
+    "critical": 3,
+    "crude": 1,
+    "cry": 1,
+    "cultivated": 1,
+    "cultural": 2,
+    "culture": 2,
+    "cultures": 1,
+    "dancers": 1,
+    "datasets": 1,
+    "dean": 1,
+    "decade": 1,
+    "decision": 1,
+    "declared": 1,
+    "decline": 1,
+    "declined": 1,
+    "declining": 1,
+    "defeat": 1,
+    "degree": 3,
+    "demise": 1,
+    "deng": 1,
+    "depriving": 1,
+    "describe": 1,
+    "development": 1,
+    "did": 1,
+    "diminish": 1,
+    "diminished": 1,
+    "disagreement": 1,
+    "discerning": 1,
+    "discipline": 1,
+    "discussion": 1,
+    "disinterested": 1,
+    "dismissing": 1,
+    "dissent": 1,
+    "distasteful": 1,
+    "divide": 2,
+    "divided": 1,
+    "doesn't": 1,
+    "doubled": 1,
+    "dowd": 1,
+    "driven": 1,
+    "drop": 2,
+    "ear": 2,
+    "easier": 1,
+    "economic": 1,
+    "economy": 1,
+    "effective": 2,
+    "efficiently": 1,
+    "electric": 1,
+    "elite": 1,
+    "else": 1,
+    "embraced": 1,
+    "embracing": 1,
+    "emerging": 2,
+    "empires": 1,
+    "empty": 1,
+    "encouraged": 1,
+    "endeavor": 1,
+    "enduring": 1,
+    "enemies": 2,
+    "enemy": 1,
+    "engineering": 1,
+    "engines": 1,
+    "enrich": 1,
+    "ensnare": 1,
+    "ensure": 1,
+    "entering": 2,
+    "enterprise": 1,
+    "entitled": 1,
+    "equal": 1,
+    "equally": 1,
+    "essentially": 1,
+    "ethical": 1,
+    "even": 4,
+    "eventually": 1,
+    "exceeded": 1,
+    "excitement": 1,
+    "expand": 1,
+    "expansion": 1,
+    "expectation": 1,
+    "expectations": 1,
+    "expense": 1,
+    "expose": 1,
+    "exposed": 1,
+    "external": 1,
+    "exuberant": 1,
+    "eye": 1,
+    "fabricated": 1,
+    "fact": 1,
+    "factory": 1,
+    "fade": 1,
+    "failure": 1,
+    "familiar": 1,
+    "famously": 1,
+    "far": 3,
+    "fear": 2,
+    "fearful": 2,
+    "feel": 1,
+    "fertile": 1,
+    "fiat": 1,
+    "fierce": 1,
+    "figure": 1,
+    "filled": 1,
+    "financial": 1,
+    "financials": 1,
+    "find": 1,
+    "finding": 1,
+    "finds": 1,
+    "firm": 1,
+    "five": 1,
+    "focus": 2,
+    "for": 14,
+    "forget": 1,
+    "forgotten": 1,
+    "forward": 1,
+    "fourth": 3,
+    "free": 1,
+    "freedom": 1,
+    "from": 6,
+    "functional": 1,
+    "fundamentally": 1,
+    "further": 1,
+    "general": 1,
+    "generated": 2,
+    "generating": 2,
+    "generational": 1,
+    "geopolitical": 1,
+    "globalized": 1,
+    "government": 4,
+    "grace": 1,
+    "grammar": 1,
+    "granular": 1,
+    "gray": 1,
+    "grievances": 1,
+    "grounding": 1,
+    "growing": 1,
+    "grown": 2,
+    "growth": 4,
+    "guard": 1,
+    "guarding": 1,
+    "gulf": 2,
+    "harnessing": 1,
+    "has": 7,
+    "hatched": 1,
+    "have": 15,
+    "haves": 1,
+    "he": 3,
+    "height": 1,
+    "heights": 1,
+    "his": 2,
+    "history": 1,
+    "hollow": 2,
+    "hope": 1,
+    "hopefully": 1,
+    "how": 1,
+    "however": 2,
+    "humanity": 2,
+    "humility": 1,
+    "i": 2,
+    "ideas": 1,
+    "identity": 2,
+    "idiosyncratic": 1,
+    "if": 1,
+    "imagined": 1,
+    "imperfect": 1,
+    "important": 1,
+    "in": 43,
+    "include": 1,
+    "inclusion": 2,
+    "incorrectly": 1,
+    "increase": 2,
+    "increasingly": 3,
+    "incursions": 1,
+    "indeed": 7,
+    "individual": 1,
+    "industry": 2,
+    "information": 1,
+    "insidiousness": 1,
+    "instinct": 1,
+    "instincts": 1,
+    "institutions": 2,
+    "intelligence": 4,
+    "intentionally": 1,
+    "interacting": 1,
+    "interested": 2,
+    "interests": 1,
+    "internal": 2,
+    "interview": 1,
+    "into": 8,
+    "intruding": 1,
+    "intrusion": 1,
+    "invest": 1,
+    "investigation": 1,
+    "is": 36,
+    "it": 17,
+    "its": 7,
+    "itself": 2,
+    "jargon": 1,
+    "jiangxi": 1,
+    "juncture": 1,
+    "justice": 2,
+    "katz": 1,
+    "kind": 1,
+    "know": 1,
+    "lacking": 1,
+    "landmark": 1,
+    "language": 3,
+    "large": 2,
+    "lasch": 1,
+    "last": 4,
+    "lead": 1,
+    "least": 1,
+    "left": 1,
+    "legions": 1,
+    "lend": 1,
+    "lethal": 1,
+    "level": 1,
+    "levels": 1,
+    "life": 1,
+    "limit": 1,
+    "little": 1,
+    "lives": 3,
+    "logs": 1,
+    "long": 3,
+    "loose": 1,
+    "lorne": 1,
+    "lulled": 1,
+    "macintyre": 1,
+    "made": 1,
+    "magnanimity": 1,
+    "maintaining": 1,
+    "make": 1,
+    "makes": 2,
+    "man": 2,
+    "manage": 1,
+    "management": 1,
+    "maniacal": 1,
+    "many": 3,
+    "marginalized": 1,
+    "marked": 1,
+    "market": 3,
+    "markets": 1,
+    "massive": 1,
+    "material": 1,
+    "matter": 2,
+    "maureen": 1,
+    "may": 4,
+    "means": 3,
+    "merely": 1,
+    "messy": 1,
+    "metrics": 1,
+    "mice": 2,
+    "michaels": 1,
+    "million": 2,
+    "mind": 1,
+    "mistake": 1,
+    "mode": 1,
+    "models": 4,
+    "modern": 2,
+    "moment": 1,
+    "monetize": 1,
+    "months": 1,
+    "moral": 1,
+    "morally": 1,
+    "more": 9,
+    "most": 6,
+    "mostly": 1,
+    "movement": 2,
+    "must": 3,
+    "naked": 1,
+    "narcissism": 1,
+    "narrow": 1,
+    "nation": 1,
+    "national": 1,
+    "nations": 1,
+    "nearly": 1,
+    "neither": 1,
+    "new": 3,
+    "newly": 2,
+    "nor": 1,
+    "not": 9,
+    "note": 1,
+    "nothing": 2,
+    "nots": 1,
+    "now": 3,
+    "objects": 1,
+    "obscurity": 1,
+    "observed": 1,
+    "obsession": 1,
+    "of": 92,
+    "offering": 1,
+    "often": 3,
+    "on": 7,
+    "once": 1,
+    "one": 5,
+    "ones": 1,
+    "only": 3,
+    "opening": 1,
+    "operations": 2,
+    "opponent": 1,
+    "oppositional": 1,
+    "or": 6,
+    "organizing": 1,
+    "orientation": 1,
+    "other": 1,
+    "others": 4,
+    "otherwise": 1,
+    "ought": 1,
+    "our": 29,
+    "outcomes": 1,
+    "output": 1,
+    "outset": 1,
+    "outside": 2,
+    "over": 6,
+    "overreach": 1,
+    "oversee": 1,
+    "oversight": 1,
+    "own": 4,
+    "painters": 1,
+    "palantir": 1,
+    "party": 1,
+    "passes": 1,
+    "path": 2,
+    "patrolling": 1,
+    "pay": 1,
+    "peace": 2,
+    "peak": 1,
+    "peer": 1,
+    "perceive": 1,
+    "perception": 1,
+    "performative": 1,
+    "perhaps": 3,
+    "period": 3,
+    "permissioning": 1,
+    "permitted": 1,
+    "personalities": 1,
+    "personnel": 1,
+    "philosopher": 1,
+    "physical": 1,
+    "platform": 2,
+    "platforms": 1,
+    "pluralism": 1,
+    "pockets": 1,
+    "poets": 1,
+    "polite": 1,
+    "political": 2,
+    "politically": 1,
+    "politics": 1,
+    "possible": 3,
+    "posturing": 1,
+    "postwar": 1,
+    "potential": 1,
+    "potter": 1,
+    "power": 3,
+    "pragmatism": 1,
+    "pray": 1,
+    "preconditions": 1,
+    "prediction": 1,
+    "predilections": 1,
+    "prepare": 1,
+    "presentations": 1,
+    "pressure": 1,
+    "prevail": 1,
+    "preventing": 2,
+    "private": 3,
+    "prize": 1,
+    "probabilistic": 1,
+    "produced": 1,
+    "profess": 1,
+    "profit": 2,
+    "profitability": 2,
+    "progress": 1,
+    "progressives": 1,
+    "project": 2,
+    "projects": 1,
+    "promising": 1,
+    "propped": 1,
+    "province": 1,
+    "prudent": 1,
+    "psychological": 1,
+    "psychology": 1,
+    "public": 5,
+    "published": 1,
+    "pure": 1,
+    "purely": 1,
+    "purged": 1,
+    "quarter": 6,
+    "questions": 1,
+    "quite": 2,
+    "radical": 1,
+    "radicals": 1,
+    "rallying": 1,
+    "rate": 4,
+    "raucous": 1,
+    "raw": 1,
+    "reached": 1,
+    "real": 1,
+    "record": 4,
+    "reflection": 1,
+    "reflects": 1,
+    "reformist": 1,
+    "refusing": 1,
+    "reimagined": 1,
+    "reject": 1,
+    "reliably": 1,
+    "remade": 1,
+    "remain": 1,
+    "remains": 1,
+    "remarkable": 4,
+    "remember": 1,
+    "reminded": 2,
+    "representing": 3,
+    "require": 1,
+    "requires": 1,
+    "reshape": 1,
+    "resisting": 1,
+    "restraint": 1,
+    "result": 3,
+    "results": 5,
+    "retreat": 2,
+    "revenue": 2,
+    "revolt": 1,
+    "revolutionaries": 1,
+    "reward": 1,
+    "rhetoric": 1,
+    "rise": 1,
+    "risk": 1,
+    "risks": 1,
+    "rogue": 1,
+    "role": 1,
+    "run": 1,
+    "ruthless": 1,
+    "s": 4,
+    "said": 1,
+    "salvation": 1,
+    "same": 5,
+    "scale": 1,
+    "scarce": 1,
+    "science": 1,
+    "searches": 1,
+    "sectors": 1,
+    "security": 1,
+    "see": 1,
+    "seek": 1,
+    "seeks": 1,
+    "seemingly": 2,
+    "seems": 1,
+    "seen": 1,
+    "seizures": 1,
+    "self": 3,
+    "seminar": 1,
+    "sense": 2,
+    "sent": 1,
+    "sentiment": 1,
+    "sentiments": 1,
+    "serve": 1,
+    "set": 3,
+    "shallow": 1,
+    "shield": 1,
+    "should": 3,
+    "significant": 2,
+    "single": 2,
+    "singular": 1,
+    "sits": 1,
+    "size": 1,
+    "skirmishes": 1,
+    "sleep": 1,
+    "slights": 1,
+    "so": 1,
+    "software": 5,
+    "some": 3,
+    "something": 2,
+    "soon": 1,
+    "sorts": 1,
+    "space": 1,
+    "spaces": 1,
+    "sparingly": 1,
+    "specificity": 1,
+    "spectrum": 1,
+    "spheres": 1,
+    "spiritual": 1,
+    "stage": 2,
+    "startup": 1,
+    "state": 4,
+    "states": 3,
+    "stewart": 2,
+    "still": 1,
+    "strengths": 1,
+    "striking": 1,
+    "strings": 1,
+    "structure": 1,
+    "subject": 1,
+    "success": 2,
+    "such": 8,
+    "sufficient": 1,
+    "suggested": 1,
+    "superficial": 1,
+    "superior": 1,
+    "surveillance": 1,
+    "sweeping": 1,
+    "system": 4,
+    "systems": 2,
+    "take": 3,
+    "tangle": 1,
+    "teachers": 1,
+    "technical": 3,
+    "technology": 4,
+    "temerity": 1,
+    "temptation": 1,
+    "term": 1,
+    "terror": 1,
+    "tether": 1,
+    "tethered": 1,
+    "text": 1,
+    "than": 4,
+    "that": 39,
+    "the": 114,
+    "theatrical": 1,
+    "theatricality": 1,
+    "their": 5,
+    "them": 2,
+    "themselves": 2,
+    "theoretical": 1,
+    "there": 1,
+    "these": 2,
+    "they": 4,
+    "thickest": 1,
+    "think": 1,
+    "thinkers": 1,
+    "thinking": 1,
+    "third": 1,
+    "this": 8,
+    "those": 8,
+    "threat": 1,
+    "threats": 1,
+    "three": 1,
+    "thriving": 1,
+    "through": 2,
+    "times": 1,
+    "to": 48,
+    "today": 2,
+    "tolerance": 1,
+    "too": 1,
+    "towards": 2,
+    "towering": 1,
+    "tractor": 1,
+    "transcendence": 1,
+    "transform": 1,
+    "travel": 1,
+    "true": 1,
+    "turn": 1,
+    "twelve": 1,
+    "twentieth": 1,
+    "twenty": 1,
+    "u": 4,
+    "ultimately": 1,
+    "uncertain": 1,
+    "uncomfortable": 1,
+    "unconstitutional": 1,
+    "uncontrived": 1,
+    "uncontroversial": 1,
+    "under": 1,
+    "understand": 1,
+    "understands": 1,
+    "uninvited": 2,
+    "united": 3,
+    "unlawful": 1,
+    "unprecedented": 1,
+    "unreasonable": 1,
+    "unsatisfying": 1,
+    "unwarranted": 1,
+    "up": 1,
+    "us": 6,
+    "use": 1,
+    "utterly": 1,
+    "v": 1,
+    "value": 3,
+    "values": 3,
+    "very": 2,
+    "vessel": 1,
+    "virtue": 1,
+    "virtuousness": 1,
+    "vital": 2,
+    "vulnerable": 1,
+    "way": 1,
+    "we": 24,
+    "well": 3,
+    "were": 1,
+    "what": 7,
+    "whatever": 1,
+    "wherever": 1,
+    "whether": 1,
+    "which": 9,
+    "while": 1,
+    "white": 1,
+    "who": 9,
+    "wholly": 1,
+    "whom": 1,
+    "whose": 1,
+    "wield": 1,
+    "wielded": 1,
+    "will": 6,
+    "wisdom": 1,
+    "wise": 1,
+    "with": 7,
+    "withering": 1,
+    "within": 1,
+    "without": 4,
+    "word": 1,
+    "work": 1,
+    "working": 2,
+    "world": 9,
+    "would": 5,
+    "writers": 1,
+    "wronged": 1,
+    "wrote": 2,
+    "xiaoping": 1,
+    "yardstick": 1,
+    "year": 6,
+    "years": 2,
+    "yet": 8,
+    "zealous": 1,
+    "zone": 1
+   },
+   "date": "2026-02-02",
+   "entries": {
+    "a": [
+     3,
+     4,
+     7,
+     8,
+     9,
+     11,
+     14,
+     16,
+     20
+    ],
+    "ability": [
+     19
+    ],
+    "about": [
+     1
+    ],
+    "acknowledge": [
+     19
+    ],
+    "actors": [
+     18
+    ],
+    "actually": [
+     11
+    ],
+    "administrative": [
+     14
+    ],
+    "advantages": [
+     19
+    ],
+    "adversaries": [
+     18
+    ],
+    "aggrandizement": [
+     15
+    ],
+    "ago": [
+     0
+    ],
+    "alone": [
+     4,
+     6
+    ],
+    "amalgamation": [
+     13
+    ],
+    "ambition": [
+     18
+    ],
+    "amendment": [
+     12
+    ],
+    "amount": [
+     16
+    ],
+    "an": [
+     13,
+     14,
+     14,
+     20
+    ],
+    "and": [
+     1,
+     1,
+     2,
+     3,
+     3,
+     7,
+     7,
+     7,
+     9,
+     10,
+     11,
+     13,
+     13,
+     14,
+     16
+    ],
+    "antagonists": [
+     19
+    ],
+    "anticipation": [
+     10
+    ],
+    "anyone": [
+     13
+    ],
+    "anything": [
+     11
+    ],
+    "approach": [
+     1
+    ],
+    "approaching": [
+     18
+    ],
+    "are": [
+     5,
+     20
+    ],
+    "around": [
+     3
+    ],
+    "arrival": [
+     10
+    ],
+    "artificial": [
+     10
+    ],
+    "as": [
+     5,
+     5,
+     19
+    ],
+    "ascent": [
+     0
+    ],
+    "aspire": [
+     13
+    ],
+    "authentic": [
+     13
+    ],
+    "authority": [
+     17
+    ],
+    "be": [
+     9,
+     11
+    ],
+    "beach": [
+     5
+    ],
+    "been": [
+     5
+    ],
+    "before": [
+     4
+    ],
+    "beginning": [
+     0
+    ],
+    "being": [
+     11
+    ],
+    "believe": [
+     8
+    ],
+    "billion": [
+     4
+    ],
+    "breathless": [
+     10
+    ],
+    "built": [
+     3
+    ],
+    "business": [
+     3
+    ],
+    "but": [
+     15
+    ],
+    "by": [
+     11
+    ],
+    "byzantine": [
+     7
+    ],
+    "can": [
+     14
+    ],
+    "caricatures": [
+     19,
+     20
+    ],
+    "cast": [
+     19
+    ],
+    "cat": [
+     11
+    ],
+    "catches": [
+     11
+    ],
+    "century": [
+     15
+    ],
+    "christopher": [
+     15
+    ],
+    "coercion": [
+     17
+    ],
+    "collective": [
+     19
+    ],
+    "comedy": [
+     20
+    ],
+    "commitments": [
+     13
+    ],
+    "common": [
+     13
+    ],
+    "communist": [
+     9
+    ],
+    "community": [
+     13
+    ],
+    "company": [
+     8
+    ],
+    "complexity": [
+     7
+    ],
+    "concerned": [
+     12
+    ],
+    "conflict": [
+     16
+    ],
+    "consequence": [
+     3
+    ],
+    "constitutes": [
+     13
+    ],
+    "consultants": [
+     3
+    ],
+    "correctly": [
+     15
+    ],
+    "counsel": [
+     3
+    ],
+    "created": [
+     11
+    ],
+    "credentialed": [
+     3
+    ],
+    "cultivated": [
+     18
+    ],
+    "culture": [
+     15
+    ],
+    "datasets": [
+     7
+    ],
+    "dean": [
+     20
+    ],
+    "decade": [
+     8
+    ],
+    "diminish": [
+     19
+    ],
+    "disagreement": [
+     16
+    ],
+    "dissent": [
+     18
+    ],
+    "distasteful": [
+     20
+    ],
+    "dowd": [
+     20
+    ],
+    "drop": [
+     20
+    ],
+    "ear": [
+     12
+    ],
+    "economic": [
+     14
+    ],
+    "effective": [
+     20
+    ],
+    "efficiently": [
+     7
+    ],
+    "elite": [
+     14
+    ],
+    "empty": [
+     14
+    ],
+    "encouraged": [
+     16
+    ],
+    "enduring": [
+     1
+    ],
+    "enemies": [
+     18
+    ],
+    "enrich": [
+     14
+    ],
+    "entering": [
+     8
+    ],
+    "enterprise": [
+     7
+    ],
+    "essentially": [
+     8
+    ],
+    "even": [
+     16,
+     18
+    ],
+    "eventually": [
+     9
+    ],
+    "factory": [
+     9
+    ],
+    "fade": [
+     11
+    ],
+    "fertile": [
+     13
+    ],
+    "find": [
+     20
+    ],
+    "firm": [
+     1
+    ],
+    "five": [
+     0
+    ],
+    "focus": [
+     11
+    ],
+    "for": [
+     1,
+     8,
+     9,
+     18
+    ],
+    "forget": [
+     1
+    ],
+    "forgotten": [
+     11
+    ],
+    "fourth": [
+     12
+    ],
+    "from": [
+     9
+    ],
+    "fundamentally": [
+     1
+    ],
+    "general": [
+     10
+    ],
+    "generated": [
+     4
+    ],
+    "geopolitical": [
+     19
+    ],
+    "globalized": [
+     14
+    ],
+    "gray": [
+     11
+    ],
+    "growth": [
+     4
+    ],
+    "has": [
+     10,
+     18
+    ],
+    "have": [
+     5
+    ],
+    "he": [
+     9
+    ],
+    "heights": [
+     10
+    ],
+    "his": [
+     9
+    ],
+    "hopefully": [
+     17
+    ],
+    "however": [
+     2
+    ],
+    "humanity": [
+     20
+    ],
+    "ideas": [
+     18
+    ],
+    "important": [
+     3
+    ],
+    "in": [
+     4,
+     4,
+     9,
+     9,
+     10,
+     12,
+     15,
+     15,
+     18,
+     19,
+     20,
+     20
+    ],
+    "include": [
+     13
+    ],
+    "indeed": [
+     1
+    ],
+    "individual": [
+     15
+    ],
+    "industry": [
+     10
+    ],
+    "instincts": [
+     9
+    ],
+    "institutions": [
+     5
+    ],
+    "intelligence": [
+     10
+    ],
+    "interacting": [
+     7
+    ],
+    "interests": [
+     13
+    ],
+    "internal": [
+     16
+    ],
+    "interview": [
+     20
+    ],
+    "into": [
+     13
+    ],
+    "is": [
+     2,
+     3,
+     8,
+     12,
+     12,
+     13,
+     14,
+     16,
+     17
+    ],
+    "it": [
+     3,
+     8,
+     12
+    ],
+    "its": [
+     0,
+     7,
+     8
+    ],
+    "itself": [
+     14
+    ],
+    "jargon": [
+     10
+    ],
+    "jiangxi": [
+     9
+    ],
+    "justice": [
+     12
+    ],
+    "katz": [
+     12
+    ],
+    "lacking": [
+     11
+    ],
+    "language": [
+     6
+    ],
+    "large": [
+     6
+    ],
+    "lasch": [
+     15
+    ],
+    "last": [
+     4,
+     20
+    ],
+    "lead": [
+     6
+    ],
+    "left": [
+     5
+    ],
+    "legions": [
+     3
+    ],
+    "long": [
+     19
+    ],
+    "lorne": [
+     20
+    ],
+    "magnanimity": [
+     18
+    ],
+    "man": [
+     15
+    ],
+    "marked": [
+     0
+    ],
+    "market": [
+     4
+    ],
+    "maureen": [
+     20
+    ],
+    "means": [
+     7
+    ],
+    "messy": [
+     13
+    ],
+    "mice": [
+     11
+    ],
+    "michaels": [
+     20
+    ],
+    "mind": [
+     15
+    ],
+    "models": [
+     6
+    ],
+    "modern": [
+     7
+    ],
+    "more": [
+     0,
+     1,
+     3,
+     14
+    ],
+    "most": [
+     20
+    ],
+    "naked": [
+     5
+    ],
+    "narcissism": [
+     15
+    ],
+    "narrow": [
+     19
+    ],
+    "nation": [
+     14
+    ],
+    "nations": [
+     5
+    ],
+    "neither": [
+     15
+    ],
+    "new": [
+     10
+    ],
+    "newly": [
+     14
+    ],
+    "nor": [
+     15
+    ],
+    "not": [
+     0,
+     1,
+     3,
+     6
+    ],
+    "nothing": [
+     14
+    ],
+    "observed": [
+     15
+    ],
+    "of": [
+     0,
+     1,
+     3,
+     3,
+     7,
+     7,
+     7,
+     8,
+     10,
+     10,
+     12,
+     13,
+     13,
+     15,
+     15,
+     15,
+     16
+    ],
+    "offering": [
+     0
+    ],
+    "on": [
+     5,
+     11
+    ],
+    "ones": [
+     20
+    ],
+    "only": [
+     19
+    ],
+    "operations": [
+     7,
+     8
+    ],
+    "others": [
+     5
+    ],
+    "otherwise": [
+     19
+    ],
+    "our": [
+     0,
+     0,
+     1,
+     2,
+     18,
+     18,
+     19,
+     19,
+     19
+    ],
+    "over": [
+     4,
+     19
+    ],
+    "party": [
+     9
+    ],
+    "peace": [
+     15
+    ],
+    "peak": [
+     0
+    ],
+    "perhaps": [
+     3
+    ],
+    "period": [
+     4
+    ],
+    "permitted": [
+     16
+    ],
+    "personalities": [
+     20
+    ],
+    "personnel": [
+     7
+    ],
+    "platforms": [
+     3
+    ],
+    "polite": [
+     1
+    ],
+    "posturing": [
+     10
+    ],
+    "postwar": [
+     20
+    ],
+    "potential": [
+     1
+    ],
+    "potter": [
+     12
+    ],
+    "power": [
+     17
+    ],
+    "predilections": [
+     13
+    ],
+    "presentations": [
+     3
+    ],
+    "prevail": [
+     19
+    ],
+    "profit": [
+     2
+    ],
+    "profitability": [
+     1
+    ],
+    "province": [
+     9
+    ],
+    "psychological": [
+     15
+    ],
+    "public": [
+     0
+    ],
+    "published": [
+     15
+    ],
+    "pure": [
+     2
+    ],
+    "purged": [
+     9
+    ],
+    "quarter": [
+     4
+    ],
+    "questions": [
+     1
+    ],
+    "radical": [
+     18
+    ],
+    "rate": [
+     4
+    ],
+    "raw": [
+     17
+    ],
+    "reached": [
+     10
+    ],
+    "record": [
+     2
+    ],
+    "reformist": [
+     9
+    ],
+    "refusing": [
+     19
+    ],
+    "reliably": [
+     7
+    ],
+    "remarkable": [
+     16
+    ],
+    "remember": [
+     1
+    ],
+    "representing": [
+     4
+    ],
+    "require": [
+     7
+    ],
+    "restraint": [
+     17
+    ],
+    "revenue": [
+     4
+    ],
+    "rogue": [
+     18
+    ],
+    "s": [
+     4
+    ],
+    "salvation": [
+     6
+    ],
+    "same": [
+     4
+    ],
+    "seeks": [
+     15
+    ],
+    "seemingly": [
+     20
+    ],
+    "self": [
+     15
+    ],
+    "sent": [
+     9
+    ],
+    "sentiments": [
+     13
+    ],
+    "set": [
+     13
+    ],
+    "software": [
+     3
+    ],
+    "some": [
+     5
+    ],
+    "something": [
+     18
+    ],
+    "soon": [
+     1
+    ],
+    "sparingly": [
+     17
+    ],
+    "spiritual": [
+     15
+    ],
+    "state": [
+     12
+    ],
+    "states": [
+     12
+    ],
+    "stewart": [
+     12
+    ],
+    "still": [
+     1
+    ],
+    "strengths": [
+     19
+    ],
+    "such": [
+     18
+    ],
+    "suggested": [
+     20
+    ],
+    "systems": [
+     11
+    ],
+    "tangle": [
+     7
+    ],
+    "technical": [
+     11
+    ],
+    "technology": [
+     10
+    ],
+    "temptation": [
+     19
+    ],
+    "term": [
+     19
+    ],
+    "than": [
+     0,
+     14
+    ],
+    "that": [
+     11,
+     13,
+     13,
+     15,
+     20,
+     20
+    ],
+    "the": [
+     0,
+     1,
+     1,
+     3,
+     4,
+     4,
+     4,
+     5,
+     6,
+     7,
+     7,
+     9,
+     10,
+     10,
+     10,
+     10,
+     11,
+     11,
+     11
+    ],
+    "their": [
+     3,
+     19
+    ],
+    "them": [
+     19,
+     20
+    ],
+    "these": [
+     11
+    ],
+    "they": [
+     7
+    ],
+    "third": [
+     8
+    ],
+    "this": [
+     14
+    ],
+    "threat": [
+     17
+    ],
+    "thriving": [
+     5
+    ],
+    "through": [
+     14
+    ],
+    "to": [
+     6,
+     9,
+     11,
+     13,
+     19,
+     19,
+     19,
+     20
+    ],
+    "today": [
+     10
+    ],
+    "tolerance": [
+     18
+    ],
+    "towards": [
+     18
+    ],
+    "tractor": [
+     9
+    ],
+    "transcendence": [
+     15
+    ],
+    "travel": [
+     14
+    ],
+    "true": [
+     17
+    ],
+    "twentieth": [
+     15
+    ],
+    "u": [
+     4
+    ],
+    "ultimately": [
+     11
+    ],
+    "uncontrived": [
+     2
+    ],
+    "uninvited": [
+     12
+    ],
+    "united": [
+     12
+    ],
+    "unprecedented": [
+     8
+    ],
+    "us": [
+     6,
+     18
+    ],
+    "v": [
+     12
+    ],
+    "value": [
+     11
+    ],
+    "values": [
+     13
+    ],
+    "vessel": [
+     14
+    ],
+    "we": [
+     1,
+     4,
+     8,
+     13
+    ],
+    "well": [
+     3,
+     5
+    ],
+    "what": [
+     13
+    ],
+    "which": [
+     12,
+     13,
+     14
+    ],
+    "wielded": [
+     17
+    ],
+    "will": [
+     1,
+     6,
+     11,
+     19
+    ],
+    "wisdom": [
+     1
+    ],
+    "wise": [
+     3
+    ],
+    "with": [
+     3,
+     7,
+     12,
+     17
+    ],
+    "withering": [
+     20
+    ],
+    "work": [
+     9
+    ],
+    "would": [
+     9
+    ],
+    "wrote": [
+     12
+    ],
+    "year": [
+     4,
+     20
+    ],
+    "years": [
+     0,
+     1
+    ],
+    "yet": [
+     1,
+     13
+    ],
+    "zealous": [
+     11
+    ],
+    "zone": [
+     14
+    ]
+   },
+   "excerpts": [
+    "Our public offering more than five years ago marked the beginning of our ascent, not its peak.",
+    "We still remember, and will not soon forget, enduring for years polite yet firm questions about the potential profitability and indeed more fundamentally the wisdom of our approach.",
+    "Our record profit, however, is pure and uncontrived.",
+    "And it is, perhaps more important, the consequence of a business built around software platforms, not legions of well-credentialed consultants with their presentations and wise counsel.",
+    "We generated $1.1 billion in revenue in the U.S. market alone last quarter, representing a 93% growth rate over the same period the year before.",
+    "Some institutions as well as nations are thriving; others have been left naked on the beach.",
+    "The large language models alone will not lead us to salvation.",
+    "They require a means of reliably and efficiently interacting with the byzantine complexity of the modern enterprise—its tangle of datasets and operations and personnel.",
+    "It is essentially unprecedented, we believe, for a company entering its third decade of operations.",
+    "He would eventually be purged from the Communist Party for his reformist instincts and sent to work in a tractor factory in Jiangxi province.",
+    "The jargon and posturing in the technology industry, the breathless anticipation of the arrival of artificial general intelligence, has today reached new heights.",
+    "Anything lacking a zealous focus on the value being created by these technical systems, the mice that the cat actually catches, will ultimately fade to gray and be forgotten.",
+    "It is “the uninvited ear” of the state with which the Fourth Amendment is concerned, Justice Potter Stewart wrote in Katz v. United States.",
+    "What is the common set of values and sentiments—that messy yet fertile amalgamation of interests, predilections, and commitments that constitutes an authentic community—into which we aspire to include anyone?",
+    "Is this nation nothing more than an economic zone, an empty administrative vessel, through which a newly globalized elite can travel and enrich itself?",
+    "In The Culture of Narcissism, published in 1979, Christopher Lasch correctly observed that “the ‘psychological man’ of the twentieth century seeks neither individual self-aggrandizement nor spiritual transcendence but peace of mind.”",
+    "A remarkable amount of internal disagreement and conflict is permitted, even encouraged.",
+    "The raw power of authority, the threat of coercion, is wielded sparingly and hopefully with true restraint.",
+    "Such tolerance for dissent and ambition and rogue actors and radical ideas has cultivated in us something approaching magnanimity towards our adversaries and even our enemies.",
+    "Our collective temptation to cast our antagonists, geopolitical and otherwise, as narrow caricatures, refusing to acknowledge their strengths and advantages, will only diminish our ability to prevail over them in the long term.",
+    "In an interview last year, the dean of postwar comedy Lorne Michaels suggested to Maureen Dowd that the most effective and withering caricatures of seemingly distasteful personalities are the ones that find “a drop of humanity” in them."
+   ],
+   "id": "pltr-q4-2025",
+   "msent": {
+    "a": 40,
+    "abandoned": 1,
+    "abilities": 1,
+    "ability": 2,
+    "about": 1,
+    "above": 1,
+    "acceleration": 1,
+    "access": 1,
+    "achieved": 1,
+    "achievement": 1,
+    "acknowledge": 1,
+    "across": 1,
+    "act": 1,
+    "action": 1,
+    "actors": 1,
+    "actual": 1,
+    "actually": 1,
+    "administrative": 1,
+    "admittedly": 1,
+    "adoption": 1,
+    "adrift": 1,
+    "advancing": 2,
+    "advantage": 1,
+    "advantages": 1,
+    "adversaries": 1,
+    "affection": 1,
+    "after": 1,
+    "again": 1,
+    "against": 3,
+    "agents": 1,
+    "aggrandizement": 1,
+    "ago": 1,
+    "akin": 1,
+    "alasdair": 1,
+    "all": 5,
+    "alone": 3,
+    "alongside": 1,
+    "also": 1,
+    "amalgamation": 1,
+    "ambition": 1,
+    "ambitious": 1,
+    "amendment": 2,
+    "amount": 1,
+    "an": 12,
+    "and": 49,
+    "antagonisms": 1,
+    "antagonists": 1,
+    "anticipation": 1,
+    "any": 4,
+    "anyone": 1,
+    "anything": 1,
+    "appeal": 1,
+    "appearance": 1,
+    "approach": 2,
+    "approaching": 1,
+    "architect": 1,
+    "architecture": 1,
+    "are": 12,
+    "around": 2,
+    "arrival": 1,
+    "arrived": 1,
+    "artificial": 4,
+    "artist": 1,
+    "as": 12,
+    "ascent": 1,
+    "aspire": 1,
+    "assess": 1,
+    "astonishing": 1,
+    "at": 9,
+    "attack": 1,
+    "attempts": 1,
+    "audit": 1,
+    "authentic": 1,
+    "authority": 1,
+    "backwater": 1,
+    "banishing": 1,
+    "banner": 1,
+    "be": 16,
+    "beach": 1,
+    "bearish": 1,
+    "been": 4,
+    "before": 4,
+    "beginning": 2,
+    "being": 2,
+    "belief": 1,
+    "beliefs": 2,
+    "believe": 4,
+    "bend": 1,
+    "between": 3,
+    "billion": 2,
+    "black": 1,
+    "blinding": 1,
+    "blithely": 1,
+    "both": 2,
+    "boundaries": 1,
+    "breach": 1,
+    "breathless": 1,
+    "brisk": 1,
+    "build": 1,
+    "building": 2,
+    "built": 5,
+    "business": 6,
+    "businesses": 1,
+    "but": 6,
+    "by": 7,
+    "byzantine": 1,
+    "can": 5,
+    "capabilities": 1,
+    "capable": 2,
+    "capital": 1,
+    "caricatures": 2,
+    "case": 1,
+    "cast": 1,
+    "cat": 2,
+    "catches": 2,
+    "celebrate": 1,
+    "century": 1,
+    "certain": 1,
+    "chattering": 1,
+    "china": 1,
+    "christopher": 1,
+    "citizens": 1,
+    "civilization": 1,
+    "class": 2,
+    "clear": 1,
+    "coercion": 1,
+    "collective": 2,
+    "colony": 1,
+    "comedy": 1,
+    "commentary": 1,
+    "commercial": 3,
+    "commitments": 2,
+    "common": 2,
+    "communal": 1,
+    "commune": 1,
+    "communist": 1,
+    "community": 2,
+    "companies": 3,
+    "company": 5,
+    "complexity": 1,
+    "concerned": 1,
+    "confined": 1,
+    "conflict": 1,
+    "confounding": 1,
+    "consequence": 1,
+    "constellation": 1,
+    "constitutes": 2,
+    "constitutionally": 1,
+    "constraints": 1,
+    "construction": 3,
+    "consultants": 1,
+    "contemporary": 1,
+    "continue": 1,
+    "contraction": 1,
+    "core": 1,
+    "corollary": 1,
+    "corporate": 1,
+    "corporation": 1,
+    "correctly": 1,
+    "cosmic": 1,
+    "could": 1,
+    "counsel": 1,
+    "country": 2,
+    "course": 1,
+    "covets": 1,
+    "crafting": 1,
+    "created": 1,
+    "creation": 1,
+    "creators": 1,
+    "credentialed": 1,
+    "critical": 3,
+    "crude": 1,
+    "cry": 1,
+    "cultivated": 1,
+    "cultural": 2,
+    "culture": 2,
+    "cultures": 1,
+    "dancers": 1,
+    "datasets": 1,
+    "dean": 1,
+    "decade": 1,
+    "decision": 1,
+    "declared": 1,
+    "decline": 1,
+    "declined": 1,
+    "declining": 1,
+    "defeat": 1,
+    "degree": 3,
+    "demise": 1,
+    "deng": 1,
+    "depriving": 1,
+    "describe": 1,
+    "development": 1,
+    "did": 1,
+    "diminish": 1,
+    "diminished": 1,
+    "disagreement": 1,
+    "discerning": 1,
+    "discipline": 1,
+    "discussion": 1,
+    "disinterested": 1,
+    "dismissing": 1,
+    "dissent": 1,
+    "distasteful": 1,
+    "divide": 2,
+    "divided": 1,
+    "doesn't": 1,
+    "doubled": 1,
+    "dowd": 1,
+    "driven": 1,
+    "drop": 2,
+    "ear": 2,
+    "easier": 1,
+    "economic": 1,
+    "economy": 1,
+    "effective": 2,
+    "efficiently": 1,
+    "electric": 1,
+    "elite": 1,
+    "else": 1,
+    "embraced": 1,
+    "embracing": 1,
+    "emerging": 2,
+    "empires": 1,
+    "empty": 1,
+    "encouraged": 1,
+    "endeavor": 1,
+    "enduring": 1,
+    "enemies": 2,
+    "enemy": 1,
+    "engineering": 1,
+    "engines": 1,
+    "enrich": 1,
+    "ensnare": 1,
+    "ensure": 1,
+    "entering": 2,
+    "enterprise": 1,
+    "entitled": 1,
+    "equal": 1,
+    "equally": 1,
+    "essentially": 1,
+    "ethical": 1,
+    "even": 4,
+    "eventually": 1,
+    "exceeded": 1,
+    "excitement": 1,
+    "expand": 1,
+    "expansion": 1,
+    "expectation": 1,
+    "expectations": 1,
+    "expense": 1,
+    "expose": 1,
+    "exposed": 1,
+    "external": 1,
+    "exuberant": 1,
+    "eye": 1,
+    "fabricated": 1,
+    "fact": 1,
+    "factory": 1,
+    "fade": 1,
+    "failure": 1,
+    "familiar": 1,
+    "famously": 1,
+    "far": 3,
+    "fear": 2,
+    "fearful": 2,
+    "feel": 1,
+    "fertile": 1,
+    "fiat": 1,
+    "fierce": 1,
+    "figure": 1,
+    "filled": 1,
+    "financial": 1,
+    "financials": 1,
+    "find": 1,
+    "finding": 1,
+    "finds": 1,
+    "firm": 1,
+    "five": 1,
+    "focus": 2,
+    "for": 14,
+    "forget": 1,
+    "forgotten": 1,
+    "forward": 1,
+    "fourth": 3,
+    "free": 1,
+    "freedom": 1,
+    "from": 6,
+    "functional": 1,
+    "fundamentally": 1,
+    "further": 1,
+    "general": 1,
+    "generated": 2,
+    "generating": 2,
+    "generational": 1,
+    "geopolitical": 1,
+    "globalized": 1,
+    "government": 4,
+    "grace": 1,
+    "grammar": 1,
+    "granular": 1,
+    "gray": 1,
+    "grievances": 1,
+    "grounding": 1,
+    "growing": 1,
+    "grown": 2,
+    "growth": 4,
+    "guard": 1,
+    "guarding": 1,
+    "gulf": 2,
+    "harnessing": 1,
+    "has": 6,
+    "hatched": 1,
+    "have": 15,
+    "haves": 1,
+    "he": 2,
+    "height": 1,
+    "heights": 1,
+    "his": 2,
+    "history": 1,
+    "hollow": 2,
+    "hope": 1,
+    "hopefully": 1,
+    "how": 1,
+    "however": 2,
+    "humanity": 2,
+    "humility": 1,
+    "i": 2,
+    "ideas": 1,
+    "identity": 2,
+    "idiosyncratic": 1,
+    "if": 1,
+    "imagined": 1,
+    "imperfect": 1,
+    "important": 1,
+    "in": 32,
+    "include": 1,
+    "inclusion": 2,
+    "incorrectly": 1,
+    "increase": 2,
+    "increasingly": 3,
+    "incursions": 1,
+    "indeed": 7,
+    "individual": 1,
+    "industry": 2,
+    "information": 1,
+    "insidiousness": 1,
+    "instinct": 1,
+    "instincts": 1,
+    "institutions": 2,
+    "intelligence": 4,
+    "intentionally": 1,
+    "interacting": 1,
+    "interested": 2,
+    "interests": 1,
+    "internal": 2,
+    "interview": 1,
+    "into": 7,
+    "intruding": 1,
+    "intrusion": 1,
+    "invest": 1,
+    "investigation": 1,
+    "is": 32,
+    "it": 16,
+    "its": 6,
+    "itself": 2,
+    "jargon": 1,
+    "jiangxi": 1,
+    "juncture": 1,
+    "justice": 2,
+    "katz": 1,
+    "kind": 1,
+    "know": 1,
+    "lacking": 1,
+    "landmark": 1,
+    "language": 3,
+    "large": 2,
+    "lasch": 1,
+    "last": 4,
+    "lead": 1,
+    "least": 1,
+    "left": 1,
+    "legions": 1,
+    "lend": 1,
+    "lethal": 1,
+    "level": 1,
+    "levels": 1,
+    "life": 1,
+    "limit": 1,
+    "little": 1,
+    "lives": 3,
+    "logs": 1,
+    "long": 3,
+    "loose": 1,
+    "lorne": 1,
+    "lulled": 1,
+    "macintyre": 1,
+    "made": 1,
+    "magnanimity": 1,
+    "maintaining": 1,
+    "make": 1,
+    "makes": 2,
+    "man": 2,
+    "manage": 1,
+    "management": 1,
+    "maniacal": 1,
+    "many": 3,
+    "marginalized": 1,
+    "marked": 1,
+    "market": 3,
+    "markets": 1,
+    "massive": 1,
+    "material": 1,
+    "matter": 2,
+    "maureen": 1,
+    "may": 4,
+    "means": 3,
+    "merely": 1,
+    "messy": 1,
+    "metrics": 1,
+    "mice": 2,
+    "michaels": 1,
+    "million": 2,
+    "mind": 1,
+    "mistake": 1,
+    "mode": 1,
+    "models": 4,
+    "modern": 2,
+    "moment": 1,
+    "monetize": 1,
+    "months": 1,
+    "moral": 1,
+    "morally": 1,
+    "more": 9,
+    "most": 6,
+    "mostly": 1,
+    "movement": 1,
+    "must": 3,
+    "naked": 1,
+    "narcissism": 1,
+    "narrow": 1,
+    "nation": 1,
+    "national": 1,
+    "nations": 1,
+    "nearly": 1,
+    "neither": 1,
+    "new": 3,
+    "newly": 2,
+    "nor": 1,
+    "not": 9,
+    "note": 1,
+    "nothing": 2,
+    "nots": 1,
+    "now": 3,
+    "objects": 1,
+    "obscurity": 1,
+    "observed": 1,
+    "obsession": 1,
+    "of": 51,
+    "offering": 1,
+    "often": 3,
+    "on": 7,
+    "once": 1,
+    "one": 4,
+    "ones": 1,
+    "only": 3,
+    "opening": 1,
+    "operations": 2,
+    "opponent": 1,
+    "oppositional": 1,
+    "or": 6,
+    "organizing": 1,
+    "orientation": 1,
+    "other": 1,
+    "others": 3,
+    "otherwise": 1,
+    "ought": 1,
+    "our": 22,
+    "outcomes": 1,
+    "output": 1,
+    "outset": 1,
+    "outside": 2,
+    "over": 6,
+    "overreach": 1,
+    "oversee": 1,
+    "oversight": 1,
+    "own": 4,
+    "painters": 1,
+    "palantir": 1,
+    "party": 1,
+    "passes": 1,
+    "path": 2,
+    "patrolling": 1,
+    "pay": 1,
+    "peace": 2,
+    "peak": 1,
+    "peer": 1,
+    "perceive": 1,
+    "perception": 1,
+    "performative": 1,
+    "perhaps": 3,
+    "period": 3,
+    "permissioning": 1,
+    "permitted": 1,
+    "personalities": 1,
+    "personnel": 1,
+    "philosopher": 1,
+    "physical": 1,
+    "platform": 2,
+    "platforms": 1,
+    "pluralism": 1,
+    "pockets": 1,
+    "poets": 1,
+    "polite": 1,
+    "political": 2,
+    "politically": 1,
+    "politics": 1,
+    "possible": 3,
+    "posturing": 1,
+    "postwar": 1,
+    "potential": 1,
+    "potter": 1,
+    "power": 3,
+    "pragmatism": 1,
+    "pray": 1,
+    "preconditions": 1,
+    "prediction": 1,
+    "predilections": 1,
+    "prepare": 1,
+    "presentations": 1,
+    "pressure": 1,
+    "prevail": 1,
+    "preventing": 1,
+    "private": 3,
+    "prize": 1,
+    "probabilistic": 1,
+    "produced": 1,
+    "profess": 1,
+    "profit": 2,
+    "profitability": 2,
+    "progress": 1,
+    "progressives": 1,
+    "project": 2,
+    "projects": 1,
+    "promising": 1,
+    "propped": 1,
+    "province": 1,
+    "prudent": 1,
+    "psychological": 1,
+    "psychology": 1,
+    "public": 5,
+    "published": 1,
+    "pure": 1,
+    "purely": 1,
+    "purged": 1,
+    "quarter": 4,
+    "questions": 1,
+    "quite": 2,
+    "radical": 1,
+    "radicals": 1,
+    "rallying": 1,
+    "rate": 4,
+    "raucous": 1,
+    "raw": 1,
+    "reached": 1,
+    "real": 1,
+    "record": 4,
+    "reflection": 1,
+    "reflects": 1,
+    "reformist": 1,
+    "refusing": 1,
+    "reimagined": 1,
+    "reject": 1,
+    "reliably": 1,
+    "remade": 1,
+    "remain": 1,
+    "remains": 1,
+    "remarkable": 4,
+    "remember": 1,
+    "reminded": 2,
+    "representing": 3,
+    "require": 1,
+    "requires": 1,
+    "reshape": 1,
+    "resisting": 1,
+    "restraint": 1,
+    "result": 3,
+    "results": 3,
+    "retreat": 2,
+    "revenue": 2,
+    "revolt": 1,
+    "revolutionaries": 1,
+    "reward": 1,
+    "rhetoric": 1,
+    "rise": 1,
+    "risk": 1,
+    "risks": 1,
+    "rogue": 1,
+    "role": 1,
+    "run": 1,
+    "ruthless": 1,
+    "s": 4,
+    "said": 1,
+    "salvation": 1,
+    "same": 5,
+    "scale": 1,
+    "scarce": 1,
+    "science": 1,
+    "searches": 1,
+    "sectors": 1,
+    "security": 1,
+    "see": 1,
+    "seek": 1,
+    "seeks": 1,
+    "seemingly": 2,
+    "seems": 1,
+    "seen": 1,
+    "seizures": 1,
+    "self": 3,
+    "seminar": 1,
+    "sense": 2,
+    "sent": 1,
+    "sentiment": 1,
+    "sentiments": 1,
+    "serve": 1,
+    "set": 3,
+    "shallow": 1,
+    "shield": 1,
+    "should": 3,
+    "significant": 2,
+    "single": 2,
+    "singular": 1,
+    "sits": 1,
+    "size": 1,
+    "skirmishes": 1,
+    "sleep": 1,
+    "slights": 1,
+    "so": 1,
+    "software": 5,
+    "some": 3,
+    "something": 2,
+    "soon": 1,
+    "sorts": 1,
+    "space": 1,
+    "spaces": 1,
+    "sparingly": 1,
+    "specificity": 1,
+    "spectrum": 1,
+    "spheres": 1,
+    "spiritual": 1,
+    "stage": 2,
+    "startup": 1,
+    "state": 4,
+    "states": 3,
+    "stewart": 2,
+    "still": 1,
+    "strengths": 1,
+    "striking": 1,
+    "strings": 1,
+    "structure": 1,
+    "subject": 1,
+    "success": 1,
+    "such": 8,
+    "sufficient": 1,
+    "suggested": 1,
+    "superficial": 1,
+    "superior": 1,
+    "surveillance": 1,
+    "sweeping": 1,
+    "system": 4,
+    "systems": 2,
+    "take": 3,
+    "tangle": 1,
+    "teachers": 1,
+    "technical": 3,
+    "technology": 4,
+    "temerity": 1,
+    "temptation": 1,
+    "term": 1,
+    "terror": 1,
+    "tether": 1,
+    "tethered": 1,
+    "text": 1,
+    "than": 4,
+    "that": 28,
+    "the": 56,
+    "theatrical": 1,
+    "theatricality": 1,
+    "their": 4,
+    "them": 2,
+    "themselves": 2,
+    "theoretical": 1,
+    "there": 1,
+    "these": 2,
+    "they": 2,
+    "thickest": 1,
+    "think": 1,
+    "thinkers": 1,
+    "thinking": 1,
+    "third": 1,
+    "this": 8,
+    "those": 6,
+    "threat": 1,
+    "threats": 1,
+    "three": 1,
+    "thriving": 1,
+    "through": 2,
+    "times": 1,
+    "to": 30,
+    "today": 2,
+    "tolerance": 1,
+    "too": 1,
+    "towards": 2,
+    "towering": 1,
+    "tractor": 1,
+    "transcendence": 1,
+    "transform": 1,
+    "travel": 1,
+    "true": 1,
+    "turn": 1,
+    "twelve": 1,
+    "twentieth": 1,
+    "twenty": 1,
+    "u": 4,
+    "ultimately": 1,
+    "uncertain": 1,
+    "uncomfortable": 1,
+    "unconstitutional": 1,
+    "uncontrived": 1,
+    "uncontroversial": 1,
+    "under": 1,
+    "understand": 1,
+    "understands": 1,
+    "uninvited": 2,
+    "united": 3,
+    "unlawful": 1,
+    "unprecedented": 1,
+    "unreasonable": 1,
+    "unsatisfying": 1,
+    "unwarranted": 1,
+    "up": 1,
+    "us": 6,
+    "use": 1,
+    "utterly": 1,
+    "v": 1,
+    "value": 3,
+    "values": 3,
+    "very": 2,
+    "vessel": 1,
+    "virtue": 1,
+    "virtuousness": 1,
+    "vital": 2,
+    "vulnerable": 1,
+    "way": 1,
+    "we": 22,
+    "well": 3,
+    "were": 1,
+    "what": 7,
+    "whatever": 1,
+    "wherever": 1,
+    "whether": 1,
+    "which": 9,
+    "while": 1,
+    "white": 1,
+    "who": 7,
+    "wholly": 1,
+    "whom": 1,
+    "whose": 1,
+    "wield": 1,
+    "wielded": 1,
+    "will": 6,
+    "wisdom": 1,
+    "wise": 1,
+    "with": 7,
+    "withering": 1,
+    "within": 1,
+    "without": 4,
+    "word": 1,
+    "work": 1,
+    "working": 2,
+    "world": 9,
+    "would": 5,
+    "writers": 1,
+    "wronged": 1,
+    "wrote": 2,
+    "xiaoping": 1,
+    "yardstick": 1,
+    "year": 4,
+    "years": 2,
+    "yet": 8,
+    "zealous": 1,
+    "zone": 1
+   },
+   "n_sentences": 73,
+   "source": "palantir.com",
+   "title": "Q4 2025 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://www.palantir.com/q4-2025-letter/en/",
+   "words": 1932
+  },
+  {
+   "counts": {
+    "a": 19,
+    "abandon": 1,
+    "absence": 1,
+    "absolute": 1,
+    "absolutely": 1,
+    "accelerating": 1,
+    "achieve": 1,
+    "actively": 1,
+    "actually": 1,
+    "adaptive": 1,
+    "adopters": 1,
+    "again": 1,
+    "ago": 2,
+    "all": 3,
+    "allows": 1,
+    "also": 1,
+    "alternative": 1,
+    "alto": 1,
+    "america": 1,
+    "american": 2,
+    "an": 7,
+    "analysts": 1,
+    "and": 38,
+    "anticipate": 1,
+    "any": 1,
+    "apart": 1,
+    "appraise": 1,
+    "approach": 1,
+    "are": 3,
+    "army": 1,
+    "art": 1,
+    "artificial": 1,
+    "as": 1,
+    "ascent": 1,
+    "aside": 1,
+    "assent": 1,
+    "at": 4,
+    "authentic": 1,
+    "be": 2,
+    "become": 1,
+    "been": 4,
+    "before": 1,
+    "befuddlement": 1,
+    "beginning": 1,
+    "beliefs": 1,
+    "believe": 2,
+    "beneath": 1,
+    "billion": 2,
+    "bright": 1,
+    "british": 1,
+    "business": 5,
+    "butler": 1,
+    "by": 2,
+    "cannot": 2,
+    "capitalists": 1,
+    "casual": 1,
+    "casually": 1,
+    "center": 2,
+    "century": 2,
+    "certain": 1,
+    "challenges": 1,
+    "chapter": 1,
+    "chattering": 1,
+    "citing": 1,
+    "class": 1,
+    "clear": 1,
+    "commercial": 1,
+    "common": 3,
+    "company": 2,
+    "complexity": 1,
+    "confounded": 1,
+    "constraints": 1,
+    "continued": 3,
+    "convert": 1,
+    "corporate": 1,
+    "costs": 1,
+    "could": 1,
+    "counterintuitively": 1,
+    "cultural": 1,
+    "culture": 5,
+    "cultures": 1,
+    "current": 1,
+    "customers": 1,
+    "deeply": 1,
+    "defined": 1,
+    "definition": 1,
+    "degree": 1,
+    "deranged": 1,
+    "destructive": 2,
+    "detractors": 1,
+    "development": 2,
+    "did": 2,
+    "difficult": 1,
+    "diminished": 1,
+    "director": 1,
+    "disciplined": 1,
+    "disparate": 1,
+    "do": 1,
+    "does": 1,
+    "dollars": 1,
+    "done": 1,
+    "doubled": 1,
+    "driving": 1,
+    "earliest": 1,
+    "economic": 1,
+    "effectively": 1,
+    "either": 1,
+    "embrace": 1,
+    "end": 1,
+    "enemy": 1,
+    "ensure": 2,
+    "equality": 1,
+    "even": 2,
+    "evolve": 1,
+    "exclusion": 1,
+    "expansion": 1,
+    "experience": 1,
+    "experiment": 1,
+    "extraordinary": 1,
+    "falcon": 1,
+    "falconer": 1,
+    "fall": 1,
+    "ferocious": 1,
+    "film": 1,
+    "financial": 2,
+    "first": 2,
+    "focus": 1,
+    "for": 6,
+    "force": 1,
+    "forward": 1,
+    "frames": 1,
+    "friend": 1,
+    "generalizable": 1,
+    "generated": 2,
+    "generating": 1,
+    "generative": 1,
+    "geopolitics": 1,
+    "greater": 2,
+    "growing": 2,
+    "grown": 1,
+    "growth": 2,
+    "had": 1,
+    "half": 1,
+    "has": 7,
+    "have": 8,
+    "headcount": 1,
+    "hear": 1,
+    "heavily": 1,
+    "help": 1,
+    "henry": 1,
+    "hindered": 1,
+    "his": 1,
+    "history": 2,
+    "hold": 2,
+    "hollow": 1,
+    "how": 1,
+    "however": 1,
+    "human": 1,
+    "ideas": 1,
+    "identity": 1,
+    "idiosyncrasies": 1,
+    "idiosyncratic": 1,
+    "in": 23,
+    "including": 1,
+    "indeed": 2,
+    "intelligence": 1,
+    "interview": 1,
+    "investors": 1,
+    "is": 13,
+    "it": 9,
+    "its": 5,
+    "jaglom": 1,
+    "juggernaut": 1,
+    "kind": 1,
+    "language": 1,
+    "last": 2,
+    "lean": 1,
+    "left": 1,
+    "life": 2,
+    "limitations": 1,
+    "limited": 1,
+    "living": 2,
+    "long": 1,
+    "made": 2,
+    "make": 1,
+    "manifestation": 1,
+    "many": 1,
+    "maturation": 1,
+    "million": 2,
+    "minds": 1,
+    "mistake": 2,
+    "models": 1,
+    "moment": 1,
+    "months": 2,
+    "more": 4,
+    "most": 5,
+    "must": 2,
+    "nation": 1,
+    "national": 1,
+    "nearly": 1,
+    "need": 1,
+    "neutered": 1,
+    "new": 1,
+    "not": 2,
+    "notions": 1,
+    "novel": 1,
+    "now": 2,
+    "obscured": 1,
+    "obsessive": 1,
+    "of": 36,
+    "on": 5,
+    "one": 4,
+    "only": 1,
+    "ontology": 2,
+    "operate": 1,
+    "operations": 1,
+    "or": 3,
+    "orientation": 1,
+    "orson": 1,
+    "others": 3,
+    "otherworldly": 1,
+    "ought": 1,
+    "our": 17,
+    "ourselves": 1,
+    "outsiders": 1,
+    "over": 1,
+    "own": 1,
+    "palantir": 1,
+    "palo": 1,
+    "particularized": 1,
+    "partners": 1,
+    "past": 1,
+    "period": 1,
+    "planet": 1,
+    "platform": 2,
+    "pluralism": 1,
+    "poet": 1,
+    "possible": 3,
+    "post": 1,
+    "pragmatism": 1,
+    "preconceived": 1,
+    "presently": 1,
+    "previously": 1,
+    "principal": 1,
+    "problems": 1,
+    "proclaim": 1,
+    "producing": 1,
+    "profit": 3,
+    "proven": 1,
+    "pursuit": 1,
+    "puts": 1,
+    "quarter": 4,
+    "quite": 3,
+    "racing": 1,
+    "ranks": 1,
+    "rate": 2,
+    "rates": 1,
+    "reality": 1,
+    "recent": 1,
+    "record": 2,
+    "reference": 1,
+    "regressive": 1,
+    "rejection": 2,
+    "reluctance": 1,
+    "rely": 1,
+    "remains": 2,
+    "remembering": 1,
+    "reordering": 1,
+    "representing": 1,
+    "resisted": 1,
+    "results": 1,
+    "retail": 1,
+    "return": 2,
+    "revenue": 2,
+    "rise": 1,
+    "route": 1,
+    "ruthless": 1,
+    "said": 1,
+    "same": 2,
+    "scale": 1,
+    "segment": 1,
+    "self": 1,
+    "sense": 2,
+    "set": 1,
+    "setting": 1,
+    "shaping": 1,
+    "shared": 3,
+    "shifted": 1,
+    "should": 2,
+    "significance": 1,
+    "significant": 2,
+    "significantly": 2,
+    "single": 1,
+    "size": 1,
+    "so": 1,
+    "software": 2,
+    "some": 3,
+    "something": 2,
+    "specific": 1,
+    "staggering": 1,
+    "start": 1,
+    "states": 2,
+    "still": 1,
+    "stories": 1,
+    "strength": 2,
+    "strenuously": 1,
+    "substantive": 1,
+    "successful": 1,
+    "such": 2,
+    "survival": 1,
+    "technical": 1,
+    "terrain": 1,
+    "than": 3,
+    "that": 12,
+    "the": 47,
+    "their": 1,
+    "them": 1,
+    "they": 1,
+    "things": 2,
+    "third": 1,
+    "this": 7,
+    "three": 1,
+    "through": 1,
+    "times": 1,
+    "to": 20,
+    "today": 1,
+    "true": 1,
+    "twelve": 1,
+    "twenty": 1,
+    "ultimately": 1,
+    "understand": 1,
+    "united": 2,
+    "universal": 1,
+    "unrelenting": 1,
+    "us": 2,
+    "vacant": 1,
+    "value": 1,
+    "values": 2,
+    "venture": 1,
+    "very": 1,
+    "voracious": 1,
+    "vulgar": 1,
+    "warned": 1,
+    "was": 2,
+    "washington": 1,
+    "way": 1,
+    "ways": 1,
+    "we": 8,
+    "weaknesses": 1,
+    "welles": 1,
+    "what": 2,
+    "whose": 1,
+    "will": 2,
+    "william": 1,
+    "with": 1,
+    "wondrous": 1,
+    "work": 2,
+    "world": 1,
+    "worth": 1,
+    "would": 4,
+    "year": 3,
+    "years": 1,
+    "yeats": 1,
+    "yet": 2,
+    "yielding": 1
+   },
+   "date": "2025-11-03",
+   "entries": {
+    "a": [
+     0,
+     7
+    ],
+    "absence": [
+     5
+    ],
+    "absolutely": [
+     6
+    ],
+    "achieve": [
+     2
+    ],
+    "adopters": [
+     3
+    ],
+    "ago": [
+     7
+    ],
+    "all": [
+     3
+    ],
+    "allows": [
+     3
+    ],
+    "alto": [
+     2
+    ],
+    "an": [
+     5
+    ],
+    "and": [
+     3,
+     3,
+     8
+    ],
+    "apart": [
+     7
+    ],
+    "appraise": [
+     1
+    ],
+    "are": [
+     3
+    ],
+    "art": [
+     5
+    ],
+    "been": [
+     1
+    ],
+    "beginning": [
+     0
+    ],
+    "beneath": [
+     3
+    ],
+    "british": [
+     5
+    ],
+    "business": [
+     1
+    ],
+    "butler": [
+     7
+    ],
+    "cannot": [
+     7,
+     7
+    ],
+    "capitalists": [
+     2
+    ],
+    "center": [
+     7
+    ],
+    "century": [
+     7
+    ],
+    "chapter": [
+     0
+    ],
+    "citing": [
+     5
+    ],
+    "current": [
+     1
+    ],
+    "deeply": [
+     8
+    ],
+    "destructive": [
+     8
+    ],
+    "development": [
+     6
+    ],
+    "difficult": [
+     1
+    ],
+    "director": [
+     5
+    ],
+    "earliest": [
+     3
+    ],
+    "effectively": [
+     3
+    ],
+    "either": [
+     1
+    ],
+    "enemy": [
+     5
+    ],
+    "falcon": [
+     7
+    ],
+    "falconer": [
+     7
+    ],
+    "fall": [
+     7
+    ],
+    "film": [
+     5
+    ],
+    "financial": [
+     1
+    ],
+    "first": [
+     0,
+     0
+    ],
+    "for": [
+     1,
+     2
+    ],
+    "friend": [
+     5
+    ],
+    "geopolitics": [
+     1
+    ],
+    "grown": [
+     4
+    ],
+    "has": [
+     1,
+     2,
+     3
+    ],
+    "have": [
+     4
+    ],
+    "hear": [
+     7
+    ],
+    "henry": [
+     5
+    ],
+    "his": [
+     5
+    ],
+    "hold": [
+     7
+    ],
+    "how": [
+     3
+    ],
+    "human": [
+     3
+    ],
+    "in": [
+     1,
+     1,
+     2,
+     3,
+     4,
+     5,
+     5,
+     6
+    ],
+    "indeed": [
+     1
+    ],
+    "interview": [
+     5
+    ],
+    "investors": [
+     2
+    ],
+    "is": [
+     2,
+     5,
+     6
+    ],
+    "it": [
+     1,
+     2
+    ],
+    "its": [
+     1,
+     1
+    ],
+    "jaglom": [
+     5
+    ],
+    "language": [
+     3
+    ],
+    "life": [
+     3
+    ],
+    "limitations": [
+     5
+    ],
+    "limited": [
+     2
+    ],
+    "made": [
+     2
+    ],
+    "models": [
+     3
+    ],
+    "moment": [
+     0
+    ],
+    "most": [
+     2,
+     3
+    ],
+    "novel": [
+     3
+    ],
+    "of": [
+     0,
+     2,
+     3,
+     3,
+     5,
+     5
+    ],
+    "ontology": [
+     3
+    ],
+    "operate": [
+     3
+    ],
+    "or": [
+     1
+    ],
+    "orson": [
+     5
+    ],
+    "others": [
+     8
+    ],
+    "our": [
+     1,
+     1,
+     3
+    ],
+    "outsiders": [
+     1
+    ],
+    "palantir": [
+     2
+    ],
+    "palo": [
+     2
+    ],
+    "partners": [
+     3
+    ],
+    "poet": [
+     7
+    ],
+    "possible": [
+     2
+    ],
+    "post": [
+     5
+    ],
+    "presently": [
+     3
+    ],
+    "previously": [
+     2
+    ],
+    "quite": [
+     4
+    ],
+    "rates": [
+     2
+    ],
+    "reality": [
+     2
+    ],
+    "recent": [
+     4
+    ],
+    "regressive": [
+     8
+    ],
+    "remains": [
+     0
+    ],
+    "reordering": [
+     3
+    ],
+    "retail": [
+     2
+    ],
+    "return": [
+     2
+    ],
+    "said": [
+     5
+    ],
+    "same": [
+     6
+    ],
+    "sense": [
+     1
+    ],
+    "shaping": [
+     1
+    ],
+    "shifted": [
+     3
+    ],
+    "significance": [
+     1
+    ],
+    "significantly": [
+     3,
+     4
+    ],
+    "software": [
+     6
+    ],
+    "states": [
+     3
+    ],
+    "successful": [
+     2
+    ],
+    "terrain": [
+     3
+    ],
+    "that": [
+     2,
+     3,
+     3
+    ],
+    "the": [
+     0,
+     0,
+     1,
+     2,
+     2,
+     3,
+     3,
+     3,
+     3,
+     3,
+     5,
+     5,
+     5,
+     5,
+     6,
+     7,
+     7,
+     7,
+     7
+    ],
+    "them": [
+     3
+    ],
+    "things": [
+     7
+    ],
+    "this": [
+     0
+    ],
+    "to": [
+     1,
+     2,
+     2,
+     3
+    ],
+    "true": [
+     6
+    ],
+    "understand": [
+     3
+    ],
+    "united": [
+     3
+    ],
+    "us": [
+     3
+    ],
+    "value": [
+     1
+    ],
+    "venture": [
+     2
+    ],
+    "voracious": [
+     3
+    ],
+    "vulgar": [
+     1
+    ],
+    "warned": [
+     7
+    ],
+    "washington": [
+     5
+    ],
+    "we": [
+     4
+    ],
+    "welles": [
+     5
+    ],
+    "william": [
+     7
+    ],
+    "with": [
+     5
+    ],
+    "years": [
+     4
+    ],
+    "yeats": [
+     7
+    ]
+   },
+   "excerpts": [
+    "This remains the beginning, the first moment of a first chapter.",
+    "It has indeed been difficult for outsiders to appraise our business, either its significance in shaping our current geopolitics or its value in the vulgar, financial sense.",
+    "The reality is that Palantir has made it possible for retail investors to achieve rates of return previously limited to the most successful venture capitalists in Palo Alto.",
+    "Our partners in the United States—the earliest and most voracious adopters of the novel language models that are presently reordering human life and of the Ontology that allows them to effectively operate—understand how significantly the terrain beneath us all has shifted.",
+    "We have grown quite significantly in recent years.",
+    "Henry Jaglom, the British film director, said in an interview with the Washington Post in 1994, citing his friend Orson Welles, “The enemy of art is the absence of limitations.”",
+    "The same is absolutely true in software development.",
+    "A century ago, the poet William Butler Yeats warned: “The falcon cannot hear the falconer; things fall apart; the center cannot hold.”",
+    "Others destructive and deeply regressive."
+   ],
+   "id": "pltr-q3-2025",
+   "msent": {
+    "a": 15,
+    "abandon": 1,
+    "absence": 1,
+    "absolute": 1,
+    "absolutely": 1,
+    "accelerating": 1,
+    "achieve": 1,
+    "actively": 1,
+    "actually": 1,
+    "adaptive": 1,
+    "adopters": 1,
+    "again": 1,
+    "ago": 2,
+    "all": 3,
+    "allows": 1,
+    "also": 1,
+    "alternative": 1,
+    "alto": 1,
+    "america": 1,
+    "american": 2,
+    "an": 7,
+    "analysts": 1,
+    "and": 24,
+    "anticipate": 1,
+    "any": 1,
+    "apart": 1,
+    "appraise": 1,
+    "approach": 1,
+    "are": 3,
+    "army": 1,
+    "art": 1,
+    "artificial": 1,
+    "as": 1,
+    "ascent": 1,
+    "aside": 1,
+    "assent": 1,
+    "at": 4,
+    "authentic": 1,
+    "be": 2,
+    "become": 1,
+    "been": 4,
+    "before": 1,
+    "befuddlement": 1,
+    "beginning": 1,
+    "beliefs": 1,
+    "believe": 2,
+    "beneath": 1,
+    "billion": 2,
+    "bright": 1,
+    "british": 1,
+    "business": 5,
+    "butler": 1,
+    "by": 2,
+    "cannot": 1,
+    "capitalists": 1,
+    "casual": 1,
+    "casually": 1,
+    "center": 2,
+    "century": 2,
+    "certain": 1,
+    "challenges": 1,
+    "chapter": 1,
+    "chattering": 1,
+    "citing": 1,
+    "class": 1,
+    "clear": 1,
+    "commercial": 1,
+    "common": 3,
+    "company": 2,
+    "complexity": 1,
+    "confounded": 1,
+    "constraints": 1,
+    "continued": 3,
+    "convert": 1,
+    "corporate": 1,
+    "costs": 1,
+    "could": 1,
+    "counterintuitively": 1,
+    "cultural": 1,
+    "culture": 4,
+    "cultures": 1,
+    "current": 1,
+    "customers": 1,
+    "deeply": 1,
+    "defined": 1,
+    "definition": 1,
+    "degree": 1,
+    "deranged": 1,
+    "destructive": 2,
+    "detractors": 1,
+    "development": 2,
+    "did": 2,
+    "difficult": 1,
+    "diminished": 1,
+    "director": 1,
+    "disciplined": 1,
+    "disparate": 1,
+    "do": 1,
+    "does": 1,
+    "dollars": 1,
+    "done": 1,
+    "doubled": 1,
+    "driving": 1,
+    "earliest": 1,
+    "economic": 1,
+    "effectively": 1,
+    "either": 1,
+    "embrace": 1,
+    "end": 1,
+    "enemy": 1,
+    "ensure": 2,
+    "equality": 1,
+    "even": 2,
+    "evolve": 1,
+    "exclusion": 1,
+    "expansion": 1,
+    "experience": 1,
+    "experiment": 1,
+    "extraordinary": 1,
+    "falcon": 1,
+    "falconer": 1,
+    "fall": 1,
+    "ferocious": 1,
+    "film": 1,
+    "financial": 2,
+    "first": 1,
+    "focus": 1,
+    "for": 6,
+    "force": 1,
+    "forward": 1,
+    "frames": 1,
+    "friend": 1,
+    "generalizable": 1,
+    "generated": 2,
+    "generating": 1,
+    "generative": 1,
+    "geopolitics": 1,
+    "greater": 2,
+    "growing": 2,
+    "grown": 1,
+    "growth": 2,
+    "had": 1,
+    "half": 1,
+    "has": 7,
+    "have": 7,
+    "headcount": 1,
+    "hear": 1,
+    "heavily": 1,
+    "help": 1,
+    "henry": 1,
+    "hindered": 1,
+    "his": 1,
+    "history": 2,
+    "hold": 2,
+    "hollow": 1,
+    "how": 1,
+    "however": 1,
+    "human": 1,
+    "ideas": 1,
+    "identity": 1,
+    "idiosyncrasies": 1,
+    "idiosyncratic": 1,
+    "in": 14,
+    "including": 1,
+    "indeed": 2,
+    "intelligence": 1,
+    "interview": 1,
+    "investors": 1,
+    "is": 11,
+    "it": 8,
+    "its": 4,
+    "jaglom": 1,
+    "juggernaut": 1,
+    "kind": 1,
+    "language": 1,
+    "last": 1,
+    "lean": 1,
+    "left": 1,
+    "life": 2,
+    "limitations": 1,
+    "limited": 1,
+    "living": 2,
+    "long": 1,
+    "made": 2,
+    "make": 1,
+    "manifestation": 1,
+    "many": 1,
+    "maturation": 1,
+    "million": 2,
+    "minds": 1,
+    "mistake": 2,
+    "models": 1,
+    "moment": 1,
+    "months": 2,
+    "more": 4,
+    "most": 5,
+    "must": 2,
+    "nation": 1,
+    "national": 1,
+    "nearly": 1,
+    "need": 1,
+    "neutered": 1,
+    "new": 1,
+    "not": 2,
+    "notions": 1,
+    "novel": 1,
+    "now": 2,
+    "obscured": 1,
+    "obsessive": 1,
+    "of": 23,
+    "on": 5,
+    "one": 4,
+    "only": 1,
+    "ontology": 2,
+    "operate": 1,
+    "operations": 1,
+    "or": 3,
+    "orientation": 1,
+    "orson": 1,
+    "others": 3,
+    "otherworldly": 1,
+    "ought": 1,
+    "our": 13,
+    "ourselves": 1,
+    "outsiders": 1,
+    "over": 1,
+    "own": 1,
+    "palantir": 1,
+    "palo": 1,
+    "particularized": 1,
+    "partners": 1,
+    "past": 1,
+    "period": 1,
+    "planet": 1,
+    "platform": 2,
+    "pluralism": 1,
+    "poet": 1,
+    "possible": 3,
+    "post": 1,
+    "pragmatism": 1,
+    "preconceived": 1,
+    "presently": 1,
+    "previously": 1,
+    "principal": 1,
+    "problems": 1,
+    "proclaim": 1,
+    "producing": 1,
+    "profit": 2,
+    "proven": 1,
+    "pursuit": 1,
+    "puts": 1,
+    "quarter": 4,
+    "quite": 3,
+    "racing": 1,
+    "ranks": 1,
+    "rate": 2,
+    "rates": 1,
+    "reality": 1,
+    "recent": 1,
+    "record": 2,
+    "reference": 1,
+    "regressive": 1,
+    "rejection": 2,
+    "reluctance": 1,
+    "rely": 1,
+    "remains": 2,
+    "remembering": 1,
+    "reordering": 1,
+    "representing": 1,
+    "resisted": 1,
+    "results": 1,
+    "retail": 1,
+    "return": 2,
+    "revenue": 2,
+    "rise": 1,
+    "route": 1,
+    "ruthless": 1,
+    "said": 1,
+    "same": 2,
+    "scale": 1,
+    "segment": 1,
+    "self": 1,
+    "sense": 2,
+    "set": 1,
+    "setting": 1,
+    "shaping": 1,
+    "shared": 3,
+    "shifted": 1,
+    "should": 2,
+    "significance": 1,
+    "significant": 2,
+    "significantly": 2,
+    "single": 1,
+    "size": 1,
+    "so": 1,
+    "software": 2,
+    "some": 3,
+    "something": 2,
+    "specific": 1,
+    "staggering": 1,
+    "start": 1,
+    "states": 2,
+    "still": 1,
+    "stories": 1,
+    "strength": 2,
+    "strenuously": 1,
+    "substantive": 1,
+    "successful": 1,
+    "such": 2,
+    "survival": 1,
+    "technical": 1,
+    "terrain": 1,
+    "than": 3,
+    "that": 10,
+    "the": 21,
+    "their": 1,
+    "them": 1,
+    "they": 1,
+    "things": 2,
+    "third": 1,
+    "this": 6,
+    "three": 1,
+    "through": 1,
+    "times": 1,
+    "to": 14,
+    "today": 1,
+    "true": 1,
+    "twelve": 1,
+    "twenty": 1,
+    "ultimately": 1,
+    "understand": 1,
+    "united": 2,
+    "universal": 1,
+    "unrelenting": 1,
+    "us": 2,
+    "vacant": 1,
+    "value": 1,
+    "values": 2,
+    "venture": 1,
+    "very": 1,
+    "voracious": 1,
+    "vulgar": 1,
+    "warned": 1,
+    "was": 2,
+    "washington": 1,
+    "way": 1,
+    "ways": 1,
+    "we": 8,
+    "weaknesses": 1,
+    "welles": 1,
+    "what": 1,
+    "whose": 1,
+    "will": 2,
+    "william": 1,
+    "with": 1,
+    "wondrous": 1,
+    "work": 2,
+    "world": 1,
+    "worth": 1,
+    "would": 3,
+    "year": 1,
+    "years": 1,
+    "yeats": 1,
+    "yet": 2,
+    "yielding": 1
+   },
+   "n_sentences": 35,
+   "source": "palantir.com",
+   "title": "Q3 2025 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://www.palantir.com/q3-2025-letter/en/",
+   "words": 751
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full letter text is not included; see each document's url.",
+ "slug": "karp"
+}

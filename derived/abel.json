@@ -1,0 +1,6929 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "a": 127,
+    "ability": 7,
+    "able": 2,
+    "about": 6,
+    "above": 3,
+    "absorbed": 1,
+    "accept": 1,
+    "access": 2,
+    "accomplished": 1,
+    "accordingly": 3,
+    "accountability": 7,
+    "accountable": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "achievements": 1,
+    "acknowledged": 3,
+    "acknowledging": 1,
+    "acquire": 1,
+    "acquired": 2,
+    "acquiring": 1,
+    "acquisition": 4,
+    "across": 20,
+    "act": 8,
+    "action": 1,
+    "active": 1,
+    "actively": 1,
+    "activities": 5,
+    "activity": 2,
+    "acumen": 1,
+    "adam": 6,
+    "adapt": 1,
+    "addition": 2,
+    "additional": 3,
+    "address": 1,
+    "adequate": 2,
+    "adjust": 1,
+    "adjustments": 1,
+    "admire": 1,
+    "admired": 1,
+    "advanced": 1,
+    "advantage": 1,
+    "advantages": 3,
+    "adverse": 1,
+    "aerospace": 2,
+    "affecting": 1,
+    "affordability": 1,
+    "affordable": 2,
+    "after": 3,
+    "aftermath": 1,
+    "again": 2,
+    "against": 2,
+    "ago": 1,
+    "agreements": 1,
+    "ahead": 3,
+    "aim": 1,
+    "air": 2,
+    "aircraft": 3,
+    "ajit": 4,
+    "align": 1,
+    "alignment": 3,
+    "all": 9,
+    "alleman": 1,
+    "allocate": 1,
+    "allocated": 2,
+    "allocation": 6,
+    "allow": 2,
+    "allows": 2,
+    "along": 1,
+    "alongside": 3,
+    "also": 17,
+    "alternative": 1,
+    "although": 2,
+    "always": 6,
+    "am": 2,
+    "ambitious": 1,
+    "america": 3,
+    "american": 2,
+    "among": 1,
+    "amount": 2,
+    "an": 29,
+    "anchored": 1,
+    "and": 265,
+    "angeles": 1,
+    "announced": 1,
+    "announcing": 1,
+    "annual": 10,
+    "another": 1,
+    "answered": 1,
+    "any": 10,
+    "apologized": 1,
+    "apple": 1,
+    "apply": 2,
+    "applying": 1,
+    "appoint": 1,
+    "appreciating": 1,
+    "appreciation": 1,
+    "approach": 11,
+    "appropriately": 1,
+    "approval": 1,
+    "approximately": 2,
+    "are": 36,
+    "area": 1,
+    "arguably": 1,
+    "arise": 2,
+    "arises": 1,
+    "arithmetic": 1,
+    "around": 1,
+    "articulation": 1,
+    "artificial": 1,
+    "as": 54,
+    "ask": 1,
+    "asking": 1,
+    "assess": 5,
+    "assessed": 2,
+    "assessing": 1,
+    "asset": 5,
+    "assets": 1,
+    "assisted": 1,
+    "assumed": 1,
+    "assured": 3,
+    "at": 36,
+    "atlantic": 1,
+    "attached": 1,
+    "attachment": 1,
+    "attitude": 2,
+    "attract": 1,
+    "attracted": 1,
+    "attracting": 1,
+    "attractive": 1,
+    "attracts": 1,
+    "autonomy": 6,
+    "available": 2,
+    "average": 11,
+    "averaged": 1,
+    "averaging": 1,
+    "avoid": 1,
+    "avoiding": 1,
+    "away": 2,
+    "back": 1,
+    "backbone": 1,
+    "backdrop": 1,
+    "balance": 2,
+    "balanced": 1,
+    "base": 4,
+    "baseball": 1,
+    "based": 4,
+    "bases": 1,
+    "basis": 4,
+    "batting": 1,
+    "be": 28,
+    "became": 2,
+    "because": 1,
+    "becky": 1,
+    "become": 1,
+    "been": 13,
+    "before": 4,
+    "began": 3,
+    "begins": 3,
+    "behavior": 1,
+    "belief": 1,
+    "beliefs": 3,
+    "believe": 1,
+    "bell": 3,
+    "belong": 1,
+    "below": 3,
+    "benchmark": 1,
+    "beneath": 1,
+    "beneficial": 1,
+    "benefit": 2,
+    "benefited": 1,
+    "benefiting": 1,
+    "benefits": 2,
+    "benign": 2,
+    "berkshire": 95,
+    "best": 7,
+    "better": 3,
+    "between": 3,
+    "beyond": 6,
+    "bhe": 9,
+    "big": 1,
+    "bigger": 1,
+    "billion": 24,
+    "blocks": 1,
+    "bnsf": 13,
+    "board": 5,
+    "borrowed": 1,
+    "both": 7,
+    "broad": 1,
+    "broader": 3,
+    "brothers": 1,
+    "buffett": 2,
+    "build": 3,
+    "building": 4,
+    "buildings": 1,
+    "builds": 1,
+    "built": 9,
+    "burden": 1,
+    "bureaucracy": 2,
+    "business": 33,
+    "businesses": 51,
+    "but": 12,
+    "buy": 1,
+    "by": 31,
+    "calenergy": 4,
+    "call": 2,
+    "can": 5,
+    "candid": 1,
+    "candies": 1,
+    "candor": 2,
+    "cannot": 1,
+    "capabilities": 1,
+    "capital": 32,
+    "capitalism": 1,
+    "care": 1,
+    "career": 1,
+    "carefully": 1,
+    "carpets": 1,
+    "carries": 1,
+    "cases": 1,
+    "cash": 17,
+    "castparts": 7,
+    "casualty": 4,
+    "catastrophe": 1,
+    "caustic": 1,
+    "caution": 1,
+    "center": 2,
+    "centered": 2,
+    "centers": 2,
+    "central": 4,
+    "ceo": 16,
+    "ceos": 3,
+    "certain": 2,
+    "certainly": 1,
+    "cfo": 1,
+    "chaired": 1,
+    "chairman": 3,
+    "challenge": 3,
+    "challenged": 1,
+    "challenges": 3,
+    "challenging": 4,
+    "chang": 1,
+    "change": 4,
+    "changes": 2,
+    "changing": 1,
+    "channels": 1,
+    "characteristics": 1,
+    "charging": 1,
+    "charlie": 6,
+    "chemicals": 1,
+    "chief": 2,
+    "chlorine": 1,
+    "choices": 2,
+    "choose": 1,
+    "chuck": 2,
+    "circumstance": 1,
+    "city": 2,
+    "claimed": 1,
+    "claims": 2,
+    "class": 2,
+    "clayton": 3,
+    "clear": 4,
+    "clearest": 1,
+    "clearly": 1,
+    "clip": 1,
+    "close": 1,
+    "closely": 1,
+    "closest": 1,
+    "closing": 1,
+    "coca": 1,
+    "cola": 1,
+    "combined": 4,
+    "combs": 1,
+    "come": 3,
+    "comes": 3,
+    "commensurate": 1,
+    "comment": 1,
+    "commentary": 1,
+    "comments": 1,
+    "commercial": 3,
+    "commingled": 1,
+    "commitment": 4,
+    "commitments": 2,
+    "committed": 2,
+    "communicate": 2,
+    "communication": 3,
+    "communities": 1,
+    "community": 1,
+    "compact": 2,
+    "companies": 5,
+    "company": 8,
+    "comparable": 1,
+    "compared": 2,
+    "comparing": 1,
+    "compelling": 4,
+    "compete": 2,
+    "competes": 1,
+    "competitive": 4,
+    "competitors": 2,
+    "complacency": 1,
+    "complete": 1,
+    "complex": 1,
+    "complexity": 1,
+    "component": 1,
+    "components": 1,
+    "composed": 1,
+    "compound": 2,
+    "compounding": 2,
+    "comprehensive": 1,
+    "compromised": 1,
+    "compromising": 2,
+    "computing": 1,
+    "concentrate": 2,
+    "concentrated": 2,
+    "concentrating": 1,
+    "conditions": 2,
+    "conduct": 2,
+    "conducted": 1,
+    "confidence": 1,
+    "confidentially": 1,
+    "confirmed": 1,
+    "conglomerate": 1,
+    "conglomerates": 1,
+    "congressional": 1,
+    "conservatively": 1,
+    "considering": 1,
+    "consistent": 1,
+    "consistently": 1,
+    "consisting": 1,
+    "consolidation": 1,
+    "constant": 1,
+    "constitutes": 1,
+    "construction": 4,
+    "consumer": 5,
+    "consumers": 1,
+    "context": 1,
+    "contingency": 1,
+    "continue": 10,
+    "continued": 7,
+    "continues": 7,
+    "continuing": 2,
+    "continuous": 1,
+    "continuously": 1,
+    "contract": 1,
+    "contractually": 1,
+    "contributor": 1,
+    "control": 1,
+    "controls": 1,
+    "conviction": 2,
+    "core": 5,
+    "corporate": 2,
+    "correctly": 2,
+    "cost": 9,
+    "could": 2,
+    "counsel": 1,
+    "countries": 1,
+    "course": 1,
+    "cover": 1,
+    "coverages": 1,
+    "create": 3,
+    "created": 2,
+    "creation": 1,
+    "criteria": 2,
+    "critical": 1,
+    "crude": 1,
+    "culture": 20,
+    "cumulative": 1,
+    "current": 2,
+    "customer": 8,
+    "customers": 13,
+    "cut": 1,
+    "cycle": 2,
+    "cycles": 1,
+    "daily": 2,
+    "dangerous": 1,
+    "data": 1,
+    "daughters": 1,
+    "day": 9,
+    "days": 1,
+    "debt": 3,
+    "decade": 4,
+    "decades": 4,
+    "decelerating": 1,
+    "deceleration": 1,
+    "december": 1,
+    "decentralized": 5,
+    "decision": 3,
+    "decisions": 5,
+    "decisively": 3,
+    "declare": 1,
+    "declined": 1,
+    "declines": 1,
+    "deep": 2,
+    "deepen": 1,
+    "define": 2,
+    "defines": 1,
+    "degree": 1,
+    "delayed": 1,
+    "deliberate": 2,
+    "deliver": 5,
+    "delivered": 3,
+    "delivers": 1,
+    "delivery": 1,
+    "demand": 5,
+    "demands": 1,
+    "demonstrated": 2,
+    "department": 1,
+    "depends": 2,
+    "deploy": 3,
+    "deployed": 1,
+    "deploying": 2,
+    "deployment": 1,
+    "descendants": 1,
+    "deserved": 2,
+    "designed": 1,
+    "despite": 1,
+    "destruction": 1,
+    "details": 2,
+    "determine": 1,
+    "determined": 1,
+    "determining": 1,
+    "development": 1,
+    "dictated": 1,
+    "differences": 1,
+    "different": 2,
+    "difficult": 1,
+    "difficulties": 1,
+    "digit": 1,
+    "dilute": 1,
+    "direct": 2,
+    "directly": 1,
+    "director": 1,
+    "disappointed": 1,
+    "disappointing": 1,
+    "discipline": 11,
+    "disciplined": 5,
+    "discuss": 1,
+    "discussing": 1,
+    "discussion": 2,
+    "dispute": 2,
+    "disruptions": 2,
+    "distinguished": 1,
+    "distort": 1,
+    "diverse": 1,
+    "divided": 1,
+    "dividend": 1,
+    "dividends": 5,
+    "diving": 1,
+    "do": 7,
+    "does": 4,
+    "doing": 3,
+    "dollar": 2,
+    "done": 1,
+    "donegan": 1,
+    "double": 1,
+    "downside": 1,
+    "dramatically": 1,
+    "draw": 1,
+    "draws": 1,
+    "drive": 1,
+    "driven": 1,
+    "drivers": 2,
+    "dry": 1,
+    "durability": 2,
+    "durable": 3,
+    "during": 2,
+    "duty": 1,
+    "dynamic": 1,
+    "dynamics": 1,
+    "each": 14,
+    "earlier": 1,
+    "earn": 1,
+    "earned": 5,
+    "earnings": 9,
+    "eastern": 1,
+    "easy": 1,
+    "ebb": 1,
+    "echo": 1,
+    "economic": 4,
+    "economics": 3,
+    "economy": 2,
+    "effective": 1,
+    "effectively": 3,
+    "efficiency": 4,
+    "efficient": 2,
+    "efficiently": 3,
+    "effort": 2,
+    "efforts": 1,
+    "electric": 2,
+    "electricity": 1,
+    "embedded": 1,
+    "embrace": 2,
+    "emphasize": 1,
+    "employees": 6,
+    "enable": 1,
+    "enabled": 1,
+    "enables": 2,
+    "enabling": 2,
+    "encounter": 1,
+    "encountered": 1,
+    "end": 6,
+    "ending": 2,
+    "endure": 2,
+    "endures": 2,
+    "enduring": 1,
+    "energy": 5,
+    "engagement": 2,
+    "enhance": 1,
+    "enhanced": 1,
+    "enjoying": 1,
+    "enormous": 1,
+    "enough": 1,
+    "ensure": 3,
+    "ensuring": 3,
+    "entered": 1,
+    "entering": 1,
+    "enterprise": 4,
+    "enters": 1,
+    "enthusiasms": 1,
+    "entire": 1,
+    "entrusted": 1,
+    "environment": 4,
+    "environmental": 1,
+    "episode": 1,
+    "equally": 1,
+    "equip": 1,
+    "equipped": 1,
+    "equity": 10,
+    "equivalent": 1,
+    "errors": 1,
+    "essential": 4,
+    "established": 1,
+    "estimate": 1,
+    "evacuated": 1,
+    "evaluate": 3,
+    "evaluating": 1,
+    "even": 6,
+    "ever": 1,
+    "every": 8,
+    "everyday": 1,
+    "everything": 1,
+    "evident": 1,
+    "evolve": 2,
+    "example": 2,
+    "exceed": 2,
+    "excellence": 7,
+    "excellent": 1,
+    "exceptional": 7,
+    "excess": 1,
+    "excluded": 1,
+    "executing": 1,
+    "execution": 6,
+    "exercised": 1,
+    "exist": 1,
+    "existing": 2,
+    "exists": 1,
+    "expand": 2,
+    "expanded": 1,
+    "expect": 5,
+    "expectations": 3,
+    "expected": 2,
+    "expense": 1,
+    "experience": 4,
+    "experienced": 1,
+    "explicitly": 1,
+    "exposure": 1,
+    "express": 1,
+    "expressed": 1,
+    "expression": 1,
+    "extend": 1,
+    "extends": 3,
+    "extension": 1,
+    "extensive": 1,
+    "extraordinary": 3,
+    "extreme": 1,
+    "exuberances": 1,
+    "fabric": 1,
+    "face": 2,
+    "faced": 1,
+    "facilities": 1,
+    "facility": 2,
+    "fact": 1,
+    "fail": 2,
+    "fame": 1,
+    "family": 1,
+    "farmer": 1,
+    "faster": 2,
+    "favor": 1,
+    "favorably": 1,
+    "fearful": 1,
+    "featuring": 1,
+    "february": 1,
+    "fellow": 1,
+    "felt": 1,
+    "few": 3,
+    "figures": 1,
+    "fill": 1,
+    "financial": 9,
+    "financing": 2,
+    "finishes": 1,
+    "fire": 3,
+    "fires": 1,
+    "firm": 5,
+    "first": 6,
+    "fiscal": 1,
+    "fit": 1,
+    "five": 7,
+    "float": 3,
+    "flooring": 1,
+    "flow": 3,
+    "flows": 6,
+    "fluctuates": 1,
+    "focus": 12,
+    "focused": 4,
+    "focusing": 2,
+    "follow": 2,
+    "following": 1,
+    "food": 1,
+    "for": 64,
+    "forever": 2,
+    "form": 2,
+    "format": 1,
+    "former": 1,
+    "formerly": 1,
+    "fortress": 1,
+    "fortunate": 4,
+    "forward": 4,
+    "fostered": 1,
+    "foundation": 3,
+    "foundational": 2,
+    "founder": 3,
+    "four": 1,
+    "fraction": 1,
+    "framework": 4,
+    "freight": 1,
+    "frequency": 1,
+    "frequently": 1,
+    "from": 35,
+    "frustration": 1,
+    "fulfilling": 1,
+    "full": 4,
+    "fully": 3,
+    "functioning": 1,
+    "fundamental": 4,
+    "fundamentals": 2,
+    "further": 3,
+    "future": 4,
+    "gaap": 1,
+    "gains": 3,
+    "gap": 1,
+    "gaps": 1,
+    "gather": 1,
+    "geico": 7,
+    "general": 1,
+    "generate": 3,
+    "generated": 1,
+    "generates": 1,
+    "generating": 1,
+    "generation": 1,
+    "generations": 1,
+    "getting": 1,
+    "give": 2,
+    "given": 1,
+    "global": 3,
+    "go": 1,
+    "goal": 1,
+    "goals": 2,
+    "goes": 1,
+    "good": 2,
+    "governs": 2,
+    "great": 5,
+    "greater": 2,
+    "greatest": 1,
+    "greatly": 1,
+    "greg": 1,
+    "grounded": 2,
+    "group": 9,
+    "grow": 4,
+    "growing": 2,
+    "grown": 1,
+    "growth": 7,
+    "guide": 6,
+    "guides": 2,
+    "guru": 1,
+    "had": 4,
+    "half": 1,
+    "hall": 1,
+    "hamburg": 1,
+    "happen": 1,
+    "happy": 1,
+    "hard": 2,
+    "has": 37,
+    "hathaway": 1,
+    "have": 25,
+    "having": 1,
+    "hazards": 1,
+    "he": 10,
+    "headwinds": 1,
+    "healthier": 1,
+    "hear": 1,
+    "heart": 2,
+    "heinz": 3,
+    "help": 1,
+    "her": 1,
+    "hesitation": 1,
+    "high": 4,
+    "highlighted": 1,
+    "his": 20,
+    "historic": 1,
+    "historical": 1,
+    "history": 2,
+    "hitter": 1,
+    "hold": 4,
+    "holders": 1,
+    "holding": 2,
+    "holdings": 6,
+    "homes": 2,
+    "honored": 2,
+    "horizon": 3,
+    "households": 1,
+    "housing": 4,
+    "how": 17,
+    "however": 2,
+    "humbled": 1,
+    "hundreds": 1,
+    "hurricane": 2,
+    "hyperscalers": 1,
+    "i": 21,
+    "iconic": 1,
+    "ideas": 1,
+    "identify": 1,
+    "identifying": 2,
+    "idling": 1,
+    "if": 5,
+    "imc": 1,
+    "impact": 3,
+    "importance": 1,
+    "important": 7,
+    "improve": 4,
+    "improved": 2,
+    "improvement": 6,
+    "improvements": 3,
+    "improving": 3,
+    "in": 156,
+    "include": 1,
+    "included": 1,
+    "includes": 2,
+    "including": 5,
+    "increased": 2,
+    "increases": 5,
+    "increasing": 1,
+    "incremental": 6,
+    "incrementally": 1,
+    "increments": 1,
+    "indemnity": 1,
+    "independence": 2,
+    "indian": 1,
+    "indispensable": 1,
+    "individual": 1,
+    "individually": 1,
+    "individuals": 1,
+    "industrial": 5,
+    "industries": 2,
+    "industry": 15,
+    "industrywide": 1,
+    "inflation": 1,
+    "inflicted": 1,
+    "influenced": 1,
+    "information": 1,
+    "infrastructure": 1,
+    "ingredient": 1,
+    "inherent": 2,
+    "input": 1,
+    "inseparable": 1,
+    "insist": 1,
+    "inspiration": 1,
+    "insurance": 32,
+    "insurer": 2,
+    "insurers": 1,
+    "integral": 2,
+    "integrated": 2,
+    "integration": 1,
+    "integrity": 8,
+    "intelligence": 1,
+    "intent": 1,
+    "intention": 1,
+    "intentional": 1,
+    "intentionally": 1,
+    "intentions": 1,
+    "interactions": 1,
+    "interested": 1,
+    "interests": 1,
+    "international": 1,
+    "into": 11,
+    "intrinsic": 3,
+    "inverse": 1,
+    "invest": 8,
+    "invested": 4,
+    "investing": 5,
+    "investment": 10,
+    "investments": 11,
+    "investor": 2,
+    "is": 81,
+    "issue": 2,
+    "it": 45,
+    "its": 40,
+    "itself": 1,
+    "japan": 2,
+    "jenkintown": 1,
+    "jeopardize": 1,
+    "johns": 1,
+    "johnson": 2,
+    "join": 2,
+    "journey": 1,
+    "jr": 1,
+    "judgment": 6,
+    "judicial": 1,
+    "june": 2,
+    "jurisdiction": 1,
+    "just": 2,
+    "katie": 2,
+    "keep": 2,
+    "key": 1,
+    "kiewit": 2,
+    "know": 5,
+    "knowing": 2,
+    "knowledge": 1,
+    "knowledgeable": 1,
+    "known": 1,
+    "kraft": 2,
+    "labor": 1,
+    "laboratories": 3,
+    "landfall": 1,
+    "lands": 2,
+    "landscape": 1,
+    "large": 7,
+    "larger": 1,
+    "largest": 4,
+    "last": 5,
+    "latter": 2,
+    "layers": 2,
+    "layouts": 1,
+    "lead": 3,
+    "leader": 2,
+    "leaders": 4,
+    "leadership": 9,
+    "leading": 1,
+    "leads": 1,
+    "least": 1,
+    "led": 5,
+    "legacy": 1,
+    "legal": 2,
+    "less": 4,
+    "let": 1,
+    "letter": 7,
+    "letters": 2,
+    "level": 3,
+    "levels": 2,
+    "levy": 1,
+    "liability": 1,
+    "liebert": 1,
+    "life": 2,
+    "like": 5,
+    "likely": 2,
+    "limited": 2,
+    "limits": 1,
+    "line": 1,
+    "lines": 1,
+    "liquidity": 2,
+    "listed": 2,
+    "little": 2,
+    "live": 1,
+    "lived": 3,
+    "local": 1,
+    "location": 1,
+    "long": 29,
+    "longstanding": 1,
+    "look": 3,
+    "los": 1,
+    "lose": 2,
+    "loss": 1,
+    "losses": 4,
+    "low": 2,
+    "lower": 3,
+    "loyalty": 2,
+    "lubrizol": 3,
+    "macro": 1,
+    "made": 5,
+    "maintain": 6,
+    "maintained": 1,
+    "maintaining": 4,
+    "maintains": 1,
+    "major": 7,
+    "make": 5,
+    "makes": 1,
+    "making": 2,
+    "malcolm": 1,
+    "manage": 3,
+    "managed": 1,
+    "management": 9,
+    "managers": 7,
+    "manages": 2,
+    "managing": 4,
+    "mandates": 1,
+    "manner": 2,
+    "manufacturing": 5,
+    "manville": 1,
+    "many": 7,
+    "marc": 4,
+    "margin": 3,
+    "margins": 3,
+    "mark": 1,
+    "markedly": 1,
+    "market": 7,
+    "markets": 5,
+    "marmon": 1,
+    "materially": 1,
+    "materials": 2,
+    "math": 1,
+    "matter": 3,
+    "mattered": 1,
+    "matters": 1,
+    "maximizing": 1,
+    "may": 8,
+    "mclane": 1,
+    "me": 15,
+    "mean": 1,
+    "meaningful": 2,
+    "means": 2,
+    "meantime": 1,
+    "measure": 2,
+    "measured": 2,
+    "meet": 5,
+    "meeting": 2,
+    "meetings": 2,
+    "meets": 1,
+    "merger": 2,
+    "met": 1,
+    "method": 1,
+    "midamerican": 1,
+    "might": 2,
+    "mike": 1,
+    "million": 1,
+    "mindset": 2,
+    "minimize": 1,
+    "minority": 1,
+    "mistake": 1,
+    "mistakes": 2,
+    "mitek": 1,
+    "mitigation": 1,
+    "model": 5,
+    "models": 2,
+    "moderated": 1,
+    "modernize": 1,
+    "modestly": 1,
+    "money": 1,
+    "month": 1,
+    "moody": 1,
+    "more": 14,
+    "most": 12,
+    "move": 2,
+    "moved": 3,
+    "much": 2,
+    "munger": 2,
+    "must": 8,
+    "mutually": 2,
+    "my": 8,
+    "national": 2,
+    "nationwide": 1,
+    "natural": 1,
+    "nature": 1,
+    "navigate": 1,
+    "navigated": 1,
+    "navigating": 1,
+    "near": 1,
+    "nearly": 6,
+    "necessary": 1,
+    "need": 3,
+    "needed": 4,
+    "needs": 3,
+    "net": 6,
+    "netjets": 7,
+    "network": 2,
+    "never": 4,
+    "new": 6,
+    "next": 4,
+    "nimble": 1,
+    "no": 9,
+    "non": 7,
+    "none": 1,
+    "norfolk": 1,
+    "normalize": 1,
+    "normalized": 1,
+    "north": 2,
+    "not": 35,
+    "notably": 1,
+    "noted": 1,
+    "now": 8,
+    "nuanced": 1,
+    "number": 2,
+    "o'sullivan": 1,
+    "objective": 1,
+    "obligations": 1,
+    "observations": 2,
+    "observers": 1,
+    "obviously": 1,
+    "occidental": 2,
+    "occurs": 1,
+    "of": 146,
+    "offer": 2,
+    "offering": 1,
+    "offerings": 1,
+    "office": 3,
+    "officer": 2,
+    "officials": 1,
+    "often": 2,
+    "oil": 1,
+    "omaha": 6,
+    "on": 46,
+    "one": 7,
+    "ones": 1,
+    "ongoing": 2,
+    "only": 5,
+    "open": 2,
+    "operate": 5,
+    "operated": 1,
+    "operates": 1,
+    "operating": 36,
+    "operational": 9,
+    "operations": 14,
+    "operator": 1,
+    "opportunism": 1,
+    "opportunities": 20,
+    "opportunity": 5,
+    "opposition": 1,
+    "option": 1,
+    "or": 17,
+    "orders": 1,
+    "ordinary": 1,
+    "organization": 5,
+    "orientation": 1,
+    "oriented": 1,
+    "original": 2,
+    "other": 7,
+    "others": 3,
+    "otherwise": 1,
+    "our": 163,
+    "ours": 1,
+    "ourselves": 1,
+    "out": 1,
+    "outcomes": 1,
+    "outpace": 1,
+    "over": 24,
+    "overall": 1,
+    "overseen": 1,
+    "own": 6,
+    "owned": 3,
+    "owner": 3,
+    "owners": 16,
+    "ownership": 2,
+    "oxychem": 5,
+    "pacific": 1,
+    "pacificorp": 2,
+    "paid": 1,
+    "pair": 1,
+    "paired": 2,
+    "pandemic": 1,
+    "part": 5,
+    "particularly": 3,
+    "partly": 1,
+    "partner": 4,
+    "partners": 3,
+    "partnership": 7,
+    "parts": 1,
+    "party": 1,
+    "passing": 1,
+    "past": 8,
+    "patience": 1,
+    "patient": 2,
+    "patiently": 1,
+    "paving": 1,
+    "pay": 3,
+    "peerless": 1,
+    "pennsylvania": 1,
+    "people": 3,
+    "per": 4,
+    "percentage": 1,
+    "perfect": 1,
+    "performance": 13,
+    "performed": 1,
+    "perhaps": 1,
+    "period": 5,
+    "periods": 1,
+    "permitting": 1,
+    "perpetuity": 2,
+    "persistent": 1,
+    "personal": 1,
+    "personally": 1,
+    "perspectives": 1,
+    "peter": 2,
+    "phases": 1,
+    "philanthropy": 1,
+    "piece": 1,
+    "pilot": 7,
+    "pitches": 2,
+    "placed": 1,
+    "placing": 1,
+    "plainly": 1,
+    "plan": 2,
+    "planned": 1,
+    "plateaued": 1,
+    "play": 2,
+    "playbook": 1,
+    "played": 1,
+    "pleased": 1,
+    "pocket": 1,
+    "point": 1,
+    "policy": 2,
+    "portfolio": 7,
+    "portion": 3,
+    "position": 4,
+    "positioned": 1,
+    "positioning": 2,
+    "positions": 4,
+    "positively": 1,
+    "possesses": 1,
+    "potential": 5,
+    "potentially": 1,
+    "powder": 1,
+    "powerhouse": 1,
+    "practiced": 1,
+    "precision": 8,
+    "preferably": 1,
+    "preference": 1,
+    "preferences": 1,
+    "preferred": 2,
+    "premium": 3,
+    "premiums": 1,
+    "prepare": 1,
+    "present": 1,
+    "presents": 1,
+    "preserve": 2,
+    "preserving": 2,
+    "president": 3,
+    "pressure": 3,
+    "price": 3,
+    "priced": 1,
+    "priceless": 1,
+    "pricing": 11,
+    "pride": 1,
+    "primarily": 1,
+    "primary": 3,
+    "principally": 1,
+    "principle": 1,
+    "principled": 2,
+    "principles": 4,
+    "prior": 2,
+    "prioritized": 1,
+    "prioritizes": 1,
+    "priority": 1,
+    "prized": 1,
+    "pro": 1,
+    "produced": 5,
+    "produces": 1,
+    "product": 1,
+    "production": 4,
+    "productive": 1,
+    "products": 7,
+    "professional": 2,
+    "profit": 1,
+    "profits": 1,
+    "program": 2,
+    "programs": 1,
+    "progress": 4,
+    "progressed": 1,
+    "prompt": 1,
+    "property": 4,
+    "proposed": 2,
+    "proposition": 2,
+    "prospects": 4,
+    "protect": 1,
+    "protecting": 1,
+    "proud": 2,
+    "proven": 1,
+    "provide": 2,
+    "provided": 1,
+    "provider": 1,
+    "providing": 3,
+    "prudently": 2,
+    "public": 1,
+    "publicly": 2,
+    "publish": 1,
+    "purchase": 3,
+    "purchases": 1,
+    "purpose": 1,
+    "pursue": 7,
+    "pursuing": 2,
+    "pursuit": 1,
+    "put": 1,
+    "q": 1,
+    "quality": 6,
+    "quarterly": 2,
+    "question": 2,
+    "questions": 2,
+    "quick": 1,
+    "quickly": 3,
+    "rail": 2,
+    "railroad": 2,
+    "railroads": 3,
+    "range": 1,
+    "rate": 5,
+    "rather": 1,
+    "ratio": 3,
+    "rationally": 1,
+    "raw": 1,
+    "re": 1,
+    "real": 1,
+    "reality": 1,
+    "realize": 1,
+    "realized": 1,
+    "reason": 1,
+    "reasonable": 1,
+    "reasonably": 1,
+    "rebalancing": 1,
+    "rebecca": 2,
+    "rebuilding": 1,
+    "receive": 1,
+    "received": 1,
+    "recent": 2,
+    "recently": 1,
+    "recognize": 2,
+    "recognizes": 1,
+    "recognizing": 1,
+    "recovered": 1,
+    "rectifying": 1,
+    "recurring": 1,
+    "redistributed": 1,
+    "reductions": 1,
+    "reflect": 3,
+    "reflected": 5,
+    "reflecting": 2,
+    "reflects": 1,
+    "regain": 1,
+    "regard": 1,
+    "regardless": 2,
+    "region": 1,
+    "regions": 1,
+    "regular": 2,
+    "regulations": 1,
+    "regulators": 1,
+    "regulatory": 3,
+    "reinforce": 1,
+    "reinforced": 1,
+    "reinforcing": 2,
+    "reinsurance": 8,
+    "reinsured": 1,
+    "reinvest": 1,
+    "reiterating": 1,
+    "related": 4,
+    "relationship": 1,
+    "relative": 1,
+    "relentless": 2,
+    "relentlessly": 2,
+    "reliability": 2,
+    "reliable": 2,
+    "relief": 1,
+    "remain": 8,
+    "remained": 3,
+    "remains": 5,
+    "remarkable": 4,
+    "reminder": 2,
+    "report": 1,
+    "represent": 1,
+    "represented": 1,
+    "representing": 1,
+    "repurchase": 1,
+    "repurchases": 3,
+    "reputation": 7,
+    "require": 2,
+    "required": 1,
+    "reside": 1,
+    "resides": 1,
+    "resilience": 4,
+    "resilient": 1,
+    "resisting": 1,
+    "resolution": 1,
+    "resonate": 1,
+    "resort": 1,
+    "respect": 2,
+    "respective": 1,
+    "respond": 1,
+    "responders": 1,
+    "response": 2,
+    "responsibilities": 2,
+    "responsibility": 8,
+    "responsible": 3,
+    "rest": 1,
+    "restored": 1,
+    "restoring": 2,
+    "restricted": 1,
+    "rests": 1,
+    "result": 6,
+    "resulted": 1,
+    "resulting": 2,
+    "results": 5,
+    "resumed": 1,
+    "retail": 1,
+    "retailing": 4,
+    "retain": 1,
+    "retained": 1,
+    "retaining": 1,
+    "retention": 2,
+    "retirement": 1,
+    "retiring": 1,
+    "retreat": 1,
+    "retroactive": 1,
+    "return": 5,
+    "returned": 3,
+    "reversal": 1,
+    "reviews": 1,
+    "reward": 1,
+    "rewards": 2,
+    "right": 5,
+    "rigor": 1,
+    "rigorous": 1,
+    "rising": 1,
+    "risk": 14,
+    "risks": 14,
+    "rodent": 1,
+    "role": 8,
+    "roles": 1,
+    "roll": 1,
+    "rooted": 1,
+    "rose": 1,
+    "roughly": 1,
+    "run": 6,
+    "ruthless": 1,
+    "ruthlessly": 1,
+    "s": 10,
+    "safe": 2,
+    "safely": 2,
+    "safety": 4,
+    "salomon": 1,
+    "same": 9,
+    "say": 4,
+    "scale": 3,
+    "scenarios": 1,
+    "score": 1,
+    "scott": 1,
+    "season": 2,
+    "second": 3,
+    "sector": 2,
+    "sectors": 2,
+    "securities": 3,
+    "see": 4,
+    "seek": 3,
+    "seen": 1,
+    "segment": 1,
+    "segments": 4,
+    "selectively": 1,
+    "self": 1,
+    "sent": 1,
+    "separately": 1,
+    "series": 1,
+    "serve": 2,
+    "serves": 2,
+    "service": 12,
+    "serving": 2,
+    "session": 1,
+    "sessions": 2,
+    "set": 7,
+    "setbacks": 1,
+    "sets": 1,
+    "settle": 1,
+    "settlements": 1,
+    "several": 2,
+    "shall": 1,
+    "shaped": 2,
+    "shapes": 3,
+    "share": 9,
+    "shared": 3,
+    "shareholder": 4,
+    "shareholders": 19,
+    "shares": 4,
+    "shaw": 2,
+    "sheet": 2,
+    "shelf": 1,
+    "shifts": 1,
+    "shipments": 2,
+    "shoes": 1,
+    "short": 5,
+    "should": 2,
+    "showed": 1,
+    "shown": 1,
+    "shred": 1,
+    "signals": 1,
+    "significance": 1,
+    "significant": 10,
+    "significantly": 1,
+    "similar": 3,
+    "similarities": 1,
+    "simple": 1,
+    "simply": 1,
+    "since": 3,
+    "site": 2,
+    "sites": 1,
+    "six": 1,
+    "size": 3,
+    "skills": 1,
+    "slipped": 1,
+    "slowed": 1,
+    "small": 4,
+    "smaller": 2,
+    "so": 6,
+    "society": 1,
+    "soda": 1,
+    "soft": 1,
+    "sole": 1,
+    "solid": 1,
+    "some": 4,
+    "sometimes": 1,
+    "sons": 1,
+    "soon": 1,
+    "sourced": 1,
+    "southern": 1,
+    "span": 1,
+    "sparingly": 1,
+    "sparked": 1,
+    "specific": 2,
+    "specifically": 2,
+    "spending": 1,
+    "spent": 2,
+    "spikes": 1,
+    "spoken": 1,
+    "stack": 1,
+    "stage": 1,
+    "stand": 1,
+    "standalone": 1,
+    "standard": 3,
+    "standards": 2,
+    "starts": 1,
+    "statement": 1,
+    "statements": 1,
+    "statutes": 1,
+    "steadfast": 1,
+    "steadiness": 1,
+    "stems": 1,
+    "step": 1,
+    "stepping": 1,
+    "steve": 3,
+    "stewards": 1,
+    "stewardship": 4,
+    "stock": 1,
+    "stood": 1,
+    "stoppage": 1,
+    "stopped": 1,
+    "store": 2,
+    "storms": 1,
+    "straightforward": 1,
+    "strategic": 1,
+    "strategy": 4,
+    "strength": 5,
+    "strengthen": 6,
+    "strengthened": 1,
+    "strengthening": 1,
+    "strengths": 2,
+    "strike": 1,
+    "strive": 3,
+    "strong": 6,
+    "stronger": 3,
+    "strongly": 1,
+    "structural": 2,
+    "structure": 2,
+    "study": 1,
+    "subject": 1,
+    "substantial": 6,
+    "succeed": 3,
+    "succeeded": 1,
+    "success": 8,
+    "successes": 2,
+    "successful": 2,
+    "successor": 1,
+    "such": 4,
+    "suggested": 1,
+    "suited": 1,
+    "supply": 1,
+    "support": 2,
+    "supported": 3,
+    "supporting": 1,
+    "supports": 1,
+    "surface": 2,
+    "sustainably": 1,
+    "sustained": 2,
+    "swiftly": 1,
+    "swing": 1,
+    "swinging": 1,
+    "swings": 1,
+    "swinomish": 1,
+    "system": 2,
+    "take": 2,
+    "taken": 2,
+    "taking": 2,
+    "talented": 1,
+    "targets": 2,
+    "team": 14,
+    "teams": 2,
+    "technology": 1,
+    "ted": 3,
+    "temporary": 2,
+    "ten": 2,
+    "tentative": 1,
+    "tenure": 2,
+    "term": 27,
+    "terminals": 1,
+    "terms": 1,
+    "testimony": 1,
+    "testing": 1,
+    "than": 9,
+    "that": 81,
+    "the": 245,
+    "their": 23,
+    "them": 10,
+    "then": 3,
+    "there": 5,
+    "these": 24,
+    "they": 11,
+    "thing": 2,
+    "think": 4,
+    "third": 1,
+    "thirds": 1,
+    "this": 27,
+    "thoroughly": 2,
+    "those": 9,
+    "though": 1,
+    "thousands": 1,
+    "threaten": 1,
+    "thrive": 1,
+    "through": 17,
+    "throughout": 1,
+    "tied": 1,
+    "time": 17,
+    "times": 2,
+    "to": 193,
+    "today": 5,
+    "todd": 1,
+    "together": 5,
+    "tolerate": 1,
+    "too": 1,
+    "top": 1,
+    "totaled": 1,
+    "tough": 1,
+    "trade": 1,
+    "traded": 1,
+    "traditional": 1,
+    "transformed": 1,
+    "transition": 2,
+    "transitioned": 1,
+    "translate": 1,
+    "translates": 1,
+    "translating": 1,
+    "transparency": 1,
+    "transportation": 1,
+    "travel": 4,
+    "travelers": 1,
+    "treasured": 2,
+    "treasuries": 1,
+    "treasury": 2,
+    "treated": 2,
+    "trends": 2,
+    "tribal": 3,
+    "tried": 1,
+    "true": 2,
+    "trust": 6,
+    "turn": 1,
+    "twenty": 1,
+    "two": 3,
+    "type": 1,
+    "u": 10,
+    "ultimately": 4,
+    "unaffiliated": 1,
+    "unchanged": 1,
+    "uncompromising": 1,
+    "under": 2,
+    "underlying": 4,
+    "undermine": 1,
+    "underpins": 2,
+    "underscored": 1,
+    "underscoring": 2,
+    "understand": 6,
+    "understanding": 7,
+    "understands": 1,
+    "understood": 1,
+    "underwrite": 3,
+    "underwriting": 9,
+    "undoubtedly": 1,
+    "unfiltered": 1,
+    "unfold": 1,
+    "union": 1,
+    "unique": 2,
+    "unmatched": 1,
+    "unrealized": 1,
+    "unscripted": 1,
+    "until": 2,
+    "unusual": 2,
+    "unusually": 1,
+    "unwarranted": 1,
+    "up": 1,
+    "update": 1,
+    "upgrades": 1,
+    "uphold": 4,
+    "us": 16,
+    "users": 1,
+    "uses": 1,
+    "using": 1,
+    "utilities": 3,
+    "utility": 1,
+    "valuable": 1,
+    "value": 20,
+    "values": 15,
+    "varied": 1,
+    "varies": 1,
+    "various": 1,
+    "vehicle": 1,
+    "very": 7,
+    "vice": 1,
+    "view": 4,
+    "vision": 2,
+    "volume": 3,
+    "volumes": 1,
+    "volunteer": 1,
+    "vote": 1,
+    "wade": 1,
+    "waiting": 1,
+    "walk": 1,
+    "walter": 2,
+    "want": 1,
+    "warren": 23,
+    "was": 17,
+    "way": 6,
+    "ways": 1,
+    "we": 119,
+    "week": 1,
+    "weighted": 1,
+    "welcome": 1,
+    "welcomed": 2,
+    "welcoming": 1,
+    "well": 12,
+    "were": 7,
+    "weschler": 1,
+    "western": 1,
+    "what": 8,
+    "when": 21,
+    "where": 7,
+    "whether": 1,
+    "which": 9,
+    "while": 13,
+    "who": 13,
+    "whose": 3,
+    "why": 1,
+    "wide": 1,
+    "wildfire": 4,
+    "will": 66,
+    "williams": 1,
+    "willingness": 1,
+    "winds": 1,
+    "wish": 1,
+    "with": 69,
+    "within": 2,
+    "without": 7,
+    "words": 2,
+    "work": 5,
+    "worked": 3,
+    "working": 2,
+    "works": 2,
+    "world": 2,
+    "worth": 1,
+    "would": 2,
+    "write": 3,
+    "wrong": 1,
+    "wrote": 2,
+    "year": 23,
+    "years": 16,
+    "yen": 1,
+    "yet": 2,
+    "yielding": 1,
+    "you": 14,
+    "your": 5,
+    "zone": 2
+   },
+   "date": "2026-02-28",
+   "entries": {
+    "a": [
+     1,
+     1,
+     1,
+     3,
+     6,
+     6,
+     9,
+     15,
+     18,
+     21,
+     21,
+     24,
+     33,
+     33,
+     37
+    ],
+    "ability": [
+     68
+    ],
+    "able": [
+     46
+    ],
+    "about": [
+     1,
+     92
+    ],
+    "above": [
+     54
+    ],
+    "accept": [
+     46
+    ],
+    "access": [
+     35
+    ],
+    "accomplished": [
+     56
+    ],
+    "accordingly": [
+     60,
+     71
+    ],
+    "accountability": [
+     76
+    ],
+    "acknowledged": [
+     22
+    ],
+    "acquisition": [
+     77
+    ],
+    "across": [
+     6,
+     21,
+     47,
+     52
+    ],
+    "act": [
+     26,
+     30
+    ],
+    "action": [
+     18
+    ],
+    "activity": [
+     89
+    ],
+    "acumen": [
+     0
+    ],
+    "adam": [
+     69
+    ],
+    "additional": [
+     63
+    ],
+    "adjust": [
+     89
+    ],
+    "advanced": [
+     6
+    ],
+    "aerospace": [
+     51
+    ],
+    "affecting": [
+     81
+    ],
+    "affordable": [
+     83
+    ],
+    "aftermath": [
+     50
+    ],
+    "against": [
+     28
+    ],
+    "agreements": [
+     22
+    ],
+    "ahead": [
+     54
+    ],
+    "air": [
+     78,
+     79
+    ],
+    "aircraft": [
+     78,
+     79
+    ],
+    "ajit": [
+     44
+    ],
+    "all": [
+     0,
+     59
+    ],
+    "allocate": [
+     9
+    ],
+    "allocation": [
+     40,
+     90
+    ],
+    "allow": [
+     22
+    ],
+    "allows": [
+     26
+    ],
+    "alongside": [
+     73
+    ],
+    "also": [
+     3,
+     20,
+     28,
+     42,
+     73,
+     91
+    ],
+    "although": [
+     57
+    ],
+    "always": [
+     38
+    ],
+    "ambitious": [
+     7
+    ],
+    "america": [
+     85
+    ],
+    "among": [
+     75
+    ],
+    "an": [
+     5,
+     7,
+     35,
+     43,
+     96
+    ],
+    "anchored": [
+     6
+    ],
+    "and": [
+     1,
+     1,
+     2,
+     3,
+     6,
+     6,
+     9,
+     17,
+     17,
+     19,
+     22,
+     25,
+     26
+    ],
+    "angeles": [
+     57
+    ],
+    "announced": [
+     95
+    ],
+    "annual": [
+     43,
+     55
+    ],
+    "another": [
+     40
+    ],
+    "answered": [
+     98
+    ],
+    "any": [
+     45
+    ],
+    "apologized": [
+     22
+    ],
+    "approach": [
+     83,
+     89
+    ],
+    "approval": [
+     68
+    ],
+    "approximately": [
+     72
+    ],
+    "are": [
+     10,
+     26,
+     40,
+     45,
+     46,
+     69,
+     75,
+     88
+    ],
+    "area": [
+     50
+    ],
+    "arguably": [
+     0
+    ],
+    "arithmetic": [
+     7
+    ],
+    "as": [
+     6,
+     7,
+     46,
+     63,
+     66,
+     66,
+     69,
+     77,
+     80,
+     81,
+     84
+    ],
+    "assess": [
+     71
+    ],
+    "assessed": [
+     55
+    ],
+    "assessing": [
+     93
+    ],
+    "asset": [
+     35
+    ],
+    "assisted": [
+     50
+    ],
+    "assured": [
+     33
+    ],
+    "at": [
+     1,
+     4,
+     10,
+     86
+    ],
+    "atlantic": [
+     57
+    ],
+    "attached": [
+     33
+    ],
+    "attitude": [
+     11
+    ],
+    "autonomy": [
+     15
+    ],
+    "average": [
+     1
+    ],
+    "avoid": [
+     31
+    ],
+    "away": [
+     80
+    ],
+    "back": [
+     41
+    ],
+    "balance": [
+     24
+    ],
+    "base": [
+     35
+    ],
+    "baseball": [
+     1
+    ],
+    "basis": [
+     43
+    ],
+    "batting": [
+     1
+    ],
+    "be": [
+     7,
+     33,
+     45,
+     55,
+     95
+    ],
+    "becky": [
+     98
+    ],
+    "been": [
+     39,
+     90
+    ],
+    "before": [
+     55
+    ],
+    "began": [
+     57
+    ],
+    "behavior": [
+     23
+    ],
+    "belief": [
+     55
+    ],
+    "bell": [
+     37
+    ],
+    "below": [
+     41
+    ],
+    "beneficial": [
+     22
+    ],
+    "benefited": [
+     60
+    ],
+    "benefiting": [
+     0
+    ],
+    "benefits": [
+     59
+    ],
+    "benign": [
+     57
+    ],
+    "berkshire": [
+     3,
+     8,
+     9,
+     11,
+     13,
+     18,
+     24,
+     28,
+     31,
+     41
+    ],
+    "best": [
+     14
+    ],
+    "better": [
+     48
+    ],
+    "beyond": [
+     11,
+     93
+    ],
+    "bhe": [
+     74
+    ],
+    "big": [
+     33
+    ],
+    "bigger": [
+     39
+    ],
+    "billion": [
+     27,
+     68
+    ],
+    "blocks": [
+     42
+    ],
+    "bnsf": [
+     21,
+     22,
+     73
+    ],
+    "board": [
+     43
+    ],
+    "both": [
+     21,
+     86
+    ],
+    "broader": [
+     93
+    ],
+    "buffett": [
+     0
+    ],
+    "built": [
+     6,
+     54
+    ],
+    "bureaucracy": [
+     16
+    ],
+    "business": [
+     16,
+     19,
+     58,
+     70,
+     77,
+     88
+    ],
+    "businesses": [
+     6,
+     14,
+     31,
+     47,
+     68,
+     69,
+     93
+    ],
+    "buy": [
+     41
+    ],
+    "by": [
+     3,
+     3,
+     6,
+     25,
+     34,
+     35,
+     60,
+     68,
+     77,
+     92,
+     98
+    ],
+    "calenergy": [
+     3,
+     4
+    ],
+    "can": [
+     33,
+     45
+    ],
+    "candor": [
+     17
+    ],
+    "cannot": [
+     46
+    ],
+    "capital": [
+     9,
+     28,
+     29,
+     40,
+     63,
+     87,
+     90
+    ],
+    "capitalism": [
+     6
+    ],
+    "career": [
+     1
+    ],
+    "carpets": [
+     80
+    ],
+    "cash": [
+     27,
+     72,
+     94
+    ],
+    "castparts": [
+     50,
+     52
+    ],
+    "casualty": [
+     65
+    ],
+    "caustic": [
+     34
+    ],
+    "caution": [
+     55
+    ],
+    "center": [
+     10,
+     88
+    ],
+    "centered": [
+     98
+    ],
+    "centers": [
+     85
+    ],
+    "ceo": [
+     7,
+     52
+    ],
+    "cfo": [
+     95
+    ],
+    "chaired": [
+     3
+    ],
+    "challenge": [
+     45
+    ],
+    "challenged": [
+     70
+    ],
+    "challenges": [
+     48
+    ],
+    "challenging": [
+     80
+    ],
+    "chang": [
+     96
+    ],
+    "change": [
+     90
+    ],
+    "changes": [
+     89
+    ],
+    "charging": [
+     87
+    ],
+    "charlie": [
+     12
+    ],
+    "chief": [
+     95
+    ],
+    "chlorine": [
+     34
+    ],
+    "choose": [
+     88
+    ],
+    "chuck": [
+     96
+    ],
+    "city": [
+     6,
+     50
+    ],
+    "claims": [
+     46,
+     65
+    ],
+    "clayton": [
+     82,
+     83
+    ],
+    "closely": [
+     49
+    ],
+    "combs": [
+     92
+    ],
+    "comes": [
+     44
+    ],
+    "comment": [
+     12
+    ],
+    "comments": [
+     97
+    ],
+    "commitments": [
+     17
+    ],
+    "communicate": [
+     17
+    ],
+    "communication": [
+     98
+    ],
+    "communities": [
+     74
+    ],
+    "community": [
+     21
+    ],
+    "compact": [
+     76
+    ],
+    "companies": [
+     90
+    ],
+    "company": [
+     79
+    ],
+    "compete": [
+     48
+    ],
+    "competes": [
+     85
+    ],
+    "competitive": [
+     71
+    ],
+    "competitors": [
+     61,
+     88
+    ],
+    "components": [
+     79
+    ],
+    "compounding": [
+     32
+    ],
+    "comprehensive": [
+     75
+    ],
+    "compromised": [
+     24
+    ],
+    "compromising": [
+     52
+    ],
+    "concentrated": [
+     89
+    ],
+    "conducted": [
+     50
+    ],
+    "confidentially": [
+     33
+    ],
+    "confirmed": [
+     50
+    ],
+    "conglomerate": [
+     9
+    ],
+    "conservatively": [
+     41
+    ],
+    "consolidation": [
+     73
+    ],
+    "constitutes": [
+     28
+    ],
+    "construction": [
+     6,
+     34
+    ],
+    "consumer": [
+     69
+    ],
+    "consumers": [
+     80
+    ],
+    "contingency": [
+     33
+    ],
+    "continue": [
+     89
+    ],
+    "continued": [
+     65
+    ],
+    "continues": [
+     93
+    ],
+    "continuing": [
+     41
+    ],
+    "continuously": [
+     48
+    ],
+    "contract": [
+     45
+    ],
+    "control": [
+     37
+    ],
+    "core": [
+     34
+    ],
+    "corporate": [
+     11
+    ],
+    "cost": [
+     35,
+     71
+    ],
+    "could": [
+     31
+    ],
+    "coverages": [
+     45
+    ],
+    "critical": [
+     51
+    ],
+    "crude": [
+     21
+    ],
+    "culture": [
+     12,
+     17,
+     33
+    ],
+    "customer": [
+     22,
+     48,
+     53,
+     86,
+     86
+    ],
+    "customers": [
+     30,
+     51
+    ],
+    "cycle": [
+     66
+    ],
+    "dangerous": [
+     45
+    ],
+    "day": [
+     98
+    ],
+    "debt": [
+     25
+    ],
+    "decades": [
+     54
+    ],
+    "decelerating": [
+     63
+    ],
+    "december": [
+     95
+    ],
+    "decentralized": [
+     15
+    ],
+    "decision": [
+     10
+    ],
+    "decisions": [
+     17
+    ],
+    "decisively": [
+     2,
+     26
+    ],
+    "declare": [
+     68
+    ],
+    "declined": [
+     78
+    ],
+    "deepen": [
+     18
+    ],
+    "define": [
+     2
+    ],
+    "deliberate": [
+     18,
+     29
+    ],
+    "deliver": [
+     17
+    ],
+    "delivers": [
+     70
+    ],
+    "delivery": [
+     52
+    ],
+    "demand": [
+     79
+    ],
+    "department": [
+     50
+    ],
+    "depends": [
+     8
+    ],
+    "deployment": [
+     29
+    ],
+    "deserved": [
+     15
+    ],
+    "designed": [
+     9
+    ],
+    "despite": [
+     33
+    ],
+    "details": [
+     55
+    ],
+    "determine": [
+     71
+    ],
+    "determined": [
+     41
+    ],
+    "determining": [
+     2
+    ],
+    "development": [
+     5
+    ],
+    "difficulties": [
+     80
+    ],
+    "direct": [
+     98
+    ],
+    "directly": [
+     42
+    ],
+    "director": [
+     3
+    ],
+    "discipline": [
+     2,
+     32,
+     62
+    ],
+    "disciplined": [
+     56
+    ],
+    "dispute": [
+     21
+    ],
+    "disruptions": [
+     78
+    ],
+    "divided": [
+     1
+    ],
+    "dividends": [
+     68
+    ],
+    "diving": [
+     55
+    ],
+    "does": [
+     58
+    ],
+    "doing": [
+     20,
+     52
+    ],
+    "donegan": [
+     52
+    ],
+    "draws": [
+     1
+    ],
+    "drivers": [
+     86,
+     88
+    ],
+    "dry": [
+     28
+    ],
+    "during": [
+     68,
+     98
+    ],
+    "dynamic": [
+     90
+    ],
+    "dynamics": [
+     64
+    ],
+    "each": [
+     72
+    ],
+    "earnings": [
+     55,
+     78,
+     94
+    ],
+    "easy": [
+     38
+    ],
+    "echo": [
+     97
+    ],
+    "economic": [
+     89
+    ],
+    "effective": [
+     95
+    ],
+    "effectively": [
+     78
+    ],
+    "efficiency": [
+     48
+    ],
+    "efficient": [
+     35
+    ],
+    "efficiently": [
+     9
+    ],
+    "effort": [
+     18
+    ],
+    "efforts": [
+     88
+    ],
+    "electric": [
+     87
+    ],
+    "employees": [
+     8,
+     48
+    ],
+    "enables": [
+     83
+    ],
+    "encounter": [
+     19
+    ],
+    "endure": [
+     66
+    ],
+    "energy": [
+     6
+    ],
+    "engagement": [
+     98
+    ],
+    "enhance": [
+     41
+    ],
+    "enormous": [
+     96
+    ],
+    "ensure": [
+     29
+    ],
+    "ensuring": [
+     24,
+     41
+    ],
+    "entered": [
+     63
+    ],
+    "enterprise": [
+     70
+    ],
+    "enthusiasms": [
+     67
+    ],
+    "environment": [
+     60
+    ],
+    "environmental": [
+     50
+    ],
+    "equip": [
+     54
+    ],
+    "equity": [
+     91
+    ],
+    "errors": [
+     20
+    ],
+    "essential": [
+     34,
+     76
+    ],
+    "estimate": [
+     41
+    ],
+    "every": [
+     13,
+     18
+    ],
+    "everyday": [
+     86
+    ],
+    "example": [
+     21
+    ],
+    "exceed": [
+     27,
+     48
+    ],
+    "excellence": [
+     47
+    ],
+    "exceptional": [
+     84
+    ],
+    "excluded": [
+     58
+    ],
+    "execution": [
+     35,
+     81,
+     86
+    ],
+    "expand": [
+     87
+    ],
+    "expanded": [
+     81
+    ],
+    "expect": [
+     66
+    ],
+    "expectations": [
+     48
+    ],
+    "expected": [
+     13
+    ],
+    "experience": [
+     86
+    ],
+    "experienced": [
+     53
+    ],
+    "extend": [
+     61
+    ],
+    "extends": [
+     93
+    ],
+    "extensive": [
+     50
+    ],
+    "extraordinary": [
+     5
+    ],
+    "extreme": [
+     28
+    ],
+    "exuberances": [
+     67
+    ],
+    "fabric": [
+     31
+    ],
+    "face": [
+     64
+    ],
+    "facilities": [
+     87
+    ],
+    "facility": [
+     51
+    ],
+    "fame": [
+     1
+    ],
+    "fearful": [
+     26
+    ],
+    "felt": [
+     6
+    ],
+    "figures": [
+     58
+    ],
+    "fill": [
+     96
+    ],
+    "financial": [
+     25,
+     26,
+     95
+    ],
+    "financing": [
+     33
+    ],
+    "fire": [
+     50
+    ],
+    "firm": [
+     26,
+     60
+    ],
+    "first": [
+     49
+    ],
+    "float": [
+     56
+    ],
+    "flooring": [
+     80
+    ],
+    "flow": [
+     72
+    ],
+    "flows": [
+     94
+    ],
+    "focus": [
+     16,
+     67,
+     84
+    ],
+    "focused": [
+     86
+    ],
+    "food": [
+     86
+    ],
+    "for": [
+     2,
+     7,
+     22,
+     41,
+     48,
+     70,
+     72,
+     79,
+     83,
+     86
+    ],
+    "forever": [
+     12
+    ],
+    "form": [
+     6
+    ],
+    "format": [
+     98
+    ],
+    "formerly": [
+     92
+    ],
+    "fortress": [
+     24
+    ],
+    "fortunate": [
+     6,
+     69
+    ],
+    "forward": [
+     99
+    ],
+    "foundation": [
+     24
+    ],
+    "foundational": [
+     54
+    ],
+    "from": [
+     0,
+     1,
+     13,
+     42,
+     55,
+     58,
+     70,
+     80,
+     88,
+     95
+    ],
+    "fundamental": [
+     56,
+     89
+    ],
+    "fundamentals": [
+     6
+    ],
+    "future": [
+     38
+    ],
+    "gaap": [
+     55
+    ],
+    "gains": [
+     55
+    ],
+    "geico": [
+     60
+    ],
+    "generate": [
+     94
+    ],
+    "generates": [
+     72
+    ],
+    "generations": [
+     0
+    ],
+    "global": [
+     46
+    ],
+    "goals": [
+     56
+    ],
+    "goes": [
+     11
+    ],
+    "good": [
+     38
+    ],
+    "governs": [
+     76
+    ],
+    "great": [
+     21,
+     99
+    ],
+    "greatest": [
+     0
+    ],
+    "greg": [
+     12
+    ],
+    "grounded": [
+     6,
+     15
+    ],
+    "group": [
+     82
+    ],
+    "grow": [
+     56
+    ],
+    "growing": [
+     79
+    ],
+    "growth": [
+     38,
+     38
+    ],
+    "guide": [
+     98
+    ],
+    "had": [
+     39
+    ],
+    "hall": [
+     1
+    ],
+    "hamburg": [
+     95
+    ],
+    "happy": [
+     1
+    ],
+    "hard": [
+     81
+    ],
+    "has": [
+     1,
+     74,
+     79,
+     79,
+     80,
+     86,
+     87,
+     90
+    ],
+    "have": [
+     69,
+     79,
+     90,
+     96
+    ],
+    "hazards": [
+     49
+    ],
+    "he": [
+     1,
+     93
+    ],
+    "heinz": [
+     91
+    ],
+    "hesitation": [
+     46
+    ],
+    "high": [
+     30,
+     38
+    ],
+    "his": [
+     0,
+     52,
+     95,
+     96
+    ],
+    "historic": [
+     1
+    ],
+    "historical": [
+     38
+    ],
+    "hitter": [
+     1
+    ],
+    "hold": [
+     91
+    ],
+    "holders": [
+     42
+    ],
+    "holding": [
+     89
+    ],
+    "holdings": [
+     27,
+     89
+    ],
+    "housing": [
+     83
+    ],
+    "how": [
+     1,
+     71,
+     88
+    ],
+    "hurricane": [
+     57
+    ],
+    "i": [
+     6,
+     7,
+     97
+    ],
+    "identifying": [
+     49
+    ],
+    "if": [
+     33,
+     89
+    ],
+    "impact": [
+     93
+    ],
+    "important": [
+     40,
+     63
+    ],
+    "improve": [
+     48
+    ],
+    "improvement": [
+     72
+    ],
+    "improvements": [
+     73
+    ],
+    "improving": [
+     86
+    ],
+    "in": [
+     1,
+     1,
+     1,
+     1,
+     6,
+     6,
+     6,
+     11,
+     14,
+     15,
+     18,
+     21,
+     33,
+     38,
+     48
+    ],
+    "including": [
+     92
+    ],
+    "increased": [
+     87
+    ],
+    "increases": [
+     60,
+     63
+    ],
+    "incremental": [
+     72
+    ],
+    "independence": [
+     16
+    ],
+    "indian": [
+     21
+    ],
+    "industrial": [
+     34
+    ],
+    "industries": [
+     6
+    ],
+    "industry": [
+     67,
+     73,
+     75,
+     88
+    ],
+    "inflation": [
+     65
+    ],
+    "inflicted": [
+     80
+    ],
+    "input": [
+     93
+    ],
+    "inspiration": [
+     1
+    ],
+    "insurance": [
+     6,
+     28,
+     46,
+     56,
+     68,
+     68,
+     94
+    ],
+    "integral": [
+     77
+    ],
+    "integrated": [
+     35
+    ],
+    "integration": [
+     77
+    ],
+    "integrity": [
+     30
+    ],
+    "intent": [
+     99
+    ],
+    "intentional": [
+     29
+    ],
+    "intentionally": [
+     9
+    ],
+    "interests": [
+     10
+    ],
+    "international": [
+     52
+    ],
+    "into": [
+     1,
+     55,
+     61,
+     70
+    ],
+    "intrinsic": [
+     41
+    ],
+    "invest": [
+     26
+    ],
+    "investing": [
+     2,
+     86
+    ],
+    "investment": [
+     0,
+     33,
+     55
+    ],
+    "investments": [
+     91,
+     92,
+     93
+    ],
+    "investor": [
+     0
+    ],
+    "is": [
+     0,
+     5,
+     9,
+     13,
+     21,
+     24,
+     28,
+     29,
+     55,
+     58
+    ],
+    "it": [
+     5,
+     22,
+     26,
+     28,
+     33,
+     34,
+     38,
+     39,
+     44,
+     55
+    ],
+    "its": [
+     22,
+     55,
+     75,
+     77,
+     80,
+     84,
+     87,
+     89
+    ],
+    "itself": [
+     42
+    ],
+    "jeopardize": [
+     31
+    ],
+    "johnson": [
+     69
+    ],
+    "jr": [
+     3
+    ],
+    "judgment": [
+     2
+    ],
+    "june": [
+     95,
+     95
+    ],
+    "jurisdiction": [
+     60
+    ],
+    "keep": [
+     12
+    ],
+    "kiewit": [
+     3
+    ],
+    "know": [
+     98
+    ],
+    "kraft": [
+     91
+    ],
+    "laboratories": [
+     37
+    ],
+    "lands": [
+     21,
+     22
+    ],
+    "large": [
+     42,
+     55
+    ],
+    "largest": [
+     85
+    ],
+    "last": [
+     6
+    ],
+    "layouts": [
+     49
+    ],
+    "lead": [
+     14
+    ],
+    "leader": [
+     13
+    ],
+    "leaders": [
+     30
+    ],
+    "leadership": [
+     74
+    ],
+    "leads": [
+     82
+    ],
+    "led": [
+     34,
+     77
+    ],
+    "legal": [
+     45
+    ],
+    "less": [
+     66
+    ],
+    "let": [
+     32
+    ],
+    "letter": [
+     36
+    ],
+    "level": [
+     86
+    ],
+    "levels": [
+     29
+    ],
+    "liability": [
+     76
+    ],
+    "liebert": [
+     77
+    ],
+    "like": [
+     24,
+     30,
+     33
+    ],
+    "limited": [
+     89
+    ],
+    "line": [
+     53
+    ],
+    "lines": [
+     63
+    ],
+    "liquidity": [
+     29
+    ],
+    "listed": [
+     54
+    ],
+    "little": [
+     4
+    ],
+    "live": [
+     6
+    ],
+    "local": [
+     50
+    ],
+    "location": [
+     85
+    ],
+    "long": [
+     66,
+     67,
+     89
+    ],
+    "longstanding": [
+     21
+    ],
+    "los": [
+     57
+    ],
+    "losses": [
+     55,
+     57
+    ],
+    "low": [
+     35
+    ],
+    "lower": [
+     63
+    ],
+    "loyalty": [
+     86
+    ],
+    "lubrizol": [
+     77
+    ],
+    "maintain": [
+     24,
+     32
+    ],
+    "maintaining": [
+     62
+    ],
+    "maintains": [
+     84
+    ],
+    "major": [
+     42,
+     51
+    ],
+    "make": [
+     17
+    ],
+    "makes": [
+     7
+    ],
+    "making": [
+     10
+    ],
+    "management": [
+     35,
+     38,
+     71,
+     86
+    ],
+    "managers": [
+     14,
+     16
+    ],
+    "manages": [
+     92
+    ],
+    "manner": [
+     56,
+     98
+    ],
+    "manufacturing": [
+     6
+    ],
+    "marc": [
+     95
+    ],
+    "margin": [
+     72
+    ],
+    "margins": [
+     38
+    ],
+    "mark": [
+     52
+    ],
+    "market": [
+     63
+    ],
+    "markets": [
+     34
+    ],
+    "materially": [
+     78
+    ],
+    "materials": [
+     35
+    ],
+    "matter": [
+     4
+    ],
+    "matters": [
+     5
+    ],
+    "may": [
+     12,
+     42,
+     61,
+     89
+    ],
+    "me": [
+     12
+    ],
+    "meaningful": [
+     90
+    ],
+    "means": [
+     20
+    ],
+    "meet": [
+     22,
+     83
+    ],
+    "meets": [
+     37
+    ],
+    "merger": [
+     73
+    ],
+    "method": [
+     91
+    ],
+    "million": [
+     72
+    ],
+    "mindset": [
+     13
+    ],
+    "minimize": [
+     16
+    ],
+    "mistakes": [
+     22
+    ],
+    "mitigation": [
+     75
+    ],
+    "model": [
+     15,
+     70
+    ],
+    "models": [
+     48
+    ],
+    "moderated": [
+     98
+    ],
+    "modernize": [
+     87
+    ],
+    "more": [
+     51,
+     90
+    ],
+    "most": [
+     65,
+     75,
+     78
+    ],
+    "move": [
+     99
+    ],
+    "moved": [
+     80
+    ],
+    "much": [
+     1
+    ],
+    "must": [
+     55
+    ],
+    "mutually": [
+     22
+    ],
+    "my": [
+     4,
+     29
+    ],
+    "nationwide": [
+     83
+    ],
+    "navigated": [
+     80
+    ],
+    "nearly": [
+     8
+    ],
+    "need": [
+     37,
+     83
+    ],
+    "needed": [
+     38
+    ],
+    "needs": [
+     22
+    ],
+    "net": [
+     55
+    ],
+    "netjets": [
+     70,
+     84
+    ],
+    "network": [
+     87
+    ],
+    "never": [
+     24
+    ],
+    "new": [
+     45
+    ],
+    "next": [
+     7
+    ],
+    "nimble": [
+     33
+    ],
+    "no": [
+     33,
+     53
+    ],
+    "non": [
+     94
+    ],
+    "norfolk": [
+     73
+    ],
+    "normalized": [
+     79
+    ],
+    "north": [
+     85
+    ],
+    "not": [
+     7,
+     23,
+     58
+    ],
+    "notably": [
+     78
+    ],
+    "now": [
+     27,
+     69
+    ],
+    "number": [
+     90
+    ],
+    "occidental": [
+     91
+    ],
+    "of": [
+     0,
+     1,
+     5,
+     6,
+     10,
+     21,
+     21,
+     28,
+     31,
+     41,
+     42
+    ],
+    "offering": [
+     84
+    ],
+    "offerings": [
+     86
+    ],
+    "office": [
+     11
+    ],
+    "officer": [
+     95
+    ],
+    "officials": [
+     74
+    ],
+    "often": [
+     88
+    ],
+    "oil": [
+     21
+    ],
+    "omaha": [
+     6,
+     11
+    ],
+    "on": [
+     8,
+     12,
+     16,
+     17,
+     22,
+     43,
+     67,
+     74,
+     78,
+     84
+    ],
+    "one": [
+     72
+    ],
+    "ongoing": [
+     83
+    ],
+    "only": [
+     1,
+     39
+    ],
+    "open": [
+     98
+    ],
+    "operate": [
+     15
+    ],
+    "operating": [
+     14,
+     22,
+     38,
+     47,
+     48,
+     72,
+     72,
+     77,
+     94
+    ],
+    "operational": [
+     47
+    ],
+    "operations": [
+     28,
+     46,
+     48,
+     56,
+     64,
+     71,
+     94
+    ],
+    "operator": [
+     85
+    ],
+    "opportunities": [
+     33,
+     90,
+     93
+    ],
+    "opportunity": [
+     42
+    ],
+    "opposition": [
+     76
+    ],
+    "option": [
+     40
+    ],
+    "or": [
+     26,
+     31,
+     52,
+     63
+    ],
+    "orders": [
+     79
+    ],
+    "ordinary": [
+     68
+    ],
+    "other": [
+     90,
+     93
+    ],
+    "others": [
+     26,
+     46
+    ],
+    "our": [
+     8,
+     10,
+     14,
+     16,
+     17,
+     17,
+     20,
+     27,
+     28,
+     28,
+     29,
+     33
+    ],
+    "outpace": [
+     65
+    ],
+    "over": [
+     21,
+     35,
+     88
+    ],
+    "overseen": [
+     92
+    ],
+    "own": [
+     73
+    ],
+    "owned": [
+     3
+    ],
+    "owner": [
+     13
+    ],
+    "owners": [
+     30,
+     41,
+     72
+    ],
+    "oxychem": [
+     77
+    ],
+    "pacific": [
+     73
+    ],
+    "pair": [
+     96
+    ],
+    "paired": [
+     76
+    ],
+    "pandemic": [
+     78
+    ],
+    "particularly": [
+     45
+    ],
+    "partly": [
+     3
+    ],
+    "partner": [
+     30
+    ],
+    "parts": [
+     51
+    ],
+    "party": [
+     88
+    ],
+    "past": [
+     1,
+     22
+    ],
+    "patience": [
+     2
+    ],
+    "paving": [
+     22
+    ],
+    "pay": [
+     46
+    ],
+    "per": [
+     41
+    ],
+    "percentage": [
+     72
+    ],
+    "perfect": [
+     36
+    ],
+    "performance": [
+     71
+    ],
+    "period": [
+     5,
+     80
+    ],
+    "periods": [
+     90
+    ],
+    "permitting": [
+     68
+    ],
+    "persistent": [
+     37
+    ],
+    "personal": [
+     5
+    ],
+    "peter": [
+     3
+    ],
+    "phases": [
+     66
+    ],
+    "pilot": [
+     87,
+     88,
+     88
+    ],
+    "pitches": [
+     1,
+     2
+    ],
+    "placed": [
+     18
+    ],
+    "placing": [
+     88
+    ],
+    "plan": [
+     7
+    ],
+    "planned": [
+     77
+    ],
+    "play": [
+     93
+    ],
+    "playbook": [
+     44
+    ],
+    "point": [
+     72
+    ],
+    "policy": [
+     43
+    ],
+    "portfolio": [
+     92
+    ],
+    "portion": [
+     92
+    ],
+    "position": [
+     84
+    ],
+    "positions": [
+     90
+    ],
+    "possesses": [
+     38
+    ],
+    "potential": [
+     38,
+     49,
+     73
+    ],
+    "powder": [
+     28
+    ],
+    "powerhouse": [
+     46
+    ],
+    "precision": [
+     50,
+     52
+    ],
+    "preference": [
+     88
+    ],
+    "preferred": [
+     2
+    ],
+    "premium": [
+     66,
+     84
+    ],
+    "premiums": [
+     58
+    ],
+    "prepare": [
+     48
+    ],
+    "presents": [
+     42
+    ],
+    "preserve": [
+     25
+    ],
+    "preserving": [
+     76
+    ],
+    "president": [
+     69
+    ],
+    "pressure": [
+     61,
+     78
+    ],
+    "pricing": [
+     60,
+     63,
+     65
+    ],
+    "pride": [
+     33
+    ],
+    "principally": [
+     91
+    ],
+    "principled": [
+     76
+    ],
+    "prior": [
+     68,
+     95
+    ],
+    "prioritizes": [
+     35
+    ],
+    "pro": [
+     88
+    ],
+    "produced": [
+     51
+    ],
+    "produces": [
+     34
+    ],
+    "product": [
+     60
+    ],
+    "production": [
+     52,
+     53,
+     78,
+     81
+    ],
+    "products": [
+     69
+    ],
+    "professional": [
+     86,
+     88
+    ],
+    "profits": [
+     56
+    ],
+    "programs": [
+     75
+    ],
+    "progressed": [
+     63
+    ],
+    "prompt": [
+     33
+    ],
+    "proposed": [
+     73
+    ],
+    "prospects": [
+     89
+    ],
+    "protect": [
+     28
+    ],
+    "provide": [
+     16
+    ],
+    "providing": [
+     49,
+     93
+    ],
+    "prudently": [
+     25,
+     48
+    ],
+    "public": [
+     74
+    ],
+    "purchase": [
+     42
+    ],
+    "purpose": [
+     99
+    ],
+    "pursue": [
+     47
+    ],
+    "put": [
+     78
+    ],
+    "quality": [
+     52,
+     81,
+     83
+    ],
+    "questions": [
+     98
+    ],
+    "quick": [
+     98
+    ],
+    "quickly": [
+     52
+    ],
+    "rail": [
+     73
+    ],
+    "railroad": [
+     71
+    ],
+    "railroads": [
+     6
+    ],
+    "rate": [
+     61,
+     63
+    ],
+    "rationally": [
+     9
+    ],
+    "raw": [
+     35
+    ],
+    "realized": [
+     55
+    ],
+    "rebecca": [
+     77
+    ],
+    "receive": [
+     58
+    ],
+    "recent": [
+     90
+    ],
+    "recovered": [
+     79
+    ],
+    "rectifying": [
+     20
+    ],
+    "recurring": [
+     94
+    ],
+    "redistributed": [
+     52
+    ],
+    "reductions": [
+     61
+    ],
+    "reflected": [
+     88
+    ],
+    "reflects": [
+     18
+    ],
+    "regular": [
+     58
+    ],
+    "regulations": [
+     68
+    ],
+    "regulators": [
+     74
+    ],
+    "regulatory": [
+     68,
+     76
+    ],
+    "reinforce": [
+     84
+    ],
+    "reinsurance": [
+     58,
+     64,
+     65,
+     66
+    ],
+    "reinvest": [
+     48
+    ],
+    "reiterating": [
+     55
+    ],
+    "related": [
+     57
+    ],
+    "relative": [
+     90
+    ],
+    "relentless": [
+     84
+    ],
+    "relentlessly": [
+     16
+    ],
+    "reliability": [
+     85
+    ],
+    "reliable": [
+     71
+    ],
+    "remain": [
+     29
+    ],
+    "remained": [
+     60
+    ],
+    "represented": [
+     6
+    ],
+    "repurchases": [
+     40,
+     41
+    ],
+    "reputation": [
+     31
+    ],
+    "required": [
+     28
+    ],
+    "resisting": [
+     67
+    ],
+    "resolution": [
+     21
+    ],
+    "resonate": [
+     12
+    ],
+    "responders": [
+     49
+    ],
+    "response": [
+     33
+    ],
+    "responsibilities": [
+     95
+    ],
+    "restoring": [
+     62
+    ],
+    "restricted": [
+     68
+    ],
+    "result": [
+     46
+    ],
+    "resulting": [
+     1,
+     63
+    ],
+    "resumed": [
+     79
+    ],
+    "retailing": [
+     69
+    ],
+    "retention": [
+     62
+    ],
+    "retiring": [
+     95
+    ],
+    "retroactive": [
+     58
+    ],
+    "reviews": [
+     43
+    ],
+    "right": [
+     20
+    ],
+    "risk": [
+     44,
+     74
+    ],
+    "risks": [
+     46
+    ],
+    "rodent": [
+     37
+    ],
+    "role": [
+     29,
+     74,
+     93
+    ],
+    "roles": [
+     4
+    ],
+    "roll": [
+     26
+    ],
+    "rose": [
+     88
+    ],
+    "run": [
+     14
+    ],
+    "s": [
+     27,
+     52
+    ],
+    "safe": [
+     50,
+     71
+    ],
+    "safely": [
+     22
+    ],
+    "safety": [
+     52,
+     84
+    ],
+    "same": [
+     98
+    ],
+    "say": [
+     7
+    ],
+    "scenarios": [
+     28
+    ],
+    "score": [
+     88
+    ],
+    "scott": [
+     3
+    ],
+    "season": [
+     1,
+     57
+    ],
+    "second": [
+     88
+    ],
+    "see": [
+     89
+    ],
+    "seek": [
+     14
+    ],
+    "segments": [
+     1,
+     65
+    ],
+    "self": [
+     80
+    ],
+    "separately": [
+     90
+    ],
+    "series": [
+     78
+    ],
+    "serve": [
+     34
+    ],
+    "serves": [
+     74
+    ],
+    "service": [
+     69,
+     71,
+     81,
+     84,
+     85
+    ],
+    "serving": [
+     69
+    ],
+    "sessions": [
+     98
+    ],
+    "setbacks": [
+     19
+    ],
+    "several": [
+     63
+    ],
+    "shall": [
+     7
+    ],
+    "share": [
+     40,
+     41
+    ],
+    "shared": [
+     33
+    ],
+    "shareholders": [
+     70
+    ],
+    "shares": [
+     41,
+     42
+    ],
+    "shaw": [
+     80
+    ],
+    "sheet": [
+     24
+    ],
+    "shipments": [
+     21
+    ],
+    "shoes": [
+     96
+    ],
+    "significant": [
+     57,
+     93
+    ],
+    "significantly": [
+     89
+    ],
+    "similar": [
+     2,
+     64
+    ],
+    "simple": [
+     7
+    ],
+    "since": [
+     87
+    ],
+    "site": [
+     49
+    ],
+    "sites": [
+     52
+    ],
+    "size": [
+     33,
+     82
+    ],
+    "slipped": [
+     81
+    ],
+    "slowed": [
+     78
+    ],
+    "small": [
+     90
+    ],
+    "smaller": [
+     1
+    ],
+    "so": [
+     52
+    ],
+    "society": [
+     31
+    ],
+    "soda": [
+     34
+    ],
+    "soft": [
+     80
+    ],
+    "sole": [
+     51
+    ],
+    "some": [
+     28,
+     80
+    ],
+    "sometimes": [
+     55
+    ],
+    "sons": [
+     3
+    ],
+    "soon": [
+     6
+    ],
+    "sourced": [
+     51
+    ],
+    "southern": [
+     73
+    ],
+    "sparingly": [
+     25
+    ],
+    "specific": [
+     4
+    ],
+    "spending": [
+     87
+    ],
+    "spoken": [
+     1
+    ],
+    "stand": [
+     26
+    ],
+    "standalone": [
+     77
+    ],
+    "standards": [
+     52
+    ],
+    "statutes": [
+     68
+    ],
+    "steadiness": [
+     59
+    ],
+    "steve": [
+     36,
+     38
+    ],
+    "stoppage": [
+     53
+    ],
+    "stopped": [
+     78
+    ],
+    "store": [
+     86,
+     86
+    ],
+    "storms": [
+     26
+    ],
+    "strength": [
+     25
+    ],
+    "strike": [
+     1
+    ],
+    "strive": [
+     48
+    ],
+    "strong": [
+     38
+    ],
+    "strongly": [
+     97
+    ],
+    "structure": [
+     71
+    ],
+    "study": [
+     88
+    ],
+    "subject": [
+     45
+    ],
+    "substantial": [
+     33,
+     94
+    ],
+    "succeed": [
+     54
+    ],
+    "success": [
+     8,
+     71
+    ],
+    "successes": [
+     19
+    ],
+    "successful": [
+     70
+    ],
+    "successor": [
+     96
+    ],
+    "such": [
+     6,
+     23
+    ],
+    "support": [
+     28
+    ],
+    "supported": [
+     35,
+     50
+    ],
+    "supporting": [
+     93
+    ],
+    "surface": [
+     80,
+     81
+    ],
+    "sustained": [
+     78
+    ],
+    "swing": [
+     1
+    ],
+    "swinging": [
+     2
+    ],
+    "swings": [
+     55
+    ],
+    "swinomish": [
+     21
+    ],
+    "take": [
+     33,
+     62
+    ],
+    "taken": [
+     54,
+     74
+    ],
+    "talented": [
+     14
+    ],
+    "team": [
+     38,
+     49,
+     52,
+     77
+    ],
+    "teams": [
+     14
+    ],
+    "ted": [
+     1,
+     92,
+     93
+    ],
+    "temporary": [
+     67
+    ],
+    "ten": [
+     39
+    ],
+    "tentative": [
+     26
+    ],
+    "term": [
+     67,
+     89
+    ],
+    "testing": [
+     50
+    ],
+    "than": [
+     51
+    ],
+    "that": [
+     5,
+     6,
+     7,
+     12,
+     13,
+     17,
+     22,
+     31,
+     41,
+     50
+    ],
+    "the": [
+     0,
+     1,
+     1,
+     1,
+     7,
+     10,
+     12,
+     14,
+     16,
+     18,
+     20,
+     21
+    ],
+    "their": [
+     10,
+     16,
+     30,
+     48,
+     56,
+     59,
+     70
+    ],
+    "them": [
+     2
+    ],
+    "then": [
+     2,
+     49
+    ],
+    "there": [
+     73
+    ],
+    "these": [
+     58,
+     60,
+     66,
+     88,
+     89,
+     93
+    ],
+    "they": [
+     41
+    ],
+    "thing": [
+     20
+    ],
+    "third": [
+     88
+    ],
+    "this": [
+     11,
+     25,
+     28,
+     83,
+     89
+    ],
+    "though": [
+     89
+    ],
+    "through": [
+     26
+    ],
+    "time": [
+     0,
+     62
+    ],
+    "times": [
+     39
+    ],
+    "to": [
+     1,
+     6,
+     6,
+     9,
+     14,
+     16,
+     16,
+     18,
+     22,
+     26,
+     28,
+     29
+    ],
+    "today": [
+     4
+    ],
+    "todd": [
+     92
+    ],
+    "together": [
+     54
+    ],
+    "tolerate": [
+     23
+    ],
+    "trade": [
+     41
+    ],
+    "transformed": [
+     70
+    ],
+    "transition": [
+     95
+    ],
+    "transparency": [
+     17
+    ],
+    "travel": [
+     78,
+     79,
+     85,
+     88
+    ],
+    "travelers": [
+     86
+    ],
+    "treasury": [
+     27
+    ],
+    "tribal": [
+     21,
+     21,
+     22
+    ],
+    "tried": [
+     1
+    ],
+    "trust": [
+     15,
+     18
+    ],
+    "turn": [
+     14
+    ],
+    "u": [
+     27,
+     52
+    ],
+    "ultimately": [
+     71
+    ],
+    "undermine": [
+     31
+    ],
+    "understand": [
+     30,
+     38
+    ],
+    "underwriting": [
+     56,
+     62
+    ],
+    "unfold": [
+     32
+    ],
+    "union": [
+     73
+    ],
+    "unique": [
+     9
+    ],
+    "unrealized": [
+     55
+    ],
+    "unscripted": [
+     98
+    ],
+    "unusually": [
+     57
+    ],
+    "unwarranted": [
+     76
+    ],
+    "up": [
+     68
+    ],
+    "upgrades": [
+     86
+    ],
+    "uphold": [
+     17
+    ],
+    "us": [
+     26,
+     33,
+     54,
+     59
+    ],
+    "uses": [
+     34
+    ],
+    "using": [
+     25
+    ],
+    "utilities": [
+     76
+    ],
+    "valuable": [
+     93
+    ],
+    "value": [
+     41,
+     41,
+     70
+    ],
+    "values": [
+     6,
+     54,
+     90
+    ],
+    "varied": [
+     60
+    ],
+    "various": [
+     93
+    ],
+    "vehicle": [
+     87
+    ],
+    "very": [
+     38
+    ],
+    "volume": [
+     35
+    ],
+    "volumes": [
+     78
+    ],
+    "volunteer": [
+     50
+    ],
+    "waiting": [
+     2
+    ],
+    "walter": [
+     3
+    ],
+    "warren": [
+     0,
+     1,
+     2,
+     97
+    ],
+    "was": [
+     3,
+     3,
+     5,
+     36,
+     50,
+     57,
+     77
+    ],
+    "way": [
+     22
+    ],
+    "ways": [
+     93
+    ],
+    "we": [
+     7,
+     14,
+     15,
+     16,
+     17,
+     19,
+     23,
+     24,
+     25,
+     33,
+     33
+    ],
+    "well": [
+     11,
+     98
+    ],
+    "were": [
+     51,
+     80
+    ],
+    "weschler": [
+     92
+    ],
+    "what": [
+     5
+    ],
+    "when": [
+     26,
+     26,
+     41,
+     42,
+     44,
+     78
+    ],
+    "where": [
+     33,
+     90
+    ],
+    "which": [
+     58,
+     88
+    ],
+    "while": [
+     22,
+     28,
+     60,
+     62
+    ],
+    "who": [
+     1,
+     3,
+     14,
+     30
+    ],
+    "wildfire": [
+     57,
+     74
+    ],
+    "will": [
+     7,
+     12,
+     12,
+     19,
+     23,
+     41,
+     62,
+     89,
+     95,
+     95,
+     96,
+     98
+    ],
+    "williams": [
+     1
+    ],
+    "wish": [
+     39
+    ],
+    "with": [
+     0,
+     12,
+     15,
+     17,
+     21,
+     30,
+     33,
+     33,
+     49,
+     55,
+     55,
+     57
+    ],
+    "within": [
+     77
+    ],
+    "without": [
+     46,
+     52,
+     68
+    ],
+    "words": [
+     38
+    ],
+    "work": [
+     70
+    ],
+    "worked": [
+     49
+    ],
+    "working": [
+     74
+    ],
+    "worth": [
+     55
+    ],
+    "write": [
+     66
+    ],
+    "wrote": [
+     44
+    ],
+    "year": [
+     57,
+     63,
+     95
+    ],
+    "years": [
+     7
+    ],
+    "you": [
+     98
+    ],
+    "your": [
+     7,
+     98
+    ],
+    "zone": [
+     1,
+     1
+    ]
+   },
+   "excerpts": [
+    "Warren Buffett is arguably the greatest investor of all time, with generations benefiting from his investment acumen.",
+    "In the past, Warren has spoken about how he draws inspiration from Ted Williams – the baseball Hall of Fame hitter who divided the strike zone into 77 segments and tried to swing only at pitches in a much smaller “happy zone,” resulting in a .344 career batting average and a historic .406 season in 1941.",
+    "Similar discipline, patience, and judgment define Warren’s investing: determining preferred pitches, waiting for them, then swinging decisively.",
+    "CalEnergy was partly owned by Peter Kiewit Sons’, and chaired by Walter Scott, Jr., who was also a Berkshire director.",
+    "My specific roles at CalEnergy matter little today.",
+    "What matters is that it was an extraordinary period of personal development.",
+    "I felt fortunate to live in Omaha, a city that represented a form of capitalism grounded in fundamentals and advanced by values, anchored in businesses built to last, across industries such as insurance, construction, railroads, manufacturing, and – soon – energy.",
+    "I will not be your CEO for the next 60 years as simple arithmetic makes that – shall we say – an ambitious plan.",
+    "Berkshire’s success depends on our nearly 400,000 employees.",
+    "Berkshire is a unique conglomerate, intentionally designed to allocate capital rationally and efficiently.",
+    "Their interests are at the center of our decision-making.",
+    "This attitude goes well beyond Berkshire’s corporate office in Omaha.",
+    "Charlie’s comment on May 1, 2021, that “Greg will keep the culture” will forever resonate with me.",
+    "That owner’s mindset is expected from every Berkshire leader.",
+    "We seek the best managers to run our operating businesses, who in turn lead talented teams.",
+    "We operate a decentralized model with autonomy grounded in deserved trust.",
+    "We minimize bureaucracy to provide our managers the independence to focus relentlessly on their business.",
+    "We make decisions that uphold our culture, communicate with candor and transparency, and deliver on our commitments.",
+    "Every action reflects a deliberate effort to deepen the trust placed in Berkshire.",
+    "We will encounter business successes and setbacks.",
+    "Doing the right thing also means rectifying our errors.",
+    "A great example of both is BNSF’s resolution in 2025 of a longstanding dispute with the Swinomish Indian Tribal Community over crude oil shipments across Tribal lands.",
+    "BNSF acknowledged its past mistakes and apologized, paving the way for mutually beneficial agreements that allow it to meet customer needs while operating safely on Tribal lands.",
+    "We will not tolerate such behavior.",
+    "We maintain a fortress-like balance sheet, ensuring Berkshire’s foundation is never compromised.",
+    "We preserve this financial strength by using debt sparingly and prudently.",
+    "It allows us to act decisively, invest when others are tentative or fearful, and stand firm when financial storms roll through.",
+    "Our cash and U.S. Treasury holdings now exceed $370 billion.",
+    "While some of this capital is required to support our insurance operations and protect Berkshire against extreme scenarios, it also constitutes our dry powder.",
+    "My role is to ensure our liquidity levels and capital deployment remain intentional and deliberate.",
+    "Partner with high integrity leaders who understand their customers and act like owners;",
+    "Avoid businesses that undermine the fabric of society or could jeopardize Berkshire’s reputation;",
+    "Maintain discipline and let compounding unfold.",
+    "Despite our substantial size, we take pride in a nimble culture where big investment opportunities can be confidentially shared with us, with a prompt response assured (and if we like it, no financing contingency attached).",
+    "The chlorine and caustic soda it produces serve essential markets, led by construction and core industrial uses.",
+    "Management prioritizes efficient execution over volume, supported by an integrated asset base and access to low-cost raw materials.",
+    "Steve’s letter was perfect.",
+    "Bell Laboratories meets a persistent need: rodent control.",
+    "In Steve’s words, it possesses “high operating margins, very good historical growth and future growth potential, easy to understand and always needed, and a strong management team.”",
+    "We only wish it had been ten times bigger.",
+    "Share repurchases are another important capital allocation option.",
+    "We will buy back Berkshire shares when they trade below our estimate of intrinsic value, conservatively determined, ensuring that repurchases enhance per-share value for continuing owners.",
+    "We may also purchase large blocks of shares directly from major holders when the opportunity presents itself.",
+    "On an annual basis, the Board reviews our policy.",
+    "When it comes to risk, Ajit wrote the playbook.",
+    "Any contract can be subject to legal challenge, and new coverages are particularly dangerous.",
+    "As a result, our insurance operations are a global powerhouse, able to accept risks others cannot, and pay claims without hesitation.",
+    "We pursue operational excellence across our operating businesses.",
+    "Our employees continuously strive to exceed customer expectations, improve efficiency to better compete and prepare for challenges to our operating models, and reinvest prudently in their operations.",
+    "The team then worked closely with first responders, providing site layouts and identifying potential hazards.",
+    "In the aftermath, Precision Castparts supported the local volunteer fire department, assisted the city, and conducted extensive environmental testing that confirmed the area was safe.",
+    "The facility produced more than 700 parts that were sole-sourced and critical to major aerospace customers.",
+    "Mark Donegan, Precision Castparts’ CEO, and his team quickly redistributed production across U.S. and international sites, doing so without compromising safety, quality, or delivery standards.",
+    "No customer experienced a production line stoppage.",
+    "Taken together, the foundational values listed above built Berkshire, and equip us to succeed in the decades ahead.",
+    "Before diving into details, it is worth reiterating a Berkshire belief: our GAAP net earnings – with its sometimes-large annual swings from realized and unrealized investment gains and losses – must be assessed with caution.",
+    "In 2025, Berkshire’s insurance operations accomplished their fundamental goals: grow underwriting profits and float in a disciplined manner.",
+    "Although the year began with significant wildfire-related losses in Los Angeles, the Atlantic hurricane season was unusually benign.",
+    "(Our retroactive reinsurance business, which does not receive regular premiums, is excluded from these figures.)",
+    "Their steadiness benefits us all.",
+    "While these increases varied by product and jurisdiction, the pricing environment remained firm, and GEICO benefited accordingly.",
+    "Competitors’ rate reductions may extend that pressure into 2026.",
+    "Restoring retention while maintaining underwriting discipline will take time.",
+    "As the year progressed, additional capital entered the market, resulting in lower pricing or decelerating rate increases in several important lines.",
+    "Our reinsurance operations face similar dynamics.",
+    "In most casualty reinsurance segments, claims inflation continued to outpace pricing.",
+    "As long as these phases of the cycle endure, we expect to write less reinsurance premium.",
+    "We focus on the long term, resisting temporary industry enthusiasms and exuberances.",
+    "Our insurance businesses’ ability to declare ordinary dividends to Berkshire is restricted by insurance statutes and regulations, permitting up to $31 billion during 2025 without prior regulatory approval.",
+    "We are fortunate to have Adam Johnson now serving as president of our consumer products, service, and retailing businesses.",
+    "Their work transformed NetJets from a challenged business model into a successful enterprise that delivers value for Berkshire shareholders.",
+    "Safe operations, reliable service, and a competitive cost structure ultimately determine a railroad’s success – and accordingly how we assess management’s performance.",
+    "Each one-percentage-point improvement in operating margin generates approximately $230 million of incremental operating cash flow for our owners.",
+    "Alongside BNSF’s own improvements, there is also potential consolidation in the rail industry with the proposed Union Pacific–Norfolk Southern merger.",
+    "On wildfire risk, BHE has taken a leadership role, working with regulators, public officials, and the communities it serves.",
+    "Its mitigation programs are among the most comprehensive in the industry.",
+    "Accountability, paired with principled opposition to unwarranted liability, is essential to preserving the regulatory compact that governs utilities.",
+    "The Lubrizol team, led by Rebecca Liebert, was integral to the acquisition of OxyChem and its planned integration as a standalone operating business within Berkshire.",
+    "Aircraft production slowed materially, volumes declined, and a series of disruptions – most notably the pandemic, when air travel effectively stopped – put sustained pressure on earnings.",
+    "Air travel has recovered, aircraft orders have resumed, and demand for the company’s components has normalized and is growing.",
+    "Shaw has navigated a challenging period as consumers moved away from soft-surface flooring (carpets), and some of its difficulties were self-inflicted.",
+    "As it expanded hard-surface production, execution slipped, affecting quality and service.",
+    "Clayton leads the group in size.",
+    "This approach enables Clayton to meet the ongoing need for quality, affordable housing nationwide.",
+    "NetJets maintains a relentless focus on safety and exceptional service to reinforce its position as a premium offering.",
+    "As the largest operator of travel centers in North America, it competes on location, service, and reliability.",
+    "Management has focused on execution at the store level – improving customer experience for both professional drivers and everyday travelers, investing in store upgrades, food offerings, and customer loyalty.",
+    "Since 2023, Pilot has increased capital spending to modernize facilities and expand its electric vehicle charging network.",
+    "These efforts are reflected in Pilot’s Pro Preference score – a third-party study of how often professional drivers choose Pilot over travel center competitors – which rose from 27% in 2022 to 35% in 2025, placing the business second in the industry.",
+    "This concentrated approach will continue, with limited activity in these holdings, though we may significantly adjust a holding if we see fundamental changes in its long-term economic prospects.",
+    "Separately, we have meaningful positions in a small number of other companies where our capital allocation has been more dynamic in recent periods, as relative values and opportunities change.",
+    "We also hold equity method investments, principally Kraft Heinz and Occidental.",
+    "Ted Weschler manages about 6% of our investments, including a portion of the portfolio formerly overseen by Todd Combs.",
+    "Ted’s impact extends beyond these investments, as he continues to play a broader role in assessing significant opportunities, providing valuable input on our businesses, and supporting Berkshire in various other ways.",
+    "Our non-insurance operations generate substantial operating earnings and recurring cash flows.",
+    "In December, we announced that our CFO, Marc Hamburg, will be retiring from Berkshire effective June 1, 2027, and will transition his Chief Financial Officer responsibilities a year prior on June 1, 2026.",
+    "Chuck Chang will have an enormous pair of shoes to fill as his successor.",
+    "I strongly echo Warren’s comments.",
+    "The format you know well will guide the day, centered on open communication and direct engagement, with your questions answered in the same unscripted manner during sessions moderated by Becky Quick.",
+    "We move forward with great intent and purpose."
+   ],
+   "id": "brk-2025-letter",
+   "msent": {
+    "a": 101,
+    "ability": 7,
+    "able": 2,
+    "about": 6,
+    "above": 3,
+    "absorbed": 1,
+    "accept": 1,
+    "access": 2,
+    "accomplished": 1,
+    "accordingly": 3,
+    "accountability": 7,
+    "accountable": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "achievements": 1,
+    "acknowledged": 3,
+    "acknowledging": 1,
+    "acquire": 1,
+    "acquired": 2,
+    "acquiring": 1,
+    "acquisition": 4,
+    "across": 20,
+    "act": 8,
+    "action": 1,
+    "active": 1,
+    "actively": 1,
+    "activities": 5,
+    "activity": 2,
+    "acumen": 1,
+    "adam": 5,
+    "adapt": 1,
+    "addition": 2,
+    "additional": 3,
+    "address": 1,
+    "adequate": 2,
+    "adjust": 1,
+    "adjustments": 1,
+    "admire": 1,
+    "admired": 1,
+    "advanced": 1,
+    "advantage": 1,
+    "advantages": 3,
+    "adverse": 1,
+    "aerospace": 2,
+    "affecting": 1,
+    "affordability": 1,
+    "affordable": 2,
+    "after": 3,
+    "aftermath": 1,
+    "again": 2,
+    "against": 2,
+    "ago": 1,
+    "agreements": 1,
+    "ahead": 3,
+    "aim": 1,
+    "air": 2,
+    "aircraft": 3,
+    "ajit": 4,
+    "align": 1,
+    "alignment": 3,
+    "all": 9,
+    "alleman": 1,
+    "allocate": 1,
+    "allocated": 2,
+    "allocation": 6,
+    "allow": 2,
+    "allows": 2,
+    "along": 1,
+    "alongside": 3,
+    "also": 17,
+    "alternative": 1,
+    "although": 2,
+    "always": 6,
+    "am": 2,
+    "ambitious": 1,
+    "america": 3,
+    "american": 1,
+    "among": 1,
+    "amount": 2,
+    "an": 27,
+    "anchored": 1,
+    "and": 195,
+    "angeles": 1,
+    "announced": 1,
+    "announcing": 1,
+    "annual": 9,
+    "another": 1,
+    "answered": 1,
+    "any": 9,
+    "apologized": 1,
+    "apple": 1,
+    "apply": 2,
+    "applying": 1,
+    "appoint": 1,
+    "appreciating": 1,
+    "appreciation": 1,
+    "approach": 11,
+    "appropriately": 1,
+    "approval": 1,
+    "approximately": 2,
+    "are": 33,
+    "area": 1,
+    "arguably": 1,
+    "arise": 2,
+    "arises": 1,
+    "arithmetic": 1,
+    "around": 1,
+    "articulation": 1,
+    "artificial": 1,
+    "as": 52,
+    "ask": 1,
+    "asking": 1,
+    "assess": 5,
+    "assessed": 2,
+    "assessing": 1,
+    "asset": 5,
+    "assets": 1,
+    "assisted": 1,
+    "assumed": 1,
+    "assured": 3,
+    "at": 33,
+    "atlantic": 1,
+    "attached": 1,
+    "attachment": 1,
+    "attitude": 2,
+    "attract": 1,
+    "attracted": 1,
+    "attracting": 1,
+    "attractive": 1,
+    "attracts": 1,
+    "autonomy": 6,
+    "available": 2,
+    "average": 8,
+    "averaged": 1,
+    "averaging": 1,
+    "avoid": 1,
+    "avoiding": 1,
+    "away": 2,
+    "back": 1,
+    "backbone": 1,
+    "backdrop": 1,
+    "balance": 2,
+    "balanced": 1,
+    "base": 4,
+    "baseball": 1,
+    "based": 4,
+    "bases": 1,
+    "basis": 4,
+    "batting": 1,
+    "be": 25,
+    "became": 2,
+    "because": 1,
+    "becky": 1,
+    "become": 1,
+    "been": 12,
+    "before": 4,
+    "began": 3,
+    "begins": 3,
+    "behavior": 1,
+    "belief": 1,
+    "beliefs": 3,
+    "believe": 1,
+    "bell": 3,
+    "belong": 1,
+    "below": 3,
+    "benchmark": 1,
+    "beneath": 1,
+    "beneficial": 1,
+    "benefit": 2,
+    "benefited": 1,
+    "benefiting": 1,
+    "benefits": 2,
+    "benign": 2,
+    "berkshire": 88,
+    "best": 7,
+    "better": 3,
+    "between": 3,
+    "beyond": 6,
+    "bhe": 9,
+    "big": 1,
+    "bigger": 1,
+    "billion": 14,
+    "blocks": 1,
+    "bnsf": 11,
+    "board": 5,
+    "borrowed": 1,
+    "both": 7,
+    "broad": 1,
+    "broader": 3,
+    "brothers": 1,
+    "buffett": 2,
+    "build": 3,
+    "building": 3,
+    "buildings": 1,
+    "builds": 1,
+    "built": 9,
+    "burden": 1,
+    "bureaucracy": 2,
+    "business": 33,
+    "businesses": 50,
+    "but": 12,
+    "buy": 1,
+    "by": 28,
+    "calenergy": 4,
+    "call": 2,
+    "can": 5,
+    "candid": 1,
+    "candies": 1,
+    "candor": 2,
+    "cannot": 1,
+    "capabilities": 1,
+    "capital": 31,
+    "capitalism": 1,
+    "care": 1,
+    "career": 1,
+    "carefully": 1,
+    "carpets": 1,
+    "carries": 1,
+    "cases": 1,
+    "cash": 16,
+    "castparts": 7,
+    "casualty": 4,
+    "catastrophe": 1,
+    "caustic": 1,
+    "caution": 1,
+    "center": 2,
+    "centered": 2,
+    "centers": 2,
+    "central": 4,
+    "ceo": 15,
+    "ceos": 3,
+    "certain": 2,
+    "certainly": 1,
+    "cfo": 1,
+    "chaired": 1,
+    "chairman": 3,
+    "challenge": 3,
+    "challenged": 1,
+    "challenges": 3,
+    "challenging": 4,
+    "chang": 1,
+    "change": 4,
+    "changes": 2,
+    "changing": 1,
+    "channels": 1,
+    "characteristics": 1,
+    "charging": 1,
+    "charlie": 6,
+    "chemicals": 1,
+    "chief": 2,
+    "chlorine": 1,
+    "choices": 2,
+    "choose": 1,
+    "chuck": 2,
+    "circumstance": 1,
+    "city": 2,
+    "claimed": 1,
+    "claims": 2,
+    "class": 2,
+    "clayton": 3,
+    "clear": 4,
+    "clearest": 1,
+    "clearly": 1,
+    "clip": 1,
+    "close": 1,
+    "closely": 1,
+    "closest": 1,
+    "closing": 1,
+    "coca": 1,
+    "cola": 1,
+    "combined": 4,
+    "combs": 1,
+    "come": 3,
+    "comes": 3,
+    "commensurate": 1,
+    "comment": 1,
+    "commentary": 1,
+    "comments": 1,
+    "commercial": 3,
+    "commingled": 1,
+    "commitment": 4,
+    "commitments": 2,
+    "committed": 2,
+    "communicate": 2,
+    "communication": 3,
+    "communities": 1,
+    "community": 1,
+    "compact": 2,
+    "companies": 5,
+    "company": 8,
+    "comparable": 1,
+    "compared": 2,
+    "comparing": 1,
+    "compelling": 4,
+    "compete": 2,
+    "competes": 1,
+    "competitive": 4,
+    "competitors": 2,
+    "complacency": 1,
+    "complete": 1,
+    "complex": 1,
+    "complexity": 1,
+    "component": 1,
+    "components": 1,
+    "composed": 1,
+    "compound": 2,
+    "compounding": 2,
+    "comprehensive": 1,
+    "compromised": 1,
+    "compromising": 2,
+    "computing": 1,
+    "concentrate": 2,
+    "concentrated": 2,
+    "concentrating": 1,
+    "conditions": 2,
+    "conduct": 2,
+    "conducted": 1,
+    "confidence": 1,
+    "confidentially": 1,
+    "confirmed": 1,
+    "conglomerate": 1,
+    "conglomerates": 1,
+    "congressional": 1,
+    "conservatively": 1,
+    "considering": 1,
+    "consistent": 1,
+    "consistently": 1,
+    "consisting": 1,
+    "consolidation": 1,
+    "constant": 1,
+    "constitutes": 1,
+    "construction": 4,
+    "consumer": 5,
+    "consumers": 1,
+    "context": 1,
+    "contingency": 1,
+    "continue": 10,
+    "continued": 7,
+    "continues": 7,
+    "continuing": 2,
+    "continuous": 1,
+    "continuously": 1,
+    "contract": 1,
+    "contractually": 1,
+    "contributor": 1,
+    "control": 1,
+    "controls": 1,
+    "conviction": 2,
+    "core": 5,
+    "corporate": 2,
+    "correctly": 2,
+    "cost": 8,
+    "could": 2,
+    "counsel": 1,
+    "countries": 1,
+    "course": 1,
+    "cover": 1,
+    "coverages": 1,
+    "create": 3,
+    "created": 2,
+    "creation": 1,
+    "criteria": 2,
+    "critical": 1,
+    "crude": 1,
+    "culture": 19,
+    "cumulative": 1,
+    "current": 2,
+    "customer": 7,
+    "customers": 13,
+    "cut": 1,
+    "cycle": 2,
+    "cycles": 1,
+    "daily": 2,
+    "dangerous": 1,
+    "data": 1,
+    "daughters": 1,
+    "day": 8,
+    "days": 1,
+    "debt": 3,
+    "decade": 4,
+    "decades": 4,
+    "decelerating": 1,
+    "deceleration": 1,
+    "december": 1,
+    "decentralized": 5,
+    "decision": 3,
+    "decisions": 5,
+    "decisively": 3,
+    "declare": 1,
+    "declined": 1,
+    "declines": 1,
+    "deep": 2,
+    "deepen": 1,
+    "define": 2,
+    "defines": 1,
+    "degree": 1,
+    "delayed": 1,
+    "deliberate": 2,
+    "deliver": 5,
+    "delivered": 3,
+    "delivers": 1,
+    "delivery": 1,
+    "demand": 5,
+    "demands": 1,
+    "demonstrated": 2,
+    "department": 1,
+    "depends": 2,
+    "deploy": 3,
+    "deployed": 1,
+    "deploying": 2,
+    "deployment": 1,
+    "descendants": 1,
+    "deserved": 2,
+    "designed": 1,
+    "despite": 1,
+    "destruction": 1,
+    "details": 2,
+    "determine": 1,
+    "determined": 1,
+    "determining": 1,
+    "development": 1,
+    "dictated": 1,
+    "differences": 1,
+    "different": 2,
+    "difficult": 1,
+    "difficulties": 1,
+    "digit": 1,
+    "dilute": 1,
+    "direct": 2,
+    "directly": 1,
+    "director": 1,
+    "disappointed": 1,
+    "disappointing": 1,
+    "discipline": 11,
+    "disciplined": 5,
+    "discuss": 1,
+    "discussing": 1,
+    "discussion": 2,
+    "dispute": 2,
+    "disruptions": 2,
+    "distinguished": 1,
+    "distort": 1,
+    "diverse": 1,
+    "divided": 1,
+    "dividend": 1,
+    "dividends": 4,
+    "diving": 1,
+    "do": 6,
+    "does": 4,
+    "doing": 3,
+    "dollar": 1,
+    "done": 1,
+    "donegan": 1,
+    "double": 1,
+    "downside": 1,
+    "dramatically": 1,
+    "draw": 1,
+    "draws": 1,
+    "drive": 1,
+    "driven": 1,
+    "drivers": 2,
+    "dry": 1,
+    "durability": 2,
+    "durable": 3,
+    "during": 2,
+    "duty": 1,
+    "dynamic": 1,
+    "dynamics": 1,
+    "each": 14,
+    "earlier": 1,
+    "earn": 1,
+    "earned": 4,
+    "earnings": 9,
+    "eastern": 1,
+    "easy": 1,
+    "ebb": 1,
+    "echo": 1,
+    "economic": 4,
+    "economics": 3,
+    "economy": 2,
+    "effective": 1,
+    "effectively": 3,
+    "efficiency": 4,
+    "efficient": 2,
+    "efficiently": 3,
+    "effort": 2,
+    "efforts": 1,
+    "electric": 2,
+    "electricity": 1,
+    "embedded": 1,
+    "embrace": 2,
+    "emphasize": 1,
+    "employees": 6,
+    "enable": 1,
+    "enabled": 1,
+    "enables": 2,
+    "enabling": 2,
+    "encounter": 1,
+    "encountered": 1,
+    "end": 5,
+    "ending": 2,
+    "endure": 2,
+    "endures": 2,
+    "enduring": 1,
+    "energy": 5,
+    "engagement": 2,
+    "enhance": 1,
+    "enhanced": 1,
+    "enjoying": 1,
+    "enormous": 1,
+    "enough": 1,
+    "ensure": 3,
+    "ensuring": 3,
+    "entered": 1,
+    "entering": 1,
+    "enterprise": 4,
+    "enters": 1,
+    "enthusiasms": 1,
+    "entire": 1,
+    "entrusted": 1,
+    "environment": 4,
+    "environmental": 1,
+    "episode": 1,
+    "equally": 1,
+    "equip": 1,
+    "equipped": 1,
+    "equity": 10,
+    "equivalent": 1,
+    "errors": 1,
+    "essential": 4,
+    "established": 1,
+    "estimate": 1,
+    "evacuated": 1,
+    "evaluate": 3,
+    "evaluating": 1,
+    "even": 6,
+    "ever": 1,
+    "every": 8,
+    "everyday": 1,
+    "everything": 1,
+    "evident": 1,
+    "evolve": 2,
+    "example": 2,
+    "exceed": 2,
+    "excellence": 7,
+    "excellent": 1,
+    "exceptional": 7,
+    "excess": 1,
+    "excluded": 1,
+    "executing": 1,
+    "execution": 6,
+    "exercised": 1,
+    "exist": 1,
+    "existing": 2,
+    "exists": 1,
+    "expand": 2,
+    "expanded": 1,
+    "expect": 5,
+    "expectations": 3,
+    "expected": 2,
+    "expense": 1,
+    "experience": 4,
+    "experienced": 1,
+    "explicitly": 1,
+    "exposure": 1,
+    "express": 1,
+    "expressed": 1,
+    "expression": 1,
+    "extend": 1,
+    "extends": 3,
+    "extension": 1,
+    "extensive": 1,
+    "extraordinary": 3,
+    "extreme": 1,
+    "exuberances": 1,
+    "fabric": 1,
+    "face": 2,
+    "faced": 1,
+    "facilities": 1,
+    "facility": 2,
+    "fact": 1,
+    "fail": 2,
+    "fame": 1,
+    "family": 1,
+    "farmer": 1,
+    "faster": 2,
+    "favor": 1,
+    "favorably": 1,
+    "fearful": 1,
+    "featuring": 1,
+    "february": 1,
+    "fellow": 1,
+    "felt": 1,
+    "few": 3,
+    "figures": 1,
+    "fill": 1,
+    "financial": 9,
+    "financing": 2,
+    "finishes": 1,
+    "fire": 3,
+    "fires": 1,
+    "firm": 4,
+    "first": 6,
+    "fiscal": 1,
+    "fit": 1,
+    "five": 7,
+    "float": 3,
+    "flooring": 1,
+    "flow": 3,
+    "flows": 6,
+    "fluctuates": 1,
+    "focus": 12,
+    "focused": 4,
+    "focusing": 2,
+    "follow": 2,
+    "following": 1,
+    "food": 1,
+    "for": 57,
+    "forever": 2,
+    "form": 2,
+    "format": 1,
+    "former": 1,
+    "formerly": 1,
+    "fortress": 1,
+    "fortunate": 4,
+    "forward": 4,
+    "fostered": 1,
+    "foundation": 3,
+    "foundational": 2,
+    "founder": 3,
+    "four": 1,
+    "fraction": 1,
+    "framework": 4,
+    "freight": 1,
+    "frequency": 1,
+    "frequently": 1,
+    "from": 33,
+    "frustration": 1,
+    "fulfilling": 1,
+    "full": 4,
+    "fully": 3,
+    "functioning": 1,
+    "fundamental": 4,
+    "fundamentals": 2,
+    "further": 3,
+    "future": 4,
+    "gaap": 1,
+    "gains": 3,
+    "gap": 1,
+    "gaps": 1,
+    "gather": 1,
+    "geico": 7,
+    "general": 1,
+    "generate": 3,
+    "generated": 1,
+    "generates": 1,
+    "generating": 1,
+    "generation": 1,
+    "generations": 1,
+    "getting": 1,
+    "give": 2,
+    "given": 1,
+    "global": 3,
+    "go": 1,
+    "goal": 1,
+    "goals": 2,
+    "goes": 1,
+    "good": 2,
+    "governs": 2,
+    "great": 4,
+    "greater": 2,
+    "greatest": 1,
+    "greatly": 1,
+    "greg": 1,
+    "grounded": 2,
+    "group": 9,
+    "grow": 4,
+    "growing": 2,
+    "grown": 1,
+    "growth": 6,
+    "guide": 6,
+    "guides": 2,
+    "guru": 1,
+    "had": 4,
+    "half": 1,
+    "hall": 1,
+    "hamburg": 1,
+    "happen": 1,
+    "happy": 1,
+    "hard": 2,
+    "has": 33,
+    "hathaway": 1,
+    "have": 22,
+    "having": 1,
+    "hazards": 1,
+    "he": 10,
+    "headwinds": 1,
+    "healthier": 1,
+    "hear": 1,
+    "heart": 2,
+    "heinz": 3,
+    "help": 1,
+    "her": 1,
+    "hesitation": 1,
+    "high": 4,
+    "highlighted": 1,
+    "his": 18,
+    "historic": 1,
+    "historical": 1,
+    "history": 2,
+    "hitter": 1,
+    "hold": 4,
+    "holders": 1,
+    "holding": 2,
+    "holdings": 6,
+    "homes": 2,
+    "honored": 2,
+    "horizon": 3,
+    "households": 1,
+    "housing": 4,
+    "how": 17,
+    "however": 2,
+    "humbled": 1,
+    "hundreds": 1,
+    "hurricane": 2,
+    "hyperscalers": 1,
+    "i": 18,
+    "iconic": 1,
+    "ideas": 1,
+    "identify": 1,
+    "identifying": 2,
+    "idling": 1,
+    "if": 5,
+    "imc": 1,
+    "impact": 3,
+    "importance": 1,
+    "important": 7,
+    "improve": 4,
+    "improved": 2,
+    "improvement": 6,
+    "improvements": 3,
+    "improving": 3,
+    "in": 114,
+    "include": 1,
+    "included": 1,
+    "includes": 2,
+    "including": 5,
+    "increased": 2,
+    "increases": 5,
+    "increasing": 1,
+    "incremental": 6,
+    "incrementally": 1,
+    "increments": 1,
+    "indemnity": 1,
+    "independence": 2,
+    "indian": 1,
+    "indispensable": 1,
+    "individual": 1,
+    "individually": 1,
+    "individuals": 1,
+    "industrial": 5,
+    "industries": 2,
+    "industry": 15,
+    "industrywide": 1,
+    "inflation": 1,
+    "inflicted": 1,
+    "influenced": 1,
+    "information": 1,
+    "infrastructure": 1,
+    "ingredient": 1,
+    "inherent": 2,
+    "input": 1,
+    "inseparable": 1,
+    "insist": 1,
+    "inspiration": 1,
+    "insurance": 29,
+    "insurer": 2,
+    "insurers": 1,
+    "integral": 2,
+    "integrated": 2,
+    "integration": 1,
+    "integrity": 8,
+    "intelligence": 1,
+    "intent": 1,
+    "intention": 1,
+    "intentional": 1,
+    "intentionally": 1,
+    "intentions": 1,
+    "interactions": 1,
+    "interested": 1,
+    "interests": 1,
+    "international": 1,
+    "into": 11,
+    "intrinsic": 3,
+    "inverse": 1,
+    "invest": 8,
+    "invested": 4,
+    "investing": 5,
+    "investment": 9,
+    "investments": 11,
+    "investor": 2,
+    "is": 73,
+    "issue": 2,
+    "it": 43,
+    "its": 32,
+    "itself": 1,
+    "japan": 2,
+    "jenkintown": 1,
+    "jeopardize": 1,
+    "johns": 1,
+    "johnson": 2,
+    "join": 2,
+    "journey": 1,
+    "jr": 1,
+    "judgment": 6,
+    "judicial": 1,
+    "june": 1,
+    "jurisdiction": 1,
+    "just": 2,
+    "katie": 1,
+    "keep": 2,
+    "key": 1,
+    "kiewit": 2,
+    "know": 5,
+    "knowing": 2,
+    "knowledge": 1,
+    "knowledgeable": 1,
+    "known": 1,
+    "kraft": 2,
+    "labor": 1,
+    "laboratories": 3,
+    "landfall": 1,
+    "lands": 2,
+    "landscape": 1,
+    "large": 7,
+    "larger": 1,
+    "largest": 4,
+    "last": 5,
+    "latter": 2,
+    "layers": 2,
+    "layouts": 1,
+    "lead": 3,
+    "leader": 2,
+    "leaders": 4,
+    "leadership": 9,
+    "leading": 1,
+    "leads": 1,
+    "least": 1,
+    "led": 5,
+    "legacy": 1,
+    "legal": 2,
+    "less": 4,
+    "let": 1,
+    "letter": 7,
+    "letters": 2,
+    "level": 3,
+    "levels": 2,
+    "levy": 1,
+    "liability": 1,
+    "liebert": 1,
+    "life": 2,
+    "like": 5,
+    "likely": 2,
+    "limited": 2,
+    "limits": 1,
+    "line": 1,
+    "lines": 1,
+    "liquidity": 2,
+    "listed": 2,
+    "little": 2,
+    "live": 1,
+    "lived": 3,
+    "local": 1,
+    "location": 1,
+    "long": 29,
+    "longstanding": 1,
+    "look": 3,
+    "los": 1,
+    "lose": 1,
+    "loss": 1,
+    "losses": 4,
+    "low": 2,
+    "lower": 3,
+    "loyalty": 2,
+    "lubrizol": 3,
+    "macro": 1,
+    "made": 4,
+    "maintain": 6,
+    "maintained": 1,
+    "maintaining": 4,
+    "maintains": 1,
+    "major": 7,
+    "make": 5,
+    "makes": 1,
+    "making": 2,
+    "malcolm": 1,
+    "manage": 3,
+    "managed": 1,
+    "management": 9,
+    "managers": 7,
+    "manages": 2,
+    "managing": 4,
+    "mandates": 1,
+    "manner": 2,
+    "manufacturing": 5,
+    "manville": 1,
+    "many": 7,
+    "marc": 3,
+    "margin": 3,
+    "margins": 3,
+    "mark": 1,
+    "markedly": 1,
+    "market": 7,
+    "markets": 4,
+    "marmon": 1,
+    "materially": 1,
+    "materials": 2,
+    "math": 1,
+    "matter": 3,
+    "mattered": 1,
+    "matters": 1,
+    "maximizing": 1,
+    "may": 8,
+    "mclane": 1,
+    "me": 12,
+    "mean": 1,
+    "meaningful": 2,
+    "means": 2,
+    "meantime": 1,
+    "measure": 2,
+    "measured": 2,
+    "meet": 5,
+    "meeting": 2,
+    "meetings": 2,
+    "meets": 1,
+    "merger": 2,
+    "met": 1,
+    "method": 1,
+    "midamerican": 1,
+    "might": 2,
+    "mike": 1,
+    "million": 1,
+    "mindset": 2,
+    "minimize": 1,
+    "minority": 1,
+    "mistake": 1,
+    "mistakes": 2,
+    "mitek": 1,
+    "mitigation": 1,
+    "model": 5,
+    "models": 2,
+    "moderated": 1,
+    "modernize": 1,
+    "modestly": 1,
+    "money": 1,
+    "month": 1,
+    "moody": 1,
+    "more": 14,
+    "most": 12,
+    "move": 2,
+    "moved": 3,
+    "much": 2,
+    "munger": 2,
+    "must": 8,
+    "mutually": 2,
+    "my": 8,
+    "national": 2,
+    "nationwide": 1,
+    "natural": 1,
+    "nature": 1,
+    "navigate": 1,
+    "navigated": 1,
+    "navigating": 1,
+    "near": 1,
+    "nearly": 6,
+    "necessary": 1,
+    "need": 3,
+    "needed": 4,
+    "needs": 3,
+    "net": 6,
+    "netjets": 7,
+    "network": 2,
+    "never": 4,
+    "new": 5,
+    "next": 4,
+    "nimble": 1,
+    "no": 8,
+    "non": 7,
+    "none": 1,
+    "norfolk": 1,
+    "normalize": 1,
+    "normalized": 1,
+    "north": 2,
+    "not": 30,
+    "notably": 1,
+    "noted": 1,
+    "now": 8,
+    "nuanced": 1,
+    "number": 2,
+    "o'sullivan": 1,
+    "objective": 1,
+    "obligations": 1,
+    "observations": 2,
+    "observers": 1,
+    "obviously": 1,
+    "occidental": 2,
+    "occurs": 1,
+    "of": 117,
+    "offer": 2,
+    "offering": 1,
+    "offerings": 1,
+    "office": 3,
+    "officer": 2,
+    "officials": 1,
+    "often": 2,
+    "oil": 1,
+    "omaha": 6,
+    "on": 43,
+    "one": 7,
+    "ones": 1,
+    "ongoing": 2,
+    "only": 5,
+    "open": 2,
+    "operate": 5,
+    "operated": 1,
+    "operates": 1,
+    "operating": 33,
+    "operational": 9,
+    "operations": 14,
+    "operator": 1,
+    "opportunism": 1,
+    "opportunities": 20,
+    "opportunity": 5,
+    "opposition": 1,
+    "option": 1,
+    "or": 17,
+    "orders": 1,
+    "ordinary": 1,
+    "organization": 5,
+    "orientation": 1,
+    "oriented": 1,
+    "original": 2,
+    "other": 7,
+    "others": 3,
+    "otherwise": 1,
+    "our": 130,
+    "ours": 1,
+    "ourselves": 1,
+    "out": 1,
+    "outcomes": 1,
+    "outpace": 1,
+    "over": 24,
+    "overall": 1,
+    "overseen": 1,
+    "own": 5,
+    "owned": 3,
+    "owner": 3,
+    "owners": 15,
+    "ownership": 2,
+    "oxychem": 4,
+    "pacific": 1,
+    "pacificorp": 2,
+    "paid": 1,
+    "pair": 1,
+    "paired": 2,
+    "pandemic": 1,
+    "part": 5,
+    "particularly": 3,
+    "partly": 1,
+    "partner": 4,
+    "partners": 3,
+    "partnership": 7,
+    "parts": 1,
+    "party": 1,
+    "passing": 1,
+    "past": 8,
+    "patience": 1,
+    "patient": 2,
+    "patiently": 1,
+    "paving": 1,
+    "pay": 3,
+    "peerless": 1,
+    "pennsylvania": 1,
+    "people": 3,
+    "per": 4,
+    "percentage": 1,
+    "perfect": 1,
+    "performance": 13,
+    "performed": 1,
+    "perhaps": 1,
+    "period": 5,
+    "periods": 1,
+    "permitting": 1,
+    "perpetuity": 2,
+    "persistent": 1,
+    "personal": 1,
+    "personally": 1,
+    "perspectives": 1,
+    "peter": 2,
+    "phases": 1,
+    "philanthropy": 1,
+    "piece": 1,
+    "pilot": 6,
+    "pitches": 2,
+    "placed": 1,
+    "placing": 1,
+    "plainly": 1,
+    "plan": 2,
+    "planned": 1,
+    "plateaued": 1,
+    "play": 2,
+    "playbook": 1,
+    "played": 1,
+    "pleased": 1,
+    "pocket": 1,
+    "point": 1,
+    "policy": 2,
+    "portfolio": 7,
+    "portion": 3,
+    "position": 4,
+    "positioned": 1,
+    "positioning": 2,
+    "positions": 4,
+    "positively": 1,
+    "possesses": 1,
+    "potential": 5,
+    "potentially": 1,
+    "powder": 1,
+    "powerhouse": 1,
+    "practiced": 1,
+    "precision": 8,
+    "preferably": 1,
+    "preference": 1,
+    "preferences": 1,
+    "preferred": 2,
+    "premium": 3,
+    "premiums": 1,
+    "prepare": 1,
+    "present": 1,
+    "presents": 1,
+    "preserve": 2,
+    "preserving": 2,
+    "president": 3,
+    "pressure": 3,
+    "price": 3,
+    "priced": 1,
+    "priceless": 1,
+    "pricing": 11,
+    "pride": 1,
+    "primarily": 1,
+    "primary": 3,
+    "principally": 1,
+    "principle": 1,
+    "principled": 2,
+    "principles": 3,
+    "prior": 2,
+    "prioritized": 1,
+    "prioritizes": 1,
+    "priority": 1,
+    "prized": 1,
+    "pro": 1,
+    "produced": 5,
+    "produces": 1,
+    "product": 1,
+    "production": 4,
+    "productive": 1,
+    "products": 7,
+    "professional": 2,
+    "profit": 1,
+    "profits": 1,
+    "program": 2,
+    "programs": 1,
+    "progress": 4,
+    "progressed": 1,
+    "prompt": 1,
+    "property": 4,
+    "proposed": 2,
+    "proposition": 2,
+    "prospects": 4,
+    "protect": 1,
+    "protecting": 1,
+    "proud": 2,
+    "proven": 1,
+    "provide": 2,
+    "provided": 1,
+    "provider": 1,
+    "providing": 3,
+    "prudently": 2,
+    "public": 1,
+    "publicly": 2,
+    "publish": 1,
+    "purchase": 3,
+    "purchases": 1,
+    "purpose": 1,
+    "pursue": 7,
+    "pursuing": 2,
+    "pursuit": 1,
+    "put": 1,
+    "q": 1,
+    "quality": 5,
+    "quarterly": 2,
+    "question": 2,
+    "questions": 2,
+    "quick": 1,
+    "quickly": 3,
+    "rail": 2,
+    "railroad": 2,
+    "railroads": 3,
+    "range": 1,
+    "rate": 5,
+    "rather": 1,
+    "ratio": 3,
+    "rationally": 1,
+    "raw": 1,
+    "re": 1,
+    "real": 1,
+    "reality": 1,
+    "realize": 1,
+    "realized": 1,
+    "reason": 1,
+    "reasonable": 1,
+    "reasonably": 1,
+    "rebalancing": 1,
+    "rebecca": 2,
+    "rebuilding": 1,
+    "receive": 1,
+    "received": 1,
+    "recent": 2,
+    "recently": 1,
+    "recognize": 2,
+    "recognizes": 1,
+    "recognizing": 1,
+    "recovered": 1,
+    "rectifying": 1,
+    "recurring": 1,
+    "redistributed": 1,
+    "reductions": 1,
+    "reflect": 3,
+    "reflected": 5,
+    "reflecting": 2,
+    "reflects": 1,
+    "regain": 1,
+    "regard": 1,
+    "regardless": 2,
+    "region": 1,
+    "regions": 1,
+    "regular": 2,
+    "regulations": 1,
+    "regulators": 1,
+    "regulatory": 3,
+    "reinforce": 1,
+    "reinforced": 1,
+    "reinforcing": 2,
+    "reinsurance": 7,
+    "reinsured": 1,
+    "reinvest": 1,
+    "reiterating": 1,
+    "related": 4,
+    "relationship": 1,
+    "relative": 1,
+    "relentless": 2,
+    "relentlessly": 2,
+    "reliability": 2,
+    "reliable": 2,
+    "relief": 1,
+    "remain": 8,
+    "remained": 3,
+    "remains": 5,
+    "remarkable": 3,
+    "reminder": 2,
+    "report": 1,
+    "represent": 1,
+    "represented": 1,
+    "representing": 1,
+    "repurchase": 1,
+    "repurchases": 3,
+    "reputation": 7,
+    "require": 2,
+    "required": 1,
+    "reside": 1,
+    "resides": 1,
+    "resilience": 4,
+    "resilient": 1,
+    "resisting": 1,
+    "resolution": 1,
+    "resonate": 1,
+    "resort": 1,
+    "respect": 2,
+    "respective": 1,
+    "respond": 1,
+    "responders": 1,
+    "response": 2,
+    "responsibilities": 2,
+    "responsibility": 8,
+    "responsible": 3,
+    "rest": 1,
+    "restored": 1,
+    "restoring": 2,
+    "restricted": 1,
+    "rests": 1,
+    "result": 6,
+    "resulted": 1,
+    "resulting": 2,
+    "results": 5,
+    "resumed": 1,
+    "retail": 1,
+    "retailing": 4,
+    "retain": 1,
+    "retained": 1,
+    "retaining": 1,
+    "retention": 2,
+    "retirement": 1,
+    "retiring": 1,
+    "retreat": 1,
+    "retroactive": 1,
+    "return": 5,
+    "returned": 3,
+    "reversal": 1,
+    "reviews": 1,
+    "reward": 1,
+    "rewards": 2,
+    "right": 5,
+    "rigor": 1,
+    "rigorous": 1,
+    "rising": 1,
+    "risk": 14,
+    "risks": 13,
+    "rodent": 1,
+    "role": 8,
+    "roles": 1,
+    "roll": 1,
+    "rooted": 1,
+    "rose": 1,
+    "roughly": 1,
+    "run": 6,
+    "ruthless": 1,
+    "ruthlessly": 1,
+    "s": 10,
+    "safe": 2,
+    "safely": 2,
+    "safety": 4,
+    "salomon": 1,
+    "same": 8,
+    "say": 4,
+    "scale": 3,
+    "scenarios": 1,
+    "score": 1,
+    "scott": 1,
+    "season": 2,
+    "second": 3,
+    "sector": 2,
+    "sectors": 2,
+    "securities": 3,
+    "see": 4,
+    "seek": 3,
+    "seen": 1,
+    "segment": 1,
+    "segments": 4,
+    "selectively": 1,
+    "self": 1,
+    "sent": 1,
+    "separately": 1,
+    "series": 1,
+    "serve": 2,
+    "serves": 2,
+    "service": 12,
+    "serving": 2,
+    "session": 1,
+    "sessions": 2,
+    "set": 7,
+    "setbacks": 1,
+    "sets": 1,
+    "settle": 1,
+    "settlements": 1,
+    "several": 2,
+    "shall": 1,
+    "shaped": 2,
+    "shapes": 3,
+    "share": 9,
+    "shared": 3,
+    "shareholder": 3,
+    "shareholders": 19,
+    "shares": 4,
+    "shaw": 2,
+    "sheet": 2,
+    "shelf": 1,
+    "shifts": 1,
+    "shipments": 2,
+    "shoes": 1,
+    "short": 5,
+    "should": 2,
+    "showed": 1,
+    "shown": 1,
+    "shred": 1,
+    "signals": 1,
+    "significance": 1,
+    "significant": 9,
+    "significantly": 1,
+    "similar": 3,
+    "similarities": 1,
+    "simple": 1,
+    "simply": 1,
+    "since": 3,
+    "site": 2,
+    "sites": 1,
+    "six": 1,
+    "size": 3,
+    "skills": 1,
+    "slipped": 1,
+    "slowed": 1,
+    "small": 4,
+    "smaller": 2,
+    "so": 6,
+    "society": 1,
+    "soda": 1,
+    "soft": 1,
+    "sole": 1,
+    "solid": 1,
+    "some": 4,
+    "sometimes": 1,
+    "sons": 1,
+    "soon": 1,
+    "sourced": 1,
+    "southern": 1,
+    "span": 1,
+    "sparingly": 1,
+    "sparked": 1,
+    "specific": 2,
+    "specifically": 2,
+    "spending": 1,
+    "spent": 2,
+    "spikes": 1,
+    "spoken": 1,
+    "stack": 1,
+    "stage": 1,
+    "stand": 1,
+    "standalone": 1,
+    "standard": 3,
+    "standards": 2,
+    "starts": 1,
+    "statement": 1,
+    "statements": 1,
+    "statutes": 1,
+    "steadfast": 1,
+    "steadiness": 1,
+    "stems": 1,
+    "step": 1,
+    "stepping": 1,
+    "steve": 3,
+    "stewards": 1,
+    "stewardship": 4,
+    "stock": 1,
+    "stood": 1,
+    "stoppage": 1,
+    "stopped": 1,
+    "store": 1,
+    "storms": 1,
+    "straightforward": 1,
+    "strategic": 1,
+    "strategy": 4,
+    "strength": 5,
+    "strengthen": 6,
+    "strengthened": 1,
+    "strengthening": 1,
+    "strengths": 2,
+    "strike": 1,
+    "strive": 3,
+    "strong": 6,
+    "stronger": 3,
+    "strongly": 1,
+    "structural": 2,
+    "structure": 2,
+    "study": 1,
+    "subject": 1,
+    "substantial": 6,
+    "succeed": 3,
+    "succeeded": 1,
+    "success": 8,
+    "successes": 2,
+    "successful": 2,
+    "successor": 1,
+    "such": 4,
+    "suggested": 1,
+    "suited": 1,
+    "supply": 1,
+    "support": 2,
+    "supported": 3,
+    "supporting": 1,
+    "supports": 1,
+    "surface": 2,
+    "sustainably": 1,
+    "sustained": 2,
+    "swiftly": 1,
+    "swing": 1,
+    "swinging": 1,
+    "swings": 1,
+    "swinomish": 1,
+    "system": 2,
+    "take": 2,
+    "taken": 2,
+    "taking": 2,
+    "talented": 1,
+    "targets": 2,
+    "team": 14,
+    "teams": 2,
+    "technology": 1,
+    "ted": 3,
+    "temporary": 2,
+    "ten": 2,
+    "tentative": 1,
+    "tenure": 2,
+    "term": 25,
+    "terminals": 1,
+    "terms": 1,
+    "testimony": 1,
+    "testing": 1,
+    "than": 9,
+    "that": 72,
+    "the": 167,
+    "their": 21,
+    "them": 9,
+    "then": 3,
+    "there": 5,
+    "these": 24,
+    "they": 11,
+    "thing": 2,
+    "think": 4,
+    "third": 1,
+    "thirds": 1,
+    "this": 27,
+    "thoroughly": 2,
+    "those": 8,
+    "though": 1,
+    "thousands": 1,
+    "threaten": 1,
+    "thrive": 1,
+    "through": 17,
+    "throughout": 1,
+    "tied": 1,
+    "time": 17,
+    "times": 2,
+    "to": 148,
+    "today": 5,
+    "todd": 1,
+    "together": 5,
+    "tolerate": 1,
+    "too": 1,
+    "top": 1,
+    "totaled": 1,
+    "tough": 1,
+    "trade": 1,
+    "traded": 1,
+    "traditional": 1,
+    "transformed": 1,
+    "transition": 2,
+    "transitioned": 1,
+    "translate": 1,
+    "translates": 1,
+    "translating": 1,
+    "transparency": 1,
+    "transportation": 1,
+    "travel": 4,
+    "travelers": 1,
+    "treasured": 2,
+    "treasuries": 1,
+    "treasury": 2,
+    "treated": 2,
+    "trends": 2,
+    "tribal": 2,
+    "tried": 1,
+    "true": 2,
+    "trust": 5,
+    "turn": 1,
+    "twenty": 1,
+    "two": 3,
+    "type": 1,
+    "u": 10,
+    "ultimately": 4,
+    "unaffiliated": 1,
+    "unchanged": 1,
+    "uncompromising": 1,
+    "under": 2,
+    "underlying": 4,
+    "undermine": 1,
+    "underpins": 2,
+    "underscored": 1,
+    "underscoring": 2,
+    "understand": 6,
+    "understanding": 7,
+    "understands": 1,
+    "understood": 1,
+    "underwrite": 3,
+    "underwriting": 9,
+    "undoubtedly": 1,
+    "unfiltered": 1,
+    "unfold": 1,
+    "union": 1,
+    "unique": 2,
+    "unmatched": 1,
+    "unrealized": 1,
+    "unscripted": 1,
+    "until": 2,
+    "unusual": 2,
+    "unusually": 1,
+    "unwarranted": 1,
+    "up": 1,
+    "update": 1,
+    "upgrades": 1,
+    "uphold": 4,
+    "us": 15,
+    "users": 1,
+    "uses": 1,
+    "using": 1,
+    "utilities": 3,
+    "utility": 1,
+    "valuable": 1,
+    "value": 19,
+    "values": 15,
+    "varied": 1,
+    "varies": 1,
+    "various": 1,
+    "vehicle": 1,
+    "very": 7,
+    "vice": 1,
+    "view": 4,
+    "vision": 2,
+    "volume": 3,
+    "volumes": 1,
+    "volunteer": 1,
+    "vote": 1,
+    "wade": 1,
+    "waiting": 1,
+    "walk": 1,
+    "walter": 2,
+    "want": 1,
+    "warren": 22,
+    "was": 15,
+    "way": 6,
+    "ways": 1,
+    "we": 98,
+    "week": 1,
+    "weighted": 1,
+    "welcome": 1,
+    "welcomed": 2,
+    "welcoming": 1,
+    "well": 12,
+    "were": 7,
+    "weschler": 1,
+    "western": 1,
+    "what": 7,
+    "when": 20,
+    "where": 7,
+    "whether": 1,
+    "which": 9,
+    "while": 13,
+    "who": 13,
+    "whose": 3,
+    "why": 1,
+    "wide": 1,
+    "wildfire": 4,
+    "will": 59,
+    "williams": 1,
+    "willingness": 1,
+    "winds": 1,
+    "wish": 1,
+    "with": 65,
+    "within": 2,
+    "without": 7,
+    "words": 2,
+    "work": 5,
+    "worked": 3,
+    "working": 2,
+    "works": 2,
+    "world": 2,
+    "worth": 1,
+    "would": 2,
+    "write": 3,
+    "wrong": 1,
+    "wrote": 2,
+    "year": 19,
+    "years": 16,
+    "yen": 1,
+    "yet": 2,
+    "yielding": 1,
+    "you": 13,
+    "your": 4,
+    "zone": 1
+   },
+   "n_sentences": 360,
+   "pages": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    11,
+    11,
+    11,
+    11,
+    12,
+    12,
+    12,
+    13,
+    13,
+    13,
+    13,
+    13,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    15,
+    15,
+    15,
+    15,
+    15,
+    16,
+    16,
+    16,
+    16,
+    17,
+    17,
+    17,
+    17,
+    18,
+    18
+   ],
+   "source": "berkshirehathaway.com",
+   "title": "2025 Letter to Berkshire Shareholders",
+   "type": "letter",
+   "url": "https://www.berkshirehathaway.com/letters/2025ltr.pdf",
+   "words": 6843
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full letter text is not included; see each document's url.",
+ "slug": "abel"
+}

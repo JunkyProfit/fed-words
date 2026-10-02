@@ -18,3 +18,4 @@ env/
 # ...but keep site images
 !assets/
 !assets/*.png
+local_sources/
