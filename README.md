@@ -48,7 +48,7 @@ each linked to the original letter.
   not-yet-covered content words. A plain "10 sentences per word" cap wasn't enough on its
   own: words used once or twice would pull in 94–100% of all sentences.
   The current share of each letter's sentences embedded: Karp 25.7–32.4%,
-  Jassy 28.9%, Abel 27.8%. `build.py` prints these numbers and stops with an error if
+  Jassy 28.5–28.9%, Abel 27.5%. `build.py` prints these numbers and stops with an error if
   any letter would go over 50%.
 - The popover shows at most **10 sentences per word** for CEOs, with no "Show all", and
   a note "Showing k of N sentences — read the full letter at <source>". Some words
@@ -85,6 +85,11 @@ Options: `fetch.py --refresh` (download existing items again), `fetch.py --speak
 Text is lowercased. Punctuation, hyphens, and dashes split words. Contractions stay
 whole (`don't`, `it's`, `we're`). Possessive `'s` is dropped (`Fed's` → `fed`). Curly
 apostrophes are normalized. Tokens that are only digits are skipped by default.
+Dotted initialisms are kept as one token with a trailing dot: `U.S.` → `u.s.`,
+`U.K.` → `u.k.`, `E.U.` → `e.u.`, `U.S.-based` → `u.s.` + `based`, `U.S.'s` → `u.s.`.
+They aren't expanded (`u.s.` is not mapped to "united states"), and `A.I.` (`a.i.`)
+is counted separately from `AI` (`ai`). `e.g.` and `i.e.` are stopwords. Undotted
+forms still split on punctuation (`S&P` → `s` + `p`).
 The stopword list is in `build.py`.
 
 Sentences are split at `.`, `!`, or `?` followed by a capitalized word. The split is
@@ -144,7 +149,6 @@ on its own about 1–2 minutes after a push. The manual equivalent is
   `pdftotext` and keep only the Chair's turns ("CHAIR WARSH." / "CHAIRMAN WARSH.").
 - Congressional Q&A after testimony isn't included. The prepared testimony is, but
   hearing transcripts are published separately by GPO.
-- The tokenizer splits "U.S." into "u" and "s", so "s" appears among Karp's top words.
 - Only Greg Abel's own letter is used for Berkshire; Warren Buffett's earlier letters
   aren't included. Older Karp letters (back to 2022) exist but only the 4 most recent are used.
 - SEC EDGAR blocks automated access from the build machine, so letters come from the

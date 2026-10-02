@@ -1339,7 +1339,6 @@
     "run": 6,
     "ruthless": 1,
     "ruthlessly": 1,
-    "s": 10,
     "safe": 2,
     "safely": 2,
     "safety": 4,
@@ -1578,7 +1577,7 @@
     "twenty": 1,
     "two": 3,
     "type": 1,
-    "u": 10,
+    "u.s.": 10,
     "ultimately": 4,
     "unaffiliated": 1,
     "unchanged": 1,
@@ -1705,19 +1704,19 @@
      21,
      21,
      24,
-     33,
-     33,
-     37
+     34,
+     34,
+     38
     ],
     "ability": [
-     68
+     67
     ],
     "able": [
      46
     ],
     "about": [
      1,
-     92
+     91
     ],
     "above": [
      54
@@ -1726,23 +1725,23 @@
      46
     ],
     "access": [
-     35
+     36
     ],
     "accomplished": [
      56
     ],
     "accordingly": [
      60,
-     71
+     69
     ],
     "accountability": [
-     76
+     75
     ],
     "acknowledged": [
      22
     ],
     "acquisition": [
-     77
+     76
     ],
     "across": [
      6,
@@ -1752,7 +1751,7 @@
     ],
     "act": [
      26,
-     30
+     31
     ],
     "action": [
      18
@@ -1762,9 +1761,6 @@
     ],
     "acumen": [
      0
-    ],
-    "adam": [
-     69
     ],
     "additional": [
      63
@@ -1781,8 +1777,8 @@
     "affecting": [
      81
     ],
-    "affordable": [
-     83
+    "affordability": [
+     72
     ],
     "aftermath": [
      50
@@ -1796,13 +1792,16 @@
     "ahead": [
      54
     ],
+    "aim": [
+     30
+    ],
     "air": [
-     78,
-     79
+     77,
+     78
     ],
     "aircraft": [
-     78,
-     79
+     77,
+     78
     ],
     "ajit": [
      44
@@ -1815,8 +1814,7 @@
      9
     ],
     "allocation": [
-     40,
-     90
+     41
     ],
     "allow": [
      22
@@ -1825,21 +1823,22 @@
      26
     ],
     "alongside": [
-     73
+     71
     ],
     "also": [
      3,
      20,
      28,
      42,
-     73,
-     91
+     71,
+     90
     ],
     "although": [
      57
     ],
     "always": [
-     38
+     30,
+     39
     ],
     "ambitious": [
      7
@@ -1848,14 +1847,14 @@
      85
     ],
     "among": [
-     75
+     74
     ],
     "an": [
      5,
      7,
-     35,
+     36,
      43,
-     96
+     95
     ],
     "anchored": [
      6
@@ -1879,17 +1878,17 @@
      57
     ],
     "announced": [
-     95
+     94
     ],
     "annual": [
      43,
      55
     ],
     "another": [
-     40
+     41
     ],
     "answered": [
-     98
+     97
     ],
     "any": [
      45
@@ -1898,23 +1897,21 @@
      22
     ],
     "approach": [
-     83,
      89
     ],
     "approval": [
-     68
+     67
     ],
     "approximately": [
-     72
+     70
     ],
     "are": [
      10,
      26,
-     40,
+     41,
      45,
      46,
-     69,
-     75,
+     74,
      88
     ],
     "area": [
@@ -1926,48 +1923,51 @@
     "arithmetic": [
      7
     ],
+    "artificial": [
+     72
+    ],
     "as": [
      6,
      7,
      46,
      63,
-     66,
-     66,
-     69,
-     77,
+     72,
+     76,
      80,
      81,
-     84
+     84,
+     85
     ],
     "assess": [
-     71
+     69
     ],
     "assessed": [
      55
     ],
     "assessing": [
-     93
+     92
     ],
     "asset": [
-     35
+     36
     ],
     "assisted": [
      50
     ],
     "assured": [
-     33
+     34
     ],
     "at": [
      1,
      4,
      10,
+     72,
      86
     ],
     "atlantic": [
      57
     ],
     "attached": [
-     33
+     34
     ],
     "attitude": [
      11
@@ -1979,19 +1979,16 @@
      1
     ],
     "avoid": [
-     31
+     32
     ],
     "away": [
      80
-    ],
-    "back": [
-     41
     ],
     "balance": [
      24
     ],
     "base": [
-     35
+     36
     ],
     "baseball": [
      1
@@ -2004,17 +2001,16 @@
     ],
     "be": [
      7,
-     33,
+     34,
      45,
      55,
-     95
+     94
     ],
     "becky": [
-     98
+     97
     ],
     "been": [
-     39,
-     90
+     40
     ],
     "before": [
      55
@@ -2029,10 +2025,7 @@
      55
     ],
     "bell": [
-     37
-    ],
-    "below": [
-     41
+     38
     ],
     "beneficial": [
      22
@@ -2058,8 +2051,8 @@
      18,
      24,
      28,
-     31,
-     41
+     32,
+     54
     ],
     "best": [
      14
@@ -2069,20 +2062,20 @@
     ],
     "beyond": [
      11,
-     93
+     92
     ],
     "bhe": [
-     74
+     73
     ],
     "big": [
-     33
+     34
     ],
     "bigger": [
-     39
+     40
     ],
     "billion": [
      27,
-     68
+     67
     ],
     "blocks": [
      42
@@ -2090,7 +2083,7 @@
     "bnsf": [
      21,
      22,
-     73
+     71
     ],
     "board": [
      43
@@ -2100,10 +2093,17 @@
      86
     ],
     "broader": [
-     93
+     92
     ],
     "buffett": [
      0
+    ],
+    "building": [
+     79,
+     79
+    ],
+    "builds": [
+     79
     ],
     "built": [
      6,
@@ -2116,41 +2116,45 @@
      16,
      19,
      58,
-     70,
-     77,
+     68,
+     76,
      88
     ],
     "businesses": [
      6,
      14,
-     31,
+     30,
+     32,
      47,
-     68,
-     69,
-     93
+     67,
+     72,
+     79,
+     83,
+     92
     ],
-    "buy": [
-     41
+    "but": [
+     72
     ],
     "by": [
      3,
      3,
      6,
      25,
-     34,
      35,
+     36,
      60,
-     68,
-     77,
-     92,
-     98
+     67,
+     72,
+     72,
+     76,
+     91
     ],
     "calenergy": [
      3,
      4
     ],
     "can": [
-     33,
+     34,
      45
     ],
     "candor": [
@@ -2163,10 +2167,9 @@
      9,
      28,
      29,
-     40,
+     41,
      63,
-     87,
-     90
+     87
     ],
     "capitalism": [
      6
@@ -2179,8 +2182,8 @@
     ],
     "cash": [
      27,
-     72,
-     94
+     70,
+     93
     ],
     "castparts": [
      50,
@@ -2190,7 +2193,7 @@
      65
     ],
     "caustic": [
-     34
+     35
     ],
     "caution": [
      55
@@ -2200,7 +2203,7 @@
      88
     ],
     "centered": [
-     98
+     97
     ],
     "centers": [
      85
@@ -2209,8 +2212,11 @@
      7,
      52
     ],
+    "certain": [
+     83
+    ],
     "cfo": [
-     95
+     94
     ],
     "chaired": [
      3
@@ -2219,19 +2225,17 @@
      45
     ],
     "challenged": [
-     70
+     68
     ],
     "challenges": [
      48
     ],
     "challenging": [
-     80
+     80,
+     83
     ],
     "chang": [
-     96
-    ],
-    "change": [
-     90
+     95
     ],
     "changes": [
      89
@@ -2243,16 +2247,16 @@
      12
     ],
     "chief": [
-     95
+     94
     ],
     "chlorine": [
-     34
+     35
     ],
     "choose": [
      88
     ],
     "chuck": [
-     96
+     95
     ],
     "city": [
      6,
@@ -2263,14 +2267,17 @@
      65
     ],
     "clayton": [
-     82,
-     83
+     79,
+     82
     ],
     "closely": [
      49
     ],
     "combs": [
-     92
+     91
+    ],
+    "come": [
+     72
     ],
     "comes": [
      44
@@ -2279,7 +2286,10 @@
      12
     ],
     "comments": [
-     97
+     96
+    ],
+    "commercial": [
+     79
     ],
     "commitments": [
      17
@@ -2288,22 +2298,22 @@
      17
     ],
     "communication": [
-     98
+     97
     ],
     "communities": [
-     74
+     73
     ],
     "community": [
      21
     ],
     "compact": [
-     76
+     75
     ],
     "companies": [
-     90
+     79
     ],
     "company": [
-     79
+     78
     ],
     "compete": [
      48
@@ -2312,26 +2322,29 @@
      85
     ],
     "competitive": [
-     71
+     69
     ],
     "competitors": [
      61,
      88
     ],
     "components": [
-     79
+     78
     ],
     "compounding": [
-     32
+     33
     ],
     "comprehensive": [
-     75
+     74
     ],
     "compromised": [
      24
     ],
     "compromising": [
      52
+    ],
+    "computing": [
+     72
     ],
     "concentrated": [
      89
@@ -2340,7 +2353,7 @@
      50
     ],
     "confidentially": [
-     33
+     34
     ],
     "confirmed": [
      50
@@ -2348,27 +2361,24 @@
     "conglomerate": [
      9
     ],
-    "conservatively": [
-     41
-    ],
     "consolidation": [
-     73
+     71
     ],
     "constitutes": [
      28
     ],
     "construction": [
      6,
-     34
+     35
     ],
     "consumer": [
-     69
+     83
     ],
     "consumers": [
      80
     ],
     "contingency": [
-     33
+     34
     ],
     "continue": [
      89
@@ -2377,10 +2387,7 @@
      65
     ],
     "continues": [
-     93
-    ],
-    "continuing": [
-     41
+     92
     ],
     "continuously": [
      48
@@ -2389,20 +2396,20 @@
      45
     ],
     "control": [
-     37
+     38
     ],
     "core": [
-     34
+     35
     ],
     "corporate": [
      11
     ],
     "cost": [
-     35,
-     71
+     36,
+     69
     ],
     "could": [
-     31
+     32
     ],
     "coverages": [
      45
@@ -2416,7 +2423,7 @@
     "culture": [
      12,
      17,
-     33
+     34
     ],
     "customer": [
      22,
@@ -2426,17 +2433,17 @@
      86
     ],
     "customers": [
-     30,
+     31,
      51
     ],
     "cycle": [
-     66
+     72
     ],
     "dangerous": [
      45
     ],
     "day": [
-     98
+     97
     ],
     "debt": [
      25
@@ -2448,7 +2455,7 @@
      63
     ],
     "december": [
-     95
+     94
     ],
     "decentralized": [
      15
@@ -2464,10 +2471,10 @@
      26
     ],
     "declare": [
-     68
+     67
     ],
     "declined": [
-     78
+     77
     ],
     "deepen": [
      18
@@ -2483,13 +2490,14 @@
      17
     ],
     "delivers": [
-     70
+     68
     ],
     "delivery": [
      52
     ],
     "demand": [
-     79
+     72,
+     78
     ],
     "department": [
      50
@@ -2507,16 +2515,13 @@
      9
     ],
     "despite": [
-     33
+     34
     ],
     "details": [
      55
     ],
     "determine": [
-     71
-    ],
-    "determined": [
-     41
+     69
     ],
     "determining": [
      2
@@ -2528,7 +2533,7 @@
      80
     ],
     "direct": [
-     98
+     97
     ],
     "directly": [
      42
@@ -2538,7 +2543,7 @@
     ],
     "discipline": [
      2,
-     32,
+     33,
      62
     ],
     "disciplined": [
@@ -2548,13 +2553,13 @@
      21
     ],
     "disruptions": [
-     78
+     77
     ],
     "divided": [
      1
     ],
     "dividends": [
-     68
+     67
     ],
     "diving": [
      55
@@ -2572,6 +2577,9 @@
     "draws": [
      1
     ],
+    "driven": [
+     72
+    ],
     "drivers": [
      86,
      88
@@ -2580,43 +2588,40 @@
      28
     ],
     "during": [
-     68,
-     98
-    ],
-    "dynamic": [
-     90
+     67,
+     97
     ],
     "dynamics": [
      64
     ],
     "each": [
-     72
+     70
     ],
     "earnings": [
      55,
-     78,
-     94
+     77,
+     93
     ],
     "easy": [
-     38
+     39
     ],
     "echo": [
-     97
+     96
     ],
     "economic": [
      89
     ],
     "effective": [
-     95
+     94
     ],
     "effectively": [
-     78
+     77
     ],
     "efficiency": [
      48
     ],
     "efficient": [
-     35
+     36
     ],
     "efficiently": [
      9
@@ -2630,49 +2635,46 @@
     "electric": [
      87
     ],
+    "electricity": [
+     72
+    ],
     "employees": [
      8,
      48
     ],
-    "enables": [
-     83
-    ],
     "encounter": [
      19
-    ],
-    "endure": [
-     66
     ],
     "energy": [
      6
     ],
     "engagement": [
-     98
-    ],
-    "enhance": [
-     41
+     97
     ],
     "enormous": [
-     96
+     95
     ],
     "ensure": [
      29
     ],
     "ensuring": [
-     24,
-     41
+     24
     ],
     "entered": [
      63
     ],
     "enterprise": [
-     70
+     68
+    ],
+    "enters": [
+     72
     ],
     "enthusiasms": [
-     67
+     66
     ],
     "environment": [
-     60
+     60,
+     83
     ],
     "environmental": [
      50
@@ -2681,17 +2683,14 @@
      54
     ],
     "equity": [
-     91
+     90
     ],
     "errors": [
      20
     ],
     "essential": [
-     34,
-     76
-    ],
-    "estimate": [
-     41
+     35,
+     75
     ],
     "every": [
      13,
@@ -2717,7 +2716,7 @@
      58
     ],
     "execution": [
-     35,
+     36,
      81,
      86
     ],
@@ -2727,14 +2726,14 @@
     "expanded": [
      81
     ],
-    "expect": [
-     66
-    ],
     "expectations": [
      48
     ],
     "expected": [
      13
+    ],
+    "expense": [
+     72
     ],
     "experience": [
      86
@@ -2746,7 +2745,7 @@
      61
     ],
     "extends": [
-     93
+     92
     ],
     "extensive": [
      50
@@ -2758,13 +2757,16 @@
      28
     ],
     "exuberances": [
-     67
+     66
     ],
     "fabric": [
-     31
+     32
     ],
     "face": [
      64
+    ],
+    "faced": [
+     83
     ],
     "facilities": [
      87
@@ -2785,15 +2787,18 @@
      58
     ],
     "fill": [
-     96
+     95
     ],
     "financial": [
      25,
      26,
-     95
+     94
     ],
     "financing": [
-     33
+     34
+    ],
+    "finishes": [
+     79
     ],
     "fire": [
      50
@@ -2812,14 +2817,14 @@
      80
     ],
     "flow": [
-     72
+     70
     ],
     "flows": [
-     94
+     93
     ],
     "focus": [
      16,
-     67,
+     66,
      84
     ],
     "focused": [
@@ -2832,12 +2837,12 @@
      2,
      7,
      22,
-     41,
+     30,
      48,
+     68,
      70,
      72,
-     79,
-     83,
+     78,
      86
     ],
     "forever": [
@@ -2847,20 +2852,19 @@
      6
     ],
     "format": [
-     98
+     97
     ],
     "formerly": [
-     92
+     91
     ],
     "fortress": [
      24
     ],
     "fortunate": [
-     6,
-     69
+     6
     ],
     "forward": [
-     99
+     98
     ],
     "foundation": [
      24
@@ -2875,10 +2879,10 @@
      42,
      55,
      58,
-     70,
-     80,
-     88,
-     95
+     68,
+     72,
+     79,
+     80
     ],
     "fundamental": [
      56,
@@ -2888,7 +2892,7 @@
      6
     ],
     "future": [
-     38
+     39
     ],
     "gaap": [
      55
@@ -2900,10 +2904,10 @@
      60
     ],
     "generate": [
-     94
+     93
     ],
     "generates": [
-     72
+     70
     ],
     "generations": [
      0
@@ -2918,14 +2922,14 @@
      11
     ],
     "good": [
-     38
+     39
     ],
     "governs": [
-     76
+     75
     ],
     "great": [
      21,
-     99
+     98
     ],
     "greatest": [
      0
@@ -2944,23 +2948,27 @@
      56
     ],
     "growing": [
-     79
+     78
+    ],
+    "grown": [
+     72
     ],
     "growth": [
-     38,
-     38
+     39,
+     39,
+     72
     ],
     "guide": [
-     98
+     97
     ],
     "had": [
-     39
+     40
     ],
     "hall": [
      1
     ],
     "hamburg": [
-     95
+     94
     ],
     "happy": [
      1
@@ -2970,54 +2978,52 @@
     ],
     "has": [
      1,
-     74,
-     79,
-     79,
+     72,
+     73,
+     78,
+     78,
      80,
      86,
-     87,
-     90
+     87
     ],
     "have": [
-     69,
-     79,
-     90,
-     96
+     78,
+     95
     ],
     "hazards": [
      49
     ],
     "he": [
      1,
-     93
+     92
     ],
     "heinz": [
-     91
+     90
     ],
     "hesitation": [
      46
     ],
     "high": [
-     30,
-     38
+     31,
+     39
     ],
     "his": [
      0,
      52,
-     95,
-     96
+     94,
+     95
     ],
     "historic": [
      1
     ],
     "historical": [
-     38
+     39
     ],
     "hitter": [
      1
     ],
     "hold": [
-     91
+     90
     ],
     "holders": [
      42
@@ -3029,12 +3035,18 @@
      27,
      89
     ],
+    "homes": [
+     79
+    ],
+    "households": [
+     72
+    ],
     "housing": [
-     83
+     79
     ],
     "how": [
      1,
-     71,
+     69,
      88
     ],
     "hurricane": [
@@ -3043,30 +3055,30 @@
     "i": [
      6,
      7,
-     97
+     96
     ],
     "identifying": [
      49
     ],
     "if": [
-     33,
+     34,
      89
     ],
     "impact": [
-     93
+     92
     ],
     "important": [
-     40,
+     41,
      63
     ],
     "improve": [
      48
     ],
     "improvement": [
-     72
+     70
     ],
     "improvements": [
-     73
+     71
     ],
     "improving": [
      86
@@ -3084,12 +3096,12 @@
      15,
      18,
      21,
-     33,
-     38,
+     34,
+     39,
      48
     ],
     "including": [
-     92
+     91
     ],
     "increased": [
      87
@@ -3098,8 +3110,11 @@
      60,
      63
     ],
-    "incremental": [
+    "increasing": [
      72
+    ],
+    "incremental": [
+     70
     ],
     "independence": [
      16
@@ -3108,15 +3123,17 @@
      21
     ],
     "industrial": [
-     34
+     35,
+     72
     ],
     "industries": [
      6
     ],
     "industry": [
-     67,
-     73,
-     75,
+     66,
+     71,
+     72,
+     74,
      88
     ],
     "inflation": [
@@ -3126,7 +3143,7 @@
      80
     ],
     "input": [
-     93
+     92
     ],
     "inspiration": [
      1
@@ -3136,24 +3153,27 @@
      28,
      46,
      56,
-     68,
-     68,
-     94
+     67,
+     67,
+     93
     ],
     "integral": [
-     77
+     76
     ],
     "integrated": [
-     35
+     36
     ],
     "integration": [
-     77
+     76
     ],
     "integrity": [
-     30
+     31
+    ],
+    "intelligence": [
+     72
     ],
     "intent": [
-     99
+     98
     ],
     "intentional": [
      29
@@ -3171,10 +3191,7 @@
      1,
      55,
      61,
-     70
-    ],
-    "intrinsic": [
-     41
+     68
     ],
     "invest": [
      26
@@ -3185,13 +3202,14 @@
     ],
     "investment": [
      0,
-     33,
-     55
+     34,
+     55,
+     72
     ],
     "investments": [
+     90,
      91,
-     92,
-     93
+     92
     ],
     "investor": [
      0
@@ -3213,18 +3231,18 @@
      22,
      26,
      28,
-     33,
      34,
-     38,
+     35,
      39,
+     40,
      44,
      55
     ],
     "its": [
      22,
      55,
-     75,
-     77,
+     74,
+     76,
      80,
      84,
      87,
@@ -3234,10 +3252,7 @@
      42
     ],
     "jeopardize": [
-     31
-    ],
-    "johnson": [
-     69
+     32
     ],
     "jr": [
      3
@@ -3246,8 +3261,8 @@
      2
     ],
     "june": [
-     95,
-     95
+     94,
+     94
     ],
     "jurisdiction": [
      60
@@ -3259,17 +3274,20 @@
      3
     ],
     "know": [
-     98
+     97
     ],
     "kraft": [
-     91
+     90
     ],
     "laboratories": [
-     37
+     38
     ],
     "lands": [
      21,
      22
+    ],
+    "landscape": [
+     79
     ],
     "large": [
      42,
@@ -3291,29 +3309,26 @@
      13
     ],
     "leaders": [
-     30
+     31
     ],
     "leadership": [
-     74
+     73
     ],
     "leads": [
      82
     ],
     "led": [
-     34,
-     77
+     35,
+     76
     ],
     "legal": [
      45
     ],
-    "less": [
-     66
-    ],
     "let": [
-     32
+     33
     ],
     "letter": [
-     36
+     37
     ],
     "level": [
      86
@@ -3322,15 +3337,15 @@
      29
     ],
     "liability": [
-     76
+     75
     ],
     "liebert": [
-     77
+     76
     ],
     "like": [
      24,
-     30,
-     33
+     31,
+     34
     ],
     "limited": [
      89
@@ -3361,7 +3376,6 @@
     ],
     "long": [
      66,
-     67,
      89
     ],
     "longstanding": [
@@ -3375,7 +3389,7 @@
      57
     ],
     "low": [
-     35
+     36
     ],
     "lower": [
      63
@@ -3384,11 +3398,11 @@
      86
     ],
     "lubrizol": [
-     77
+     76
     ],
     "maintain": [
      24,
-     32
+     33
     ],
     "maintaining": [
      62
@@ -3410,9 +3424,9 @@
      10
     ],
     "management": [
-     35,
-     38,
-     71,
+     36,
+     39,
+     69,
      86
     ],
     "managers": [
@@ -3420,23 +3434,23 @@
      16
     ],
     "manages": [
-     92
+     91
     ],
     "manner": [
      56,
-     98
+     97
     ],
     "manufacturing": [
      6
     ],
     "marc": [
-     95
+     94
     ],
     "margin": [
-     72
+     70
     ],
     "margins": [
-     38
+     39
     ],
     "mark": [
      52
@@ -3445,13 +3459,14 @@
      63
     ],
     "markets": [
-     34
+     35
     ],
     "materially": [
-     78
+     77
     ],
     "materials": [
-     35
+     36,
+     79
     ],
     "matter": [
      4
@@ -3468,27 +3483,23 @@
     "me": [
      12
     ],
-    "meaningful": [
-     90
-    ],
     "means": [
      20
     ],
     "meet": [
-     22,
-     83
+     22
     ],
     "meets": [
-     37
+     38
     ],
     "merger": [
-     73
+     71
     ],
     "method": [
-     91
+     90
     ],
     "million": [
-     72
+     70
     ],
     "mindset": [
      13
@@ -3500,32 +3511,31 @@
      22
     ],
     "mitigation": [
-     75
+     74
     ],
     "model": [
      15,
-     70
+     68
     ],
     "models": [
      48
     ],
     "moderated": [
-     98
+     97
     ],
     "modernize": [
      87
     ],
     "more": [
-     51,
-     90
+     51
     ],
     "most": [
      65,
-     75,
-     78
+     74,
+     77
     ],
     "move": [
-     99
+     98
     ],
     "moved": [
      80
@@ -3543,9 +3553,6 @@
      4,
      29
     ],
-    "nationwide": [
-     83
-    ],
     "navigated": [
      80
     ],
@@ -3553,11 +3560,10 @@
      8
     ],
     "need": [
-     37,
-     83
+     38
     ],
     "needed": [
-     38
+     39
     ],
     "needs": [
      22
@@ -3566,7 +3572,7 @@
      55
     ],
     "netjets": [
-     70,
+     68,
      84
     ],
     "network": [
@@ -3582,20 +3588,20 @@
      7
     ],
     "nimble": [
-     33
+     34
     ],
     "no": [
-     33,
+     34,
      53
     ],
     "non": [
-     94
+     93
     ],
     "norfolk": [
-     73
+     71
     ],
     "normalized": [
-     79
+     78
     ],
     "north": [
      85
@@ -3603,20 +3609,17 @@
     "not": [
      7,
      23,
-     58
+     58,
+     72
     ],
     "notably": [
-     78
+     77
     ],
     "now": [
-     27,
-     69
-    ],
-    "number": [
-     90
+     27
     ],
     "occidental": [
-     91
+     90
     ],
     "of": [
      0,
@@ -3627,8 +3630,8 @@
      21,
      21,
      28,
-     31,
-     41,
+     30,
+     32,
      42
     ],
     "offering": [
@@ -3641,10 +3644,10 @@
      11
     ],
     "officer": [
-     95
+     94
     ],
     "officials": [
-     74
+     73
     ],
     "often": [
      88
@@ -3663,23 +3666,20 @@
      17,
      22,
      43,
-     67,
-     74,
-     78,
+     66,
+     73,
+     77,
      84
     ],
     "one": [
-     72
-    ],
-    "ongoing": [
-     83
+     70
     ],
     "only": [
      1,
-     39
+     40
     ],
     "open": [
-     98
+     97
     ],
     "operate": [
      15
@@ -3687,13 +3687,13 @@
     "operating": [
      14,
      22,
-     38,
+     39,
      47,
      48,
-     72,
-     72,
-     77,
-     94
+     70,
+     70,
+     76,
+     93
     ],
     "operational": [
      47
@@ -3704,41 +3704,41 @@
      48,
      56,
      64,
-     71,
-     94
+     69,
+     93
     ],
     "operator": [
      85
     ],
     "opportunities": [
-     33,
-     90,
-     93
+     34,
+     92
     ],
     "opportunity": [
      42
     ],
     "opposition": [
-     76
+     75
     ],
     "option": [
-     40
+     41
     ],
     "or": [
      26,
-     31,
+     32,
      52,
-     63
+     63,
+     72
     ],
     "orders": [
-     79
+     78
     ],
     "ordinary": [
-     68
+     67
     ],
     "other": [
-     90,
-     93
+     79,
+     92
     ],
     "others": [
      26,
@@ -3756,21 +3756,25 @@
      28,
      28,
      29,
-     33
+     34
     ],
     "outpace": [
      65
     ],
     "over": [
      21,
-     35,
+     30,
+     36,
      88
     ],
+    "overall": [
+     83
+    ],
     "overseen": [
-     92
+     91
     ],
     "own": [
-     73
+     71
     ],
     "owned": [
      3
@@ -3779,33 +3783,36 @@
      13
     ],
     "owners": [
-     30,
-     41,
-     72
+     31,
+     70
+    ],
+    "ownership": [
+     30
     ],
     "oxychem": [
-     77
-    ],
-    "pacific": [
-     73
-    ],
-    "pair": [
-     96
-    ],
-    "paired": [
      76
     ],
+    "pacific": [
+     71
+    ],
+    "pair": [
+     95
+    ],
+    "paired": [
+     75
+    ],
     "pandemic": [
-     78
+     77
     ],
     "particularly": [
-     45
+     45,
+     72
     ],
     "partly": [
      3
     ],
     "partner": [
-     30
+     31
     ],
     "parts": [
      51
@@ -3826,39 +3833,33 @@
     "pay": [
      46
     ],
-    "per": [
-     41
-    ],
     "percentage": [
-     72
+     70
     ],
     "perfect": [
-     36
+     37
     ],
     "performance": [
-     71
+     69
+    ],
+    "performed": [
+     83
     ],
     "period": [
      5,
      80
     ],
-    "periods": [
-     90
-    ],
     "permitting": [
-     68
+     67
     ],
     "persistent": [
-     37
+     38
     ],
     "personal": [
      5
     ],
     "peter": [
      3
-    ],
-    "phases": [
-     66
     ],
     "pilot": [
      87,
@@ -3879,39 +3880,36 @@
      7
     ],
     "planned": [
-     77
+     76
     ],
     "play": [
-     93
+     92
     ],
     "playbook": [
      44
     ],
     "point": [
-     72
+     70
     ],
     "policy": [
      43
     ],
     "portfolio": [
-     92
+     91
     ],
     "portion": [
-     92
+     91
     ],
     "position": [
      84
     ],
-    "positions": [
-     90
-    ],
     "possesses": [
-     38
+     39
     ],
     "potential": [
-     38,
+     39,
      49,
-     73
+     71
     ],
     "powder": [
      28
@@ -3930,7 +3928,6 @@
      2
     ],
     "premium": [
-     66,
      84
     ],
     "premiums": [
@@ -3946,14 +3943,11 @@
      25
     ],
     "preserving": [
-     76
-    ],
-    "president": [
-     69
+     75
     ],
     "pressure": [
      61,
-     78
+     77
     ],
     "pricing": [
      60,
@@ -3961,20 +3955,20 @@
      65
     ],
     "pride": [
-     33
+     34
     ],
     "principally": [
-     91
+     90
     ],
     "principled": [
-     76
+     75
     ],
     "prior": [
-     68,
-     95
+     67,
+     94
     ],
     "prioritizes": [
-     35
+     36
     ],
     "pro": [
      88
@@ -3983,7 +3977,7 @@
      51
     ],
     "produces": [
-     34
+     35
     ],
     "product": [
      60
@@ -3991,11 +3985,14 @@
     "production": [
      52,
      53,
-     78,
+     77,
      81
     ],
+    "productive": [
+     30
+    ],
     "products": [
-     69
+     79
     ],
     "professional": [
      86,
@@ -4005,16 +4002,16 @@
      56
     ],
     "programs": [
-     75
+     74
     ],
     "progressed": [
      63
     ],
     "prompt": [
-     33
+     34
     ],
     "proposed": [
-     73
+     71
     ],
     "prospects": [
      89
@@ -4027,46 +4024,45 @@
     ],
     "providing": [
      49,
-     93
+     92
     ],
     "prudently": [
      25,
      48
     ],
     "public": [
-     74
+     73
     ],
     "purchase": [
      42
     ],
     "purpose": [
-     99
+     98
     ],
     "pursue": [
      47
     ],
     "put": [
-     78
+     77
     ],
     "quality": [
      52,
-     81,
-     83
+     81
     ],
     "questions": [
-     98
+     97
     ],
     "quick": [
-     98
+     97
     ],
     "quickly": [
      52
     ],
     "rail": [
-     73
+     71
     ],
     "railroad": [
-     71
+     69
     ],
     "railroads": [
      6
@@ -4079,28 +4075,28 @@
      9
     ],
     "raw": [
-     35
+     36
     ],
     "realized": [
      55
     ],
     "rebecca": [
-     77
+     76
     ],
     "receive": [
      58
     ],
-    "recent": [
-     90
+    "recognizing": [
+     83
     ],
     "recovered": [
-     79
+     78
     ],
     "rectifying": [
      20
     ],
     "recurring": [
-     94
+     93
     ],
     "redistributed": [
      52
@@ -4118,14 +4114,14 @@
      58
     ],
     "regulations": [
-     68
+     67
     ],
     "regulators": [
-     74
+     73
     ],
     "regulatory": [
-     68,
-     76
+     67,
+     75
     ],
     "reinforce": [
      84
@@ -4133,8 +4129,7 @@
     "reinsurance": [
      58,
      64,
-     65,
-     66
+     65
     ],
     "reinvest": [
      48
@@ -4145,9 +4140,6 @@
     "related": [
      57
     ],
-    "relative": [
-     90
-    ],
     "relentless": [
      84
     ],
@@ -4155,10 +4147,11 @@
      16
     ],
     "reliability": [
+     72,
      85
     ],
     "reliable": [
-     71
+     69
     ],
     "remain": [
      29
@@ -4170,17 +4163,16 @@
      6
     ],
     "repurchases": [
-     40,
      41
     ],
     "reputation": [
-     31
+     32
     ],
     "required": [
      28
     ],
     "resisting": [
-     67
+     66
     ],
     "resolution": [
      21
@@ -4192,16 +4184,19 @@
      49
     ],
     "response": [
-     33
+     34
     ],
     "responsibilities": [
-     95
+     94
+    ],
+    "responsibility": [
+     72
     ],
     "restoring": [
      62
     ],
     "restricted": [
-     68
+     67
     ],
     "result": [
      46
@@ -4211,16 +4206,13 @@
      63
     ],
     "resumed": [
-     79
-    ],
-    "retailing": [
-     69
+     78
     ],
     "retention": [
      62
     ],
     "retiring": [
-     95
+     94
     ],
     "retroactive": [
      58
@@ -4231,20 +4223,24 @@
     "right": [
      20
     ],
+    "rising": [
+     72
+    ],
     "risk": [
      44,
-     74
+     72,
+     73
     ],
     "risks": [
      46
     ],
     "rodent": [
-     37
+     38
     ],
     "role": [
      29,
-     74,
-     93
+     73,
+     92
     ],
     "roles": [
      4
@@ -4258,13 +4254,9 @@
     "run": [
      14
     ],
-    "s": [
-     27,
-     52
-    ],
     "safe": [
      50,
-     71
+     69
     ],
     "safely": [
      22
@@ -4274,7 +4266,7 @@
      84
     ],
     "same": [
-     98
+     97
     ],
     "say": [
      7
@@ -4303,35 +4295,29 @@
     ],
     "segments": [
      1,
-     65
+     65,
+     83
     ],
     "self": [
      80
     ],
-    "separately": [
-     90
-    ],
     "series": [
-     78
+     77
     ],
     "serve": [
-     34
+     35
     ],
     "serves": [
-     74
+     73
     ],
     "service": [
      69,
-     71,
      81,
      84,
      85
     ],
-    "serving": [
-     69
-    ],
     "sessions": [
-     98
+     97
     ],
     "setbacks": [
      19
@@ -4343,17 +4329,15 @@
      7
     ],
     "share": [
-     40,
      41
     ],
     "shared": [
-     33
+     34
     ],
     "shareholders": [
-     70
+     68
     ],
     "shares": [
-     41,
      42
     ],
     "shaw": [
@@ -4366,11 +4350,12 @@
      21
     ],
     "shoes": [
-     96
+     95
     ],
     "significant": [
      57,
-     93
+     72,
+     92
     ],
     "significantly": [
      89
@@ -4392,17 +4377,17 @@
      52
     ],
     "size": [
-     33,
+     34,
      82
     ],
     "slipped": [
      81
     ],
     "slowed": [
-     78
+     77
     ],
     "small": [
-     90
+     72
     ],
     "smaller": [
      1
@@ -4411,10 +4396,10 @@
      52
     ],
     "society": [
-     31
+     32
     ],
     "soda": [
-     34
+     35
     ],
     "soft": [
      80
@@ -4439,7 +4424,10 @@
      51
     ],
     "southern": [
-     73
+     71
+    ],
+    "span": [
+     79
     ],
     "sparingly": [
      25
@@ -4457,26 +4445,26 @@
      26
     ],
     "standalone": [
-     77
+     76
     ],
     "standards": [
      52
     ],
     "statutes": [
-     68
+     67
     ],
     "steadiness": [
      59
     ],
     "steve": [
-     36,
-     38
+     37,
+     39
     ],
     "stoppage": [
      53
     ],
     "stopped": [
-     78
+     77
     ],
     "store": [
      86,
@@ -4495,13 +4483,13 @@
      48
     ],
     "strong": [
-     38
+     39
     ],
     "strongly": [
-     97
+     96
     ],
     "structure": [
-     71
+     69
     ],
     "study": [
      88
@@ -4510,45 +4498,48 @@
      45
     ],
     "substantial": [
-     33,
-     94
+     34,
+     93
     ],
     "succeed": [
      54
     ],
     "success": [
      8,
-     71
+     69
     ],
     "successes": [
      19
     ],
     "successful": [
-     70
+     68
     ],
     "successor": [
-     96
+     95
     ],
     "such": [
      6,
      23
     ],
+    "supply": [
+     79
+    ],
     "support": [
      28
     ],
     "supported": [
-     35,
+     36,
      50
     ],
     "supporting": [
-     93
+     92
     ],
     "surface": [
      80,
      81
     ],
     "sustained": [
-     78
+     77
     ],
     "swing": [
      1
@@ -4563,41 +4554,41 @@
      21
     ],
     "take": [
-     33,
+     34,
      62
     ],
     "taken": [
      54,
-     74
+     73
     ],
     "talented": [
      14
     ],
     "team": [
-     38,
+     39,
      49,
      52,
-     77
+     76
     ],
     "teams": [
      14
     ],
     "ted": [
      1,
-     92,
-     93
+     91,
+     92
     ],
     "temporary": [
-     67
+     66
     ],
     "ten": [
-     39
+     40
     ],
     "tentative": [
      26
     ],
     "term": [
-     67,
+     66,
      89
     ],
     "testing": [
@@ -4614,9 +4605,9 @@
      13,
      17,
      22,
-     31,
-     41,
-     50
+     32,
+     50,
+     51
     ],
     "the": [
      0,
@@ -4635,11 +4626,11 @@
     "their": [
      10,
      16,
-     30,
+     31,
      48,
      56,
      59,
-     70
+     68
     ],
     "them": [
      2
@@ -4649,18 +4640,15 @@
      49
     ],
     "there": [
-     73
+     71
     ],
     "these": [
      58,
      60,
-     66,
+     83,
      88,
      89,
-     93
-    ],
-    "they": [
-     41
+     92
     ],
     "thing": [
      20
@@ -4672,7 +4660,6 @@
      11,
      25,
      28,
-     83,
      89
     ],
     "though": [
@@ -4686,7 +4673,7 @@
      62
     ],
     "times": [
-     39
+     40
     ],
     "to": [
      1,
@@ -4706,7 +4693,7 @@
      4
     ],
     "todd": [
-     92
+     91
     ],
     "together": [
      54
@@ -4714,26 +4701,26 @@
     "tolerate": [
      23
     ],
-    "trade": [
-     41
-    ],
     "transformed": [
-     70
+     68
     ],
     "transition": [
-     95
+     94
     ],
     "transparency": [
      17
     ],
     "travel": [
+     77,
      78,
-     79,
      85,
      88
     ],
     "travelers": [
      86
+    ],
+    "treasuries": [
+     30
     ],
     "treasury": [
      27
@@ -4753,29 +4740,32 @@
     "turn": [
      14
     ],
-    "u": [
+    "u.s.": [
      27,
-     52
+     30,
+     52,
+     72,
+     79
     ],
     "ultimately": [
-     71
+     69
     ],
     "undermine": [
-     31
+     32
     ],
     "understand": [
-     30,
-     38
+     31,
+     39
     ],
     "underwriting": [
      56,
      62
     ],
     "unfold": [
-     32
+     33
     ],
     "union": [
-     73
+     71
     ],
     "unique": [
      9
@@ -4784,16 +4774,16 @@
      55
     ],
     "unscripted": [
-     98
+     97
     ],
     "unusually": [
      57
     ],
     "unwarranted": [
-     76
+     75
     ],
     "up": [
-     68
+     67
     ],
     "upgrades": [
      86
@@ -4803,49 +4793,50 @@
     ],
     "us": [
      26,
-     33,
+     34,
      54,
      59
     ],
+    "users": [
+     72
+    ],
     "uses": [
-     34
+     35
     ],
     "using": [
      25
     ],
     "utilities": [
-     76
+     75
     ],
     "valuable": [
-     93
+     92
     ],
     "value": [
-     41,
-     41,
-     70
+     68
     ],
     "values": [
      6,
-     54,
-     90
+     54
     ],
     "varied": [
      60
     ],
     "various": [
-     93
+     92
     ],
     "vehicle": [
      87
     ],
     "very": [
-     38
+     39,
+     83
     ],
     "volume": [
-     35
+     36
     ],
     "volumes": [
-     78
+     77
     ],
     "volunteer": [
      50
@@ -4860,22 +4851,22 @@
      0,
      1,
      2,
-     97
+     96
     ],
     "was": [
      3,
      3,
      5,
-     36,
+     37,
      50,
      57,
-     77
+     76
     ],
     "way": [
      22
     ],
     "ways": [
-     93
+     92
     ],
     "we": [
      7,
@@ -4887,19 +4878,25 @@
      23,
      24,
      25,
-     33,
-     33
+     30
+    ],
+    "welcome": [
+     72
     ],
     "well": [
      11,
-     98
+     83,
+     97
     ],
     "were": [
      51,
      80
     ],
     "weschler": [
-     92
+     91
+    ],
+    "western": [
+     72
     ],
     "what": [
      5
@@ -4907,14 +4904,12 @@
     "when": [
      26,
      26,
-     41,
      42,
      44,
-     78
+     77
     ],
     "where": [
-     33,
-     90
+     34
     ],
     "which": [
      58,
@@ -4930,11 +4925,12 @@
      1,
      3,
      14,
-     30
+     31
     ],
     "wildfire": [
      57,
-     74
+     72,
+     73
     ],
     "will": [
      7,
@@ -4942,19 +4938,19 @@
      12,
      19,
      23,
-     41,
+     30,
      62,
+     72,
      89,
-     95,
-     95,
-     96,
-     98
+     94,
+     94,
+     95
     ],
     "williams": [
      1
     ],
     "wish": [
-     39
+     40
     ],
     "with": [
      0,
@@ -4962,39 +4958,36 @@
      15,
      17,
      21,
-     30,
-     33,
-     33,
+     31,
+     34,
+     34,
      49,
      55,
      55,
      57
     ],
     "within": [
-     77
+     76
     ],
     "without": [
      46,
      52,
-     68
+     67
     ],
     "words": [
-     38
+     39
     ],
     "work": [
-     70
+     68
     ],
     "worked": [
      49
     ],
     "working": [
-     74
+     73
     ],
     "worth": [
      55
-    ],
-    "write": [
-     66
     ],
     "wrote": [
      44
@@ -5002,17 +4995,17 @@
     "year": [
      57,
      63,
-     95
+     94
     ],
     "years": [
      7
     ],
     "you": [
-     98
+     97
     ],
     "your": [
      7,
-     98
+     97
     ],
     "zone": [
      1,
@@ -5050,6 +5043,7 @@
     "Our cash and U.S. Treasury holdings now exceed $370 billion.",
     "While some of this capital is required to support our insurance operations and protect Berkshire against extreme scenarios, it also constitutes our dry powder.",
     "My role is to ensure our liquidity levels and capital deployment remain intentional and deliberate.",
+    "We will always aim for ownership of productive businesses over U.S. Treasuries.",
     "Partner with high integrity leaders who understand their customers and act like owners;",
     "Avoid businesses that undermine the fabric of society or could jeopardize Berkshire’s reputation;",
     "Maintain discipline and let compounding unfold.",
@@ -5061,7 +5055,6 @@
     "In Steve’s words, it possesses “high operating margins, very good historical growth and future growth potential, easy to understand and always needed, and a strong management team.”",
     "We only wish it had been ten times bigger.",
     "Share repurchases are another important capital allocation option.",
-    "We will buy back Berkshire shares when they trade below our estimate of intrinsic value, conservatively determined, ensuring that repurchases enhance per-share value for continuing owners.",
     "We may also purchase large blocks of shares directly from major holders when the opportunity presents itself.",
     "On an annual basis, the Board reviews our policy.",
     "When it comes to risk, Ajit wrote the playbook.",
@@ -5086,31 +5079,30 @@
     "As the year progressed, additional capital entered the market, resulting in lower pricing or decelerating rate increases in several important lines.",
     "Our reinsurance operations face similar dynamics.",
     "In most casualty reinsurance segments, claims inflation continued to outpace pricing.",
-    "As long as these phases of the cycle endure, we expect to write less reinsurance premium.",
     "We focus on the long term, resisting temporary industry enthusiasms and exuberances.",
     "Our insurance businesses’ ability to declare ordinary dividends to Berkshire is restricted by insurance statutes and regulations, permitting up to $31 billion during 2025 without prior regulatory approval.",
-    "We are fortunate to have Adam Johnson now serving as president of our consumer products, service, and retailing businesses.",
     "Their work transformed NetJets from a challenged business model into a successful enterprise that delivers value for Berkshire shareholders.",
     "Safe operations, reliable service, and a competitive cost structure ultimately determine a railroad’s success – and accordingly how we assess management’s performance.",
     "Each one-percentage-point improvement in operating margin generates approximately $230 million of incremental operating cash flow for our owners.",
     "Alongside BNSF’s own improvements, there is also potential consolidation in the rail industry with the proposed Union Pacific–Norfolk Southern merger.",
+    "That responsibility has grown as the industry enters a significant investment cycle, driven by rising electricity demand from artificial intelligence computing and by increasing wildfire risk, particularly in the Western U.S. Growth is welcome, but it will not come at the expense of affordability or reliability for households, small businesses, and industrial users.",
     "On wildfire risk, BHE has taken a leadership role, working with regulators, public officials, and the communities it serves.",
     "Its mitigation programs are among the most comprehensive in the industry.",
     "Accountability, paired with principled opposition to unwarranted liability, is essential to preserving the regulatory compact that governs utilities.",
     "The Lubrizol team, led by Rebecca Liebert, was integral to the acquisition of OxyChem and its planned integration as a standalone operating business within Berkshire.",
     "Aircraft production slowed materially, volumes declined, and a series of disruptions – most notably the pandemic, when air travel effectively stopped – put sustained pressure on earnings.",
     "Air travel has recovered, aircraft orders have resumed, and demand for the company’s components has normalized and is growing.",
+    "Our building products businesses span the U.S. housing and commercial building landscape, from the homes Clayton builds to the materials and finishes our other companies supply.",
     "Shaw has navigated a challenging period as consumers moved away from soft-surface flooring (carpets), and some of its difficulties were self-inflicted.",
     "As it expanded hard-surface production, execution slipped, affecting quality and service.",
     "Clayton leads the group in size.",
-    "This approach enables Clayton to meet the ongoing need for quality, affordable housing nationwide.",
+    "These businesses performed well overall in 2025, recognizing certain consumer segments faced a very challenging environment.",
     "NetJets maintains a relentless focus on safety and exceptional service to reinforce its position as a premium offering.",
     "As the largest operator of travel centers in North America, it competes on location, service, and reliability.",
     "Management has focused on execution at the store level – improving customer experience for both professional drivers and everyday travelers, investing in store upgrades, food offerings, and customer loyalty.",
     "Since 2023, Pilot has increased capital spending to modernize facilities and expand its electric vehicle charging network.",
     "These efforts are reflected in Pilot’s Pro Preference score – a third-party study of how often professional drivers choose Pilot over travel center competitors – which rose from 27% in 2022 to 35% in 2025, placing the business second in the industry.",
     "This concentrated approach will continue, with limited activity in these holdings, though we may significantly adjust a holding if we see fundamental changes in its long-term economic prospects.",
-    "Separately, we have meaningful positions in a small number of other companies where our capital allocation has been more dynamic in recent periods, as relative values and opportunities change.",
     "We also hold equity method investments, principally Kraft Heinz and Occidental.",
     "Ted Weschler manages about 6% of our investments, including a portion of the portfolio formerly overseen by Todd Combs.",
     "Ted’s impact extends beyond these investments, as he continues to play a broader role in assessing significant opportunities, providing valuable input on our businesses, and supporting Berkshire in various other ways.",
@@ -6460,7 +6452,6 @@
     "run": 6,
     "ruthless": 1,
     "ruthlessly": 1,
-    "s": 10,
     "safe": 2,
     "safely": 2,
     "safety": 4,
@@ -6699,7 +6690,7 @@
     "twenty": 1,
     "two": 3,
     "type": 1,
-    "u": 10,
+    "u.s.": 10,
     "ultimately": 4,
     "unaffiliated": 1,
     "unchanged": 1,
@@ -6844,7 +6835,7 @@
     5,
     5,
     5,
-    6,
+    5,
     6,
     6,
     6,
@@ -6879,14 +6870,13 @@
     10,
     10,
     10,
-    10,
-    11,
     11,
     11,
     11,
     12,
     12,
     12,
+    12,
     13,
     13,
     13,
@@ -6898,12 +6888,12 @@
     14,
     14,
     14,
+    14,
     15,
     15,
     15,
     15,
     15,
-    16,
     16,
     16,
     16,
@@ -6918,7 +6908,7 @@
    "title": "2025 Letter to Berkshire Shareholders",
    "type": "letter",
    "url": "https://www.berkshirehathaway.com/letters/2025ltr.pdf",
-   "words": 6843
+   "words": 6833
   }
  ],
  "excerpt_budget": 0.25,

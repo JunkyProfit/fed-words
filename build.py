@@ -43,17 +43,29 @@ them themselves then there there's these they they'd they'll they're they've thi
 though through to too under until up upon us very was wasn't we we'd we'll we're we've
 were weren't what what's when when's where where's whether which while who who's whom
 whose why why's will with within without won't would wouldn't yet you you'd you'll you're
-you've your yours yourself yourselves
+you've your yours yourself yourselves e.g. i.e.
 """.split())
 
-TOKEN_RE = re.compile(r"[a-z0-9]+(?:'[a-z]+)*")
+# Dotted initialisms (U.S., U.K., E.U., e.g., i.e.) are ONE token, normalized to a trailing
+# dot: "U.S." / "U.S" / "U.S.'s" -> "u.s."; "U.S.-based" -> "u.s." + "based".
+# Everything else: letters/digits with inner apostrophes; other punctuation splits words.
+# (Keep in sync with TOK in the page JS below.)
+TOKEN_RE = re.compile(r"[a-z](?:\.[a-z])+\.?(?:'s)?(?![a-z0-9])|[a-z0-9]+(?:'[a-z]+)*")
+
+def norm_token(t):
+    if "." in t:                               # dotted initialism
+        if t.endswith("'s"):
+            t = t[:-2]
+        return t if t.endswith(".") else t + "."
+    if t.endswith("'s") and t not in S_CONTRACTIONS:
+        t = t[:-2]                             # possessive: fed's -> fed
+    return t
 
 def tokenize(text, keep_numbers=False):
     text = text.lower().replace("\u2019", "'").replace("\u2018", "'").replace("`", "'")
     out = []
     for t in TOKEN_RE.findall(text):          # hyphens/dashes/punctuation split words
-        if t.endswith("'s") and t not in S_CONTRACTIONS:
-            t = t[:-2]                         # possessive: fed's -> fed
+        t = norm_token(t)
         if not keep_numbers and t.isdigit():
             continue
         out.append(t)
@@ -507,11 +519,13 @@ document.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{hidePop();co
 q.oninput=()=>{hidePop();render()};hide.onchange=()=>{hidePop();render()};
 
 // ---- sentence popover (hover = preview, click/tap = pin) ----
-const TOK=/[a-z0-9]+(?:'[a-z]+)*/g;
+const TOK=/[a-z](?:\.[a-z])+\.?(?:'s)?(?![a-z0-9])|[a-z0-9]+(?:'[a-z]+)*/g; // = TOKEN_RE in build.py
 function highlight(sent,word){ // same tokenizer rules as build.py; returns html + number of matches
   const norm=sent.replace(/[\u2018\u2019`]/g,"'"),low=norm.toLowerCase(),same=low.length===sent.length;
   let out='',last=0,n=0,m;TOK.lastIndex=0;
-  while((m=TOK.exec(low))){let t=m[0];if(t.endsWith("'s")&&!SC.has(t))t=t.slice(0,-2);
+  while((m=TOK.exec(low))){let t=m[0];
+    if(t.includes('.')){if(t.endsWith("'s"))t=t.slice(0,-2);if(!t.endsWith('.'))t+='.'}
+    else if(t.endsWith("'s")&&!SC.has(t))t=t.slice(0,-2);
     if(!D.keepNum&&/^\d+$/.test(t))continue;
     if(t===word){n++;if(same){out+=esc(sent.slice(last,m.index))+'<mark>'+esc(sent.slice(m.index,m.index+m[0].length))+'</mark>';last=m.index+m[0].length}}}
   return {html:out+esc(sent.slice(last)),n};

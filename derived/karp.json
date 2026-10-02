@@ -221,7 +221,6 @@
     "revolt": 1,
     "revolution": 1,
     "risks": 1,
-    "s": 3,
     "sales": 1,
     "same": 3,
     "scale": 2,
@@ -265,7 +264,7 @@
     "true": 1,
     "twelve": 1,
     "two": 1,
-    "u": 3,
+    "u.s.": 3,
     "underfoot": 1,
     "undertones": 1,
     "underway": 2,
@@ -586,9 +585,6 @@
     "revolution": [
      1
     ],
-    "s": [
-     6
-    ],
     "seems": [
      9
     ],
@@ -661,7 +657,7 @@
     "twelve": [
      5
     ],
-    "u": [
+    "u.s.": [
      6
     ],
     "underfoot": [
@@ -938,7 +934,6 @@
     "revolt": 1,
     "revolution": 1,
     "risks": 1,
-    "s": 3,
     "sales": 1,
     "same": 3,
     "scale": 2,
@@ -982,7 +977,7 @@
     "true": 1,
     "twelve": 1,
     "two": 1,
-    "u": 3,
+    "u.s.": 3,
     "underfoot": 1,
     "undertones": 1,
     "underway": 2,
@@ -1020,7 +1015,7 @@
    "title": "Q2 2026 Letter to Shareholders",
    "type": "letter",
    "url": "https://www.palantir.com/q2-2026-letter/en/",
-   "words": 681
+   "words": 678
   },
   {
    "counts": {
@@ -1272,7 +1267,6 @@
     "revolutionary": 1,
     "rose": 1,
     "rotation": 1,
-    "s": 6,
     "sales": 1,
     "same": 5,
     "sanctum": 1,
@@ -1338,7 +1332,7 @@
     "twenty": 2,
     "twin": 1,
     "two": 1,
-    "u": 6,
+    "u.s.": 6,
     "united": 4,
     "unlike": 1,
     "value": 1,
@@ -1700,9 +1694,6 @@
     "rotation": [
      4
     ],
-    "s": [
-     9
-    ],
     "same": [
      7
     ],
@@ -1812,7 +1803,7 @@
     "twelve": [
      1
     ],
-    "u": [
+    "u.s.": [
      9
     ],
     "united": [
@@ -2115,7 +2106,6 @@
     "revolutionary": 1,
     "rose": 1,
     "rotation": 1,
-    "s": 5,
     "sales": 1,
     "same": 4,
     "sanctum": 1,
@@ -2181,7 +2171,7 @@
     "twenty": 2,
     "twin": 1,
     "two": 1,
-    "u": 5,
+    "u.s.": 5,
     "united": 4,
     "unlike": 1,
     "value": 1,
@@ -2211,11 +2201,12 @@
    "title": "Q1 2026 Letter to Shareholders",
    "type": "letter",
    "url": "https://www.palantir.com/q1-2026-letter/en/",
-   "words": 794
+   "words": 788
   },
   {
    "counts": {
-    "a": 60,
+    "a": 59,
+    "a.i.": 1,
     "abandoned": 1,
     "abilities": 1,
     "ability": 2,
@@ -2542,7 +2533,7 @@
     "however": 2,
     "humanity": 2,
     "humility": 1,
-    "i": 2,
+    "i": 1,
     "ideas": 1,
     "identity": 2,
     "idiosyncratic": 1,
@@ -2816,7 +2807,6 @@
     "role": 1,
     "run": 1,
     "ruthless": 1,
-    "s": 4,
     "said": 1,
     "salvation": 1,
     "same": 5,
@@ -2938,7 +2928,7 @@
     "twelve": 1,
     "twentieth": 1,
     "twenty": 1,
-    "u": 4,
+    "u.s.": 4,
     "ultimately": 1,
     "uncertain": 1,
     "uncomfortable": 1,
@@ -3013,25 +3003,27 @@
     "a": [
      3,
      4,
+     6,
+     7,
      7,
      8,
      9,
      11,
      14,
-     16,
-     20
+     17,
+     21
+    ],
+    "a.i.": [
+     5
     ],
     "ability": [
-     19
-    ],
-    "about": [
-     1
+     20
     ],
     "acknowledge": [
-     19
+     20
     ],
     "actors": [
-     18
+     19
     ],
     "actually": [
      11
@@ -3039,59 +3031,60 @@
     "administrative": [
      14
     ],
+    "adoption": [
+     5
+    ],
     "advantages": [
-     19
+     20
     ],
     "adversaries": [
-     18
+     19
     ],
     "aggrandizement": [
      15
     ],
     "ago": [
-     0
+     1
     ],
     "alone": [
-     4,
-     6
+     4
     ],
     "amalgamation": [
      13
     ],
     "ambition": [
-     18
+     19
     ],
     "amendment": [
      12
     ],
     "amount": [
-     16
+     17
     ],
     "an": [
      13,
      14,
      14,
-     20
+     21
     ],
     "and": [
-     1,
-     1,
      2,
      3,
      3,
-     7,
-     7,
+     5,
+     6,
+     6,
+     6,
      7,
      9,
      10,
      11,
      13,
      13,
-     14,
-     16
+     14
     ],
     "antagonists": [
-     19
+     20
     ],
     "anticipation": [
      10
@@ -3103,14 +3096,17 @@
      11
     ],
     "approach": [
-     1
+     0
     ],
     "approaching": [
-     18
+     19
+    ],
+    "architecture": [
+     7
     ],
     "are": [
-     5,
-     20
+     7,
+     21
     ],
     "around": [
      3
@@ -3122,12 +3118,10 @@
      10
     ],
     "as": [
-     5,
-     5,
-     19
+     20
     ],
     "ascent": [
-     0
+     1
     ],
     "aspire": [
      13
@@ -3136,29 +3130,26 @@
      13
     ],
     "authority": [
-     17
+     18
     ],
     "be": [
      9,
      11
     ],
-    "beach": [
-     5
-    ],
-    "been": [
-     5
-    ],
     "before": [
      4
     ],
     "beginning": [
-     0
+     1
     ],
     "being": [
      11
     ],
     "believe": [
      8
+    ],
+    "between": [
+     5
     ],
     "billion": [
      4
@@ -3176,20 +3167,22 @@
      15
     ],
     "by": [
+     7,
      11
     ],
     "byzantine": [
-     7
+     6
     ],
     "can": [
+     7,
      14
     ],
     "caricatures": [
-     19,
-     20
+     20,
+     21
     ],
     "cast": [
-     19
+     20
     ],
     "cat": [
      11
@@ -3204,13 +3197,13 @@
      15
     ],
     "coercion": [
-     17
+     18
     ],
     "collective": [
-     19
+     20
     ],
     "comedy": [
-     20
+     21
     ],
     "commitments": [
      13
@@ -3228,13 +3221,13 @@
      8
     ],
     "complexity": [
-     7
+     6
     ],
     "concerned": [
      12
     ],
     "conflict": [
-     16
+     17
     ],
     "consequence": [
      3
@@ -3258,37 +3251,43 @@
      3
     ],
     "cultivated": [
-     18
+     19
     ],
     "culture": [
      15
     ],
     "datasets": [
-     7
+     6
     ],
     "dean": [
-     20
+     21
     ],
     "decade": [
      8
     ],
+    "declined": [
+     0
+    ],
     "diminish": [
-     19
+     20
     ],
     "disagreement": [
-     16
+     17
     ],
     "dissent": [
-     18
+     19
     ],
     "distasteful": [
-     20
+     21
+    ],
+    "divided": [
+     5
     ],
     "dowd": [
-     20
+     21
     ],
     "drop": [
-     20
+     21
     ],
     "ear": [
      12
@@ -3297,10 +3296,10 @@
      14
     ],
     "effective": [
-     20
+     21
     ],
     "efficiently": [
-     7
+     6
     ],
     "elite": [
      14
@@ -3309,13 +3308,13 @@
      14
     ],
     "encouraged": [
-     16
-    ],
-    "enduring": [
-     1
+     17
     ],
     "enemies": [
-     18
+     19
+    ],
+    "engines": [
+     7
     ],
     "enrich": [
      14
@@ -3324,14 +3323,14 @@
      8
     ],
     "enterprise": [
-     7
+     6
     ],
     "essentially": [
      8
     ],
     "even": [
-     16,
-     18
+     17,
+     19
     ],
     "eventually": [
      9
@@ -3342,29 +3341,25 @@
     "fade": [
      11
     ],
+    "far": [
+     16
+    ],
     "fertile": [
      13
     ],
     "find": [
-     20
-    ],
-    "firm": [
-     1
+     21
     ],
     "five": [
-     0
+     1
     ],
     "focus": [
      11
     ],
     "for": [
-     1,
      8,
      9,
-     18
-    ],
-    "forget": [
-     1
+     19
     ],
     "forgotten": [
      11
@@ -3373,10 +3368,8 @@
      12
     ],
     "from": [
-     9
-    ],
-    "fundamentally": [
-     1
+     9,
+     16
     ],
     "general": [
      10
@@ -3385,10 +3378,13 @@
      4
     ],
     "geopolitical": [
-     19
+     20
     ],
     "globalized": [
      14
+    ],
+    "grammar": [
+     7
     ],
     "gray": [
      11
@@ -3398,9 +3394,12 @@
     ],
     "has": [
      10,
-     18
+     19
     ],
     "have": [
+     5
+    ],
+    "haves": [
      5
     ],
     "he": [
@@ -3413,16 +3412,16 @@
      9
     ],
     "hopefully": [
-     17
+     18
     ],
     "however": [
      2
     ],
     "humanity": [
-     20
+     21
     ],
     "ideas": [
-     18
+     19
     ],
     "important": [
      3
@@ -3436,16 +3435,19 @@
      12,
      15,
      15,
-     18,
      19,
      20,
-     20
+     21,
+     21
     ],
     "include": [
      13
     ],
+    "increasingly": [
+     5
+    ],
     "indeed": [
-     1
+     5
     ],
     "individual": [
      15
@@ -3456,23 +3458,20 @@
     "instincts": [
      9
     ],
-    "institutions": [
-     5
-    ],
     "intelligence": [
      10
     ],
     "interacting": [
-     7
+     6
     ],
     "interests": [
      13
     ],
     "internal": [
-     16
+     17
     ],
     "interview": [
-     20
+     21
     ],
     "into": [
      13
@@ -3480,22 +3479,24 @@
     "is": [
      2,
      3,
+     5,
      8,
      12,
      12,
      13,
      14,
-     16,
-     17
+     17,
+     18
     ],
     "it": [
      3,
      8,
-     12
+     12,
+     16
     ],
     "its": [
-     0,
-     7,
+     1,
+     6,
      8
     ],
     "itself": [
@@ -3517,50 +3518,47 @@
      11
     ],
     "language": [
-     6
-    ],
-    "large": [
-     6
+     7
     ],
     "lasch": [
      15
     ],
     "last": [
      4,
-     20
-    ],
-    "lead": [
-     6
-    ],
-    "left": [
-     5
+     21
     ],
     "legions": [
      3
     ],
-    "long": [
-     19
+    "lend": [
+     7
     ],
-    "lorne": [
+    "little": [
+     7
+    ],
+    "long": [
      20
     ],
+    "lorne": [
+     21
+    ],
     "magnanimity": [
-     18
+     19
     ],
     "man": [
      15
     ],
     "marked": [
-     0
+     1
     ],
     "market": [
      4
     ],
     "maureen": [
-     20
+     21
     ],
     "means": [
-     7
+     6
     ],
     "messy": [
      13
@@ -3569,40 +3567,33 @@
      11
     ],
     "michaels": [
-     20
+     21
     ],
     "mind": [
      15
     ],
     "models": [
-     6
-    ],
-    "modern": [
      7
     ],
+    "modern": [
+     6
+    ],
     "more": [
-     0,
      1,
      3,
      14
     ],
     "most": [
-     20
-    ],
-    "naked": [
-     5
+     21
     ],
     "narcissism": [
      15
     ],
     "narrow": [
-     19
+     20
     ],
     "nation": [
      14
-    ],
-    "nations": [
-     5
     ],
     "neither": [
      15
@@ -3617,23 +3608,26 @@
      15
     ],
     "not": [
-     0,
      1,
-     3,
-     6
+     3
     ],
     "nothing": [
      14
+    ],
+    "nots": [
+     5
     ],
     "observed": [
      15
     ],
     "of": [
-     0,
      1,
      3,
      3,
-     7,
+     5,
+     6,
+     6,
+     6,
      7,
      7,
      8,
@@ -3644,46 +3638,43 @@
      13,
      15,
      15,
-     15,
-     16
+     15
     ],
     "offering": [
-     0
+     1
     ],
     "on": [
-     5,
      11
     ],
     "ones": [
-     20
+     21
     ],
     "only": [
-     19
+     20
     ],
     "operations": [
-     7,
+     6,
      8
     ],
-    "others": [
-     5
-    ],
     "otherwise": [
-     19
+     20
     ],
     "our": [
-     0,
-     0,
+     1,
      1,
      2,
-     18,
-     18,
      19,
      19,
-     19
+     20,
+     20,
+     20
+    ],
+    "output": [
+     7
     ],
     "over": [
      4,
-     19
+     20
     ],
     "party": [
      9
@@ -3692,7 +3683,7 @@
      15
     ],
     "peak": [
-     0
+     1
     ],
     "perhaps": [
      3
@@ -3701,34 +3692,31 @@
      4
     ],
     "permitted": [
-     16
+     17
     ],
     "personalities": [
-     20
+     21
     ],
     "personnel": [
-     7
+     6
     ],
     "platforms": [
      3
-    ],
-    "polite": [
-     1
     ],
     "posturing": [
      10
     ],
     "postwar": [
-     20
-    ],
-    "potential": [
-     1
+     21
     ],
     "potter": [
      12
     ],
     "power": [
-     17
+     18
+    ],
+    "prediction": [
+     7
     ],
     "predilections": [
      13
@@ -3737,13 +3725,16 @@
      3
     ],
     "prevail": [
-     19
+     20
+    ],
+    "probabilistic": [
+     7
+    ],
+    "produced": [
+     7
     ],
     "profit": [
      2
-    ],
-    "profitability": [
-     1
     ],
     "province": [
      9
@@ -3752,7 +3743,7 @@
      15
     ],
     "public": [
-     0
+     1
     ],
     "published": [
      15
@@ -3766,17 +3757,14 @@
     "quarter": [
      4
     ],
-    "questions": [
-     1
-    ],
     "radical": [
-     18
+     19
     ],
     "rate": [
      4
     ],
     "raw": [
-     17
+     18
     ],
     "reached": [
      10
@@ -3788,37 +3776,28 @@
      9
     ],
     "refusing": [
-     19
+     20
     ],
     "reliably": [
-     7
+     6
     ],
     "remarkable": [
-     16
-    ],
-    "remember": [
-     1
+     17
     ],
     "representing": [
      4
     ],
     "require": [
-     7
+     6
     ],
     "restraint": [
-     17
+     18
     ],
     "revenue": [
      4
     ],
     "rogue": [
-     18
-    ],
-    "s": [
-     4
-    ],
-    "salvation": [
-     6
+     19
     ],
     "same": [
      4
@@ -3827,7 +3806,7 @@
      15
     ],
     "seemingly": [
-     20
+     21
     ],
     "self": [
      15
@@ -3842,19 +3821,14 @@
      13
     ],
     "software": [
-     3
-    ],
-    "some": [
-     5
+     3,
+     7
     ],
     "something": [
-     18
-    ],
-    "soon": [
-     1
+     19
     ],
     "sparingly": [
-     17
+     18
     ],
     "spiritual": [
      15
@@ -3868,23 +3842,29 @@
     "stewart": [
      12
     ],
-    "still": [
-     1
-    ],
     "strengths": [
-     19
+     20
+    ],
+    "strings": [
+     7
+    ],
+    "structure": [
+     7
     ],
     "such": [
-     18
+     19
     ],
     "suggested": [
-     20
+     21
     ],
     "systems": [
      11
     ],
+    "take": [
+     0
+    ],
     "tangle": [
-     7
+     6
     ],
     "technical": [
      11
@@ -3893,26 +3873,28 @@
      10
     ],
     "temptation": [
-     19
+     20
     ],
     "term": [
-     19
+     20
+    ],
+    "text": [
+     7
     ],
     "than": [
-     0,
+     1,
      14
     ],
     "that": [
+     7,
      11,
      13,
      13,
      15,
-     20,
-     20
+     21,
+     21
     ],
     "the": [
-     0,
-     1,
      1,
      3,
      4,
@@ -3920,6 +3902,8 @@
      4,
      5,
      6,
+     6,
+     7,
      7,
      7,
      9,
@@ -3929,55 +3913,58 @@
      10,
      11,
      11,
-     11
+     11,
+     12,
+     12,
+     12
     ],
     "their": [
      3,
-     19
-    ],
-    "them": [
-     19,
      20
     ],
+    "them": [
+     20,
+     21
+    ],
     "these": [
+     7,
      11
     ],
     "they": [
-     7
+     6
     ],
     "third": [
      8
     ],
     "this": [
+     0,
      14
     ],
     "threat": [
-     17
-    ],
-    "thriving": [
-     5
+     18
     ],
     "through": [
      14
     ],
     "to": [
-     6,
+     0,
+     7,
      9,
      11,
      13,
-     19,
-     19,
-     19,
-     20
+     20,
+     20,
+     20,
+     21
     ],
     "today": [
      10
     ],
     "tolerance": [
-     18
+     19
     ],
     "towards": [
-     18
+     19
     ],
     "tractor": [
      9
@@ -3989,12 +3976,12 @@
      14
     ],
     "true": [
-     17
+     18
     ],
     "twentieth": [
      15
     ],
-    "u": [
+    "u.s.": [
      4
     ],
     "ultimately": [
@@ -4013,8 +4000,7 @@
      8
     ],
     "us": [
-     6,
-     18
+     19
     ],
     "v": [
      12
@@ -4029,14 +4015,13 @@
      14
     ],
     "we": [
-     1,
+     0,
      4,
      8,
      13
     ],
     "well": [
-     3,
-     5
+     3
     ],
     "what": [
      13
@@ -4047,31 +4032,32 @@
      14
     ],
     "wielded": [
-     17
+     18
     ],
     "will": [
-     1,
-     6,
      11,
-     19
-    ],
-    "wisdom": [
-     1
+     20
     ],
     "wise": [
      3
     ],
     "with": [
      3,
-     7,
+     6,
      12,
-     17
+     18
     ],
     "withering": [
-     20
+     21
+    ],
+    "without": [
+     7
     ],
     "work": [
      9
+    ],
+    "world": [
+     5
     ],
     "would": [
      9
@@ -4081,14 +4067,12 @@
     ],
     "year": [
      4,
-     20
+     21
     ],
     "years": [
-     0,
      1
     ],
     "yet": [
-     1,
      13
     ],
     "zealous": [
@@ -4099,14 +4083,14 @@
     ]
    },
    "excerpts": [
+    "We declined to take this approach.",
     "Our public offering more than five years ago marked the beginning of our ascent, not its peak.",
-    "We still remember, and will not soon forget, enduring for years polite yet firm questions about the potential profitability and indeed more fundamentally the wisdom of our approach.",
     "Our record profit, however, is pure and uncontrived.",
     "And it is, perhaps more important, the consequence of a business built around software platforms, not legions of well-credentialed consultants with their presentations and wise counsel.",
     "We generated $1.1 billion in revenue in the U.S. market alone last quarter, representing a 93% growth rate over the same period the year before.",
-    "Some institutions as well as nations are thriving; others have been left naked on the beach.",
-    "The large language models alone will not lead us to salvation.",
+    "Indeed, the world of A.I. adoption is increasingly divided between haves and have-nots.",
     "They require a means of reliably and efficiently interacting with the byzantine complexity of the modern enterprise—its tangle of datasets and operations and personnel.",
+    "The strings of text produced by the language models are little without a software architecture that can lend a grammar and structure to the output of these probabilistic prediction engines.",
     "It is essentially unprecedented, we believe, for a company entering its third decade of operations.",
     "He would eventually be purged from the Communist Party for his reformist instincts and sent to work in a tractor factory in Jiangxi province.",
     "The jargon and posturing in the technology industry, the breathless anticipation of the arrival of artificial general intelligence, has today reached new heights.",
@@ -4115,6 +4099,7 @@
     "What is the common set of values and sentiments—that messy yet fertile amalgamation of interests, predilections, and commitments that constitutes an authentic community—into which we aspire to include anyone?",
     "Is this nation nothing more than an economic zone, an empty administrative vessel, through which a newly globalized elite can travel and enrich itself?",
     "In The Culture of Narcissism, published in 1979, Christopher Lasch correctly observed that “the ‘psychological man’ of the twentieth century seeks neither individual self-aggrandizement nor spiritual transcendence but peace of mind.”",
+    "Far from it.",
     "A remarkable amount of internal disagreement and conflict is permitted, even encouraged.",
     "The raw power of authority, the threat of coercion, is wielded sparingly and hopefully with true restraint.",
     "Such tolerance for dissent and ambition and rogue actors and radical ideas has cultivated in us something approaching magnanimity towards our adversaries and even our enemies.",
@@ -4123,7 +4108,8 @@
    ],
    "id": "pltr-q4-2025",
    "msent": {
-    "a": 40,
+    "a": 39,
+    "a.i.": 1,
     "abandoned": 1,
     "abilities": 1,
     "ability": 2,
@@ -4450,7 +4436,7 @@
     "however": 2,
     "humanity": 2,
     "humility": 1,
-    "i": 2,
+    "i": 1,
     "ideas": 1,
     "identity": 2,
     "idiosyncratic": 1,
@@ -4724,7 +4710,6 @@
     "role": 1,
     "run": 1,
     "ruthless": 1,
-    "s": 4,
     "said": 1,
     "salvation": 1,
     "same": 5,
@@ -4846,7 +4831,7 @@
     "twelve": 1,
     "twentieth": 1,
     "twenty": 1,
-    "u": 4,
+    "u.s.": 4,
     "ultimately": 1,
     "uncertain": 1,
     "uncomfortable": 1,
@@ -4921,7 +4906,7 @@
    "title": "Q4 2025 Letter to Shareholders",
    "type": "letter",
    "url": "https://www.palantir.com/q4-2025-letter/en/",
-   "words": 1932
+   "words": 1927
   },
   {
    "counts": {
