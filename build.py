@@ -356,15 +356,23 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f0f7f2}tr.active td{backg
 #pop .more{margin-top:10px;border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px}
 #pop .hint{font-size:12px;color:var(--muted);margin-top:8px}a{color:var(--accent)}.empty{padding:20px;text-align:center;color:var(--muted)}
 #picker .tf-row:last-of-type{margin-bottom:4px}#personInfo{margin-top:2px}
+body.mode-ceo header{background:#6a5f4e;box-shadow:inset 0 -4px 0 #d8c8a4}
+header .eyebrow{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;background:rgba(255,255,255,.16);border-radius:999px;padding:1px 10px;margin-bottom:4px}
+.seg{display:inline-flex;gap:4px;background:#efe7d8;border:1px solid #d9cdb6;border-radius:12px;padding:4px;margin:0 0 12px}
+.seg button{border:0;background:transparent;color:#5c5548;font:inherit;font-size:15px;font-weight:600;padding:7px 22px;border-radius:9px;cursor:pointer}
+.seg button:hover{color:var(--ink);background:rgba(255,253,248,.6)}
+.seg button.on{background:var(--chip-on);color:var(--chip-ink);box-shadow:inset 0 0 0 2px var(--accent),0 1px 2px rgba(60,45,20,.15)}.seg button.on::before{content:"\2713\00a0"}
+#persons button.chip.on{font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
+body.mode-fed .only-ceo,body.mode-ceo .only-fed{display:none}
 #pop .cap{font-size:12px;color:var(--muted);margin-top:8px;padding-top:6px;border-top:1px dashed var(--line)}
-</style></head><body>
+</style></head><body class="mode-fed">
 <header><a class="about-link" href="#about">About</a>
 <div class="brand"><a class="logo" href="./" title="Fed Words home"><img src="assets/logo.png" width="342" height="104" alt="Fed Words"></a>
-<div class="titles"><h1 id="h1">Every word __DEFAULT_TITLE__ said, ranked</h1>
+<div class="titles"><div class="eyebrow" id="eyebrow"></div><h1 id="h1">Every word __DEFAULT_TITLE__ said, ranked</h1>
 <p id="sub">Word frequencies from official sources</p></div></div></header>
 <main>
 <section class="card" id="picker"><h2>Who</h2>
-<div class="tf-row" id="cats"><span class="lbl">Category</span></div>
+<div class="seg" id="cats" role="tablist" aria-label="Category"></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
 <div id="personInfo" class="muted"></div>
 </section>
@@ -392,8 +400,8 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f0f7f2}tr.active td{backg
 <p class="muted" id="more"></p>
 </section>
 <p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
-possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. Fed transcripts: footnotes and editorial notes excluded.
-CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded.
+possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span class="only-fed">Fed transcripts: footnotes and editorial notes excluded.</span>
+<span class="only-ceo">CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded.</span>
 Totals, ranks and counts are recomputed in your browser for the selected person and documents.
 Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span></p>
 <section class="card" id="about"><h2>About this site</h2>
@@ -437,7 +445,7 @@ async function loadPerson(p){
 
 // ---- category / person picker ----
 function renderPicker(){
-  $('cats').innerHTML='<span class="lbl">Category</span>'+CATS.map(c=>`<button class="chip${P.category===c?' on':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+  $('cats').innerHTML=CATS.map(c=>`<button class="${P.category===c?'on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
   $('persons').innerHTML='<span class="lbl">Person</span>'+PEOPLE.filter(p=>p.category===P.category).map(p=>
     `<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}</button>`).join('');
   $('personInfo').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?P.doc_noun.replace(/s$/,''):P.doc_noun} from ${P.source}`;
@@ -450,6 +458,8 @@ async function setPerson(slug,docIds){
   P=p;V=p.vocab;VI=p.VI;DOCS=p.docs;YEARS=[...new Set(DOCS.map(d=>d.year))].sort().reverse();
   const ids=(docIds||[]).filter(i=>DOCS.some(d=>d.id===i));
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
+  const fed=P.category===PEOPLE[0].category;document.body.classList.toggle('mode-fed',fed);document.body.classList.toggle('mode-ceo',!fed);
+  $('eyebrow').textContent=`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('h1').textContent=`Every word ${P.display} said, ranked`;
   document.title=`Fed Words — every word ${P.display} said, ranked`;
   const noun=n=>n===1?P.doc_noun.replace(/s$/,''):P.doc_noun;
