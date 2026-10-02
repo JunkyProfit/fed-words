@@ -5,10 +5,10 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <title>Fed Words — every word Chairman Kevin Warsh said, ranked</title>
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#1d2433;--muted:#6b7385;--accent:#1f4e8c;--line:#e3e6ec;--green:#2e7d4f;--green-soft:#edf5f0}
+:root{--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
 html{scroll-behavior:smooth}
-header{background:var(--accent);color:#fff;padding:22px 28px;position:relative;box-shadow:inset 0 -4px 0 var(--green)}
+header{background:var(--header);color:#fff;padding:22px 28px;position:relative;box-shadow:inset 0 -4px 0 #b9d3bf}
 header a.about-link{position:absolute;top:22px;right:28px;color:#fff;font-size:14px;opacity:.9;text-decoration:none;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:3px 12px}
 header a.about-link:hover{opacity:1;background:rgba(255,255,255,.12)}
 header .brand{display:flex;align-items:center;gap:18px;padding-right:90px}
@@ -27,7 +27,7 @@ h2{font-size:16px;margin:0 0 10px}.muted{color:var(--muted);font-size:13px}
 .tf-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
 .tf-row .lbl{font-weight:600;font-size:13px;color:var(--muted);min-width:70px}
 button.chip,label.chip{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
-button.chip.on,label.chip.on{background:var(--green);color:#fff;border-color:var(--green)}label.chip.on .muted{color:rgba(255,255,255,.8)}
+button.chip.on,label.chip.on{background:var(--chip-on);color:var(--chip-ink);border-color:var(--sage)}label.chip.on .muted{color:#47604f}
 label.chip input{margin:0}
 ul.speeches{list-style:none;margin:0;padding:0}ul.speeches li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid var(--line)}
 ul.speeches li.sel{background:var(--green-soft)}ul.speeches input{margin-top:5px}
@@ -38,25 +38,25 @@ a.only{font-size:12px;margin-left:6px;cursor:pointer}
 .stat b{display:block;font-size:24px;color:var(--accent)}
 .controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
 input[type=search]{flex:1;min-width:220px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;font-size:15px}
-input[type=search]:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(46,125,79,.18)}
-input[type=checkbox]{accent-color:var(--green)}:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+input[type=search]:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(127,169,139,.25)}
+input[type=checkbox]{accent-color:#6b9477}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line)}
-th{cursor:pointer;user-select:none;background:var(--bg);position:sticky;top:0;border-bottom-color:#9cc7ad}th:hover{color:var(--accent)}
-td.num,th.num{text-align:right}.bar{height:8px;background:#9db7dc;border-radius:4px}
+th{cursor:pointer;user-select:none;background:var(--bg);position:sticky;top:0;border-bottom-color:var(--sage)}th:hover{color:var(--accent)}
+td.num,th.num{text-align:right}.bar{height:8px;background:#a9c9b2;border-radius:4px}
 tr.stop td.w{color:var(--muted)}
 tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f0f7f2}tr.active td{background:#e2f0e7}
-#pop{position:absolute;z-index:50;background:#fff;border:1px solid #c9d3e3;border-radius:10px;box-shadow:0 10px 30px rgba(20,40,80,.18);
+#pop{position:absolute;z-index:50;background:var(--card);border:1px solid #d9cdb6;border-radius:10px;box-shadow:0 10px 30px rgba(60,45,20,.18);
  padding:12px 14px;font-size:14px;max-height:60vh;overflow:auto;line-height:1.45}
 #pop[hidden]{display:none}#pop.expanded{max-height:75vh}
-#pop .ph{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;position:sticky;top:-12px;background:#fff;padding:2px 0 8px;border-bottom:1px solid var(--line);margin-bottom:6px}
+#pop .ph{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;position:sticky;top:-12px;background:var(--card);padding:2px 0 8px;border-bottom:1px solid var(--line);margin-bottom:6px}
 #pop .ph .t{font-size:13px;color:var(--muted)}#pop .ph b{font-size:16px;color:var(--ink)}
 #pop .x{border:0;background:none;font-size:20px;line-height:1;cursor:pointer;color:var(--muted)}
 #pop .doc{margin:10px 0 4px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
 #pop ol{margin:0;padding-left:20px}#pop li{margin:5px 0}
 #pop mark{background:#ffe27a;padding:0 1px;border-radius:2px}
 #pop .src{font-size:12px;margin-left:6px;white-space:nowrap}#pop .twice{font-size:11px;color:#8a5a00;background:#fff3cd;border-radius:4px;padding:0 4px;margin-left:4px}
-#pop .more{margin-top:10px;border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px}
+#pop .more{margin-top:10px;border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px}
 #pop .hint{font-size:12px;color:var(--muted);margin-top:8px}a{color:var(--accent)}.empty{padding:20px;text-align:center;color:var(--muted)}
 </style></head><body>
 <header><a class="about-link" href="#about">About</a>
