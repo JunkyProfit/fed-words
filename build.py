@@ -995,7 +995,7 @@ Hover a word to see the sentences where it was used (click or tap to pin). <span
 <div id="toast" role="status" aria-live="polite"></div>
 <aside class="ad" data-slot="incontent" aria-label="Advertisement"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About Mouth Math</button></h2>
-<p>This site was built by someone who believes in transparency and truth. It counts every word in official,
+<p>This site was created with transparency and truth in mind. This site was built by someone who believes in transparency and truth. It counts every word in official,
 publicly available texts by public figures, taken from each official source:</p>
 <ul class="sources">
 <li><strong>Fed Chair:</strong> speech and testimony transcripts published on
