@@ -368,7 +368,7 @@ button.chip,label.chip,#cats button,.seg button{letter-spacing:0}
 </div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
-<label><input type="checkbox" id="hideStop"> Hide common stopwords</label>
+<label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
 </div>
 <div class="only-visual"><div class="cloud-bar"><label>Show top <select id="cloudN" aria-label="Number of words in the cloud">
 <option value="50">50</option><option value="150" selected>150</option><option value="300">300</option></select> words</label>
@@ -427,7 +427,7 @@ any government, institution, company, or person listed.</p>
 Two views: <strong>Word Cloud</strong> (the default; bigger words were said more often, and the slider replays the
 documents in date order) and <strong>Super Math</strong> (every word, counted and ranked in a table). Either way the
 totals come first, in red.
-“Hide common stopwords” removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
+“Hide common stopwords” (on by default; uncheck it to see every word) removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
 <div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
 purposes only and is not financial, investment, or trading advice. It is not affiliated with or endorsed by the
 Federal Reserve, the White House, any federal department, Congress, the Supreme Court, or by any company
@@ -823,7 +823,7 @@ function setView(v,user){
   document.body.classList.toggle('view-visual',v==='visual');   // body starts as view-visual (the default) to avoid a layout flash
   if(v===VIEW)return;
   hidePop();VIEW=v;document.body.classList.toggle('view-visual',v==='visual');if(v!=='visual'){stopSketch();stopPlay()}
-  // Visual turns "hide stopwords" on (so "the" doesn't dominate); Standard restores the previous setting
+  // "Hide stopwords" is on by default (HTML `checked`). Visual forces it on (so "the" doesn't dominate); Standard restores the previous setting
   if(v==='visual'){stopStd=hide.checked;hide.checked=true}else if(stopStd!==null){hide.checked=stopStd;stopStd=null}
   if(P){render();syncHash()}
   if(user&&v==='visual'){const r=$('words').getBoundingClientRect();if(r.top>innerHeight*0.6)$('words').scrollIntoView({behavior:'smooth',block:'start'})}

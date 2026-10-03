@@ -49,7 +49,8 @@ The selected person's label pill, role, document count and source appear in the 
 Open `index.html` in a browser (serve the folder over HTTP: with this many people the page is
 over 1.5 MB, so `build.py` keeps the default person inline and writes the others to
 `data/<person>.json`, loaded on demand). The only external file is p5.js for Word Cloud motion (optional, SRI-pinned, loaded on demand). It has a filter box (plain text or regex), a
-"hide common stopwords" toggle (off by default, so every word is listed), and
+"hide common stopwords" toggle (**on by default**, so common words like "the", "and" and "that" are left
+out when you first open the site; uncheck it to list every word), and
 sortable Rank / Word / Count columns. People and their metadata are listed in
 `people.json`.
 
@@ -82,7 +83,7 @@ stopword setting. Font size scales with the square root of the count, from 12px 
 (the largest size is smaller on narrow screens). "Show top 50 / 150 / 300" sets how many
 words are drawn; the default is 150. Word Cloud turns on "Hide common stopwords"
 so "the" doesn't dominate. You can turn it off again, and going back to Super Math restores
-your earlier setting. Hover a word for its count and the same sentence popover as the table
+your earlier setting (on, unless you unchecked it). Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
 
 **Layout order (every view, every screen size):** the person's name ("Every word <person> said, ranked"), then the
