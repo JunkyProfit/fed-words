@@ -800,6 +800,7 @@ kbd{font:inherit;font-size:11px;font-weight:700;border:1px solid var(--rule);bor
  #cats .ci{grid-column:1;grid-row:2}#cats .ci svg{width:14px;height:14px}#cats .ct small{grid-column:2;grid-row:2;margin:0;white-space:nowrap}
  #words h2#personTitle{font-size:16px}}
 #cats button.cat.on::before{content:none;display:none}
+tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num-red)}
 @media (min-width:900px){.pk.has-az #persons:not(.grouped){display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start}
  .pk.has-az #persons:not(.grouped)>.lbl{width:100%;margin:0 0 2px}.pk.has-az #persons:not(.grouped) .chip{margin:0}}
 </style></head><body class="mode-fed view-visual">
@@ -1081,7 +1082,8 @@ function render(){
   if(VIEW==='visual'){tb.innerHTML='';setStat('sShown',drawCloud(list),anim);return}
   cloud.innerHTML='';
   const max=base.length?base[0].count:1;
-  tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
+  const topW=list.length?list.reduce((a,b)=>b.count>a.count||(b.count===a.count&&b.word<a.word)?b:a).word:null;   // the single most frequent word (red)
+  tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}${x.word===topW?' top':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
     :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
   setStat('sShown',list.length,anim);
   $('more').textContent=list.length>LIMIT?`Showing first ${LIMIT} of ${list.length} — use the filter to find others.`:'';
@@ -1261,7 +1263,8 @@ function drawCloud(list){
   const y0=Math.min(...placed.map(c=>c.y)),y1=Math.max(...placed.map(c=>c.y+c.h));
   cloud.style.height=Math.ceil(y1-y0+4)+'px';
   cloud.innerHTML=placed.map(c=>{const b=c.b,x=b.x;return `<span data-w="${esc(x.word)}" data-c="${x.count}" role="button" tabindex="0" aria-label="${esc(x.word)}: ${x.count}" `+
-    `style="left:${(c.x+1).toFixed(1)}px;top:${(c.y-y0+1).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2}px;height:${c.h-2}px;padding:0 ${b.pad}px;color:${PAL[hcode(x.word)%PAL.length]}">${esc(x.word)}</span>`}).join('');
+    `style="left:${(c.x+1).toFixed(1)}px;top:${(c.y-y0+1).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2}px;height:${c.h-2}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word?' class="top"':''}>${esc(x.word)}</span>`}).join('');
+  TOPW=words[0].word;
   cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0),mode:'static'};
   buildBodies(placed,y0,W);setupScrub();
   if(motion.checked){const tok=++drawTok;ensureP5().then(()=>{if(tok===drawTok&&VIEW==='visual'&&BODIES.length)startSketch()})
@@ -1277,7 +1280,12 @@ const P5_URL='https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js',P5_SRI='sha38
 const motion=$('motion'),scrub=$('scrub'),RM=matchMedia('(prefers-reduced-motion: reduce)');
 motion.checked=!RM.matches;RM.addEventListener('change',()=>{motion.checked=!RM.matches;if(VIEW==='visual'&&P)render()});
 motion.onchange=()=>{hidePop();render()};
-let P5P=null,SK=null,IO=null,BODIES=[],SEQ=[],STEP=0,drawTok=0,playT=null,frameN=0;
+let P5P=null,SK=null,IO=null,BODIES=[],SEQ=[],STEP=0,drawTok=0,playT=null,frameN=0,TOPW=null,REDC='#ff5449';
+// the single most frequent word at the current scrubber step is drawn in the stat red (canvas + DOM spans)
+function markTop(){if(!BODIES.length)return;const k=Math.max(0,STEP-1),cn=b=>SEQ.length?b.cum[k]:b.count;
+  const t=BODIES.reduce((a,b)=>cn(b)>cn(a)||(cn(b)===cn(a)&&(b.count>a.count||(b.count===a.count&&b.word<a.word)))?b:a);
+  TOPW=t.word;REDC=getComputedStyle(document.documentElement).getPropertyValue('--num-red').trim()||REDC;
+  BODIES.forEach(b=>{const on=b.word===TOPW;b.el.classList.toggle('top',on);b.el.style.color=on?'var(--num-red)':b.col})}
 function ensureP5(){
   if(window.p5)return Promise.resolve();
   return P5P||(P5P=new Promise((ok,no)=>{const s=document.createElement('script');s.src=P5_URL;s.integrity=P5_SRI;s.crossOrigin='anonymous';
@@ -1294,18 +1302,18 @@ function buildBodies(placed,y0,W){
   BODIES=placed.slice(0,MAX_BODIES).map((c,i)=>{const b=c.b,x=b.x,wi=VI.get(x.word);mctx.font=`${b.wt} 100px ${fam}`;
     let run=0;const cum=SEQ.map(d=>run+=(d.cnt.get(wi)||0));
     const w0=b.w-2,h0=c.h-2,hx=c.x+1+w0/2,hy=c.y-y0+1+h0/2;
-    return {word:x.word,count:x.count,el:spans[i],wt:b.wt,col:spans[i].style.color,fam,rw:mctx.measureText(x.word).width/100,
+    return {word:x.word,count:x.count,el:spans[i],wt:b.wt,col:PAL[hcode(x.word)%PAL.length],fam,rw:mctx.measureText(x.word).width/100,
       fF:b.f,k:b.f/(g(x.count)||1),g,cum,hx,hy,x:hx,y:hy,vx:0,vy:0,f:b.f,ft:b.f,w:w0,h:h0,seed:i*7.31+1}});
   BODIES.forEach(boxOf);
 }
 function boxOf(b){if(b.f<0.4){b.w=b.h=0;return}const pad=Math.round(b.f*.08)+1;b.w=b.rw*b.f+2*pad;b.h=Math.ceil(b.f*1.12)}
 function setupScrub(){
-  const K=SEQ.length;$('scrubBar').hidden=K<2;scrub.max=K;STEP=K;scrub.value=K;scrubLabel();
+  const K=SEQ.length;$('scrubBar').hidden=K<2;scrub.max=K;STEP=K;scrub.value=K;scrubLabel();markTop();
 }
 function scrubLabel(){const K=SEQ.length;if(!K)return;const d=SEQ[STEP-1];
   $('scrubLbl').innerHTML=STEP===K?`All ${K} ${unitOf(K)} (${fmtDate(SEQ[0].date)} – ${fmtDate(d.date)}) · drag or press ▶ to watch the counts build up in date order`:
     `Through <b>${fmtDate(d.date)}</b> · ${STEP} of ${K}: ${esc(d.title)} · word sizes = counts so far (the popover still covers all selected)`}
-function applyStep(k){STEP=Math.max(1,Math.min(SEQ.length,k));scrub.value=STEP;scrubLabel();
+function applyStep(k){STEP=Math.max(1,Math.min(SEQ.length,k));scrub.value=STEP;scrubLabel();markTop();
   BODIES.forEach(b=>{const c=b.cum[STEP-1];b.ft=Math.min(b.fF,b.k*b.g(c));b.el.setAttribute('aria-label',`${b.word}: ${c} (through ${SEQ[STEP-1].date})`)});
   if(!SK){BODIES.forEach(b=>{b.f=b.ft;boxOf(b);placeSpan(b,true)})}       // static mode: resize in place (never overlaps: counts only grow)
 }
@@ -1349,7 +1357,7 @@ function paint(p){
   const ctx=p.drawingContext;p.clear();ctx.textAlign='center';ctx.textBaseline='middle';
   for(let i=BODIES.length-1;i>=0;i--){const b=BODIES[i];if(!b.w)continue;
     if(b.word===curWord){ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--hl').trim()||'#e2f0e7';ctx.beginPath();ctx.roundRect?ctx.roundRect(b.x-b.w/2,b.y-b.h/2,b.w,b.h,5):ctx.rect(b.x-b.w/2,b.y-b.h/2,b.w,b.h);ctx.fill()}
-    ctx.font=`${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;ctx.fillStyle=b.col;ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
+    ctx.font=`${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;ctx.fillStyle=b.word===TOPW?REDC:b.col;ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
 }
 function setView(v,user){
   v=v==='visual'?'visual':'standard';
