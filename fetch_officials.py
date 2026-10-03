@@ -33,7 +33,7 @@ _last = [0.0]
 
 def get(url, cache, refresh=False):
     cache = Path(cache)
-    if cache.exists() and cache.stat().st_size > 0:
+    if cache.exists() and cache.stat().st_size > 0 and not refresh:
         return cache.read_bytes()
     wait = 1.0 - (time.time() - _last[0])
     if wait > 0: time.sleep(wait)
@@ -69,7 +69,35 @@ def write_person(slug, person, docs):
 
 # ------------------------------------------------------------------ cabinet
 TREAS = "https://home.treasury.gov/news/press-releases/"
-BESSENT = [("sb0614", "2026-08-24"), ("sb0539", "2026-06-23"), ("sb0514", "2026-05-29"), ("sb0500", "2026-05-19"), ("sb0403", "2026-02-20")]
+# Bessent: his full archive, discovered from Treasury's own press-release index (yearly JSON shards behind
+# home.treasury.gov/news/press-releases). Kept: his speeches/remarks (as prepared for delivery) and his written
+# testimony ("Statement ... Before the ... Committee"). Not kept: readouts, joint statements, interviews,
+# travel notices and short press statements on votes/sanctions (not speeches).
+BESSENT_SINCE = "2025-01-28"            # sworn in as the 79th Secretary of the Treasury
+BESSENT_EXCLUDE = {"sb0511": "press release about his Reagan Forum speech (the remarks themselves are sb0514)",
+                   "sb0197": "short press statement on the GENIUS Act, not a speech",
+                   "sb0280": "written statement for the World Bank/IMF committees, not a speech or testimony",
+                   "sb0095": "IMFC written statement", "sb0442": "IMFC written statement"}
+BESSENT_WHO = re.compile(r"(?i)bessent|secretary of the treasury|treasury secretary")
+BESSENT_NOT_HIM = re.compile(r"(?i)deputy|under secretary|assistant secretary|acting|former")
+BESSENT_KIND = re.compile(r"(?i)\bremarks\b|statement (?:from|before)|\bstatement before\b|testimony|\baddress\b|\bdelivers\b|\bspeech\b|opening statement")
+BESSENT_SKIP = re.compile(r"(?i)readout|joint statement|interview|icymi|to travel|statement by secretary|issues statement|statement from u\.s\. secretary of the treasury scott bessent (?:on|for)")
+
+def bessent_list(refresh):
+    """[(press-release id, date, title)] for every Bessent speech/testimony since he took office, oldest first."""
+    man = json.loads(get("https://home.treasury.gov/news-data/press-releases/manifest.json", RAW / "treasury" / "manifest.json", True))
+    out, seen = [], set()
+    for sh in man.get("searchShards", []):
+        if int(sh.get("endYear", 0)) < int(BESSENT_SINCE[:4]): continue
+        cur = int(sh["endYear"]) >= dt.date.today().year            # current year's shard: always re-read
+        items = json.loads(get("https://home.treasury.gov" + sh["path"], RAW / "treasury" / f"index-{sh['name']}.json", refresh or cur))["items"]
+        for x in items:
+            t, pid = x["title"], x["url"].rstrip("/").split("/")[-1]
+            if x["date"] < BESSENT_SINCE or pid in seen or pid in BESSENT_EXCLUDE: continue
+            if not BESSENT_WHO.search(t) or (BESSENT_NOT_HIM.search(t) and "bessent" not in t.lower()): continue
+            if not BESSENT_KIND.search(t) or BESSENT_SKIP.search(t): continue
+            seen.add(pid); out.append((pid, x["date"], clean(t)))
+    return sorted(out, key=lambda r: r[1])
 ST = "https://www.state.gov/releases/office-of-the-spokesman/"
 RUBIO = [("munich-2026", ST + "2026/02/secretary-of-state-marco-rubio-at-the-munich-security-conference/", "speech"),
          ("caricom-2026", ST + "2026/02/secretary-of-state-marco-rubio-at-the-50th-regular-meeting-of-the-conference-of-caricom-heads-of-government/", "address"),
@@ -87,20 +115,46 @@ HEGSETH = [("sasc-fy27", "https://www.armed-services.senate.gov/download/testimo
            ("sac-fy26", SAC + "secretary-peter-b-hegseth-testimony", "2025-06-11",
             "Statement before Senate Appropriations (Defense) on the FY2026 budget request", "testimony")]
 
-def treasury_doc(pid, date, refresh):
-    raw = get(TREAS + pid + "/", RAW / "treasury" / f"{pid}.htm").decode("utf-8", "replace")
-    title = clean(re.search(r"<title>(.*?)</title>", raw, re.S).group(1)).split(" | ")[0]
+MARKER = re.compile(r"(?i)^\(?\s*(?:remarks )?as (?:prepared for delivery|prepared|delivered)\s*\)?[:.\s]*")
+def treasury_doc(pid, date, refresh, title=None):
+    raw = get(TREAS + pid + "/", RAW / "treasury" / f"{pid}.htm").decode("utf-8", "replace")   # pages are immutable
+    title = title or clean(re.search(r"<title>(.*?)</title>", raw, re.S).group(1)).split(" | ")[0]
     i = raw.find("field--name-field-news-body")
     paras = [clean(p) for p in re.findall(r"(?s)<p[^>]*>(.*?)</p>", raw[i:])]
-    out, started = [], False
+    out, n = [], 0
     for p in paras:
-        if p in ("###", "") or p.startswith("###"): break
-        if re.search(r"(?i)as prepared for delivery|remarks as prepared|as delivered", p) and len(p.split()) < 25:
-            out, started = [], True; continue          # drop any staff-written lead before the marker
-        out.append(drop_parens(p))
-    out = [p for p in out if p and not (not started and p.startswith("WASHINGTON"))]
-    return dict(id=pid, url=TREAS + pid, type="speech", title=title, date=date, source="treasury.gov", paras=out,
-                note="As prepared for delivery, U.S. Department of the Treasury")
+        if p.startswith("###"): break                  # end of the release
+        if not p: continue
+        n += 1
+        m = MARKER.match(p)
+        if m:
+            if n <= 6: out = []                        # drop any staff-written lead before the marker
+            p = p[m.end():].strip()
+            if not p: continue
+        p = re.sub(r"(?i)^(?:introductory|opening|closing) remarks:\s*", "", p)
+        if not p or re.match(r"(?i)^(?:updated )?transcript of (?:the )?remarks", p): continue
+        if p.startswith("WASHINGTON") or re.search(r"\b(?:Secretary|Treasury Secretary) (?:Scott )?(?:K\. ?H\. )?Bessent\b|\bBessent (?:said|delivered|announced|will)\b", p):
+            continue                                   # third-person press-office text
+        if not re.search(r"[.!?:;\u201d\"\u2019)\u2014\u2026-]$", p) and len(p.split()) <= 14:
+            continue                                   # headings, title blocks, datelines
+        p = drop_parens(p)
+        if p: out.append(p)
+    testimony = bool(re.search(r"(?i)statement (?:from .*)?before .*(committee|subcommittee)", title))
+    return dict(id=pid, url=TREAS + pid + "/", type="testimony" if testimony else "speech", title=title, date=date,
+                source="treasury.gov", paras=out,
+                note="Written testimony (statement before the committee), U.S. Department of the Treasury" if testimony
+                     else "Remarks as prepared for delivery, U.S. Department of the Treasury")
+
+def dedupe(docs):
+    """Drop a document whose sentences (>=85%) repeat an earlier-kept one: the same prepared statement given
+    to a second committee, or the same speech posted twice. Each of his words is then counted once."""
+    keep, sets = [], []
+    for d in sorted(docs, key=lambda d: d["date"]):
+        ss = {s.strip().lower() for p in d["paras"] for s in re.split(r"(?<=[.!?])\s+", p) if len(s.split()) >= 6}
+        dup = next((k for k, t in zip(keep, sets) if ss and len(ss & t) / len(ss) >= 0.85), None)
+        if dup: print(f"  DEDUPE bessent {d['id']} repeats {dup['id']}"); continue
+        keep.append(d); sets.append(ss)
+    return keep
 
 LABEL_STATE = re.compile(r"^([A-Z][A-Z .'’\-]{2,40}):\s*")
 def state_doc(sid, url, typ, refresh):
@@ -204,14 +258,15 @@ def hegseth_doc(hid, url, date, title, typ, refresh):
     return dict(id=hid, url=url, type=typ, title=title, date=date, source=src, paras=paras, note=note)
 
 def fetch_cabinet(args):
-    plan = {"bessent": ("Scott Bessent", lambda: [treasury_doc(i, d, args.refresh) for i, d in BESSENT]),
+    plan = {"bessent": ("Scott Bessent", lambda: dedupe([treasury_doc(i, d, args.refresh, t) for i, d, t in bessent_list(args.refresh)])),
             "rubio": ("Marco Rubio", lambda: [state_doc(*r, args.refresh) for r in RUBIO]),
             "lutnick": ("Howard Lutnick", lambda: [lutnick_doc(*r, args.refresh) for r in LUTNICK]),
             "hegseth": ("Pete Hegseth", lambda: [hegseth_doc(*r, args.refresh) for r in HEGSETH])}
     for slug, (person, fn) in plan.items():
         if args.only not in (None, "cabinet", slug): continue
-        if (TDIR / slug / "index.json").exists() and not args.refresh: print(f"  {slug}: up to date"); continue
-        docs = [d for d in fn() if sum(len(p.split()) for p in d["paras"]) >= 300 or print(f"  SKIP {slug} {d['id']}: too short")]
+        if slug != "bessent" and (TDIR / slug / "index.json").exists() and not args.refresh: print(f"  {slug}: up to date"); continue
+        lo = 150 if slug == "bessent" else 300         # Bessent: every speech, incl. short ceremonial remarks
+        docs = [d for d in fn() if sum(len(p.split()) for p in d["paras"]) >= lo or print(f"  SKIP {slug} {d['id']}: too short")]
         write_person(slug, person, docs)
 
 # ------------------------------------------------------------------ congress

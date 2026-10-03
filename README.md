@@ -34,7 +34,7 @@ letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End m
 | CEOs | **Dara Khosrowshahi** (Uber, UBER; S&P 500) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investor.uber.com |
 | CEOs | **Brian Niccol** (Starbucks, SBUX; S&P 500, Nasdaq 100) | his prepared section of the 4 most recent earnings calls (Q4 FY2025 to Q3 FY2026) | investor.starbucks.com |
 | CEOs | **Kelly Ortberg** (Boeing, BA; S&P 500, Dow 30) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investors.boeing.com |
-| US Government › Cabinet | **Scott Bessent** (Treasury) | 5 speeches, Feb–Aug 2026 (as prepared for delivery) | home.treasury.gov |
+| US Government › Cabinet | **Scott Bessent** (Treasury) | 42 speeches & testimony, Mar 2025–Sep 2026: every speech (as prepared for delivery) and prepared testimony posted by Treasury since he took office; found automatically from Treasury's press-release index, readouts/joint statements/press statements excluded, a statement repeated to a second committee counted once | home.treasury.gov |
 | US Government › Cabinet | **Marco Rubio** (State) | 5 transcripts, Feb–Sep 2026 (his turns only) | state.gov |
 | US Government › Cabinet | **Howard Lutnick** (Commerce) | 3 prepared testimony statements, 2025–2026 | appropriations.senate.gov |
 | US Government › Cabinet | **Pete Hegseth** (War/Defense) | 2 written statements + his spoken turns in the Apr 30, 2026 SASC hearing | armed-services.senate.gov, appropriations.senate.gov |
