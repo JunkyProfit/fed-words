@@ -342,10 +342,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm8">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm8">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm9">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm9">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm8">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm9">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -355,7 +355,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm8">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm9">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -972,9 +972,22 @@ body header .hact{gap:10px!important}body header .hact button,body header .hact 
  body #tfbar{gap:8px!important}body #tfbar .chip,body #tfbar label.chip,body #tfbar #docPick>summary{min-height:40px!important;padding:7px 12px!important}
  body #nbar{gap:8px!important}body #nbar .nchip{min-height:42px!important;padding:0 4px!important}
  body header .hact{gap:8px!important}body header .hact button,body header .hact a{padding:5px 11px!important}}
+/* ---- View buttons: second outer ring (outline + offset, no layout cost) and a raised 3D look; pressed-in on :active ---- */
+body header .hview .vcard{outline:2px solid color-mix(in srgb,var(--vc) 50%,transparent);outline-offset:3px;
+ background-image:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,0) 48%,rgba(0,0,0,.24));
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 3px 0 color-mix(in srgb,var(--vc) 38%,#000),0 7px 16px rgba(0,0,0,.65);
+ transition:transform .08s ease,box-shadow .08s ease,background-color .15s}
+body header .hview .vcard[aria-pressed="true"]{outline:2px solid var(--vc);outline-offset:3px;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 3px 0 color-mix(in srgb,var(--vc) 45%,#000),0 7px 16px rgba(0,0,0,.65),0 0 24px color-mix(in srgb,var(--vc) 30%,transparent)}
+body header .hview .vcard:active{transform:translateY(2px);background-image:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,0) 55%);
+ box-shadow:inset 0 2px 7px rgba(0,0,0,.6),0 1px 0 color-mix(in srgb,var(--vc) 38%,#000),0 2px 4px rgba(0,0,0,.6)}
+body header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:3px}
+body header .viewbar.hview,body header #views{gap:24px!important}
+@media (max-width:640px){body header .viewbar.hview,body header #views{gap:18px!important}body header .viewbar.hview{padding:3px 5px 0}}
+@media (prefers-reduced-motion:reduce){body header .hview .vcard{transition:none}}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
-<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm8" width="880" height="210" alt="Mouth Math"></a>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm9" width="880" height="210" alt="Mouth Math"></a>
 <div class="titles"><h1 id="siteTitle">Every Word Out Of Their Mouth Counts</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
 <div class="viewbar hview" role="group" aria-label="View">
@@ -1034,7 +1047,7 @@ Hover a word to see the sentences where it was used (click or tap to pin). <span
 <div id="toast" role="status" aria-live="polite"></div>
 <aside class="ad" data-slot="incontent" aria-label="Advertisement"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About Mouth Math</button></h2>
-<p>This site was created with transparency and truth in mind. This site was built by someone who believes in transparency and truth. It counts every word in official,
+<p>This site was created with transparency and truth in mind. It counts every word in official,
 publicly available texts by public figures, taken from each official source:</p>
 <ul class="sources">
 <li><strong>Fed Chair:</strong> speech and testimony transcripts published on
