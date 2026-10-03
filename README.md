@@ -330,4 +330,6 @@ on its own about 1–2 minutes after a push. The manual equivalent is
 - Warsh's 2006–2011 speeches as a Governor are left out on purpose. The speaker
   filter only matches remarks given as Chair.
 
+The "Choose documents" toggle text is red with a larger white arrow (chevron on desktop, ▾/▴ on phones).
+
 **Links:** every link to a source document or an original source (the Choose documents list, sentence popovers, source credits, the About page) opens in a new tab with `target="_blank" rel="noopener noreferrer"`; a click handler also forces this for any other off-site link. Checkboxes and "only" buttons just change the selection.

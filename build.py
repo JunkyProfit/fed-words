@@ -339,10 +339,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm4">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm4">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm5">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm5">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm4">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm5">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -352,7 +352,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm4">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm5">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -927,9 +927,12 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:19px;lin
 #nbar .nchip:focus-visible{outline:2px solid #fff;outline-offset:2px}
 @media (max-width:640px){#nbar{gap:6px;margin:0 0 10px;flex-wrap:nowrap}#nbar .nchip{flex:1 1 0;min-width:0;min-height:40px;padding:0 4px;font-size:15px}
  #nbar .nbl:last-child{display:none}body.view-visual #words>#nbar{order:0}}
+/* ---- "Choose documents" arrow: 1.5x and white (label text stays red) ---- */
+#tfbar #docPick>summary::before{width:10.5px;height:10.5px;border-right-width:3px;border-bottom-width:3px;border-color:#fff;margin:0 5px 0 2px}
+#tfbar #docPick>summary::after{color:#fff;font-size:16.5px;line-height:1;vertical-align:-1px}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
-<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm4" width="880" height="210" alt="Mouth Math"></a>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm5" width="880" height="210" alt="Mouth Math"></a>
 <div class="titles"><h1 id="siteTitle">EVERY WORD OUT OF THEIR MOUTH COUNTS</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
 <div class="viewbar hview" role="group" aria-label="View">
