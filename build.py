@@ -233,6 +233,9 @@ def load_people():
                        "doc_noun1": "shareholder letter" if letter else "earnings call prepared remarks",
                        "unit": "letter" if letter else "call", "unit_pl": "letters" if letter else "calls",
                        "indices": c.get("indices", []), "ticker": c.get("ticker")})
+    tvx = cfg.get("tv_exchange", {})
+    for p in people:   # TradingView symbol for the price-chart popup (EXCHANGE:TICKER), only when the exchange is known
+        if p.get("ticker") and tvx.get(p["ticker"]): p["tv"] = tvx[p["ticker"]] + ":" + p["ticker"]
     order = {s: i for i, s in enumerate(cfg.get("order", []))}
     ceos = sorted([p for p in people if p["category"] == "CEOs"], key=lambda p: order.get(p["slug"], 999))
     it = iter(ceos)
@@ -273,7 +276,7 @@ def main():
             jdocs.append(jd)
         people_out.append({k: P[k] for k in ("slug", "name", "display", "category", "role", "org", "policy",
                                              "source", "doc_noun")}
-                          | {k: P[k] for k in ("group", "mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit", "indices", "ticker") if P.get(k)}
+                          | {k: P[k] for k in ("group", "mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit", "indices", "ticker", "tv") if P.get(k)}
                           | {"vocab": vocab, "docs": jdocs})
 
         # ---- console report (all numbers come from here) ----
@@ -339,10 +342,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm6">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm6">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm7">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm7">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm6">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm7">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -352,7 +355,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm6">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm7">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -906,10 +909,10 @@ header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:2px}
 #docList button.only{color:var(--num-red);border-color:color-mix(in srgb,var(--num-red) 60%,transparent);background:transparent}
 #docList button.only:hover{background:color-mix(in srgb,var(--num-red) 18%,transparent);border-color:var(--num-red)}
 /* ---- Headline: ALL CAPS, Arial, tight tracking; one line on phones (own row under the logo, sized to the width) ---- */
-header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:19px;line-height:1.15}
+header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:21px;line-height:1.15;font-family:Arial,Helvetica,sans-serif}
 @media (max-width:640px){
  header .titles{flex-basis:100%;order:2;padding-right:0!important}header .viewbar.hview{order:3}
- header h1#siteTitle{font-size:clamp(11px,3.55vw,16px);white-space:nowrap;overflow:visible;text-overflow:clip;letter-spacing:-.025em}}
+ header h1#siteTitle{font-size:clamp(12px,4.3vw,19px);white-space:nowrap;overflow:visible;text-overflow:clip;letter-spacing:-.025em}}
 /* ---- Stock ticker pill (CEOs only): Arial caps, money-green outline; people list + selected speaker title ---- */
 .tk{display:inline-block;font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.03em;line-height:1;white-space:nowrap;
  color:var(--money);border:1.5px solid var(--money);background:color-mix(in srgb,var(--money) 14%,transparent);border-radius:4px;vertical-align:.12em}
@@ -933,10 +936,29 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:19px;lin
 /* ---- every disclosure / sort arrow on the page is white (labels keep their colors) ---- */
 #aboutToggle::after{color:#fff!important;font-size:16.5px!important;line-height:1;vertical-align:-1px}
 th[data-k] .sarr{color:#fff;font-size:1.15em}
+/* ---- Ticker pills open a 1-year TradingView chart in a modal ---- */
+.tk.tkc{cursor:pointer}button.tk.tkc{font-family:Arial,Helvetica,sans-serif;font-weight:700;text-transform:uppercase}
+.tk.tkc:hover,.tk.tkc:focus-visible{background:var(--money);color:#0b0b0b!important;border-color:var(--money)!important;outline:none}
+#persons .chip.on .tk.tkc:hover{background:#2f6b1f;color:#fff!important}
+html.tvopen{overflow:hidden}
+.tvm{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif}
+.tvm[hidden]{display:none}
+.tvm-back{position:absolute;inset:0;background:rgba(0,0,0,.74)}
+.tvm-panel{position:relative;display:flex;flex-direction:column;width:min(1000px,94vw);height:min(700px,88vh);background:#0b0b0b;border:1.5px solid var(--money);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6);overflow:hidden}
+.tvm-head{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-bottom:1px solid #222}
+.tvm-head h3{margin:0;font-size:17px;font-weight:700;color:var(--money);letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.tvm-sub{font-size:13px;color:var(--muted);white-space:nowrap}
+.tvm-x{margin-left:auto;flex:none;width:44px;height:44px;border-radius:8px;border:1px solid #3a3a3a;background:#151515;color:#fff;font:400 30px/1 Arial,Helvetica,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 3px}
+.tvm-x:hover,.tvm-x:focus-visible{background:#fff;color:#000;outline:none}
+.tvm-body{flex:1;min-height:0;padding:6px 8px 0}
+.tvm-body .tradingview-widget-copyright{font-size:13px;line-height:32px;text-align:center;color:#9aa0a6}
+.tvm-body .tradingview-widget-copyright .blue-text{color:#2962ff}
+.tvm-note{margin:0;padding:4px 14px 8px;font-size:12px;color:var(--muted);text-align:center}
+@media (max-width:640px){.tvm-panel{width:calc(100vw - 12px);height:calc(100dvh - 12px);border-radius:10px}.tvm-sub{display:none}.tvm-head{padding-left:12px}.tvm-body{padding:4px 2px 0}}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
-<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm6" width="880" height="210" alt="Mouth Math"></a>
-<div class="titles"><h1 id="siteTitle">EVERY WORD OUT OF THEIR MOUTH COUNTS</h1>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm7" width="880" height="210" alt="Mouth Math"></a>
+<div class="titles"><h1 id="siteTitle">Every Word Out Of Their Mouth Counts</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
 <div class="viewbar hview" role="group" aria-label="View">
 <div class="vcards" id="views"><button type="button" class="vcard" data-view="visual" aria-pressed="true"><svg viewBox="0 0 76 50" aria-hidden="true"><rect x="1.5" y="1.5" width="73" height="47" rx="2" fill="#fffdf8" stroke="#2b2a26" stroke-width="1.6"/><rect x="5.5" y="5.5" width="65" height="39" fill="none" stroke="#2b2a26" stroke-width=".8"/><g fill="#2b2a26" font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="38" y="29" font-size="13" font-weight="700">said</text><text x="20" y="16" font-size="7" font-weight="700">every</text><text x="55" y="17" font-size="8.5" font-weight="700">word</text><text x="19" y="38" font-size="6">we</text><text x="55" y="39" font-size="7.5" font-weight="700">math</text><text x="37" y="40" font-size="5.5">ranked</text><text x="61" y="29" font-size="5">yes</text><text x="15" y="27" font-size="5.5">now</text></g></svg><span class="vt"><b>Word Cloud</b><small>Bigger = said more</small></span></button>
@@ -1039,6 +1061,10 @@ Federal Reserve, the White House, any federal department, Congress, the Supreme 
 or person listed.</div>
 </section>
 </main>
+<div id="tvModal" class="tvm" hidden><div class="tvm-back" data-close></div>
+<div class="tvm-panel" role="dialog" aria-modal="true" aria-labelledby="tvmTitle"><div class="tvm-head"><h3 id="tvmTitle"></h3><span class="tvm-sub">1-year daily price</span>
+<button type="button" class="tvm-x" id="tvmX" aria-label="Close chart" data-close>&times;</button></div>
+<div class="tvm-body" id="tvmBody"></div><p class="tvm-note">Chart and market data by TradingView. For information only, not investment advice.</p></div></div>
 <script id="data" type="application/json">__DATA__</script>
 <script>
 const D=JSON.parse(document.getElementById('data').textContent);
@@ -1100,7 +1126,7 @@ function renderPicker(){
     $('idx').querySelectorAll('button').forEach(b=>b.onclick=()=>{idxSel=b.dataset.ix;renderPicker();const n=[...$('idx').querySelectorAll('button')].find(x=>x.dataset.ix===idxSel);n&&n.focus()})}
   const pre=allIn.filter(p=>(!idxSel||(p.indices||[]).includes(idxSel))&&matchQ(p));renderAZ(allIn,pre);
   const inCat=pre.filter(p=>!azSel||lastName(p)[0]===azSel),groups=[...new Set(inCat.map(p=>p.group||''))];
-  const chip=p=>`<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}${p.ticker?` <span class="tk">${esc(p.ticker)}</span>`:''}</button>`;
+  const chip=p=>`<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}${p.ticker?` <span class="tk${p.tv?' tkc':''}"${p.tv?` data-tv="${esc(p.tv)}" data-tk="${esc(p.ticker)}" data-org="${esc(p.org||'')}" title="Show the 1-year ${esc(p.ticker)} price chart"`:''}>${esc(p.ticker)}</span>`:''}</button>`;
   $('persons').classList.toggle('grouped',groups.length>1||!!groups[0]);
   $('persons').innerHTML=groups.length>1||groups[0]?   // a category with subgroups (US Government: Cabinet / Congress / Supreme Court)
     groups.map(g=>`<div class="pg" role="group" aria-label="${esc(g)}"><span class="lbl">${esc(g)}</span>${inCat.filter(p=>(p.group||'')===g).map(chip).join('')}</div>`).join(''):
@@ -1125,7 +1151,7 @@ async function setPerson(slug,docIds){
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
   ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
-  $('personTitle').innerHTML=`Every word ${esc(P.display)}${P.ticker?` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`:''} said, ranked`;
+  $('personTitle').innerHTML=`Every word ${esc(P.display)}${P.ticker?(P.tv?` <button type="button" class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart" aria-label="${esc(P.ticker)}: show 1-year price chart">${esc(P.ticker)}</button>`:` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`):''} said, ranked`;
   document.title=P.slug===DEFAULT?'Mouth Math — every word they said, ranked':`Mouth Math — every word ${P.display} said, ranked`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();
@@ -1316,7 +1342,7 @@ async function shareView(){syncHash();const url=location.href;
   catch(err){if(err&&err.name==='AbortError')return;toast('Copy this link: '+url)}}
 $('share').onclick=shareView;
 document.addEventListener('keydown',e=>{
-  if(e.metaKey||e.ctrlKey||e.altKey||e.target.closest('input,textarea,select,[contenteditable]'))return;
+  if(!$('tvModal').hidden||e.metaKey||e.ctrlKey||e.altKey||e.target.closest('input,textarea,select,[contenteditable]'))return;
   if(e.key==='/'){e.preventDefault();q.focus();q.select()}
   else if(e.key==='v'||e.key==='V'){setView(VIEW==='visual'?'standard':'visual',true)}
   else if(e.key==='s'||e.key==='S'){shareView()}
@@ -1485,8 +1511,29 @@ function setView(v,user){
 document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>setView(b.dataset.view,true));
 function setN(n,go=true){NSHOW=n;document.querySelectorAll('#nbar .nchip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.n===n?'true':'false'));if(go){hidePop();render();syncHash()}}
 document.querySelectorAll('#nbar .nchip').forEach(b=>b.onclick=()=>setN(b.dataset.n));
+// ---- Ticker price chart: TradingView's free official Advanced Chart widget (their attribution kept as provided), loaded only on click ----
+const tvM=$('tvModal'),tvBody=$('tvmBody');let tvBack=null;
+function openChart(sym,tk,org){
+  tvBack=document.activeElement;$('tvmTitle').textContent=`${tk}${org?' · '+org:''}`;
+  tvBody.innerHTML='';const c=document.createElement('div');c.className='tradingview-widget-container';c.style.cssText='height:100%;width:100%';
+  const slug=sym.replace(':','-');
+  c.innerHTML='<div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>'+
+    `<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/${encodeURIComponent(slug)}/" rel="noopener nofollow" target="_blank"><span class="blue-text">${esc(tk)} stock chart</span></a><span class="trademark"> by TradingView</span></div>`;
+  const s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+  s.textContent=JSON.stringify({autosize:true,symbol:sym,interval:'D',range:'12M',timezone:'America/New_York',theme:'dark',style:'1',locale:'en',
+    backgroundColor:'#0b0b0b',gridColor:'rgba(255,255,255,0.06)',hide_side_toolbar:true,allow_symbol_change:false,save_image:false,calendar:false,withdateranges:true,support_host:'https://www.tradingview.com'});
+  c.appendChild(s);tvBody.appendChild(c);
+  tvM.hidden=false;document.documentElement.classList.add('tvopen');hidePop();$('tvmX').focus()}
+function closeChart(){if(tvM.hidden)return;tvM.hidden=true;tvBody.innerHTML='';document.documentElement.classList.remove('tvopen');if(tvBack&&tvBack.focus)tvBack.focus({preventScroll:true})}
+// capture phase: a pill inside a person button opens the chart and does NOT select the person
+document.addEventListener('click',e=>{const t=e.target.closest&&e.target.closest('.tk[data-tv]');if(!t)return;e.preventDefault();e.stopPropagation();openChart(t.dataset.tv,t.dataset.tk,t.dataset.org)},true);
+tvM.addEventListener('click',e=>{if(e.target.closest('[data-close]'))closeChart()});
+document.addEventListener('keydown',e=>{if(tvM.hidden)return;if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closeChart()}
+  else if(e.key==='Tab'){const f=[$('tvmX'),...tvM.querySelectorAll('.tradingview-widget-copyright a')];const i=f.indexOf(document.activeElement);
+    if(i<0||(e.shiftKey&&i===0)||(!e.shiftKey&&i===f.length-1)){e.preventDefault();f[(i<0?0:(e.shiftKey?f.length-1:0))].focus()}}},true);
+
 // Safety net: any off-site link (sources, documents, credits) opens in a new tab so visitors can come back; mailto and in-page links are left alone.
-document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(a&&/^https?:/.test(a.href)&&a.origin!==location.origin){a.target='_blank';a.rel='noopener noreferrer'}},true);setN(NSHOW,false);
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(a&&/^https?:/.test(a.href)&&a.origin!==location.origin&&!a.closest('.tradingview-widget-container')){a.target='_blank';a.rel='noopener noreferrer'}},true);setN(NSHOW,false);
 cloud.addEventListener('keydown',e=>{const s=e.target.closest('[data-w]');if(s&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(s,true)}});
 let rsT=null;
 addEventListener('resize',()=>{placePop();clearTimeout(rsT);rsT=setTimeout(()=>{ // re-layout when the width changes (rotation, window resize)

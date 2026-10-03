@@ -429,5 +429,31 @@
   "abel": "BRK.B",
   "pichai": "GOOGL",
   "ternus": "AAPL"
+ },
+ "tv_exchange": {
+  "_doc": "TradingView exchange per ticker for the 1-year chart popup (symbol = EXCHANGE:TICKER); each verified to resolve in the TradingView widget on 2026-10-03",
+  "MSFT": "NASDAQ",
+  "GOOGL": "NASDAQ",
+  "AMZN": "NASDAQ",
+  "META": "NASDAQ",
+  "WMT": "NASDAQ",
+  "PLTR": "NASDAQ",
+  "AMD": "NASDAQ",
+  "CSCO": "NASDAQ",
+  "QCOM": "NASDAQ",
+  "SBUX": "NASDAQ",
+  "AAPL": "NASDAQ",
+  "BRK.B": "NYSE",
+  "JPM": "NYSE",
+  "V": "NYSE",
+  "JNJ": "NYSE",
+  "HD": "NYSE",
+  "BAC": "NYSE",
+  "CRM": "NYSE",
+  "MS": "NYSE",
+  "C": "NYSE",
+  "T": "NYSE",
+  "UBER": "NYSE",
+  "BA": "NYSE"
  }
 }

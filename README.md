@@ -77,7 +77,7 @@ and **Ryan Cohen** (GameStop's press releases only paraphrase him, the proxy let
 his own annual-meeting remarks exist only as an SEC filing, which is blocked). Third-party transcripts and social
 posts are not used.
 
-The page header is site-wide ("EVERY WORD OUT OF THEIR MOUTH COUNTS": all caps, Arial, tight tracking; on phones it sits on its own line under the logo and scales with the screen width so it stays on one line), not tied to the default person.
+The page header is site-wide ("Every Word Out Of Their Mouth Counts": title case, Arial, tight tracking; on phones it sits on its own line under the logo and scales with the screen width so it stays on one line), not tied to the default person.
 
 CEO stock tickers (from `ceos.json`: `companies[].ticker`, plus `existing_tickers` for the original five) show as a small money-green outlined pill in Arial caps, both on each CEO's chip in the people list and after the selected speaker's name in the results title (e.g. "Every word Jamie Dimon [JPM] said, ranked"). Fed and government people have no ticker, so no pill.
 The selected person's label pill, role, document count and source appear in the Who card, and
@@ -331,5 +331,7 @@ on its own about 1–2 minutes after a push. The manual equivalent is
   filter only matches remarks given as Chair.
 
 Every disclosure or sort arrow on the page is white: the larger "Choose documents" arrow (its label stays red; chevron on desktop, ▾/▴ on phones), the phone About toggle ▾, and the Super Math column sort ▲/▼.
+
+**Ticker charts:** each CEO's ticker pill (in the people list and after the name in the results title) opens an in-page popup with a 1-year daily price chart from TradingView's free, official embeddable Advanced Chart widget (dark theme, 1Y range, daily candles). TradingView's attribution link stays exactly as their widget provides it (required by their terms), and no market data is scraped or stored. The widget script loads only when a pill is clicked, and the widget is removed when the popup closes. Close it with the X, Esc, or a tap on the backdrop; on phones it fills the screen. Clicking a pill inside a person button opens the chart without selecting that person. Exchange prefixes live in `ceos.json` → `tv_exchange` (e.g. NASDAQ:MSFT, NYSE:JPM, NYSE:BRK.B); each was checked to resolve in the widget.
 
 **Links:** every link to a source document or an original source (the Choose documents list, sentence popovers, source credits, the About page) opens in a new tab with `target="_blank" rel="noopener noreferrer"`; a click handler also forces this for any other off-site link. Checkboxes and "only" buttons just change the selection.
