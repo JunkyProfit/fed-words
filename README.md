@@ -14,7 +14,9 @@ documents, ranked from most to least frequent. Choose a **category**, then a **p
 | Politics | **President Donald J. Trump** | 5 major addresses, Feb–Jul 2026 (full text, President's lines only) | govinfo.gov (Daily Compilation of Presidential Documents) |
 | Religious leaders | **Pope Leo XIV** | 5 texts from his Sep 2026 journey to France (homilies, addresses, general audience) | vatican.va |
 
-Each person has a header tint, an eyebrow label and a document noun (`mode`, `eyebrow`,
+The page header is site-wide ("Every word they said, ranked"), not tied to the default person.
+The selected person's label pill, role, document count and source appear in the Who card, and
+"Every word <person> said, ranked" heads the results. Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
 `doc_noun1`, `unit`/`unit_pl` and an optional popover `credit` line in `people.json`).
 
 Open `index.html` in a browser. It's one self-contained file (inline CSS/JS, no

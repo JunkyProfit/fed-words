@@ -307,7 +307,7 @@ TEMPLATE = r"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=mm1">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm1">
-<title>Mouth Math — every word __DEFAULT_TITLE__ said, ranked</title>
+<title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
 <meta name="apple-mobile-web-app-title" content="Mouth Math">
@@ -377,7 +377,9 @@ tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f0f7f2}tr.active td{backg
 #pop .hint{font-size:12px;color:var(--muted);margin-top:8px}a{color:var(--accent)}.empty{padding:20px;text-align:center;color:var(--muted)}
 #picker .tf-row:last-of-type{margin-bottom:4px}#personInfo{margin-top:2px}
 body.mode-ceo header{background:#6a5f4e;box-shadow:inset 0 -4px 0 #d8c8a4}
-header .eyebrow{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;background:rgba(255,255,255,.16);border-radius:999px;padding:1px 10px;margin-bottom:4px}
+#personInfo .eyebrow{display:inline-block;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;background:var(--chip-on);color:var(--chip-ink);border-radius:999px;padding:1px 10px;margin:2px 6px 2px 0;vertical-align:1px}
+#words h2#personTitle{margin:0 0 10px;font-size:18px}
+header p#siteSub{max-width:640px}
 .seg{display:inline-flex;gap:4px;background:#efe7d8;border:1px solid #d9cdb6;border-radius:12px;padding:4px;margin:0 0 12px}
 .seg button{border:0;background:transparent;color:#5c5548;font:inherit;font-size:15px;font-weight:600;padding:7px 22px;border-radius:9px;cursor:pointer}
 .seg button:hover{color:var(--ink);background:rgba(255,253,248,.6)}
@@ -400,8 +402,8 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 </style></head><body class="mode-fed">
 <header><a class="about-link" href="#about">About</a>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.png?v=mm1" width="433" height="104" alt="Mouth Math"></a>
-<div class="titles"><div class="eyebrow" id="eyebrow"></div><h1 id="h1">Every word __DEFAULT_TITLE__ said, ranked</h1>
-<p id="sub">Word frequencies from official sources</p></div></div></header>
+<div class="titles"><h1 id="siteTitle">Every word they said, ranked</h1>
+<p id="siteSub">Word counts from official speeches, letters and texts by public figures: Fed chairs, CEOs, presidents, popes and more.</p></div></div></header>
 <main>
 <div class="viewbar"><span class="lbl">View</span>
 <div class="seg" id="views" role="tablist" aria-label="View"><button data-view="standard" role="tab">Standard</button><button data-view="visual" role="tab">Visual</button></div>
@@ -409,7 +411,7 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 <section class="card" id="picker"><h2>Who</h2>
 <div class="seg" id="cats" role="tablist" aria-label="Category"></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
-<div id="personInfo" class="muted"></div>
+<div id="personInfo"><span class="eyebrow" id="eyebrow"></span> <span class="muted" id="personMeta"></span></div>
 </section>
 <section class="card" id="timeframe"><h2>Timeframe</h2>
 <div class="tf-row"><span class="lbl">Quick</span>
@@ -426,6 +428,7 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 <div class="stat"><b id="sShown">–</b>words shown</div>
 </section>
 <section class="card" id="words">
+<h2 id="personTitle">Every word __DEFAULT_TITLE__ said, ranked</h2>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
 <label><input type="checkbox" id="hideStop"> Hide common stopwords</label>
@@ -501,7 +504,7 @@ function renderPicker(){
   $('cats').innerHTML=CATS.map(c=>`<button class="${P.category===c?'on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
   $('persons').innerHTML='<span class="lbl">Person</span>'+PEOPLE.filter(p=>p.category===P.category).map(p=>
     `<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}</button>`).join('');
-  $('personInfo').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun} from ${P.source}`;
+  $('personMeta').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun} from ${P.source}`;
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
   document.querySelectorAll('#persons button').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
 }
@@ -513,10 +516,8 @@ async function setPerson(slug,docIds){
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
   ['fed','ceo','pol','rel'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
-  $('h1').textContent=`Every word ${P.display} said, ranked`;
-  document.title=`Mouth Math — every word ${P.display} said, ranked`;
-  const noun=n=>n===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun;
-  $('sub').textContent=`Word frequencies across ${DOCS.length} ${noun(DOCS.length)} from ${P.source}`;
+  $('personTitle').textContent=`Every word ${P.display} said, ranked`;
+  document.title=P.slug===DEFAULT?'Mouth Math — every word they said, ranked':`Mouth Math — every word ${P.display} said, ranked`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();
 }
