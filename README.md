@@ -5,7 +5,9 @@
 A static website that lists every word a public figure said in their official
 documents, ranked from most to least frequent. Choose a **category** (Fed Chair, CEOs, US Government),
 then a **person**. Inside US Government, people are listed in labelled groups (Cabinet, Congress,
-Supreme Court; the `group` field in `people.json`):
+Supreme Court; the `group` field in `people.json`). For CEOs and US Government an **A–Z index** filters the
+people by last name (a right-hand column in the Who card on wide screens, a compact scrolling row on phones;
+letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End move between letters, Esc resets):
 
 | Category | Person | Documents | Source |
 |---|---|---|---|
@@ -13,6 +15,7 @@ Supreme Court; the `group` field in `people.json`):
 | CEOs | **Alex Karp** (Palantir) | 4 most recent quarterly letters to shareholders | palantir.com |
 | CEOs | **Andy Jassy** (Amazon) | 2025 and 2024 annual shareholder letters | aboutamazon.com |
 | CEOs | **Greg Abel** (Berkshire Hathaway) | his 2025 letter (his first as CEO) | berkshirehathaway.com |
+| CEOs | **Sundar Pichai** (Alphabet/Google) | his prepared remarks from the 8 most recent earnings calls (Q3 2024 to Q2 2026) | abc.xyz (Alphabet's own transcripts) |
 | US Government › Cabinet | **Scott Bessent** (Treasury) | 5 speeches, Feb–Aug 2026 (as prepared for delivery) | home.treasury.gov |
 | US Government › Cabinet | **Marco Rubio** (State) | 5 transcripts, Feb–Sep 2026 (his turns only) | state.gov |
 | US Government › Cabinet | **Howard Lutnick** (Commerce) | 3 prepared testimony statements, 2025–2026 | appropriations.senate.gov |
@@ -25,6 +28,19 @@ are embedded in full ("Show all", source links). commerce.gov, war.gov, defense.
 block the build machine, so Commerce/War testimony comes from the Senate committees' own pages and
 floor remarks from govinfo.gov.
 
+**CEO source types:** every CEO document carries a small **Source type** label in the document list
+(`Shareholder letter` or `Earnings call prepared remarks`, the `source_type` field written by `fetch_ceo.py`).
+
+**Apple:** John Ternus became Apple's CEO on Sept 1, 2026 (Tim Cook is Executive Chairman; Apple Newsroom,
+Apr 20, 2026). `fetch_ceo.py --only ternus` is ready and `people.json` has his entry, but Apple publishes only
+a press release and an audio webcast for each earnings call (no transcript or prepared remarks), so nothing is
+saved and the site skips him until Apple itself posts call text. His first call (fiscal Q4 2026) is expected in late
+October 2026 (Apple hasn't announced the date; Oct 29 is the usual estimate).
+Not added: **Elon Musk** (ir.tesla.com and tesla.com return 403 to the build machine; SEC EDGAR is blocked too)
+and **Ryan Cohen** (GameStop's press releases only paraphrase him, the proxy letter is signed by the Board, and
+his own annual-meeting remarks exist only as an SEC filing, which is blocked). Third-party transcripts and social
+posts are not used.
+
 The page header is site-wide ("Every word they said, ranked"), not tied to the default person.
 The selected person's label pill, role, document count and source appear in the Who card, and
 "Every word <person> said, ranked" heads the results. Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
@@ -32,7 +48,7 @@ The selected person's label pill, role, document count and source appear in the 
 
 Open `index.html` in a browser (serve the folder over HTTP: with this many people the page is
 over 1.5 MB, so `build.py` keeps the default person inline and writes the others to
-`data/<person>.json`, loaded on demand). The only external file is p5.js for WordViz motion (optional, SRI-pinned, loaded on demand). It has a filter box (plain text or regex), a
+`data/<person>.json`, loaded on demand). The only external file is p5.js for Word Cloud motion (optional, SRI-pinned, loaded on demand). It has a filter box (plain text or regex), a
 "hide common stopwords" toggle (off by default, so every word is listed), and
 sortable Rank / Word / Count columns. People and their metadata are listed in
 `people.json`.
@@ -59,27 +75,34 @@ has a **source ↗** link, a text-fragment URL (`…htm#:~:text=start,end`) that
 to and highlights that sentence on federalreserve.gov in Chrome, Edge, and Safari.
 The speech title link is a plain fallback for other browsers.
 
-**WordViz mode (word cloud):** two thumbnail cards at the top (**Standard**, a sketched page, and
-**WordViz**, a framed mini cloud; buttons with `aria-pressed`) switch
+**Views:** two thumbnail cards at the top, **Word Cloud** (the default, a framed mini cloud, shown in the stat red)
+and **Super Math** (the ranked table, a sketched page), are buttons with `aria-pressed` that switch
 between the ranked table and a word cloud for the same person, timeframe, filter, and
 stopword setting. Font size scales with the square root of the count, from 12px to 72px
 (the largest size is smaller on narrow screens). "Show top 50 / 150 / 300" sets how many
-words are drawn; the default is 150. On wide screens (900px and up) WordViz puts Who and Timeframe in a
-left sidebar with the cloud beside them; on narrow screens the cloud comes right after the compact
-Who/Timeframe cards (stats and filter below it). Switching to WordViz turns on "Hide common stopwords"
-so "the" doesn't dominate. You can turn it off again, and going back to Standard restores
+words are drawn; the default is 150. Word Cloud turns on "Hide common stopwords"
+so "the" doesn't dominate. You can turn it off again, and going back to Super Math restores
 your earlier setting. Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
 
-**WordViz motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
+**Layout order (every view, every screen size):** the person's name ("Every word <person> said, ranked"), then the
+red stats (documents, total words, unique words, words shown), then the Word Cloud or the Super Math table. The stats
+live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
+screens (900px and up) Who and Timeframe sit in a left sidebar in both views.
+**Phones (640px and below):** a one-line header (small logo and headline, no subline); category, person and A–Z
+chips in single horizontal-scroll rows; the View cards shrink to two small pills; Timeframe is one summary line
+with a **Change** button (the range chips and document list stay collapsed until you tap it); About starts collapsed
+(the header's About link opens it). At 390×844 the red stats are at about y=310 and the table or cloud starts right below.
+
+**Word Cloud motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
 largest words first along a spiral with box collision checks). With **Motion** on, a
 [p5.js](https://p5js.org/) sketch takes over: each word is a soft physics body that drifts gently
 (Perlin noise) around its spot, held by a weak spring, and boxes are pushed apart so words never overlap
 (spatial hash; bigger words move less). Invisible, focusable hit boxes follow the words, so hover, click/tap
-to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when WordViz is
+to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when Word Cloud is
 shown with Motion on, from jsDelivr with Subresource Integrity
 (`sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii`). The sketch pauses when the
-cloud is off-screen (IntersectionObserver) and is removed in Standard view. With `prefers-reduced-motion:
+cloud is off-screen (IntersectionObserver) and is removed in Super Math view. With `prefers-reduced-motion:
 reduce`, Motion off, or if the CDN can't be reached, the static layout is used.
 **Date scrubber:** when 2+ documents are selected, a slider (and ▶ Play) steps through them in date order;
 word sizes follow the cumulative counts up to that document (smoothly in Motion, in place when static;
@@ -90,7 +113,13 @@ Up to 300 bodies (the Top 300 option).
 rules, black selected states; the per-category accent is a thin stripe under the header). Word-count
 numbers (stats and the Count column) use one CSS variable, `--num-red` (#9e1b24, 6.8–7.8:1 contrast on
 the cream backgrounds). The theme is one block at the end of the CSS in `build.py`, easy to remove.
-The view is kept in the URL (`#mode=visual`, plus `&n=50|300` when not 150).
+**Typography:** one family, Arial (`Arial, "Helvetica Neue", Helvetica, sans-serif`), no webfonts, two weights
+(400/700). Hierarchy comes from size, weight and spacing. Tight tracking (-0.02 to -0.035em) on the headline,
+the person heading and the red stat numbers; normal tracking for body text; uppercase with +0.06em only on tiny
+labels (category pill, source type, group labels). Counts use tabular numerals.
+
+The view is kept in the URL: Word Cloud is the default (clean URL, plus `&n=50|300` when not 150); Super Math adds
+`#mode=standard`. Old `#mode=visual` links still open the Word Cloud.
 
 ### Licensing: public domain vs. excerpts
 | Source | Status | Treatment |
@@ -120,7 +149,7 @@ Benjamin Netanyahu via gov.il, Ayatollah Ali Khamenei via english.khamenei.ir), 
 official sites could be reached from the build machine (kremlin.ru doesn't connect; gov.il and
 khamenei.ir return bot challenges), and they weren't bypassed.
 
-### CEO letters: counts + short excerpts only
+### CEO letters and remarks: counts + short excerpts only
 The Fed's transcripts are US-government works (public domain), so they're embedded in
 full. CEO letters are copyrighted, so the repo and the page contain **only derived data**:
 per-letter word counts, and for hover, a limited set of individual excerpt sentences,
@@ -133,11 +162,13 @@ each linked to the original letter.
   not-yet-covered content words. A plain "10 sentences per word" cap wasn't enough on its
   own: words used once or twice would pull in 94–100% of all sentences.
   The current share of each letter's sentences embedded: Karp 25.7–32.4%,
-  Jassy 28.5–28.9%, Abel 27.5%. `build.py` prints these numbers and stops with an error if
+  Jassy 28.5–28.9%, Abel 27.5%, Pichai 25.2–33.3%. `build.py` prints these numbers and stops with an error if
   any letter would go over 50%.
 - The popover shows at most **10 sentences per word** for CEOs, with no "Show all", and
   a note "Showing k of N sentences — read the full letter at <source>". Some words
   show "No excerpt shown for this word"; the count is still exact.
+- Earnings calls (Pichai): only his own prepared section, from his speaker label to the next executive's
+  label; the operator, the IR safe-harbor text, other executives and the analyst Q&A are dropped.
 - Letters are trimmed to text the CEO wrote: no signatures or titles, P.S. notes,
   epigraph quotes, reprinted letters (Amazon's 1997 Bezos letter), tables, page
   headers, or page numbers. Berkshire's PDF links open at the page the sentence is on
@@ -148,7 +179,7 @@ each linked to the original letter.
 |---|---|
 | `fetch.py` | Downloads the chair's speeches + testimony from federalreserve.gov's JSON feeds (`/json/ne-speeches.json`, `/json/ne-testimony.json`), pulls out just the body text (no nav, footnotes, or editorial notes), and saves it to `transcripts/*.txt`, with source URLs/dates in `transcripts/index.json`. |
 | `fetch.py` → `transcripts/warsh/` | Cleaned text of each Fed speech, plus `index.json` metadata. |
-| `fetch_ceo.py` | **Manual**, not run by `publish.sh`. Downloads the CEO letters from the companies' own sites (Palantir's letter pages, aboutamazon.com articles, and the Berkshire PDF via `pdftotext`) into `local_sources/<person>/` (gitignored). It's polite (about 1 request/s, identifying User-Agent) and only fetches what's missing (`--refresh` re-downloads; `--only karp` limits it to one person). Karp's 4 newest letters are discovered from palantir.com/investors (`max` in `PEOPLE`); the Amazon letter URLs are listed in the script; Berkshire's are `letters/<year>ltr.pdf` for 2025 onward (Abel's years as CEO). |
+| `fetch_ceo.py` | **Manual**, not run by `publish.sh`. Downloads the CEO letters from the companies' own sites (Palantir's letter pages, aboutamazon.com articles, and the Berkshire PDF via `pdftotext`, Alphabet's earnings-call transcript pages on abc.xyz found through its IR feed, and Apple's investor event feed for Ternus) into `local_sources/<person>/` (gitignored). Each document's metadata has a `source_type`. It's polite (about 1 request/s, identifying User-Agent) and only fetches what's missing (`--refresh` re-downloads; `--only karp` limits it to one person). Karp's 4 newest letters are discovered from palantir.com/investors (`max` in `PEOPLE`); the Amazon letter URLs are listed in the script; Berkshire's are `letters/<year>ltr.pdf` for 2025 onward (Abel's years as CEO). |
 | `fetch_officials.py` | **Manual**, not run by `publish.sh`. Cabinet (`--only cabinet`), congressional leaders (`--only congress`) and Supreme Court (`--only scotus`), or one slug (`--only thune`). Writes `transcripts/<slug>/` (committed; public domain); raw downloads are cached in `raw/officials/` (gitignored). Idempotent: skips people already fetched unless `--refresh`. Polite (about 1 request/s, identifying User-Agent). The Court needs PyMuPDF (`pip install pymupdf`) for ligature repair. |
 | `people.json` | Categories, people, display names, sources, and `policy` (`full` = embed all sentences, `excerpt` = derived data only). |
 | `derived/` | Committed derived data for each `excerpt`-policy person (CEOs): per-letter word counts and the excerpt sentences. No full text. |

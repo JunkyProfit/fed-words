@@ -9,7 +9,17 @@ derived/<slug>.json, which is what gets committed.
 Manual script (not part of publish.sh). Safe to rerun: existing documents are kept
 and not re-downloaded unless --refresh is given. ~1 request/second, declared UA.
 
-Usage: python3 fetch_ceo.py [--only karp,jassy,abel] [--refresh]
+Usage: python3 fetch_ceo.py [--only karp,jassy,abel,pichai,ternus] [--refresh]
+
+Source types (shown as a label on each document in the site):
+  karp / jassy / abel  "Shareholder letter"            (signed annual/quarterly letters)
+  pichai               "Earnings call prepared remarks" (only the CEO's own prepared section of the
+                       call transcript Alphabet publishes on abc.xyz; operator, other executives and
+                       the analyst Q&A are discarded)
+  ternus               "Earnings call prepared remarks" -- Apple publishes only a press release and an
+                       audio webcast on investor.apple.com (no transcript or prepared-remarks text), so
+                       this lists Apple's earnings events after Sept 1, 2026 and saves text ONLY if Apple
+                       itself attaches a transcript/remarks document. Until then it saves nothing.
 """
 import argparse, html, json, os, re, subprocess, sys, tempfile, time, urllib.request
 from datetime import datetime
@@ -27,7 +37,14 @@ PEOPLE = {
               "role": "President & CEO, Amazon", "org": "Amazon"},
     "abel": {"name": "Greg Abel", "display": "Greg Abel", "category": "CEOs",
              "role": "CEO, Berkshire Hathaway", "org": "Berkshire Hathaway"},
+    "pichai": {"name": "Sundar Pichai", "display": "Sundar Pichai", "category": "CEOs",
+               "role": "CEO, Alphabet and Google", "org": "Alphabet", "max": 8,
+               "type": "remarks", "source_type": "Earnings call prepared remarks"},
+    "ternus": {"name": "John Ternus", "display": "John Ternus", "category": "CEOs",
+               "role": "CEO, Apple", "org": "Apple", "since": "2026-09-01",
+               "type": "remarks", "source_type": "Earnings call prepared remarks"},
 }
+SOURCE_TYPE = {"letter": "Shareholder letter", "remarks": "Earnings call prepared remarks"}
 
 _last = [0.0]
 def get(url, binary=False):
@@ -155,6 +172,76 @@ def abel_extract(pdf_path):
         if stop: break
     return date, paras, pages, dropped
 
+# ---------------- Alphabet (abc.xyz: company-published earnings call transcripts) -------------
+ABC = "https://abc.xyz"
+def pichai_list():
+    feed = json.loads(get(ABC + "/feed/FinancialReport.svc/GetFinancialReportList?LanguageId=1&reportTypes="
+                          "First%20Quarter|Second%20Quarter|Third%20Quarter|Fourth%20Quarter&pageSize=-1&pageNumber=0"
+                          "&tagList=&includeTags=true&year=-1&excludeSelection=1"))
+    out, seen = [], set()
+    for r in feed["GetFinancialReportListResult"]:
+        q = {"First Quarter": 1, "Second Quarter": 2, "Third Quarter": 3, "Fourth Quarter": 4}.get(r.get("ReportSubType"))
+        for x in r.get("Documents", []):
+            if "Transcript" not in (x.get("DocumentTitle") or "") or not q: continue
+            key = (int(r["ReportYear"]), q)
+            if key in seen: continue
+            seen.add(key); url = x["DocumentPath"]
+            if url.startswith("/"): url = ABC + url
+            out.append({"id": f"goog-q{q}-{key[0]}", "url": url, "title": f"Q{q} {key[0]} Earnings Call: Prepared Remarks"})
+    return sorted(out, key=lambda c: c["id"][-4:] + c["id"][6], reverse=True)
+
+def _speaker_label(t):
+    m = re.match(r"^([A-Z][\w.\- ]{2,40}),\s*[^:]{2,80}:\s*(.*)$", t)
+    return m
+
+def pichai_extract(raw):
+    """Keep only Sundar Pichai's prepared section: from his first speaker label up to the next
+    speaker label (another executive). The operator, IR safe-harbor text and the Q&A are dropped."""
+    m = re.search(r"\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2}), (20\d\d)", raw)
+    date = datetime.strptime(m.group(0), "%B %d, %Y").strftime("%Y-%m-%d") if m else None
+    paras, on = [], False
+    for p in re.findall(r"<p[^>]*>(.*?)</p>", raw, re.S):
+        p = re.sub(r"</?(?:span|em)\b[^>]*>", "", p)          # older pages wrap text and labels in styled spans
+        p = re.sub(r"<(/?)b\b[^>]*>", r"<\1strong>", p)        # ...and some use <b> for speaker labels
+        lab = re.match(r"\s*<strong>(.*?)</strong>(.*)$", p, re.S)
+        if lab and re.search(r":\s*$", clean(re.sub(r"<[^>]+>", " ", lab.group(1)))):
+            who = clean(re.sub(r"<[^>]+>", " ", lab.group(1)))
+            if on: break                                   # next speaker -> end of Sundar's prepared remarks
+            if who.startswith("Sundar Pichai"):
+                on = True; p = lab.group(2)
+            else: continue
+        if not on: continue
+        t = clean(re.sub(r"<[^>]+>", " ", p)).replace("\u2011", "-")
+        if t: paras.append(t)
+    if not paras: raise ValueError("Sundar Pichai's prepared remarks not found on the page")
+    return date, paras
+
+# ---------------- Apple (investor.apple.com) -------------------------------------------------
+def ternus_list():
+    """Apple's earnings events since the CEO transition. Apple has so far published only a press
+    release and an audio webcast per call; we save text only when Apple attaches a transcript or
+    prepared-remarks document of its own (never third-party transcripts)."""
+    feed = json.loads(get("https://investor.apple.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3"
+                          "&eventDateFilter=3&includeFinancialReports=true&includePresentations=true&includePressReleases=true"
+                          "&sortOperator=1&pageSize=12&pageNumber=0&tagList=&includeTags=true&year=-1&excludeSelection=1"))
+    out = []
+    for e in feed.get("GetEventListResult") or []:
+        d = datetime.strptime(e["StartDate"][:10], "%m/%d/%Y").strftime("%Y-%m-%d")
+        if d < PEOPLE["ternus"]["since"]: continue
+        docs = [a for a in (e.get("Attachments") or []) if re.search(r"(?i)transcript|remarks", a.get("Title") or "")]
+        print(f"[ternus] {d} {e.get('Title')}: {'company transcript/remarks found' if docs else 'no Apple-published transcript or remarks (webcast/press release only)'}")
+        for a in docs:
+            out.append({"id": "aapl-" + d, "url": a.get("Url") or a.get("DocumentPath"), "date": d, "title": clean(e["Title"]) + ": Prepared Remarks"})
+    return out
+
+def ternus_extract(raw):
+    """Apple has not published one yet, so the format is unknown: keep the CEO's section between his
+    speaker label and the next speaker label (same rule as Alphabet)."""
+    txt = clean(re.sub(r"<[^>]+>", "\n", raw)) if "<" in raw[:2000] else raw
+    m = re.search(r"John Ternus[^:\n]{0,40}:(.*?)(?=\n?[A-Z][a-z]+ [A-Z][a-z]+[^:\n]{0,40}:|$)", txt, re.S)
+    if not m: raise ValueError("John Ternus's remarks not found")
+    return [clean(x) for x in re.split(r"\n\s*\n", m.group(1)) if clean(x)]
+
 # ---------------------------------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser()
@@ -166,15 +253,17 @@ def main():
         idx = json.loads(idx_path.read_text()) if idx_path.exists() else []
         have = {m["id"]: m for m in idx if (d / m["file"]).exists()}
         try:
-            cands = {"karp": karp_list, "jassy": jassy_list, "abel": abel_list}[slug]()
+            cands = {"karp": karp_list, "jassy": jassy_list, "abel": abel_list,
+                     "pichai": pichai_list, "ternus": ternus_list}[slug]()
         except Exception as e:
             print(f"[{slug}] WARN could not list documents: {e}; keeping {len(have)} saved"); cands = []
-        if slug == "karp": cands = cands[:P["max"]]
+        if P.get("max"): cands = cands[:P["max"]]
         for c in cands:
             if c["id"] in have and not a.refresh: continue
             try:
                 meta = {"id": c["id"], "file": c["id"] + ".txt", "person": P["name"], "category": P["category"],
-                        "role": P["role"], "org": P["org"], "url": c["url"], "type": "letter",
+                        "role": P["role"], "org": P["org"], "url": c["url"], "type": P.get("type", "letter"),
+                        "source_type": P.get("source_type", SOURCE_TYPE["letter"]),
                         "source": urllib.parse.urlparse(c["url"]).netloc.replace("www.", ""),
                         "fetched": datetime.now().isoformat(timespec="seconds")}
                 if slug == "karp":
@@ -184,6 +273,16 @@ def main():
                     raw = get(c["url"]); atomic_write(d / "raw" / (c["id"] + ".html"), raw)
                     title, date, paras = jassy_extract(raw)
                     meta.update(title=title.replace("Amazon CEO Andy Jassy’s ", "").replace("Amazon CEO Andy Jassy's ", ""), date=date)
+                elif slug == "pichai":
+                    raw = get(c["url"]); atomic_write(d / "raw" / (c["id"] + ".html"), raw)
+                    date, paras = pichai_extract(raw); meta.update(title=c["title"], date=date)
+                elif slug == "ternus":
+                    raw = get(c["url"], binary=True)
+                    if raw[:4] == b"%PDF":
+                        rp = d / "raw" / (c["id"] + ".pdf"); atomic_write(rp, raw)
+                        raw = subprocess.run(["pdftotext", str(rp), "-"], capture_output=True, text=True, check=True).stdout
+                    else: raw = raw.decode("utf-8", "replace")
+                    paras = ternus_extract(raw); meta.update(title=c["title"], date=c["date"])
                 else:
                     try: pdf = get(c["url"], binary=True)
                     except urllib.error.HTTPError as e:
