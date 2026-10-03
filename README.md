@@ -90,8 +90,8 @@ out when you first open the site; uncheck it to list every word), and
 sortable Rank / Word / Count columns. People and their metadata are listed in
 `people.json`.
 
-**Timeframe selector:** the Range row (All / None / per-year chips) and a selection summary are
-always visible; the document list sits behind a **Choose documents** expander (closed by default).
+**Timeframe selector:** one slim row inside the results card, right under the red stats: All / None, per-year
+chips and a small **Choose documents** toggle (the document list opens below it; closed by default).
 Each document shows its date, title and word count on one line, and its type, location/note and
 source link on a second line. Check one or more documents, use "only" to pick a single
 one, tick a year to add or remove all of that year's speeches, or use All / None.
@@ -114,10 +114,12 @@ The speech title link is a plain fallback for other browsers.
 
 **Ad slots:** three faint placeholder units (a mock hairline mark, the made-up name "Sponsor", "Your ad here",
 and a tiny "Advertisement" label; no real brands): a leaderboard below the results card (728x90, 320x50 on phones), a
-300x250 sidebar unit below Who/Timeframe (desktop only) and a 300x250 in-content unit between the method note and
+300x250 sidebar unit below Who (desktop only) and a 300x250 in-content unit between the method note and
 About. They never sit above the red stats or next to controls. To switch to AdSense, fill in the single `ADS` config
 block in `build.py` (`client` = your `ca-pub-...` id, plus each slot's `id`); the AdSense script then loads and real
-units replace the placeholders.
+units replace the placeholders. Each placeholder (and the "Sponsor your ad here" text link under it) is an
+"Advertise here" mailto link with the subject "Advertising on Mouth Math"; the address is assembled in JS
+(`AD_MAIL` in `build.py`) so it never appears as plain text in the HTML.
 
 **Polish:** the red stats count up when a person loads (skipped with prefers-reduced-motion); a **Share** button in the
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
@@ -136,10 +138,13 @@ your earlier setting (on, unless you unchecked it). Hover a word for its count a
 **Layout order (every view, every screen size):** the person's name ("Every word <person> said, ranked"), then the
 red stats (documents, total words, unique words, words shown), then the Word Cloud or the Super Math table. The stats
 live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
-screens (900px and up) Who and Timeframe sit in a left sidebar in both views.
-**Phones (640px and below):** a one-line header (small logo and headline, no subline); category, person and A–Z
-chips in single horizontal-scroll rows; the View cards shrink to two small pills; Timeframe is one summary line
-with a **Change** button (the range chips and document list stay collapsed until you tap it); About starts collapsed
+screens (900px and up) the Who panel sits in a left sidebar in both views.
+**Header:** logo (red-outline lips, `assets/logo.svg`), a compact headline block, then the red **Word Cloud** and green
+**Super Math** view buttons (green = one CSS variable, `--money`; set it to a gray to switch). The Fed Chair / CEOs /
+US Government category buttons sit at the top of the Who panel, with that category's people right below.
+**Phones (640px and below):** logo and headline on one line, the two view buttons in a row under it (no subline); category, person and A–Z
+chips in single horizontal-scroll rows; the Timeframe row stays one line (years scroll sideways, 36px tap targets,
+13px text); About starts collapsed
 (the header's About link opens it). At 390×844 the red stats are at about y=310 and the table or cloud starts right below.
 
 **Word Cloud motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
@@ -152,9 +157,7 @@ shown with Motion on, from jsDelivr with Subresource Integrity
 (`sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii`). The sketch pauses when the
 cloud is off-screen (IntersectionObserver) and is removed in Super Math view. With `prefers-reduced-motion:
 reduce`, Motion off, or if the CDN can't be reached, the static layout is used.
-**Date scrubber:** when 2+ documents are selected, a slider (and ▶ Play) steps through them in date order;
-word sizes follow the cumulative counts up to that document (smoothly in Motion, in place when static;
-since counts only grow, words never overlap). The popover always covers all selected documents.
+The cloud always shows the full selected timeframe (no date slider or play button).
 Up to 300 bodies (the Top 300 option).
 
 **Design:** black line-art theme matching the logo (black header with cream text, thin black borders and

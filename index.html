@@ -140,8 +140,8 @@ body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-cab .only-cab,body.mod
 @media (min-width:900px){
  body main{display:grid;grid-template-columns:300px minmax(0,1fr);column-gap:16px;max-width:1280px;align-items:start}
  body main>*{grid-column:1/-1}
- body .topgrid{grid-column:1;grid-row:2/span 2;display:block}
- body #words{grid-column:2;grid-row:2/span 2}
+ body .topgrid{grid-column:1;grid-row:1/span 2;display:block}
+ body #words{grid-column:2;grid-row:1/span 2}
  body .stat{min-width:110px}}
 @media (min-width:1100px){body main{grid-template-columns:340px minmax(0,1fr)}}
 /* Word Cloud, narrow screens: results right after the compact Who + Timeframe area; stats and filters below the cloud */
@@ -168,7 +168,7 @@ body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-cab .only-cab,body.mod
  #words h2#personTitle{font-size:16px}
  body.view-visual #words{display:flex;flex-direction:column}body.view-visual #words>*{order:2}
  body.view-visual #personTitle{order:0}body.view-visual #words>.only-visual{order:1;display:flex;flex-direction:column}
- body.view-visual #cloud{order:0}body.view-visual .scrub{order:1;margin-top:8px}body.view-visual .cloud-bar{order:2;margin-top:6px}body.view-visual #words .controls{margin:8px 0 0}}
+ body.view-visual #cloud{order:0}body.view-visual .cloud-bar{order:2;margin-top:6px}body.view-visual #words .controls{margin:8px 0 0}}
 body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none}
 .cloud-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:2px 0 6px;font-size:14px}
 .cloud-bar select{font:inherit;font-size:14px;padding:3px 6px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
@@ -181,11 +181,6 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 #cloud.live span{color:transparent!important;background:transparent!important;font-size:0!important;padding:0!important;z-index:1}
 #cloud.live span:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .cloud-bar .motion{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
-.scrub{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 8px;font-size:13px}.scrub[hidden]{display:none}
-.scrub input[type=range]{flex:1;min-width:140px;accent-color:var(--num-red,#9e1b24)}
-.scrub .play{flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:12px;line-height:1}
-.scrub .play:hover{border-color:var(--ink)}#scrubLbl{color:var(--muted);min-width:0;flex-basis:100%}
-@media (min-width:640px){#scrubLbl{flex-basis:auto;flex:2}}
 /* ---- Black line-art theme (matches the logo's thin black strokes); delete this block to revert ---- */
 :root{--ink:#141413;--cream:#f5efe2;--rule:#1c1b19;--hl:#ece3cf;--ink:#141413}
 body{color:var(--ink)}a{color:var(--ink);text-decoration-color:rgba(20,20,19,.45);text-underline-offset:2px}a:hover{text-decoration-color:var(--ink)}
@@ -222,7 +217,7 @@ tr[data-w]:hover td{background:#f6efe0}tr.active td{background:var(--hl)}
 #cloud span:hover,#cloud span.active{background:var(--hl)}
 #pop{border:1px solid var(--rule);box-shadow:0 10px 30px rgba(20,20,19,.18)}#pop .ph{border-bottom:1px solid var(--rule)}
 #pop .more{border-color:var(--ink);color:var(--ink)}#pop .more:hover{background:var(--ink);color:var(--cream)}
-.scrub .play{border:1px solid var(--rule)}.scrub .play:hover{background:var(--ink);color:var(--cream)}
+
 :focus-visible{outline-color:var(--ink)}
 @media (max-width:640px){#cats{border:0}#cats button{border:1px solid var(--rule);background:var(--card);padding:5px 11px;font-size:13px}#cats button.on{background:var(--ink);color:var(--cream)}}
 /* ---- A-Z last-name index (CEOs, US Government) ---- */
@@ -334,7 +329,7 @@ button.chip,label.chip,#cats button,.seg button{letter-spacing:0}
 /* tablets (641-899): Word Cloud keeps controls first, then the words card (stats sit inside it, above the cloud) */
 
 /* ==== v4 "black" theme: black page, black panels, cream type, hairline rules, red for numbers. Delete this block to revert ==== */
-:root{--num-red:#ff5449;--bg:#070707;--card:#111111;--panel2:#171717;--ink:#f3eee4;--cream:#0b0b0b;--muted:#a49e93;--rule:#2c2a27;--line:#232120;
+:root{--num-red:#ff5449;--money:#85bb65;--bg:#070707;--card:#111111;--panel2:#171717;--ink:#f3eee4;--cream:#0b0b0b;--muted:#a49e93;--rule:#2c2a27;--line:#232120;
  --hair:rgba(243,238,228,.14);--hl:#3b1715;--chip-on:#f3eee4;--chip-ink:#0b0b0b;color-scheme:dark}
 html,body{background:var(--bg);color:var(--ink)}
 a{color:var(--ink);text-decoration-color:rgba(243,238,228,.4)}a:hover{text-decoration-color:var(--num-red)}
@@ -378,8 +373,6 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 #cloud{background:#0b0b0b;border:1px solid var(--line);border-radius:3px;
  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-position:-1px -1px}
 #cloud span:hover,#cloud span.active{background:var(--hl)}
-.scrub .play{background:transparent;color:var(--ink);border:1px solid var(--rule)}.scrub .play:hover{background:var(--ink);color:#0b0b0b}
-.scrub input[type=range]{accent-color:var(--num-red)}
 .notice{background:#1b160c;border-color:#5a4520;color:var(--ink)}.notice strong{color:#e9c46a}
 :focus-visible{outline:2px solid var(--num-red);outline-offset:2px}
 .tftog,.abtog{color:var(--ink)}#timeframe>.tftog{background:transparent;border-color:var(--rule)}
@@ -395,6 +388,12 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 .vcard[data-view="visual"]:hover{background:#1d1110}
 .vcard[data-view="visual"][aria-pressed="true"]{background:linear-gradient(180deg,#2a0f0d,#1a0a09);border-color:var(--num-red);box-shadow:inset 0 0 0 1px var(--num-red),0 0 24px rgba(255,84,73,.18)}
 .vcard[data-view="visual"][aria-pressed="true"] .vt b{color:#fff}.vcard[data-view="visual"][aria-pressed="true"] .vt small{color:#ffb3ad}
+/* Super Math card: dollar-bill green, ONE variable (--money in :root above; set it to e.g. #a49e93 for gray) */
+.vcard[data-view="standard"]{border-color:var(--money);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--money) 50%,transparent)}
+.vcard[data-view="standard"] .vt b{color:var(--money)}
+.vcard[data-view="standard"]:hover{background:color-mix(in srgb,var(--money) 9%,#111)}
+.vcard[data-view="standard"][aria-pressed="true"]{background:linear-gradient(180deg,color-mix(in srgb,var(--money) 22%,#0b0b0b),color-mix(in srgb,var(--money) 12%,#0b0b0b));border-color:var(--money);box-shadow:inset 0 0 0 1px var(--money),0 0 24px color-mix(in srgb,var(--money) 18%,transparent)}
+.vcard[data-view="standard"][aria-pressed="true"] .vt b{color:#fff}.vcard[data-view="standard"][aria-pressed="true"] .vt small{color:color-mix(in srgb,var(--money) 55%,#fff)}
 .vcard[aria-pressed="true"]::after{display:none}
 /* Category tiles: the first thing to click */
 .topbar{display:flex;align-items:stretch;gap:16px;margin:0 0 14px}
@@ -432,6 +431,14 @@ aside.ad .admark{width:30px;height:30px;fill:none;stroke:#6a655d;stroke-width:1}
 aside.ad .adtx{display:flex;flex-direction:column;line-height:1.15}
 aside.ad .adtx b{font-size:15px;font-weight:700;letter-spacing:-.02em;color:#77726a}aside.ad .adtx small{font-size:11px;color:#6a655d}
 aside.ad[data-slot="side"]{margin:16px 0 0;width:100%;max-width:300px}
+aside.ad a.adbox{position:relative;text-decoration:none;color:inherit;cursor:pointer;transition:border-color .15s,background .15s}
+aside.ad a.adbox:hover,aside.ad a.adbox:focus-visible{border-color:var(--num-red);background:#140d0c}
+aside.ad a.adbox:focus-visible{outline:2px solid var(--num-red);outline-offset:2px}
+aside.ad .adhint{position:absolute;right:8px;bottom:6px;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--num-red);opacity:0;transition:opacity .15s}
+aside.ad a.adbox:hover .adhint,aside.ad a.adbox:focus-visible .adhint{opacity:1}
+@media (hover:none),(max-width:640px){aside.ad .adhint{display:none}}   /* touch: the 'Sponsor your ad here' link below does the job */
+aside.ad a.adcta{display:inline-block;margin:6px 0 0;font-size:12.5px;color:var(--ink);text-decoration:underline;text-decoration-color:var(--num-red);text-underline-offset:3px}
+aside.ad a.adcta:hover{color:var(--num-red)}
 aside.ad[data-slot="incontent"]{margin:24px auto}
 aside.ad[data-slot="leader"]{margin:24px auto 18px}
 @media (max-width:899px){aside.ad[data-slot="side"]{display:none}}
@@ -470,34 +477,99 @@ tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num
 header .logo{background:none!important;padding:0!important;box-shadow:none!important;border-radius:0!important}
 header .logo img{height:44px!important;width:auto}
 @media (max-width:640px){header .logo img{height:26px!important}header .brand{padding-right:0!important}header .titles{padding-right:122px!important}}  /* phones: reserve the Share/About width once */
+/* ---- Header: logo | compact headline block | red Word Cloud + green Super Math buttons | Share/About ---- */
+header .brand{flex-wrap:nowrap;align-items:center;gap:20px;padding-right:150px!important}
+header .titles{flex:0 1 auto;max-width:470px;padding-right:0!important}
+header h1{line-height:1.12;margin:0}
+header p#siteSub{max-width:470px!important;font-size:12.5px!important;line-height:1.3!important;margin:3px 0 0!important}
+header .hact{top:50%!important;transform:translateY(-50%)!important}
+header .viewbar.hview{flex:none;margin:0;gap:0}header .hview .lbl,header .hview #viewHint{display:none}
+header .hview .vcards{display:flex;gap:10px}
+header .hview .vcard{--vc:var(--num-red);min-width:0;width:auto;padding:7px 16px 7px 9px;gap:11px;border:2px solid var(--vc)!important;border-radius:6px;
+ background:#0b0b0b;box-shadow:none;transition:background .15s,box-shadow .15s}
+header .hview .vcard[data-view="standard"]{--vc:var(--money)}
+header .hview .vcard svg{width:58px;height:38px}
+header .hview .vcard .vt b{font-size:17px;color:var(--vc);white-space:nowrap}header .hview .vcard .vt small{font-size:12px;color:#a49e93;white-space:nowrap}
+header .hview .vcard:hover{background:color-mix(in srgb,var(--vc) 12%,#0b0b0b)}
+header .hview .vcard[aria-pressed="true"]{background:color-mix(in srgb,var(--vc) 34%,#0b0b0b);box-shadow:0 0 0 1px var(--vc),0 0 22px color-mix(in srgb,var(--vc) 28%,transparent)}
+header .hview .vcard[aria-pressed="true"] .vt b{color:#fff}header .hview .vcard[aria-pressed="true"] .vt small{color:color-mix(in srgb,var(--vc) 45%,#fff)}
+header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media (max-width:1239px) and (min-width:641px){header .hview .vcard svg{display:none}header .hview .vcard{padding:7px 14px}header .titles,header p#siteSub{max-width:330px!important}}
+@media (max-width:959px) and (min-width:641px){header .brand{flex-wrap:wrap;row-gap:10px}header .viewbar.hview{flex-basis:100%}header .hact{top:44px!important;transform:none!important}}
+@media (max-width:640px){
+ header .brand{flex-wrap:wrap;gap:8px;row-gap:8px;padding-right:0!important}
+ header .titles{flex:1;max-width:none;padding-right:122px!important}
+ header .hact{top:7px!important;transform:none!important}
+ header .viewbar.hview{flex-basis:100%;width:100%;margin:0 0 1px}header .hview .vcards{width:100%;gap:8px}
+ header .hview .vcard{flex:1;width:auto;justify-content:center;padding:7px 8px;border-radius:5px;gap:0}
+ header .hview .vcard svg,header .hview .vcard .vt small{display:none}
+ header .hview .vcard .vt{align-items:center}header .hview .vcard .vt b{font-size:15.5px}}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+/* ---- Categories live at the top of the Who panel (no separate tile row, no "Who" heading) ---- */
+#picker .catbar{margin:0 0 12px}
+#picker #cats.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0}
+#picker #cats button.cat{display:flex;flex-direction:row;align-items:center;gap:9px;min-height:0;padding:8px 11px;border-radius:4px;white-space:nowrap}
+#picker #cats .ci svg{width:20px;height:20px}
+#picker #cats .ct{display:flex;flex-direction:column;min-width:0}
+#picker #cats .ct b{font-size:14.5px;line-height:1.15}#picker #cats .ct small{font-size:11.5px;margin:1px 0 0}
+@media (min-width:900px){   /* narrow left column: a compact vertical list */
+ #picker #cats.seg{grid-template-columns:1fr;gap:6px}
+ #picker #cats button.cat{padding:7px 11px}
+ #picker #cats .ct{flex-direction:row;align-items:baseline;justify-content:space-between;flex:1;gap:8px}
+ #picker #cats .ct small{margin:0}}
+@media (max-width:640px){
+ #picker{padding-left:12px;padding-right:12px}
+ #picker .catbar{margin:0 0 8px}
+ #picker #cats.seg{gap:6px}
+ #picker #cats button.cat{display:grid;grid-template-columns:auto 1fr;column-gap:5px;row-gap:2px;padding:6px 8px}
+ #picker #cats .ct{display:contents}#picker #cats .ct b{grid-column:1/-1;grid-row:1;font-size:13px;letter-spacing:-.02em}
+ #picker #cats .ci{grid-column:1;grid-row:2}#picker #cats .ci svg{width:13px;height:13px}#picker #cats .ct small{grid-column:2;grid-row:2;font-size:11px}}
+@media (max-width:379px){#picker #cats .ct b{font-size:12px}#picker #cats button.cat{padding:6px 6px}}
+/* ---- Timeframe: one slim row right under the red stats (All/None, years, Choose documents) ---- */
+#tfbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:-2px 0 12px;font-size:13px;line-height:1.2}
+#tfbar .tfl{font-size:13px;font-weight:700;color:var(--muted);margin-right:2px}
+#tfbar .chip,#tfbar label.chip{font-size:13px;padding:4px 10px;min-height:28px;margin:0;display:inline-flex;align-items:center;gap:4px}
+#tfbar .tfsep{width:1px;height:18px;background:var(--rule);margin:0 2px}
+#tfbar .yrs{display:flex;flex:0 1 auto;min-width:0;gap:6px;overflow-x:auto;scrollbar-width:none;padding:0}
+#tfbar .yrs::-webkit-scrollbar{display:none}
+#tfbar #years label.chip{padding:4px 10px}#tfbar #years label.chip .muted{font-size:12px}
+#tfbar #docPick{margin:0 0 0 auto;padding:0;border:0}
+#tfbar #docPick>summary{font-size:13px;font-weight:700;padding:4px 11px;min-height:28px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);cursor:pointer}
+#tfbar #docPick>summary:hover{border-color:#5a5650}
+#tfbar #docPick[open]{flex-basis:100%;margin-left:0}
+#tfbar #docPick[open]>summary{margin-bottom:4px}
+#tfbar #docPick .speeches{max-height:340px;overflow:auto}
+@media (max-width:640px){
+ #tfbar{gap:6px;margin:0 0 8px}#tfbar .tfl,#tfbar .tfsep{display:none}
+ #tfbar .chip,#tfbar label.chip,#tfbar #docPick>summary{min-height:36px;padding:6px 11px}
+ #tfbar .yrs{flex:1 1 0;min-width:60px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:10px}
+ #tfbar{flex-wrap:nowrap}#tfbar:has(#docPick[open]){flex-wrap:wrap}
+ #tfbar #docPick{margin-left:0;flex:none}#tfbar #docPick>summary{white-space:nowrap}#tfbar #docPick>summary #docCount{display:none}
+ #tfbar #docPick>summary::before{display:none}#tfbar #docPick>summary::after{content:" \25BE";font-size:11px}#tfbar #docPick[open]>summary::after{content:" \25B4"}
+ #tfbar .chip{flex:none}#tfbar #years label.chip{position:relative}
+ #tfbar #years input{position:absolute;opacity:0;width:1px;height:1px;margin:0}   /* chip fill shows on/off; still focusable */
+ #tfbar #years label.chip:focus-within{outline:2px solid var(--ink);outline-offset:1px}
+ body.view-visual #words>#tfbar{order:0}}
+@media (max-width:379px){#tfbar{flex-wrap:wrap}#tfbar .yrs{flex-basis:100%;order:5}}   /* very narrow phones: years on their own line */
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm2" width="880" height="210" alt="Mouth Math"></a>
 <div class="titles"><h1 id="siteTitle">Every word they said, ranked</h1>
-<p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div></div></header>
-<main>
-<div class="topbar"><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div></nav>
-<div class="viewbar" role="group" aria-label="View"><span class="lbl">View</span>
+<p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
+<div class="viewbar hview" role="group" aria-label="View">
 <div class="vcards" id="views"><button type="button" class="vcard" data-view="visual" aria-pressed="true"><svg viewBox="0 0 76 50" aria-hidden="true"><rect x="1.5" y="1.5" width="73" height="47" rx="2" fill="#fffdf8" stroke="#2b2a26" stroke-width="1.6"/><rect x="5.5" y="5.5" width="65" height="39" fill="none" stroke="#2b2a26" stroke-width=".8"/><g fill="#2b2a26" font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="38" y="29" font-size="13" font-weight="700">said</text><text x="20" y="16" font-size="7" font-weight="700">every</text><text x="55" y="17" font-size="8.5" font-weight="700">word</text><text x="19" y="38" font-size="6">we</text><text x="55" y="39" font-size="7.5" font-weight="700">math</text><text x="37" y="40" font-size="5.5">ranked</text><text x="61" y="29" font-size="5">yes</text><text x="15" y="27" font-size="5.5">now</text></g></svg><span class="vt"><b>Word Cloud</b><small>Bigger = said more</small></span></button>
 <button type="button" class="vcard" data-view="standard" aria-pressed="false"><svg viewBox="0 0 76 50" aria-hidden="true" fill="none" stroke="#2b2a26" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h36l8 8v36H16z" fill="#fffdf8"/><path d="M52 3v8h8"/><path d="M21 14h3M21 21h3M21 28h3M21 35h3M21 42h3" stroke-width="1.6"/><path d="M28 14h26M28 21h21M28 28h17M28 35h12M28 42h8" stroke-dasharray="3 2.2"/></svg><span class="vt"><b>Super Math</b><small>Ranked table</small></span></button></div>
 <span class="muted" id="viewHint"></span></div></div>
+</header>
+<main>
 <div class="topgrid">
-<section class="card" id="picker"><div class="pk"><h2>Who</h2>
+<section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div></nav>
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
 <div id="az" role="toolbar" aria-label="Filter by last name" aria-controls="persons" hidden></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
 <div id="personInfo"><span class="eyebrow" id="eyebrow"></span> <span class="muted" id="personMeta"></span></div>
 </div></section>
-<section class="card" id="timeframe"><h2>Timeframe</h2>
-<div class="tf-row tf-range"><span class="lbl">Range</span>
-  <button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button></div>
-<div class="tf-row tf-years" role="group" aria-labelledby="yrsLbl"><span class="lbl" id="yrsLbl">Years</span><div class="yrs" id="years"></div></div>
-<div id="selSummary"></div><button type="button" class="tftog" id="tfToggle" aria-expanded="false" aria-controls="timeframe">Change</button>
-<details id="docPick"><summary>Choose documents <span class="muted" id="docCount"></span></summary>
-<p class="muted hint">Tick one or more · “only” selects just that one</p>
-<ul class="speeches" id="docList"></ul></details>
-</section>
 <aside class="ad" data-slot="side" aria-label="Advertisement"></aside>
 </div>
 <section class="card" id="words">
@@ -508,6 +580,13 @@ header .logo img{height:44px!important;width:auto}
 <div class="stat"><b id="sUnique">–</b><span class="sl" data-s="unique">unique words</span></div>
 <div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
 </div>
+<div id="tfbar" role="group" aria-label="Timeframe"><span class="tfl">Timeframe</span>
+<button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><span class="tfsep" aria-hidden="true"></span>
+<div class="yrs" id="years" role="group" aria-label="Years"></div>
+<details id="docPick"><summary>Choose documents <span class="muted" id="docCount"></span></summary>
+<p class="muted hint">Tick one or more · “only” selects just that one</p>
+<ul class="speeches" id="docList"></ul></details>
+<div id="selSummary" class="sr-only"></div></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
 <label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
@@ -516,9 +595,6 @@ header .logo img{height:44px!important;width:auto}
 <option value="50">50</option><option value="150" selected>150</option><option value="300">300</option></select> words</label>
 <label class="motion" title="Animated p5.js word cloud (off = static layout)"><input type="checkbox" id="motion"> Motion</label>
 <span class="muted" id="cloudNote"></span></div>
-<div class="scrub" id="scrubBar" hidden><button type="button" id="play" class="play" aria-label="Play through the documents in date order">&#9654;</button>
-<input type="range" id="scrub" min="1" max="1" value="1" step="1" aria-label="Show counts through this document (date order)" aria-describedby="scrubLbl">
-<span id="scrubLbl" aria-live="polite"></span></div>
 <div id="cloud"></div></div>
 <table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th style="width:30%"></th></tr></thead>
 <tbody id="tb"></tbody></table>
@@ -572,8 +648,7 @@ qualifying floor remarks for each congressional leader of both parties, and the 
 Justice). Inclusion of a person does not imply endorsement, and this site is not affiliated with or endorsed by
 any government, institution, company, or person listed.</p>
 <p><strong>How it works:</strong> words are lowercased and counted across the documents you select.
-Two views: <strong>Word Cloud</strong> (the default; bigger words were said more often, and the slider replays the
-documents in date order) and <strong>Super Math</strong> (every word, counted and ranked in a table). Either way the
+Two views: <strong>Word Cloud</strong> (the default; bigger words were said more often, across the whole timeframe you select) and <strong>Super Math</strong> (every word, counted and ranked in a table). Either way the
 totals come first, in red.
 “Hide common stopwords” (on by default; uncheck it to see every word) removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
 <div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
@@ -674,7 +749,7 @@ async function setPerson(slug,docIds){
 
 // ---- phone toggles: Timeframe details and About start collapsed on small screens ----
 const PHONE=matchMedia('(max-width:640px)');
-$('tfToggle').onclick=()=>{const o=$('timeframe').classList.toggle('open');$('tfToggle').setAttribute('aria-expanded',o)};
+
 function setAbout(o){$('about').classList.toggle('open',o);$('aboutToggle').setAttribute('aria-expanded',o)}
 setAbout(!PHONE.matches||location.hash==='#about');
 $('aboutToggle').onclick=()=>setAbout(!$('about').classList.contains('open'));
@@ -868,11 +943,15 @@ const ADS={
     leader:   {id:'',w:728,h:90, mw:320,mh:50},     // below the results card
     side:     {id:'',w:300,h:250},                  // desktop left column, below Who / Timeframe (hidden on phones)
     incontent:{id:'',w:300,h:250,mw:300,mh:250}}};  // between the method note and About
+// "Advertise here": the placeholders (and the text link under each) open an email. The address is assembled at
+// runtime from char codes so it never appears as plain text in the HTML.
+const AD_MAIL=()=>'mailto:'+[115,112,97,100,117,110,107,101,108].map(c=>String.fromCharCode(c)).join('')+'@'+['gmail','com'].join('.')+'?subject='+encodeURIComponent('Advertising on Mouth Math');
 function renderAds(){let live=false;
   document.querySelectorAll('aside.ad').forEach(el=>{const c=ADS.slots[el.dataset.slot];if(!c){el.remove();return}
     ['w','h','mw','mh'].forEach(k=>el.style.setProperty('--a'+k,(c[k]||c[k.slice(1)])+'px'));
     if(ADS.client&&c.id){live=true;el.innerHTML=`<span class="adl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADS.client)}" data-ad-slot="${esc(c.id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`}
-    else el.innerHTML=`<span class="adl">Advertisement</span><div class="adbox" aria-hidden="true"><svg class="admark" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><path d="M20 6 32 27H8z"/><circle cx="20" cy="21" r="5"/></svg><span class="adtx"><b>Sponsor</b><small>Your ad here</small></span></div>`});
+    else{el.innerHTML=`<span class="adl">Advertisement</span><a class="adbox" title="Advertise here" aria-label="Advertise here: email about advertising on Mouth Math"><svg class="admark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 6 32 27H8z"/><circle cx="20" cy="21" r="5"/></svg><span class="adtx" aria-hidden="true"><b>Sponsor</b><small>Your ad here</small></span><span class="adhint" aria-hidden="true">Advertise here &rarr;</span></a><a class="adcta">Sponsor your ad here</a>`;
+      el.querySelectorAll('a').forEach(a=>a.href=AD_MAIL())}});
   if(live&&!document.querySelector('script[src*="adsbygoogle"]')){const sc=document.createElement('script');sc.async=true;sc.crossOrigin='anonymous';
     sc.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(ADS.client);document.head.appendChild(sc);
     document.querySelectorAll('ins.adsbygoogle').forEach(()=>(window.adsbygoogle=window.adsbygoogle||[]).push({}))}}
@@ -921,11 +1000,11 @@ function cloudLayout(words,W){
   return out;
 }
 function drawCloud(list){
-  stopSketch();stopPlay();
+  stopSketch();
   const W=cloud.clientWidth;cloudW=W;if(!W)return 0;const t0=performance.now();
   const N=+cloudN.value,words=list.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:1)).slice(0,N);
   if(!words.length){cloud.style.height='';cloud.innerHTML=`<div class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</div>`;
-    $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0,mode:'static'};BODIES=[];$('scrubBar').hidden=true;return 0}
+    $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0,mode:'static'};BODIES=[];return 0}
   const {placed,miss,tries,steps}=cloudLayout(words,W);
   const y0=Math.min(...placed.map(c=>c.y)),y1=Math.max(...placed.map(c=>c.y+c.h));
   cloud.style.height=Math.ceil(y1-y0+4)+'px';
@@ -933,7 +1012,7 @@ function drawCloud(list){
     `style="left:${(c.x+1).toFixed(1)}px;top:${(c.y-y0+1).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2}px;height:${c.h-2}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word?' class="top"':''}>${esc(x.word)}</span>`}).join('');
   TOPW=words[0].word;
   cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0),mode:'static'};
-  buildBodies(placed,y0,W);setupScrub();
+  buildBodies(placed,y0,W);markTop();
   if(motion.checked){const tok=++drawTok;ensureP5().then(()=>{if(tok===drawTok&&VIEW==='visual'&&BODIES.length)startSketch()})
     .catch(()=>{motion.checked=false;motion.disabled=true;$('cloudNote').textContent+=' · motion unavailable (p5.js could not load)'})}
   $('cloudNote').textContent=`Top ${placed.length.toLocaleString()} of ${list.length.toLocaleString()} words${hide.checked?' (stopwords hidden)':''}`+
@@ -941,15 +1020,15 @@ function drawCloud(list){
   return placed.length;
 }
 
-// ---- Word Cloud motion: p5.js sketch (words as soft physics bodies) + date scrubber ----
+// ---- Word Cloud motion: p5.js sketch (words as soft physics bodies); always the full selected timeframe ----
 // p5 is loaded only when Word Cloud is shown with Motion on: pinned version, Subresource Integrity checked by the browser.
 const P5_URL='https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js',P5_SRI='sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii',MAX_BODIES=300;
-const motion=$('motion'),scrub=$('scrub'),RM=matchMedia('(prefers-reduced-motion: reduce)');
+const motion=$('motion'),RM=matchMedia('(prefers-reduced-motion: reduce)');
 motion.checked=!RM.matches;RM.addEventListener('change',()=>{motion.checked=!RM.matches;if(VIEW==='visual'&&P)render()});
 motion.onchange=()=>{hidePop();render()};
-let P5P=null,SK=null,IO=null,BODIES=[],SEQ=[],STEP=0,drawTok=0,playT=null,frameN=0,TOPW=null,REDC='#ff5449';
-// the single most frequent word at the current scrubber step is drawn in the stat red (canvas + DOM spans)
-function markTop(){if(!BODIES.length)return;const k=Math.max(0,STEP-1),cn=b=>SEQ.length?b.cum[k]:b.count;
+let P5P=null,SK=null,IO=null,BODIES=[],drawTok=0,frameN=0,TOPW=null,REDC='#ff5449';
+// the single most frequent word in the cloud is drawn in the stat red (canvas + DOM spans)
+function markTop(){if(!BODIES.length)return;const cn=b=>b.count;
   const t=BODIES.reduce((a,b)=>cn(b)>cn(a)||(cn(b)===cn(a)&&(b.count>a.count||(b.count===a.count&&b.word<a.word)))?b:a);
   TOPW=t.word;REDC=getComputedStyle(document.documentElement).getPropertyValue('--num-red').trim()||REDC;
   BODIES.forEach(b=>{const on=b.word===TOPW;b.el.classList.toggle('top',on);b.el.style.color=on?'var(--num-red)':b.col})}
@@ -960,39 +1039,19 @@ function ensureP5(){
     s.onload=()=>{clearTimeout(t);window.p5?ok():no(new Error('p5 missing'))};s.onerror=()=>{clearTimeout(t);P5P=null;no(new Error('load failed'))};
     document.head.appendChild(s)}));
 }
-// font size for a count, on the same sqrt scale as the static layout (final step = exactly the static size)
-function sizer(words,W){const maxF=Math.max(28,Math.min(72,W*0.11)),minF=12,sq=Math.sqrt,hi=sq(words[0].count),lo=sq(words[words.length-1].count);
-  return c=>c<=0?0:hi===lo?Math.min(36,maxF)*sq(c)/hi:sq(c)>=lo?minF+(maxF-minF)*(sq(c)-lo)/(hi-lo):minF*sq(c)/lo}
 function buildBodies(placed,y0,W){
-  const fam=getComputedStyle(cloud).fontFamily,spans=[...cloud.querySelectorAll('span[data-w]')],g=sizer(placed.map(c=>c.b.x).sort((a,b)=>b.count-a.count),W);
-  SEQ=DOCS.filter(d=>sel.has(d.id)).slice().reverse();          // selected documents, oldest first
-  BODIES=placed.slice(0,MAX_BODIES).map((c,i)=>{const b=c.b,x=b.x,wi=VI.get(x.word);mctx.font=`${b.wt} 100px ${fam}`;
-    let run=0;const cum=SEQ.map(d=>run+=(d.cnt.get(wi)||0));
+  const fam=getComputedStyle(cloud).fontFamily,spans=[...cloud.querySelectorAll('span[data-w]')];
+  BODIES=placed.slice(0,MAX_BODIES).map((c,i)=>{const b=c.b,x=b.x;mctx.font=`${b.wt} 100px ${fam}`;
     const w0=b.w-2,h0=c.h-2,hx=c.x+1+w0/2,hy=c.y-y0+1+h0/2;
     return {word:x.word,count:x.count,el:spans[i],wt:b.wt,col:PAL[hcode(x.word)%PAL.length],fam,rw:mctx.measureText(x.word).width/100,
-      fF:b.f,k:b.f/(g(x.count)||1),g,cum,hx,hy,x:hx,y:hy,vx:0,vy:0,f:b.f,ft:b.f,w:w0,h:h0,seed:i*7.31+1}});
+      hx,hy,x:hx,y:hy,vx:0,vy:0,f:b.f,ft:b.f,w:w0,h:h0,seed:i*7.31+1}});
   BODIES.forEach(boxOf);
 }
 function boxOf(b){if(b.f<0.4){b.w=b.h=0;return}const pad=Math.round(b.f*.08)+1;b.w=b.rw*b.f+2*pad;b.h=Math.ceil(b.f*1.12)}
-function setupScrub(){
-  const K=SEQ.length;$('scrubBar').hidden=K<2;scrub.max=K;STEP=K;scrub.value=K;scrubLabel();markTop();
-}
-function scrubLabel(){const K=SEQ.length;if(!K)return;const d=SEQ[STEP-1];
-  $('scrubLbl').innerHTML=STEP===K?`All ${K} ${unitOf(K)} (${fmtDate(SEQ[0].date)} – ${fmtDate(d.date)}) · drag or press ▶ to watch the counts build up in date order`:
-    `Through <b>${fmtDate(d.date)}</b> · ${STEP} of ${K}: ${esc(d.title)} · word sizes = counts so far (the popover still covers all selected)`}
-function applyStep(k){STEP=Math.max(1,Math.min(SEQ.length,k));scrub.value=STEP;scrubLabel();markTop();
-  BODIES.forEach(b=>{const c=b.cum[STEP-1];b.ft=Math.min(b.fF,b.k*b.g(c));b.el.setAttribute('aria-label',`${b.word}: ${c} (through ${SEQ[STEP-1].date})`)});
-  if(!SK){BODIES.forEach(b=>{b.f=b.ft;boxOf(b);placeSpan(b,true)})}       // static mode: resize in place (never overlaps: counts only grow)
-}
 function placeSpan(b,styleText){const el=b.el;if(!b.w){el.style.display='none';return}el.style.display='';
   el.style.left=(b.x-b.w/2).toFixed(1)+'px';el.style.top=(b.y-b.h/2).toFixed(1)+'px';
   if(SK){el.style.width=b.w.toFixed(1)+'px';el.style.height=b.h+'px'}
   else if(styleText){el.style.fontSize=b.f.toFixed(1)+'px';el.style.lineHeight=el.style.height=b.h+'px';el.style.padding=`0 ${Math.round(b.f*.08)+1}px`}}
-scrub.oninput=()=>{stopPlay();hidePop();applyStep(+scrub.value)};
-function stopPlay(){clearInterval(playT);playT=null;$('play').innerHTML='&#9654;';$('play').setAttribute('aria-label','Play through the documents in date order')}
-$('play').onclick=()=>{if(playT){stopPlay();return}hidePop();if(STEP>=SEQ.length)applyStep(1);
-  $('play').innerHTML='&#10074;&#10074;';$('play').setAttribute('aria-label','Pause');
-  playT=setInterval(()=>{if(STEP>=SEQ.length){stopPlay();return}applyStep(STEP+1)},SK?1400:900)};
 function stopSketch(){if(IO){IO.disconnect();IO=null}if(SK){SK.remove();SK=null}cloud.classList.remove('live')}
 function startSketch(){
   stopSketch();const W=cloud.clientWidth,H=cloud.clientHeight;if(!W||!H)return;
@@ -1032,7 +1091,7 @@ function setView(v,user){
   $('viewHint').textContent=v==='visual'?'Word Cloud: bigger words were used more often.':'Super Math: every word, counted and ranked.';
   document.body.classList.toggle('view-visual',v==='visual');   // body starts as view-visual (the default) to avoid a layout flash
   if(v===VIEW)return;
-  hidePop();VIEW=v;document.body.classList.toggle('view-visual',v==='visual');if(v!=='visual'){stopSketch();stopPlay()}
+  hidePop();VIEW=v;document.body.classList.toggle('view-visual',v==='visual');if(v!=='visual'){stopSketch()}
   // "Hide stopwords" is on by default (HTML `checked`). Visual forces it on (so "the" doesn't dominate); Standard restores the previous setting
   if(v==='visual'){stopStd=hide.checked;hide.checked=true}else if(stopStd!==null){hide.checked=stopStd;stopStd=null}
   if(P){render();syncHash()}
@@ -1045,7 +1104,7 @@ let rsT=null;
 addEventListener('resize',()=>{placePop();clearTimeout(rsT);rsT=setTimeout(()=>{ // re-layout when the width changes (rotation, window resize)
   if(VIEW==='visual'&&P&&cloud.clientWidth!==cloudW){hidePop();render()}},150)});
 // self-check used by tests: highlighted matches == indexed occurrences; full-text people: occurrences == counts
-window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get view(){return VIEW},get cloudInfo(){return cloudInfo},get bodies(){return BODIES},get sketch(){return SK},applyStep,get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
+window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get view(){return VIEW},get cloudInfo(){return cloudInfo},get bodies(){return BODIES},get sketch(){return SK},get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
   const its=occurrences(w);its.forEach(it=>{if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push(['hl',w,it.doc.id,it.si])});
   const st=stats(w),o=its.reduce((t,i)=>t+i.n,0);
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
