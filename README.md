@@ -78,6 +78,8 @@ his own annual-meeting remarks exist only as an SEC filing, which is blocked). T
 posts are not used.
 
 The page header is site-wide ("EVERY WORD OUT OF THEIR MOUTH COUNTS": all caps, Arial, tight tracking; on phones it sits on its own line under the logo and scales with the screen width so it stays on one line), not tied to the default person.
+
+CEO stock tickers (from `ceos.json`: `companies[].ticker`, plus `existing_tickers` for the original five) show as a small money-green outlined pill in Arial caps, both on each CEO's chip in the people list and after the selected speaker's name in the results title (e.g. "Every word Jamie Dimon [JPM] said, ranked"). Fed and government people have no ticker, so no pill.
 The selected person's label pill, role, document count and source appear in the Who card, and
 "Every word <person> said, ranked" heads the results. Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
 `doc_noun1`, `unit`/`unit_pl` and an optional popover `credit` line in `people.json`).

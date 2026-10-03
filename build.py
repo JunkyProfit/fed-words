@@ -910,6 +910,12 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:19px;lin
 @media (max-width:640px){
  header .titles{flex-basis:100%;order:2;padding-right:0!important}header .viewbar.hview{order:3}
  header h1#siteTitle{font-size:clamp(11px,3.55vw,16px);white-space:nowrap;overflow:visible;text-overflow:clip;letter-spacing:-.025em}}
+/* ---- Stock ticker pill (CEOs only): Arial caps, money-green outline; people list + selected speaker title ---- */
+.tk{display:inline-block;font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.03em;line-height:1;white-space:nowrap;
+ color:var(--money);border:1.5px solid var(--money);background:color-mix(in srgb,var(--money) 14%,transparent);border-radius:4px;vertical-align:.12em}
+#persons .chip .tk{font-size:11px;padding:2px 4px 1px;margin-left:3px;color:var(--money)}
+#persons .chip.on .tk{color:#1f4d12;border-color:#2f6b1f;background:#cfe6c0}
+#words h2#personTitle .tk{font-size:max(11px,.62em);padding:3px 6px 2px;margin:0 2px;letter-spacing:.04em}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm3" width="880" height="210" alt="Mouth Math"></a>
@@ -1075,7 +1081,7 @@ function renderPicker(){
     $('idx').querySelectorAll('button').forEach(b=>b.onclick=()=>{idxSel=b.dataset.ix;renderPicker();const n=[...$('idx').querySelectorAll('button')].find(x=>x.dataset.ix===idxSel);n&&n.focus()})}
   const pre=allIn.filter(p=>(!idxSel||(p.indices||[]).includes(idxSel))&&matchQ(p));renderAZ(allIn,pre);
   const inCat=pre.filter(p=>!azSel||lastName(p)[0]===azSel),groups=[...new Set(inCat.map(p=>p.group||''))];
-  const chip=p=>`<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}${p.ticker?`<span class="tk"> ${esc(p.ticker)}</span>`:''}</button>`;
+  const chip=p=>`<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}${p.ticker?` <span class="tk">${esc(p.ticker)}</span>`:''}</button>`;
   $('persons').classList.toggle('grouped',groups.length>1||!!groups[0]);
   $('persons').innerHTML=groups.length>1||groups[0]?   // a category with subgroups (US Government: Cabinet / Congress / Supreme Court)
     groups.map(g=>`<div class="pg" role="group" aria-label="${esc(g)}"><span class="lbl">${esc(g)}</span>${inCat.filter(p=>(p.group||'')===g).map(chip).join('')}</div>`).join(''):
@@ -1100,7 +1106,7 @@ async function setPerson(slug,docIds){
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
   ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
-  $('personTitle').textContent=`Every word ${P.display} said, ranked`;
+  $('personTitle').innerHTML=`Every word ${esc(P.display)}${P.ticker?` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`:''} said, ranked`;
   document.title=P.slug===DEFAULT?'Mouth Math — every word they said, ranked':`Mouth Math — every word ${P.display} said, ranked`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();
