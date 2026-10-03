@@ -144,10 +144,18 @@ your earlier setting (on, unless you unchecked it). Hover a word for its count a
 red stats (documents, total words, unique words, words shown), then the Word Cloud or the Super Math table. The stats
 live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
 screens (900px and up) the Who panel sits in a left sidebar in both views.
-**Header:** logo (red-outline lips, `assets/logo.svg`), a compact headline block, then the red **Word Cloud** and green
-**Super Math** view buttons (green = one CSS variable, `--money`; set it to a gray to switch). The Fed Chair / CEOs /
-US Government category buttons sit at the top of the Who panel, with that category's people right below.
-**Phones (640px and below):** logo and headline on one line, the two view buttons in a row under it (no subline); category, person and A–Z
+**Header:** the logo is an inline SVG (`assets/logo-inline.svg`, inlined by `build.py`): a gender-neutral cream line-art
+profile whose slightly open mouth sends out sound waves, then "= ±", then a red Arial number that changes every 150–400 ms
+(fixed width, so nothing moves; a static 100 under `prefers-reduced-motion`; paused in background tabs), then the
+**MouthMath** wordmark in Arial Bold with red M's. It is 52px tall on desktop, 40px on phones and 34px below 360px. The static
+`assets/logo.svg`/`logo.png`, the favicon (`favicon.svg` / 32px `favicon.png`: profile plus waves), the
+`apple-touch-icon.png` and the 1200×630 `og-image.png` (logo on black) are generated from the same source
+(`/workspace/logo-options/v3/gen_v3.py`, `site_assets_v3.py`). After the logo comes a compact headline block, then the red
+**Word Cloud** and green **Super Math** view buttons (green = one CSS variable, `--money`; set it to a gray to switch). Each view button
+has a second outer ring in its color and a raised look (top highlight, drop shadow) that presses in on tap. The Fed Chair / CEOs /
+US Government category buttons sit at the top of the Who panel, with that category's people right below. Person names are red
+(#ff5449 on dark; a darker red #a8201a on the light selected chip); ticker pills stay green.
+**Phones (640px and below):** logo (with Share/About) on the first row, the headline on its own line, the two view buttons in a row under it (no subline); category, person and A–Z
 chips in single horizontal-scroll rows; the Timeframe row stays one line (years scroll sideways, 36px tap targets,
 13px text); About starts collapsed
 (the header's About link opens it). At 390×844 the red stats are at about y=310 and the table or cloud starts right below.

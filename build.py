@@ -312,7 +312,7 @@ def main():
     common = {"stop": sorted(STOPWORDS), "sc": sorted(S_CONTRACTIONS), "keepNum": a.keep_numbers}
     def render(inline_people):
         data = dict(common, people=inline_people)
-        return TEMPLATE.replace("__DEFAULT_TITLE__", html.escape(people_out[0]["display"])).replace(
+        return TEMPLATE.replace("__LOGO__", (ROOT / "assets" / "logo-inline.svg").read_text(encoding="utf-8").strip()).replace("__DEFAULT_TITLE__", html.escape(people_out[0]["display"])).replace(
             "__NUMNOTE__", "included" if a.keep_numbers else "excluded").replace(
             "__DATA__", json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"))
     page = render(people_out)
@@ -342,10 +342,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm9">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm9">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm10">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm10">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm9">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm10">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -355,7 +355,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm9">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm10">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -985,9 +985,17 @@ body header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:3p
 body header .viewbar.hview,body header #views{gap:24px!important}
 @media (max-width:640px){body header .viewbar.hview,body header #views{gap:18px!important}body header .viewbar.hview{padding:3px 5px 0}}
 @media (prefers-reduced-motion:reduce){body header .hview .vcard{transition:none}}
+/* ---- Logo v3: inline SVG (profile -> waves -> = ± -> animated red number -> MouthMath), no layout jump (fixed-width number) ---- */
+header .logo svg.mmlogo{height:52px;width:auto;aspect-ratio:1013/236;display:block;overflow:visible}
+@media (max-width:640px){header .logo svg.mmlogo{height:40px}}
+@media (max-width:359px){header .logo svg.mmlogo{height:34px}}
+/* ---- Person names in the people list: red (#ff5449) on dark, darker red on the light selected chip; ticker pills keep their green ---- */
+body #persons button.chip{color:#ff5449!important}
+body #persons button.chip:hover{color:#ff7a70!important}
+body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!important}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
-<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm9" width="880" height="210" alt="Mouth Math"></a>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home">__LOGO__</a>
 <div class="titles"><h1 id="siteTitle">Every Word Out Of Their Mouth Counts</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
 <div class="viewbar hview" role="group" aria-label="View">
@@ -1582,7 +1590,11 @@ function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').
 fromHash();
 // pasted/edited #person= links and back/forward on an open page (in-page anchors like #about are ignored)
 addEventListener('hashchange',()=>{if(!location.hash||OURS.test(location.hash)){hidePop();fromHash()}});
-</script></body></html>
+</script><script>/* logo counter: new value every 150-400 ms; static under prefers-reduced-motion; paused in background tabs */(()=>{const el=document.getElementById('mmNum');if(!el)return;const rm=matchMedia('(prefers-reduced-motion: reduce)'),STATIC='100';let t=0;
+const tick=()=>{el.textContent=String(100+Math.floor(Math.random()*900));t=setTimeout(tick,150+Math.random()*250)};
+const run=()=>{clearTimeout(t);if(rm.matches||document.hidden){el.textContent=STATIC;return}tick()};
+(rm.addEventListener?rm.addEventListener('change',run):rm.addListener(run));document.addEventListener('visibilitychange',run);run()})()</script>
+</body></html>
 """
 
 if __name__ == "__main__":
