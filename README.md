@@ -158,6 +158,8 @@ chips in single horizontal-scroll rows; the A–Z index wraps into a grid of 40p
 13px text); About starts collapsed
 (the header's About link opens it). At 390×844 the red stats are at about y=310 and the table or cloud starts right below.
 
+**Top word pulse:** the #1 word of the current selection (speaker, documents, word count) is drawn in the stat red and pulses slowly (2.2 s ease-in-out glow with a slight brighten and 2.5% scale; canvas `paint()` in Motion mode, CSS `@keyframes mmTopPulse` otherwise). No pulse under `prefers-reduced-motion`.
+
 **Super Cloud motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
 largest words first along a spiral with box collision checks). With **Motion** on, a
 [p5.js](https://p5js.org/) sketch takes over: each word is a soft physics body that drifts gently

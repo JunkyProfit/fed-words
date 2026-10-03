@@ -345,9 +345,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm18">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm18">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm18">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm19">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm19">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm19">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -355,7 +355,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm18">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm19">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -380,7 +380,7 @@ footer a{color:var(--muted)}
 @media (max-width:640px){header{padding:12px 16px}header .logo img{height:38px}main{padding:22px 16px 32px}h1{font-size:26px}h2{font-size:18px}body{font-size:15.5px}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm18" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm19" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -446,10 +446,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm18">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm18">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm19">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm19">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm18">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm19">
 <title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -459,7 +459,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm18">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm19">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -918,6 +918,12 @@ kbd{font:inherit;font-size:11px;font-weight:700;border:1px solid var(--rule);bor
  #words h2#personTitle{font-size:16px}}
 #cats button.cat.on::before{content:none;display:none}
 tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num-red)}
+/* the #1 word in the Super Cloud pulses: slow, gentle glow (2.2 s ease-in-out); canvas mode does the same in paint() */
+@keyframes mmTopPulse{0%,100%{text-shadow:0 0 2px rgba(255,84,73,.22);filter:brightness(1);transform:scale(1)}
+ 50%{text-shadow:0 0 6px rgba(255,84,73,.55),0 0 16px rgba(255,84,73,.38);filter:brightness(1.16);transform:scale(1.025)}}
+#cloud span.top{animation:mmTopPulse 2.2s ease-in-out infinite;transform-origin:50% 55%;will-change:transform}
+#cloud.live span.top{animation:none}
+@media (prefers-reduced-motion:reduce){#cloud span.top{animation:none!important;text-shadow:none;filter:none;transform:none}}
 /* Phones: A-Z as a wrapping grid of ~40px tap targets (9 x 3; 14 x 2 from 560px), 17px letters; the cells touch (every pixel
    is tappable) and the visible rounded box is drawn 2px inside each one; empty letters stay grayed and disabled */
 @media (max-width:640px){
@@ -1600,6 +1606,7 @@ const motion=$('motion'),RM=matchMedia('(prefers-reduced-motion: reduce)');
 motion.checked=!RM.matches;RM.addEventListener('change',()=>{motion.checked=!RM.matches;if(VIEW==='visual'&&P)render()});
 motion.onchange=()=>{hidePop();render()};
 let P5P=null,SK=null,IO=null,BODIES=[],drawTok=0,frameN=0,TOPW=null,REDC='#ff5449';
+const PULSE_MS=2200,PULSE={ph:0};   // top-word pulse period (CSS keyframes use the same 2.2 s)
 // the single most frequent word in the cloud is drawn in the stat red (canvas + DOM spans)
 function markTop(){if(!BODIES.length)return;const cn=b=>b.count;
   const t=BODIES.reduce((a,b)=>cn(b)>cn(a)||(cn(b)===cn(a)&&(b.count>a.count||(b.count===a.count&&b.word<a.word)))?b:a);
@@ -1656,7 +1663,11 @@ function paint(p){
   const ctx=p.drawingContext;p.clear();ctx.textAlign='center';ctx.textBaseline='middle';
   for(let i=BODIES.length-1;i>=0;i--){const b=BODIES[i];if(!b.w)continue;
     if(b.word===curWord){ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--hl').trim()||'#e2f0e7';ctx.beginPath();ctx.roundRect?ctx.roundRect(b.x-b.w/2,b.y-b.h/2,b.w,b.h,5):ctx.rect(b.x-b.w/2,b.y-b.h/2,b.w,b.h);ctx.fill()}
-    ctx.font=`${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;ctx.fillStyle=b.word===TOPW?REDC:b.col;ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
+    ctx.font=`${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;
+    if(b.word===TOPW&&!RM.matches){const ph=(1-Math.cos(performance.now()/PULSE_MS*2*Math.PI))/2,k=1+0.025*ph;   // 0 -> 1 -> 0, eased
+      ctx.save();ctx.translate(b.x,b.y+b.f*0.03);ctx.scale(k,k);ctx.shadowColor=`rgba(255,84,73,${(0.25+0.45*ph).toFixed(3)})`;ctx.shadowBlur=(3+13*ph)*(p.pixelDensity()||1);
+      ctx.fillStyle=`rgb(255,${Math.round(84+40*ph)},${Math.round(73+40*ph)})`;ctx.fillText(b.word,0,0);/* #ff5449 -> a little brighter at the peak */ctx.restore();PULSE.ph=ph;continue}
+    ctx.fillStyle=b.word===TOPW?REDC:b.col;ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
 }
 function setView(v,user){
   v=v==='visual'?'visual':'standard';
@@ -1701,7 +1712,7 @@ let rsT=null;
 addEventListener('resize',()=>{placePop();clearTimeout(rsT);rsT=setTimeout(()=>{ // re-layout when the width changes (rotation, window resize)
   if(VIEW==='visual'&&P&&cloud.clientWidth!==cloudW){hidePop();render()}},150)});
 // self-check used by tests: highlighted matches == indexed occurrences; full-text people: occurrences == counts
-window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get view(){return VIEW},get cloudInfo(){return cloudInfo},get bodies(){return BODIES},get sketch(){return SK},get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
+window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get view(){return VIEW},get cloudInfo(){return cloudInfo},get topWord(){return TOPW},get pulse(){return PULSE.ph},get bodies(){return BODIES},get sketch(){return SK},get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
   const its=occurrences(w);its.forEach(it=>{if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push(['hl',w,it.doc.id,it.si])});
   const st=stats(w),o=its.reduce((t,i)=>t+i.n,0);
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
