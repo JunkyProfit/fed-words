@@ -339,10 +339,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm3">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm3">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm4">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm4">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm3">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm4">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -352,7 +352,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm3">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -916,9 +916,20 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:19px;lin
 #persons .chip .tk{font-size:11px;padding:2px 4px 1px;margin-left:3px;color:var(--money)}
 #persons .chip.on .tk{color:#1f4d12;border-color:#2f6b1f;background:#cfe6c0}
 #words h2#personTitle .tk{font-size:max(11px,.62em);padding:3px 6px 2px;margin:0 2px;letter-spacing:.04em}
+/* ---- "Show N words" chips: one shared control for Word Cloud and Super Math, right under the Timeframe row ---- */
+#nbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:-4px 0 12px;font-family:Arial,Helvetica,sans-serif}
+#nbar .nbl{font-size:14px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.04em}
+#nbar .nbl:first-child{margin-right:2px}#nbar .nbl:last-child{margin-left:2px;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400}
+#nbar .nchip{font:700 14px/1 Arial,Helvetica,sans-serif;min-width:46px;min-height:32px;padding:0 12px;border-radius:6px;cursor:pointer;
+ color:var(--num-red);background:transparent;border:1.5px solid var(--num-red);font-variant-numeric:tabular-nums}
+#nbar .nchip:hover{background:color-mix(in srgb,var(--num-red) 16%,transparent)}
+#nbar .nchip[aria-pressed="true"]{background:var(--num-red);color:#fff;border-color:var(--num-red)}
+#nbar .nchip:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media (max-width:640px){#nbar{gap:6px;margin:0 0 10px;flex-wrap:nowrap}#nbar .nchip{flex:1 1 0;min-width:0;min-height:40px;padding:0 4px;font-size:15px}
+ #nbar .nbl:last-child{display:none}body.view-visual #words>#nbar{order:0}}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
-<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm3" width="880" height="210" alt="Mouth Math"></a>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm4" width="880" height="210" alt="Mouth Math"></a>
 <div class="titles"><h1 id="siteTitle">EVERY WORD OUT OF THEIR MOUTH COUNTS</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
 <div class="viewbar hview" role="group" aria-label="View">
@@ -952,12 +963,12 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:19px;lin
 <p class="muted hint">Tick one or more · “only” selects just that one</p>
 <ul class="speeches" id="docList"></ul></details>
 <div id="selSummary" class="sr-only"></div></div>
+<div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="25">25</button><button class="nchip" data-n="50">50</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="150">150</button><button class="nchip" data-n="all">All</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
 <label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
 </div>
-<div class="only-visual"><div class="cloud-bar"><label>Show top <select id="cloudN" aria-label="Number of words in the cloud">
-<option value="50">50</option><option value="150" selected>150</option><option value="300">300</option></select> words</label>
+<div class="only-visual"><div class="cloud-bar">
 <label class="motion" title="Animated p5.js word cloud (off = static layout)"><input type="checkbox" id="motion"> Motion</label>
 <span class="muted" id="cloudNote"></span></div>
 <div id="cloud"></div></div>
@@ -982,7 +993,7 @@ Hover a word to see the sentences where it was used (click or tap to pin). <span
 publicly available texts by public figures, taken from each official source:</p>
 <ul class="sources">
 <li><strong>Fed Chair:</strong> speech and testimony transcripts published on
-<a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>.</li>
+<a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener noreferrer">federalreserve.gov</a>.</li>
 <li><strong>CEOs</strong> of large S&amp;P 500, Nasdaq 100 and Dow 30 companies: only texts each company publishes on its
 own investor-relations website, labeled by source type: shareholder letters signed by the CEO, and earnings call
 prepared remarks (only the CEO's own prepared section of the call transcript the company posts; other executives,
@@ -991,18 +1002,18 @@ index (Mag 7, S&amp;P 500, Nasdaq 100, Dow 30), by last name, or search by name,
 <li><strong>US Government</strong>, in three groups:
 <ul>
 <li><strong>Cabinet:</strong> remarks and testimony published by the
-<a href="https://home.treasury.gov/news/press-releases" target="_blank" rel="noopener">Treasury Department</a> and the
-<a href="https://www.state.gov/" target="_blank" rel="noopener">State Department</a>, and testimony posted by the Senate
+<a href="https://home.treasury.gov/news/press-releases" target="_blank" rel="noopener noreferrer">Treasury Department</a> and the
+<a href="https://www.state.gov/" target="_blank" rel="noopener noreferrer">State Department</a>, and testimony posted by the Senate
 Appropriations and Armed Services Committees (Commerce and War/Defense secretaries).</li>
 <li><strong>Congress:</strong> floor remarks by the Republican and Democratic leaders of the House and Senate, from the
-<a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> (daily edition, govinfo.gov).</li>
+<a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener noreferrer">Congressional Record</a> (daily edition, govinfo.gov).</li>
 <li><strong>Supreme Court:</strong> signed opinions of all nine Justices from the October Term 2025, published on
-<a href="https://www.supremecourt.gov/opinions/slipopinion/25" target="_blank" rel="noopener">supremecourt.gov</a>.</li>
+<a href="https://www.supremecourt.gov/opinions/slipopinion/25" target="_blank" rel="noopener noreferrer">supremecourt.gov</a>.</li>
 </ul></li>
 </ul>
 <p><strong>Licensing approach.</strong> Works of the U.S. government, including texts by federal officials such as the
 Fed Chair, Cabinet secretaries, members of Congress and Supreme Court Justices, are not subject to copyright
-(<a href="https://www.law.cornell.edu/uscode/text/17/105" target="_blank" rel="noopener">17 U.S.C. §105</a>), so every
+(<a href="https://www.law.cornell.edu/uscode/text/17/105" target="_blank" rel="noopener noreferrer">17 U.S.C. §105</a>), so every
 sentence is available on hover. Other texts (CEO letters and remarks) are copyrighted by their
 publishers: for those we publish only word counts and short excerpts (at most about a quarter of each text, and at most
 10 sentences per word), each linked to the original, and never the full text.</p>
@@ -1030,7 +1041,9 @@ const CATS=[...new Set(PEOPLE.map(p=>p.category))],DEFAULT=PEOPLE[0].slug;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10;
+let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10,CLOUD_MAX=300;
+let NSHOW='50';const NOPTS=['25','50','100','150','all'],NDEF='50';   // words shown in both views; 'all' = every word (cloud caps at CLOUD_MAX)
+const nCap=()=>NSHOW==='all'?Infinity:+NSHOW;
 const unitOf=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
 const q=$('q'),hide=$('hideStop'),tb=$('tb');
 
@@ -1126,7 +1139,7 @@ function buildTimeframe(){
   const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return 'source'}};
   $('docList').innerHTML=DOCS.map(d=>`<li data-id="${d.id}"><input type="checkbox" id="cb_${d.id}" data-id="${d.id}" aria-describedby="dm_${d.id}">
  <div><label for="cb_${d.id}" class="dl1"><span class="date">${fmtDate(d.date)}</span><span class="dt">${esc(d.title)}</span><span class="dw">${d.words.toLocaleString()} words</span></label>
- <div class="dl2 muted" id="dm_${d.id}">${d.stype?`<span class="stype"><span class="sr">Source type: </span>${esc(d.stype)}</span>`:`<span>${esc(d.type[0].toUpperCase()+d.type.slice(1))}</span>`}${[d.location,d.note].filter(x=>x&&x!==host(d.url)).map(x=>`<span>${esc(x)}</span>`).join('')}<a href="${esc(d.url)}" target="_blank" rel="noopener" title="Open the original">${esc(host(d.url))}&nbsp;↗</a></div></div>
+ <div class="dl2 muted" id="dm_${d.id}">${d.stype?`<span class="stype"><span class="sr">Source type: </span>${esc(d.stype)}</span>`:`<span>${esc(d.type[0].toUpperCase()+d.type.slice(1))}</span>`}${[d.location,d.note].filter(x=>x&&x!==host(d.url)).map(x=>`<span>${esc(x)}</span>`).join('')}<a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer" title="Open the original">${esc(host(d.url))}&nbsp;↗</a></div></div>
  <button type="button" class="only" data-only="${d.id}" aria-label="Select only ${esc(d.title)}">only</button></li>`).join('');
   $('docCount').textContent=`(${DOCS.length} ${unitOf(DOCS.length)})`;
   $('years').innerHTML=YEARS.map(y=>{const n=DOCS.filter(d=>d.year===y).length;
@@ -1150,13 +1163,13 @@ function syncTimeframe(){
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
   syncHash();
 }
-// URL state: #person=<slug>&docs=<id,...>&mode=standard&n=<50|300>; default (Word Cloud, Warsh, all docs) = clean URL; old mode=visual links still work. Leaves #about etc. alone.
+// URL state: #person=<slug>&docs=<id,...>&mode=standard&n=<25|100|150|all>; default (Word Cloud, Warsh, all docs) = clean URL; old mode=visual links still work. Leaves #about etc. alone.
 const OURS=/^#(person|docs|mode|n)=/;
 function syncHash(){
   if(!P)return;const all=sel.size===DOCS.length,parts=[];
   if(P.slug!==DEFAULT||!all)parts.push('person='+P.slug);
   if(!all)parts.push('docs='+[...sel].join(','));
-  if(VIEW==='standard')parts.push('mode=standard');else if(cloudN.value!=='150')parts.push('n='+cloudN.value);   // Word Cloud is the default view
+  if(VIEW==='standard')parts.push('mode=standard');if(NSHOW!==NDEF)parts.push('n='+NSHOW);   // Word Cloud and 50 words are the defaults
   const h=location.hash,ours=!h||OURS.test(h),want=parts.length?'#'+parts.join('&'):'';
   if(want)history.replaceState(null,'',want);else if(ours&&h)history.replaceState(null,'',location.pathname+location.search);
 }
@@ -1180,7 +1193,8 @@ function render(){
   base.sort((a,b)=>b.count-a.count||(a.word<b.word?-1:a.word>b.word?1:0));
   let r=0,prev=null;base.forEach((x,i)=>{if(x.count!==prev){r=i+1;prev=x.count}x.rank=r});
   const s=q.value.trim().toLowerCase();let re=null;if(s){try{re=new RegExp(s)}catch(e){}}
-  const list=s?base.filter(x=>re?re.test(x.word):x.word.includes(s)):base.slice();
+  const match=s?base.filter(x=>re?re.test(x.word):x.word.includes(s)):base.slice();
+  const list=VIEW==='visual'?match:match.slice(0,Math.min(nCap(),LIMIT));   // table: the top N most frequent matches, then sorted as chosen
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
   $('sDocs').textContent=sel.size+' / '+DOCS.length;
   const anim=P.slug!==lastCountSlug;lastCountSlug=P.slug;
@@ -1190,10 +1204,10 @@ function render(){
   cloud.innerHTML='';
   const max=base.length?base[0].count:1;
   const topW=list.length?list.reduce((a,b)=>b.count>a.count||(b.count===a.count&&b.word<a.word)?b:a).word:null;   // the single most frequent word (red)
-  tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}${x.word===topW?' top':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
+  tb.innerHTML=list.length?list.map(x=>`<tr class="${x.stop?'stop':''}${x.word===topW?' top':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
     :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
   setStat('sShown',list.length,anim);
-  $('more').textContent=list.length>LIMIT?`Showing first ${LIMIT} of ${list.length} — use the filter to find others.`:'';
+  $('more').textContent=match.length>list.length?`Showing the top ${list.length.toLocaleString()} of ${match.length.toLocaleString()} words${match.length>LIMIT&&NSHOW==='all'?' (table limit; use the filter to find others)':' · choose All above to list every word'}.`:'';
   document.querySelectorAll('th[data-k]').forEach(th=>{th.textContent=th.textContent.replace(/ [▲▼]$/,'')+(th.dataset.k===sortK?(sortDir<0?' ▼':' ▲'):'')});
 }
 function update(){hidePop();syncTimeframe();aggregate();render()}
@@ -1246,13 +1260,13 @@ function popHTML(word){
    <button class="x" title="Close (Esc)" aria-label="Close">×</button></div>`;
   let lastDoc=null;
   shown.forEach(it=>{if(it.doc!==lastDoc){if(lastDoc)h+='</ol>';lastDoc=it.doc;
-      h+=`<div class="doc">${fmtDate(it.doc.date)} · <a href="${esc(it.doc.url)}" target="_blank" rel="noopener">${esc(it.doc.title)}</a></div><ol>`}
+      h+=`<div class="doc">${fmtDate(it.doc.date)} · <a href="${esc(it.doc.url)}" target="_blank" rel="noopener noreferrer">${esc(it.doc.title)}</a></div><ol>`}
     const s=it.doc.s[it.si],hl=highlight(s,word),L=srcLink(it.doc,it.si);
     h+=`<li data-n="${it.n}" data-hl="${hl.n}">${hl.html}${it.n>1?`<span class="twice">×${it.n}</span>`:''}`+
-       `<a class="src" href="${esc(L.href)}" target="_blank" rel="noopener" title="Open the original at this sentence">${L.label}</a></li>`});
+       `<a class="src" href="${esc(L.href)}" target="_blank" rel="noopener noreferrer" title="Open the original at this sentence">${L.label}</a></li>`});
   if(lastDoc)h+='</ol>';
   if(excerpt){
-    const links=st.docs.map(d=>`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>`).join(', ');
+    const links=st.docs.map(d=>`<a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>`).join(', ');
     h+=`<div class="cap" id="popCap">${shown.length?`Showing ${shown.length} of ${st.m.toLocaleString()} sentence${st.m===1?'':'s'}`:'No excerpt shown for this word'}`+
        ` — read the full ${unit(st.docs.length)} at ${esc(P.source)}: ${links}</div>`;
   }else if(items.length>FIRST&&!showAll)h+=`<button class="more">Show all ${items.length.toLocaleString()} sentences (${st.n.toLocaleString()} occurrences)</button>`;
@@ -1274,7 +1288,7 @@ function showPop(tr,pin){
   pop.innerHTML=popHTML(curWord);pop.classList.toggle('expanded',showAll);pop.hidden=false;placePop();
 }
 function hidePop(){pop.hidden=true;pinned=false;showAll=false;curWord=null;if(curRow)curRow.classList.remove('active');curRow=null}
-const cloud=$('cloud'),cloudN=$('cloudN');
+const cloud=$('cloud');
 [tb,cloud].forEach(box=>{
 box.addEventListener('mouseover',e=>{const tr=e.target.closest('[data-w]');if(!tr||pinned)return;clearTimeout(hideT);
   if(tr===curRow)return;clearTimeout(hoverT);hoverT=setTimeout(()=>showPop(tr,false),120)});
@@ -1367,7 +1381,7 @@ function cloudLayout(words,W){
 function drawCloud(list){
   stopSketch();
   const W=cloud.clientWidth;cloudW=W;if(!W)return 0;const t0=performance.now();
-  const N=+cloudN.value,words=list.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:1)).slice(0,N);
+  const N=Math.min(nCap(),CLOUD_MAX),words=list.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:1)).slice(0,N);
   if(!words.length){cloud.style.height='';cloud.innerHTML=`<div class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</div>`;
     $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0,mode:'static'};BODIES=[];return 0}
   const {placed,miss,tries,steps}=cloudLayout(words,W);
@@ -1463,7 +1477,10 @@ function setView(v,user){
   if(user&&v==='visual'){const r=$('words').getBoundingClientRect();if(r.top>innerHeight*0.6)$('words').scrollIntoView({behavior:'smooth',block:'start'})}
 }
 document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>setView(b.dataset.view,true));
-cloudN.onchange=()=>{hidePop();render();syncHash()};
+function setN(n,go=true){NSHOW=n;document.querySelectorAll('#nbar .nchip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.n===n?'true':'false'));if(go){hidePop();render();syncHash()}}
+document.querySelectorAll('#nbar .nchip').forEach(b=>b.onclick=()=>setN(b.dataset.n));
+// Safety net: any off-site link (sources, documents, credits) opens in a new tab so visitors can come back; mailto and in-page links are left alone.
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(a&&/^https?:/.test(a.href)&&a.origin!==location.origin){a.target='_blank';a.rel='noopener noreferrer'}},true);setN(NSHOW,false);
 cloud.addEventListener('keydown',e=>{const s=e.target.closest('[data-w]');if(s&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(s,true)}});
 let rsT=null;
 addEventListener('resize',()=>{placePop();clearTimeout(rsT);rsT=setTimeout(()=>{ // re-layout when the width changes (rotation, window resize)
@@ -1475,7 +1492,7 @@ window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get vie
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
 // initial state from URL: #person=<slug>&docs=<ids>  (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
-  if(['50','150','300'].includes(hp.get('n')))cloudN.value=hp.get('n');
+  {const n=hp.get('n');if(n==='300')setN('all',false);else if(NOPTS.includes(n))setN(n,false)}
   setView(hp.get('mode')==='standard'?'standard':'visual');   // no mode (or old mode=visual) -> Word Cloud; mode=standard -> Super Math
   return setPerson(hp.get('person')||DEFAULT,(hp.get('docs')||'').split(',').filter(Boolean)).catch(e=>{
     tb.innerHTML=`<tr><td colspan="4" class="empty">Could not load data: ${esc(e.message)}</td></tr>`;console.error(e)})}

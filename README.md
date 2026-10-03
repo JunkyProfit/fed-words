@@ -131,8 +131,11 @@ header copies the exact view's URL (person, documents, view; the native share sh
 and **Super Math** (the ranked table, a sketched page), are buttons with `aria-pressed` that switch
 between the ranked table and a word cloud for the same person, timeframe, filter, and
 stopword setting. Font size scales with the square root of the count, from 12px to 72px
-(the largest size is smaller on narrow screens). "Show top 50 / 150 / 300" sets how many
-words are drawn; the default is 150. Word Cloud turns on "Hide common stopwords"
+(the largest size is smaller on narrow screens). One shared **Show 25 / 50 / 100 / 150 / All words** chip row
+(Arial, red outline; the selected chip is filled red; 40px tall, full-width on phones) sits right under the Timeframe
+row and sets how many words both views show; the default is **50**. Super Math lists the top N most frequent words
+(after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
+at most 300 words, so All in Word Cloud means the top 300. Word Cloud turns on "Hide common stopwords"
 so "the" doesn't dominate. You can turn it off again, and going back to Super Math restores
 your earlier setting (on, unless you unchecked it). Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
@@ -171,7 +174,7 @@ the cream backgrounds). The theme is one block at the end of the CSS in `build.p
 the person heading and the red stat numbers; normal tracking for body text; uppercase with +0.06em only on tiny
 labels (category pill, source type, group labels). Counts use tabular numerals.
 
-The view is kept in the URL: Word Cloud is the default (clean URL, plus `&n=50|300` when not 150); Super Math adds
+The view is kept in the URL: Word Cloud is the default (clean URL, plus `n=25|100|150|all` when not 50; old `n=300` links map to All); Super Math adds
 `#mode=standard`. Old `#mode=visual` links still open the Word Cloud.
 
 ### Licensing: public domain vs. excerpts
@@ -326,3 +329,5 @@ on its own about 1–2 minutes after a push. The manual equivalent is
   companies' own websites instead.
 - Warsh's 2006–2011 speeches as a Governor are left out on purpose. The speaker
   filter only matches remarks given as Chair.
+
+**Links:** every link to a source document or an original source (the Choose documents list, sentence popovers, source credits, the About page) opens in a new tab with `target="_blank" rel="noopener noreferrer"`; a click handler also forces this for any other off-site link. Checkboxes and "only" buttons just change the selection.
