@@ -310,6 +310,7 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=mm1">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm1">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
@@ -467,13 +468,63 @@ body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-cab .only-cab,body.mod
  #words h2#personTitle{font-size:16px}
  body.view-visual #words{display:flex;flex-direction:column}body.view-visual #words>*{order:2}
  body.view-visual #personTitle{order:0}body.view-visual #words>.only-visual{order:1;display:flex;flex-direction:column}
- body.view-visual #cloud{order:0}body.view-visual .cloud-bar{order:1;margin-top:6px}body.view-visual #words .controls{margin:8px 0 0}}
+ body.view-visual #cloud{order:0}body.view-visual .scrub{order:1;margin-top:8px}body.view-visual .cloud-bar{order:2;margin-top:6px}body.view-visual #words .controls{margin:8px 0 0}}
 body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none}
 .cloud-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:2px 0 6px;font-size:14px}
 .cloud-bar select{font:inherit;font-size:14px;padding:3px 6px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
 #cloud{position:relative;width:100%;min-height:120px;overflow:hidden;margin:4px 0 2px}
 #cloud span{position:absolute;white-space:nowrap;cursor:help;border-radius:5px;letter-spacing:-.01em;transition:background-color .12s}
 #cloud span:hover,#cloud span.active{background:#e2f0e7}#cloud .empty{position:static}
+
+
+#cloud canvas.cloudcv{position:absolute;left:0;top:0;pointer-events:none;z-index:0}
+#cloud.live span{color:transparent!important;background:transparent!important;font-size:0!important;padding:0!important;z-index:1}
+#cloud.live span:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cloud-bar .motion{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
+.scrub{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 8px;font-size:13px}.scrub[hidden]{display:none}
+.scrub input[type=range]{flex:1;min-width:140px;accent-color:var(--num-red,#9e1b24)}
+.scrub .play{flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:12px;line-height:1}
+.scrub .play:hover{border-color:var(--ink)}#scrubLbl{color:var(--muted);min-width:0;flex-basis:100%}
+@media (min-width:640px){#scrubLbl{flex-basis:auto;flex:2}}
+/* ---- Black line-art theme (matches the logo's thin black strokes); delete this block to revert ---- */
+:root{--ink:#141413;--cream:#f5efe2;--rule:#1c1b19;--hl:#ece3cf;--ink:#141413}
+body{color:var(--ink)}a{color:var(--ink);text-decoration-color:rgba(20,20,19,.45);text-underline-offset:2px}a:hover{text-decoration-color:var(--ink)}
+body[class] header{background:var(--ink);color:var(--cream)}
+body.mode-fed header{box-shadow:inset 0 -3px 0 #9cc7ad}body.mode-ceo header{box-shadow:inset 0 -3px 0 #d8c8a4}
+body.mode-cab header{box-shadow:inset 0 -3px 0 #c9d0b5}body.mode-cong header{box-shadow:inset 0 -3px 0 #d9bfb3}body.mode-scotus header{box-shadow:inset 0 -3px 0 #c2cbc5}
+header a.about-link{color:var(--cream);border-color:rgba(245,239,226,.55)}header a.about-link:hover{background:rgba(245,239,226,.1)}
+header p{opacity:.82}header .logo{box-shadow:0 0 0 1px rgba(245,239,226,.25)}
+.card{border:1px solid var(--rule);box-shadow:none}h2{color:var(--ink)}
+.viewbar .lbl,.tf-row .lbl{color:var(--ink)}
+.vcard{border:1px solid var(--rule);background:var(--card)}.vcard:hover{background:#fbf7ee;border-color:var(--rule)}
+.vcard[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);box-shadow:0 1px 3px rgba(20,20,19,.25)}
+.vcard[aria-pressed="true"] .vt b{color:var(--cream)}.vcard[aria-pressed="true"] .vt small{color:#d9d2c3}
+.vcard[aria-pressed="true"]::after{background:var(--num-red);box-shadow:0 0 0 2px var(--bg)}
+.seg,#cats{background:transparent;border:1px solid var(--rule)}.seg button{color:var(--ink)}
+.seg button:hover{background:#efe7d8}
+.seg button.on{background:var(--ink);color:var(--cream);box-shadow:none}
+button.chip,label.chip{border:1px solid var(--rule);background:var(--card);color:var(--ink)}
+button.chip:hover,label.chip:hover{background:#efe7d8}
+button.chip.on,label.chip.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}label.chip.on .muted{color:#d9d2c3}
+#persons button.chip.on{box-shadow:none}
+label.chip.on input{accent-color:var(--cream)}
+#persons .pg{border-top:1px solid rgba(20,20,19,.16)}
+#personInfo .eyebrow{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+#docPick{border-top:1px solid var(--rule)}#docPick>summary{color:var(--ink)}
+ul.speeches li{border-top:1px solid rgba(20,20,19,.16)}ul.speeches li.sel{background:#f3ecdc}
+button.only{border-color:var(--rule);color:var(--ink);background:var(--card)}button.only:hover{background:var(--ink);color:var(--cream)}
+input[type=checkbox]{accent-color:var(--ink)}
+.stat{background:var(--card);border:1px solid var(--rule)}
+input[type=search]{border:1px solid var(--rule)}input[type=search]:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(20,20,19,.12)}
+th{border-bottom:1px solid var(--rule);color:var(--ink)}td{border-bottom-color:rgba(20,20,19,.12)}
+.bar{background:#2b2a26;opacity:.82}
+tr[data-w]:hover td{background:#f6efe0}tr.active td{background:var(--hl)}
+#cloud span:hover,#cloud span.active{background:var(--hl)}
+#pop{border:1px solid var(--rule);box-shadow:0 10px 30px rgba(20,20,19,.18)}#pop .ph{border-bottom:1px solid var(--rule)}
+#pop .more{border-color:var(--ink);color:var(--ink)}#pop .more:hover{background:var(--ink);color:var(--cream)}
+.scrub .play{border:1px solid var(--rule)}.scrub .play:hover{background:var(--ink);color:var(--cream)}
+:focus-visible{outline-color:var(--ink)}
+@media (max-width:640px){#cats{border:0}#cats button{border:1px solid var(--rule);background:var(--card);padding:5px 11px;font-size:13px}#cats button.on{background:var(--ink);color:var(--cream)}}
 </style></head><body class="mode-fed">
 <header><a class="about-link" href="#about">About</a>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.png?v=mm1" width="433" height="104" alt="Mouth Math"></a>
@@ -513,7 +564,12 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 </div>
 <div class="only-visual"><div class="cloud-bar"><label>Show top <select id="cloudN" aria-label="Number of words in the cloud">
 <option value="50">50</option><option value="150" selected>150</option><option value="300">300</option></select> words</label>
-<span class="muted" id="cloudNote"></span></div><div id="cloud"></div></div>
+<label class="motion" title="Animated p5.js word cloud (off = static layout)"><input type="checkbox" id="motion"> Motion</label>
+<span class="muted" id="cloudNote"></span></div>
+<div class="scrub" id="scrubBar" hidden><button type="button" id="play" class="play" aria-label="Play through the documents in date order">&#9654;</button>
+<input type="range" id="scrub" min="1" max="1" value="1" step="1" aria-label="Show counts through this document (date order)" aria-describedby="scrubLbl">
+<span id="scrubLbl" aria-live="polite"></span></div>
+<div id="cloud"></div></div>
 <table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th style="width:30%"></th></tr></thead>
 <tbody id="tb"></tbody></table>
 <p class="muted only-standard" id="more"></p>
@@ -600,8 +656,8 @@ function renderPicker(){
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
   document.querySelectorAll('#persons button').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
   ['#cats button.on','#persons button.on'].forEach(sel=>{const b=document.querySelector(sel),r=b&&b.parentElement;
-    if(r&&r.scrollWidth>r.clientWidth){const l=r.querySelector('.lbl'),pad=l&&getComputedStyle(l).position==='sticky'?l.offsetWidth+12:24;
-      r.scrollLeft=Math.max(0,b.offsetLeft-r.offsetLeft-pad)}});
+    if(r&&r.scrollWidth>r.clientWidth){const l=r.querySelector('.lbl'),pad=l&&getComputedStyle(l).position==='sticky'?l.offsetWidth+12:24,
+      x=b.offsetLeft-r.offsetLeft;if(x-pad<r.scrollLeft||x+b.offsetWidth>r.scrollLeft+r.clientWidth-20)r.scrollLeft=Math.max(0,x-pad)}});   // only if not fully visible
 }
 async function setPerson(slug,docIds){
   hidePop();
@@ -778,7 +834,7 @@ document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.ta
 
 // ---- WordViz mode (hash value mode=visual): word cloud (vanilla JS; spiral placement + measureText box collisions) ----
 let VIEW='standard',stopStd=null,cloudW=0,cloudInfo={placed:0,skipped:0,ms:0};
-const PAL=['#3f6250','#2f4f3b','#4f6656','#5e7f63','#6a5f4e','#7d6646','#56705c'];
+const PAL=['#141413','#2f4f3b','#141413','#3a3833','#6a5f4e','#141413','#56705c','#7d6646'];
 const hcode=s=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
 const mctx=document.createElement('canvas').getContext('2d');
 function cloudLayout(words,W){
@@ -818,26 +874,111 @@ function cloudLayout(words,W){
   return out;
 }
 function drawCloud(list){
+  stopSketch();stopPlay();
   const W=cloud.clientWidth;cloudW=W;if(!W)return 0;const t0=performance.now();
   const N=+cloudN.value,words=list.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:1)).slice(0,N);
   if(!words.length){cloud.style.height='';cloud.innerHTML=`<div class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</div>`;
-    $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0};return 0}
+    $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0,mode:'static'};BODIES=[];$('scrubBar').hidden=true;return 0}
   const {placed,miss,tries,steps}=cloudLayout(words,W);
   const y0=Math.min(...placed.map(c=>c.y)),y1=Math.max(...placed.map(c=>c.y+c.h));
   cloud.style.height=Math.ceil(y1-y0+4)+'px';
   cloud.innerHTML=placed.map(c=>{const b=c.b,x=b.x;return `<span data-w="${esc(x.word)}" data-c="${x.count}" role="button" tabindex="0" aria-label="${esc(x.word)}: ${x.count}" `+
     `style="left:${(c.x+1).toFixed(1)}px;top:${(c.y-y0+1).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2}px;height:${c.h-2}px;padding:0 ${b.pad}px;color:${PAL[hcode(x.word)%PAL.length]}">${esc(x.word)}</span>`}).join('');
-  cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0)};
+  cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0),mode:'static'};
+  buildBodies(placed,y0,W);setupScrub();
+  if(motion.checked){const tok=++drawTok;ensureP5().then(()=>{if(tok===drawTok&&VIEW==='visual'&&BODIES.length)startSketch()})
+    .catch(()=>{motion.checked=false;motion.disabled=true;$('cloudNote').textContent+=' · motion unavailable (p5.js could not load)'})}
   $('cloudNote').textContent=`Top ${placed.length.toLocaleString()} of ${list.length.toLocaleString()} words${hide.checked?' (stopwords hidden)':''}`+
     `${miss?` · ${miss} didn't fit`:''} · size ∝ √count · hover or tap a word for its count and sentences`;
   return placed.length;
+}
+
+// ---- WordViz motion: p5.js sketch (words as soft physics bodies) + date scrubber ----
+// p5 is loaded only when WordViz is shown with Motion on: pinned version, Subresource Integrity checked by the browser.
+const P5_URL='https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js',P5_SRI='sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii',MAX_BODIES=300;
+const motion=$('motion'),scrub=$('scrub'),RM=matchMedia('(prefers-reduced-motion: reduce)');
+motion.checked=!RM.matches;RM.addEventListener('change',()=>{motion.checked=!RM.matches;if(VIEW==='visual'&&P)render()});
+motion.onchange=()=>{hidePop();render()};
+let P5P=null,SK=null,IO=null,BODIES=[],SEQ=[],STEP=0,drawTok=0,playT=null,frameN=0;
+function ensureP5(){
+  if(window.p5)return Promise.resolve();
+  return P5P||(P5P=new Promise((ok,no)=>{const s=document.createElement('script');s.src=P5_URL;s.integrity=P5_SRI;s.crossOrigin='anonymous';
+    const t=setTimeout(()=>{P5P=null;no(new Error('timeout'))},12000);
+    s.onload=()=>{clearTimeout(t);window.p5?ok():no(new Error('p5 missing'))};s.onerror=()=>{clearTimeout(t);P5P=null;no(new Error('load failed'))};
+    document.head.appendChild(s)}));
+}
+// font size for a count, on the same sqrt scale as the static layout (final step = exactly the static size)
+function sizer(words,W){const maxF=Math.max(28,Math.min(72,W*0.11)),minF=12,sq=Math.sqrt,hi=sq(words[0].count),lo=sq(words[words.length-1].count);
+  return c=>c<=0?0:hi===lo?Math.min(36,maxF)*sq(c)/hi:sq(c)>=lo?minF+(maxF-minF)*(sq(c)-lo)/(hi-lo):minF*sq(c)/lo}
+function buildBodies(placed,y0,W){
+  const fam=getComputedStyle(cloud).fontFamily,spans=[...cloud.querySelectorAll('span[data-w]')],g=sizer(placed.map(c=>c.b.x).sort((a,b)=>b.count-a.count),W);
+  SEQ=DOCS.filter(d=>sel.has(d.id)).slice().reverse();          // selected documents, oldest first
+  BODIES=placed.slice(0,MAX_BODIES).map((c,i)=>{const b=c.b,x=b.x,wi=VI.get(x.word);mctx.font=`${b.wt} 100px ${fam}`;
+    let run=0;const cum=SEQ.map(d=>run+=(d.cnt.get(wi)||0));
+    const w0=b.w-2,h0=c.h-2,hx=c.x+1+w0/2,hy=c.y-y0+1+h0/2;
+    return {word:x.word,count:x.count,el:spans[i],wt:b.wt,col:spans[i].style.color,fam,rw:mctx.measureText(x.word).width/100,
+      fF:b.f,k:b.f/(g(x.count)||1),g,cum,hx,hy,x:hx,y:hy,vx:0,vy:0,f:b.f,ft:b.f,w:w0,h:h0,seed:i*7.31+1}});
+  BODIES.forEach(boxOf);
+}
+function boxOf(b){if(b.f<0.4){b.w=b.h=0;return}const pad=Math.round(b.f*.08)+1;b.w=b.rw*b.f+2*pad;b.h=Math.ceil(b.f*1.12)}
+function setupScrub(){
+  const K=SEQ.length;$('scrubBar').hidden=K<2;scrub.max=K;STEP=K;scrub.value=K;scrubLabel();
+}
+function scrubLabel(){const K=SEQ.length;if(!K)return;const d=SEQ[STEP-1];
+  $('scrubLbl').innerHTML=STEP===K?`All ${K} ${unitOf(K)} (${fmtDate(SEQ[0].date)} – ${fmtDate(d.date)}) · drag or press ▶ to watch the counts build up in date order`:
+    `Through <b>${fmtDate(d.date)}</b> · ${STEP} of ${K}: ${esc(d.title)} · word sizes = counts so far (the popover still covers all selected)`}
+function applyStep(k){STEP=Math.max(1,Math.min(SEQ.length,k));scrub.value=STEP;scrubLabel();
+  BODIES.forEach(b=>{const c=b.cum[STEP-1];b.ft=Math.min(b.fF,b.k*b.g(c));b.el.setAttribute('aria-label',`${b.word}: ${c} (through ${SEQ[STEP-1].date})`)});
+  if(!SK){BODIES.forEach(b=>{b.f=b.ft;boxOf(b);placeSpan(b,true)})}       // static mode: resize in place (never overlaps: counts only grow)
+}
+function placeSpan(b,styleText){const el=b.el;if(!b.w){el.style.display='none';return}el.style.display='';
+  el.style.left=(b.x-b.w/2).toFixed(1)+'px';el.style.top=(b.y-b.h/2).toFixed(1)+'px';
+  if(SK){el.style.width=b.w.toFixed(1)+'px';el.style.height=b.h+'px'}
+  else if(styleText){el.style.fontSize=b.f.toFixed(1)+'px';el.style.lineHeight=el.style.height=b.h+'px';el.style.padding=`0 ${Math.round(b.f*.08)+1}px`}}
+scrub.oninput=()=>{stopPlay();hidePop();applyStep(+scrub.value)};
+function stopPlay(){clearInterval(playT);playT=null;$('play').innerHTML='&#9654;';$('play').setAttribute('aria-label','Play through the documents in date order')}
+$('play').onclick=()=>{if(playT){stopPlay();return}hidePop();if(STEP>=SEQ.length)applyStep(1);
+  $('play').innerHTML='&#10074;&#10074;';$('play').setAttribute('aria-label','Pause');
+  playT=setInterval(()=>{if(STEP>=SEQ.length){stopPlay();return}applyStep(STEP+1)},SK?1400:900)};
+function stopSketch(){if(IO){IO.disconnect();IO=null}if(SK){SK.remove();SK=null}cloud.classList.remove('live')}
+function startSketch(){
+  stopSketch();const W=cloud.clientWidth,H=cloud.clientHeight;if(!W||!H)return;
+  BODIES.forEach(b=>{b.x=b.hx;b.y=b.hy;b.vx=b.vy=0;b.f=b.ft;boxOf(b)});
+  cloud.classList.add('live');cloudInfo.mode='p5';
+  SK=new p5(p=>{
+    p.setup=()=>{const cv=p.createCanvas(W,H);cv.elt.classList.add('cloudcv');cv.elt.setAttribute('aria-hidden','true');
+      p.pixelDensity(Math.min(2,devicePixelRatio||1));p.frameRate(60);BODIES.forEach(b=>placeSpan(b))};
+    p.draw=()=>{physics(p,W,H);paint(p);if(++frameN%3===0)BODIES.forEach(b=>placeSpan(b))};
+  },cloud);
+  IO=new IntersectionObserver(es=>es.forEach(e=>{if(SK)e.isIntersecting?SK.loop():SK.noLoop()}));IO.observe(cloud);   // pause off-screen
+}
+function physics(p,W,H){
+  const t=p.millis()/1000,B=BODIES,GAP=1;
+  for(const b of B){b.f+=(b.ft-b.f)*0.1;if(Math.abs(b.ft-b.f)<0.03)b.f=b.ft;boxOf(b);if(!b.w)continue;
+    const ax=(p.noise(b.seed,t*0.22)-0.5)*0.16+(b.hx-b.x)*0.003,ay=(p.noise(b.seed+91,t*0.22)-0.5)*0.12+(b.hy-b.y)*0.003;
+    b.vx=(b.vx+ax)*0.9;b.vy=(b.vy+ay)*0.9;b.x+=b.vx;b.y+=b.vy}
+  for(let it=0;it<3;it++){const G=64,grid=new Map();     // spatial hash; push overlapping boxes apart (bigger words move less)
+    B.forEach((b,i)=>{if(!b.w)return;for(let gx=Math.floor((b.x-b.w/2)/G);gx<=Math.floor((b.x+b.w/2)/G);gx++)for(let gy=Math.floor((b.y-b.h/2)/G);gy<=Math.floor((b.y+b.h/2)/G);gy++){
+      const k=gx*4096+gy;(grid.get(k)||grid.set(k,[]).get(k)).push(i)}});
+    const seen=new Set();
+    for(const a of grid.values())for(let m=0;m<a.length;m++)for(let n=m+1;n<a.length;n++){const i=a[m],j=a[n],key=i<j?i*1000+j:j*1000+i;if(seen.has(key))continue;seen.add(key);
+      const A=B[i],C=B[j],ox=(A.w+C.w)/2+GAP-Math.abs(A.x-C.x),oy=(A.h+C.h)/2+GAP-Math.abs(A.y-C.y);if(ox<=0||oy<=0)continue;
+      const ma=C.w*C.h/(A.w*A.h+C.w*C.h);
+      if(ox<oy){const s=A.x<C.x?-1:1;A.x+=s*ox*ma;C.x-=s*ox*(1-ma);A.vx*=.5;C.vx*=.5}else{const s=A.y<C.y?-1:1;A.y+=s*oy*ma;C.y-=s*oy*(1-ma);A.vy*=.5;C.vy*=.5}}}
+  for(const b of B){if(!b.w)continue;b.x=Math.max(b.w/2,Math.min(W-b.w/2,b.x));b.y=Math.max(b.h/2,Math.min(H-b.h/2,b.y))}
+}
+function paint(p){
+  const ctx=p.drawingContext;p.clear();ctx.textAlign='center';ctx.textBaseline='middle';
+  for(let i=BODIES.length-1;i>=0;i--){const b=BODIES[i];if(!b.w)continue;
+    if(b.word===curWord){ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--hl').trim()||'#e2f0e7';ctx.beginPath();ctx.roundRect?ctx.roundRect(b.x-b.w/2,b.y-b.h/2,b.w,b.h,5):ctx.rect(b.x-b.w/2,b.y-b.h/2,b.w,b.h);ctx.fill()}
+    ctx.font=`${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;ctx.fillStyle=b.col;ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
 }
 function setView(v,user){
   v=v==='visual'?'visual':'standard';
   document.querySelectorAll('#views button').forEach(b=>{const on=b.dataset.view===v;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
   $('viewHint').textContent=v==='visual'?'WordViz: bigger words were used more often.':'Ranked table of every word.';
   if(v===VIEW)return;
-  hidePop();VIEW=v;document.body.classList.toggle('view-visual',v==='visual');
+  hidePop();VIEW=v;document.body.classList.toggle('view-visual',v==='visual');if(v!=='visual'){stopSketch();stopPlay()}
   // Visual turns "hide stopwords" on (so "the" doesn't dominate); Standard restores the previous setting
   if(v==='visual'){stopStd=hide.checked;hide.checked=true}else if(stopStd!==null){hide.checked=stopStd;stopStd=null}
   if(P){render();syncHash()}
@@ -850,7 +991,7 @@ let rsT=null;
 addEventListener('resize',()=>{placePop();clearTimeout(rsT);rsT=setTimeout(()=>{ // re-layout when the width changes (rotation, window resize)
   if(VIEW==='visual'&&P&&cloud.clientWidth!==cloudW){hidePop();render()}},150)});
 // self-check used by tests: highlighted matches == indexed occurrences; full-text people: occurrences == counts
-window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get view(){return VIEW},get cloudInfo(){return cloudInfo},get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
+window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get view(){return VIEW},get cloudInfo(){return cloudInfo},get bodies(){return BODIES},get sketch(){return SK},applyStep,get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
   const its=occurrences(w);its.forEach(it=>{if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push(['hl',w,it.doc.id,it.si])});
   const st=stats(w),o=its.reduce((t,i)=>t+i.n,0);
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};

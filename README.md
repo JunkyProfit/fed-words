@@ -32,7 +32,7 @@ The selected person's label pill, role, document count and source appear in the 
 
 Open `index.html` in a browser (serve the folder over HTTP: with this many people the page is
 over 1.5 MB, so `build.py` keeps the default person inline and writes the others to
-`data/<person>.json`, loaded on demand). No external dependencies; it has with a filter box (plain text or regex), a
+`data/<person>.json`, loaded on demand). The only external file is p5.js for WordViz motion (optional, SRI-pinned, loaded on demand). It has a filter box (plain text or regex), a
 "hide common stopwords" toggle (off by default, so every word is listed), and
 sortable Rank / Word / Count columns. People and their metadata are listed in
 `people.json`.
@@ -69,10 +69,28 @@ left sidebar with the cloud beside them; on narrow screens the cloud comes right
 Who/Timeframe cards (stats and filter below it). Switching to WordViz turns on "Hide common stopwords"
 so "the" doesn't dominate. You can turn it off again, and going back to Standard restores
 your earlier setting. Hover a word for its count and the same sentence popover as the table
-(source links, CEO 10-sentence caps); click or tap to pin it. The layout is plain JavaScript
-with no library: words are sized with canvas `measureText` and placed largest-first along a
-spiral with box collision checks. It re-lays out when the width changes (rotation or window
-resize). The view is kept in the URL (`#mode=visual`, plus `&n=50|300` when not 150).
+(source links, CEO 10-sentence caps); click or tap to pin it.
+
+**WordViz motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
+largest words first along a spiral with box collision checks). With **Motion** on, a
+[p5.js](https://p5js.org/) sketch takes over: each word is a soft physics body that drifts gently
+(Perlin noise) around its spot, held by a weak spring, and boxes are pushed apart so words never overlap
+(spatial hash; bigger words move less). Invisible, focusable hit boxes follow the words, so hover, click/tap
+to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when WordViz is
+shown with Motion on, from jsDelivr with Subresource Integrity
+(`sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii`). The sketch pauses when the
+cloud is off-screen (IntersectionObserver) and is removed in Standard view. With `prefers-reduced-motion:
+reduce`, Motion off, or if the CDN can't be reached, the static layout is used.
+**Date scrubber:** when 2+ documents are selected, a slider (and ▶ Play) steps through them in date order;
+word sizes follow the cumulative counts up to that document (smoothly in Motion, in place when static;
+since counts only grow, words never overlap). The popover always covers all selected documents.
+Up to 300 bodies (the Top 300 option).
+
+**Design:** black line-art theme matching the logo (black header with cream text, thin black borders and
+rules, black selected states; the per-category accent is a thin stripe under the header). Word-count
+numbers (stats and the Count column) use one CSS variable, `--num-red` (#9e1b24, 6.8–7.8:1 contrast on
+the cream backgrounds). The theme is one block at the end of the CSS in `build.py`, easy to remove.
+The view is kept in the URL (`#mode=visual`, plus `&n=50|300` when not 150).
 
 ### Licensing: public domain vs. excerpts
 | Source | Status | Treatment |
