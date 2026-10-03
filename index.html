@@ -68,12 +68,23 @@ header .eyebrow{display:inline-block;font-size:12px;font-weight:600;text-transfo
 #persons button.chip.on{font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
 body.mode-fed .only-ceo,body.mode-ceo .only-fed{display:none}
 #pop .cap{font-size:12px;color:var(--muted);margin-top:8px;padding-top:6px;border-top:1px dashed var(--line)}
+.viewbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 14px}
+.viewbar .lbl{font-weight:600;font-size:13px;color:var(--muted)}.viewbar .seg{margin:0}.viewbar .seg button{font-size:14px;padding:6px 18px}
+body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none}
+.cloud-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:2px 0 6px;font-size:14px}
+.cloud-bar select{font:inherit;font-size:14px;padding:3px 6px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+#cloud{position:relative;width:100%;min-height:120px;overflow:hidden;margin:4px 0 2px}
+#cloud span{position:absolute;white-space:nowrap;cursor:help;border-radius:5px;letter-spacing:-.01em;transition:background-color .12s}
+#cloud span:hover,#cloud span.active{background:#e2f0e7}#cloud .empty{position:static}
 </style></head><body class="mode-fed">
 <header><a class="about-link" href="#about">About</a>
 <div class="brand"><a class="logo" href="./" title="Fed Words home"><img src="assets/logo.png" width="342" height="104" alt="Fed Words"></a>
 <div class="titles"><div class="eyebrow" id="eyebrow"></div><h1 id="h1">Every word Chairman Kevin Warsh said, ranked</h1>
 <p id="sub">Word frequencies from official sources</p></div></div></header>
 <main>
+<div class="viewbar"><span class="lbl">View</span>
+<div class="seg" id="views" role="tablist" aria-label="View"><button data-view="standard" role="tab">Standard</button><button data-view="visual" role="tab">Visual</button></div>
+<span class="muted" id="viewHint"></span></div>
 <section class="card" id="picker"><h2>Who</h2>
 <div class="seg" id="cats" role="tablist" aria-label="Category"></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
@@ -93,14 +104,17 @@ body.mode-fed .only-ceo,body.mode-ceo .only-fed{display:none}
 <div class="stat"><b id="sUnique">–</b>unique words</div>
 <div class="stat"><b id="sShown">–</b>words shown</div>
 </section>
-<section class="card">
+<section class="card" id="words">
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
 <label><input type="checkbox" id="hideStop"> Hide common stopwords</label>
 </div>
-<table><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th style="width:30%"></th></tr></thead>
+<div class="only-visual"><div class="cloud-bar"><label>Show top <select id="cloudN" aria-label="Number of words in the cloud">
+<option value="50">50</option><option value="150" selected>150</option><option value="300">300</option></select> words</label>
+<span class="muted" id="cloudNote"></span></div><div id="cloud"></div></div>
+<table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th style="width:30%"></th></tr></thead>
 <tbody id="tb"></tbody></table>
-<p class="muted" id="more"></p>
+<p class="muted only-standard" id="more"></p>
 </section>
 <p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
 possessive 's removed (Fed's → fed); digit-only tokens excluded. <span class="only-fed">Fed transcripts: footnotes and editorial notes excluded.</span>
@@ -196,9 +210,16 @@ function syncTimeframe(){
   $('selSummary').innerHTML=!ds.length?'<b>No documents selected.</b>':
     `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> document${(all?ds.length:DOCS.length)>1?'s':''}`+
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
-  // URL state: #person=<slug>&docs=<id,...>; default person + all docs = clean URL. Leaves #about etc. alone.
-  const h=location.hash,ours=!h||/^#(person|docs)=/.test(h);
-  const want=(P.slug===DEFAULT&&all)?'':'#person='+P.slug+(all?'':'&docs='+[...sel].join(','));
+  syncHash();
+}
+// URL state: #person=<slug>&docs=<id,...>&mode=visual&n=<50|300>; default view = clean URL. Leaves #about etc. alone.
+const OURS=/^#(person|docs|mode|n)=/;
+function syncHash(){
+  if(!P)return;const all=sel.size===DOCS.length,parts=[];
+  if(P.slug!==DEFAULT||!all)parts.push('person='+P.slug);
+  if(!all)parts.push('docs='+[...sel].join(','));
+  if(VIEW==='visual'){parts.push('mode=visual');if(cloudN.value!=='150')parts.push('n='+cloudN.value)}
+  const h=location.hash,ours=!h||OURS.test(h),want=parts.length?'#'+parts.join('&'):'';
   if(want)history.replaceState(null,'',want);else if(ours&&h)history.replaceState(null,'',location.pathname+location.search);
 }
 
@@ -216,12 +237,14 @@ function render(){
   const s=q.value.trim().toLowerCase();let re=null;if(s){try{re=new RegExp(s)}catch(e){}}
   const list=s?base.filter(x=>re?re.test(x.word):x.word.includes(s)):base.slice();
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
-  const max=base.length?base[0].count:1;
-  tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
-    :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
   $('sDocs').textContent=sel.size+' / '+DOCS.length;
   $('sTotal').textContent=base.reduce((t,x)=>t+x.count,0).toLocaleString();
   $('sUnique').textContent=base.length.toLocaleString();
+  if(VIEW==='visual'){tb.innerHTML='';$('sShown').textContent=drawCloud(list).toLocaleString();return}
+  cloud.innerHTML='';
+  const max=base.length?base[0].count:1;
+  tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
+    :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
   $('sShown').textContent=list.length.toLocaleString();
   $('more').textContent=list.length>LIMIT?`Showing first ${LIMIT} of ${list.length} — use the filter to find others.`:'';
   document.querySelectorAll('th[data-k]').forEach(th=>{th.textContent=th.textContent.replace(/ [▲▼]$/,'')+(th.dataset.k===sortK?(sortDir<0?' ▼':' ▲'):'')});
@@ -290,8 +313,9 @@ function popHTML(word){
   return h;
 }
 function placePop(){
-  if(!curRow)return;const cell=curRow.querySelector('td.w').getBoundingClientRect(),vw=document.documentElement.clientWidth;
-  let left=cell.left+Math.min(cell.width,140)+8,width=Math.min(600,vw-left-12);
+  if(!curRow||!curRow.isConnected)return;const isRow=curRow.tagName==='TR',vw=document.documentElement.clientWidth;
+  const cell=(isRow?curRow.querySelector('td.w'):curRow).getBoundingClientRect();
+  let left=isRow?cell.left+Math.min(cell.width,140)+8:cell.right+8,width=Math.min(600,vw-left-12);
   if(width<320){left=8;width=vw-16}
   pop.style.left=(left+scrollX)+'px';pop.style.width=width+'px';
   pop.style.top=((width===vw-16?cell.bottom+4:cell.top-8)+scrollY)+'px';
@@ -303,28 +327,106 @@ function showPop(tr,pin){
   pop.innerHTML=popHTML(curWord);pop.classList.toggle('expanded',showAll);pop.hidden=false;placePop();
 }
 function hidePop(){pop.hidden=true;pinned=false;showAll=false;curWord=null;if(curRow)curRow.classList.remove('active');curRow=null}
-tb.addEventListener('mouseover',e=>{const tr=e.target.closest('tr[data-w]');if(!tr||pinned)return;clearTimeout(hideT);
+const cloud=$('cloud'),cloudN=$('cloudN');
+[tb,cloud].forEach(box=>{
+box.addEventListener('mouseover',e=>{const tr=e.target.closest('[data-w]');if(!tr||pinned)return;clearTimeout(hideT);
   if(tr===curRow)return;clearTimeout(hoverT);hoverT=setTimeout(()=>showPop(tr,false),120)});
-tb.addEventListener('mouseleave',()=>{clearTimeout(hoverT);if(!pinned)hideT=setTimeout(hidePop,300)});
+box.addEventListener('mouseleave',()=>{clearTimeout(hoverT);if(!pinned)hideT=setTimeout(hidePop,300)});
+box.addEventListener('click',e=>{const tr=e.target.closest('[data-w]');if(!tr)return;clearTimeout(hoverT);clearTimeout(hideT);pinned=false;showPop(tr,true)});
+});
 pop.addEventListener('mouseenter',()=>clearTimeout(hideT));
 pop.addEventListener('mouseleave',()=>{if(!pinned)hideT=setTimeout(hidePop,300)});
-tb.addEventListener('click',e=>{const tr=e.target.closest('tr[data-w]');if(!tr)return;clearTimeout(hoverT);clearTimeout(hideT);pinned=false;showPop(tr,true)});
 pop.addEventListener('click',e=>{e.stopPropagation(); // re-render detaches e.target; don't let the outside-click handler close us
   if(e.target.closest('.x')){hidePop();return}
   if(e.target.closest('.more')&&P.policy!=='excerpt'){showAll=true;pinned=true;pop.innerHTML=popHTML(curWord);pop.classList.add('expanded');placePop()}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePop()});
-document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.target)&&!e.target.closest('tr[data-w]'))hidePop()});
-addEventListener('resize',placePop);
+document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.target)&&!e.target.closest('[data-w]'))hidePop()});
+
+// ---- Visual mode: word cloud (vanilla JS; spiral placement + measureText box collisions) ----
+let VIEW='standard',stopStd=null,cloudW=0,cloudInfo={placed:0,skipped:0,ms:0};
+const PAL=['#3f6250','#2f4f3b','#4f6656','#5e7f63','#6a5f4e','#7d6646','#56705c'];
+const hcode=s=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
+const mctx=document.createElement('canvas').getContext('2d');
+function cloudLayout(words,W){
+  const fam=getComputedStyle(cloud).fontFamily,maxF=Math.max(28,Math.min(72,W*0.11)),minF=12,GAP=2;
+  const sq=Math.sqrt,hi=sq(words[0].count),lo=sq(words[words.length-1].count);
+  const boxes=words.map(x=>{ // sqrt scaling between the least and most frequent shown word
+    let f=hi===lo?Math.min(36,maxF):minF+(maxF-minF)*(sq(x.count)-lo)/(hi-lo),wt,w,pad;
+    for(let k=0;k<4;k++){wt=f>=30?700:f>=18?600:500;mctx.font=`${wt} ${f}px ${fam}`;pad=Math.round(f*.08)+1;
+      w=Math.ceil(mctx.measureText(x.word).width)+2*pad;if(w<=W-4||f<=minF)break;f=Math.max(minF,f*(W-4)/w)}
+    return {x,f:Math.round(f*10)/10,wt,pad,w:w+GAP,h:Math.ceil(f*1.12)+GAP}});
+  const area=boxes.reduce((t,b)=>t+b.w*b.h,0),H=Math.max(220,area/(W*0.5));
+  // exact collisions: spatial hash of placed boxes; fast reject: 4px bitmap of cells fully covered by a placed box
+  const G=40,grid=new Map(),K=(i,j)=>i*65536+j+32768,placed=[],cx=W/2,cy=H/2,E=W/H*1.25; // ellipse a bit wider than the box so the cloud fills it
+  const sx=Math.max(1,E),sy=Math.max(1,1/E),sm=Math.max(sx,sy); // spiral pitch runs along the shorter axis
+  const C=4,OY=1.5*H,CW=Math.ceil(W/C)+1,CH=Math.ceil(4*H/C)+1,occ=new Uint8Array(CW*CH);
+  const busy=(x,y)=>{const i=x/C|0,j=(y+OY)/C|0;return j>=0&&j<CH&&occ[j*CW+i]===1};
+  const cells=(r,fn)=>{for(let i=Math.floor(r.x/G);i<=Math.floor((r.x+r.w)/G);i++)for(let j=Math.floor(r.y/G);j<=Math.floor((r.y+r.h)/G);j++)if(fn(K(i,j)))return true;return false};
+  const hit=c=>cells(c,k=>{const a=grid.get(k);return a&&a.some(o=>c.x<o.x+o.w&&c.x+c.w>o.x&&c.y<o.y+o.h&&c.y+c.h>o.y)});
+  const add=c=>{cells(c,k=>{(grid.get(k)||grid.set(k,[]).get(k)).push(c)});placed.push(c);
+    for(let j=Math.max(0,Math.ceil((c.y+OY)/C));j<Math.min(CH,Math.floor((c.y+c.h+OY)/C));j++)
+      for(let i=Math.ceil(c.x/C);i<Math.floor((c.x+c.w)/C);i++)occ[j*CW+i]=1};
+  let steps=0,todo=boxes.map((b,n)=>[b,n]),y0=0,y1=H,phase=0,rPrev=0,rFloor=0;
+  for(;todo.length&&phase<6;phase++){ // words that don't fit are retried in a taller band (cloud grows up and down)
+    const miss=[],rMax=Math.max(W/2/sx,(y1-y0)/2/sy)*1.5;
+    for(const [b,n] of todo){const th0=n*2.39996,pitch=Math.max(4,b.h*.35);let ok=false;
+      // the middle is already packed: start each spiral at 55% of the previous word's radius
+      let r=Math.max(rFloor,rPrev*0.55),t=r*2*Math.PI/pitch;
+      for(;r<rMax;){steps++;
+        const x=cx+r*Math.cos(t+th0)*sx-b.w/2,y=cy+r*Math.sin(t+th0)*sy-b.h/2;
+        t+=Math.min(0.35,3/Math.max(1,r*sm));r=pitch*t/(2*Math.PI);
+        if(x<0||y<y0||x+b.w>W||y+b.h>y1)continue;
+        if(busy(x+b.w/2,y+b.h/2)||busy(x+1,y+1)||busy(x+b.w-1,y+1)||busy(x+1,y+b.h-1)||busy(x+b.w-1,y+b.h-1))continue;
+        const c={x,y,w:b.w,h:b.h,b};if(!hit(c)){add(c);rPrev=r;ok=true;break}}
+      if(!ok)miss.push([b,n])}
+    todo=miss;rFloor=(y1-y0)/2/sy*0.92;rPrev=0;y0=Math.max(y0-H*0.2,-OY);y1=Math.min(y1+H*0.2,2.5*H)}
+  const out={placed,miss:todo.length,tries:phase,steps};
+  return out;
+}
+function drawCloud(list){
+  const W=cloud.clientWidth;cloudW=W;if(!W)return 0;const t0=performance.now();
+  const N=+cloudN.value,words=list.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:1)).slice(0,N);
+  if(!words.length){cloud.style.height='';cloud.innerHTML=`<div class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</div>`;
+    $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0};return 0}
+  const {placed,miss,tries,steps}=cloudLayout(words,W);
+  const y0=Math.min(...placed.map(c=>c.y)),y1=Math.max(...placed.map(c=>c.y+c.h));
+  cloud.style.height=Math.ceil(y1-y0+4)+'px';
+  cloud.innerHTML=placed.map(c=>{const b=c.b,x=b.x;return `<span data-w="${esc(x.word)}" data-c="${x.count}" role="button" tabindex="0" aria-label="${esc(x.word)}: ${x.count}" `+
+    `style="left:${(c.x+1).toFixed(1)}px;top:${(c.y-y0+1).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2}px;height:${c.h-2}px;padding:0 ${b.pad}px;color:${PAL[hcode(x.word)%PAL.length]}">${esc(x.word)}</span>`}).join('');
+  cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0)};
+  $('cloudNote').textContent=`Top ${placed.length.toLocaleString()} of ${list.length.toLocaleString()} words${hide.checked?' (stopwords hidden)':''}`+
+    `${miss?` · ${miss} didn't fit`:''} · size ∝ √count · hover or tap a word for its count and sentences`;
+  return placed.length;
+}
+function setView(v,user){
+  v=v==='visual'?'visual':'standard';
+  document.querySelectorAll('#views button').forEach(b=>{const on=b.dataset.view===v;b.classList.toggle('on',on);b.setAttribute('aria-selected',on)});
+  $('viewHint').textContent=v==='visual'?'Word cloud: bigger words were used more often.':'Ranked table of every word.';
+  if(v===VIEW)return;
+  hidePop();VIEW=v;document.body.classList.toggle('view-visual',v==='visual');
+  // Visual turns "hide stopwords" on (so "the" doesn't dominate); Standard restores the previous setting
+  if(v==='visual'){stopStd=hide.checked;hide.checked=true}else if(stopStd!==null){hide.checked=stopStd;stopStd=null}
+  if(P){render();syncHash()}
+  if(user&&v==='visual'){const r=$('words').getBoundingClientRect();if(r.top>innerHeight*0.6)$('words').scrollIntoView({behavior:'smooth',block:'start'})}
+}
+document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>setView(b.dataset.view,true));
+cloudN.onchange=()=>{hidePop();render();syncHash()};
+cloud.addEventListener('keydown',e=>{const s=e.target.closest('[data-w]');if(s&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(s,true)}});
+let rsT=null;
+addEventListener('resize',()=>{placePop();clearTimeout(rsT);rsT=setTimeout(()=>{ // re-layout when the width changes (rotation, window resize)
+  if(VIEW==='visual'&&P&&cloud.clientWidth!==cloudW){hidePop();render()}},150)});
 // self-check used by tests: highlighted matches == indexed occurrences; full-text people: occurrences == counts
-window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
+window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,setView,get view(){return VIEW},get cloudInfo(){return cloudInfo},get P(){return P},checkAll(){const bad=[];V.forEach(w=>{
   const its=occurrences(w);its.forEach(it=>{if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push(['hl',w,it.doc.id,it.si])});
   const st=stats(w),o=its.reduce((t,i)=>t+i.n,0);
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
 // initial state from URL: #person=<slug>&docs=<ids>  (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
+  if(['50','150','300'].includes(hp.get('n')))cloudN.value=hp.get('n');
+  setView(hp.get('mode')==='visual'?'visual':'standard');
   return setPerson(hp.get('person')||DEFAULT,(hp.get('docs')||'').split(',').filter(Boolean)).catch(e=>{
     tb.innerHTML=`<tr><td colspan="4" class="empty">Could not load data: ${esc(e.message)}</td></tr>`;console.error(e)})}
 fromHash();
 // pasted/edited #person= links and back/forward on an open page (in-page anchors like #about are ignored)
-addEventListener('hashchange',()=>{if(!location.hash||/^#(person|docs)=/.test(location.hash)){hidePop();fromHash()}});
+addEventListener('hashchange',()=>{if(!location.hash||OURS.test(location.hash)){hidePop();fromHash()}});
 </script></body></html>

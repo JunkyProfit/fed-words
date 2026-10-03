@@ -35,6 +35,18 @@ has a **source ↗** link, a text-fragment URL (`…htm#:~:text=start,end`) that
 to and highlights that sentence on federalreserve.gov in Chrome, Edge, and Safari.
 The speech title link is a plain fallback for other browsers.
 
+**Visual mode (word cloud):** the **View: Standard | Visual** toggle at the top switches
+between the ranked table and a word cloud for the same person, timeframe, filter, and
+stopword setting. Font size scales with the square root of the count, from 12px to 72px
+(the largest size is smaller on narrow screens). "Show top 50 / 150 / 300" sets how many
+words are drawn; the default is 150. Switching to Visual turns on "Hide common stopwords"
+so "the" doesn't dominate. You can turn it off again, and going back to Standard restores
+your earlier setting. Hover a word for its count and the same sentence popover as the table
+(source links, CEO 10-sentence caps); click or tap to pin it. The layout is plain JavaScript
+with no library: words are sized with canvas `measureText` and placed largest-first along a
+spiral with box collision checks. It re-lays out when the width changes (rotation or window
+resize). The view is kept in the URL (`#mode=visual`, plus `&n=50|300` when not 150).
+
 ### CEO letters: counts + short excerpts only
 The Fed's transcripts are US-government works (public domain), so they're embedded in
 full. CEO letters are copyrighted, so the repo and the page contain **only derived data**:
