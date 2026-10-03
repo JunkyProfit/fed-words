@@ -342,10 +342,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm7">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm7">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm8">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm8">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm7">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm8">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -355,7 +355,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm7">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm8">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -955,9 +955,26 @@ html.tvopen{overflow:hidden}
 .tvm-body .tradingview-widget-copyright .blue-text{color:#2962ff}
 .tvm-note{margin:0;padding:4px 14px 8px;font-size:12px;color:var(--muted);text-align:center}
 @media (max-width:640px){.tvm-panel{width:calc(100vw - 12px);height:calc(100dvh - 12px);border-radius:10px}.tvm-sub{display:none}.tvm-head{padding-left:12px}.tvm-body{padding:4px 2px 0}}
+/* ---- Buttons: a bit more space between them and slightly fatter (proportionate; phones get smaller increases to keep the red stats high) ---- */
+body header .viewbar.hview,body header #views{gap:16px!important}
+body header .hview .vcard{padding:10px 20px 10px 12px!important;min-height:62px}
+body #cats{gap:9px!important}body #cats button{padding:9px 13px!important}
+body #persons{gap:8px!important;column-gap:8px!important;row-gap:8px!important}body #persons button.chip{padding:6px 14px!important}
+body #idx{gap:8px!important}body #idx button{padding:5px 11px!important}
+body #tfbar{gap:9px!important}body #tfbar .chip,body #tfbar label.chip,body #tfbar #docPick>summary{min-height:32px!important;padding:6px 12px!important}
+body #nbar{gap:9px!important}body #nbar .nchip{min-height:36px!important;padding:0 14px!important}
+body header .hact{gap:10px!important}body header .hact button,body header .hact a{padding:6px 13px!important}
+@media (max-width:640px){
+ body header .viewbar.hview,body header #views{gap:12px!important}body header .hview .vcard{padding:9px 10px!important;min-height:42px}
+ body #cats{gap:8px!important}body #cats button{padding:6px 9px!important}
+ body #persons{gap:8px!important}body #persons button.chip{padding:4px 12px!important}
+ body #idx{gap:8px!important}body #idx button{padding:3px 10px!important}
+ body #tfbar{gap:8px!important}body #tfbar .chip,body #tfbar label.chip,body #tfbar #docPick>summary{min-height:40px!important;padding:7px 12px!important}
+ body #nbar{gap:8px!important}body #nbar .nchip{min-height:42px!important;padding:0 4px!important}
+ body header .hact{gap:8px!important}body header .hact button,body header .hact a{padding:5px 11px!important}}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
-<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm7" width="880" height="210" alt="Mouth Math"></a>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm8" width="880" height="210" alt="Mouth Math"></a>
 <div class="titles"><h1 id="siteTitle">Every Word Out Of Their Mouth Counts</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
 <div class="viewbar hview" role="group" aria-label="View">
