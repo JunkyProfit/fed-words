@@ -86,7 +86,7 @@ The selected person's label pill, role, document count and source appear in the 
 
 Open `index.html` in a browser (serve the folder over HTTP: with this many people the page is
 over 1.5 MB, so `build.py` keeps the default person inline and writes the others to
-`data/<person>.json`, loaded on demand). The only external file is p5.js for Word Cloud motion (optional, SRI-pinned, loaded on demand). It has a filter box (plain text or regex), a
+`data/<person>.json`, loaded on demand). The only external file is p5.js for Super Cloud motion (optional, SRI-pinned, loaded on demand). It has a filter box (plain text or regex), a
 "hide common stopwords" toggle (**on by default**, so common words like "the", "and" and "that" are left
 out when you first open the site; uncheck it to list every word), and
 sortable Rank / Word / Count columns. People and their metadata are listed in
@@ -127,31 +127,34 @@ units replace the placeholders. Each placeholder (and the "Sponsor your ad here"
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
 `/` (filter words), `V` (switch view), `S` (share), `?` (hint).
 
-**Views:** two thumbnail cards at the top, **Word Cloud** (the default, a framed mini cloud, shown in the stat red)
+**Views:** two thumbnail cards at the top, **Super Cloud** (the default, a framed mini cloud, shown in the stat red)
 and **Super Math** (the ranked table, a sketched page), are buttons with `aria-pressed` that switch
-between the ranked table and a word cloud for the same person, timeframe, filter, and
+between the ranked table and a word cloud (Super Cloud) for the same person, timeframe, filter, and
 stopword setting. Font size scales with the square root of the count, from 12px to 72px
 (the largest size is smaller on narrow screens). One shared **Show 25 / 50 / 100 / 150 / All words** chip row
 (Arial, red outline; the selected chip is filled red; 40px tall, full-width on phones) sits right under the Timeframe
 row and sets how many words both views show; the default is **50**. Super Math lists the top N most frequent words
 (after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
-at most 300 words, so All in Word Cloud means the top 300. Word Cloud turns on "Hide common stopwords"
+at most 300 words, so All in Super Cloud means the top 300. Super Cloud turns on "Hide common stopwords"
 so "the" doesn't dominate. You can turn it off again, and going back to Super Math restores
 your earlier setting (on, unless you unchecked it). Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
 
 **Layout order (every view, every screen size):** the person's name ("Every word <person> said, ranked"), then the
-red stats (documents, total words, unique words, words shown), then the Word Cloud or the Super Math table. The stats
+red stats (documents, total words, unique words, words shown), then the Super Cloud or the Super Math table. The stats
 live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
 screens (900px and up) the Who panel sits in a left sidebar in both views.
 **Header:** the logo is an inline SVG (`assets/logo-inline.svg`, inlined by `build.py`): a gender-neutral cream line-art
-profile whose slightly open mouth sends out sound waves, then "= ±", then a red Arial number that changes every 150–400 ms
+profile with realistic human proportions (checked against a CC0 reference silhouette: eye line about halfway down
+the head, forehead sloping gently back from the brow, a low flat crown, the ear just behind the middle at eye-to-nose height)
+whose slightly open mouth sends out sound waves, then "= ±", then a red Arial number that changes every 150–400 ms
 (fixed width, so nothing moves; a static 100 under `prefers-reduced-motion`; paused in background tabs), then the
-**MouthMath** wordmark in Arial Bold with red M's. It is 52px tall on desktop, 40px on phones and 34px below 360px. The static
+**MouthMath** wordmark, set apart by extra space: Arial Bold, all cream, with drop-cap style capital M's (1.3x, same baseline).
+It is 52px tall on desktop, 44px from 641 to 1239px, 36px on phones and 30px below 360px. The static
 `assets/logo.svg`/`logo.png`, the favicon (`favicon.svg` / 32px `favicon.png`: profile plus waves), the
 `apple-touch-icon.png` and the 1200×630 `og-image.png` (logo on black) are generated from the same source
 (`/workspace/logo-options/v3/gen_v3.py`, `site_assets_v3.py`). After the logo comes a compact headline block, then the red
-**Word Cloud** and green **Super Math** view buttons (green = one CSS variable, `--money`; set it to a gray to switch). Each view button
+**Super Cloud** and green **Super Math** view buttons (green = one CSS variable, `--money`; set it to a gray to switch). Each view button
 has a second outer ring in its color and a raised look (top highlight, drop shadow) that presses in on tap. The Fed Chair / CEOs /
 US Government category buttons sit at the top of the Who panel, with that category's people right below. Person names are red
 (#ff5449 on dark; a darker red #a8201a on the light selected chip); ticker pills stay green.
@@ -160,12 +163,12 @@ chips in single horizontal-scroll rows; the Timeframe row stays one line (years 
 13px text); About starts collapsed
 (the header's About link opens it). At 390×844 the red stats are at about y=310 and the table or cloud starts right below.
 
-**Word Cloud motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
+**Super Cloud motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
 largest words first along a spiral with box collision checks). With **Motion** on, a
 [p5.js](https://p5js.org/) sketch takes over: each word is a soft physics body that drifts gently
 (Perlin noise) around its spot, held by a weak spring, and boxes are pushed apart so words never overlap
 (spatial hash; bigger words move less). Invisible, focusable hit boxes follow the words, so hover, click/tap
-to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when Word Cloud is
+to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when Super Cloud is
 shown with Motion on, from jsDelivr with Subresource Integrity
 (`sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii`). The sketch pauses when the
 cloud is off-screen (IntersectionObserver) and is removed in Super Math view. With `prefers-reduced-motion:
@@ -182,8 +185,8 @@ the cream backgrounds). The theme is one block at the end of the CSS in `build.p
 the person heading and the red stat numbers; normal tracking for body text; uppercase with +0.06em only on tiny
 labels (category pill, source type, group labels). Counts use tabular numerals.
 
-The view is kept in the URL: Word Cloud is the default (clean URL, plus `n=25|100|150|all` when not 50; old `n=300` links map to All); Super Math adds
-`#mode=standard`. Old `#mode=visual` links still open the Word Cloud.
+The view is kept in the URL: Super Cloud is the default (clean URL, plus `n=25|100|150|all` when not 50; old `n=300` links map to All); Super Math adds
+`#mode=standard`. Old `#mode=visual` links still open the Super Cloud.
 
 ### Licensing: public domain vs. excerpts
 | Source | Status | Treatment |
