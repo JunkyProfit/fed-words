@@ -79,9 +79,9 @@ posts are not used.
 
 The page header is site-wide ("Every Word Out Of Their Mouth Counts": title case, Arial, tight tracking; on phones it sits on its own line under the logo and scales with the screen width so it stays on one line), not tied to the default person.
 
-CEO stock tickers (from `ceos.json`: `companies[].ticker`, plus `existing_tickers` for the original five) show as a small money-green outlined pill in Arial caps, both on each CEO's chip in the people list and after the selected speaker's name in the results title (e.g. "Every word Jamie Dimon [JPM] said, ranked"). Fed and government people have no ticker, so no pill.
+CEO stock tickers (from `ceos.json`: `companies[].ticker`, plus `existing_tickers` for the original five) show as a small money-green outlined pill in Arial caps, both on each CEO's chip in the people list and after the selected speaker's name in the results title (e.g. "From the mouth of Jamie Dimon [JPM]"). Fed and government people have no ticker, so no pill.
 The selected person's label pill, role, document count and source appear in the Who card, and
-"Every word <person> said, ranked" heads the results. Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
+"From the mouth of <person>" heads the results (lead-in lighter and slightly smaller, the name bold; per-person page title "Mouth Math — From the mouth of <person> (TICKER)"). Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
 `doc_noun1`, `unit`/`unit_pl` and an optional popover `credit` line in `people.json`).
 
 Open `index.html` in a browser (serve the folder over HTTP: with this many people the page is
@@ -140,7 +140,7 @@ so "the" doesn't dominate. You can turn it off again, and going back to Super Ma
 your earlier setting (on, unless you unchecked it). Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
 
-**Layout order (every view, every screen size):** the person's name ("Every word <person> said, ranked"), then the
+**Layout order (every view, every screen size):** the person's name ("From the mouth of <person>"), then the
 red stats (documents, total words, unique words, words shown), then the Super Cloud or the Super Math table. The stats
 live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
 screens (900px and up) the Who panel sits in a left sidebar in both views.

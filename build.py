@@ -342,20 +342,20 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm11">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm11">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm12">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm12">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm11">
-<title>Mouth Math — every word they said, ranked</title>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm12">
+<title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
 <meta name="apple-mobile-web-app-title" content="Mouth Math">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mouth Math">
-<meta property="og:title" content="Mouth Math — every word they said, ranked">
+<meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm11">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm12">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -918,6 +918,7 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:21px;lin
  color:var(--money);border:1.5px solid var(--money);background:color-mix(in srgb,var(--money) 14%,transparent);border-radius:4px;vertical-align:.12em}
 #persons .chip .tk{font-size:11px;padding:2px 4px 1px;margin-left:3px;color:var(--money)}
 #persons .chip.on .tk{color:#1f4d12;border-color:#2f6b1f;background:#cfe6c0}
+#words h2#personTitle .ft{font-weight:500;color:#c9c2b5;font-size:.86em;letter-spacing:-.01em}#words h2#personTitle .pn{font-weight:700;color:var(--ink)}
 #words h2#personTitle .tk{font-size:max(11px,.62em);padding:3px 6px 2px;margin:0 2px;letter-spacing:.04em}
 /* ---- "Show N words" chips: one shared control for Super Cloud and Super Math, right under the Timeframe row ---- */
 #nbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:-4px 0 12px;font-family:Arial,Helvetica,sans-serif}
@@ -1016,7 +1017,7 @@ body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!im
 <aside class="ad" data-slot="side" aria-label="Advertisement"></aside>
 </div>
 <section class="card" id="words">
-<h2 id="personTitle">Every word __DEFAULT_TITLE__ said, ranked</h2>
+<h2 id="personTitle"><span class="ft">From the mouth of</span> <span class="pn">__DEFAULT_TITLE__</span></h2>
 <div class="stats" id="stats" aria-label="Word counts for the selection">
 <div class="stat"><b id="sDocs">–</b><span class="sl" data-s="docs">documents selected</span></div>
 <div class="stat"><b id="sTotal">–</b><span class="sl" data-s="total words">total words</span></div>
@@ -1190,8 +1191,8 @@ async function setPerson(slug,docIds){
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
   ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
-  $('personTitle').innerHTML=`Every word ${esc(P.display)}${P.ticker?(P.tv?` <button type="button" class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart" aria-label="${esc(P.ticker)}: show 1-year price chart">${esc(P.ticker)}</button>`:` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`):''} said, ranked`;
-  document.title=P.slug===DEFAULT?'Mouth Math — every word they said, ranked':`Mouth Math — every word ${P.display} said, ranked`;
+  $('personTitle').innerHTML=`<span class="ft">From the mouth of</span> <span class="pn">${esc(P.display)}</span>${P.ticker?(P.tv?` <button type="button" class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart" aria-label="${esc(P.ticker)}: show 1-year price chart">${esc(P.ticker)}</button>`:` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`):''}`;
+  document.title=P.slug===DEFAULT?'Mouth Math — Every Word Out Of Their Mouth Counts':`Mouth Math — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();
 }
