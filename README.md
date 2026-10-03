@@ -77,7 +77,7 @@ and **Ryan Cohen** (GameStop's press releases only paraphrase him, the proxy let
 his own annual-meeting remarks exist only as an SEC filing, which is blocked). Third-party transcripts and social
 posts are not used.
 
-The page header is site-wide ("Every word they said, ranked"), not tied to the default person.
+The page header is site-wide ("EVERY WORD OUT OF THEIR MOUTH COUNTS": all caps, Arial, tight tracking; on phones it sits on its own line under the logo and scales with the screen width so it stays on one line), not tied to the default person.
 The selected person's label pill, role, document count and source appear in the Who card, and
 "Every word <person> said, ranked" heads the results. Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
 `doc_noun1`, `unit`/`unit_pl` and an optional popover `credit` line in `people.json`).

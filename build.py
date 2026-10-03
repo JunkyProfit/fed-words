@@ -339,10 +339,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm2">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm2">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm3">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm3">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm3">
 <title>Mouth Math — every word they said, ranked</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -352,7 +352,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm2">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -842,7 +842,7 @@ header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:2px}
  header .hview .vcard{flex:1;width:auto;justify-content:center;padding:7px 8px;border-radius:5px;gap:0}
  header .hview .vcard svg,header .hview .vcard .vt small{display:none}
  header .hview .vcard .vt{align-items:center}header .hview .vcard .vt b{font-size:15.5px}}
-.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+#tfbar{position:relative}#tfbar #selSummary{width:1px!important;height:1px!important;flex:none!important;margin:0!important;overflow:hidden!important}.sr-only{position:absolute!important;left:0;top:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* ---- Categories live at the top of the Who panel (no separate tile row, no "Who" heading) ---- */
 #picker .catbar{margin:0 0 12px}
 #picker #cats.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0}
@@ -889,10 +889,31 @@ header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:2px}
  #tfbar #years label.chip:focus-within{outline:2px solid var(--ink);outline-offset:1px}
  body.view-visual #words>#tfbar{order:0}}
 @media (max-width:379px){#tfbar{flex-wrap:wrap}#tfbar .yrs{flex-basis:100%;order:5}}   /* very narrow phones: years on their own line */
+/* ---- Choose documents + document list in the accent red (--num-red); checked vs unchecked stay distinct ---- */
+#tfbar #docPick>summary{color:var(--num-red);border-color:var(--num-red)}
+#tfbar #docPick>summary .muted{color:color-mix(in srgb,var(--num-red) 65%,#fff)}
+#tfbar #docPick>summary:hover{background:color-mix(in srgb,var(--num-red) 12%,transparent);border-color:var(--num-red)}
+#tfbar #docPick[open]>summary{background:color-mix(in srgb,var(--num-red) 30%,#0b0b0b);color:#fff}
+#tfbar #docPick[open]>summary .muted{color:#ffd0cc}
+#docPick .hint{color:color-mix(in srgb,var(--num-red) 45%,#bdb6aa)}
+#docList li{border:1px solid color-mix(in srgb,var(--num-red) 30%,transparent);border-radius:4px;margin:0 0 6px;background:transparent}
+#docList li .date,#docList li .dt{color:#a49e93}#docList li .dw{color:#8f897f}
+#docList li.sel{background:color-mix(in srgb,var(--num-red) 15%,#0f0f0f);border-color:var(--num-red)}
+#docList li.sel .date{color:var(--num-red)}#docList li.sel .dt{color:#fff}#docList li.sel .dw{color:#ffc4be}
+#docList li.sel .dl2,#docList li.sel .dl2 a{color:#d9c9c6}
+#docList li .dl2 .stype{color:color-mix(in srgb,var(--num-red) 70%,#fff);border-color:color-mix(in srgb,var(--num-red) 60%,transparent)}
+#docList input{accent-color:var(--num-red)}
+#docList button.only{color:var(--num-red);border-color:color-mix(in srgb,var(--num-red) 60%,transparent);background:transparent}
+#docList button.only:hover{background:color-mix(in srgb,var(--num-red) 18%,transparent);border-color:var(--num-red)}
+/* ---- Headline: ALL CAPS, Arial, tight tracking; one line on phones (own row under the logo, sized to the width) ---- */
+header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:19px;line-height:1.15}
+@media (max-width:640px){
+ header .titles{flex-basis:100%;order:2;padding-right:0!important}header .viewbar.hview{order:3}
+ header h1#siteTitle{font-size:clamp(11px,3.55vw,16px);white-space:nowrap;overflow:visible;text-overflow:clip;letter-spacing:-.025em}}
 </style></head><body class="mode-fed view-visual">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
-<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm2" width="880" height="210" alt="Mouth Math"></a>
-<div class="titles"><h1 id="siteTitle">Every word they said, ranked</h1>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.svg?v=mm3" width="880" height="210" alt="Mouth Math"></a>
+<div class="titles"><h1 id="siteTitle">EVERY WORD OUT OF THEIR MOUTH COUNTS</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div>
 <div class="viewbar hview" role="group" aria-label="View">
 <div class="vcards" id="views"><button type="button" class="vcard" data-view="visual" aria-pressed="true"><svg viewBox="0 0 76 50" aria-hidden="true"><rect x="1.5" y="1.5" width="73" height="47" rx="2" fill="#fffdf8" stroke="#2b2a26" stroke-width="1.6"/><rect x="5.5" y="5.5" width="65" height="39" fill="none" stroke="#2b2a26" stroke-width=".8"/><g fill="#2b2a26" font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="38" y="29" font-size="13" font-weight="700">said</text><text x="20" y="16" font-size="7" font-weight="700">every</text><text x="55" y="17" font-size="8.5" font-weight="700">word</text><text x="19" y="38" font-size="6">we</text><text x="55" y="39" font-size="7.5" font-weight="700">math</text><text x="37" y="40" font-size="5.5">ranked</text><text x="61" y="29" font-size="5">yes</text><text x="15" y="27" font-size="5.5">now</text></g></svg><span class="vt"><b>Word Cloud</b><small>Bigger = said more</small></span></button>
