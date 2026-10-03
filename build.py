@@ -345,9 +345,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm19">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm19">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm19">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm20">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm20">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm20">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -355,7 +355,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm19">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm20">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -380,7 +380,7 @@ footer a{color:var(--muted)}
 @media (max-width:640px){header{padding:12px 16px}header .logo img{height:38px}main{padding:22px 16px 32px}h1{font-size:26px}h2{font-size:18px}body{font-size:15.5px}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm19" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm20" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -446,10 +446,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm19">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm19">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm20">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm20">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm19">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm20">
 <title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -459,7 +459,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm19">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm20">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -917,6 +917,13 @@ kbd{font:inherit;font-size:11px;font-weight:700;border:1px solid var(--rule);bor
  #cats .ci{grid-column:1;grid-row:2}#cats .ci svg{width:14px;height:14px}#cats .ct small{grid-column:2;grid-row:2;margin:0;white-space:nowrap}
  #words h2#personTitle{font-size:16px}}
 #cats button.cat.on::before{content:none;display:none}
+/* Super Math: rank, word and count columns shrink to their content so the count sits a short, fixed gap after the
+   longest word (numbers right-aligned in their column); the frequency bar takes the rest of the row */
+table.only-standard th[data-k="rank"],table.only-standard td.num:first-child{width:1%;white-space:nowrap}
+table.only-standard th[data-k="word"],table.only-standard td.w{width:1%;padding-right:22px}
+table.only-standard th[data-k="count"],table.only-standard td.cnt{width:1%;white-space:nowrap;padding-right:16px}
+table.only-standard th.barc{width:auto}
+@media (max-width:640px){table.only-standard th[data-k="rank"],table.only-standard td.num:first-child{padding-left:2px;padding-right:12px}table.only-standard th[data-k="word"],table.only-standard td.w{padding-right:6px}table.only-standard th[data-k="count"],table.only-standard td.cnt{padding-left:0;padding-right:12px}table.only-standard th[data-k="count"]{letter-spacing:.02em}}
 tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num-red)}
 /* the #1 word in the Super Cloud pulses: slow, gentle glow (2.2 s ease-in-out); canvas mode does the same in paint() */
 @keyframes mmTopPulse{0%,100%{text-shadow:0 0 2px rgba(255,84,73,.22);filter:brightness(1);transform:scale(1)}
@@ -1165,7 +1172,7 @@ body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!im
 <label class="motion" title="Animated Super Cloud (p5.js; off = static layout)"><input type="checkbox" id="motion"> Motion</label>
 <span class="muted" id="cloudNote"></span></div>
 <div id="cloud"></div></div>
-<table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th style="width:30%"></th></tr></thead>
+<table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc" aria-hidden="true"></th></tr></thead>
 <tbody id="tb"></tbody></table>
 <p class="muted only-standard" id="more"></p>
 </section>
