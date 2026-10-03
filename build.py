@@ -305,18 +305,21 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<title>Said Count — every word __DEFAULT_TITLE__ said, ranked</title>
-<meta name="description" content="Said Count: every word public figures said in their official speeches, letters and texts, counted and ranked.">
-<meta name="application-name" content="Said Count">
-<meta name="apple-mobile-web-app-title" content="Said Count">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=mm1">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm1">
+<title>Mouth Math — every word __DEFAULT_TITLE__ said, ranked</title>
+<meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
+<meta name="application-name" content="Mouth Math">
+<meta name="apple-mobile-web-app-title" content="Mouth Math">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Said Count">
-<meta property="og:title" content="Said Count — every word they said, ranked">
+<meta property="og:site_name" content="Mouth Math">
+<meta property="og:title" content="Mouth Math — every word they said, ranked">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://junkyprofit.github.io/fed-words/">
-<meta property="og:image" content="https://junkyprofit.github.io/fed-words/assets/logo.png">
+<meta property="og:image" content="https://junkyprofit.github.io/fed-words/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary">
 <style>
 :root{--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -326,8 +329,8 @@ header{background:var(--header);color:#fff;padding:22px 28px;position:relative;b
 header a.about-link{position:absolute;top:22px;right:28px;color:#fff;font-size:14px;opacity:.9;text-decoration:none;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:3px 12px}
 header a.about-link:hover{opacity:1;background:rgba(255,255,255,.12)}
 header .brand{display:flex;align-items:center;gap:18px;padding-right:90px}
-header .logo{flex:none;display:block;background:#fff;border-radius:10px;padding:6px 10px;box-shadow:0 1px 3px rgba(0,0,0,.25);line-height:0}
-header .logo img{height:44px;width:auto;display:block}
+header .logo{flex:none;display:block;background:var(--card);border-radius:10px;padding:7px 12px;box-shadow:0 1px 3px rgba(0,0,0,.25);line-height:0}
+header .logo img{height:46px;width:auto;display:block}
 header .titles{min-width:0}
 @media (max-width:640px){header{padding:16px}header a.about-link{top:16px;right:16px}
  header .brand{flex-direction:column;align-items:flex-start;gap:10px;padding-right:0}
@@ -396,7 +399,7 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 #cloud span:hover,#cloud span.active{background:#e2f0e7}#cloud .empty{position:static}
 </style></head><body class="mode-fed">
 <header><a class="about-link" href="#about">About</a>
-<div class="brand"><a class="logo" href="./" title="Said Count home"><img src="assets/logo.png" width="341" height="104" alt="Said Count"></a>
+<div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.png?v=mm1" width="433" height="104" alt="Mouth Math"></a>
 <div class="titles"><div class="eyebrow" id="eyebrow"></div><h1 id="h1">Every word __DEFAULT_TITLE__ said, ranked</h1>
 <p id="sub">Word frequencies from official sources</p></div></div></header>
 <main>
@@ -441,7 +444,7 @@ possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span clas
 <span class="only-rel">Vatican texts: English text as published by the Holy See; page headings, footnotes, scripture citations in parentheses, and summaries read by others excluded.</span>
 Totals, ranks and counts are recomputed in your browser for the selected person and documents.
 Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span></p>
-<section class="card" id="about"><h2>About Said Count</h2>
+<section class="card" id="about"><h2>About Mouth Math</h2>
 <p>This site was built by someone who believes in transparency and truth. It counts every word in official,
 publicly available texts by public figures, taken from each official source:</p>
 <ul class="sources">
@@ -511,7 +514,7 @@ async function setPerson(slug,docIds){
   ['fed','ceo','pol','rel'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('h1').textContent=`Every word ${P.display} said, ranked`;
-  document.title=`Said Count — every word ${P.display} said, ranked`;
+  document.title=`Mouth Math — every word ${P.display} said, ranked`;
   const noun=n=>n===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun;
   $('sub').textContent=`Word frequencies across ${DOCS.length} ${noun(DOCS.length)} from ${P.source}`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
