@@ -1,0 +1,433 @@
+{
+ "_doc": "Data-driven CEO sources for fetch_ceo.py. Only texts the company itself publishes on its own site. discover.type: q4 = Q4 IR feed (host + document-title regex); links = scrape hrefs matching a regex on an IR page; pattern = URL template over recent quarters; urls = explicit list. kind: transcript (keep only the CEO's prepared section, label regex 'ceo') or letter (signed letter, 'signer'). 'since' = first day as CEO (earlier documents are ignored). indices: S&P 500, Nasdaq 100, Mag 7, Dow 30.",
+ "companies": [
+  {
+   "slug": "nadella",
+   "name": "Satya Nadella",
+   "org": "Microsoft",
+   "ticker": "MSFT",
+   "role": "Chairman & CEO, Microsoft",
+   "since": "2014-02-04",
+   "indices": [
+    "Mag 7",
+    "S&P 500",
+    "Nasdaq 100",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "Nadella",
+   "discover": {
+    "type": "pattern",
+    "template": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/TranscriptFY{yy}Q{q}.docx",
+    "fiscal_end_month": 6,
+    "quarters": 10
+   },
+   "source": "microsoft.com"
+  },
+  {
+   "slug": "zuckerberg",
+   "name": "Mark Zuckerberg",
+   "org": "Meta",
+   "ticker": "META",
+   "role": "Founder, Chairman & CEO, Meta",
+   "since": "2004-07-29",
+   "indices": [
+    "Mag 7",
+    "S&P 500",
+    "Nasdaq 100"
+   ],
+   "kind": "transcript",
+   "ceo": "Zuckerberg",
+   "discover": {
+    "type": "q4",
+    "host": "investor.atmeta.com",
+    "title": "^Earnings Call Transcript$"
+   },
+   "source": "investor.atmeta.com"
+  },
+  {
+   "slug": "dimon",
+   "name": "Jamie Dimon",
+   "org": "JPMorgan Chase",
+   "ticker": "JPM",
+   "role": "Chairman & CEO, JPMorgan Chase",
+   "since": "2005-12-31",
+   "indices": [
+    "S&P 500",
+    "Dow 30"
+   ],
+   "kind": "letter",
+   "signer": "Jamie Dimon",
+   "max": 2,
+   "discover": {
+    "type": "links",
+    "page": "https://www.jpmorganchase.com/ir/annual-report",
+    "href": "documents/ceo-letter-to-shareholders-20(2[4-9])\\.pdf"
+   },
+   "source": "jpmorganchase.com"
+  },
+  {
+   "slug": "furner",
+   "name": "John Furner",
+   "org": "Walmart",
+   "ticker": "WMT",
+   "role": "President & CEO, Walmart",
+   "since": "2026-02-01",
+   "indices": [
+    "S&P 500",
+    "Nasdaq 100",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "Furner",
+   "discover": {
+    "type": "links",
+    "page": "https://stock.walmart.com/financials/quarterly-results/default.aspx",
+    "href": "transcript_management_call/[^\"]*\\.pdf"
+   },
+   "source": "stock.walmart.com"
+  },
+  {
+   "slug": "mcinerney",
+   "name": "Ryan McInerney",
+   "org": "Visa",
+   "ticker": "V",
+   "role": "CEO, Visa",
+   "since": "2023-02-01",
+   "indices": [
+    "S&P 500",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "McInerney",
+   "discover": {
+    "type": "q4",
+    "host": "investor.visa.com",
+    "title": "^Transcript$"
+   },
+   "source": "investor.visa.com",
+   "fiscal": true
+  },
+  {
+   "slug": "duato",
+   "name": "Joaquin Duato",
+   "org": "Johnson & Johnson",
+   "ticker": "JNJ",
+   "role": "Chairman & CEO, Johnson & Johnson",
+   "since": "2022-01-03",
+   "indices": [
+    "S&P 500",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "Duato",
+   "discover": {
+    "type": "q4",
+    "host": "www.investor.jnj.com",
+    "title": "Earnings Transcript"
+   },
+   "source": "investor.jnj.com"
+  },
+  {
+   "slug": "decker",
+   "name": "Ted Decker",
+   "org": "Home Depot",
+   "ticker": "HD",
+   "role": "Chair, President & CEO, The Home Depot",
+   "since": "2022-03-01",
+   "indices": [
+    "S&P 500",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "Decker",
+   "discover": {
+    "type": "links",
+    "page": "https://ir.homedepot.com/financial-reports/quarterly-earnings/{year}",
+    "years": 2,
+    "href": "hd-[1-4]q\\d\\d-transcript\\.pdf"
+   },
+   "source": "ir.homedepot.com"
+  },
+  {
+   "slug": "moynihan",
+   "name": "Brian Moynihan",
+   "org": "Bank of America",
+   "ticker": "BAC",
+   "role": "Chair & CEO, Bank of America",
+   "since": "2010-01-01",
+   "indices": [
+    "S&P 500"
+   ],
+   "kind": "transcript",
+   "ceo": "Moynihan",
+   "discover": {
+    "type": "links",
+    "page": "https://investor.bankofamerica.com/quarterly-earnings",
+    "href": "webcast_transcript/[^\"]*Earnings[^\"]*\\.pdf"
+   },
+   "source": "investor.bankofamerica.com"
+  },
+  {
+   "slug": "su",
+   "name": "Lisa Su",
+   "org": "AMD",
+   "ticker": "AMD",
+   "role": "Chair & CEO, AMD",
+   "since": "2014-10-08",
+   "indices": [
+    "S&P 500",
+    "Nasdaq 100"
+   ],
+   "kind": "transcript",
+   "ceo": "\\bSu\\b",
+   "discover": {
+    "type": "links",
+    "page": "https://ir.amd.com/financial-information/financial-results",
+    "href": "webcast_transcript/[^\"]*\\.pdf"
+   },
+   "source": "ir.amd.com"
+  },
+  {
+   "slug": "benioff",
+   "name": "Marc Benioff",
+   "org": "Salesforce",
+   "ticker": "CRM",
+   "role": "Chair & CEO, Salesforce",
+   "since": "2001-01-01",
+   "indices": [
+    "S&P 500",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "Benioff",
+   "discover": {
+    "type": "q4",
+    "host": "investor.salesforce.com",
+    "title": "^Transcript$"
+   },
+   "source": "investor.salesforce.com",
+   "fiscal": true
+  },
+  {
+   "slug": "robbins",
+   "name": "Chuck Robbins",
+   "org": "Cisco",
+   "ticker": "CSCO",
+   "role": "Chair & CEO, Cisco",
+   "since": "2015-07-26",
+   "indices": [
+    "S&P 500",
+    "Nasdaq 100",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "Robbins",
+   "discover": {
+    "type": "q4",
+    "host": "investor.cisco.com",
+    "title": "^Prepared Remarks$"
+   },
+   "source": "investor.cisco.com",
+   "fiscal": true
+  },
+  {
+   "slug": "pick",
+   "name": "Ted Pick",
+   "org": "Morgan Stanley",
+   "ticker": "MS",
+   "role": "Chairman & CEO, Morgan Stanley",
+   "since": "2024-01-01",
+   "indices": [
+    "S&P 500"
+   ],
+   "kind": "letter",
+   "signer": "Ted Pick",
+   "max": 2,
+   "discover": {
+    "type": "links",
+    "page": "https://www.morganstanley.com/about-us-ir/annual-reports",
+    "href": "20(2[4-9])_Shareholder_Letter\\.pdf"
+   },
+   "source": "morganstanley.com"
+  },
+  {
+   "slug": "fraser",
+   "name": "Jane Fraser",
+   "org": "Citigroup",
+   "ticker": "C",
+   "role": "Chair & CEO, Citi",
+   "since": "2021-03-01",
+   "indices": [
+    "S&P 500"
+   ],
+   "kind": "transcript",
+   "ceo": "Fraser",
+   "discover": {
+    "type": "links",
+    "page": "https://www.citigroup.com/global/investors/quarterly-earnings",
+    "href": "/rcs/citigpa/storage/public/20\\d\\dpsqtr[1-4]-transcript\\.pdf"
+   },
+   "source": "citigroup.com"
+  },
+  {
+   "slug": "stankey",
+   "name": "John Stankey",
+   "org": "AT&T",
+   "ticker": "T",
+   "role": "Chairman & CEO, AT&T",
+   "since": "2020-07-01",
+   "indices": [
+    "S&P 500"
+   ],
+   "kind": "transcript",
+   "ceo": "Stankey",
+   "discover": {
+    "type": "links",
+    "page": "https://investors.att.com/financial-reports/quarterly-earnings/{year}",
+    "years": 2,
+    "href": "t-usq-transcript-[0-9-]+\\.pdf"
+   },
+   "source": "investors.att.com"
+  },
+  {
+   "slug": "amon",
+   "name": "Cristiano Amon",
+   "org": "Qualcomm",
+   "ticker": "QCOM",
+   "role": "President & CEO, Qualcomm",
+   "since": "2021-06-30",
+   "indices": [
+    "S&P 500",
+    "Nasdaq 100"
+   ],
+   "kind": "transcript",
+   "ceo": "Amon",
+   "discover": {
+    "type": "q4",
+    "host": "investor.qualcomm.com",
+    "title": "Earnings Call Transcript"
+   },
+   "source": "investor.qualcomm.com",
+   "fiscal": true
+  },
+  {
+   "slug": "khosrowshahi",
+   "name": "Dara Khosrowshahi",
+   "org": "Uber",
+   "ticker": "UBER",
+   "role": "CEO, Uber",
+   "since": "2017-09-05",
+   "indices": [
+    "S&P 500"
+   ],
+   "kind": "transcript",
+   "ceo": "Khosrowshahi",
+   "discover": {
+    "type": "q4",
+    "host": "investor.uber.com",
+    "title": "^Prepared Remarks$"
+   },
+   "source": "investor.uber.com"
+  },
+  {
+   "slug": "niccol",
+   "name": "Brian Niccol",
+   "org": "Starbucks",
+   "ticker": "SBUX",
+   "role": "Chairman & CEO, Starbucks",
+   "since": "2024-09-09",
+   "indices": [
+    "S&P 500",
+    "Nasdaq 100"
+   ],
+   "kind": "transcript",
+   "ceo": "Niccol",
+   "discover": {
+    "type": "q4",
+    "host": "investor.starbucks.com",
+    "title": "^Transcript$"
+   },
+   "source": "investor.starbucks.com",
+   "fiscal": true
+  },
+  {
+   "slug": "ortberg",
+   "name": "Kelly Ortberg",
+   "org": "Boeing",
+   "ticker": "BA",
+   "role": "President & CEO, Boeing",
+   "since": "2024-08-08",
+   "indices": [
+    "S&P 500",
+    "Dow 30"
+   ],
+   "kind": "transcript",
+   "ceo": "Ortberg",
+   "discover": {
+    "type": "q4",
+    "host": "investors.boeing.com",
+    "title": "^Transcript$"
+   },
+   "source": "investors.boeing.com"
+  }
+ ],
+ "order": [
+  "nadella",
+  "ternus",
+  "pichai",
+  "jassy",
+  "zuckerberg",
+  "abel",
+  "dimon",
+  "furner",
+  "karp",
+  "mcinerney",
+  "duato",
+  "decker",
+  "su",
+  "moynihan",
+  "robbins",
+  "benioff",
+  "pick",
+  "fraser",
+  "stankey",
+  "amon",
+  "khosrowshahi",
+  "ortberg",
+  "niccol"
+ ],
+ "existing_indices": {
+  "karp": [
+   "S&P 500",
+   "Nasdaq 100"
+  ],
+  "jassy": [
+   "Mag 7",
+   "S&P 500",
+   "Nasdaq 100",
+   "Dow 30"
+  ],
+  "abel": [
+   "S&P 500"
+  ],
+  "pichai": [
+   "Mag 7",
+   "S&P 500",
+   "Nasdaq 100"
+  ],
+  "ternus": [
+   "Mag 7",
+   "S&P 500",
+   "Nasdaq 100",
+   "Dow 30"
+  ]
+ },
+ "existing_tickers": {
+  "karp": "PLTR",
+  "jassy": "AMZN",
+  "abel": "BRK.B",
+  "pichai": "GOOGL",
+  "ternus": "AAPL"
+ }
+}

@@ -1,0 +1,8160 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "2030s": 1,
+    "a": 20,
+    "ability": 1,
+    "about": 3,
+    "accelerate": 1,
+    "accelerators": 2,
+    "acquisition": 1,
+    "across": 9,
+    "active": 1,
+    "activity": 1,
+    "adas": 2,
+    "addition": 1,
+    "additionally": 1,
+    "address": 1,
+    "adoption": 1,
+    "advance": 1,
+    "afternoon": 1,
+    "age": 1,
+    "agent": 1,
+    "agentic": 6,
+    "agents": 2,
+    "agnostic": 1,
+    "agreement": 2,
+    "agreements": 1,
+    "ahead": 3,
+    "ai": 16,
+    "akash": 1,
+    "align": 1,
+    "all": 1,
+    "already": 2,
+    "also": 2,
+    "ambition": 1,
+    "an": 7,
+    "and": 60,
+    "announced": 3,
+    "announcements": 1,
+    "annualized": 2,
+    "another": 1,
+    "approach": 2,
+    "approximately": 2,
+    "arduino": 1,
+    "are": 10,
+    "areas": 1,
+    "as": 21,
+    "assets": 1,
+    "at": 9,
+    "augmenting": 1,
+    "august": 1,
+    "automotive": 7,
+    "autonomous": 1,
+    "awards": 1,
+    "bandwidth": 1,
+    "base": 1,
+    "based": 1,
+    "be": 5,
+    "become": 2,
+    "becoming": 2,
+    "before": 1,
+    "beginning": 1,
+    "begun": 1,
+    "believe": 1,
+    "below": 1,
+    "better": 1,
+    "beyond": 3,
+    "billion": 12,
+    "bmw": 3,
+    "both": 1,
+    "bottlenecks": 1,
+    "brands": 1,
+    "brett": 1,
+    "bring": 1,
+    "bringing": 3,
+    "broad": 3,
+    "broader": 1,
+    "building": 2,
+    "built": 2,
+    "business": 4,
+    "businesses": 2,
+    "by": 9,
+    "call": 1,
+    "can": 2,
+    "capabilities": 1,
+    "category": 2,
+    "caused": 1,
+    "center": 10,
+    "chain": 1,
+    "challenge": 1,
+    "change": 1,
+    "channel": 1,
+    "chapter": 3,
+    "chassis": 1,
+    "china": 1,
+    "chip": 1,
+    "class": 1,
+    "closed": 2,
+    "cloud": 2,
+    "cockpit": 2,
+    "collaborating": 1,
+    "collaboration": 2,
+    "come": 1,
+    "coming": 3,
+    "commitment": 1,
+    "competition": 1,
+    "competitive": 1,
+    "complete": 1,
+    "completed": 1,
+    "complexity": 1,
+    "compute": 8,
+    "confident": 1,
+    "connectivity": 2,
+    "consumer": 1,
+    "content": 1,
+    "contextual": 1,
+    "continues": 2,
+    "continuum": 1,
+    "contraction": 1,
+    "conversations": 1,
+    "conviction": 1,
+    "cooperation": 1,
+    "cost": 2,
+    "costs": 1,
+    "cpus": 2,
+    "creates": 1,
+    "creating": 1,
+    "current": 2,
+    "custom": 2,
+    "customer": 4,
+    "customers": 2,
+    "cycle": 1,
+    "data": 10,
+    "day": 3,
+    "decade": 2,
+    "decades": 1,
+    "december": 1,
+    "decline": 1,
+    "deep": 1,
+    "deliver": 2,
+    "delivered": 1,
+    "delivering": 2,
+    "demand": 3,
+    "demonstrate": 1,
+    "density": 1,
+    "deployments": 1,
+    "design": 4,
+    "designed": 2,
+    "despite": 2,
+    "develop": 1,
+    "developed": 1,
+    "developers": 2,
+    "developing": 1,
+    "device": 1,
+    "devices": 5,
+    "differentiated": 1,
+    "difficult": 1,
+    "digital": 3,
+    "dimensions": 1,
+    "directly": 1,
+    "disaggregated": 1,
+    "distributed": 2,
+    "diversification": 2,
+    "drive": 1,
+    "driven": 2,
+    "driving": 1,
+    "earlier": 1,
+    "early": 1,
+    "earnings": 1,
+    "economics": 1,
+    "ecosystem": 5,
+    "ecosystems": 1,
+    "edge": 6,
+    "effect": 1,
+    "efficiency": 2,
+    "efficient": 2,
+    "electronics": 1,
+    "embrace": 1,
+    "enable": 1,
+    "enables": 1,
+    "end": 4,
+    "endpoint": 1,
+    "engagements": 2,
+    "engaging": 1,
+    "engineering": 1,
+    "enhanced": 1,
+    "enter": 1,
+    "enterprise": 1,
+    "entire": 2,
+    "entrant": 1,
+    "environment": 2,
+    "establishes": 1,
+    "event": 1,
+    "every": 2,
+    "everyone": 1,
+    "everywhere": 1,
+    "evolution": 1,
+    "evolve": 2,
+    "evolving": 1,
+    "exceeds": 2,
+    "exceptional": 1,
+    "excited": 1,
+    "execute": 2,
+    "execution": 1,
+    "existing": 1,
+    "exit": 1,
+    "exiting": 1,
+    "expand": 2,
+    "expanded": 1,
+    "expanding": 3,
+    "expansion": 1,
+    "expect": 6,
+    "experience": 1,
+    "experiences": 2,
+    "extending": 1,
+    "extends": 1,
+    "eyewear": 3,
+    "factors": 1,
+    "far": 1,
+    "fifth": 1,
+    "financial": 1,
+    "firmly": 1,
+    "first": 4,
+    "fiscal": 13,
+    "flagship": 1,
+    "flexibility": 1,
+    "focused": 1,
+    "foldable": 1,
+    "for": 17,
+    "form": 1,
+    "forward": 2,
+    "four": 1,
+    "from": 7,
+    "full": 2,
+    "fundamental": 1,
+    "further": 2,
+    "gaap": 1,
+    "galaxy": 2,
+    "gemini": 1,
+    "gen": 1,
+    "generating": 1,
+    "generation": 5,
+    "given": 1,
+    "giving": 1,
+    "glasses": 3,
+    "global": 1,
+    "goes": 1,
+    "good": 1,
+    "google": 1,
+    "googlebooks": 1,
+    "gross": 2,
+    "grow": 1,
+    "growing": 1,
+    "grows": 1,
+    "growth": 5,
+    "guidance": 1,
+    "handset": 3,
+    "handsets": 1,
+    "happy": 1,
+    "hardware": 2,
+    "have": 6,
+    "hbc": 4,
+    "headwinds": 1,
+    "hear": 1,
+    "help": 1,
+    "helping": 1,
+    "heterogeneous": 1,
+    "high": 3,
+    "higher": 1,
+    "highlights": 1,
+    "highly": 1,
+    "historical": 1,
+    "host": 1,
+    "how": 1,
+    "hybrid": 1,
+    "i": 2,
+    "i'm": 1,
+    "ideal": 1,
+    "impacted": 1,
+    "implementing": 1,
+    "important": 1,
+    "improving": 1,
+    "impulse": 1,
+    "in": 39,
+    "inc": 1,
+    "include": 1,
+    "including": 3,
+    "increase": 2,
+    "increases": 1,
+    "increasingly": 2,
+    "incredible": 1,
+    "incredibly": 1,
+    "industrial": 3,
+    "industry": 6,
+    "inference": 2,
+    "inflection": 2,
+    "infrastructure": 1,
+    "innovation": 1,
+    "innovative": 1,
+    "input": 1,
+    "installed": 1,
+    "integrating": 1,
+    "integration": 1,
+    "intelligence": 2,
+    "intelligent": 1,
+    "interest": 2,
+    "into": 4,
+    "introduced": 1,
+    "investor": 3,
+    "investors": 1,
+    "iot": 2,
+    "is": 10,
+    "it": 1,
+    "it's": 1,
+    "its": 1,
+    "joining": 1,
+    "journey": 1,
+    "just": 1,
+    "key": 1,
+    "laid": 2,
+    "landmark": 1,
+    "laptops": 1,
+    "larger": 1,
+    "last": 1,
+    "latest": 1,
+    "launch": 1,
+    "lead": 2,
+    "leadership": 1,
+    "leading": 2,
+    "let": 1,
+    "leveraging": 1,
+    "licensing": 1,
+    "line": 1,
+    "lines": 2,
+    "logical": 1,
+    "long": 2,
+    "look": 2,
+    "lot": 1,
+    "major": 1,
+    "manufacturing": 1,
+    "many": 2,
+    "margins": 2,
+    "market": 2,
+    "material": 1,
+    "me": 1,
+    "meaningful": 1,
+    "means": 1,
+    "memory": 4,
+    "merchant": 1,
+    "microsoft": 1,
+    "mid": 1,
+    "milestone": 1,
+    "million": 2,
+    "mobile": 2,
+    "modcon": 1,
+    "model": 2,
+    "models": 1,
+    "modern": 1,
+    "modular": 4,
+    "momentum": 1,
+    "more": 9,
+    "most": 1,
+    "moves": 1,
+    "moving": 1,
+    "multi": 2,
+    "multiple": 1,
+    "multiyear": 1,
+    "natural": 1,
+    "near": 1,
+    "nearly": 1,
+    "needs": 1,
+    "network": 1,
+    "networking": 1,
+    "new": 7,
+    "next": 8,
+    "non": 4,
+    "now": 6,
+    "number": 1,
+    "objective": 1,
+    "oems": 1,
+    "of": 38,
+    "on": 11,
+    "one": 3,
+    "open": 4,
+    "operating": 1,
+    "opportunities": 2,
+    "opportunity": 1,
+    "orchestrators": 1,
+    "other": 1,
+    "our": 43,
+    "out": 4,
+    "outlook": 2,
+    "over": 5,
+    "overall": 2,
+    "own": 1,
+    "ownership": 2,
+    "partner": 2,
+    "partners": 2,
+    "partnerships": 2,
+    "path": 1,
+    "pcs": 2,
+    "per": 3,
+    "performance": 3,
+    "personal": 2,
+    "phase": 4,
+    "phases": 1,
+    "phones": 1,
+    "physical": 1,
+    "pipeline": 3,
+    "plans": 1,
+    "platform": 4,
+    "platforms": 2,
+    "play": 1,
+    "player": 2,
+    "pleased": 2,
+    "plus": 1,
+    "points": 1,
+    "portfolio": 3,
+    "position": 2,
+    "potential": 1,
+    "power": 1,
+    "powering": 1,
+    "premise": 1,
+    "premium": 1,
+    "preparing": 1,
+    "presence": 2,
+    "pressure": 1,
+    "previous": 1,
+    "price": 1,
+    "prices": 1,
+    "process": 1,
+    "product": 2,
+    "production": 1,
+    "program": 2,
+    "programs": 1,
+    "project": 1,
+    "projection": 1,
+    "projects": 1,
+    "promote": 1,
+    "proof": 1,
+    "prove": 1,
+    "provider": 1,
+    "purpose": 1,
+    "q3": 1,
+    "qct": 2,
+    "qualcomm": 9,
+    "quarter": 4,
+    "quarters": 1,
+    "raising": 1,
+    "ramping": 1,
+    "range": 1,
+    "rate": 1,
+    "re": 1,
+    "reach": 1,
+    "recent": 1,
+    "recently": 1,
+    "recognize": 2,
+    "record": 1,
+    "reference": 1,
+    "reflect": 1,
+    "reflects": 3,
+    "reimagine": 1,
+    "relationships": 2,
+    "relevance": 1,
+    "remain": 1,
+    "remains": 1,
+    "report": 2,
+    "represents": 1,
+    "reshaping": 1,
+    "resilience": 1,
+    "result": 1,
+    "resulting": 1,
+    "results": 1,
+    "revenue": 8,
+    "revenues": 5,
+    "robotics": 1,
+    "role": 1,
+    "rolling": 1,
+    "roughly": 1,
+    "run": 1,
+    "said": 1,
+    "sales": 1,
+    "samsung": 2,
+    "scale": 1,
+    "scaling": 1,
+    "secured": 1,
+    "see": 3,
+    "seeing": 3,
+    "selection": 1,
+    "semiconductor": 1,
+    "september": 2,
+    "serdes": 1,
+    "server": 1,
+    "set": 1,
+    "share": 5,
+    "shifting": 1,
+    "shipped": 1,
+    "short": 2,
+    "shortages": 1,
+    "signed": 1,
+    "significant": 2,
+    "signs": 1,
+    "silicon": 7,
+    "simplify": 1,
+    "slightly": 1,
+    "smart": 3,
+    "smartphone": 1,
+    "smartphones": 1,
+    "snapdragon": 5,
+    "socket": 2,
+    "software": 7,
+    "solara": 1,
+    "solution": 2,
+    "solutions": 2,
+    "some": 2,
+    "stack": 3,
+    "start": 2,
+    "stellantis": 1,
+    "step": 1,
+    "story": 1,
+    "strategic": 2,
+    "strategy": 2,
+    "strengthening": 1,
+    "strengthens": 1,
+    "strong": 3,
+    "success": 1,
+    "successfully": 1,
+    "summit": 1,
+    "supply": 1,
+    "supported": 1,
+    "supports": 1,
+    "systems": 1,
+    "take": 1,
+    "tape": 1,
+    "target": 1,
+    "targeting": 1,
+    "targets": 2,
+    "technology": 1,
+    "term": 5,
+    "than": 3,
+    "thank": 1,
+    "thanks": 1,
+    "that": 13,
+    "the": 51,
+    "their": 3,
+    "there's": 1,
+    "these": 3,
+    "they": 4,
+    "this": 15,
+    "three": 2,
+    "through": 2,
+    "throughout": 1,
+    "tier": 1,
+    "time": 3,
+    "times": 1,
+    "to": 45,
+    "today": 4,
+    "together": 2,
+    "token": 1,
+    "top": 1,
+    "total": 3,
+    "toward": 1,
+    "track": 1,
+    "transition": 1,
+    "turn": 1,
+    "two": 3,
+    "underscores": 1,
+    "underway": 1,
+    "unique": 1,
+    "units": 1,
+    "unpacked": 1,
+    "unprecedented": 1,
+    "up": 1,
+    "updated": 1,
+    "upgrade": 1,
+    "us": 2,
+    "users": 1,
+    "value": 1,
+    "vehicle": 1,
+    "verticals": 1,
+    "very": 1,
+    "vision": 2,
+    "wafer": 1,
+    "want": 1,
+    "watches": 1,
+    "watt": 1,
+    "we": 31,
+    "we're": 13,
+    "weight": 1,
+    "welcome": 1,
+    "well": 5,
+    "were": 3,
+    "which": 3,
+    "wider": 1,
+    "will": 13,
+    "win": 2,
+    "winning": 1,
+    "wins": 3,
+    "with": 22,
+    "within": 1,
+    "workloads": 1,
+    "year": 4,
+    "years": 2,
+    "yielding": 1,
+    "you": 2
+   },
+   "date": "2026-07-30",
+   "entries": {
+    "2030s": [
+     11
+    ],
+    "a": [
+     5,
+     10,
+     10,
+     13,
+     14,
+     18,
+     20,
+     21
+    ],
+    "about": [
+     6
+    ],
+    "accelerators": [
+     6
+    ],
+    "across": [
+     2,
+     6
+    ],
+    "active": [
+     6
+    ],
+    "adas": [
+     10
+    ],
+    "additionally": [
+     11
+    ],
+    "adoption": [
+     18
+    ],
+    "afternoon": [
+     0
+    ],
+    "agent": [
+     21
+    ],
+    "agentic": [
+     17,
+     18
+    ],
+    "agents": [
+     18,
+     19
+    ],
+    "agreement": [
+     10
+    ],
+    "ai": [
+     4,
+     6,
+     7,
+     8,
+     19,
+     20
+    ],
+    "align": [
+     3
+    ],
+    "all": [
+     19
+    ],
+    "already": [
+     14
+    ],
+    "an": [
+     7,
+     17
+    ],
+    "and": [
+     0,
+     3,
+     4,
+     6,
+     7,
+     7,
+     8,
+     12,
+     13,
+     15,
+     15,
+     18,
+     18
+    ],
+    "announced": [
+     11
+    ],
+    "annualized": [
+     12
+    ],
+    "approximately": [
+     12
+    ],
+    "arduino": [
+     15
+    ],
+    "are": [
+     4,
+     6,
+     18,
+     19
+    ],
+    "as": [
+     3,
+     10,
+     10,
+     18,
+     20
+    ],
+    "assets": [
+     5
+    ],
+    "at": [
+     2
+    ],
+    "augmenting": [
+     8
+    ],
+    "automotive": [
+     9,
+     11
+    ],
+    "autonomous": [
+     20
+    ],
+    "base": [
+     20
+    ],
+    "based": [
+     6
+    ],
+    "become": [
+     10
+    ],
+    "becoming": [
+     19
+    ],
+    "believe": [
+     18
+    ],
+    "better": [
+     7
+    ],
+    "beyond": [
+     8,
+     19
+    ],
+    "billion": [
+     1,
+     12
+    ],
+    "bmw": [
+     10
+    ],
+    "brett": [
+     0
+    ],
+    "bring": [
+     18
+    ],
+    "building": [
+     6
+    ],
+    "built": [
+     2
+    ],
+    "business": [
+     1
+    ],
+    "businesses": [
+     13
+    ],
+    "by": [
+     14,
+     17
+    ],
+    "capabilities": [
+     8
+    ],
+    "caused": [
+     17
+    ],
+    "center": [
+     6
+    ],
+    "channel": [
+     14
+    ],
+    "chapter": [
+     2
+    ],
+    "china": [
+     18
+    ],
+    "chip": [
+     21
+    ],
+    "cloud": [
+     21
+    ],
+    "cockpit": [
+     10
+    ],
+    "collaborating": [
+     21
+    ],
+    "collaboration": [
+     11
+    ],
+    "coming": [
+     7
+    ],
+    "competitive": [
+     10
+    ],
+    "compute": [
+     10
+    ],
+    "connectivity": [
+     6
+    ],
+    "contextual": [
+     20
+    ],
+    "continues": [
+     9
+    ],
+    "contraction": [
+     17
+    ],
+    "conversations": [
+     6
+    ],
+    "cost": [
+     4
+    ],
+    "cpus": [
+     6
+    ],
+    "creates": [
+     20
+    ],
+    "current": [
+     17
+    ],
+    "customer": [
+     9,
+     13
+    ],
+    "customers": [
+     14
+    ],
+    "cycle": [
+     17
+    ],
+    "data": [
+     6
+    ],
+    "day": [
+     2
+    ],
+    "deep": [
+     14
+    ],
+    "deliver": [
+     7
+    ],
+    "demand": [
+     13,
+     18
+    ],
+    "designed": [
+     21
+    ],
+    "despite": [
+     17
+    ],
+    "device": [
+     18
+    ],
+    "devices": [
+     21
+    ],
+    "digital": [
+     10
+    ],
+    "dimensions": [
+     2
+    ],
+    "drive": [
+     9
+    ],
+    "early": [
+     17
+    ],
+    "ecosystem": [
+     14
+    ],
+    "edge": [
+     15
+    ],
+    "effect": [
+     3
+    ],
+    "efficiency": [
+     7
+    ],
+    "efficient": [
+     4
+    ],
+    "enable": [
+     20
+    ],
+    "endpoint": [
+     19
+    ],
+    "enterprise": [
+     21
+    ],
+    "environment": [
+     17
+    ],
+    "every": [
+     6
+    ],
+    "everyone": [
+     0
+    ],
+    "evolution": [
+     5
+    ],
+    "evolve": [
+     20
+    ],
+    "evolving": [
+     7
+    ],
+    "exceeds": [
+     14
+    ],
+    "exceptional": [
+     9
+    ],
+    "exiting": [
+     12
+    ],
+    "expanded": [
+     10
+    ],
+    "expect": [
+     3,
+     12
+    ],
+    "experience": [
+     20
+    ],
+    "experiences": [
+     18
+    ],
+    "extends": [
+     15
+    ],
+    "factors": [
+     19
+    ],
+    "far": [
+     8
+    ],
+    "first": [
+     21
+    ],
+    "fiscal": [
+     12
+    ],
+    "flexibility": [
+     7
+    ],
+    "for": [
+     10,
+     19,
+     20,
+     21
+    ],
+    "form": [
+     19
+    ],
+    "fundamental": [
+     4
+    ],
+    "generation": [
+     4,
+     10
+    ],
+    "given": [
+     5
+    ],
+    "glasses": [
+     19
+    ],
+    "goes": [
+     8
+    ],
+    "good": [
+     0
+    ],
+    "gross": [
+     3
+    ],
+    "grow": [
+     17
+    ],
+    "grows": [
+     18
+    ],
+    "growth": [
+     5,
+     9
+    ],
+    "handsets": [
+     16
+    ],
+    "hardware": [
+     7
+    ],
+    "hbc": [
+     6
+    ],
+    "highly": [
+     10
+    ],
+    "how": [
+     7
+    ],
+    "implementing": [
+     3
+    ],
+    "important": [
+     7
+    ],
+    "impulse": [
+     15
+    ],
+    "in": [
+     6,
+     7,
+     9,
+     13,
+     18,
+     18
+    ],
+    "including": [
+     6
+    ],
+    "increase": [
+     13
+    ],
+    "increases": [
+     3
+    ],
+    "industry": [
+     17
+    ],
+    "infrastructure": [
+     7
+    ],
+    "installed": [
+     20
+    ],
+    "into": [
+     11
+    ],
+    "investor": [
+     2
+    ],
+    "is": [
+     7,
+     14
+    ],
+    "it's": [
+     5
+    ],
+    "laid": [
+     2
+    ],
+    "landmark": [
+     10
+    ],
+    "larger": [
+     18
+    ],
+    "lead": [
+     10
+    ],
+    "leading": [
+     6
+    ],
+    "licensing": [
+     1
+    ],
+    "long": [
+     6
+    ],
+    "major": [
+     18
+    ],
+    "margins": [
+     3
+    ],
+    "market": [
+     18
+    ],
+    "meaningful": [
+     13
+    ],
+    "memory": [
+     17
+    ],
+    "merchant": [
+     6
+    ],
+    "microsoft": [
+     21
+    ],
+    "million": [
+     15
+    ],
+    "model": [
+     3
+    ],
+    "modular": [
+     8
+    ],
+    "momentum": [
+     9
+    ],
+    "more": [
+     15,
+     20
+    ],
+    "moving": [
+     16
+    ],
+    "multi": [
+     20
+    ],
+    "natural": [
+     5
+    ],
+    "nearly": [
+     6
+    ],
+    "needs": [
+     20
+    ],
+    "new": [
+     13,
+     18,
+     19
+    ],
+    "next": [
+     2,
+     10
+    ],
+    "now": [
+     12,
+     15
+    ],
+    "objective": [
+     8
+    ],
+    "oems": [
+     18
+    ],
+    "of": [
+     2,
+     4,
+     5,
+     12,
+     17
+    ],
+    "on": [
+     16,
+     18,
+     21
+    ],
+    "operating": [
+     3
+    ],
+    "opportunity": [
+     20
+    ],
+    "orchestrators": [
+     18
+    ],
+    "other": [
+     19
+    ],
+    "our": [
+     2,
+     3,
+     5,
+     6,
+     8,
+     8,
+     11,
+     11,
+     14,
+     15
+    ],
+    "out": [
+     2
+    ],
+    "outlook": [
+     12
+    ],
+    "over": [
+     17
+    ],
+    "overall": [
+     17
+    ],
+    "ownership": [
+     4
+    ],
+    "partner": [
+     14
+    ],
+    "partnerships": [
+     6
+    ],
+    "pcs": [
+     19
+    ],
+    "performance": [
+     7
+    ],
+    "personal": [
+     19,
+     20
+    ],
+    "pipeline": [
+     11
+    ],
+    "platform": [
+     21
+    ],
+    "platforms": [
+     6
+    ],
+    "play": [
+     18
+    ],
+    "player": [
+     6
+    ],
+    "premium": [
+     18
+    ],
+    "preparing": [
+     18
+    ],
+    "presence": [
+     14
+    ],
+    "price": [
+     3
+    ],
+    "process": [
+     10
+    ],
+    "project": [
+     21
+    ],
+    "provider": [
+     10
+    ],
+    "qualcomm": [
+     2,
+     5,
+     20
+    ],
+    "quarter": [
+     10
+    ],
+    "raising": [
+     12
+    ],
+    "re": [
+     3
+    ],
+    "reach": [
+     15
+    ],
+    "recent": [
+     2
+    ],
+    "recently": [
+     11
+    ],
+    "reflects": [
+     13
+    ],
+    "results": [
+     14
+    ],
+    "revenue": [
+     9
+    ],
+    "revenues": [
+     1
+    ],
+    "role": [
+     18
+    ],
+    "sales": [
+     12
+    ],
+    "scaling": [
+     4
+    ],
+    "see": [
+     3,
+     7
+    ],
+    "seeing": [
+     17
+    ],
+    "selection": [
+     10
+    ],
+    "serdes": [
+     6
+    ],
+    "signed": [
+     10
+    ],
+    "significant": [
+     20
+    ],
+    "signs": [
+     17
+    ],
+    "silicon": [
+     10
+    ],
+    "smart": [
+     19
+    ],
+    "smartphone": [
+     17
+    ],
+    "smartphones": [
+     19
+    ],
+    "software": [
+     7,
+     8
+    ],
+    "solara": [
+     21
+    ],
+    "stellantis": [
+     11
+    ],
+    "step": [
+     7
+    ],
+    "story": [
+     5
+    ],
+    "strong": [
+     13
+    ],
+    "supported": [
+     14
+    ],
+    "supports": [
+     11
+    ],
+    "take": [
+     3
+    ],
+    "term": [
+     6
+    ],
+    "than": [
+     15
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     12,
+     14,
+     17,
+     20
+    ],
+    "the": [
+     2,
+     10,
+     11,
+     17
+    ],
+    "their": [
+     10
+    ],
+    "they": [
+     3
+    ],
+    "this": [
+     7,
+     10,
+     13
+    ],
+    "three": [
+     2
+    ],
+    "tier": [
+     18
+    ],
+    "time": [
+     17
+    ],
+    "to": [
+     3,
+     3,
+     4,
+     7,
+     9,
+     10,
+     15,
+     16,
+     18,
+     18,
+     20,
+     20,
+     21
+    ],
+    "today": [
+     12,
+     20
+    ],
+    "together": [
+     7
+    ],
+    "token": [
+     4
+    ],
+    "total": [
+     4
+    ],
+    "upgrade": [
+     20
+    ],
+    "users": [
+     15
+    ],
+    "vision": [
+     8
+    ],
+    "we": [
+     2,
+     3,
+     6,
+     7,
+     10,
+     18
+    ],
+    "we're": [
+     3,
+     12,
+     17,
+     21
+    ],
+    "well": [
+     10,
+     11
+    ],
+    "were": [
+     1
+    ],
+    "will": [
+     17,
+     18
+    ],
+    "winning": [
+     10
+    ],
+    "with": [
+     6,
+     7,
+     8,
+     10,
+     11,
+     15,
+     21
+    ],
+    "year": [
+     20
+    ],
+    "yielding": [
+     14
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Thank you, Brett, and good afternoon, everyone.",
+    "Licensing business revenues were $1.3 billion.",
+    "At our recent Investor Day, we laid out the next chapter of Qualcomm built across three dimensions.",
+    "We're implementing price increases and as they take effect, we expect to see gross margins re-align to our operating model.",
+    "Efficient token generation and total cost of ownership are fundamental to scaling AI.",
+    "Given Qualcomm's assets, it's a natural evolution of our growth story.",
+    "Across our merchant platforms, including HBC based AI accelerators, SerDes connectivity and CPUs, we are in active conversations with nearly every leading data center player about building long-term partnerships.",
+    "This is an important step in how we see AI infrastructure evolving, with software and hardware coming together to deliver better performance, flexibility, and efficiency.",
+    "Our vision and objective with Modular goes far beyond augmenting our AI software capabilities.",
+    "In Automotive, customer momentum continues to drive exceptional revenue growth.",
+    "This quarter, we signed a landmark, expanded agreement with BMW, winning a highly competitive selection process to become the lead compute silicon provider for their next-generation ADAS as well as digital cockpit.",
+    "Additionally, our recently announced collaboration with Stellantis supports our Automotive pipeline well into the 2030s.",
+    "Today, we're raising that outlook and now expect annualized sales of approximately $7 billion exiting fiscal '26.",
+    "This reflects strong customer demand and a meaningful increase in new businesses.",
+    "Our channel presence exceeds 38,000 customers supported by a deep partner ecosystem that is already yielding results.",
+    "And with Arduino and Edge Impulse, our reach now extends to more than 30 million users.",
+    "Moving on to Handsets.",
+    "Despite overall industry contraction caused by the current memory environment, we're seeing early signs of an agentic smartphone cycle that will grow over time.",
+    "In China, major OEMs are preparing to bring new on-device agents and orchestrators to market, and we believe agentic experiences will play a larger role in premium tier demand as adoption grows.",
+    "Beyond smartphones, PCs, smart glasses, and other new personal AI form factors are all becoming endpoint for agents.",
+    "That creates a significant multi-year upgrade opportunity for Qualcomm as today's installed base needs to evolve to enable more personal, contextual, and autonomous AI experience.",
+    "With Microsoft, we're collaborating on Project Solara, a chip-to-cloud platform designed for agent-first enterprise devices."
+   ],
+   "id": "qcom-q3fy26-earnings-call-transcript-7-30-26-final",
+   "msent": {
+    "2030s": 1,
+    "a": 19,
+    "ability": 1,
+    "about": 3,
+    "accelerate": 1,
+    "accelerators": 2,
+    "acquisition": 1,
+    "across": 9,
+    "active": 1,
+    "activity": 1,
+    "adas": 2,
+    "addition": 1,
+    "additionally": 1,
+    "address": 1,
+    "adoption": 1,
+    "advance": 1,
+    "afternoon": 1,
+    "age": 1,
+    "agent": 1,
+    "agentic": 6,
+    "agents": 2,
+    "agnostic": 1,
+    "agreement": 2,
+    "agreements": 1,
+    "ahead": 3,
+    "ai": 16,
+    "akash": 1,
+    "align": 1,
+    "all": 1,
+    "already": 2,
+    "also": 2,
+    "ambition": 1,
+    "an": 7,
+    "and": 46,
+    "announced": 3,
+    "announcements": 1,
+    "annualized": 2,
+    "another": 1,
+    "approach": 2,
+    "approximately": 2,
+    "arduino": 1,
+    "are": 10,
+    "areas": 1,
+    "as": 18,
+    "assets": 1,
+    "at": 8,
+    "augmenting": 1,
+    "august": 1,
+    "automotive": 7,
+    "autonomous": 1,
+    "awards": 1,
+    "bandwidth": 1,
+    "base": 1,
+    "based": 1,
+    "be": 5,
+    "become": 2,
+    "becoming": 2,
+    "before": 1,
+    "beginning": 1,
+    "begun": 1,
+    "believe": 1,
+    "below": 1,
+    "better": 1,
+    "beyond": 3,
+    "billion": 8,
+    "bmw": 3,
+    "both": 1,
+    "bottlenecks": 1,
+    "brands": 1,
+    "brett": 1,
+    "bring": 1,
+    "bringing": 3,
+    "broad": 3,
+    "broader": 1,
+    "building": 2,
+    "built": 2,
+    "business": 4,
+    "businesses": 2,
+    "by": 8,
+    "call": 1,
+    "can": 2,
+    "capabilities": 1,
+    "category": 2,
+    "caused": 1,
+    "center": 10,
+    "chain": 1,
+    "challenge": 1,
+    "change": 1,
+    "channel": 1,
+    "chapter": 3,
+    "chassis": 1,
+    "china": 1,
+    "chip": 1,
+    "class": 1,
+    "closed": 2,
+    "cloud": 2,
+    "cockpit": 2,
+    "collaborating": 1,
+    "collaboration": 2,
+    "come": 1,
+    "coming": 3,
+    "commitment": 1,
+    "competition": 1,
+    "competitive": 1,
+    "complete": 1,
+    "completed": 1,
+    "complexity": 1,
+    "compute": 7,
+    "confident": 1,
+    "connectivity": 2,
+    "consumer": 1,
+    "content": 1,
+    "contextual": 1,
+    "continues": 2,
+    "continuum": 1,
+    "contraction": 1,
+    "conversations": 1,
+    "conviction": 1,
+    "cooperation": 1,
+    "cost": 2,
+    "costs": 1,
+    "cpus": 2,
+    "creates": 1,
+    "creating": 1,
+    "current": 2,
+    "custom": 2,
+    "customer": 4,
+    "customers": 2,
+    "cycle": 1,
+    "data": 10,
+    "day": 3,
+    "decade": 2,
+    "decades": 1,
+    "december": 1,
+    "decline": 1,
+    "deep": 1,
+    "deliver": 2,
+    "delivered": 1,
+    "delivering": 2,
+    "demand": 3,
+    "demonstrate": 1,
+    "density": 1,
+    "deployments": 1,
+    "design": 3,
+    "designed": 2,
+    "despite": 2,
+    "develop": 1,
+    "developed": 1,
+    "developers": 2,
+    "developing": 1,
+    "device": 1,
+    "devices": 4,
+    "differentiated": 1,
+    "difficult": 1,
+    "digital": 3,
+    "dimensions": 1,
+    "directly": 1,
+    "disaggregated": 1,
+    "distributed": 2,
+    "diversification": 2,
+    "drive": 1,
+    "driven": 2,
+    "driving": 1,
+    "earlier": 1,
+    "early": 1,
+    "earnings": 1,
+    "economics": 1,
+    "ecosystem": 5,
+    "ecosystems": 1,
+    "edge": 5,
+    "effect": 1,
+    "efficiency": 2,
+    "efficient": 2,
+    "electronics": 1,
+    "embrace": 1,
+    "enable": 1,
+    "enables": 1,
+    "end": 3,
+    "endpoint": 1,
+    "engagements": 2,
+    "engaging": 1,
+    "engineering": 1,
+    "enhanced": 1,
+    "enter": 1,
+    "enterprise": 1,
+    "entire": 2,
+    "entrant": 1,
+    "environment": 2,
+    "establishes": 1,
+    "event": 1,
+    "every": 2,
+    "everyone": 1,
+    "everywhere": 1,
+    "evolution": 1,
+    "evolve": 2,
+    "evolving": 1,
+    "exceeds": 2,
+    "exceptional": 1,
+    "excited": 1,
+    "execute": 2,
+    "execution": 1,
+    "existing": 1,
+    "exit": 1,
+    "exiting": 1,
+    "expand": 2,
+    "expanded": 1,
+    "expanding": 2,
+    "expansion": 1,
+    "expect": 6,
+    "experience": 1,
+    "experiences": 2,
+    "extending": 1,
+    "extends": 1,
+    "eyewear": 3,
+    "factors": 1,
+    "far": 1,
+    "fifth": 1,
+    "financial": 1,
+    "firmly": 1,
+    "first": 4,
+    "fiscal": 9,
+    "flagship": 1,
+    "flexibility": 1,
+    "focused": 1,
+    "foldable": 1,
+    "for": 17,
+    "form": 1,
+    "forward": 2,
+    "four": 1,
+    "from": 7,
+    "full": 2,
+    "fundamental": 1,
+    "further": 2,
+    "gaap": 1,
+    "galaxy": 1,
+    "gemini": 1,
+    "gen": 1,
+    "generating": 1,
+    "generation": 5,
+    "given": 1,
+    "giving": 1,
+    "glasses": 3,
+    "global": 1,
+    "goes": 1,
+    "good": 1,
+    "google": 1,
+    "googlebooks": 1,
+    "gross": 2,
+    "grow": 1,
+    "growing": 1,
+    "grows": 1,
+    "growth": 5,
+    "guidance": 1,
+    "handset": 3,
+    "handsets": 1,
+    "happy": 1,
+    "hardware": 2,
+    "have": 6,
+    "hbc": 3,
+    "headwinds": 1,
+    "hear": 1,
+    "help": 1,
+    "helping": 1,
+    "heterogeneous": 1,
+    "high": 2,
+    "higher": 1,
+    "highlights": 1,
+    "highly": 1,
+    "historical": 1,
+    "host": 1,
+    "how": 1,
+    "hybrid": 1,
+    "i": 2,
+    "i'm": 1,
+    "ideal": 1,
+    "impacted": 1,
+    "implementing": 1,
+    "important": 1,
+    "improving": 1,
+    "impulse": 1,
+    "in": 28,
+    "inc": 1,
+    "include": 1,
+    "including": 3,
+    "increase": 2,
+    "increases": 1,
+    "increasingly": 2,
+    "incredible": 1,
+    "incredibly": 1,
+    "industrial": 3,
+    "industry": 6,
+    "inference": 2,
+    "inflection": 2,
+    "infrastructure": 1,
+    "innovation": 1,
+    "innovative": 1,
+    "input": 1,
+    "installed": 1,
+    "integrating": 1,
+    "integration": 1,
+    "intelligence": 2,
+    "intelligent": 1,
+    "interest": 2,
+    "into": 4,
+    "introduced": 1,
+    "investor": 3,
+    "investors": 1,
+    "iot": 2,
+    "is": 10,
+    "it": 1,
+    "it's": 1,
+    "its": 1,
+    "joining": 1,
+    "journey": 1,
+    "just": 1,
+    "key": 1,
+    "laid": 2,
+    "landmark": 1,
+    "laptops": 1,
+    "larger": 1,
+    "last": 1,
+    "latest": 1,
+    "launch": 1,
+    "lead": 2,
+    "leadership": 1,
+    "leading": 2,
+    "let": 1,
+    "leveraging": 1,
+    "licensing": 1,
+    "line": 1,
+    "lines": 2,
+    "logical": 1,
+    "long": 2,
+    "look": 2,
+    "lot": 1,
+    "major": 1,
+    "manufacturing": 1,
+    "many": 2,
+    "margins": 2,
+    "market": 2,
+    "material": 1,
+    "me": 1,
+    "meaningful": 1,
+    "means": 1,
+    "memory": 3,
+    "merchant": 1,
+    "microsoft": 1,
+    "mid": 1,
+    "milestone": 1,
+    "million": 2,
+    "mobile": 2,
+    "modcon": 1,
+    "model": 2,
+    "models": 1,
+    "modern": 1,
+    "modular": 4,
+    "momentum": 1,
+    "more": 8,
+    "most": 1,
+    "moves": 1,
+    "moving": 1,
+    "multi": 2,
+    "multiple": 1,
+    "multiyear": 1,
+    "natural": 1,
+    "near": 1,
+    "nearly": 1,
+    "needs": 1,
+    "network": 1,
+    "networking": 1,
+    "new": 7,
+    "next": 7,
+    "non": 4,
+    "now": 6,
+    "number": 1,
+    "objective": 1,
+    "oems": 1,
+    "of": 29,
+    "on": 11,
+    "one": 3,
+    "open": 4,
+    "operating": 1,
+    "opportunities": 2,
+    "opportunity": 1,
+    "orchestrators": 1,
+    "other": 1,
+    "our": 32,
+    "out": 4,
+    "outlook": 2,
+    "over": 5,
+    "overall": 2,
+    "own": 1,
+    "ownership": 2,
+    "partner": 2,
+    "partners": 1,
+    "partnerships": 2,
+    "path": 1,
+    "pcs": 2,
+    "per": 3,
+    "performance": 3,
+    "personal": 2,
+    "phase": 3,
+    "phases": 1,
+    "phones": 1,
+    "physical": 1,
+    "pipeline": 3,
+    "plans": 1,
+    "platform": 4,
+    "platforms": 2,
+    "play": 1,
+    "player": 2,
+    "pleased": 2,
+    "plus": 1,
+    "points": 1,
+    "portfolio": 3,
+    "position": 2,
+    "potential": 1,
+    "power": 1,
+    "powering": 1,
+    "premise": 1,
+    "premium": 1,
+    "preparing": 1,
+    "presence": 2,
+    "pressure": 1,
+    "previous": 1,
+    "price": 1,
+    "prices": 1,
+    "process": 1,
+    "product": 2,
+    "production": 1,
+    "program": 2,
+    "programs": 1,
+    "project": 1,
+    "projection": 1,
+    "projects": 1,
+    "promote": 1,
+    "proof": 1,
+    "prove": 1,
+    "provider": 1,
+    "purpose": 1,
+    "q3": 1,
+    "qct": 2,
+    "qualcomm": 9,
+    "quarter": 4,
+    "quarters": 1,
+    "raising": 1,
+    "ramping": 1,
+    "range": 1,
+    "rate": 1,
+    "re": 1,
+    "reach": 1,
+    "recent": 1,
+    "recently": 1,
+    "recognize": 2,
+    "record": 1,
+    "reference": 1,
+    "reflect": 1,
+    "reflects": 3,
+    "reimagine": 1,
+    "relationships": 2,
+    "relevance": 1,
+    "remain": 1,
+    "remains": 1,
+    "report": 2,
+    "represents": 1,
+    "reshaping": 1,
+    "resilience": 1,
+    "result": 1,
+    "resulting": 1,
+    "results": 1,
+    "revenue": 7,
+    "revenues": 4,
+    "robotics": 1,
+    "role": 1,
+    "rolling": 1,
+    "roughly": 1,
+    "run": 1,
+    "said": 1,
+    "sales": 1,
+    "samsung": 1,
+    "scale": 1,
+    "scaling": 1,
+    "secured": 1,
+    "see": 3,
+    "seeing": 3,
+    "selection": 1,
+    "semiconductor": 1,
+    "september": 2,
+    "serdes": 1,
+    "server": 1,
+    "set": 1,
+    "share": 5,
+    "shifting": 1,
+    "shipped": 1,
+    "short": 2,
+    "shortages": 1,
+    "signed": 1,
+    "significant": 2,
+    "signs": 1,
+    "silicon": 7,
+    "simplify": 1,
+    "slightly": 1,
+    "smart": 3,
+    "smartphone": 1,
+    "smartphones": 1,
+    "snapdragon": 5,
+    "socket": 1,
+    "software": 7,
+    "solara": 1,
+    "solution": 2,
+    "solutions": 2,
+    "some": 2,
+    "stack": 3,
+    "start": 2,
+    "stellantis": 1,
+    "step": 1,
+    "story": 1,
+    "strategic": 2,
+    "strategy": 2,
+    "strengthening": 1,
+    "strengthens": 1,
+    "strong": 3,
+    "success": 1,
+    "successfully": 1,
+    "summit": 1,
+    "supply": 1,
+    "supported": 1,
+    "supports": 1,
+    "systems": 1,
+    "take": 1,
+    "tape": 1,
+    "target": 1,
+    "targeting": 1,
+    "targets": 2,
+    "technology": 1,
+    "term": 5,
+    "than": 2,
+    "thank": 1,
+    "thanks": 1,
+    "that": 11,
+    "the": 36,
+    "their": 3,
+    "there's": 1,
+    "these": 3,
+    "they": 4,
+    "this": 14,
+    "three": 2,
+    "through": 2,
+    "throughout": 1,
+    "tier": 1,
+    "time": 3,
+    "times": 1,
+    "to": 36,
+    "today": 4,
+    "together": 2,
+    "token": 1,
+    "top": 1,
+    "total": 3,
+    "toward": 1,
+    "track": 1,
+    "transition": 1,
+    "turn": 1,
+    "two": 3,
+    "underscores": 1,
+    "underway": 1,
+    "unique": 1,
+    "units": 1,
+    "unpacked": 1,
+    "unprecedented": 1,
+    "up": 1,
+    "updated": 1,
+    "upgrade": 1,
+    "us": 2,
+    "users": 1,
+    "value": 1,
+    "vehicle": 1,
+    "verticals": 1,
+    "very": 1,
+    "vision": 2,
+    "wafer": 1,
+    "want": 1,
+    "watches": 1,
+    "watt": 1,
+    "we": 26,
+    "we're": 13,
+    "weight": 1,
+    "welcome": 1,
+    "well": 5,
+    "were": 3,
+    "which": 3,
+    "wider": 1,
+    "will": 13,
+    "win": 2,
+    "winning": 1,
+    "wins": 3,
+    "with": 20,
+    "within": 1,
+    "workloads": 1,
+    "year": 4,
+    "years": 2,
+    "yielding": 1,
+    "you": 2
+   },
+   "n_sentences": 71,
+   "source": "s204.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q3 FY2026 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s204.q4cdn.com/645488518/files/doc_financials/2026/q3/Q3FY26_Earnings_Call-Transcript_7-30-26_FINAL.pdf",
+   "words": 1531
+  },
+  {
+   "counts": {
+    "3d": 1,
+    "6g": 8,
+    "a": 21,
+    "a16": 1,
+    "about": 1,
+    "above": 1,
+    "accelerate": 1,
+    "accelerators": 2,
+    "across": 8,
+    "act": 1,
+    "action": 1,
+    "adas": 4,
+    "addition": 3,
+    "addressable": 1,
+    "advanced": 2,
+    "aerial": 1,
+    "afternoon": 1,
+    "age": 1,
+    "agent": 4,
+    "agentic": 11,
+    "agents": 3,
+    "agreement": 1,
+    "agriculture": 1,
+    "ahead": 2,
+    "ai": 28,
+    "akash": 3,
+    "all": 1,
+    "alphawave": 1,
+    "also": 4,
+    "altitude": 1,
+    "always": 1,
+    "an": 9,
+    "analytics": 1,
+    "and": 72,
+    "android": 2,
+    "announced": 1,
+    "announcement": 2,
+    "annualized": 1,
+    "another": 1,
+    "applications": 1,
+    "architects": 1,
+    "arduino": 1,
+    "are": 8,
+    "area": 2,
+    "areas": 1,
+    "as": 16,
+    "assets": 1,
+    "assist": 1,
+    "assistance": 2,
+    "asus": 1,
+    "at": 8,
+    "auto": 2,
+    "automakers": 1,
+    "automated": 2,
+    "automotive": 2,
+    "autonomous": 4,
+    "autonomy": 1,
+    "avenues": 1,
+    "background": 1,
+    "base": 1,
+    "be": 5,
+    "become": 1,
+    "becomes": 1,
+    "been": 1,
+    "before": 2,
+    "begin": 2,
+    "beginning": 2,
+    "believe": 3,
+    "beneficiaries": 1,
+    "best": 2,
+    "beyond": 1,
+    "billion": 5,
+    "bmw": 1,
+    "bosch": 1,
+    "both": 1,
+    "bottoming": 1,
+    "bound": 1,
+    "breadth": 1,
+    "brett": 1,
+    "bring": 1,
+    "broad": 3,
+    "broader": 1,
+    "build": 2,
+    "building": 3,
+    "built": 3,
+    "business": 4,
+    "by": 3,
+    "bytedance": 1,
+    "call": 2,
+    "camera": 1,
+    "can": 2,
+    "capabilities": 3,
+    "capability": 1,
+    "carriers": 1,
+    "cars": 2,
+    "cases": 2,
+    "catalyze": 1,
+    "category": 1,
+    "caught": 1,
+    "center": 5,
+    "centers": 1,
+    "ces": 1,
+    "challenger": 1,
+    "change": 1,
+    "changing": 2,
+    "chassis": 2,
+    "china": 1,
+    "chip": 1,
+    "choice": 1,
+    "class": 2,
+    "classes": 1,
+    "claude": 2,
+    "clear": 2,
+    "cloud": 2,
+    "coalition": 1,
+    "code": 1,
+    "codex": 1,
+    "combined": 1,
+    "come": 1,
+    "coming": 2,
+    "commercial": 1,
+    "communication": 1,
+    "community": 1,
+    "company": 2,
+    "compared": 1,
+    "competitive": 1,
+    "completely": 1,
+    "comprises": 1,
+    "compute": 2,
+    "computer": 1,
+    "computing": 1,
+    "confidence": 1,
+    "connected": 1,
+    "connectivity": 5,
+    "consumer": 1,
+    "content": 2,
+    "context": 2,
+    "continued": 1,
+    "continuously": 1,
+    "core": 3,
+    "cpu": 7,
+    "crew": 1,
+    "critical": 1,
+    "current": 1,
+    "currently": 1,
+    "custom": 1,
+    "customer": 6,
+    "customers": 1,
+    "cycle": 1,
+    "cycles": 2,
+    "data": 9,
+    "day": 2,
+    "december": 1,
+    "deliver": 2,
+    "delivered": 1,
+    "delivering": 3,
+    "delivers": 1,
+    "demand": 3,
+    "deployment": 1,
+    "design": 4,
+    "designed": 1,
+    "desktop": 2,
+    "details": 1,
+    "detection": 1,
+    "develop": 2,
+    "developers": 1,
+    "development": 3,
+    "device": 2,
+    "devices": 6,
+    "differentiator": 1,
+    "digital": 3,
+    "distributed": 1,
+    "diversification": 2,
+    "doubao": 1,
+    "dragonwing": 1,
+    "driven": 1,
+    "driver": 2,
+    "driving": 5,
+    "drone": 1,
+    "during": 1,
+    "dynamic": 1,
+    "early": 2,
+    "earnings": 1,
+    "economic": 1,
+    "ecosystem": 2,
+    "edge": 5,
+    "efficient": 2,
+    "efficiently": 1,
+    "efforts": 1,
+    "elite": 1,
+    "embedded": 1,
+    "emergence": 1,
+    "empower": 1,
+    "enable": 1,
+    "enabled": 2,
+    "enabling": 1,
+    "end": 6,
+    "engagement": 3,
+    "engine": 1,
+    "enhanced": 1,
+    "entering": 1,
+    "eps": 1,
+    "every": 1,
+    "everyone": 1,
+    "example": 1,
+    "examples": 2,
+    "exceeded": 1,
+    "exciting": 1,
+    "exit": 1,
+    "expand": 1,
+    "expansion": 1,
+    "expect": 5,
+    "expected": 1,
+    "experience": 1,
+    "experiences": 3,
+    "fastest": 1,
+    "featuring": 1,
+    "feedback": 1,
+    "fifth": 1,
+    "figure": 1,
+    "financial": 2,
+    "first": 2,
+    "fiscal": 6,
+    "for": 15,
+    "forward": 2,
+    "foundational": 1,
+    "fourth": 1,
+    "framework": 1,
+    "from": 10,
+    "fuel": 1,
+    "full": 1,
+    "fully": 1,
+    "function": 1,
+    "functions": 1,
+    "fundamentally": 1,
+    "gaap": 1,
+    "gains": 1,
+    "gas": 1,
+    "generated": 1,
+    "generation": 8,
+    "generational": 2,
+    "get": 1,
+    "glasses": 2,
+    "global": 1,
+    "globe": 1,
+    "going": 1,
+    "good": 2,
+    "governments": 1,
+    "gpu": 1,
+    "great": 1,
+    "growth": 4,
+    "guidance": 1,
+    "half": 1,
+    "handsets": 1,
+    "has": 4,
+    "hasn't": 1,
+    "have": 2,
+    "healthy": 1,
+    "held": 1,
+    "help": 1,
+    "helping": 1,
+    "hermes": 1,
+    "hexagon": 1,
+    "high": 4,
+    "higher": 2,
+    "highlight": 1,
+    "highlighting": 1,
+    "highlights": 1,
+    "his": 1,
+    "history": 1,
+    "hope": 1,
+    "how": 2,
+    "humain": 1,
+    "hyperscaler": 1,
+    "hyperscalers": 1,
+    "i": 8,
+    "important": 1,
+    "in": 39,
+    "include": 1,
+    "including": 3,
+    "increase": 4,
+    "increased": 1,
+    "industrial": 4,
+    "industry": 5,
+    "inference": 1,
+    "inflection": 1,
+    "influence": 1,
+    "infotainment": 1,
+    "infrastructure": 3,
+    "initial": 1,
+    "initiative": 1,
+    "insights": 1,
+    "installed": 1,
+    "integrated": 1,
+    "integrates": 1,
+    "integration": 1,
+    "intel": 1,
+    "intelligent": 2,
+    "intended": 1,
+    "interest": 1,
+    "into": 4,
+    "introduced": 1,
+    "investor": 2,
+    "iot": 2,
+    "iq10": 1,
+    "iq9": 1,
+    "is": 17,
+    "island": 1,
+    "it": 6,
+    "join": 1,
+    "joining": 1,
+    "june": 1,
+    "just": 1,
+    "key": 5,
+    "kilowatts": 1,
+    "lake": 1,
+    "landgraph": 1,
+    "laptops": 1,
+    "large": 1,
+    "largest": 1,
+    "launch": 1,
+    "launched": 1,
+    "launches": 1,
+    "leadership": 1,
+    "leading": 4,
+    "leap": 1,
+    "learning": 1,
+    "level": 2,
+    "licensing": 1,
+    "like": 5,
+    "line": 1,
+    "local": 1,
+    "long": 2,
+    "look": 2,
+    "looking": 1,
+    "low": 2,
+    "major": 2,
+    "make": 1,
+    "making": 1,
+    "management": 1,
+    "mapping": 1,
+    "market": 2,
+    "matches": 1,
+    "materially": 1,
+    "may": 1,
+    "meaningful": 1,
+    "miclaw": 1,
+    "million": 1,
+    "milliwatts": 1,
+    "mobile": 1,
+    "models": 2,
+    "modems": 1,
+    "momentum": 2,
+    "more": 3,
+    "most": 1,
+    "moving": 1,
+    "multi": 1,
+    "multiple": 1,
+    "multistep": 1,
+    "must": 1,
+    "mwc": 1,
+    "native": 2,
+    "nearly": 1,
+    "network": 6,
+    "neura": 1,
+    "new": 9,
+    "next": 4,
+    "no": 1,
+    "non": 1,
+    "not": 2,
+    "notably": 1,
+    "note": 1,
+    "notes": 1,
+    "now": 5,
+    "npu": 4,
+    "nubia": 1,
+    "obvious": 1,
+    "oems": 1,
+    "of": 30,
+    "off": 1,
+    "oil": 1,
+    "on": 12,
+    "one": 3,
+    "only": 1,
+    "openai": 1,
+    "openclaw": 2,
+    "operating": 1,
+    "opportunities": 2,
+    "opportunity": 4,
+    "orchestrate": 1,
+    "orchestration": 1,
+    "orchestrators": 1,
+    "original": 1,
+    "orion": 1,
+    "oryon": 1,
+    "other": 6,
+    "our": 31,
+    "out": 2,
+    "outperforms": 1,
+    "over": 3,
+    "overall": 1,
+    "pace": 1,
+    "panther": 1,
+    "particularly": 2,
+    "partners": 3,
+    "pc": 3,
+    "pcmag": 1,
+    "pcs": 1,
+    "per": 1,
+    "performance": 6,
+    "performing": 1,
+    "period": 1,
+    "perplexity": 1,
+    "personal": 3,
+    "perspective": 2,
+    "phone": 1,
+    "phones": 1,
+    "physical": 2,
+    "pipeline": 1,
+    "plans": 2,
+    "platform": 5,
+    "platforms": 4,
+    "played": 1,
+    "player": 1,
+    "pleased": 1,
+    "point": 1,
+    "points": 2,
+    "portfolio": 1,
+    "position": 1,
+    "positive": 1,
+    "possible": 1,
+    "power": 3,
+    "powered": 1,
+    "powerful": 1,
+    "powers": 1,
+    "predominantly": 1,
+    "premium": 2,
+    "present": 1,
+    "processing": 2,
+    "processors": 1,
+    "product": 2,
+    "production": 1,
+    "products": 1,
+    "profound": 1,
+    "progress": 2,
+    "progressing": 1,
+    "projects": 1,
+    "proof": 1,
+    "prototyping": 1,
+    "proven": 1,
+    "provide": 3,
+    "providers": 1,
+    "provides": 1,
+    "purpose": 1,
+    "pursuing": 1,
+    "q": 2,
+    "q2": 2,
+    "q3": 1,
+    "qct": 1,
+    "qualcomm": 10,
+    "quarter": 4,
+    "radio": 1,
+    "ramp": 1,
+    "ran": 1,
+    "range": 1,
+    "ranging": 1,
+    "rapid": 1,
+    "rate": 2,
+    "real": 1,
+    "reasoning": 1,
+    "recent": 3,
+    "record": 1,
+    "regarding": 1,
+    "reinforcing": 1,
+    "relevant": 1,
+    "reliably": 1,
+    "renewal": 1,
+    "represents": 2,
+    "reshaping": 1,
+    "result": 1,
+    "retail": 1,
+    "revenue": 1,
+    "revenues": 5,
+    "review": 1,
+    "ride": 1,
+    "roadmap": 2,
+    "robotics": 3,
+    "run": 2,
+    "running": 1,
+    "safety": 1,
+    "scale": 3,
+    "second": 3,
+    "security": 1,
+    "see": 2,
+    "seeing": 2,
+    "seem": 1,
+    "self": 1,
+    "sell": 1,
+    "semiconductor": 1,
+    "sensing": 2,
+    "sensor": 1,
+    "sensors": 1,
+    "series": 1,
+    "serious": 1,
+    "service": 1,
+    "services": 1,
+    "set": 1,
+    "several": 1,
+    "shape": 1,
+    "share": 3,
+    "sharing": 1,
+    "shipments": 2,
+    "shipped": 1,
+    "sight": 1,
+    "significant": 5,
+    "silicon": 2,
+    "since": 1,
+    "smart": 3,
+    "smartphone": 1,
+    "smartphones": 1,
+    "snapdragon": 7,
+    "solutions": 3,
+    "some": 2,
+    "soon": 2,
+    "sovereign": 1,
+    "space": 2,
+    "spanning": 1,
+    "specifics": 1,
+    "speed": 1,
+    "spinning": 1,
+    "stack": 2,
+    "standards": 1,
+    "start": 1,
+    "starting": 1,
+    "states": 1,
+    "step": 1,
+    "story": 1,
+    "strategic": 2,
+    "striking": 1,
+    "strong": 1,
+    "stronger": 1,
+    "substantial": 1,
+    "such": 2,
+    "support": 2,
+    "supporting": 1,
+    "systems": 2,
+    "tailwind": 1,
+    "tasks": 1,
+    "technologies": 1,
+    "technology": 1,
+    "telecom": 1,
+    "telematics": 1,
+    "telemetry": 1,
+    "term": 2,
+    "terrestrial": 1,
+    "than": 1,
+    "thank": 1,
+    "thanks": 1,
+    "that": 6,
+    "the": 62,
+    "theme": 1,
+    "there": 1,
+    "these": 2,
+    "they": 1,
+    "think": 2,
+    "this": 9,
+    "threefold": 1,
+    "through": 1,
+    "throughput": 1,
+    "tier": 1,
+    "time": 3,
+    "times": 2,
+    "to": 41,
+    "today": 2,
+    "together": 1,
+    "token": 1,
+    "tops": 2,
+    "tracking": 1,
+    "traffic": 1,
+    "transition": 1,
+    "transitions": 1,
+    "true": 1,
+    "turn": 2,
+    "two": 1,
+    "under": 1,
+    "underscore": 1,
+    "unfold": 1,
+    "units": 1,
+    "unlocks": 1,
+    "unparalleled": 1,
+    "up": 4,
+    "update": 2,
+    "upgrade": 3,
+    "uplink": 1,
+    "us": 3,
+    "use": 1,
+    "user": 1,
+    "utilities": 1,
+    "vehicle": 1,
+    "ventuno": 2,
+    "verticals": 2,
+    "very": 1,
+    "view": 1,
+    "vision": 2,
+    "voice": 1,
+    "want": 2,
+    "way": 1,
+    "wayve": 1,
+    "we": 30,
+    "we're": 6,
+    "wearables": 2,
+    "well": 4,
+    "were": 3,
+    "what": 1,
+    "what's": 1,
+    "where": 1,
+    "which": 3,
+    "while": 1,
+    "wide": 3,
+    "will": 14,
+    "win": 2,
+    "wins": 2,
+    "wireless": 2,
+    "with": 18,
+    "work": 1,
+    "working": 1,
+    "workload": 1,
+    "workloads": 1,
+    "world": 6,
+    "would": 2,
+    "x": 1,
+    "x2": 4,
+    "xiaomi": 1,
+    "year": 3,
+    "years": 1,
+    "yet": 1,
+    "you": 2,
+    "zenbook": 1,
+    "zte": 1
+   },
+   "date": "2026-04-30",
+   "entries": {
+    "3d": [
+     17
+    ],
+    "6g": [
+     18
+    ],
+    "a": [
+     9,
+     13,
+     18
+    ],
+    "accelerate": [
+     18
+    ],
+    "across": [
+     4
+    ],
+    "act": [
+     16
+    ],
+    "adas": [
+     7
+    ],
+    "advanced": [
+     6
+    ],
+    "aerial": [
+     17
+    ],
+    "afternoon": [
+     0
+    ],
+    "agent": [
+     4,
+     10
+    ],
+    "agentic": [
+     5,
+     8,
+     9,
+     10
+    ],
+    "agents": [
+     3
+    ],
+    "agreement": [
+     13
+    ],
+    "ahead": [
+     7
+    ],
+    "ai": [
+     5,
+     8,
+     10,
+     12,
+     13,
+     17,
+     18
+    ],
+    "akash": [
+     15
+    ],
+    "also": [
+     5
+    ],
+    "altitude": [
+     17
+    ],
+    "always": [
+     9
+    ],
+    "an": [
+     13
+    ],
+    "analytics": [
+     17
+    ],
+    "and": [
+     0,
+     3,
+     4,
+     4,
+     6,
+     7,
+     8,
+     9,
+     10,
+     12,
+     15
+    ],
+    "android": [
+     15
+    ],
+    "announced": [
+     13
+    ],
+    "are": [
+     8,
+     9,
+     10
+    ],
+    "area": [
+     16
+    ],
+    "as": [
+     6,
+     6,
+     10,
+     14,
+     16
+    ],
+    "assets": [
+     5
+    ],
+    "assistance": [
+     6
+    ],
+    "at": [
+     12,
+     17,
+     18
+    ],
+    "auto": [
+     4,
+     18
+    ],
+    "automated": [
+     6
+    ],
+    "autonomous": [
+     17
+    ],
+    "background": [
+     3
+    ],
+    "be": [
+     5
+    ],
+    "become": [
+     13
+    ],
+    "believe": [
+     15
+    ],
+    "best": [
+     4
+    ],
+    "billion": [
+     2
+    ],
+    "bottoming": [
+     15
+    ],
+    "bound": [
+     4
+    ],
+    "brett": [
+     0
+    ],
+    "broad": [
+     13
+    ],
+    "build": [
+     17
+    ],
+    "building": [
+     13
+    ],
+    "business": [
+     2,
+     14
+    ],
+    "by": [
+     6
+    ],
+    "can": [
+     13
+    ],
+    "carriers": [
+     18
+    ],
+    "cases": [
+     11
+    ],
+    "center": [
+     4
+    ],
+    "ces": [
+     12
+    ],
+    "chassis": [
+     6
+    ],
+    "china": [
+     15
+    ],
+    "chip": [
+     14
+    ],
+    "class": [
+     9
+    ],
+    "claude": [
+     10,
+     10
+    ],
+    "cloud": [
+     18
+    ],
+    "coalition": [
+     18
+    ],
+    "code": [
+     10
+    ],
+    "codex": [
+     10
+    ],
+    "communication": [
+     16
+    ],
+    "company": [
+     18
+    ],
+    "competitive": [
+     9
+    ],
+    "comprises": [
+     6
+    ],
+    "computer": [
+     10
+    ],
+    "confidence": [
+     13
+    ],
+    "connectivity": [
+     5,
+     6
+    ],
+    "consumer": [
+     14
+    ],
+    "content": [
+     7
+    ],
+    "context": [
+     3,
+     17
+    ],
+    "continued": [
+     7
+    ],
+    "continuously": [
+     3
+    ],
+    "cpu": [
+     4,
+     4,
+     9
+    ],
+    "crew": [
+     10
+    ],
+    "currently": [
+     9
+    ],
+    "customer": [
+     12
+    ],
+    "cycles": [
+     8
+    ],
+    "data": [
+     3,
+     4,
+     17,
+     17
+    ],
+    "deliver": [
+     3
+    ],
+    "delivering": [
+     5
+    ],
+    "demand": [
+     14
+    ],
+    "design": [
+     8,
+     13
+    ],
+    "desktop": [
+     10,
+     10
+    ],
+    "detection": [
+     17
+    ],
+    "differentiator": [
+     9
+    ],
+    "digital": [
+     6,
+     17
+    ],
+    "distributed": [
+     16
+    ],
+    "dragonwing": [
+     12
+    ],
+    "driven": [
+     6
+    ],
+    "driver": [
+     6
+    ],
+    "driving": [
+     6,
+     8
+    ],
+    "drone": [
+     17
+    ],
+    "dynamic": [
+     17
+    ],
+    "early": [
+     10
+    ],
+    "edge": [
+     8
+    ],
+    "efficient": [
+     5
+    ],
+    "efficiently": [
+     3
+    ],
+    "empower": [
+     5
+    ],
+    "enabled": [
+     17
+    ],
+    "everyone": [
+     0
+    ],
+    "exciting": [
+     13
+    ],
+    "expect": [
+     7
+    ],
+    "expected": [
+     14
+    ],
+    "experiences": [
+     5,
+     9
+    ],
+    "figure": [
+     13
+    ],
+    "financial": [
+     15
+    ],
+    "first": [
+     14
+    ],
+    "fiscal": [
+     7,
+     15
+    ],
+    "for": [
+     1,
+     3,
+     5
+    ],
+    "fourth": [
+     6
+    ],
+    "from": [
+     17
+    ],
+    "fuel": [
+     3
+    ],
+    "gains": [
+     7
+    ],
+    "generated": [
+     12
+    ],
+    "generation": [
+     6
+    ],
+    "good": [
+     0
+    ],
+    "growth": [
+     6
+    ],
+    "has": [
+     4,
+     12
+    ],
+    "held": [
+     14
+    ],
+    "help": [
+     18
+    ],
+    "helping": [
+     11
+    ],
+    "hermes": [
+     10
+    ],
+    "his": [
+     15
+    ],
+    "humain": [
+     10
+    ],
+    "in": [
+     3,
+     7,
+     8,
+     9,
+     11,
+     12,
+     13,
+     14,
+     15,
+     15,
+     16
+    ],
+    "increased": [
+     7
+    ],
+    "industrial": [
+     12
+    ],
+    "infotainment": [
+     6
+    ],
+    "infrastructure": [
+     16,
+     18
+    ],
+    "insights": [
+     17
+    ],
+    "integrates": [
+     16
+    ],
+    "intelligent": [
+     16
+    ],
+    "intended": [
+     16
+    ],
+    "interest": [
+     12
+    ],
+    "into": [
+     3
+    ],
+    "iot": [
+     8
+    ],
+    "iq10": [
+     12
+    ],
+    "is": [
+     4,
+     6,
+     11,
+     15,
+     16
+    ],
+    "it": [
+     9,
+     16,
+     17
+    ],
+    "joining": [
+     1
+    ],
+    "key": [
+     5
+    ],
+    "landgraph": [
+     10
+    ],
+    "launch": [
+     12
+    ],
+    "launched": [
+     18
+    ],
+    "licensing": [
+     2
+    ],
+    "like": [
+     17
+    ],
+    "local": [
+     5
+    ],
+    "looking": [
+     7
+    ],
+    "low": [
+     17
+    ],
+    "major": [
+     8
+    ],
+    "make": [
+     17
+    ],
+    "making": [
+     9
+    ],
+    "management": [
+     17
+    ],
+    "mapping": [
+     17
+    ],
+    "market": [
+     13
+    ],
+    "materially": [
+     14
+    ],
+    "models": [
+     5
+    ],
+    "more": [
+     15
+    ],
+    "multi": [
+     13
+    ],
+    "multistep": [
+     3
+    ],
+    "must": [
+     3
+    ],
+    "mwc": [
+     18
+    ],
+    "native": [
+     18
+    ],
+    "neura": [
+     13
+    ],
+    "new": [
+     12,
+     17
+    ],
+    "now": [
+     11
+    ],
+    "npu": [
+     5
+    ],
+    "oems": [
+     18
+    ],
+    "on": [
+     9,
+     10,
+     13
+    ],
+    "one": [
+     10
+    ],
+    "openai": [
+     10
+    ],
+    "openclaw": [
+     10
+    ],
+    "orchestrate": [
+     3
+    ],
+    "orchestration": [
+     4
+    ],
+    "orchestrators": [
+     10
+    ],
+    "oryon": [
+     9
+    ],
+    "our": [
+     6,
+     9,
+     9,
+     12,
+     12,
+     13,
+     13,
+     14,
+     15
+    ],
+    "out": [
+     14,
+     15
+    ],
+    "pace": [
+     11
+    ],
+    "particularly": [
+     7
+    ],
+    "partners": [
+     18
+    ],
+    "pc": [
+     9
+    ],
+    "pcs": [
+     4
+    ],
+    "performing": [
+     4
+    ],
+    "perplexity": [
+     10
+    ],
+    "physical": [
+     12
+    ],
+    "platform": [
+     6,
+     12
+    ],
+    "platforms": [
+     9
+    ],
+    "played": [
+     14
+    ],
+    "player": [
+     13
+    ],
+    "points": [
+     10
+    ],
+    "possible": [
+     17
+    ],
+    "powerful": [
+     9
+    ],
+    "predominantly": [
+     4
+    ],
+    "product": [
+     8
+    ],
+    "production": [
+     9
+    ],
+    "proof": [
+     10
+    ],
+    "provide": [
+     15
+    ],
+    "q3": [
+     15
+    ],
+    "qualcomm": [
+     4,
+     5
+    ],
+    "quarter": [
+     14
+    ],
+    "ranging": [
+     17
+    ],
+    "real": [
+     16
+    ],
+    "reinforcing": [
+     13
+    ],
+    "relevant": [
+     17
+    ],
+    "reliably": [
+     3
+    ],
+    "renewal": [
+     8
+    ],
+    "revenue": [
+     15
+    ],
+    "revenues": [
+     2
+    ],
+    "roadmap": [
+     18
+    ],
+    "robotics": [
+     13
+    ],
+    "run": [
+     3
+    ],
+    "running": [
+     10
+    ],
+    "scale": [
+     17
+    ],
+    "security": [
+     3
+    ],
+    "sell": [
+     14
+    ],
+    "sensing": [
+     16
+    ],
+    "sensor": [
+     3
+    ],
+    "services": [
+     17
+    ],
+    "set": [
+     11
+    ],
+    "shape": [
+     18
+    ],
+    "share": [
+     7
+    ],
+    "shipped": [
+     14
+    ],
+    "significant": [
+     13
+    ],
+    "since": [
+     12
+    ],
+    "smartphones": [
+     4
+    ],
+    "snapdragon": [
+     6,
+     9,
+     10
+    ],
+    "solutions": [
+     5
+    ],
+    "some": [
+     11
+    ],
+    "soon": [
+     4
+    ],
+    "specifics": [
+     15
+    ],
+    "spinning": [
+     18
+    ],
+    "strong": [
+     3
+    ],
+    "substantial": [
+     12
+    ],
+    "such": [
+     10
+    ],
+    "tasks": [
+     3
+    ],
+    "telematics": [
+     6
+    ],
+    "telemetry": [
+     17
+    ],
+    "terrestrial": [
+     17
+    ],
+    "thank": [
+     0
+    ],
+    "thanks": [
+     1
+    ],
+    "that": [
+     13,
+     16
+    ],
+    "the": [
+     3,
+     4,
+     4,
+     11,
+     13,
+     14,
+     18
+    ],
+    "they": [
+     3
+    ],
+    "this": [
+     6
+    ],
+    "through": [
+     14
+    ],
+    "time": [
+     16
+    ],
+    "to": [
+     3,
+     5,
+     7,
+     11,
+     16,
+     17,
+     18
+    ],
+    "today": [
+     1
+    ],
+    "tracking": [
+     17
+    ],
+    "traffic": [
+     17
+    ],
+    "true": [
+     9
+    ],
+    "under": [
+     14
+    ],
+    "unlocks": [
+     9
+    ],
+    "unparalleled": [
+     5
+    ],
+    "up": [
+     14
+    ],
+    "update": [
+     15
+    ],
+    "us": [
+     1
+    ],
+    "we": [
+     7,
+     13,
+     13,
+     14,
+     15,
+     18
+    ],
+    "well": [
+     6
+    ],
+    "were": [
+     2
+    ],
+    "which": [
+     6
+    ],
+    "wide": [
+     16
+    ],
+    "will": [
+     5,
+     15,
+     17
+    ],
+    "win": [
+     13
+    ],
+    "wins": [
+     17
+    ],
+    "with": [
+     13,
+     13,
+     17
+    ],
+    "work": [
+     3
+    ],
+    "workloads": [
+     8
+    ],
+    "world": [
+     4,
+     9
+    ],
+    "x2": [
+     9,
+     10
+    ],
+    "year": [
+     13
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Thank you, Brett, and good afternoon, everyone.",
+    "Thanks for joining us today.",
+    "Licensing business revenues were $1.4 billion.",
+    "For agents to work efficiently, they must run continuously in the background, fuel sensor data into context, orchestrate multistep tasks reliably and deliver strong security.",
+    "Agent orchestration is predominantly CPU bound and Qualcomm has the world's best-performing CPU across smartphones, PCs, auto, and soon, the data center.",
+    "Qualcomm's unparalleled connectivity solutions empower efficient NPU for local models will also be key assets to delivering agentic AI experiences.",
+    "This growth is driven by our fourth generation Snapdragon Digital Chassis platform, which comprises connectivity, telematics, infotainment, as well as advanced driver assistance and automated driving.",
+    "Looking ahead to fiscal '27, we expect continued share gains and increased content, particularly in ADAS.",
+    "In IoT, agentic workloads and edge AI are driving major product renewal design cycles.",
+    "Our 2026 Snapdragon X2 PC platforms are currently in production and our world-class Oryon CPU unlocks powerful, always-on agentic experiences, making it a true competitive differentiator.",
+    "Agentic orchestrators such as OpenClaw, Claude Desktop, Claude Code, OpenAI Codex Desktop, Perplexity Computer, Crew AI, Hermes Agent, LandGraph, and Humain One running on Snapdragon X2 are early proof points.",
+    "In some cases, is now helping to set the pace.”",
+    "In Physical and Industrial AI, our new Dragonwing IQ10 platform has generated substantial customer interest since our launch at CES.",
+    "Building on our design win with Figure AI, we announced an exciting multi-year agreement with Neura, reinforcing our confidence that we can become a significant player in the broad robotics market.",
+    "First, the quarter played out as we expected: sell-through held up in our chip business materially under shipped consumer demand.",
+    "We believe our China Android revenue is bottoming out in fiscal Q3, and Akash will provide more specifics in his financial update.",
+    "It is intended to act as distributed intelligent infrastructure that integrates communication in wide area real-time sensing.",
+    "It will make possible new AI-enabled services, ranging from context-relevant data, data insights and analytics, low-altitude like aerial, terrestrial, and autonomous traffic management, drone detection, and tracking and 3D mapping with telemetry to build dynamic digital wins at scale.",
+    "To help shape and accelerate the 6G roadmap, at MWC we launched a 60-company coalition spinning carriers, cloud infrastructure, AI-native partners, and auto OEMs."
+   ],
+   "id": "qcom-q2fy26-earnings-call-transcript-4-30-26-final",
+   "msent": {
+    "3d": 1,
+    "6g": 8,
+    "a": 19,
+    "a16": 1,
+    "about": 1,
+    "above": 1,
+    "accelerate": 1,
+    "accelerators": 2,
+    "across": 7,
+    "act": 1,
+    "action": 1,
+    "adas": 4,
+    "addition": 3,
+    "addressable": 1,
+    "advanced": 2,
+    "aerial": 1,
+    "afternoon": 1,
+    "age": 1,
+    "agent": 4,
+    "agentic": 10,
+    "agents": 3,
+    "agreement": 1,
+    "agriculture": 1,
+    "ahead": 2,
+    "ai": 23,
+    "akash": 3,
+    "all": 1,
+    "alphawave": 1,
+    "also": 4,
+    "altitude": 1,
+    "always": 1,
+    "an": 7,
+    "analytics": 1,
+    "and": 45,
+    "android": 2,
+    "announced": 1,
+    "announcement": 2,
+    "annualized": 1,
+    "another": 1,
+    "applications": 1,
+    "architects": 1,
+    "arduino": 1,
+    "are": 8,
+    "area": 2,
+    "areas": 1,
+    "as": 11,
+    "assets": 1,
+    "assist": 1,
+    "assistance": 2,
+    "asus": 1,
+    "at": 8,
+    "auto": 2,
+    "automakers": 1,
+    "automated": 2,
+    "automotive": 2,
+    "autonomous": 4,
+    "autonomy": 1,
+    "avenues": 1,
+    "background": 1,
+    "base": 1,
+    "be": 5,
+    "become": 1,
+    "becomes": 1,
+    "been": 1,
+    "before": 2,
+    "begin": 2,
+    "beginning": 2,
+    "believe": 3,
+    "beneficiaries": 1,
+    "best": 2,
+    "beyond": 1,
+    "billion": 4,
+    "bmw": 1,
+    "bosch": 1,
+    "both": 1,
+    "bottoming": 1,
+    "bound": 1,
+    "breadth": 1,
+    "brett": 1,
+    "bring": 1,
+    "broad": 3,
+    "broader": 1,
+    "build": 2,
+    "building": 3,
+    "built": 3,
+    "business": 4,
+    "by": 3,
+    "bytedance": 1,
+    "call": 2,
+    "camera": 1,
+    "can": 2,
+    "capabilities": 3,
+    "capability": 1,
+    "carriers": 1,
+    "cars": 2,
+    "cases": 2,
+    "catalyze": 1,
+    "category": 1,
+    "caught": 1,
+    "center": 5,
+    "centers": 1,
+    "ces": 1,
+    "challenger": 1,
+    "change": 1,
+    "changing": 2,
+    "chassis": 2,
+    "china": 1,
+    "chip": 1,
+    "choice": 1,
+    "class": 2,
+    "classes": 1,
+    "claude": 1,
+    "clear": 2,
+    "cloud": 2,
+    "coalition": 1,
+    "code": 1,
+    "codex": 1,
+    "combined": 1,
+    "come": 1,
+    "coming": 2,
+    "commercial": 1,
+    "communication": 1,
+    "community": 1,
+    "company": 2,
+    "compared": 1,
+    "competitive": 1,
+    "completely": 1,
+    "comprises": 1,
+    "compute": 1,
+    "computer": 1,
+    "computing": 1,
+    "confidence": 1,
+    "connected": 1,
+    "connectivity": 5,
+    "consumer": 1,
+    "content": 2,
+    "context": 2,
+    "continued": 1,
+    "continuously": 1,
+    "core": 3,
+    "cpu": 6,
+    "crew": 1,
+    "critical": 1,
+    "current": 1,
+    "currently": 1,
+    "custom": 1,
+    "customer": 6,
+    "customers": 1,
+    "cycle": 1,
+    "cycles": 2,
+    "data": 8,
+    "day": 2,
+    "december": 1,
+    "deliver": 2,
+    "delivered": 1,
+    "delivering": 3,
+    "delivers": 1,
+    "demand": 3,
+    "deployment": 1,
+    "design": 4,
+    "designed": 1,
+    "desktop": 1,
+    "details": 1,
+    "detection": 1,
+    "develop": 2,
+    "developers": 1,
+    "development": 3,
+    "device": 2,
+    "devices": 6,
+    "differentiator": 1,
+    "digital": 3,
+    "distributed": 1,
+    "diversification": 2,
+    "doubao": 1,
+    "dragonwing": 1,
+    "driven": 1,
+    "driver": 2,
+    "driving": 5,
+    "drone": 1,
+    "during": 1,
+    "dynamic": 1,
+    "early": 2,
+    "earnings": 1,
+    "economic": 1,
+    "ecosystem": 2,
+    "edge": 5,
+    "efficient": 2,
+    "efficiently": 1,
+    "efforts": 1,
+    "elite": 1,
+    "embedded": 1,
+    "emergence": 1,
+    "empower": 1,
+    "enable": 1,
+    "enabled": 2,
+    "enabling": 1,
+    "end": 4,
+    "engagement": 3,
+    "engine": 1,
+    "enhanced": 1,
+    "entering": 1,
+    "eps": 1,
+    "every": 1,
+    "everyone": 1,
+    "example": 1,
+    "examples": 2,
+    "exceeded": 1,
+    "exciting": 1,
+    "exit": 1,
+    "expand": 1,
+    "expansion": 1,
+    "expect": 5,
+    "expected": 1,
+    "experience": 1,
+    "experiences": 3,
+    "fastest": 1,
+    "featuring": 1,
+    "feedback": 1,
+    "fifth": 1,
+    "figure": 1,
+    "financial": 2,
+    "first": 2,
+    "fiscal": 6,
+    "for": 13,
+    "forward": 2,
+    "foundational": 1,
+    "fourth": 1,
+    "framework": 1,
+    "from": 10,
+    "fuel": 1,
+    "full": 1,
+    "fully": 1,
+    "function": 1,
+    "functions": 1,
+    "fundamentally": 1,
+    "gaap": 1,
+    "gains": 1,
+    "gas": 1,
+    "generated": 1,
+    "generation": 7,
+    "generational": 2,
+    "get": 1,
+    "glasses": 2,
+    "global": 1,
+    "globe": 1,
+    "going": 1,
+    "good": 2,
+    "governments": 1,
+    "gpu": 1,
+    "great": 1,
+    "growth": 4,
+    "guidance": 1,
+    "half": 1,
+    "handsets": 1,
+    "has": 4,
+    "hasn't": 1,
+    "have": 2,
+    "healthy": 1,
+    "held": 1,
+    "help": 1,
+    "helping": 1,
+    "hermes": 1,
+    "hexagon": 1,
+    "high": 4,
+    "higher": 1,
+    "highlight": 1,
+    "highlighting": 1,
+    "highlights": 1,
+    "his": 1,
+    "history": 1,
+    "hope": 1,
+    "how": 2,
+    "humain": 1,
+    "hyperscaler": 1,
+    "hyperscalers": 1,
+    "i": 6,
+    "important": 1,
+    "in": 31,
+    "include": 1,
+    "including": 3,
+    "increase": 3,
+    "increased": 1,
+    "industrial": 4,
+    "industry": 5,
+    "inference": 1,
+    "inflection": 1,
+    "influence": 1,
+    "infotainment": 1,
+    "infrastructure": 3,
+    "initial": 1,
+    "initiative": 1,
+    "insights": 1,
+    "installed": 1,
+    "integrated": 1,
+    "integrates": 1,
+    "integration": 1,
+    "intel": 1,
+    "intelligent": 2,
+    "intended": 1,
+    "interest": 1,
+    "into": 4,
+    "introduced": 1,
+    "investor": 2,
+    "iot": 2,
+    "iq10": 1,
+    "iq9": 1,
+    "is": 15,
+    "island": 1,
+    "it": 6,
+    "join": 1,
+    "joining": 1,
+    "june": 1,
+    "just": 1,
+    "key": 5,
+    "kilowatts": 1,
+    "lake": 1,
+    "landgraph": 1,
+    "laptops": 1,
+    "large": 1,
+    "largest": 1,
+    "launch": 1,
+    "launched": 1,
+    "launches": 1,
+    "leadership": 1,
+    "leading": 4,
+    "leap": 1,
+    "learning": 1,
+    "level": 1,
+    "licensing": 1,
+    "like": 5,
+    "line": 1,
+    "local": 1,
+    "long": 2,
+    "look": 2,
+    "looking": 1,
+    "low": 2,
+    "major": 2,
+    "make": 1,
+    "making": 1,
+    "management": 1,
+    "mapping": 1,
+    "market": 2,
+    "matches": 1,
+    "materially": 1,
+    "may": 1,
+    "meaningful": 1,
+    "miclaw": 1,
+    "million": 1,
+    "milliwatts": 1,
+    "mobile": 1,
+    "models": 2,
+    "modems": 1,
+    "momentum": 2,
+    "more": 3,
+    "most": 1,
+    "moving": 1,
+    "multi": 1,
+    "multiple": 1,
+    "multistep": 1,
+    "must": 1,
+    "mwc": 1,
+    "native": 2,
+    "nearly": 1,
+    "network": 3,
+    "neura": 1,
+    "new": 8,
+    "next": 3,
+    "no": 1,
+    "non": 1,
+    "not": 2,
+    "notably": 1,
+    "note": 1,
+    "notes": 1,
+    "now": 5,
+    "npu": 4,
+    "nubia": 1,
+    "obvious": 1,
+    "oems": 1,
+    "of": 22,
+    "off": 1,
+    "oil": 1,
+    "on": 11,
+    "one": 3,
+    "only": 1,
+    "openai": 1,
+    "openclaw": 2,
+    "operating": 1,
+    "opportunities": 2,
+    "opportunity": 4,
+    "orchestrate": 1,
+    "orchestration": 1,
+    "orchestrators": 1,
+    "original": 1,
+    "orion": 1,
+    "oryon": 1,
+    "other": 6,
+    "our": 24,
+    "out": 2,
+    "outperforms": 1,
+    "over": 3,
+    "overall": 1,
+    "pace": 1,
+    "panther": 1,
+    "particularly": 2,
+    "partners": 3,
+    "pc": 3,
+    "pcmag": 1,
+    "pcs": 1,
+    "per": 1,
+    "performance": 6,
+    "performing": 1,
+    "period": 1,
+    "perplexity": 1,
+    "personal": 3,
+    "perspective": 2,
+    "phone": 1,
+    "phones": 1,
+    "physical": 2,
+    "pipeline": 1,
+    "plans": 2,
+    "platform": 5,
+    "platforms": 3,
+    "played": 1,
+    "player": 1,
+    "pleased": 1,
+    "point": 1,
+    "points": 2,
+    "portfolio": 1,
+    "position": 1,
+    "positive": 1,
+    "possible": 1,
+    "power": 2,
+    "powered": 1,
+    "powerful": 1,
+    "powers": 1,
+    "predominantly": 1,
+    "premium": 2,
+    "present": 1,
+    "processing": 2,
+    "processors": 1,
+    "product": 2,
+    "production": 1,
+    "products": 1,
+    "profound": 1,
+    "progress": 2,
+    "progressing": 1,
+    "projects": 1,
+    "proof": 1,
+    "prototyping": 1,
+    "proven": 1,
+    "provide": 3,
+    "providers": 1,
+    "provides": 1,
+    "purpose": 1,
+    "pursuing": 1,
+    "q": 2,
+    "q2": 2,
+    "q3": 1,
+    "qct": 1,
+    "qualcomm": 10,
+    "quarter": 4,
+    "radio": 1,
+    "ramp": 1,
+    "ran": 1,
+    "range": 1,
+    "ranging": 1,
+    "rapid": 1,
+    "rate": 2,
+    "real": 1,
+    "reasoning": 1,
+    "recent": 3,
+    "record": 1,
+    "regarding": 1,
+    "reinforcing": 1,
+    "relevant": 1,
+    "reliably": 1,
+    "renewal": 1,
+    "represents": 2,
+    "reshaping": 1,
+    "result": 1,
+    "retail": 1,
+    "revenue": 1,
+    "revenues": 4,
+    "review": 1,
+    "ride": 1,
+    "roadmap": 2,
+    "robotics": 3,
+    "run": 2,
+    "running": 1,
+    "safety": 1,
+    "scale": 3,
+    "second": 3,
+    "security": 1,
+    "see": 1,
+    "seeing": 2,
+    "seem": 1,
+    "self": 1,
+    "sell": 1,
+    "semiconductor": 1,
+    "sensing": 2,
+    "sensor": 1,
+    "sensors": 1,
+    "series": 1,
+    "serious": 1,
+    "service": 1,
+    "services": 1,
+    "set": 1,
+    "several": 1,
+    "shape": 1,
+    "share": 3,
+    "sharing": 1,
+    "shipments": 2,
+    "shipped": 1,
+    "sight": 1,
+    "significant": 5,
+    "silicon": 2,
+    "since": 1,
+    "smart": 3,
+    "smartphone": 1,
+    "smartphones": 1,
+    "snapdragon": 7,
+    "solutions": 3,
+    "some": 2,
+    "soon": 2,
+    "sovereign": 1,
+    "space": 2,
+    "spanning": 1,
+    "specifics": 1,
+    "speed": 1,
+    "spinning": 1,
+    "stack": 2,
+    "standards": 1,
+    "start": 1,
+    "starting": 1,
+    "states": 1,
+    "step": 1,
+    "story": 1,
+    "strategic": 2,
+    "striking": 1,
+    "strong": 1,
+    "stronger": 1,
+    "substantial": 1,
+    "such": 2,
+    "support": 2,
+    "supporting": 1,
+    "systems": 2,
+    "tailwind": 1,
+    "tasks": 1,
+    "technologies": 1,
+    "technology": 1,
+    "telecom": 1,
+    "telematics": 1,
+    "telemetry": 1,
+    "term": 2,
+    "terrestrial": 1,
+    "than": 1,
+    "thank": 1,
+    "thanks": 1,
+    "that": 6,
+    "the": 38,
+    "theme": 1,
+    "there": 1,
+    "these": 2,
+    "they": 1,
+    "think": 2,
+    "this": 9,
+    "threefold": 1,
+    "through": 1,
+    "throughput": 1,
+    "tier": 1,
+    "time": 3,
+    "times": 1,
+    "to": 34,
+    "today": 2,
+    "together": 1,
+    "token": 1,
+    "tops": 2,
+    "tracking": 1,
+    "traffic": 1,
+    "transition": 1,
+    "transitions": 1,
+    "true": 1,
+    "turn": 2,
+    "two": 1,
+    "under": 1,
+    "underscore": 1,
+    "unfold": 1,
+    "units": 1,
+    "unlocks": 1,
+    "unparalleled": 1,
+    "up": 4,
+    "update": 2,
+    "upgrade": 3,
+    "uplink": 1,
+    "us": 3,
+    "use": 1,
+    "user": 1,
+    "utilities": 1,
+    "vehicle": 1,
+    "ventuno": 2,
+    "verticals": 2,
+    "very": 1,
+    "view": 1,
+    "vision": 2,
+    "voice": 1,
+    "want": 2,
+    "way": 1,
+    "wayve": 1,
+    "we": 25,
+    "we're": 5,
+    "wearables": 2,
+    "well": 4,
+    "were": 3,
+    "what": 1,
+    "what's": 1,
+    "where": 1,
+    "which": 3,
+    "while": 1,
+    "wide": 3,
+    "will": 13,
+    "win": 2,
+    "wins": 2,
+    "wireless": 2,
+    "with": 16,
+    "work": 1,
+    "working": 1,
+    "workload": 1,
+    "workloads": 1,
+    "world": 6,
+    "would": 2,
+    "x": 1,
+    "x2": 4,
+    "xiaomi": 1,
+    "year": 3,
+    "years": 1,
+    "yet": 1,
+    "you": 2,
+    "zenbook": 1,
+    "zte": 1
+   },
+   "n_sentences": 63,
+   "source": "s204.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q2 FY2026 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s204.q4cdn.com/645488518/files/doc_financials/2026/q2/Q2FY26-Earnings-Call-Transcript_4-30-26_Final.pdf",
+   "words": 1552
+  },
+  {
+   "counts": {
+    "6g": 1,
+    "a": 9,
+    "a16": 1,
+    "accelerate": 2,
+    "acquired": 1,
+    "acquisition": 2,
+    "across": 2,
+    "act": 1,
+    "adapt": 1,
+    "adas": 1,
+    "adding": 1,
+    "addition": 1,
+    "additionally": 2,
+    "adoption": 1,
+    "adreno": 1,
+    "advanced": 8,
+    "advances": 1,
+    "advantech": 1,
+    "afternoon": 1,
+    "agentic": 2,
+    "agents": 1,
+    "agreement": 2,
+    "ai": 20,
+    "akash": 2,
+    "alliance": 1,
+    "allowing": 1,
+    "alphawave": 1,
+    "also": 6,
+    "ambient": 1,
+    "an": 6,
+    "and": 69,
+    "announced": 3,
+    "another": 1,
+    "aplux": 1,
+    "applicable": 1,
+    "applications": 1,
+    "approach": 1,
+    "approximately": 1,
+    "architecture": 4,
+    "are": 6,
+    "area": 1,
+    "as": 12,
+    "asus": 2,
+    "at": 3,
+    "audi": 1,
+    "augentix": 1,
+    "augmented": 1,
+    "auto": 1,
+    "autocore": 1,
+    "automakers": 1,
+    "automated": 2,
+    "automotive": 4,
+    "autonomy": 2,
+    "availability": 1,
+    "based": 1,
+    "battery": 1,
+    "be": 2,
+    "becomes": 1,
+    "becoming": 1,
+    "best": 3,
+    "billion": 3,
+    "booster": 1,
+    "bosch": 1,
+    "box": 1,
+    "brands": 1,
+    "bringing": 1,
+    "broad": 1,
+    "built": 1,
+    "business": 2,
+    "by": 10,
+    "bytedance": 1,
+    "call": 1,
+    "cameras": 1,
+    "capabilities": 1,
+    "capacity": 1,
+    "cariad": 1,
+    "cars": 1,
+    "category": 1,
+    "cautious": 1,
+    "center": 4,
+    "centers": 1,
+    "ces": 2,
+    "chassis": 2,
+    "chery": 1,
+    "china": 1,
+    "chipset": 1,
+    "chipsets": 1,
+    "choice": 1,
+    "class": 2,
+    "closely": 1,
+    "cloud": 2,
+    "cockpit": 1,
+    "collaborating": 1,
+    "collaboration": 1,
+    "collaborations": 2,
+    "combines": 1,
+    "coming": 1,
+    "commercial": 1,
+    "commercialization": 1,
+    "commercialize": 1,
+    "commitment": 1,
+    "companies": 2,
+    "companions": 1,
+    "compared": 1,
+    "competition": 1,
+    "competitors": 1,
+    "complete": 1,
+    "completed": 1,
+    "compute": 3,
+    "computing": 3,
+    "connectivity": 5,
+    "consistent": 1,
+    "constrained": 1,
+    "consumer": 1,
+    "continue": 3,
+    "continued": 1,
+    "controls": 1,
+    "core": 3,
+    "cpu": 4,
+    "current": 1,
+    "customers": 1,
+    "data": 5,
+    "date": 1,
+    "debuted": 1,
+    "define": 2,
+    "defined": 1,
+    "delivered": 1,
+    "delivering": 3,
+    "delivers": 1,
+    "demand": 3,
+    "design": 1,
+    "designed": 1,
+    "desktop": 1,
+    "details": 1,
+    "develop": 1,
+    "developed": 1,
+    "development": 4,
+    "developments": 1,
+    "device": 1,
+    "devices": 2,
+    "digital": 2,
+    "do": 1,
+    "dragonwing": 4,
+    "dram": 1,
+    "driven": 2,
+    "driver": 1,
+    "drivers": 1,
+    "driving": 2,
+    "drones": 1,
+    "dual": 1,
+    "during": 2,
+    "early": 1,
+    "earnings": 1,
+    "ecosystem": 1,
+    "edge": 6,
+    "efficient": 4,
+    "elite": 4,
+    "emerging": 1,
+    "enable": 1,
+    "enabled": 1,
+    "enables": 1,
+    "encouraged": 1,
+    "end": 2,
+    "engage": 1,
+    "engaged": 1,
+    "engineered": 1,
+    "enterprise": 1,
+    "entry": 1,
+    "environment": 1,
+    "environments": 1,
+    "especially": 2,
+    "event": 1,
+    "everyone": 1,
+    "evolves": 1,
+    "evolving": 1,
+    "exceeded": 1,
+    "expand": 1,
+    "expanded": 1,
+    "expanding": 1,
+    "expansion": 3,
+    "expect": 1,
+    "expectations": 2,
+    "experience": 1,
+    "experiences": 2,
+    "experiencing": 1,
+    "extreme": 2,
+    "factor": 1,
+    "family": 1,
+    "faster": 3,
+    "fastest": 1,
+    "features": 1,
+    "featuring": 1,
+    "feedback": 1,
+    "few": 1,
+    "fi": 1,
+    "figure": 1,
+    "finally": 1,
+    "first": 2,
+    "fiscal": 4,
+    "flagship": 2,
+    "focused": 1,
+    "for": 18,
+    "form": 1,
+    "formally": 1,
+    "formed": 1,
+    "forward": 1,
+    "from": 2,
+    "frontier": 1,
+    "full": 1,
+    "further": 1,
+    "fusion": 1,
+    "future": 1,
+    "gaap": 1,
+    "general": 1,
+    "generation": 6,
+    "generations": 1,
+    "given": 1,
+    "glasses": 1,
+    "global": 2,
+    "globally": 2,
+    "good": 1,
+    "gpu": 2,
+    "grade": 2,
+    "graphics": 1,
+    "greatwall": 1,
+    "group": 3,
+    "growth": 2,
+    "guidance": 1,
+    "handset": 3,
+    "handsets": 2,
+    "hardware": 1,
+    "have": 1,
+    "hbm": 1,
+    "healthy": 1,
+    "help": 1,
+    "heterogeneous": 1,
+    "hexagon": 2,
+    "high": 5,
+    "highlights": 1,
+    "highly": 1,
+    "his": 1,
+    "hmis": 1,
+    "hours": 1,
+    "household": 1,
+    "hp": 1,
+    "hubs": 1,
+    "humanoid": 2,
+    "hyperscalers": 1,
+    "hyundai": 1,
+    "i": 1,
+    "image": 1,
+    "impact": 1,
+    "importance": 1,
+    "important": 1,
+    "improvement": 1,
+    "in": 30,
+    "inch": 1,
+    "including": 6,
+    "increases": 1,
+    "increasing": 1,
+    "incredibly": 1,
+    "industrial": 7,
+    "industry": 5,
+    "inferencing": 3,
+    "information": 1,
+    "infotainment": 1,
+    "innovative": 1,
+    "insight": 1,
+    "intelligence": 2,
+    "intelligent": 1,
+    "intended": 1,
+    "intent": 1,
+    "into": 3,
+    "introduced": 3,
+    "inventory": 1,
+    "investments": 1,
+    "investor": 1,
+    "iot": 3,
+    "iq": 1,
+    "iq10": 2,
+    "is": 8,
+    "it": 2,
+    "it's": 1,
+    "its": 3,
+    "joining": 1,
+    "joint": 1,
+    "key": 2,
+    "kuka": 1,
+    "laptop": 1,
+    "largest": 1,
+    "launch": 1,
+    "launched": 2,
+    "leadership": 2,
+    "leading": 1,
+    "leapmotor": 1,
+    "lenovo": 1,
+    "letter": 1,
+    "leveraging": 1,
+    "li": 1,
+    "licensing": 1,
+    "life": 1,
+    "light": 1,
+    "likely": 1,
+    "long": 1,
+    "look": 1,
+    "low": 1,
+    "manufacturing": 1,
+    "many": 2,
+    "map": 1,
+    "marked": 1,
+    "markets": 1,
+    "mauricio": 1,
+    "media": 1,
+    "meet": 1,
+    "memory": 5,
+    "micro": 1,
+    "micropower": 1,
+    "microsoft": 1,
+    "milestone": 1,
+    "mobile": 2,
+    "mobis": 1,
+    "models": 1,
+    "momentum": 1,
+    "more": 4,
+    "motion": 1,
+    "motor": 1,
+    "multi": 1,
+    "multiple": 1,
+    "native": 1,
+    "networking": 1,
+    "new": 4,
+    "newly": 1,
+    "next": 5,
+    "nio": 1,
+    "non": 1,
+    "note": 1,
+    "now": 2,
+    "npu": 3,
+    "number": 1,
+    "observed": 1,
+    "oem": 1,
+    "oems": 2,
+    "of": 36,
+    "on": 5,
+    "one": 3,
+    "or": 1,
+    "oryon": 2,
+    "other": 1,
+    "our": 28,
+    "overall": 1,
+    "panel": 1,
+    "part": 1,
+    "particularly": 1,
+    "partners": 1,
+    "pc": 1,
+    "pcs": 4,
+    "per": 2,
+    "perceive": 1,
+    "perception": 3,
+    "performance": 7,
+    "period": 1,
+    "personal": 2,
+    "physical": 1,
+    "planning": 1,
+    "platform": 2,
+    "platforms": 7,
+    "plcs": 1,
+    "pleased": 2,
+    "plus": 2,
+    "porsche": 1,
+    "portfolio": 2,
+    "position": 1,
+    "positioned": 1,
+    "positive": 2,
+    "power": 5,
+    "powered": 6,
+    "powerful": 1,
+    "precursor": 1,
+    "premium": 4,
+    "prepared": 1,
+    "previous": 1,
+    "price": 2,
+    "pricing": 1,
+    "primary": 1,
+    "prior": 2,
+    "processing": 2,
+    "processors": 1,
+    "product": 1,
+    "production": 1,
+    "programs": 1,
+    "progress": 1,
+    "projects": 1,
+    "proud": 1,
+    "provide": 1,
+    "provider": 1,
+    "providers": 2,
+    "provides": 1,
+    "providing": 1,
+    "purpose": 2,
+    "q1": 3,
+    "qct": 1,
+    "qualcomm": 4,
+    "quarter": 5,
+    "quarters": 1,
+    "quickly": 1,
+    "rapid": 1,
+    "rav4": 1,
+    "real": 1,
+    "reason": 1,
+    "recent": 2,
+    "record": 3,
+    "redirect": 1,
+    "reducing": 1,
+    "reflected": 1,
+    "reinforcing": 1,
+    "remain": 2,
+    "remains": 1,
+    "remarks": 1,
+    "respectively": 1,
+    "resulting": 1,
+    "revenues": 4,
+    "risc": 2,
+    "rivian": 1,
+    "road": 1,
+    "robotech": 1,
+    "robotics": 8,
+    "robots": 2,
+    "safety": 2,
+    "samsung": 1,
+    "saw": 1,
+    "scale": 1,
+    "second": 1,
+    "security": 1,
+    "segment": 1,
+    "segments": 2,
+    "sell": 1,
+    "selling": 2,
+    "semi": 1,
+    "sensing": 2,
+    "sensor": 1,
+    "series": 2,
+    "serve": 1,
+    "service": 2,
+    "several": 2,
+    "shaping": 1,
+    "share": 4,
+    "short": 1,
+    "shortage": 1,
+    "signal": 1,
+    "signed": 1,
+    "significant": 1,
+    "silicon": 1,
+    "single": 1,
+    "situation": 1,
+    "smart": 2,
+    "smartphone": 2,
+    "smartphones": 1,
+    "snapdragon": 11,
+    "socs": 1,
+    "software": 2,
+    "solution": 1,
+    "solutions": 4,
+    "some": 1,
+    "sound": 1,
+    "sovereign": 1,
+    "space": 2,
+    "spans": 1,
+    "specialized": 1,
+    "speed": 1,
+    "stack": 1,
+    "standard": 1,
+    "standouts": 1,
+    "strategy": 1,
+    "strength": 1,
+    "strengthen": 1,
+    "strengths": 1,
+    "strong": 1,
+    "such": 1,
+    "suite": 1,
+    "suppliers": 2,
+    "supply": 1,
+    "supports": 1,
+    "systems": 3,
+    "taking": 1,
+    "technologies": 4,
+    "technology": 1,
+    "term": 1,
+    "than": 2,
+    "thank": 1,
+    "thanks": 1,
+    "that": 2,
+    "the": 58,
+    "their": 2,
+    "third": 2,
+    "this": 8,
+    "through": 4,
+    "tier": 3,
+    "tiers": 1,
+    "time": 1,
+    "times": 4,
+    "to": 29,
+    "today": 1,
+    "top": 2,
+    "tops": 1,
+    "total": 1,
+    "toward": 1,
+    "toyota": 1,
+    "track": 1,
+    "traction": 1,
+    "transition": 1,
+    "turn": 1,
+    "tvs": 1,
+    "two": 1,
+    "ui": 1,
+    "ultra": 1,
+    "under": 1,
+    "up": 4,
+    "upcoming": 2,
+    "update": 1,
+    "us": 1,
+    "using": 1,
+    "v": 2,
+    "validate": 1,
+    "vehicle": 4,
+    "ventana": 1,
+    "venture": 1,
+    "versus": 2,
+    "verticals": 1,
+    "very": 1,
+    "video": 1,
+    "view": 1,
+    "vinmotion": 1,
+    "vision": 2,
+    "vlas": 1,
+    "vlms": 1,
+    "volkswagen": 1,
+    "was": 1,
+    "watt": 1,
+    "we": 23,
+    "we'll": 1,
+    "we're": 3,
+    "wear": 1,
+    "wearables": 1,
+    "weeks": 1,
+    "well": 2,
+    "were": 2,
+    "which": 2,
+    "while": 1,
+    "wi": 1,
+    "wide": 1,
+    "will": 5,
+    "wins": 1,
+    "wire": 1,
+    "with": 16,
+    "within": 1,
+    "work": 1,
+    "working": 1,
+    "workloads": 2,
+    "world": 1,
+    "worldwide": 1,
+    "would": 2,
+    "x": 2,
+    "x2": 4,
+    "xr": 1,
+    "year": 2,
+    "you": 1,
+    "zeekr": 1,
+    "zenbook": 1
+   },
+   "date": "2026-02-05",
+   "entries": {
+    "a": [
+     4,
+     9,
+     9
+    ],
+    "acquisition": [
+     11,
+     16
+    ],
+    "act": [
+     13
+    ],
+    "adapt": [
+     13
+    ],
+    "adding": [
+     16
+    ],
+    "advanced": [
+     8,
+     13
+    ],
+    "afternoon": [
+     0
+    ],
+    "agreement": [
+     9
+    ],
+    "ai": [
+     11,
+     12,
+     14,
+     15
+    ],
+    "allowing": [
+     13
+    ],
+    "alphawave": [
+     16
+    ],
+    "also": [
+     10,
+     12
+    ],
+    "an": [
+     8
+    ],
+    "and": [
+     0,
+     6,
+     6,
+     7,
+     8,
+     9,
+     10,
+     10,
+     11,
+     12,
+     12,
+     13,
+     13,
+     13,
+     14
+    ],
+    "announced": [
+     10
+    ],
+    "approach": [
+     4
+    ],
+    "approximately": [
+     5
+    ],
+    "architecture": [
+     13
+    ],
+    "are": [
+     4
+    ],
+    "as": [
+     13
+    ],
+    "asus": [
+     7
+    ],
+    "at": [
+     7,
+     12
+    ],
+    "audi": [
+     9
+    ],
+    "augentix": [
+     11
+    ],
+    "augmented": [
+     11
+    ],
+    "auto": [
+     10
+    ],
+    "based": [
+     11
+    ],
+    "battery": [
+     8
+    ],
+    "billion": [
+     2,
+     3
+    ],
+    "brands": [
+     9
+    ],
+    "bringing": [
+     10
+    ],
+    "business": [
+     3
+    ],
+    "by": [
+     2
+    ],
+    "cameras": [
+     12
+    ],
+    "cautious": [
+     4
+    ],
+    "center": [
+     15
+    ],
+    "ces": [
+     7,
+     12
+    ],
+    "chery": [
+     10
+    ],
+    "china": [
+     4
+    ],
+    "chipset": [
+     4
+    ],
+    "class": [
+     8
+    ],
+    "cloud": [
+     15
+    ],
+    "collaboration": [
+     12
+    ],
+    "collaborations": [
+     10
+    ],
+    "combines": [
+     14
+    ],
+    "competitors": [
+     6
+    ],
+    "completed": [
+     16
+    ],
+    "compute": [
+     14
+    ],
+    "connectivity": [
+     16
+    ],
+    "consistent": [
+     5
+    ],
+    "continue": [
+     15
+    ],
+    "current": [
+     4
+    ],
+    "data": [
+     15
+    ],
+    "debuted": [
+     7
+    ],
+    "delivering": [
+     12
+    ],
+    "design": [
+     10
+    ],
+    "desktop": [
+     8
+    ],
+    "develop": [
+     15
+    ],
+    "device": [
+     12
+    ],
+    "devices": [
+     5
+    ],
+    "dragonwing": [
+     11,
+     12
+    ],
+    "driven": [
+     2
+    ],
+    "drones": [
+     12
+    ],
+    "edge": [
+     14
+    ],
+    "elite": [
+     8,
+     10
+    ],
+    "enables": [
+     8
+    ],
+    "end": [
+     14,
+     14
+    ],
+    "engage": [
+     15
+    ],
+    "environment": [
+     4
+    ],
+    "environments": [
+     13
+    ],
+    "especially": [
+     4
+    ],
+    "everyone": [
+     0
+    ],
+    "expanded": [
+     10
+    ],
+    "expect": [
+     5
+    ],
+    "expectations": [
+     5
+    ],
+    "extreme": [
+     8
+    ],
+    "factor": [
+     8
+    ],
+    "family": [
+     5
+    ],
+    "faster": [
+     6
+    ],
+    "finally": [
+     15
+    ],
+    "fiscal": [
+     16
+    ],
+    "flagship": [
+     2
+    ],
+    "focused": [
+     12
+    ],
+    "for": [
+     1,
+     5,
+     9,
+     10,
+     12
+    ],
+    "form": [
+     8
+    ],
+    "from": [
+     7
+    ],
+    "further": [
+     16
+    ],
+    "general": [
+     13
+    ],
+    "given": [
+     4
+    ],
+    "global": [
+     15
+    ],
+    "good": [
+     0
+    ],
+    "gpu": [
+     6
+    ],
+    "grade": [
+     14
+    ],
+    "graphics": [
+     8
+    ],
+    "greatwall": [
+     10
+    ],
+    "group": [
+     9
+    ],
+    "handset": [
+     4
+    ],
+    "handsets": [
+     2
+    ],
+    "heterogeneous": [
+     14
+    ],
+    "hexagon": [
+     6
+    ],
+    "high": [
+     16
+    ],
+    "hours": [
+     8
+    ],
+    "hp": [
+     7
+    ],
+    "hubs": [
+     12
+    ],
+    "hyperscalers": [
+     15
+    ],
+    "hyundai": [
+     10
+    ],
+    "image": [
+     11
+    ],
+    "in": [
+     2,
+     4,
+     4,
+     8,
+     13,
+     16
+    ],
+    "inch": [
+     8
+    ],
+    "including": [
+     9
+    ],
+    "industrial": [
+     12
+    ],
+    "inferencing": [
+     6
+    ],
+    "insight": [
+     11
+    ],
+    "intelligence": [
+     12
+    ],
+    "intent": [
+     9
+    ],
+    "introduced": [
+     12
+    ],
+    "inventory": [
+     4
+    ],
+    "it": [
+     14
+    ],
+    "its": [
+     11
+    ],
+    "joining": [
+     1
+    ],
+    "leading": [
+     15
+    ],
+    "leapmotor": [
+     10
+    ],
+    "lenovo": [
+     7
+    ],
+    "letter": [
+     9
+    ],
+    "li": [
+     10
+    ],
+    "licensing": [
+     3
+    ],
+    "life": [
+     8
+    ],
+    "light": [
+     8
+    ],
+    "long": [
+     9
+    ],
+    "low": [
+     11
+    ],
+    "many": [
+     9
+    ],
+    "mauricio": [
+     0
+    ],
+    "media": [
+     12
+    ],
+    "microsoft": [
+     7
+    ],
+    "mobis": [
+     10
+    ],
+    "models": [
+     13
+    ],
+    "more": [
+     8
+    ],
+    "motion": [
+     13
+    ],
+    "motor": [
+     10
+    ],
+    "new": [
+     10,
+     12
+    ],
+    "nio": [
+     10
+    ],
+    "npu": [
+     6,
+     6
+    ],
+    "oems": [
+     4
+    ],
+    "of": [
+     2,
+     5,
+     8,
+     9,
+     11
+    ],
+    "on": [
+     12
+    ],
+    "other": [
+     15
+    ],
+    "our": [
+     6,
+     10,
+     11,
+     13,
+     15,
+     16
+    ],
+    "partners": [
+     15
+    ],
+    "pcs": [
+     7
+    ],
+    "perceive": [
+     13
+    ],
+    "perception": [
+     13
+    ],
+    "performance": [
+     8
+    ],
+    "planning": [
+     13
+    ],
+    "platform": [
+     11
+    ],
+    "platforms": [
+     10,
+     16
+    ],
+    "porsche": [
+     9
+    ],
+    "portfolio": [
+     11
+    ],
+    "power": [
+     11
+    ],
+    "powered": [
+     7
+    ],
+    "premium": [
+     5
+    ],
+    "prior": [
+     5
+    ],
+    "processing": [
+     11
+    ],
+    "processors": [
+     12
+    ],
+    "programs": [
+     10
+    ],
+    "projects": [
+     15
+    ],
+    "providers": [
+     15
+    ],
+    "provides": [
+     6
+    ],
+    "purpose": [
+     13
+    ],
+    "q1": [
+     16
+    ],
+    "qct": [
+     2
+    ],
+    "qualcomm": [
+     11
+    ],
+    "real": [
+     13
+    ],
+    "reason": [
+     13
+    ],
+    "recent": [
+     11
+    ],
+    "record": [
+     2
+    ],
+    "reducing": [
+     4
+    ],
+    "respectively": [
+     6
+    ],
+    "revenues": [
+     2,
+     3
+    ],
+    "robotics": [
+     13
+    ],
+    "robots": [
+     13
+    ],
+    "safety": [
+     14
+    ],
+    "samsung": [
+     5
+    ],
+    "security": [
+     12
+    ],
+    "semi": [
+     16
+    ],
+    "service": [
+     15
+    ],
+    "several": [
+     4
+    ],
+    "share": [
+     5
+    ],
+    "signal": [
+     11
+    ],
+    "signed": [
+     9
+    ],
+    "smart": [
+     12
+    ],
+    "snapdragon": [
+     7,
+     10
+    ],
+    "socs": [
+     14
+    ],
+    "solution": [
+     11
+    ],
+    "solutions": [
+     15
+    ],
+    "sovereign": [
+     15
+    ],
+    "spans": [
+     9
+    ],
+    "speed": [
+     16
+    ],
+    "strength": [
+     2
+    ],
+    "strengthen": [
+     16
+    ],
+    "such": [
+     13
+    ],
+    "supply": [
+     9
+    ],
+    "supports": [
+     13
+    ],
+    "systems": [
+     12
+    ],
+    "taking": [
+     4
+    ],
+    "technologies": [
+     16
+    ],
+    "term": [
+     9
+    ],
+    "than": [
+     8
+    ],
+    "thank": [
+     0
+    ],
+    "thanks": [
+     1
+    ],
+    "the": [
+     4,
+     11,
+     16
+    ],
+    "their": [
+     4
+    ],
+    "tier": [
+     5
+    ],
+    "times": [
+     6,
+     6
+    ],
+    "to": [
+     6,
+     10,
+     13,
+     14,
+     15,
+     16
+    ],
+    "today": [
+     1
+    ],
+    "total": [
+     10
+    ],
+    "tvs": [
+     12
+    ],
+    "two": [
+     12
+    ],
+    "ultra": [
+     8
+    ],
+    "up": [
+     6
+    ],
+    "upcoming": [
+     5
+    ],
+    "us": [
+     1
+    ],
+    "using": [
+     13
+    ],
+    "versus": [
+     6
+    ],
+    "video": [
+     12
+    ],
+    "vision": [
+     11,
+     12
+    ],
+    "vlas": [
+     13
+    ],
+    "vlms": [
+     13
+    ],
+    "volkswagen": [
+     9
+    ],
+    "we": [
+     5,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16
+    ],
+    "were": [
+     2,
+     3
+    ],
+    "which": [
+     9
+    ],
+    "wins": [
+     10
+    ],
+    "wire": [
+     16
+    ],
+    "with": [
+     5,
+     9,
+     10,
+     11,
+     11,
+     15
+    ],
+    "within": [
+     2
+    ],
+    "world": [
+     13
+    ],
+    "x2": [
+     8
+    ],
+    "you": [
+     0
+    ],
+    "zeekr": [
+     10
+    ]
+   },
+   "excerpts": [
+    "Thank you, Mauricio, and good afternoon, everyone.",
+    "Thanks for joining us today.",
+    "Within QCT, record revenues of $10.6 billion were driven by strength in flagship handsets.",
+    "Licensing business revenues were $1.6 billion.",
+    "Given the current environment, several handset OEMs, especially in China, are taking a cautious approach in reducing their chipset inventory.",
+    "For Samsung's upcoming family of premium tier devices, we expect approximately 75% share, consistent with prior expectations.",
+    "Our Hexagon NPU provides up to 5.7 times and 3.4 times faster inferencing versus competitors' NPU and GPU, respectively.",
+    "18 Snapdragon powered PCs debuted at CES from ASUS, HP, Lenovo and Microsoft.",
+    "X2 Elite Extreme enables desktop class performance, advanced graphics and more than 21 hours of battery life in an ultra-light 16-inch form factor.",
+    "We signed a Letter of Intent for a long-term supply agreement with Volkswagen Group, which spans many brands, including Audi and Porsche.",
+    "We also announced new and expanded collaborations with Hyundai Mobis, Leapmotor, Li Auto, Zeekr, GreatWall Motor, NIO and Chery, bringing our total design wins for Snapdragon Elite platforms to 10 programs.",
+    "With the recent acquisition of Augentix, we augmented our Dragonwing vision portfolio and Qualcomm Insight Platform with its AI-based, low-power image signal processing solution.",
+    "At CES, we also introduced two new Dragonwing processors delivering on-device intelligence for security-focused drones, smart cameras and industrial vision, AI TVs/ media hubs and video collaboration systems.",
+    "Our general-purpose robotics architecture supports advanced perception and motion planning using models such as VLAs and VLMs, allowing robots to perceive, reason, adapt and act in real-world environments.",
+    "It combines heterogeneous edge compute, safety-grade SoCs and end-to-end AI.",
+    "Finally, we continue to develop our data center solutions and engage with leading hyperscalers, cloud service providers, sovereign AI projects and other global partners.",
+    "In fiscal Q1, we completed the Alphawave Semi acquisition, adding high-speed wire connectivity technologies to further strengthen our platforms."
+   ],
+   "id": "qcom-q1fy26-earnings-call-transcript-2-5-26-final",
+   "msent": {
+    "6g": 1,
+    "a": 7,
+    "a16": 1,
+    "accelerate": 2,
+    "acquired": 1,
+    "acquisition": 2,
+    "across": 2,
+    "act": 1,
+    "adapt": 1,
+    "adas": 1,
+    "adding": 1,
+    "addition": 1,
+    "additionally": 2,
+    "adoption": 1,
+    "adreno": 1,
+    "advanced": 8,
+    "advances": 1,
+    "advantech": 1,
+    "afternoon": 1,
+    "agentic": 2,
+    "agents": 1,
+    "agreement": 2,
+    "ai": 17,
+    "akash": 2,
+    "alliance": 1,
+    "allowing": 1,
+    "alphawave": 1,
+    "also": 6,
+    "ambient": 1,
+    "an": 5,
+    "and": 40,
+    "announced": 3,
+    "another": 1,
+    "aplux": 1,
+    "applicable": 1,
+    "applications": 1,
+    "approach": 1,
+    "approximately": 1,
+    "architecture": 4,
+    "are": 6,
+    "area": 1,
+    "as": 9,
+    "asus": 2,
+    "at": 3,
+    "audi": 1,
+    "augentix": 1,
+    "augmented": 1,
+    "auto": 1,
+    "autocore": 1,
+    "automakers": 1,
+    "automated": 1,
+    "automotive": 4,
+    "autonomy": 2,
+    "availability": 1,
+    "based": 1,
+    "battery": 1,
+    "be": 2,
+    "becomes": 1,
+    "becoming": 1,
+    "best": 3,
+    "billion": 3,
+    "booster": 1,
+    "bosch": 1,
+    "box": 1,
+    "brands": 1,
+    "bringing": 1,
+    "broad": 1,
+    "built": 1,
+    "business": 2,
+    "by": 10,
+    "bytedance": 1,
+    "call": 1,
+    "cameras": 1,
+    "capabilities": 1,
+    "capacity": 1,
+    "cariad": 1,
+    "cars": 1,
+    "category": 1,
+    "cautious": 1,
+    "center": 4,
+    "centers": 1,
+    "ces": 2,
+    "chassis": 2,
+    "chery": 1,
+    "china": 1,
+    "chipset": 1,
+    "chipsets": 1,
+    "choice": 1,
+    "class": 2,
+    "closely": 1,
+    "cloud": 2,
+    "cockpit": 1,
+    "collaborating": 1,
+    "collaboration": 1,
+    "collaborations": 2,
+    "combines": 1,
+    "coming": 1,
+    "commercial": 1,
+    "commercialization": 1,
+    "commercialize": 1,
+    "commitment": 1,
+    "companies": 2,
+    "companions": 1,
+    "compared": 1,
+    "competition": 1,
+    "competitors": 1,
+    "complete": 1,
+    "completed": 1,
+    "compute": 3,
+    "computing": 3,
+    "connectivity": 5,
+    "consistent": 1,
+    "constrained": 1,
+    "consumer": 1,
+    "continue": 3,
+    "continued": 1,
+    "controls": 1,
+    "core": 2,
+    "cpu": 4,
+    "current": 1,
+    "customers": 1,
+    "data": 5,
+    "date": 1,
+    "debuted": 1,
+    "define": 2,
+    "defined": 1,
+    "delivered": 1,
+    "delivering": 3,
+    "delivers": 1,
+    "demand": 3,
+    "design": 1,
+    "designed": 1,
+    "desktop": 1,
+    "details": 1,
+    "develop": 1,
+    "developed": 1,
+    "development": 4,
+    "developments": 1,
+    "device": 1,
+    "devices": 2,
+    "digital": 2,
+    "do": 1,
+    "dragonwing": 4,
+    "dram": 1,
+    "driven": 2,
+    "driver": 1,
+    "drivers": 1,
+    "driving": 1,
+    "drones": 1,
+    "dual": 1,
+    "during": 2,
+    "early": 1,
+    "earnings": 1,
+    "ecosystem": 1,
+    "edge": 5,
+    "efficient": 4,
+    "elite": 4,
+    "emerging": 1,
+    "enable": 1,
+    "enabled": 1,
+    "enables": 1,
+    "encouraged": 1,
+    "end": 1,
+    "engage": 1,
+    "engaged": 1,
+    "engineered": 1,
+    "enterprise": 1,
+    "entry": 1,
+    "environment": 1,
+    "environments": 1,
+    "especially": 2,
+    "event": 1,
+    "everyone": 1,
+    "evolves": 1,
+    "evolving": 1,
+    "exceeded": 1,
+    "expand": 1,
+    "expanded": 1,
+    "expanding": 1,
+    "expansion": 3,
+    "expect": 1,
+    "expectations": 2,
+    "experience": 1,
+    "experiences": 2,
+    "experiencing": 1,
+    "extreme": 2,
+    "factor": 1,
+    "family": 1,
+    "faster": 2,
+    "fastest": 1,
+    "features": 1,
+    "featuring": 1,
+    "feedback": 1,
+    "few": 1,
+    "fi": 1,
+    "figure": 1,
+    "finally": 1,
+    "first": 2,
+    "fiscal": 4,
+    "flagship": 2,
+    "focused": 1,
+    "for": 18,
+    "form": 1,
+    "formally": 1,
+    "formed": 1,
+    "forward": 1,
+    "from": 2,
+    "frontier": 1,
+    "full": 1,
+    "further": 1,
+    "fusion": 1,
+    "future": 1,
+    "gaap": 1,
+    "general": 1,
+    "generation": 5,
+    "generations": 1,
+    "given": 1,
+    "glasses": 1,
+    "global": 2,
+    "globally": 2,
+    "good": 1,
+    "gpu": 2,
+    "grade": 2,
+    "graphics": 1,
+    "greatwall": 1,
+    "group": 3,
+    "growth": 2,
+    "guidance": 1,
+    "handset": 3,
+    "handsets": 2,
+    "hardware": 1,
+    "have": 1,
+    "hbm": 1,
+    "healthy": 1,
+    "help": 1,
+    "heterogeneous": 1,
+    "hexagon": 2,
+    "high": 5,
+    "highlights": 1,
+    "highly": 1,
+    "his": 1,
+    "hmis": 1,
+    "hours": 1,
+    "household": 1,
+    "hp": 1,
+    "hubs": 1,
+    "humanoid": 2,
+    "hyperscalers": 1,
+    "hyundai": 1,
+    "i": 1,
+    "image": 1,
+    "impact": 1,
+    "importance": 1,
+    "important": 1,
+    "improvement": 1,
+    "in": 26,
+    "inch": 1,
+    "including": 5,
+    "increases": 1,
+    "increasing": 1,
+    "incredibly": 1,
+    "industrial": 7,
+    "industry": 4,
+    "inferencing": 3,
+    "information": 1,
+    "infotainment": 1,
+    "innovative": 1,
+    "insight": 1,
+    "intelligence": 2,
+    "intelligent": 1,
+    "intended": 1,
+    "intent": 1,
+    "into": 3,
+    "introduced": 3,
+    "inventory": 1,
+    "investments": 1,
+    "investor": 1,
+    "iot": 3,
+    "iq": 1,
+    "iq10": 2,
+    "is": 7,
+    "it": 2,
+    "it's": 1,
+    "its": 2,
+    "joining": 1,
+    "joint": 1,
+    "key": 2,
+    "kuka": 1,
+    "laptop": 1,
+    "largest": 1,
+    "launch": 1,
+    "launched": 2,
+    "leadership": 2,
+    "leading": 1,
+    "leapmotor": 1,
+    "lenovo": 1,
+    "letter": 1,
+    "leveraging": 1,
+    "li": 1,
+    "licensing": 1,
+    "life": 1,
+    "light": 1,
+    "likely": 1,
+    "long": 1,
+    "look": 1,
+    "low": 1,
+    "manufacturing": 1,
+    "many": 2,
+    "map": 1,
+    "marked": 1,
+    "markets": 1,
+    "mauricio": 1,
+    "media": 1,
+    "meet": 1,
+    "memory": 4,
+    "micro": 1,
+    "micropower": 1,
+    "microsoft": 1,
+    "milestone": 1,
+    "mobile": 2,
+    "mobis": 1,
+    "models": 1,
+    "momentum": 1,
+    "more": 4,
+    "motion": 1,
+    "motor": 1,
+    "multi": 1,
+    "multiple": 1,
+    "native": 1,
+    "networking": 1,
+    "new": 4,
+    "newly": 1,
+    "next": 5,
+    "nio": 1,
+    "non": 1,
+    "note": 1,
+    "now": 2,
+    "npu": 2,
+    "number": 1,
+    "observed": 1,
+    "oem": 1,
+    "oems": 2,
+    "of": 27,
+    "on": 5,
+    "one": 3,
+    "or": 1,
+    "oryon": 2,
+    "other": 1,
+    "our": 24,
+    "overall": 1,
+    "panel": 1,
+    "part": 1,
+    "particularly": 1,
+    "partners": 1,
+    "pc": 1,
+    "pcs": 4,
+    "per": 2,
+    "perceive": 1,
+    "perception": 3,
+    "performance": 6,
+    "period": 1,
+    "personal": 2,
+    "physical": 1,
+    "planning": 1,
+    "platform": 2,
+    "platforms": 7,
+    "plcs": 1,
+    "pleased": 2,
+    "plus": 2,
+    "porsche": 1,
+    "portfolio": 2,
+    "position": 1,
+    "positioned": 1,
+    "positive": 2,
+    "power": 5,
+    "powered": 6,
+    "powerful": 1,
+    "precursor": 1,
+    "premium": 4,
+    "prepared": 1,
+    "previous": 1,
+    "price": 2,
+    "pricing": 1,
+    "primary": 1,
+    "prior": 2,
+    "processing": 2,
+    "processors": 1,
+    "product": 1,
+    "production": 1,
+    "programs": 1,
+    "progress": 1,
+    "projects": 1,
+    "proud": 1,
+    "provide": 1,
+    "provider": 1,
+    "providers": 2,
+    "provides": 1,
+    "providing": 1,
+    "purpose": 2,
+    "q1": 3,
+    "qct": 1,
+    "qualcomm": 4,
+    "quarter": 5,
+    "quarters": 1,
+    "quickly": 1,
+    "rapid": 1,
+    "rav4": 1,
+    "real": 1,
+    "reason": 1,
+    "recent": 2,
+    "record": 3,
+    "redirect": 1,
+    "reducing": 1,
+    "reflected": 1,
+    "reinforcing": 1,
+    "remain": 2,
+    "remains": 1,
+    "remarks": 1,
+    "respectively": 1,
+    "resulting": 1,
+    "revenues": 4,
+    "risc": 1,
+    "rivian": 1,
+    "road": 1,
+    "robotech": 1,
+    "robotics": 6,
+    "robots": 2,
+    "safety": 2,
+    "samsung": 1,
+    "saw": 1,
+    "scale": 1,
+    "second": 1,
+    "security": 1,
+    "segment": 1,
+    "segments": 2,
+    "sell": 1,
+    "selling": 1,
+    "semi": 1,
+    "sensing": 2,
+    "sensor": 1,
+    "series": 2,
+    "serve": 1,
+    "service": 2,
+    "several": 2,
+    "shaping": 1,
+    "share": 4,
+    "short": 1,
+    "shortage": 1,
+    "signal": 1,
+    "signed": 1,
+    "significant": 1,
+    "silicon": 1,
+    "single": 1,
+    "situation": 1,
+    "smart": 2,
+    "smartphone": 2,
+    "smartphones": 1,
+    "snapdragon": 10,
+    "socs": 1,
+    "software": 2,
+    "solution": 1,
+    "solutions": 4,
+    "some": 1,
+    "sound": 1,
+    "sovereign": 1,
+    "space": 2,
+    "spans": 1,
+    "specialized": 1,
+    "speed": 1,
+    "stack": 1,
+    "standard": 1,
+    "standouts": 1,
+    "strategy": 1,
+    "strength": 1,
+    "strengthen": 1,
+    "strengths": 1,
+    "strong": 1,
+    "such": 1,
+    "suite": 1,
+    "suppliers": 2,
+    "supply": 1,
+    "supports": 1,
+    "systems": 3,
+    "taking": 1,
+    "technologies": 4,
+    "technology": 1,
+    "term": 1,
+    "than": 2,
+    "thank": 1,
+    "thanks": 1,
+    "that": 2,
+    "the": 32,
+    "their": 2,
+    "third": 2,
+    "this": 8,
+    "through": 3,
+    "tier": 3,
+    "tiers": 1,
+    "time": 1,
+    "times": 3,
+    "to": 24,
+    "today": 1,
+    "top": 2,
+    "tops": 1,
+    "total": 1,
+    "toward": 1,
+    "toyota": 1,
+    "track": 1,
+    "traction": 1,
+    "transition": 1,
+    "turn": 1,
+    "tvs": 1,
+    "two": 1,
+    "ui": 1,
+    "ultra": 1,
+    "under": 1,
+    "up": 3,
+    "upcoming": 2,
+    "update": 1,
+    "us": 1,
+    "using": 1,
+    "v": 1,
+    "validate": 1,
+    "vehicle": 3,
+    "ventana": 1,
+    "venture": 1,
+    "versus": 2,
+    "verticals": 1,
+    "very": 1,
+    "video": 1,
+    "view": 1,
+    "vinmotion": 1,
+    "vision": 2,
+    "vlas": 1,
+    "vlms": 1,
+    "volkswagen": 1,
+    "was": 1,
+    "watt": 1,
+    "we": 23,
+    "we'll": 1,
+    "we're": 3,
+    "wear": 1,
+    "wearables": 1,
+    "weeks": 1,
+    "well": 2,
+    "were": 2,
+    "which": 2,
+    "while": 1,
+    "wi": 1,
+    "wide": 1,
+    "will": 5,
+    "wins": 1,
+    "wire": 1,
+    "with": 15,
+    "within": 1,
+    "work": 1,
+    "working": 1,
+    "workloads": 2,
+    "world": 1,
+    "worldwide": 1,
+    "would": 2,
+    "x": 2,
+    "x2": 4,
+    "xr": 1,
+    "year": 2,
+    "you": 1,
+    "zeekr": 1,
+    "zenbook": 1
+   },
+   "n_sentences": 55,
+   "source": "s204.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q1 FY2026 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s204.q4cdn.com/645488518/files/doc_events/2026/Feb/04/Q1FY26-Earnings-Call-Transcript_2-5-26_Final.pdf",
+   "words": 1262
+  },
+  {
+   "counts": {
+    "10th": 1,
+    "5g": 1,
+    "6g": 1,
+    "a": 14,
+    "about": 1,
+    "above": 1,
+    "accelerate": 1,
+    "accelerates": 1,
+    "accelerator": 1,
+    "access": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 2,
+    "act": 1,
+    "adas": 1,
+    "addition": 3,
+    "additionally": 1,
+    "adoption": 1,
+    "advanced": 2,
+    "afternoon": 1,
+    "again": 1,
+    "agent": 1,
+    "agents": 1,
+    "ahead": 1,
+    "ai": 20,
+    "ai200": 1,
+    "ai250": 1,
+    "akash": 1,
+    "all": 1,
+    "alone": 1,
+    "along": 1,
+    "also": 3,
+    "alternatives": 1,
+    "amd": 2,
+    "an": 8,
+    "analysts": 1,
+    "and": 48,
+    "android": 2,
+    "announced": 3,
+    "announcement": 1,
+    "annual": 2,
+    "another": 1,
+    "apple": 1,
+    "applications": 3,
+    "approximately": 1,
+    "arduino": 2,
+    "are": 3,
+    "areas": 1,
+    "as": 7,
+    "assets": 1,
+    "assistant": 1,
+    "assistants": 1,
+    "associated": 1,
+    "at": 7,
+    "attended": 1,
+    "automaker": 1,
+    "automakers": 3,
+    "automated": 2,
+    "automation": 1,
+    "automotive": 4,
+    "ban": 2,
+    "band": 1,
+    "battery": 1,
+    "be": 1,
+    "beijing": 1,
+    "believe": 1,
+    "benchmark": 1,
+    "best": 1,
+    "billion": 6,
+    "bmw": 2,
+    "board": 1,
+    "both": 3,
+    "brand": 2,
+    "brands": 2,
+    "bringing": 1,
+    "broad": 2,
+    "build": 1,
+    "builds": 1,
+    "built": 1,
+    "business": 2,
+    "by": 5,
+    "cadence": 1,
+    "call": 1,
+    "can": 1,
+    "capabilities": 1,
+    "captured": 1,
+    "cards": 1,
+    "category": 2,
+    "cementing": 1,
+    "center": 2,
+    "chassis": 2,
+    "china": 1,
+    "close": 1,
+    "cloud": 3,
+    "collaboration": 1,
+    "coming": 1,
+    "commercialized": 1,
+    "commitment": 1,
+    "community": 1,
+    "companies": 1,
+    "company": 1,
+    "compatibility": 1,
+    "competitive": 1,
+    "competitors": 1,
+    "completed": 1,
+    "comprehensive": 1,
+    "compute": 1,
+    "computer": 2,
+    "connect": 1,
+    "continue": 2,
+    "continued": 2,
+    "continues": 1,
+    "continuous": 1,
+    "cost": 1,
+    "countries": 1,
+    "cpu": 3,
+    "currently": 1,
+    "custom": 1,
+    "customer": 2,
+    "customers": 1,
+    "data": 2,
+    "day": 1,
+    "debuted": 2,
+    "dedicated": 1,
+    "defined": 1,
+    "delivered": 2,
+    "demand": 2,
+    "deploy": 1,
+    "deployment": 1,
+    "designed": 1,
+    "designs": 2,
+    "develop": 1,
+    "developed": 1,
+    "developers": 1,
+    "development": 4,
+    "device": 1,
+    "devices": 2,
+    "differentiated": 2,
+    "digital": 2,
+    "directly": 1,
+    "display": 1,
+    "dragonwing": 1,
+    "drive": 1,
+    "driven": 1,
+    "driver": 1,
+    "driving": 5,
+    "drones": 1,
+    "during": 1,
+    "earnings": 1,
+    "ecosystem": 2,
+    "edge": 8,
+    "efficiency": 1,
+    "efficient": 2,
+    "elite": 4,
+    "emerging": 1,
+    "enable": 1,
+    "enables": 1,
+    "end": 2,
+    "engine": 1,
+    "enthusiasts": 1,
+    "entry": 1,
+    "equipped": 1,
+    "estimates": 1,
+    "ev": 1,
+    "event": 1,
+    "events": 2,
+    "ever": 2,
+    "everyone": 1,
+    "evolving": 1,
+    "exceeded": 2,
+    "exceeding": 2,
+    "excess": 1,
+    "execute": 1,
+    "executing": 1,
+    "expand": 1,
+    "expanded": 1,
+    "expanding": 1,
+    "expansion": 1,
+    "expect": 1,
+    "expectations": 2,
+    "expected": 1,
+    "extended": 1,
+    "extends": 1,
+    "extreme": 1,
+    "fans": 1,
+    "fastest": 2,
+    "features": 1,
+    "fi": 1,
+    "first": 6,
+    "fiscal": 3,
+    "fixed": 1,
+    "flagship": 2,
+    "for": 20,
+    "forward": 1,
+    "foundries": 1,
+    "free": 1,
+    "from": 5,
+    "fueled": 1,
+    "full": 2,
+    "further": 1,
+    "gaap": 2,
+    "galaxy": 1,
+    "gemini": 1,
+    "gen": 3,
+    "generated": 1,
+    "generation": 6,
+    "gigahertz": 1,
+    "glasses": 5,
+    "global": 3,
+    "globally": 1,
+    "good": 1,
+    "google": 3,
+    "gpu": 1,
+    "growing": 1,
+    "grown": 1,
+    "growth": 3,
+    "guidance": 1,
+    "half": 1,
+    "hands": 1,
+    "handsets": 1,
+    "hardware": 1,
+    "has": 2,
+    "have": 2,
+    "headset": 1,
+    "held": 1,
+    "high": 1,
+    "highlight": 1,
+    "highlights": 1,
+    "highly": 1,
+    "highway": 1,
+    "home": 1,
+    "honor": 1,
+    "humain": 1,
+    "human": 1,
+    "hybrid": 1,
+    "i": 3,
+    "iaa": 1,
+    "impressions": 1,
+    "impulse": 1,
+    "in": 28,
+    "include": 1,
+    "included": 1,
+    "including": 7,
+    "increased": 1,
+    "industrial": 4,
+    "industry": 2,
+    "inference": 2,
+    "inferencing": 1,
+    "inflection": 1,
+    "influencers": 1,
+    "innovation": 1,
+    "insiders": 1,
+    "integration": 2,
+    "intel": 2,
+    "intelligent": 1,
+    "interactions": 1,
+    "interbrand": 1,
+    "interest": 1,
+    "into": 2,
+    "introduced": 2,
+    "investor": 1,
+    "io": 1,
+    "iot": 4,
+    "ip": 1,
+    "is": 8,
+    "it": 1,
+    "it's": 1,
+    "ix3": 1,
+    "joining": 1,
+    "kantar": 1,
+    "key": 1,
+    "keynotes": 1,
+    "l2": 2,
+    "laptop": 1,
+    "laptops": 2,
+    "latest": 1,
+    "launch": 1,
+    "launched": 1,
+    "lead": 1,
+    "leader": 1,
+    "leadership": 1,
+    "leading": 3,
+    "licensing": 1,
+    "life": 1,
+    "like": 2,
+    "list": 2,
+    "long": 1,
+    "look": 1,
+    "looking": 2,
+    "marked": 1,
+    "market": 1,
+    "mass": 1,
+    "maui": 1,
+    "mauricio": 1,
+    "media": 1,
+    "megawatts": 1,
+    "members": 1,
+    "memory": 1,
+    "meta": 6,
+    "milestone": 1,
+    "million": 4,
+    "mobile": 3,
+    "mobility": 1,
+    "model": 1,
+    "models": 1,
+    "momentum": 1,
+    "more": 4,
+    "most": 1,
+    "moving": 1,
+    "muitimodal": 1,
+    "multi": 1,
+    "multimodal": 1,
+    "native": 1,
+    "navigation": 1,
+    "neural": 1,
+    "new": 6,
+    "newest": 1,
+    "next": 3,
+    "non": 3,
+    "now": 3,
+    "npu": 2,
+    "number": 1,
+    "oakley": 1,
+    "oems": 1,
+    "of": 28,
+    "on": 6,
+    "once": 1,
+    "one": 1,
+    "oneplus": 1,
+    "open": 1,
+    "operating": 1,
+    "optimistic": 1,
+    "optimize": 1,
+    "or": 2,
+    "oryon": 2,
+    "other": 1,
+    "our": 36,
+    "outlined": 1,
+    "outperform": 1,
+    "over": 7,
+    "pace": 2,
+    "partners": 2,
+    "partnership": 1,
+    "pcs": 1,
+    "per": 1,
+    "performance": 4,
+    "person": 1,
+    "personal": 1,
+    "personalized": 1,
+    "phones": 1,
+    "pilot": 3,
+    "plans": 2,
+    "platform": 4,
+    "platforms": 1,
+    "pleased": 1,
+    "point": 2,
+    "portfolio": 1,
+    "position": 1,
+    "positioned": 1,
+    "power": 3,
+    "powered": 6,
+    "premier": 1,
+    "premium": 2,
+    "press": 1,
+    "prior": 1,
+    "prioritize": 1,
+    "processor": 1,
+    "processors": 2,
+    "production": 1,
+    "progress": 1,
+    "provide": 1,
+    "providing": 1,
+    "q": 1,
+    "q4": 1,
+    "qct": 4,
+    "qualcomm": 2,
+    "quarter": 3,
+    "quarterly": 1,
+    "racks": 1,
+    "ran": 1,
+    "range": 2,
+    "ranging": 1,
+    "ranked": 1,
+    "rapid": 1,
+    "ray": 2,
+    "reached": 1,
+    "recently": 3,
+    "record": 2,
+    "reflected": 1,
+    "reflecting": 1,
+    "released": 1,
+    "remain": 2,
+    "remarkable": 1,
+    "respectively": 1,
+    "revenue": 3,
+    "revenues": 7,
+    "ride": 3,
+    "roadmap": 2,
+    "robotics": 2,
+    "samsung": 1,
+    "seamless": 1,
+    "second": 1,
+    "self": 1,
+    "september": 1,
+    "sequentially": 1,
+    "set": 2,
+    "sets": 2,
+    "several": 1,
+    "share": 3,
+    "significant": 1,
+    "simultaneous": 1,
+    "single": 1,
+    "smart": 4,
+    "smartphones": 1,
+    "snapdragon": 18,
+    "social": 1,
+    "socs": 1,
+    "software": 3,
+    "solution": 2,
+    "solutions": 3,
+    "some": 1,
+    "source": 1,
+    "space": 1,
+    "specifically": 1,
+    "speed": 1,
+    "stack": 2,
+    "standard": 1,
+    "starting": 1,
+    "strategy": 1,
+    "streams": 1,
+    "strength": 3,
+    "strong": 3,
+    "styles": 1,
+    "suite": 1,
+    "summit": 4,
+    "surpassing": 1,
+    "suv": 1,
+    "system": 2,
+    "target": 1,
+    "tech": 2,
+    "technology": 2,
+    "term": 1,
+    "than": 3,
+    "thank": 1,
+    "thanks": 1,
+    "that": 4,
+    "the": 38,
+    "their": 1,
+    "these": 1,
+    "they": 1,
+    "third": 1,
+    "this": 10,
+    "three": 1,
+    "through": 1,
+    "tier": 1,
+    "time": 1,
+    "to": 26,
+    "today": 1,
+    "together": 2,
+    "top": 1,
+    "total": 1,
+    "track": 1,
+    "traction": 1,
+    "training": 1,
+    "transforms": 1,
+    "trend": 1,
+    "truly": 1,
+    "turn": 1,
+    "ultramobile": 1,
+    "unique": 1,
+    "universal": 1,
+    "unlocking": 1,
+    "uno": 1,
+    "unveiled": 2,
+    "up": 3,
+    "update": 1,
+    "upgraded": 1,
+    "urban": 1,
+    "us": 1,
+    "use": 1,
+    "user": 1,
+    "users": 1,
+    "validated": 1,
+    "validating": 1,
+    "valuable": 1,
+    "vanguard": 1,
+    "vehicle": 1,
+    "vehicles": 2,
+    "verticals": 1,
+    "very": 2,
+    "views": 1,
+    "visibility": 1,
+    "vivo": 1,
+    "we": 18,
+    "we'll": 1,
+    "we're": 3,
+    "wearables": 1,
+    "were": 3,
+    "where": 1,
+    "which": 2,
+    "wi": 1,
+    "wide": 1,
+    "will": 3,
+    "wireless": 1,
+    "with": 17,
+    "workloads": 1,
+    "world": 2,
+    "worldwide": 3,
+    "would": 1,
+    "x": 1,
+    "x2": 1,
+    "xiaomi": 1,
+    "xr": 2,
+    "year": 9,
+    "years": 1,
+    "you": 1,
+    "z": 1
+   },
+   "date": "2025-11-06",
+   "entries": {
+    "5g": [
+     2
+    ],
+    "a": [
+     10,
+     15
+    ],
+    "accelerate": [
+     14
+    ],
+    "access": [
+     2
+    ],
+    "achieve": [
+     4
+    ],
+    "across": [
+     2,
+     7
+    ],
+    "additionally": [
+     13
+    ],
+    "afternoon": [
+     0
+    ],
+    "ahead": [
+     15
+    ],
+    "ai": [
+     10,
+     14
+    ],
+    "also": [
+     10
+    ],
+    "amd": [
+     10
+    ],
+    "an": [
+     15
+    ],
+    "analysts": [
+     7
+    ],
+    "and": [
+     0,
+     2,
+     2,
+     6,
+     7,
+     7,
+     9,
+     10,
+     12,
+     12,
+     14
+    ],
+    "android": [
+     2
+    ],
+    "announced": [
+     6
+    ],
+    "announcement": [
+     8
+    ],
+    "annual": [
+     15
+    ],
+    "arduino": [
+     13
+    ],
+    "as": [
+     4,
+     10
+    ],
+    "assistant": [
+     12
+    ],
+    "at": [
+     4,
+     6
+    ],
+    "attended": [
+     7
+    ],
+    "automaker": [
+     11
+    ],
+    "automakers": [
+     12
+    ],
+    "automotive": [
+     2
+    ],
+    "benchmark": [
+     10
+    ],
+    "billion": [
+     2,
+     3
+    ],
+    "bmw": [
+     11,
+     11
+    ],
+    "board": [
+     13
+    ],
+    "both": [
+     7
+    ],
+    "brand": [
+     9
+    ],
+    "brands": [
+     9
+    ],
+    "business": [
+     3
+    ],
+    "by": [
+     2
+    ],
+    "cadence": [
+     15
+    ],
+    "captured": [
+     7
+    ],
+    "center": [
+     14
+    ],
+    "chassis": [
+     2
+    ],
+    "china": [
+     6
+    ],
+    "close": [
+     11
+    ],
+    "collaboration": [
+     11
+    ],
+    "coming": [
+     14
+    ],
+    "commitment": [
+     4
+    ],
+    "compatibility": [
+     12
+    ],
+    "computer": [
+     13
+    ],
+    "continue": [
+     5
+    ],
+    "continued": [
+     2
+    ],
+    "customer": [
+     2
+    ],
+    "data": [
+     14
+    ],
+    "day": [
+     4
+    ],
+    "debuted": [
+     11
+    ],
+    "dedicated": [
+     14
+    ],
+    "demand": [
+     2
+    ],
+    "designed": [
+     12
+    ],
+    "developed": [
+     11
+    ],
+    "digital": [
+     2
+    ],
+    "driven": [
+     2
+    ],
+    "driver": [
+     12
+    ],
+    "driving": [
+     12
+    ],
+    "ecosystem": [
+     6
+    ],
+    "elite": [
+     5
+    ],
+    "end": [
+     2
+    ],
+    "engine": [
+     10
+    ],
+    "ev": [
+     11
+    ],
+    "event": [
+     6
+    ],
+    "events": [
+     7
+    ],
+    "ever": [
+     9
+    ],
+    "everyone": [
+     0
+    ],
+    "exceeding": [
+     10
+    ],
+    "executing": [
+     15
+    ],
+    "expected": [
+     14
+    ],
+    "fastest": [
+     10
+    ],
+    "features": [
+     12
+    ],
+    "fi": [
+     2
+    ],
+    "first": [
+     9
+    ],
+    "fiscal": [
+     4
+    ],
+    "fixed": [
+     2
+    ],
+    "flagship": [
+     6
+    ],
+    "for": [
+     1,
+     2,
+     2,
+     9,
+     10,
+     12,
+     12
+    ],
+    "free": [
+     12
+    ],
+    "from": [
+     14
+    ],
+    "gen": [
+     5
+    ],
+    "generated": [
+     8
+    ],
+    "generation": [
+     15
+    ],
+    "glasses": [
+     2
+    ],
+    "global": [
+     9
+    ],
+    "good": [
+     0
+    ],
+    "growth": [
+     14
+    ],
+    "hands": [
+     12
+    ],
+    "handsets": [
+     2
+    ],
+    "highway": [
+     12
+    ],
+    "honor": [
+     6
+    ],
+    "impressions": [
+     8
+    ],
+    "in": [
+     2,
+     5,
+     7,
+     10,
+     11,
+     11,
+     14
+    ],
+    "included": [
+     9
+    ],
+    "including": [
+     6
+    ],
+    "industrial": [
+     2
+    ],
+    "inference": [
+     14
+    ],
+    "influencers": [
+     7
+    ],
+    "innovation": [
+     5
+    ],
+    "integration": [
+     12
+    ],
+    "intel": [
+     10
+    ],
+    "investor": [
+     4
+    ],
+    "iot": [
+     2
+    ],
+    "is": [
+     14,
+     14
+    ],
+    "it": [
+     11
+    ],
+    "it's": [
+     12
+    ],
+    "ix3": [
+     11
+    ],
+    "joining": [
+     1
+    ],
+    "kantar": [
+     9
+    ],
+    "keynotes": [
+     7
+    ],
+    "l2": [
+     12
+    ],
+    "laptops": [
+     10
+    ],
+    "latest": [
+     10
+    ],
+    "leading": [
+     6
+    ],
+    "licensing": [
+     3
+    ],
+    "like": [
+     12
+    ],
+    "list": [
+     9
+    ],
+    "long": [
+     4
+    ],
+    "looking": [
+     15
+    ],
+    "mauricio": [
+     0
+    ],
+    "media": [
+     8
+    ],
+    "million": [
+     7,
+     8
+    ],
+    "mobile": [
+     5
+    ],
+    "more": [
+     7
+    ],
+    "most": [
+     9
+    ],
+    "moving": [
+     14
+    ],
+    "multi": [
+     15
+    ],
+    "navigation": [
+     12
+    ],
+    "new": [
+     10
+    ],
+    "npu": [
+     10
+    ],
+    "number": [
+     9
+    ],
+    "oems": [
+     6
+    ],
+    "of": [
+     2,
+     5,
+     6
+    ],
+    "on": [
+     4,
+     15
+    ],
+    "oneplus": [
+     6
+    ],
+    "our": [
+     4,
+     4,
+     6,
+     6,
+     7,
+     8,
+     10
+    ],
+    "outlined": [
+     4
+    ],
+    "over": [
+     7,
+     8
+    ],
+    "pace": [
+     5
+    ],
+    "partners": [
+     7
+    ],
+    "performance": [
+     10
+    ],
+    "person": [
+     7
+    ],
+    "phones": [
+     6
+    ],
+    "point": [
+     2
+    ],
+    "powered": [
+     2
+    ],
+    "premium": [
+     2
+    ],
+    "press": [
+     7
+    ],
+    "processors": [
+     5
+    ],
+    "q": [
+     13
+    ],
+    "qct": [
+     2
+    ],
+    "ranked": [
+     9
+    ],
+    "recently": [
+     13
+    ],
+    "released": [
+     13
+    ],
+    "remain": [
+     4
+    ],
+    "revenue": [
+     4
+    ],
+    "revenues": [
+     2,
+     3
+    ],
+    "roadmap": [
+     15
+    ],
+    "seamless": [
+     12
+    ],
+    "sequentially": [
+     2
+    ],
+    "set": [
+     5
+    ],
+    "sets": [
+     10
+    ],
+    "single": [
+     13
+    ],
+    "smart": [
+     2
+    ],
+    "snapdragon": [
+     2,
+     2,
+     5,
+     6,
+     8,
+     9
+    ],
+    "social": [
+     8
+    ],
+    "strength": [
+     2,
+     6
+    ],
+    "strong": [
+     2
+    ],
+    "summit": [
+     8
+    ],
+    "suv": [
+     11
+    ],
+    "tech": [
+     7
+    ],
+    "term": [
+     4
+    ],
+    "than": [
+     7
+    ],
+    "thank": [
+     0
+    ],
+    "thanks": [
+     1
+    ],
+    "the": [
+     2,
+     5,
+     5,
+     6,
+     9,
+     10,
+     11,
+     13,
+     14
+    ],
+    "their": [
+     6
+    ],
+    "this": [
+     14
+    ],
+    "tier": [
+     2
+    ],
+    "time": [
+     9
+    ],
+    "to": [
+     4,
+     5,
+     14,
+     14
+    ],
+    "today": [
+     1
+    ],
+    "together": [
+     8
+    ],
+    "track": [
+     4
+    ],
+    "traction": [
+     2
+    ],
+    "training": [
+     14
+    ],
+    "trend": [
+     14
+    ],
+    "unique": [
+     7
+    ],
+    "universal": [
+     12
+    ],
+    "unlocking": [
+     12
+    ],
+    "uno": [
+     13
+    ],
+    "up": [
+     2
+    ],
+    "urban": [
+     12
+    ],
+    "us": [
+     1
+    ],
+    "validating": [
+     6
+    ],
+    "valuable": [
+     9
+    ],
+    "vehicles": [
+     12
+    ],
+    "views": [
+     7
+    ],
+    "vivo": [
+     6
+    ],
+    "we": [
+     4,
+     5,
+     9,
+     13
+    ],
+    "we're": [
+     15
+    ],
+    "were": [
+     2,
+     3
+    ],
+    "where": [
+     9
+    ],
+    "wi": [
+     2
+    ],
+    "wireless": [
+     2
+    ],
+    "with": [
+     5,
+     8,
+     11,
+     12,
+     15
+    ],
+    "workloads": [
+     14
+    ],
+    "world": [
+     10
+    ],
+    "worldwide": [
+     12
+    ],
+    "xiaomi": [
+     6
+    ],
+    "years": [
+     14
+    ],
+    "you": [
+     0
+    ],
+    "z": [
+     9
+    ]
+   },
+   "excerpts": [
+    "Thank you, Mauricio, and good afternoon, everyone.",
+    "Thanks for joining us today.",
+    "QCT revenues of $9.8 billion, up 9% sequentially, were driven by strong end-customer demand for Snapdragon-powered premium tier Android handsets, continued traction for automotive Snapdragon Digital Chassis and the strength in IoT across industrial, Wi-Fi 7 access point, 5G Fixed Wireless, and smart glasses.",
+    "Licensing business revenues were $1.4 billion.",
+    "We remain on track to achieve our fiscal '29 long-term revenue commitment as outlined at our 2024 Investor Day.",
+    "With the Snapdragon 8 Elite Gen 5, we continue to set the pace of innovation in mobile processors.",
+    "Validating the strength of our Snapdragon ecosystem, leading China OEMs, including Xiaomi, Honor, Vivo, and OnePlus, announced their flagship phones at our event.",
+    "More than 1,100 partners, analysts, tech influencers, and press attended in person, and our keynotes captured over 26 million unique views across both events.",
+    "Together with our announcement, Snapdragon Summit generated over 547 million social media impressions.",
+    "And for the first time ever, Kantar’s Brand Z Most Valuable Global Brands List included Snapdragon, where we ranked number 38.",
+    "Our latest NPU sets a new benchmark as the world's fastest AI engine for laptops, also exceeding Intel and AMD in performance.",
+    "Developed in close collaboration with BMW, it debuted in the automaker's BMW iX3 EV SUV.",
+    "It's designed for universal compatibility and seamless integration with automakers, unlocking L2+ driver assistant features like hands-free highway driving and urban navigation for vehicles worldwide.",
+    "Additionally, we recently released the Arduino UNO Q single-board computer.",
+    "AI data center growth is moving from training to dedicated inference workloads, and this trend is expected to accelerate in the coming years.",
+    "Looking ahead, we're executing on a multi-generation roadmap with an annual cadence."
+   ],
+   "id": "qcom-q4fy25-earnings-call-transcript-11-6-25-final",
+   "msent": {
+    "10th": 1,
+    "5g": 1,
+    "6g": 1,
+    "a": 12,
+    "about": 1,
+    "above": 1,
+    "accelerate": 1,
+    "accelerates": 1,
+    "accelerator": 1,
+    "access": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 2,
+    "act": 1,
+    "adas": 1,
+    "addition": 3,
+    "additionally": 1,
+    "adoption": 1,
+    "advanced": 2,
+    "afternoon": 1,
+    "again": 1,
+    "agent": 1,
+    "agents": 1,
+    "ahead": 1,
+    "ai": 14,
+    "ai200": 1,
+    "ai250": 1,
+    "akash": 1,
+    "all": 1,
+    "alone": 1,
+    "along": 1,
+    "also": 3,
+    "alternatives": 1,
+    "amd": 2,
+    "an": 8,
+    "analysts": 1,
+    "and": 34,
+    "android": 2,
+    "announced": 3,
+    "announcement": 1,
+    "annual": 2,
+    "another": 1,
+    "apple": 1,
+    "applications": 3,
+    "approximately": 1,
+    "arduino": 2,
+    "are": 3,
+    "areas": 1,
+    "as": 7,
+    "assets": 1,
+    "assistant": 1,
+    "assistants": 1,
+    "associated": 1,
+    "at": 7,
+    "attended": 1,
+    "automaker": 1,
+    "automakers": 3,
+    "automated": 2,
+    "automation": 1,
+    "automotive": 4,
+    "ban": 1,
+    "band": 1,
+    "battery": 1,
+    "be": 1,
+    "beijing": 1,
+    "believe": 1,
+    "benchmark": 1,
+    "best": 1,
+    "billion": 5,
+    "bmw": 1,
+    "board": 1,
+    "both": 3,
+    "brand": 2,
+    "brands": 2,
+    "bringing": 1,
+    "broad": 2,
+    "build": 1,
+    "builds": 1,
+    "built": 1,
+    "business": 2,
+    "by": 5,
+    "cadence": 1,
+    "call": 1,
+    "can": 1,
+    "capabilities": 1,
+    "captured": 1,
+    "cards": 1,
+    "category": 2,
+    "cementing": 1,
+    "center": 2,
+    "chassis": 2,
+    "china": 1,
+    "close": 1,
+    "cloud": 2,
+    "collaboration": 1,
+    "coming": 1,
+    "commercialized": 1,
+    "commitment": 1,
+    "community": 1,
+    "companies": 1,
+    "company": 1,
+    "compatibility": 1,
+    "competitive": 1,
+    "competitors": 1,
+    "completed": 1,
+    "comprehensive": 1,
+    "compute": 1,
+    "computer": 2,
+    "connect": 1,
+    "continue": 2,
+    "continued": 2,
+    "continues": 1,
+    "continuous": 1,
+    "cost": 1,
+    "countries": 1,
+    "cpu": 2,
+    "currently": 1,
+    "custom": 1,
+    "customer": 2,
+    "customers": 1,
+    "data": 2,
+    "day": 1,
+    "debuted": 2,
+    "dedicated": 1,
+    "defined": 1,
+    "delivered": 2,
+    "demand": 2,
+    "deploy": 1,
+    "deployment": 1,
+    "designed": 1,
+    "designs": 2,
+    "develop": 1,
+    "developed": 1,
+    "developers": 1,
+    "development": 4,
+    "device": 1,
+    "devices": 2,
+    "differentiated": 2,
+    "digital": 2,
+    "directly": 1,
+    "display": 1,
+    "dragonwing": 1,
+    "drive": 1,
+    "driven": 1,
+    "driver": 1,
+    "driving": 4,
+    "drones": 1,
+    "during": 1,
+    "earnings": 1,
+    "ecosystem": 2,
+    "edge": 6,
+    "efficiency": 1,
+    "efficient": 2,
+    "elite": 3,
+    "emerging": 1,
+    "enable": 1,
+    "enables": 1,
+    "end": 2,
+    "engine": 1,
+    "enthusiasts": 1,
+    "entry": 1,
+    "equipped": 1,
+    "estimates": 1,
+    "ev": 1,
+    "event": 1,
+    "events": 2,
+    "ever": 2,
+    "everyone": 1,
+    "evolving": 1,
+    "exceeded": 2,
+    "exceeding": 2,
+    "excess": 1,
+    "execute": 1,
+    "executing": 1,
+    "expand": 1,
+    "expanded": 1,
+    "expanding": 1,
+    "expansion": 1,
+    "expect": 1,
+    "expectations": 2,
+    "expected": 1,
+    "extended": 1,
+    "extends": 1,
+    "extreme": 1,
+    "fans": 1,
+    "fastest": 2,
+    "features": 1,
+    "fi": 1,
+    "first": 6,
+    "fiscal": 3,
+    "fixed": 1,
+    "flagship": 2,
+    "for": 18,
+    "forward": 1,
+    "foundries": 1,
+    "free": 1,
+    "from": 5,
+    "fueled": 1,
+    "full": 2,
+    "further": 1,
+    "gaap": 2,
+    "galaxy": 1,
+    "gemini": 1,
+    "gen": 3,
+    "generated": 1,
+    "generation": 6,
+    "gigahertz": 1,
+    "glasses": 4,
+    "global": 3,
+    "globally": 1,
+    "good": 1,
+    "google": 2,
+    "gpu": 1,
+    "growing": 1,
+    "grown": 1,
+    "growth": 3,
+    "guidance": 1,
+    "half": 1,
+    "hands": 1,
+    "handsets": 1,
+    "hardware": 1,
+    "has": 2,
+    "have": 2,
+    "headset": 1,
+    "held": 1,
+    "high": 1,
+    "highlight": 1,
+    "highlights": 1,
+    "highly": 1,
+    "highway": 1,
+    "home": 1,
+    "honor": 1,
+    "humain": 1,
+    "human": 1,
+    "hybrid": 1,
+    "i": 3,
+    "iaa": 1,
+    "impressions": 1,
+    "impulse": 1,
+    "in": 22,
+    "include": 1,
+    "included": 1,
+    "including": 7,
+    "increased": 1,
+    "industrial": 4,
+    "industry": 2,
+    "inference": 2,
+    "inferencing": 1,
+    "inflection": 1,
+    "influencers": 1,
+    "innovation": 1,
+    "insiders": 1,
+    "integration": 2,
+    "intel": 2,
+    "intelligent": 1,
+    "interactions": 1,
+    "interbrand": 1,
+    "interest": 1,
+    "into": 2,
+    "introduced": 2,
+    "investor": 1,
+    "io": 1,
+    "iot": 3,
+    "ip": 1,
+    "is": 7,
+    "it": 1,
+    "it's": 1,
+    "ix3": 1,
+    "joining": 1,
+    "kantar": 1,
+    "key": 1,
+    "keynotes": 1,
+    "l2": 2,
+    "laptop": 1,
+    "laptops": 2,
+    "latest": 1,
+    "launch": 1,
+    "launched": 1,
+    "lead": 1,
+    "leader": 1,
+    "leadership": 1,
+    "leading": 3,
+    "licensing": 1,
+    "life": 1,
+    "like": 2,
+    "list": 2,
+    "long": 1,
+    "look": 1,
+    "looking": 2,
+    "marked": 1,
+    "market": 1,
+    "mass": 1,
+    "maui": 1,
+    "mauricio": 1,
+    "media": 1,
+    "megawatts": 1,
+    "members": 1,
+    "memory": 1,
+    "meta": 3,
+    "milestone": 1,
+    "million": 4,
+    "mobile": 3,
+    "mobility": 1,
+    "model": 1,
+    "models": 1,
+    "momentum": 1,
+    "more": 4,
+    "most": 1,
+    "moving": 1,
+    "muitimodal": 1,
+    "multi": 1,
+    "multimodal": 1,
+    "native": 1,
+    "navigation": 1,
+    "neural": 1,
+    "new": 6,
+    "newest": 1,
+    "next": 3,
+    "non": 3,
+    "now": 3,
+    "npu": 2,
+    "number": 1,
+    "oakley": 1,
+    "oems": 1,
+    "of": 18,
+    "on": 6,
+    "once": 1,
+    "one": 1,
+    "oneplus": 1,
+    "open": 1,
+    "operating": 1,
+    "optimistic": 1,
+    "optimize": 1,
+    "or": 2,
+    "oryon": 2,
+    "other": 1,
+    "our": 28,
+    "outlined": 1,
+    "outperform": 1,
+    "over": 5,
+    "pace": 2,
+    "partners": 2,
+    "partnership": 1,
+    "pcs": 1,
+    "per": 1,
+    "performance": 4,
+    "person": 1,
+    "personal": 1,
+    "personalized": 1,
+    "phones": 1,
+    "pilot": 3,
+    "plans": 2,
+    "platform": 4,
+    "platforms": 1,
+    "pleased": 1,
+    "point": 2,
+    "portfolio": 1,
+    "position": 1,
+    "positioned": 1,
+    "power": 3,
+    "powered": 6,
+    "premier": 1,
+    "premium": 2,
+    "press": 1,
+    "prior": 1,
+    "prioritize": 1,
+    "processor": 1,
+    "processors": 2,
+    "production": 1,
+    "progress": 1,
+    "provide": 1,
+    "providing": 1,
+    "q": 1,
+    "q4": 1,
+    "qct": 4,
+    "qualcomm": 2,
+    "quarter": 3,
+    "quarterly": 1,
+    "racks": 1,
+    "ran": 1,
+    "range": 2,
+    "ranging": 1,
+    "ranked": 1,
+    "rapid": 1,
+    "ray": 1,
+    "reached": 1,
+    "recently": 3,
+    "record": 2,
+    "reflected": 1,
+    "reflecting": 1,
+    "released": 1,
+    "remain": 2,
+    "remarkable": 1,
+    "respectively": 1,
+    "revenue": 3,
+    "revenues": 6,
+    "ride": 3,
+    "roadmap": 2,
+    "robotics": 2,
+    "samsung": 1,
+    "seamless": 1,
+    "second": 1,
+    "self": 1,
+    "september": 1,
+    "sequentially": 1,
+    "set": 2,
+    "sets": 2,
+    "several": 1,
+    "share": 3,
+    "significant": 1,
+    "simultaneous": 1,
+    "single": 1,
+    "smart": 4,
+    "smartphones": 1,
+    "snapdragon": 16,
+    "social": 1,
+    "socs": 1,
+    "software": 3,
+    "solution": 2,
+    "solutions": 3,
+    "some": 1,
+    "source": 1,
+    "space": 1,
+    "specifically": 1,
+    "speed": 1,
+    "stack": 2,
+    "standard": 1,
+    "starting": 1,
+    "strategy": 1,
+    "streams": 1,
+    "strength": 3,
+    "strong": 3,
+    "styles": 1,
+    "suite": 1,
+    "summit": 4,
+    "surpassing": 1,
+    "suv": 1,
+    "system": 2,
+    "target": 1,
+    "tech": 2,
+    "technology": 2,
+    "term": 1,
+    "than": 3,
+    "thank": 1,
+    "thanks": 1,
+    "that": 4,
+    "the": 28,
+    "their": 1,
+    "these": 1,
+    "they": 1,
+    "third": 1,
+    "this": 10,
+    "three": 1,
+    "through": 1,
+    "tier": 1,
+    "time": 1,
+    "to": 20,
+    "today": 1,
+    "together": 2,
+    "top": 1,
+    "total": 1,
+    "track": 1,
+    "traction": 1,
+    "training": 1,
+    "transforms": 1,
+    "trend": 1,
+    "truly": 1,
+    "turn": 1,
+    "ultramobile": 1,
+    "unique": 1,
+    "universal": 1,
+    "unlocking": 1,
+    "uno": 1,
+    "unveiled": 2,
+    "up": 2,
+    "update": 1,
+    "upgraded": 1,
+    "urban": 1,
+    "us": 1,
+    "use": 1,
+    "user": 1,
+    "users": 1,
+    "validated": 1,
+    "validating": 1,
+    "valuable": 1,
+    "vanguard": 1,
+    "vehicle": 1,
+    "vehicles": 2,
+    "verticals": 1,
+    "very": 2,
+    "views": 1,
+    "visibility": 1,
+    "vivo": 1,
+    "we": 16,
+    "we'll": 1,
+    "we're": 3,
+    "wearables": 1,
+    "were": 3,
+    "where": 1,
+    "which": 2,
+    "wi": 1,
+    "wide": 1,
+    "will": 3,
+    "wireless": 1,
+    "with": 15,
+    "workloads": 1,
+    "world": 2,
+    "worldwide": 3,
+    "would": 1,
+    "x": 1,
+    "x2": 1,
+    "xiaomi": 1,
+    "xr": 1,
+    "year": 3,
+    "years": 1,
+    "you": 1,
+    "z": 1
+   },
+   "n_sentences": 52,
+   "source": "s204.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q4 FY2025 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s204.q4cdn.com/645488518/files/doc_financials/2025/q4/Q4FY25-Earnings-Call-Transcript_11-6-25_Final.pdf",
+   "words": 1133
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full text is not included; see each document's url.",
+ "slug": "amon"
+}

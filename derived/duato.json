@@ -1,0 +1,7494 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "a": 13,
+    "ability": 1,
+    "abiomed": 1,
+    "ablation": 2,
+    "about": 1,
+    "accelerate": 2,
+    "accelerated": 1,
+    "accelerating": 1,
+    "acquire": 1,
+    "acquisition": 1,
+    "across": 3,
+    "acuvue": 1,
+    "adding": 1,
+    "address": 1,
+    "advanced": 1,
+    "advancement": 1,
+    "aero": 1,
+    "afib": 1,
+    "after": 1,
+    "again": 1,
+    "ahead": 1,
+    "ai": 1,
+    "all": 1,
+    "also": 3,
+    "ambition": 1,
+    "an": 3,
+    "analytics": 1,
+    "and": 46,
+    "anemia": 1,
+    "announced": 3,
+    "annual": 2,
+    "antibody": 1,
+    "anticipate": 1,
+    "approval": 2,
+    "approximately": 1,
+    "architecture": 1,
+    "are": 12,
+    "area": 1,
+    "as": 5,
+    "asco": 2,
+    "at": 3,
+    "atrial": 1,
+    "authorization": 2,
+    "autoimmune": 1,
+    "automated": 1,
+    "availability": 1,
+    "back": 1,
+    "be": 3,
+    "beat": 1,
+    "been": 1,
+    "before": 1,
+    "better": 1,
+    "beyond": 1,
+    "billion": 7,
+    "bio": 1,
+    "biologic": 1,
+    "bladder": 1,
+    "bold": 1,
+    "both": 4,
+    "bottom": 1,
+    "brain": 1,
+    "brands": 1,
+    "breadth": 1,
+    "bring": 1,
+    "bringing": 1,
+    "broadens": 1,
+    "build": 2,
+    "building": 2,
+    "built": 2,
+    "business": 1,
+    "by": 4,
+    "c2": 1,
+    "call": 1,
+    "cancer": 4,
+    "capabilities": 2,
+    "capacity": 1,
+    "caplyta": 2,
+    "cardiovascular": 2,
+    "care": 4,
+    "cartosound": 1,
+    "carvykti": 1,
+    "ce": 1,
+    "change": 1,
+    "circulatory": 2,
+    "clinical": 2,
+    "close": 2,
+    "colitis": 1,
+    "combination": 4,
+    "commitment": 2,
+    "company": 3,
+    "comparable": 1,
+    "competitors": 1,
+    "complementary": 1,
+    "complex": 2,
+    "confidence": 3,
+    "continue": 3,
+    "continued": 1,
+    "continues": 2,
+    "coronary": 1,
+    "could": 1,
+    "crohn": 1,
+    "daily": 1,
+    "darzalex": 3,
+    "data": 3,
+    "death": 1,
+    "debut": 1,
+    "decade": 2,
+    "decision": 1,
+    "deep": 1,
+    "deepest": 1,
+    "deliver": 2,
+    "delivered": 5,
+    "delivering": 3,
+    "demand": 1,
+    "demonstrated": 1,
+    "depth": 2,
+    "developing": 1,
+    "differentiated": 1,
+    "digit": 2,
+    "digital": 2,
+    "digits": 2,
+    "disciplined": 2,
+    "disease": 2,
+    "disorders": 1,
+    "distribution": 1,
+    "double": 4,
+    "driven": 1,
+    "dual": 2,
+    "durable": 2,
+    "during": 3,
+    "each": 2,
+    "early": 2,
+    "ecosystem": 1,
+    "efficacy": 1,
+    "electrophysiology": 2,
+    "eligible": 1,
+    "encouraged": 1,
+    "end": 1,
+    "energy": 2,
+    "era": 1,
+    "erleada": 2,
+    "ethicon": 1,
+    "every": 1,
+    "evidence": 1,
+    "evident": 1,
+    "exceed": 1,
+    "exceptional": 1,
+    "excluding": 1,
+    "execution": 2,
+    "existing": 1,
+    "expand": 1,
+    "expanded": 2,
+    "expect": 1,
+    "experience": 1,
+    "expertise": 1,
+    "extended": 1,
+    "extensive": 1,
+    "fastest": 1,
+    "fda": 5,
+    "features": 1,
+    "fibrillation": 1,
+    "field": 2,
+    "filing": 1,
+    "firefly": 1,
+    "first": 5,
+    "flexibility": 1,
+    "focus": 1,
+    "for": 16,
+    "foundational": 1,
+    "free": 1,
+    "frequency": 1,
+    "from": 3,
+    "full": 1,
+    "further": 1,
+    "generalized": 1,
+    "generation": 3,
+    "give": 1,
+    "global": 2,
+    "gravis": 1,
+    "greater": 1,
+    "grew": 2,
+    "growing": 4,
+    "growth": 9,
+    "guidance": 1,
+    "halda": 1,
+    "has": 2,
+    "have": 7,
+    "head": 1,
+    "health": 2,
+    "heart": 2,
+    "help": 1,
+    "hemolytic": 1,
+    "high": 2,
+    "history": 2,
+    "i": 1,
+    "i'm": 1,
+    "icotyde": 4,
+    "iii": 1,
+    "imaavy": 1,
+    "imaging": 1,
+    "immunology": 2,
+    "impact": 1,
+    "important": 1,
+    "in": 46,
+    "including": 1,
+    "increased": 1,
+    "indications": 1,
+    "industry": 1,
+    "initiated": 1,
+    "inlexzo": 3,
+    "innovating": 1,
+    "innovation": 4,
+    "innovations": 1,
+    "innovative": 1,
+    "insertions": 1,
+    "insights": 1,
+    "instilling": 1,
+    "instruments": 1,
+    "integrated": 1,
+    "integrates": 1,
+    "integration": 1,
+    "into": 1,
+    "intraocular": 1,
+    "intravascular": 1,
+    "investment": 1,
+    "is": 6,
+    "johnson": 6,
+    "journey": 1,
+    "largest": 1,
+    "latest": 1,
+    "launch": 3,
+    "launches": 2,
+    "lead": 1,
+    "leader": 1,
+    "leaders": 1,
+    "leadership": 1,
+    "leading": 1,
+    "lens": 1,
+    "let's": 1,
+    "limited": 1,
+    "line": 7,
+    "lithotripsy": 1,
+    "localized": 1,
+    "look": 1,
+    "lung": 1,
+    "make": 1,
+    "makes": 1,
+    "manufacturing": 1,
+    "mapping": 1,
+    "mark": 1,
+    "market": 2,
+    "medical": 1,
+    "medicine": 1,
+    "medicines": 2,
+    "medtech": 2,
+    "meet": 2,
+    "metastasis": 1,
+    "million": 1,
+    "momentum": 5,
+    "more": 12,
+    "most": 2,
+    "multiple": 2,
+    "myasthenia": 1,
+    "myeloma": 2,
+    "nearly": 1,
+    "neck": 1,
+    "need": 1,
+    "needs": 1,
+    "nervous": 1,
+    "neuroscience": 2,
+    "never": 1,
+    "new": 8,
+    "next": 4,
+    "not": 2,
+    "novel": 1,
+    "now": 4,
+    "nowhere": 1,
+    "number": 1,
+    "of": 44,
+    "on": 9,
+    "once": 2,
+    "oncology": 4,
+    "one": 5,
+    "open": 1,
+    "opened": 1,
+    "operational": 3,
+    "options": 1,
+    "or": 2,
+    "ottava": 2,
+    "our": 29,
+    "outcomes": 1,
+    "outpacing": 2,
+    "over": 1,
+    "overall": 2,
+    "packaging": 1,
+    "part": 1,
+    "particular": 1,
+    "patient": 3,
+    "patients": 8,
+    "people": 1,
+    "performance": 3,
+    "performed": 1,
+    "phase": 1,
+    "physicians": 1,
+    "pill": 1,
+    "pipeline": 2,
+    "plans": 1,
+    "platform": 4,
+    "platforms": 1,
+    "pleased": 2,
+    "plenary": 1,
+    "points": 1,
+    "polyphonic": 1,
+    "portfolio": 4,
+    "portfolios": 1,
+    "position": 1,
+    "positions": 1,
+    "possible": 1,
+    "potential": 1,
+    "powered": 2,
+    "powerhouse": 1,
+    "practice": 1,
+    "prevention": 1,
+    "prior": 2,
+    "priority": 1,
+    "procedural": 1,
+    "product": 1,
+    "products": 2,
+    "progress": 2,
+    "progressing": 1,
+    "progression": 1,
+    "projected": 1,
+    "prostate": 1,
+    "proteus": 1,
+    "provides": 1,
+    "psoriasis": 1,
+    "pulsed": 2,
+    "puresee": 1,
+    "q2": 9,
+    "quarter": 11,
+    "quarterly": 2,
+    "radio": 1,
+    "raised": 1,
+    "reach": 1,
+    "real": 1,
+    "received": 3,
+    "receiving": 1,
+    "recent": 1,
+    "recently": 2,
+    "recovery": 2,
+    "reduces": 1,
+    "reflects": 1,
+    "regimen": 1,
+    "regions": 1,
+    "relapse": 1,
+    "remains": 1,
+    "reported": 1,
+    "reporting": 1,
+    "responses": 2,
+    "restoration": 2,
+    "result": 1,
+    "results": 1,
+    "revenue": 1,
+    "review": 1,
+    "risk": 2,
+    "robotic": 2,
+    "robotics": 1,
+    "role": 1,
+    "rollout": 1,
+    "rooted": 1,
+    "ryan": 2,
+    "rybrevant": 3,
+    "safety": 1,
+    "said": 1,
+    "sales": 9,
+    "scale": 3,
+    "schizophrenia": 1,
+    "science": 1,
+    "scientific": 1,
+    "second": 2,
+    "see": 2,
+    "seeking": 1,
+    "selectivity": 1,
+    "sf": 1,
+    "share": 1,
+    "shared": 1,
+    "shockwave": 1,
+    "showing": 2,
+    "sight": 1,
+    "significant": 2,
+    "significantly": 2,
+    "simplicity": 1,
+    "since": 1,
+    "single": 1,
+    "slowed": 1,
+    "smarttouch": 1,
+    "solid": 1,
+    "sonata": 1,
+    "spectrum": 1,
+    "spravato": 1,
+    "standing": 1,
+    "stapler": 1,
+    "started": 1,
+    "starts": 1,
+    "status": 1,
+    "stelara": 1,
+    "still": 1,
+    "strength": 1,
+    "strengthen": 1,
+    "strengthened": 1,
+    "strengthens": 1,
+    "strong": 5,
+    "stronger": 1,
+    "strongest": 1,
+    "strongly": 1,
+    "study": 1,
+    "submitted": 1,
+    "support": 1,
+    "surgeons": 1,
+    "surgery": 3,
+    "surgical": 3,
+    "survival": 1,
+    "system": 3,
+    "systemic": 2,
+    "table": 1,
+    "tailoring": 1,
+    "talk": 1,
+    "talvey": 2,
+    "target": 1,
+    "teams": 1,
+    "technologies": 2,
+    "tecnis": 1,
+    "tecvayli": 1,
+    "than": 10,
+    "thank": 1,
+    "that": 8,
+    "the": 50,
+    "their": 1,
+    "therapeutics": 1,
+    "therapy": 3,
+    "thermocool": 1,
+    "these": 1,
+    "third": 1,
+    "this": 5,
+    "three": 1,
+    "time": 1,
+    "to": 32,
+    "today": 1,
+    "tomorrow": 1,
+    "top": 1,
+    "topline": 1,
+    "towards": 1,
+    "track": 2,
+    "transaction": 1,
+    "transform": 3,
+    "transformational": 1,
+    "treat": 1,
+    "treated": 1,
+    "treatment": 4,
+    "treatments": 4,
+    "tremfya": 2,
+    "tumors": 1,
+    "turn": 2,
+    "ulcerative": 1,
+    "underscoring": 1,
+    "unique": 4,
+    "uniquely": 1,
+    "unlocking": 1,
+    "unmet": 2,
+    "up": 2,
+    "uptake": 2,
+    "us": 3,
+    "varipulse": 1,
+    "versus": 2,
+    "vision": 4,
+    "volumes": 1,
+    "warm": 1,
+    "was": 1,
+    "wave": 1,
+    "way": 1,
+    "we": 39,
+    "weighing": 1,
+    "welcome": 1,
+    "were": 1,
+    "what": 2,
+    "when": 1,
+    "where": 1,
+    "which": 2,
+    "while": 4,
+    "will": 4,
+    "with": 20,
+    "working": 1,
+    "world": 2,
+    "worldwide": 1,
+    "would": 1,
+    "year": 5,
+    "years": 1,
+    "yet": 1,
+    "you": 1,
+    "your": 1
+   },
+   "date": "2026-07-15",
+   "entries": {
+    "a": [
+     7,
+     9
+    ],
+    "ability": [
+     8
+    ],
+    "abiomed": [
+     9
+    ],
+    "ablation": [
+     7
+    ],
+    "accelerating": [
+     1
+    ],
+    "across": [
+     0,
+     11
+    ],
+    "acuvue": [
+     11
+    ],
+    "address": [
+     10
+    ],
+    "advanced": [
+     4
+    ],
+    "aero": [
+     8
+    ],
+    "ai": [
+     6
+    ],
+    "all": [
+     11
+    ],
+    "also": [
+     7
+    ],
+    "an": [
+     3
+    ],
+    "analytics": [
+     10
+    ],
+    "and": [
+     0,
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     9
+    ],
+    "anemia": [
+     5
+    ],
+    "approximately": [
+     3
+    ],
+    "architecture": [
+     10
+    ],
+    "are": [
+     9
+    ],
+    "as": [
+     9
+    ],
+    "at": [
+     1
+    ],
+    "authorization": [
+     7
+    ],
+    "autoimmune": [
+     5
+    ],
+    "automated": [
+     10
+    ],
+    "better": [
+     10
+    ],
+    "both": [
+     4
+    ],
+    "bringing": [
+     6
+    ],
+    "broadens": [
+     8
+    ],
+    "built": [
+     0
+    ],
+    "business": [
+     0
+    ],
+    "c2": [
+     8
+    ],
+    "capabilities": [
+     6
+    ],
+    "cardiovascular": [
+     0
+    ],
+    "cartosound": [
+     6
+    ],
+    "carvykti": [
+     2
+    ],
+    "circulatory": [
+     8
+    ],
+    "clinical": [
+     9
+    ],
+    "colitis": [
+     4
+    ],
+    "combination": [
+     0
+    ],
+    "comparable": [
+     1
+    ],
+    "competitors": [
+     1
+    ],
+    "complex": [
+     8
+    ],
+    "confidence": [
+     9
+    ],
+    "continue": [
+     2,
+     5
+    ],
+    "coronary": [
+     8
+    ],
+    "crohn": [
+     4
+    ],
+    "data": [
+     10
+    ],
+    "debut": [
+     6
+    ],
+    "decision": [
+     9
+    ],
+    "deliver": [
+     2
+    ],
+    "delivered": [
+     11
+    ],
+    "delivering": [
+     4
+    ],
+    "digit": [
+     2
+    ],
+    "digital": [
+     10
+    ],
+    "disciplined": [
+     0
+    ],
+    "disease": [
+     4,
+     8
+    ],
+    "double": [
+     2
+    ],
+    "driven": [
+     10
+    ],
+    "dual": [
+     7
+    ],
+    "during": [
+     3
+    ],
+    "early": [
+     1
+    ],
+    "ecosystem": [
+     10
+    ],
+    "electrophysiology": [
+     6
+    ],
+    "eligible": [
+     3
+    ],
+    "energy": [
+     7,
+     7
+    ],
+    "evidence": [
+     9
+    ],
+    "exceptional": [
+     4
+    ],
+    "execution": [
+     0
+    ],
+    "expanded": [
+     8
+    ],
+    "experience": [
+     9
+    ],
+    "expertise": [
+     0
+    ],
+    "extensive": [
+     9
+    ],
+    "fastest": [
+     4
+    ],
+    "fda": [
+     5,
+     7
+    ],
+    "features": [
+     10
+    ],
+    "field": [
+     7
+    ],
+    "flexibility": [
+     7
+    ],
+    "for": [
+     7,
+     7
+    ],
+    "frequency": [
+     7
+    ],
+    "further": [
+     6
+    ],
+    "generalized": [
+     5
+    ],
+    "generation": [
+     10
+    ],
+    "give": [
+     7
+    ],
+    "global": [
+     8
+    ],
+    "gravis": [
+     5
+    ],
+    "greater": [
+     7
+    ],
+    "grew": [
+     3
+    ],
+    "growing": [
+     4
+    ],
+    "growth": [
+     2,
+     4,
+     9,
+     11
+    ],
+    "has": [
+     1
+    ],
+    "heart": [
+     9
+    ],
+    "help": [
+     10
+    ],
+    "hemolytic": [
+     5
+    ],
+    "high": [
+     2
+    ],
+    "icotyde": [
+     1
+    ],
+    "imaavy": [
+     5
+    ],
+    "imaging": [
+     6
+    ],
+    "immunology": [
+     0
+    ],
+    "in": [
+     1,
+     1,
+     3,
+     4,
+     4,
+     5,
+     5,
+     6,
+     7,
+     7,
+     8,
+     9,
+     9,
+     9
+    ],
+    "increased": [
+     9
+    ],
+    "inlexzo": [
+     3
+    ],
+    "insertions": [
+     3
+    ],
+    "insights": [
+     10
+    ],
+    "instruments": [
+     10
+    ],
+    "integrates": [
+     7
+    ],
+    "integration": [
+     10
+    ],
+    "intravascular": [
+     8
+    ],
+    "is": [
+     0
+    ],
+    "launch": [
+     1,
+     8
+    ],
+    "launches": [
+     1
+    ],
+    "lithotripsy": [
+     8
+    ],
+    "mapping": [
+     6
+    ],
+    "momentum": [
+     1
+    ],
+    "more": [
+     8
+    ],
+    "myasthenia": [
+     5
+    ],
+    "nearly": [
+     3
+    ],
+    "needs": [
+     10
+    ],
+    "neuroscience": [
+     0
+    ],
+    "new": [
+     3,
+     6
+    ],
+    "next": [
+     10
+    ],
+    "of": [
+     0,
+     0,
+     4,
+     5,
+     6,
+     8,
+     8,
+     9
+    ],
+    "on": [
+     0,
+     3,
+     9
+    ],
+    "oncology": [
+     0
+    ],
+    "one": [
+     3
+    ],
+    "open": [
+     10
+    ],
+    "ottava": [
+     10
+    ],
+    "our": [
+     0,
+     0,
+     6,
+     7,
+     8,
+     8,
+     9,
+     10,
+     11
+    ],
+    "outpacing": [
+     1
+    ],
+    "overall": [
+     4
+    ],
+    "particular": [
+     1
+    ],
+    "patient": [
+     3
+    ],
+    "patients": [
+     3,
+     7
+    ],
+    "performance": [
+     1
+    ],
+    "physicians": [
+     7
+    ],
+    "platform": [
+     7,
+     8
+    ],
+    "points": [
+     1
+    ],
+    "polyphonic": [
+     10
+    ],
+    "portfolio": [
+     11
+    ],
+    "position": [
+     6
+    ],
+    "powered": [
+     6
+    ],
+    "prior": [
+     3
+    ],
+    "priority": [
+     5
+    ],
+    "procedural": [
+     9
+    ],
+    "provides": [
+     10
+    ],
+    "pulsed": [
+     7
+    ],
+    "q2": [
+     6,
+     8,
+     9
+    ],
+    "quarter": [
+     3,
+     3,
+     4
+    ],
+    "quarterly": [
+     11
+    ],
+    "radio": [
+     7
+    ],
+    "reach": [
+     8
+    ],
+    "real": [
+     9
+    ],
+    "received": [
+     5,
+     7
+    ],
+    "recently": [
+     5
+    ],
+    "recovery": [
+     9
+    ],
+    "regimen": [
+     3
+    ],
+    "regions": [
+     11
+    ],
+    "remains": [
+     4
+    ],
+    "restoration": [
+     8
+    ],
+    "result": [
+     9
+    ],
+    "review": [
+     5
+    ],
+    "robotic": [
+     10
+    ],
+    "sales": [
+     4
+    ],
+    "scale": [
+     0
+    ],
+    "scientific": [
+     0
+    ],
+    "second": [
+     3
+    ],
+    "see": [
+     5
+    ],
+    "selectivity": [
+     9
+    ],
+    "sf": [
+     7
+    ],
+    "shockwave": [
+     8
+    ],
+    "significant": [
+     1
+    ],
+    "single": [
+     7
+    ],
+    "slowed": [
+     9
+    ],
+    "smarttouch": [
+     7
+    ],
+    "sonata": [
+     6
+    ],
+    "started": [
+     3
+    ],
+    "status": [
+     5
+    ],
+    "strength": [
+     0
+    ],
+    "strengthen": [
+     9
+    ],
+    "strengthened": [
+     6
+    ],
+    "strong": [
+     5,
+     11
+    ],
+    "support": [
+     10
+    ],
+    "surgeons": [
+     10
+    ],
+    "surgery": [
+     0
+    ],
+    "surgical": [
+     10
+    ],
+    "system": [
+     7
+    ],
+    "tailoring": [
+     7
+    ],
+    "talvey": [
+     2
+    ],
+    "teams": [
+     10
+    ],
+    "tecvayli": [
+     2
+    ],
+    "the": [
+     0,
+     3,
+     4,
+     4,
+     6,
+     8,
+     8,
+     9
+    ],
+    "their": [
+     1
+    ],
+    "therapy": [
+     4
+    ],
+    "thermocool": [
+     7
+    ],
+    "three": [
+     3
+    ],
+    "to": [
+     2,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "treat": [
+     8
+    ],
+    "treatments": [
+     7
+    ],
+    "tremfya": [
+     4
+    ],
+    "ulcerative": [
+     4
+    ],
+    "unique": [
+     0,
+     10
+    ],
+    "unmet": [
+     10
+    ],
+    "uptake": [
+     1,
+     5
+    ],
+    "versus": [
+     3
+    ],
+    "vision": [
+     0
+    ],
+    "volumes": [
+     9
+    ],
+    "warm": [
+     5
+    ],
+    "was": [
+     6
+    ],
+    "we": [
+     5,
+     7,
+     9
+    ],
+    "weighing": [
+     9
+    ],
+    "which": [
+     7
+    ],
+    "while": [
+     9,
+     10
+    ],
+    "with": [
+     1,
+     6,
+     10
+    ],
+    "working": [
+     9
+    ],
+    "world": [
+     9
+    ]
+   },
+   "excerpts": [
+    "Across Oncology, Immunology, Neuroscience, Cardiovascular, Surgery and Vision, the strength of our business is built on our unique combination of scientific expertise, scale and disciplined execution.",
+    "ICOTYDE, in particular, has significant early launch momentum with uptake accelerating and performance outpacing competitors at comparable points in their launches.",
+    "CARVYKTI, TECVAYLI and TALVEY continue to deliver high double-digit growth.",
+    "During the second quarter, nearly one in three eligible patients started on an INLEXZO regimen, and new patient insertions grew approximately 75% versus prior quarter.",
+    "TREMFYA remains the fastest-growing advanced therapy in both Crohn's disease and ulcerative colitis, delivering exceptional overall sales growth of 71% in the quarter.",
+    "We continue to see strong uptake of IMAAVY in generalized myasthenia gravis and recently received FDA Priority Review status in warm autoimmune hemolytic anemia.",
+    "In Q2, our position was further strengthened with the debut of CARTOSOUND SONATA bringing new AI-powered imaging and mapping capabilities to electrophysiology.",
+    "We also received FDA authorization for our dual energy THERMOCOOL SMARTTOUCH SF platform which integrates pulsed field and radio frequency energy in a single system to give physicians greater flexibility in tailoring ablation treatments for patients.",
+    "In circulatory restoration, the Q2 global launch of Shockwave C2 AERO expanded our ability to treat more complex coronary disease and broadens the reach of our intravascular lithotripsy platform.",
+    "And in heart recovery, while Abiomed growth slowed in Q2 as a result of increased decision selectivity weighing on procedural volumes, we are working to strengthen the confidence in our extensive clinical evidence and real-world experience.",
+    "OTTAVA's unique architecture, automated features and next-generation robotic instruments help address surgeons' unmet needs, while integration with our POLYPHONIC open digital ecosystem provides data-driven insights and analytics to better support surgical teams.",
+    "Our ACUVUE portfolio delivered strong quarterly growth across all regions."
+   ],
+   "id": "jnj-jnj-usq-transcript-2026-07-15",
+   "msent": {
+    "a": 11,
+    "ability": 1,
+    "abiomed": 1,
+    "ablation": 2,
+    "about": 1,
+    "accelerate": 2,
+    "accelerated": 1,
+    "accelerating": 1,
+    "acquire": 1,
+    "acquisition": 1,
+    "across": 3,
+    "acuvue": 1,
+    "adding": 1,
+    "address": 1,
+    "advanced": 1,
+    "advancement": 1,
+    "aero": 1,
+    "afib": 1,
+    "after": 1,
+    "again": 1,
+    "ahead": 1,
+    "ai": 1,
+    "all": 1,
+    "also": 3,
+    "ambition": 1,
+    "an": 3,
+    "analytics": 1,
+    "and": 30,
+    "anemia": 1,
+    "announced": 3,
+    "annual": 2,
+    "antibody": 1,
+    "anticipate": 1,
+    "approval": 2,
+    "approximately": 1,
+    "architecture": 1,
+    "are": 11,
+    "area": 1,
+    "as": 4,
+    "asco": 2,
+    "at": 3,
+    "atrial": 1,
+    "authorization": 2,
+    "autoimmune": 1,
+    "automated": 1,
+    "availability": 1,
+    "back": 1,
+    "be": 3,
+    "beat": 1,
+    "been": 1,
+    "before": 1,
+    "better": 1,
+    "beyond": 1,
+    "billion": 5,
+    "bio": 1,
+    "biologic": 1,
+    "bladder": 1,
+    "bold": 1,
+    "both": 4,
+    "bottom": 1,
+    "brain": 1,
+    "brands": 1,
+    "breadth": 1,
+    "bring": 1,
+    "bringing": 1,
+    "broadens": 1,
+    "build": 2,
+    "building": 2,
+    "built": 2,
+    "business": 1,
+    "by": 4,
+    "c2": 1,
+    "call": 1,
+    "cancer": 3,
+    "capabilities": 2,
+    "capacity": 1,
+    "caplyta": 2,
+    "cardiovascular": 2,
+    "care": 3,
+    "cartosound": 1,
+    "carvykti": 1,
+    "ce": 1,
+    "change": 1,
+    "circulatory": 2,
+    "clinical": 2,
+    "close": 2,
+    "colitis": 1,
+    "combination": 4,
+    "commitment": 2,
+    "company": 3,
+    "comparable": 1,
+    "competitors": 1,
+    "complementary": 1,
+    "complex": 2,
+    "confidence": 3,
+    "continue": 3,
+    "continued": 1,
+    "continues": 2,
+    "coronary": 1,
+    "could": 1,
+    "crohn": 1,
+    "daily": 1,
+    "darzalex": 3,
+    "data": 3,
+    "death": 1,
+    "debut": 1,
+    "decade": 2,
+    "decision": 1,
+    "deep": 1,
+    "deepest": 1,
+    "deliver": 2,
+    "delivered": 5,
+    "delivering": 3,
+    "demand": 1,
+    "demonstrated": 1,
+    "depth": 2,
+    "developing": 1,
+    "differentiated": 1,
+    "digit": 2,
+    "digital": 2,
+    "digits": 2,
+    "disciplined": 2,
+    "disease": 2,
+    "disorders": 1,
+    "distribution": 1,
+    "double": 4,
+    "driven": 1,
+    "dual": 2,
+    "durable": 2,
+    "during": 3,
+    "each": 2,
+    "early": 2,
+    "ecosystem": 1,
+    "efficacy": 1,
+    "electrophysiology": 2,
+    "eligible": 1,
+    "encouraged": 1,
+    "end": 1,
+    "energy": 1,
+    "era": 1,
+    "erleada": 2,
+    "ethicon": 1,
+    "every": 1,
+    "evidence": 1,
+    "evident": 1,
+    "exceed": 1,
+    "exceptional": 1,
+    "excluding": 1,
+    "execution": 2,
+    "existing": 1,
+    "expand": 1,
+    "expanded": 2,
+    "expect": 1,
+    "experience": 1,
+    "expertise": 1,
+    "extended": 1,
+    "extensive": 1,
+    "fastest": 1,
+    "fda": 5,
+    "features": 1,
+    "fibrillation": 1,
+    "field": 2,
+    "filing": 1,
+    "firefly": 1,
+    "first": 4,
+    "flexibility": 1,
+    "focus": 1,
+    "for": 15,
+    "foundational": 1,
+    "free": 1,
+    "frequency": 1,
+    "from": 3,
+    "full": 1,
+    "further": 1,
+    "generalized": 1,
+    "generation": 3,
+    "give": 1,
+    "global": 2,
+    "gravis": 1,
+    "greater": 1,
+    "grew": 2,
+    "growing": 4,
+    "growth": 9,
+    "guidance": 1,
+    "halda": 1,
+    "has": 2,
+    "have": 7,
+    "head": 1,
+    "health": 2,
+    "heart": 2,
+    "help": 1,
+    "hemolytic": 1,
+    "high": 2,
+    "history": 2,
+    "i": 1,
+    "i'm": 1,
+    "icotyde": 4,
+    "iii": 1,
+    "imaavy": 1,
+    "imaging": 1,
+    "immunology": 2,
+    "impact": 1,
+    "important": 1,
+    "in": 34,
+    "including": 1,
+    "increased": 1,
+    "indications": 1,
+    "industry": 1,
+    "initiated": 1,
+    "inlexzo": 3,
+    "innovating": 1,
+    "innovation": 4,
+    "innovations": 1,
+    "innovative": 1,
+    "insertions": 1,
+    "insights": 1,
+    "instilling": 1,
+    "instruments": 1,
+    "integrated": 1,
+    "integrates": 1,
+    "integration": 1,
+    "into": 1,
+    "intraocular": 1,
+    "intravascular": 1,
+    "investment": 1,
+    "is": 6,
+    "johnson": 3,
+    "journey": 1,
+    "largest": 1,
+    "latest": 1,
+    "launch": 3,
+    "launches": 2,
+    "lead": 1,
+    "leader": 1,
+    "leaders": 1,
+    "leadership": 1,
+    "leading": 1,
+    "lens": 1,
+    "let's": 1,
+    "limited": 1,
+    "line": 6,
+    "lithotripsy": 1,
+    "localized": 1,
+    "look": 1,
+    "lung": 1,
+    "make": 1,
+    "makes": 1,
+    "manufacturing": 1,
+    "mapping": 1,
+    "mark": 1,
+    "market": 2,
+    "medical": 1,
+    "medicine": 1,
+    "medicines": 2,
+    "medtech": 2,
+    "meet": 2,
+    "metastasis": 1,
+    "million": 1,
+    "momentum": 5,
+    "more": 11,
+    "most": 2,
+    "multiple": 2,
+    "myasthenia": 1,
+    "myeloma": 2,
+    "nearly": 1,
+    "neck": 1,
+    "need": 1,
+    "needs": 1,
+    "nervous": 1,
+    "neuroscience": 2,
+    "never": 1,
+    "new": 8,
+    "next": 4,
+    "not": 2,
+    "novel": 1,
+    "now": 4,
+    "nowhere": 1,
+    "number": 1,
+    "of": 30,
+    "on": 9,
+    "once": 2,
+    "oncology": 4,
+    "one": 5,
+    "open": 1,
+    "opened": 1,
+    "operational": 3,
+    "options": 1,
+    "or": 2,
+    "ottava": 2,
+    "our": 23,
+    "outcomes": 1,
+    "outpacing": 2,
+    "over": 1,
+    "overall": 2,
+    "packaging": 1,
+    "part": 1,
+    "particular": 1,
+    "patient": 3,
+    "patients": 7,
+    "people": 1,
+    "performance": 3,
+    "performed": 1,
+    "phase": 1,
+    "physicians": 1,
+    "pill": 1,
+    "pipeline": 2,
+    "plans": 1,
+    "platform": 4,
+    "platforms": 1,
+    "pleased": 2,
+    "plenary": 1,
+    "points": 1,
+    "polyphonic": 1,
+    "portfolio": 4,
+    "portfolios": 1,
+    "position": 1,
+    "positions": 1,
+    "possible": 1,
+    "potential": 1,
+    "powered": 2,
+    "powerhouse": 1,
+    "practice": 1,
+    "prevention": 1,
+    "prior": 2,
+    "priority": 1,
+    "procedural": 1,
+    "product": 1,
+    "products": 2,
+    "progress": 2,
+    "progressing": 1,
+    "progression": 1,
+    "projected": 1,
+    "prostate": 1,
+    "proteus": 1,
+    "provides": 1,
+    "psoriasis": 1,
+    "pulsed": 2,
+    "puresee": 1,
+    "q2": 9,
+    "quarter": 10,
+    "quarterly": 2,
+    "radio": 1,
+    "raised": 1,
+    "reach": 1,
+    "real": 1,
+    "received": 3,
+    "receiving": 1,
+    "recent": 1,
+    "recently": 2,
+    "recovery": 2,
+    "reduces": 1,
+    "reflects": 1,
+    "regimen": 1,
+    "regions": 1,
+    "relapse": 1,
+    "remains": 1,
+    "reported": 1,
+    "reporting": 1,
+    "responses": 2,
+    "restoration": 2,
+    "result": 1,
+    "results": 1,
+    "revenue": 1,
+    "review": 1,
+    "risk": 1,
+    "robotic": 2,
+    "robotics": 1,
+    "role": 1,
+    "rollout": 1,
+    "rooted": 1,
+    "ryan": 2,
+    "rybrevant": 3,
+    "safety": 1,
+    "said": 1,
+    "sales": 9,
+    "scale": 3,
+    "schizophrenia": 1,
+    "science": 1,
+    "scientific": 1,
+    "second": 2,
+    "see": 2,
+    "seeking": 1,
+    "selectivity": 1,
+    "sf": 1,
+    "share": 1,
+    "shared": 1,
+    "shockwave": 1,
+    "showing": 2,
+    "sight": 1,
+    "significant": 2,
+    "significantly": 2,
+    "simplicity": 1,
+    "since": 1,
+    "single": 1,
+    "slowed": 1,
+    "smarttouch": 1,
+    "solid": 1,
+    "sonata": 1,
+    "spectrum": 1,
+    "spravato": 1,
+    "standing": 1,
+    "stapler": 1,
+    "started": 1,
+    "starts": 1,
+    "status": 1,
+    "stelara": 1,
+    "still": 1,
+    "strength": 1,
+    "strengthen": 1,
+    "strengthened": 1,
+    "strengthens": 1,
+    "strong": 5,
+    "stronger": 1,
+    "strongest": 1,
+    "strongly": 1,
+    "study": 1,
+    "submitted": 1,
+    "support": 1,
+    "surgeons": 1,
+    "surgery": 3,
+    "surgical": 3,
+    "survival": 1,
+    "system": 3,
+    "systemic": 2,
+    "table": 1,
+    "tailoring": 1,
+    "talk": 1,
+    "talvey": 2,
+    "target": 1,
+    "teams": 1,
+    "technologies": 2,
+    "tecnis": 1,
+    "tecvayli": 1,
+    "than": 9,
+    "thank": 1,
+    "that": 8,
+    "the": 36,
+    "their": 1,
+    "therapeutics": 1,
+    "therapy": 3,
+    "thermocool": 1,
+    "these": 1,
+    "third": 1,
+    "this": 4,
+    "three": 1,
+    "time": 1,
+    "to": 29,
+    "today": 1,
+    "tomorrow": 1,
+    "top": 1,
+    "topline": 1,
+    "towards": 1,
+    "track": 2,
+    "transaction": 1,
+    "transform": 3,
+    "transformational": 1,
+    "treat": 1,
+    "treated": 1,
+    "treatment": 4,
+    "treatments": 4,
+    "tremfya": 2,
+    "tumors": 1,
+    "turn": 2,
+    "ulcerative": 1,
+    "underscoring": 1,
+    "unique": 4,
+    "uniquely": 1,
+    "unlocking": 1,
+    "unmet": 2,
+    "up": 2,
+    "uptake": 2,
+    "us": 2,
+    "varipulse": 1,
+    "versus": 2,
+    "vision": 3,
+    "volumes": 1,
+    "warm": 1,
+    "was": 1,
+    "wave": 1,
+    "way": 1,
+    "we": 34,
+    "weighing": 1,
+    "welcome": 1,
+    "were": 1,
+    "what": 2,
+    "when": 1,
+    "where": 1,
+    "which": 2,
+    "while": 4,
+    "will": 4,
+    "with": 17,
+    "working": 1,
+    "world": 2,
+    "worldwide": 1,
+    "would": 1,
+    "year": 5,
+    "years": 1,
+    "yet": 1,
+    "you": 1,
+    "your": 1
+   },
+   "n_sentences": 54,
+   "source": "s203.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q2 2026 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s203.q4cdn.com/636242992/files/doc_financials/2026/q2/JNJ-USQ_Transcript_2026-07-15.pdf",
+   "words": 1193
+  },
+  {
+   "counts": {
+    "a": 13,
+    "abiomed": 1,
+    "ablation": 2,
+    "accelerate": 1,
+    "accelerated": 2,
+    "access": 1,
+    "across": 3,
+    "acuvue": 1,
+    "add": 1,
+    "adjunctive": 1,
+    "advanced": 1,
+    "advantage": 1,
+    "again": 1,
+    "ago": 1,
+    "aiming": 2,
+    "all": 2,
+    "already": 1,
+    "also": 3,
+    "and": 47,
+    "announced": 1,
+    "annual": 2,
+    "another": 2,
+    "approval": 7,
+    "are": 11,
+    "areas": 2,
+    "as": 8,
+    "assets": 1,
+    "astigmatism": 1,
+    "at": 1,
+    "atrial": 1,
+    "back": 1,
+    "balance": 1,
+    "bar": 1,
+    "based": 1,
+    "be": 3,
+    "beat": 1,
+    "been": 1,
+    "beginning": 1,
+    "being": 1,
+    "beyond": 1,
+    "billion": 4,
+    "biologic": 1,
+    "bladder": 1,
+    "bothersome": 1,
+    "bowel": 1,
+    "brands": 1,
+    "breakthrough": 1,
+    "building": 4,
+    "built": 1,
+    "businesses": 1,
+    "by": 4,
+    "call": 1,
+    "can": 2,
+    "cancer": 4,
+    "cancers": 1,
+    "caplyta": 1,
+    "cardiovascular": 2,
+    "care": 2,
+    "carvykti": 1,
+    "category": 2,
+    "catheter": 2,
+    "cell": 1,
+    "change": 1,
+    "choice": 2,
+    "circulatory": 2,
+    "combination": 1,
+    "combined": 1,
+    "commitments": 1,
+    "comparable": 1,
+    "competitive": 1,
+    "complementary": 1,
+    "complete": 1,
+    "complex": 1,
+    "confidence": 1,
+    "confident": 2,
+    "consensus": 1,
+    "continue": 6,
+    "continued": 1,
+    "continues": 2,
+    "contract": 1,
+    "convenient": 1,
+    "create": 1,
+    "cure": 1,
+    "currently": 1,
+    "daily": 1,
+    "darren": 1,
+    "darzalex": 2,
+    "data": 3,
+    "day": 2,
+    "days": 1,
+    "de": 1,
+    "decade": 2,
+    "decades": 1,
+    "deep": 1,
+    "deliver": 4,
+    "delivered": 2,
+    "delivering": 3,
+    "demand": 1,
+    "depressive": 1,
+    "depth": 2,
+    "designation": 1,
+    "device": 1,
+    "did": 1,
+    "differentiated": 1,
+    "digit": 2,
+    "digits": 1,
+    "disease": 2,
+    "disorder": 1,
+    "disposable": 1,
+    "disturbances": 1,
+    "dosing": 1,
+    "double": 3,
+    "drive": 1,
+    "dual": 2,
+    "each": 1,
+    "early": 1,
+    "efficiency": 1,
+    "egfr": 1,
+    "electrophysiology": 3,
+    "end": 1,
+    "energy": 1,
+    "europe": 2,
+    "evaluated": 1,
+    "even": 1,
+    "events": 1,
+    "ever": 1,
+    "everyone": 1,
+    "execution": 1,
+    "exemption": 1,
+    "expanding": 2,
+    "expect": 1,
+    "extended": 1,
+    "faspro": 2,
+    "fast": 1,
+    "faster": 1,
+    "fastest": 1,
+    "fda": 6,
+    "feedback": 1,
+    "few": 1,
+    "fibrillation": 1,
+    "field": 1,
+    "filing": 1,
+    "finally": 1,
+    "first": 10,
+    "focal": 1,
+    "focus": 3,
+    "focused": 1,
+    "for": 22,
+    "from": 1,
+    "fueled": 1,
+    "full": 2,
+    "fundamentally": 1,
+    "further": 2,
+    "future": 1,
+    "generate": 1,
+    "glare": 1,
+    "globally": 1,
+    "gold": 1,
+    "good": 1,
+    "growing": 3,
+    "growth": 14,
+    "guidance": 1,
+    "had": 2,
+    "halos": 1,
+    "has": 3,
+    "have": 3,
+    "having": 1,
+    "head": 2,
+    "health": 1,
+    "healthiest": 1,
+    "heart": 2,
+    "helps": 1,
+    "hernia": 1,
+    "high": 5,
+    "history": 1,
+    "how": 1,
+    "hub": 1,
+    "i": 1,
+    "i'm": 1,
+    "icotyde": 7,
+    "il": 2,
+    "immunology": 3,
+    "immunotherapy": 1,
+    "impact": 2,
+    "importance": 1,
+    "improve": 2,
+    "improving": 1,
+    "in": 40,
+    "including": 1,
+    "industry": 1,
+    "inflammatory": 1,
+    "inguinal": 1,
+    "inlexzo": 1,
+    "innovation": 2,
+    "innovations": 1,
+    "innovative": 2,
+    "interventions": 1,
+    "into": 1,
+    "intraocular": 2,
+    "invasive": 1,
+    "investigational": 1,
+    "investing": 1,
+    "investment": 1,
+    "is": 14,
+    "it": 2,
+    "its": 2,
+    "johnson": 6,
+    "joining": 1,
+    "journey": 1,
+    "just": 2,
+    "keeps": 1,
+    "key": 2,
+    "large": 1,
+    "largest": 1,
+    "last": 1,
+    "later": 1,
+    "launch": 4,
+    "launches": 1,
+    "leader": 2,
+    "leadership": 1,
+    "leading": 2,
+    "least": 1,
+    "lens": 2,
+    "lenses": 2,
+    "let's": 2,
+    "levels": 1,
+    "like": 2,
+    "line": 4,
+    "lung": 1,
+    "made": 1,
+    "maintain": 1,
+    "major": 1,
+    "market": 1,
+    "max": 1,
+    "meaningfully": 1,
+    "medicine": 2,
+    "medtech": 2,
+    "meet": 1,
+    "mental": 1,
+    "metastatic": 1,
+    "moderate": 1,
+    "momentum": 3,
+    "monofocal": 1,
+    "month": 3,
+    "monthly": 1,
+    "months": 2,
+    "more": 4,
+    "morning": 1,
+    "most": 1,
+    "multiple": 4,
+    "muscle": 1,
+    "mutated": 1,
+    "myeloma": 3,
+    "neck": 2,
+    "need": 2,
+    "neuroscience": 2,
+    "never": 1,
+    "new": 3,
+    "no": 2,
+    "non": 2,
+    "novo": 1,
+    "now": 4,
+    "number": 1,
+    "oasys": 1,
+    "of": 33,
+    "off": 1,
+    "offering": 1,
+    "omnypulse": 1,
+    "on": 9,
+    "once": 2,
+    "oncology": 2,
+    "one": 2,
+    "ongoing": 1,
+    "only": 2,
+    "operating": 1,
+    "operational": 4,
+    "or": 4,
+    "oral": 1,
+    "origami": 1,
+    "ottava": 1,
+    "our": 29,
+    "outcomes": 2,
+    "outperforming": 1,
+    "over": 1,
+    "overall": 1,
+    "patient": 3,
+    "patients": 5,
+    "peak": 1,
+    "peptide": 1,
+    "performance": 2,
+    "pfa": 1,
+    "phase": 1,
+    "pill": 1,
+    "pipeline": 4,
+    "place": 1,
+    "plaque": 2,
+    "platform": 2,
+    "platforms": 1,
+    "plus": 1,
+    "portfolio": 5,
+    "positions": 1,
+    "positive": 1,
+    "post": 1,
+    "potential": 3,
+    "powerhouse": 1,
+    "presbyopia": 1,
+    "presence": 1,
+    "presented": 1,
+    "pro": 1,
+    "procedural": 1,
+    "procedures": 1,
+    "product": 1,
+    "products": 2,
+    "profile": 1,
+    "progress": 3,
+    "projected": 1,
+    "promise": 1,
+    "psoriasis": 2,
+    "psoriatic": 1,
+    "pulsed": 1,
+    "puresee": 1,
+    "q1": 4,
+    "quarter": 3,
+    "raise": 1,
+    "raised": 1,
+    "rate": 2,
+    "receive": 1,
+    "received": 3,
+    "receiving": 1,
+    "recent": 4,
+    "recently": 2,
+    "recovery": 2,
+    "recurrent": 1,
+    "reflecting": 1,
+    "reflects": 1,
+    "refractory": 1,
+    "regimen": 1,
+    "relapsed": 1,
+    "remains": 1,
+    "remicade": 1,
+    "repair": 1,
+    "reported": 3,
+    "resilient": 1,
+    "response": 1,
+    "restoration": 2,
+    "restoring": 1,
+    "results": 1,
+    "revenue": 2,
+    "risk": 1,
+    "robotic": 1,
+    "room": 1,
+    "rybrevant": 2,
+    "safety": 2,
+    "said": 1,
+    "sales": 7,
+    "same": 1,
+    "second": 2,
+    "see": 2,
+    "seeing": 1,
+    "sensitivity": 1,
+    "severe": 1,
+    "sf": 1,
+    "shaping": 1,
+    "share": 1,
+    "shockwave": 1,
+    "show": 1,
+    "showing": 2,
+    "sight": 2,
+    "significantly": 1,
+    "single": 1,
+    "six": 1,
+    "small": 1,
+    "smarttouch": 1,
+    "solid": 1,
+    "spravato": 1,
+    "standard": 3,
+    "start": 2,
+    "starts": 1,
+    "state": 1,
+    "stelara": 1,
+    "streamline": 1,
+    "strengthened": 1,
+    "strokes": 1,
+    "strong": 10,
+    "stronger": 1,
+    "strongest": 1,
+    "study": 1,
+    "subcutaneous": 1,
+    "submitted": 1,
+    "success": 2,
+    "surgery": 2,
+    "surgical": 1,
+    "sustained": 2,
+    "system": 1,
+    "systemic": 1,
+    "talvey": 1,
+    "target": 1,
+    "targeted": 1,
+    "tecnis": 2,
+    "tecvayli": 2,
+    "than": 2,
+    "thank": 1,
+    "that": 6,
+    "the": 46,
+    "therapy": 2,
+    "thermocool": 1,
+    "this": 1,
+    "three": 2,
+    "through": 1,
+    "throughout": 1,
+    "time": 1,
+    "times": 1,
+    "tip": 1,
+    "to": 25,
+    "today": 1,
+    "together": 2,
+    "took": 1,
+    "track": 1,
+    "trajectory": 1,
+    "transforming": 1,
+    "treat": 1,
+    "treated": 2,
+    "treatment": 6,
+    "tremfya": 5,
+    "trial": 1,
+    "trust": 1,
+    "tumors": 1,
+    "turn": 2,
+    "u.s.": 1,
+    "underway": 1,
+    "unique": 2,
+    "unmet": 1,
+    "up": 1,
+    "us": 4,
+    "varipulse": 2,
+    "varipure": 1,
+    "very": 3,
+    "vision": 2,
+    "visual": 1,
+    "was": 1,
+    "we": 26,
+    "we'll": 1,
+    "we're": 1,
+    "well": 1,
+    "when": 1,
+    "where": 2,
+    "which": 2,
+    "while": 1,
+    "will": 3,
+    "with": 21,
+    "world": 1,
+    "would": 1,
+    "year": 5,
+    "you": 3,
+    "zero": 1
+   },
+   "date": "2026-04-14",
+   "entries": {
+    "a": [
+     2,
+     5,
+     7,
+     11
+    ],
+    "abiomed": [
+     8
+    ],
+    "ablation": [
+     9
+    ],
+    "access": [
+     12
+    ],
+    "across": [
+     2,
+     4
+    ],
+    "acuvue": [
+     12
+    ],
+    "advantage": [
+     2
+    ],
+    "also": [
+     4
+    ],
+    "and": [
+     0,
+     2,
+     2,
+     3,
+     3,
+     4,
+     7,
+     9,
+     10,
+     10,
+     11,
+     12,
+     12
+    ],
+    "announced": [
+     10
+    ],
+    "another": [
+     8
+    ],
+    "approval": [
+     6,
+     11
+    ],
+    "are": [
+     11,
+     12
+    ],
+    "as": [
+     5,
+     5,
+     5,
+     8
+    ],
+    "assets": [
+     2
+    ],
+    "astigmatism": [
+     12
+    ],
+    "atrial": [
+     9
+    ],
+    "building": [
+     9,
+     11
+    ],
+    "businesses": [
+     2
+    ],
+    "cancer": [
+     6
+    ],
+    "cardiovascular": [
+     2
+    ],
+    "care": [
+     5
+    ],
+    "carvykti": [
+     4
+    ],
+    "category": [
+     7
+    ],
+    "catheter": [
+     10
+    ],
+    "cell": [
+     6
+    ],
+    "circulatory": [
+     8
+    ],
+    "combination": [
+     3
+    ],
+    "competitive": [
+     2
+    ],
+    "complementary": [
+     7
+    ],
+    "continue": [
+     4
+    ],
+    "create": [
+     7
+    ],
+    "data": [
+     10
+    ],
+    "de": [
+     11
+    ],
+    "deliver": [
+     4
+    ],
+    "delivered": [
+     1
+    ],
+    "delivering": [
+     3
+    ],
+    "device": [
+     11
+    ],
+    "did": [
+     8
+    ],
+    "differentiated": [
+     2
+    ],
+    "digit": [
+     4
+    ],
+    "disposable": [
+     12
+    ],
+    "dosing": [
+     6
+    ],
+    "double": [
+     4
+    ],
+    "drive": [
+     2
+    ],
+    "each": [
+     2
+    ],
+    "early": [
+     5
+    ],
+    "egfr": [
+     6
+    ],
+    "electrophysiology": [
+     9
+    ],
+    "events": [
+     10
+    ],
+    "everyone": [
+     0
+    ],
+    "execution": [
+     3
+    ],
+    "exemption": [
+     11
+    ],
+    "expanding": [
+     12
+    ],
+    "faspro": [
+     6
+    ],
+    "fda": [
+     6
+    ],
+    "fibrillation": [
+     9
+    ],
+    "field": [
+     9
+    ],
+    "filing": [
+     11
+    ],
+    "finally": [
+     10
+    ],
+    "first": [
+     1
+    ],
+    "focal": [
+     10
+    ],
+    "for": [
+     0,
+     6,
+     6,
+     9,
+     10,
+     11,
+     11,
+     12,
+     12
+    ],
+    "full": [
+     4
+    ],
+    "globally": [
+     12
+    ],
+    "good": [
+     0
+    ],
+    "growth": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "had": [
+     8
+    ],
+    "have": [
+     2
+    ],
+    "healthiest": [
+     12
+    ],
+    "heart": [
+     8
+    ],
+    "hernia": [
+     11
+    ],
+    "high": [
+     4
+    ],
+    "icotyde": [
+     7
+    ],
+    "immunology": [
+     2
+    ],
+    "importance": [
+     4
+    ],
+    "in": [
+     1,
+     3,
+     6,
+     8,
+     8,
+     9,
+     11,
+     12
+    ],
+    "industry": [
+     3
+    ],
+    "inguinal": [
+     11
+    ],
+    "innovation": [
+     3
+    ],
+    "innovative": [
+     3
+    ],
+    "intraocular": [
+     12
+    ],
+    "investigational": [
+     11
+    ],
+    "investment": [
+     3
+    ],
+    "is": [
+     3
+    ],
+    "its": [
+     12
+    ],
+    "joining": [
+     0
+    ],
+    "journey": [
+     4
+    ],
+    "keeps": [
+     9
+    ],
+    "key": [
+     2
+    ],
+    "large": [
+     10
+    ],
+    "leading": [
+     3
+    ],
+    "lenses": [
+     12,
+     12
+    ],
+    "line": [
+     5
+    ],
+    "lung": [
+     6
+    ],
+    "made": [
+     11
+    ],
+    "max": [
+     12
+    ],
+    "medicine": [
+     3
+    ],
+    "medtech": [
+     3
+    ],
+    "momentum": [
+     9
+    ],
+    "month": [
+     10
+    ],
+    "monthly": [
+     6
+    ],
+    "months": [
+     1
+    ],
+    "morning": [
+     0
+    ],
+    "multiple": [
+     2,
+     4
+    ],
+    "mutated": [
+     6
+    ],
+    "myeloma": [
+     4
+    ],
+    "neuroscience": [
+     2
+    ],
+    "new": [
+     5
+    ],
+    "no": [
+     10
+    ],
+    "non": [
+     6
+    ],
+    "novo": [
+     11
+    ],
+    "now": [
+     11
+    ],
+    "oasys": [
+     12
+    ],
+    "of": [
+     1,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "omnypulse": [
+     10
+    ],
+    "on": [
+     11,
+     11
+    ],
+    "oncology": [
+     2
+    ],
+    "operational": [
+     1
+    ],
+    "ottava": [
+     11
+    ],
+    "our": [
+     2,
+     3,
+     4,
+     9,
+     10,
+     11,
+     11,
+     12,
+     12
+    ],
+    "outcomes": [
+     10
+    ],
+    "patients": [
+     6
+    ],
+    "pfa": [
+     10
+    ],
+    "platform": [
+     9
+    ],
+    "portfolio": [
+     4,
+     7
+    ],
+    "positions": [
+     5
+    ],
+    "positive": [
+     10
+    ],
+    "potential": [
+     5
+    ],
+    "presbyopia": [
+     12
+    ],
+    "procedural": [
+     10
+    ],
+    "progress": [
+     11
+    ],
+    "pulsed": [
+     9
+    ],
+    "q1": [
+     11
+    ],
+    "quarter": [
+     8
+    ],
+    "rate": [
+     10
+    ],
+    "received": [
+     6
+    ],
+    "recent": [
+     11
+    ],
+    "recently": [
+     10
+    ],
+    "recovery": [
+     8
+    ],
+    "reflecting": [
+     4
+    ],
+    "regimen": [
+     5
+    ],
+    "repair": [
+     11
+    ],
+    "resilient": [
+     3
+    ],
+    "restoration": [
+     8
+    ],
+    "restoring": [
+     12
+    ],
+    "robotic": [
+     11
+    ],
+    "rybrevant": [
+     6
+    ],
+    "safety": [
+     10
+    ],
+    "sales": [
+     1
+    ],
+    "second": [
+     5,
+     11
+    ],
+    "shaping": [
+     7
+    ],
+    "shockwave": [
+     8
+    ],
+    "showing": [
+     10
+    ],
+    "sight": [
+     12
+    ],
+    "six": [
+     2
+    ],
+    "small": [
+     6
+    ],
+    "solid": [
+     6
+    ],
+    "standard": [
+     5
+    ],
+    "state": [
+     12
+    ],
+    "strong": [
+     2,
+     3,
+     8
+    ],
+    "subcutaneous": [
+     6
+    ],
+    "success": [
+     10
+    ],
+    "surgery": [
+     2
+    ],
+    "surgical": [
+     11
+    ],
+    "sustained": [
+     2
+    ],
+    "system": [
+     11
+    ],
+    "talvey": [
+     4
+    ],
+    "tecnis": [
+     12
+    ],
+    "tecvayli": [
+     4
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     5
+    ],
+    "the": [
+     1,
+     1,
+     4,
+     4,
+     5
+    ],
+    "three": [
+     1
+    ],
+    "tip": [
+     10
+    ],
+    "to": [
+     2,
+     4,
+     12
+    ],
+    "together": [
+     3,
+     7
+    ],
+    "treatment": [
+     4
+    ],
+    "tremfya": [
+     7
+    ],
+    "trial": [
+     11
+    ],
+    "tumors": [
+     6
+    ],
+    "underway": [
+     11
+    ],
+    "unique": [
+     3
+    ],
+    "us": [
+     0
+    ],
+    "varipulse": [
+     9
+    ],
+    "vision": [
+     2,
+     12
+    ],
+    "we": [
+     1,
+     2,
+     10,
+     11,
+     11,
+     12
+    ],
+    "with": [
+     3,
+     6,
+     11,
+     12
+    ],
+    "year": [
+     1
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Good morning, everyone, and thank you for joining us.",
+    "In the first three months of the year, we delivered operational sales growth of 6.4%.",
+    "Across each of our six key businesses: Oncology, Immunology, Neuroscience, Cardiovascular, Surgery, and Vision, we have multiple differentiated assets to drive sustained growth and a strong competitive advantage.",
+    "Our unique combination of Innovative Medicine and MedTech, together with strong execution and industry-leading investment in innovation, is delivering resilient growth.",
+    "CARVYKTI, TECVAYLI, and TALVEY also continue to deliver high double-digit growth reflecting the importance of our multiple myeloma portfolio across the full treatment journey.",
+    "That positions the regimen as a potential new standard of care as early as second line.",
+    "In solid tumors, RYBREVANT FASPRO received FDA approval for subcutaneous monthly dosing for patients with EGFR mutated non-small cell lung cancer.",
+    "Together, ICOTYDE and TREMFYA create a complementary category shaping portfolio.",
+    "In heart recovery, Abiomed had another strong quarter as did Shockwave in circulatory restoration.",
+    "And in electrophysiology, VARIPULSE our pulsed field ablation platform for atrial fibrillation keeps building momentum.",
+    "And finally, we recently announced 12-month data for OMNYPULSE, our large focal-tip PFA catheter, showing positive outcomes, no safety events, and 100% procedural success rate.",
+    "In Q1, we made progress on our OTTAVA robotic surgical system, and we are building on our recent De Novo filing for approval with a second Investigational Device Exemption trial now underway for inguinal hernia repair.",
+    "In Vision, we are restoring sight to its healthiest state with expanding access globally for our ACUVUE OASYS MAX disposable lenses for presbyopia and astigmatism and our TECNIS intraocular lenses."
+   ],
+   "id": "jnj-jnj-usq-transcript-2026-04-14",
+   "msent": {
+    "a": 11,
+    "abiomed": 1,
+    "ablation": 2,
+    "accelerate": 1,
+    "accelerated": 2,
+    "access": 1,
+    "across": 3,
+    "acuvue": 1,
+    "add": 1,
+    "adjunctive": 1,
+    "advanced": 1,
+    "advantage": 1,
+    "again": 1,
+    "ago": 1,
+    "aiming": 2,
+    "all": 2,
+    "already": 1,
+    "also": 3,
+    "and": 32,
+    "announced": 1,
+    "annual": 2,
+    "another": 2,
+    "approval": 7,
+    "are": 10,
+    "areas": 2,
+    "as": 5,
+    "assets": 1,
+    "astigmatism": 1,
+    "at": 1,
+    "atrial": 1,
+    "back": 1,
+    "balance": 1,
+    "bar": 1,
+    "based": 1,
+    "be": 3,
+    "beat": 1,
+    "been": 1,
+    "beginning": 1,
+    "being": 1,
+    "beyond": 1,
+    "billion": 4,
+    "biologic": 1,
+    "bladder": 1,
+    "bothersome": 1,
+    "bowel": 1,
+    "brands": 1,
+    "breakthrough": 1,
+    "building": 4,
+    "built": 1,
+    "businesses": 1,
+    "by": 4,
+    "call": 1,
+    "can": 2,
+    "cancer": 3,
+    "cancers": 1,
+    "caplyta": 1,
+    "cardiovascular": 2,
+    "care": 2,
+    "carvykti": 1,
+    "category": 2,
+    "catheter": 2,
+    "cell": 1,
+    "change": 1,
+    "choice": 1,
+    "circulatory": 2,
+    "combination": 1,
+    "combined": 1,
+    "commitments": 1,
+    "comparable": 1,
+    "competitive": 1,
+    "complementary": 1,
+    "complete": 1,
+    "complex": 1,
+    "confidence": 1,
+    "confident": 2,
+    "consensus": 1,
+    "continue": 6,
+    "continued": 1,
+    "continues": 2,
+    "contract": 1,
+    "convenient": 1,
+    "create": 1,
+    "cure": 1,
+    "currently": 1,
+    "daily": 1,
+    "darren": 1,
+    "darzalex": 2,
+    "data": 3,
+    "day": 1,
+    "days": 1,
+    "de": 1,
+    "decade": 2,
+    "decades": 1,
+    "deep": 1,
+    "deliver": 4,
+    "delivered": 2,
+    "delivering": 3,
+    "demand": 1,
+    "depressive": 1,
+    "depth": 2,
+    "designation": 1,
+    "device": 1,
+    "did": 1,
+    "differentiated": 1,
+    "digit": 2,
+    "digits": 1,
+    "disease": 2,
+    "disorder": 1,
+    "disposable": 1,
+    "disturbances": 1,
+    "dosing": 1,
+    "double": 3,
+    "drive": 1,
+    "dual": 2,
+    "each": 1,
+    "early": 1,
+    "efficiency": 1,
+    "egfr": 1,
+    "electrophysiology": 3,
+    "end": 1,
+    "energy": 1,
+    "europe": 2,
+    "evaluated": 1,
+    "even": 1,
+    "events": 1,
+    "ever": 1,
+    "everyone": 1,
+    "execution": 1,
+    "exemption": 1,
+    "expanding": 2,
+    "expect": 1,
+    "extended": 1,
+    "faspro": 2,
+    "fast": 1,
+    "faster": 1,
+    "fastest": 1,
+    "fda": 6,
+    "feedback": 1,
+    "few": 1,
+    "fibrillation": 1,
+    "field": 1,
+    "filing": 1,
+    "finally": 1,
+    "first": 9,
+    "focal": 1,
+    "focus": 3,
+    "focused": 1,
+    "for": 18,
+    "from": 1,
+    "fueled": 1,
+    "full": 2,
+    "fundamentally": 1,
+    "further": 2,
+    "future": 1,
+    "generate": 1,
+    "glare": 1,
+    "globally": 1,
+    "gold": 1,
+    "good": 1,
+    "growing": 3,
+    "growth": 13,
+    "guidance": 1,
+    "had": 2,
+    "halos": 1,
+    "has": 3,
+    "have": 3,
+    "having": 1,
+    "head": 1,
+    "health": 1,
+    "healthiest": 1,
+    "heart": 2,
+    "helps": 1,
+    "hernia": 1,
+    "high": 3,
+    "history": 1,
+    "how": 1,
+    "hub": 1,
+    "i": 1,
+    "i'm": 1,
+    "icotyde": 7,
+    "il": 2,
+    "immunology": 3,
+    "immunotherapy": 1,
+    "impact": 2,
+    "importance": 1,
+    "improve": 2,
+    "improving": 1,
+    "in": 29,
+    "including": 1,
+    "industry": 1,
+    "inflammatory": 1,
+    "inguinal": 1,
+    "inlexzo": 1,
+    "innovation": 2,
+    "innovations": 1,
+    "innovative": 2,
+    "interventions": 1,
+    "into": 1,
+    "intraocular": 2,
+    "invasive": 1,
+    "investigational": 1,
+    "investing": 1,
+    "investment": 1,
+    "is": 12,
+    "it": 2,
+    "its": 2,
+    "johnson": 3,
+    "joining": 1,
+    "journey": 1,
+    "just": 2,
+    "keeps": 1,
+    "key": 2,
+    "large": 1,
+    "largest": 1,
+    "last": 1,
+    "later": 1,
+    "launch": 4,
+    "launches": 1,
+    "leader": 2,
+    "leadership": 1,
+    "leading": 2,
+    "least": 1,
+    "lens": 1,
+    "lenses": 1,
+    "let's": 2,
+    "levels": 1,
+    "like": 2,
+    "line": 4,
+    "lung": 1,
+    "made": 1,
+    "maintain": 1,
+    "major": 1,
+    "market": 1,
+    "max": 1,
+    "meaningfully": 1,
+    "medicine": 2,
+    "medtech": 2,
+    "meet": 1,
+    "mental": 1,
+    "metastatic": 1,
+    "moderate": 1,
+    "momentum": 3,
+    "monofocal": 1,
+    "month": 3,
+    "monthly": 1,
+    "months": 2,
+    "more": 4,
+    "morning": 1,
+    "most": 1,
+    "multiple": 4,
+    "muscle": 1,
+    "mutated": 1,
+    "myeloma": 3,
+    "neck": 1,
+    "need": 2,
+    "neuroscience": 2,
+    "never": 1,
+    "new": 3,
+    "no": 2,
+    "non": 2,
+    "novo": 1,
+    "now": 4,
+    "number": 1,
+    "oasys": 1,
+    "of": 24,
+    "off": 1,
+    "offering": 1,
+    "omnypulse": 1,
+    "on": 7,
+    "once": 2,
+    "oncology": 2,
+    "one": 2,
+    "ongoing": 1,
+    "only": 2,
+    "operating": 1,
+    "operational": 4,
+    "or": 4,
+    "oral": 1,
+    "origami": 1,
+    "ottava": 1,
+    "our": 22,
+    "outcomes": 2,
+    "outperforming": 1,
+    "over": 1,
+    "overall": 1,
+    "patient": 3,
+    "patients": 5,
+    "peak": 1,
+    "peptide": 1,
+    "performance": 2,
+    "pfa": 1,
+    "phase": 1,
+    "pill": 1,
+    "pipeline": 4,
+    "place": 1,
+    "plaque": 2,
+    "platform": 2,
+    "platforms": 1,
+    "plus": 1,
+    "portfolio": 5,
+    "positions": 1,
+    "positive": 1,
+    "post": 1,
+    "potential": 3,
+    "powerhouse": 1,
+    "presbyopia": 1,
+    "presence": 1,
+    "presented": 1,
+    "pro": 1,
+    "procedural": 1,
+    "procedures": 1,
+    "product": 1,
+    "products": 2,
+    "profile": 1,
+    "progress": 3,
+    "projected": 1,
+    "promise": 1,
+    "psoriasis": 2,
+    "psoriatic": 1,
+    "pulsed": 1,
+    "puresee": 1,
+    "q1": 4,
+    "quarter": 3,
+    "raise": 1,
+    "raised": 1,
+    "rate": 2,
+    "receive": 1,
+    "received": 3,
+    "receiving": 1,
+    "recent": 4,
+    "recently": 2,
+    "recovery": 2,
+    "recurrent": 1,
+    "reflecting": 1,
+    "reflects": 1,
+    "refractory": 1,
+    "regimen": 1,
+    "relapsed": 1,
+    "remains": 1,
+    "remicade": 1,
+    "repair": 1,
+    "reported": 3,
+    "resilient": 1,
+    "response": 1,
+    "restoration": 2,
+    "restoring": 1,
+    "results": 1,
+    "revenue": 2,
+    "risk": 1,
+    "robotic": 1,
+    "room": 1,
+    "rybrevant": 2,
+    "safety": 2,
+    "said": 1,
+    "sales": 6,
+    "same": 1,
+    "second": 2,
+    "see": 2,
+    "seeing": 1,
+    "sensitivity": 1,
+    "severe": 1,
+    "sf": 1,
+    "shaping": 1,
+    "share": 1,
+    "shockwave": 1,
+    "show": 1,
+    "showing": 2,
+    "sight": 2,
+    "significantly": 1,
+    "single": 1,
+    "six": 1,
+    "small": 1,
+    "smarttouch": 1,
+    "solid": 1,
+    "spravato": 1,
+    "standard": 3,
+    "start": 2,
+    "starts": 1,
+    "state": 1,
+    "stelara": 1,
+    "streamline": 1,
+    "strengthened": 1,
+    "strokes": 1,
+    "strong": 10,
+    "stronger": 1,
+    "strongest": 1,
+    "study": 1,
+    "subcutaneous": 1,
+    "submitted": 1,
+    "success": 2,
+    "surgery": 2,
+    "surgical": 1,
+    "sustained": 2,
+    "system": 1,
+    "systemic": 1,
+    "talvey": 1,
+    "target": 1,
+    "targeted": 1,
+    "tecnis": 2,
+    "tecvayli": 2,
+    "than": 2,
+    "thank": 1,
+    "that": 6,
+    "the": 29,
+    "therapy": 2,
+    "thermocool": 1,
+    "this": 1,
+    "three": 2,
+    "through": 1,
+    "throughout": 1,
+    "time": 1,
+    "times": 1,
+    "tip": 1,
+    "to": 19,
+    "today": 1,
+    "together": 2,
+    "took": 1,
+    "track": 1,
+    "trajectory": 1,
+    "transforming": 1,
+    "treat": 1,
+    "treated": 2,
+    "treatment": 5,
+    "tremfya": 5,
+    "trial": 1,
+    "trust": 1,
+    "tumors": 1,
+    "turn": 2,
+    "u.s.": 1,
+    "underway": 1,
+    "unique": 2,
+    "unmet": 1,
+    "up": 1,
+    "us": 4,
+    "varipulse": 2,
+    "varipure": 1,
+    "very": 3,
+    "vision": 2,
+    "visual": 1,
+    "was": 1,
+    "we": 21,
+    "we'll": 1,
+    "we're": 1,
+    "well": 1,
+    "when": 1,
+    "where": 2,
+    "which": 2,
+    "while": 1,
+    "will": 3,
+    "with": 19,
+    "world": 1,
+    "would": 1,
+    "year": 5,
+    "you": 3,
+    "zero": 1
+   },
+   "n_sentences": 50,
+   "source": "s203.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q1 2026 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s203.q4cdn.com/636242992/files/doc_financials/2026/q1/JNJ-USQ_Transcript_2026-04-14.pdf",
+   "words": 1073
+  },
+  {
+   "counts": {
+    "a": 15,
+    "abiomed": 1,
+    "ablation": 2,
+    "about": 2,
+    "accelerate": 1,
+    "accelerated": 2,
+    "accelerating": 2,
+    "acceleration": 1,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 6,
+    "active": 1,
+    "acuvue": 1,
+    "added": 1,
+    "addressing": 1,
+    "adjunctive": 1,
+    "administration": 1,
+    "advantage": 1,
+    "ahead": 2,
+    "alone": 1,
+    "also": 5,
+    "alternative": 1,
+    "an": 2,
+    "and": 55,
+    "announced": 2,
+    "annual": 4,
+    "annually": 1,
+    "another": 1,
+    "anti": 1,
+    "anticipate": 2,
+    "anticipated": 2,
+    "approval": 3,
+    "approvals": 3,
+    "approximately": 1,
+    "are": 17,
+    "areas": 3,
+    "art": 1,
+    "as": 10,
+    "assets": 1,
+    "astigmatism": 1,
+    "at": 3,
+    "atrial": 1,
+    "back": 1,
+    "balance": 1,
+    "bar": 1,
+    "be": 3,
+    "became": 1,
+    "because": 1,
+    "becoming": 1,
+    "been": 1,
+    "before": 1,
+    "believe": 1,
+    "best": 1,
+    "beyond": 1,
+    "billion": 10,
+    "billions": 1,
+    "bladder": 1,
+    "bladders": 1,
+    "both": 2,
+    "bowel": 1,
+    "brands": 1,
+    "bronchoscopy": 1,
+    "build": 1,
+    "business": 3,
+    "businesses": 1,
+    "but": 1,
+    "by": 8,
+    "call": 1,
+    "can": 2,
+    "cancer": 5,
+    "caplyta": 1,
+    "car": 1,
+    "cardiovascular": 3,
+    "care": 2,
+    "carto": 1,
+    "carvykti": 1,
+    "cash": 1,
+    "catapult": 1,
+    "catheter": 3,
+    "cd38": 1,
+    "cell": 2,
+    "cellular": 1,
+    "changing": 2,
+    "class": 1,
+    "clinical": 2,
+    "colitis": 1,
+    "coming": 1,
+    "commercial": 1,
+    "companies": 1,
+    "company": 2,
+    "competitive": 1,
+    "complemented": 1,
+    "completed": 1,
+    "complications": 1,
+    "conditions": 1,
+    "confidence": 2,
+    "confident": 1,
+    "considered": 1,
+    "continually": 1,
+    "continue": 1,
+    "continued": 2,
+    "continues": 1,
+    "create": 1,
+    "creates": 1,
+    "crohn": 1,
+    "cure": 1,
+    "d": 1,
+    "darren": 1,
+    "darzalex": 3,
+    "data": 1,
+    "de": 1,
+    "death": 2,
+    "decade": 2,
+    "deliver": 1,
+    "delivered": 5,
+    "delivering": 3,
+    "delivery": 1,
+    "depressive": 1,
+    "depth": 3,
+    "diagnose": 1,
+    "different": 1,
+    "differentiated": 1,
+    "digit": 1,
+    "digital": 1,
+    "digits": 1,
+    "discuss": 1,
+    "disease": 4,
+    "disorder": 1,
+    "disposable": 1,
+    "dollars": 1,
+    "double": 2,
+    "drive": 1,
+    "drivers": 1,
+    "drove": 1,
+    "drug": 1,
+    "dual": 1,
+    "durability": 1,
+    "each": 3,
+    "early": 2,
+    "egfr": 1,
+    "electrophysiology": 1,
+    "elevate": 1,
+    "end": 2,
+    "endoluminal": 1,
+    "energy": 1,
+    "era": 1,
+    "ethicon": 1,
+    "ever": 1,
+    "every": 1,
+    "everyone": 1,
+    "exactly": 1,
+    "exceed": 2,
+    "exceeded": 1,
+    "excited": 1,
+    "execution": 1,
+    "expand": 2,
+    "expanding": 1,
+    "expect": 1,
+    "experience": 2,
+    "expertise": 1,
+    "extending": 1,
+    "facilities": 1,
+    "fact": 2,
+    "faspro": 1,
+    "faster": 1,
+    "fastest": 2,
+    "fda": 3,
+    "fibrillation": 1,
+    "field": 2,
+    "filed": 1,
+    "finally": 1,
+    "findings": 1,
+    "firmly": 1,
+    "first": 8,
+    "flow": 1,
+    "focus": 3,
+    "focused": 3,
+    "for": 22,
+    "forward": 2,
+    "foundation": 1,
+    "foundational": 1,
+    "four": 1,
+    "free": 1,
+    "from": 5,
+    "fuel": 1,
+    "fueled": 1,
+    "full": 6,
+    "fully": 1,
+    "further": 2,
+    "future": 2,
+    "game": 1,
+    "generate": 1,
+    "global": 1,
+    "globally": 1,
+    "going": 1,
+    "gold": 1,
+    "good": 1,
+    "grew": 3,
+    "growing": 3,
+    "growth": 17,
+    "halda": 2,
+    "has": 3,
+    "have": 8,
+    "health": 1,
+    "healthcare": 1,
+    "heard": 1,
+    "helping": 1,
+    "high": 2,
+    "history": 1,
+    "hours": 1,
+    "how": 1,
+    "i": 1,
+    "i'm": 1,
+    "icotrokinra": 1,
+    "icotyde": 2,
+    "il": 2,
+    "immune": 1,
+    "immunology": 4,
+    "impact": 1,
+    "impressive": 1,
+    "improving": 2,
+    "in": 64,
+    "including": 2,
+    "increased": 1,
+    "increasing": 1,
+    "increasingly": 1,
+    "industry": 1,
+    "inflammatory": 1,
+    "inhibitor": 1,
+    "initial": 1,
+    "initiated": 2,
+    "injectable": 1,
+    "inlexzo": 1,
+    "innovation": 5,
+    "innovative": 2,
+    "instrumentation": 1,
+    "into": 3,
+    "intra": 1,
+    "intraocular": 1,
+    "introduction": 1,
+    "invested": 1,
+    "is": 13,
+    "it": 3,
+    "it's": 1,
+    "its": 4,
+    "johnson": 10,
+    "joining": 1,
+    "journey": 1,
+    "just": 1,
+    "key": 3,
+    "kidney": 1,
+    "kind": 1,
+    "larger": 1,
+    "largest": 1,
+    "last": 2,
+    "later": 1,
+    "launch": 4,
+    "launched": 2,
+    "launches": 2,
+    "launching": 1,
+    "lead": 1,
+    "leader": 2,
+    "leadership": 2,
+    "leading": 3,
+    "least": 3,
+    "lenalidomide": 1,
+    "lens": 1,
+    "lenses": 1,
+    "let": 1,
+    "life": 1,
+    "line": 3,
+    "lives": 1,
+    "loe": 1,
+    "look": 2,
+    "looking": 1,
+    "lost": 1,
+    "lung": 2,
+    "m": 1,
+    "majestec": 1,
+    "major": 4,
+    "makes": 1,
+    "making": 1,
+    "manufacturing": 1,
+    "market": 4,
+    "marketed": 1,
+    "markets": 3,
+    "max": 1,
+    "me": 2,
+    "means": 1,
+    "mediated": 1,
+    "medicine": 3,
+    "medicines": 3,
+    "medtech": 2,
+    "milestones": 1,
+    "minutes": 1,
+    "mirror": 1,
+    "momentum": 5,
+    "monarch": 2,
+    "monotherapy": 1,
+    "month": 1,
+    "months": 1,
+    "more": 9,
+    "morning": 1,
+    "moves": 1,
+    "multiple": 7,
+    "mutated": 1,
+    "myeloma": 5,
+    "nearly": 2,
+    "need": 1,
+    "neuroscience": 2,
+    "new": 4,
+    "next": 3,
+    "non": 1,
+    "not": 3,
+    "notable": 1,
+    "novel": 1,
+    "november": 1,
+    "novo": 1,
+    "now": 8,
+    "number": 1,
+    "numbers": 1,
+    "oasys": 1,
+    "odyssey": 1,
+    "of": 41,
+    "offers": 1,
+    "omnypulse": 1,
+    "on": 5,
+    "oncology": 2,
+    "one": 3,
+    "only": 3,
+    "operational": 9,
+    "or": 4,
+    "orthopaedics": 1,
+    "other": 2,
+    "otherwise": 1,
+    "ottava": 1,
+    "our": 33,
+    "over": 6,
+    "particularly": 2,
+    "patient": 2,
+    "patients": 7,
+    "peak": 2,
+    "percutaneous": 1,
+    "performance": 1,
+    "performed": 1,
+    "pfa": 1,
+    "pharmaceutical": 2,
+    "phase": 2,
+    "pipeline": 2,
+    "placing": 1,
+    "plan": 1,
+    "planned": 1,
+    "planning": 1,
+    "platform": 2,
+    "platforms": 1,
+    "plus": 1,
+    "populations": 1,
+    "portfolio": 6,
+    "position": 3,
+    "positions": 1,
+    "positive": 2,
+    "possible": 2,
+    "potential": 3,
+    "power": 1,
+    "predominantly": 1,
+    "presbyopia": 1,
+    "procedures": 1,
+    "products": 1,
+    "programs": 1,
+    "progress": 1,
+    "progression": 2,
+    "promising": 1,
+    "prostate": 1,
+    "psoriasis": 1,
+    "published": 1,
+    "pulsed": 2,
+    "puresee": 1,
+    "q4": 3,
+    "quarter": 1,
+    "quickly": 1,
+    "r": 1,
+    "radical": 1,
+    "raising": 1,
+    "rates": 1,
+    "reaching": 1,
+    "readouts": 1,
+    "rearview": 1,
+    "received": 2,
+    "recent": 3,
+    "recently": 2,
+    "redefine": 1,
+    "reduce": 1,
+    "reduced": 2,
+    "reducing": 1,
+    "refractory": 2,
+    "regimen": 1,
+    "regulatory": 1,
+    "reinventing": 1,
+    "relapse": 1,
+    "relapsed": 1,
+    "release": 1,
+    "releasing": 1,
+    "relentless": 1,
+    "remain": 1,
+    "remission": 1,
+    "renal": 1,
+    "reported": 1,
+    "resilience": 1,
+    "results": 4,
+    "revenue": 2,
+    "revolutionary": 1,
+    "risk": 2,
+    "robotic": 2,
+    "robotics": 2,
+    "robust": 1,
+    "rybrevant": 1,
+    "said": 1,
+    "sales": 16,
+    "second": 2,
+    "secured": 1,
+    "see": 2,
+    "seeds": 1,
+    "seeing": 2,
+    "segments": 1,
+    "separation": 1,
+    "september": 1,
+    "sf": 1,
+    "sheet": 1,
+    "shockwave": 1,
+    "showed": 2,
+    "sight": 1,
+    "significant": 2,
+    "six": 1,
+    "small": 1,
+    "smarttouch": 1,
+    "solid": 1,
+    "solidified": 1,
+    "soon": 1,
+    "specialties": 1,
+    "spravato": 1,
+    "stage": 1,
+    "standard": 2,
+    "stapler": 1,
+    "starting": 1,
+    "state": 1,
+    "stelara": 1,
+    "stones": 1,
+    "stopping": 1,
+    "strength": 4,
+    "strengthening": 1,
+    "strong": 8,
+    "strongest": 1,
+    "studies": 1,
+    "study": 1,
+    "subcutaneous": 2,
+    "submission": 1,
+    "submissions": 1,
+    "submitting": 1,
+    "success": 2,
+    "supported": 1,
+    "surgery": 5,
+    "surgical": 3,
+    "sustainable": 1,
+    "system": 2,
+    "t": 1,
+    "talk": 2,
+    "technology": 1,
+    "tecnis": 2,
+    "tecvayli": 2,
+    "tell": 1,
+    "than": 8,
+    "thank": 1,
+    "that": 12,
+    "that's": 1,
+    "the": 63,
+    "their": 2,
+    "therapeutics": 2,
+    "therapies": 2,
+    "therapy": 3,
+    "there": 1,
+    "thermocool": 1,
+    "these": 4,
+    "they": 1,
+    "this": 6,
+    "three": 1,
+    "through": 2,
+    "throughout": 1,
+    "time": 3,
+    "to": 22,
+    "today": 2,
+    "together": 1,
+    "top": 1,
+    "trajectory": 1,
+    "transformation": 1,
+    "transforming": 1,
+    "translate": 1,
+    "treat": 2,
+    "treated": 3,
+    "treatment": 7,
+    "tremendous": 1,
+    "tremfya": 3,
+    "trials": 1,
+    "tumor": 2,
+    "turn": 1,
+    "turning": 3,
+    "two": 2,
+    "types": 1,
+    "ulcerative": 1,
+    "unmatched": 2,
+    "unmet": 1,
+    "unprecedented": 1,
+    "unrivaled": 1,
+    "updates": 1,
+    "urology": 1,
+    "us": 9,
+    "use": 1,
+    "used": 1,
+    "varipulse": 1,
+    "very": 1,
+    "vision": 4,
+    "was": 4,
+    "wave": 2,
+    "we": 45,
+    "we'll": 1,
+    "we're": 3,
+    "well": 1,
+    "what": 1,
+    "what's": 1,
+    "where": 3,
+    "which": 10,
+    "who": 2,
+    "why": 1,
+    "will": 10,
+    "with": 21,
+    "working": 1,
+    "worldwide": 2,
+    "would": 2,
+    "year": 21,
+    "years": 1,
+    "you": 4
+   },
+   "date": "2026-01-21",
+   "entries": {
+    "a": [
+     1,
+     12
+    ],
+    "abiomed": [
+     15
+    ],
+    "ablation": [
+     16
+    ],
+    "acquisition": [
+     12
+    ],
+    "acquisitions": [
+     1
+    ],
+    "across": [
+     6,
+     12
+    ],
+    "added": [
+     12
+    ],
+    "addressing": [
+     11
+    ],
+    "administration": [
+     9
+    ],
+    "ahead": [
+     19
+    ],
+    "alone": [
+     6
+    ],
+    "and": [
+     0,
+     1,
+     1,
+     3,
+     3,
+     4,
+     6,
+     7,
+     9,
+     12,
+     14,
+     15,
+     15
+    ],
+    "anticipated": [
+     11
+    ],
+    "approval": [
+     9,
+     10
+    ],
+    "approvals": [
+     6,
+     11
+    ],
+    "approximately": [
+     15
+    ],
+    "are": [
+     11,
+     13,
+     18
+    ],
+    "as": [
+     8,
+     8,
+     9
+    ],
+    "atrial": [
+     17
+    ],
+    "balance": [
+     3
+    ],
+    "been": [
+     17
+    ],
+    "believe": [
+     14
+    ],
+    "billion": [
+     1,
+     5
+    ],
+    "bowel": [
+     14
+    ],
+    "brands": [
+     5
+    ],
+    "business": [
+     5
+    ],
+    "by": [
+     8,
+     13
+    ],
+    "cancer": [
+     9,
+     12
+    ],
+    "care": [
+     13
+    ],
+    "cash": [
+     3
+    ],
+    "catheter": [
+     17
+    ],
+    "cell": [
+     9
+    ],
+    "cellular": [
+     1
+    ],
+    "clinical": [
+     12
+    ],
+    "commercial": [
+     4
+    ],
+    "creates": [
+     3
+    ],
+    "d": [
+     1
+    ],
+    "darzalex": [
+     8
+    ],
+    "death": [
+     8
+    ],
+    "delivered": [
+     7
+    ],
+    "delivering": [
+     15
+    ],
+    "digital": [
+     18
+    ],
+    "digits": [
+     5
+    ],
+    "disease": [
+     13,
+     14
+    ],
+    "double": [
+     5
+    ],
+    "drove": [
+     4
+    ],
+    "drug": [
+     10
+    ],
+    "dual": [
+     17
+    ],
+    "durability": [
+     3
+    ],
+    "early": [
+     8
+    ],
+    "egfr": [
+     9
+    ],
+    "electrophysiology": [
+     16
+    ],
+    "energy": [
+     17
+    ],
+    "everyone": [
+     0
+    ],
+    "exceeded": [
+     5
+    ],
+    "execution": [
+     4
+    ],
+    "expand": [
+     16
+    ],
+    "experience": [
+     9
+    ],
+    "faspro": [
+     9
+    ],
+    "fda": [
+     9,
+     10
+    ],
+    "fibrillation": [
+     17
+    ],
+    "field": [
+     16
+    ],
+    "filed": [
+     6
+    ],
+    "firmly": [
+     4
+    ],
+    "first": [
+     5,
+     9
+    ],
+    "flow": [
+     3
+    ],
+    "focus": [
+     4
+    ],
+    "focused": [
+     13
+    ],
+    "for": [
+     0,
+     5,
+     5,
+     8,
+     9,
+     9,
+     12,
+     14,
+     17
+    ],
+    "forward": [
+     17
+    ],
+    "free": [
+     3
+    ],
+    "from": [
+     7,
+     9
+    ],
+    "full": [
+     5
+    ],
+    "future": [
+     3,
+     11
+    ],
+    "globally": [
+     17
+    ],
+    "good": [
+     0
+    ],
+    "growing": [
+     5
+    ],
+    "growth": [
+     15
+    ],
+    "halda": [
+     1,
+     12
+    ],
+    "has": [
+     17
+    ],
+    "hours": [
+     9
+    ],
+    "how": [
+     2
+    ],
+    "icotyde": [
+     14
+    ],
+    "immune": [
+     13
+    ],
+    "immunology": [
+     13
+    ],
+    "improving": [
+     9
+    ],
+    "in": [
+     1,
+     1,
+     4,
+     6,
+     8,
+     9,
+     10,
+     13,
+     13,
+     15,
+     16,
+     16,
+     17,
+     17
+    ],
+    "including": [
+     1
+    ],
+    "increasing": [
+     13
+    ],
+    "inflammatory": [
+     14
+    ],
+    "initial": [
+     10
+    ],
+    "initiated": [
+     7
+    ],
+    "innovation": [
+     4
+    ],
+    "intra": [
+     1
+    ],
+    "invested": [
+     1
+    ],
+    "is": [
+     2
+    ],
+    "its": [
+     10
+    ],
+    "johnson": [
+     14,
+     14
+    ],
+    "joining": [
+     0
+    ],
+    "key": [
+     7
+    ],
+    "larger": [
+     11
+    ],
+    "last": [
+     8
+    ],
+    "later": [
+     19
+    ],
+    "launch": [
+     19
+    ],
+    "lead": [
+     14
+    ],
+    "leader": [
+     16
+    ],
+    "line": [
+     8
+    ],
+    "loe": [
+     4
+    ],
+    "look": [
+     17
+    ],
+    "looking": [
+     19
+    ],
+    "lung": [
+     9
+    ],
+    "m": [
+     1
+    ],
+    "major": [
+     6
+    ],
+    "market": [
+     16,
+     17
+    ],
+    "markets": [
+     6
+    ],
+    "mediated": [
+     13
+    ],
+    "minutes": [
+     9
+    ],
+    "mirror": [
+     4
+    ],
+    "momentum": [
+     4
+    ],
+    "month": [
+     8
+    ],
+    "morning": [
+     0
+    ],
+    "multiple": [
+     8,
+     12
+    ],
+    "mutated": [
+     9
+    ],
+    "myeloma": [
+     8
+    ],
+    "nearly": [
+     17
+    ],
+    "new": [
+     7
+    ],
+    "next": [
+     14
+    ],
+    "non": [
+     9
+    ],
+    "novel": [
+     10
+    ],
+    "now": [
+     17
+    ],
+    "of": [
+     1,
+     4,
+     8,
+     12,
+     13,
+     14,
+     15
+    ],
+    "on": [
+     4,
+     13
+    ],
+    "operational": [
+     15
+    ],
+    "or": [
+     8
+    ],
+    "our": [
+     3,
+     3,
+     4,
+     5,
+     10,
+     12,
+     16,
+     17
+    ],
+    "over": [
+     1
+    ],
+    "particularly": [
+     15
+    ],
+    "patient": [
+     9,
+     11
+    ],
+    "patients": [
+     17
+    ],
+    "performed": [
+     15
+    ],
+    "pharmaceutical": [
+     5
+    ],
+    "phase": [
+     7
+    ],
+    "placing": [
+     4
+    ],
+    "plan": [
+     16
+    ],
+    "planning": [
+     19
+    ],
+    "plus": [
+     8
+    ],
+    "populations": [
+     11
+    ],
+    "position": [
+     16
+    ],
+    "positions": [
+     14
+    ],
+    "positive": [
+     7
+    ],
+    "possible": [
+     2
+    ],
+    "potential": [
+     12
+    ],
+    "power": [
+     3
+    ],
+    "procedures": [
+     18
+    ],
+    "programs": [
+     7
+    ],
+    "progression": [
+     8
+    ],
+    "promising": [
+     12
+    ],
+    "prostate": [
+     12
+    ],
+    "psoriasis": [
+     14
+    ],
+    "published": [
+     8
+    ],
+    "pulsed": [
+     16
+    ],
+    "puresee": [
+     19
+    ],
+    "q4": [
+     9,
+     12
+    ],
+    "quarter": [
+     15
+    ],
+    "r": [
+     1
+    ],
+    "rates": [
+     13
+    ],
+    "readouts": [
+     7
+    ],
+    "rearview": [
+     4
+    ],
+    "received": [
+     9,
+     10
+    ],
+    "reduced": [
+     8
+    ],
+    "reducing": [
+     9
+    ],
+    "refractory": [
+     8
+    ],
+    "reinventing": [
+     18
+    ],
+    "relapsed": [
+     8
+    ],
+    "releasing": [
+     10
+    ],
+    "relentless": [
+     4
+    ],
+    "remain": [
+     16
+    ],
+    "remission": [
+     13
+    ],
+    "resilience": [
+     3
+    ],
+    "results": [
+     8
+    ],
+    "risk": [
+     8
+    ],
+    "robotics": [
+     18
+    ],
+    "rybrevant": [
+     9
+    ],
+    "sales": [
+     5
+    ],
+    "second": [
+     8
+    ],
+    "secured": [
+     6
+    ],
+    "september": [
+     10
+    ],
+    "sf": [
+     17
+    ],
+    "sheet": [
+     3
+    ],
+    "shockwave": [
+     15
+    ],
+    "showed": [
+     8
+    ],
+    "small": [
+     9
+    ],
+    "smarttouch": [
+     17
+    ],
+    "stage": [
+     12
+    ],
+    "standard": [
+     13
+    ],
+    "stelara": [
+     4
+    ],
+    "strength": [
+     4
+    ],
+    "strong": [
+     3,
+     4
+    ],
+    "studies": [
+     7
+    ],
+    "subcutaneous": [
+     9
+    ],
+    "submissions": [
+     6
+    ],
+    "submitting": [
+     17
+    ],
+    "surgery": [
+     18
+    ],
+    "system": [
+     10
+    ],
+    "tecnis": [
+     19
+    ],
+    "tecvayli": [
+     8
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     2,
+     3,
+     8
+    ],
+    "the": [
+     1,
+     3,
+     4,
+     4,
+     4,
+     4,
+     5,
+     8,
+     9,
+     13,
+     14,
+     15,
+     16
+    ],
+    "therapeutics": [
+     1,
+     12
+    ],
+    "therapies": [
+     1
+    ],
+    "therapy": [
+     9
+    ],
+    "thermocool": [
+     17
+    ],
+    "this": [
+     3,
+     19
+    ],
+    "through": [
+     18
+    ],
+    "throughout": [
+     4
+    ],
+    "time": [
+     5,
+     9
+    ],
+    "to": [
+     9,
+     14,
+     16,
+     17,
+     17,
+     19
+    ],
+    "together": [
+     3
+    ],
+    "transforming": [
+     13
+    ],
+    "treat": [
+     17
+    ],
+    "treatment": [
+     12,
+     14
+    ],
+    "tumor": [
+     12
+    ],
+    "types": [
+     12
+    ],
+    "unprecedented": [
+     8
+    ],
+    "us": [
+     0,
+     17,
+     19
+    ],
+    "use": [
+     17
+    ],
+    "used": [
+     17
+    ],
+    "varipulse": [
+     17
+    ],
+    "wave": [
+     14
+    ],
+    "we": [
+     1,
+     6,
+     7,
+     8,
+     9,
+     13,
+     14,
+     16,
+     16,
+     17,
+     18
+    ],
+    "we're": [
+     19
+    ],
+    "well": [
+     15
+    ],
+    "which": [
+     10
+    ],
+    "will": [
+     3
+    ],
+    "with": [
+     3,
+     5,
+     12
+    ],
+    "year": [
+     4,
+     5,
+     19
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Good morning everyone and thank you for joining us.",
+    "In 2025 we invested over $32 billion in R&D and M&A, including the acquisitions of Intra-Cellular Therapies and Halda Therapeutics.",
+    "How is that possible?",
+    "This, together with our strong balance sheet and free cash flow, creates the resilience and durability that will power our future.",
+    "The strength of our commercial execution and relentless focus on innovation drove strong momentum throughout the year, firmly placing the Stelara LOE in the rearview mirror.",
+    "Full year sales for our pharmaceutical business exceeded $60 billion for the first time with 13 brands growing double digits.",
+    "In 2025 alone, we secured 51 approvals and filed 32 submissions across major markets.",
+    "We delivered positive readouts from 17 key studies and initiated 11 new Phase 3 programs.",
+    "Last month we published unprecedented results for TECVAYLI plus DARZALEX that showed reduced risk of progression or death by 83% in relapsed refractory multiple myeloma as early as the second line.",
+    "In Q4, we received FDA approval for RYBREVANT FASPRO as the first subcutaneous therapy for EGFR mutated non-small cell lung cancer, reducing administration time from hours to minutes and improving patient experience.",
+    "Our novel drug-releasing system, which received its initial FDA approval in September.",
+    "Future approvals addressing larger patient populations are anticipated.",
+    "And our Q4 acquisition of Halda Therapeutics added a promising clinical stage treatment for prostate cancer with potential across multiple tumor types.",
+    "In Immunology, we are focused on transforming the standard of care by increasing remission rates in immune-mediated disease.",
+    "We believe ICOTYDE positions Johnson & Johnson to lead the next wave of treatment for psoriasis and inflammatory bowel disease.",
+    "Abiomed and Shockwave performed particularly well, delivering operational growth of approximately 18% and 23% in the quarter.",
+    "We remain the market leader in Electrophysiology, and we plan to expand our position in pulsed field ablation.",
+    "VARIPULSE has now been used to treat nearly 40,000 atrial fibrillation patients globally, and we look forward to submitting our Dual Energy THERMOCOOL SMARTTOUCH SF Catheter for use in the US market in 2026.",
+    "In Surgery, we are reinventing procedures through robotics and digital.",
+    "Looking ahead, we're planning to launch TECNIS PureSee in the US later this year."
+   ],
+   "id": "jnj-jnj-usq-transcript-2026-01-21",
+   "msent": {
+    "a": 13,
+    "abiomed": 1,
+    "ablation": 2,
+    "about": 2,
+    "accelerate": 1,
+    "accelerated": 2,
+    "accelerating": 2,
+    "acceleration": 1,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 6,
+    "active": 1,
+    "acuvue": 1,
+    "added": 1,
+    "addressing": 1,
+    "adjunctive": 1,
+    "administration": 1,
+    "advantage": 1,
+    "ahead": 2,
+    "alone": 1,
+    "also": 5,
+    "alternative": 1,
+    "an": 2,
+    "and": 40,
+    "announced": 2,
+    "annual": 4,
+    "annually": 1,
+    "another": 1,
+    "anti": 1,
+    "anticipate": 2,
+    "anticipated": 2,
+    "approval": 3,
+    "approvals": 3,
+    "approximately": 1,
+    "are": 14,
+    "areas": 3,
+    "art": 1,
+    "as": 8,
+    "assets": 1,
+    "astigmatism": 1,
+    "at": 3,
+    "atrial": 1,
+    "back": 1,
+    "balance": 1,
+    "bar": 1,
+    "be": 3,
+    "became": 1,
+    "because": 1,
+    "becoming": 1,
+    "been": 1,
+    "before": 1,
+    "believe": 1,
+    "best": 1,
+    "beyond": 1,
+    "billion": 9,
+    "billions": 1,
+    "bladder": 1,
+    "bladders": 1,
+    "both": 2,
+    "bowel": 1,
+    "brands": 1,
+    "bronchoscopy": 1,
+    "build": 1,
+    "business": 3,
+    "businesses": 1,
+    "but": 1,
+    "by": 8,
+    "call": 1,
+    "can": 2,
+    "cancer": 5,
+    "caplyta": 1,
+    "car": 1,
+    "cardiovascular": 3,
+    "care": 2,
+    "carto": 1,
+    "carvykti": 1,
+    "cash": 1,
+    "catapult": 1,
+    "catheter": 3,
+    "cd38": 1,
+    "cell": 2,
+    "cellular": 1,
+    "changing": 2,
+    "class": 1,
+    "clinical": 2,
+    "colitis": 1,
+    "coming": 1,
+    "commercial": 1,
+    "companies": 1,
+    "company": 2,
+    "competitive": 1,
+    "complemented": 1,
+    "completed": 1,
+    "complications": 1,
+    "conditions": 1,
+    "confidence": 2,
+    "confident": 1,
+    "considered": 1,
+    "continually": 1,
+    "continue": 1,
+    "continued": 1,
+    "continues": 1,
+    "create": 1,
+    "creates": 1,
+    "crohn": 1,
+    "cure": 1,
+    "d": 1,
+    "darren": 1,
+    "darzalex": 3,
+    "data": 1,
+    "de": 1,
+    "death": 2,
+    "decade": 2,
+    "deliver": 1,
+    "delivered": 5,
+    "delivering": 3,
+    "delivery": 1,
+    "depressive": 1,
+    "depth": 3,
+    "diagnose": 1,
+    "different": 1,
+    "differentiated": 1,
+    "digit": 1,
+    "digital": 1,
+    "digits": 1,
+    "discuss": 1,
+    "disease": 4,
+    "disorder": 1,
+    "disposable": 1,
+    "dollars": 1,
+    "double": 2,
+    "drive": 1,
+    "drivers": 1,
+    "drove": 1,
+    "drug": 1,
+    "dual": 1,
+    "durability": 1,
+    "each": 3,
+    "early": 2,
+    "egfr": 1,
+    "electrophysiology": 1,
+    "elevate": 1,
+    "end": 2,
+    "endoluminal": 1,
+    "energy": 1,
+    "era": 1,
+    "ethicon": 1,
+    "ever": 1,
+    "every": 1,
+    "everyone": 1,
+    "exactly": 1,
+    "exceed": 2,
+    "exceeded": 1,
+    "excited": 1,
+    "execution": 1,
+    "expand": 2,
+    "expanding": 1,
+    "expect": 1,
+    "experience": 2,
+    "expertise": 1,
+    "extending": 1,
+    "facilities": 1,
+    "fact": 2,
+    "faspro": 1,
+    "faster": 1,
+    "fastest": 2,
+    "fda": 3,
+    "fibrillation": 1,
+    "field": 2,
+    "filed": 1,
+    "finally": 1,
+    "findings": 1,
+    "firmly": 1,
+    "first": 8,
+    "flow": 1,
+    "focus": 3,
+    "focused": 3,
+    "for": 19,
+    "forward": 2,
+    "foundation": 1,
+    "foundational": 1,
+    "four": 1,
+    "free": 1,
+    "from": 5,
+    "fuel": 1,
+    "fueled": 1,
+    "full": 6,
+    "fully": 1,
+    "further": 2,
+    "future": 2,
+    "game": 1,
+    "generate": 1,
+    "global": 1,
+    "globally": 1,
+    "going": 1,
+    "gold": 1,
+    "good": 1,
+    "grew": 3,
+    "growing": 3,
+    "growth": 17,
+    "halda": 2,
+    "has": 3,
+    "have": 8,
+    "health": 1,
+    "healthcare": 1,
+    "heard": 1,
+    "helping": 1,
+    "high": 1,
+    "history": 1,
+    "hours": 1,
+    "how": 1,
+    "i": 1,
+    "i'm": 1,
+    "icotrokinra": 1,
+    "icotyde": 2,
+    "il": 2,
+    "immune": 1,
+    "immunology": 4,
+    "impact": 1,
+    "impressive": 1,
+    "improving": 2,
+    "in": 46,
+    "including": 2,
+    "increased": 1,
+    "increasing": 1,
+    "increasingly": 1,
+    "industry": 1,
+    "inflammatory": 1,
+    "inhibitor": 1,
+    "initial": 1,
+    "initiated": 2,
+    "injectable": 1,
+    "inlexzo": 1,
+    "innovation": 5,
+    "innovative": 2,
+    "instrumentation": 1,
+    "into": 3,
+    "intra": 1,
+    "intraocular": 1,
+    "introduction": 1,
+    "invested": 1,
+    "is": 11,
+    "it": 3,
+    "it's": 1,
+    "its": 4,
+    "johnson": 5,
+    "joining": 1,
+    "journey": 1,
+    "just": 1,
+    "key": 3,
+    "kidney": 1,
+    "kind": 1,
+    "larger": 1,
+    "largest": 1,
+    "last": 2,
+    "later": 1,
+    "launch": 4,
+    "launched": 2,
+    "launches": 2,
+    "launching": 1,
+    "lead": 1,
+    "leader": 2,
+    "leadership": 2,
+    "leading": 3,
+    "least": 3,
+    "lenalidomide": 1,
+    "lens": 1,
+    "lenses": 1,
+    "let": 1,
+    "life": 1,
+    "line": 3,
+    "lives": 1,
+    "loe": 1,
+    "look": 2,
+    "looking": 1,
+    "lost": 1,
+    "lung": 2,
+    "m": 1,
+    "majestec": 1,
+    "major": 3,
+    "makes": 1,
+    "making": 1,
+    "manufacturing": 1,
+    "market": 4,
+    "marketed": 1,
+    "markets": 3,
+    "max": 1,
+    "me": 2,
+    "means": 1,
+    "mediated": 1,
+    "medicine": 3,
+    "medicines": 3,
+    "medtech": 2,
+    "milestones": 1,
+    "minutes": 1,
+    "mirror": 1,
+    "momentum": 5,
+    "monarch": 2,
+    "monotherapy": 1,
+    "month": 1,
+    "months": 1,
+    "more": 7,
+    "morning": 1,
+    "moves": 1,
+    "multiple": 7,
+    "mutated": 1,
+    "myeloma": 5,
+    "nearly": 2,
+    "need": 1,
+    "neuroscience": 2,
+    "new": 4,
+    "next": 3,
+    "non": 1,
+    "not": 3,
+    "notable": 1,
+    "novel": 1,
+    "november": 1,
+    "novo": 1,
+    "now": 8,
+    "number": 1,
+    "numbers": 1,
+    "oasys": 1,
+    "odyssey": 1,
+    "of": 33,
+    "offers": 1,
+    "omnypulse": 1,
+    "on": 5,
+    "oncology": 2,
+    "one": 2,
+    "only": 3,
+    "operational": 9,
+    "or": 4,
+    "orthopaedics": 1,
+    "other": 2,
+    "otherwise": 1,
+    "ottava": 1,
+    "our": 28,
+    "over": 6,
+    "particularly": 2,
+    "patient": 2,
+    "patients": 7,
+    "peak": 2,
+    "percutaneous": 1,
+    "performance": 1,
+    "performed": 1,
+    "pfa": 1,
+    "pharmaceutical": 2,
+    "phase": 2,
+    "pipeline": 2,
+    "placing": 1,
+    "plan": 1,
+    "planned": 1,
+    "planning": 1,
+    "platform": 2,
+    "platforms": 1,
+    "plus": 1,
+    "populations": 1,
+    "portfolio": 6,
+    "position": 3,
+    "positions": 1,
+    "positive": 2,
+    "possible": 2,
+    "potential": 3,
+    "power": 1,
+    "predominantly": 1,
+    "presbyopia": 1,
+    "procedures": 1,
+    "products": 1,
+    "programs": 1,
+    "progress": 1,
+    "progression": 2,
+    "promising": 1,
+    "prostate": 1,
+    "psoriasis": 1,
+    "published": 1,
+    "pulsed": 2,
+    "puresee": 1,
+    "q4": 3,
+    "quarter": 1,
+    "quickly": 1,
+    "r": 1,
+    "radical": 1,
+    "raising": 1,
+    "rates": 1,
+    "reaching": 1,
+    "readouts": 1,
+    "rearview": 1,
+    "received": 2,
+    "recent": 3,
+    "recently": 2,
+    "redefine": 1,
+    "reduce": 1,
+    "reduced": 2,
+    "reducing": 1,
+    "refractory": 2,
+    "regimen": 1,
+    "regulatory": 1,
+    "reinventing": 1,
+    "relapse": 1,
+    "relapsed": 1,
+    "release": 1,
+    "releasing": 1,
+    "relentless": 1,
+    "remain": 1,
+    "remission": 1,
+    "renal": 1,
+    "reported": 1,
+    "resilience": 1,
+    "results": 4,
+    "revenue": 2,
+    "revolutionary": 1,
+    "risk": 2,
+    "robotic": 2,
+    "robotics": 2,
+    "robust": 1,
+    "rybrevant": 1,
+    "said": 1,
+    "sales": 14,
+    "second": 2,
+    "secured": 1,
+    "see": 2,
+    "seeds": 1,
+    "seeing": 2,
+    "segments": 1,
+    "separation": 1,
+    "september": 1,
+    "sf": 1,
+    "sheet": 1,
+    "shockwave": 1,
+    "showed": 2,
+    "sight": 1,
+    "significant": 2,
+    "six": 1,
+    "small": 1,
+    "smarttouch": 1,
+    "solid": 1,
+    "solidified": 1,
+    "soon": 1,
+    "specialties": 1,
+    "spravato": 1,
+    "stage": 1,
+    "standard": 2,
+    "stapler": 1,
+    "starting": 1,
+    "state": 1,
+    "stelara": 1,
+    "stones": 1,
+    "stopping": 1,
+    "strength": 4,
+    "strengthening": 1,
+    "strong": 8,
+    "strongest": 1,
+    "studies": 1,
+    "study": 1,
+    "subcutaneous": 2,
+    "submission": 1,
+    "submissions": 1,
+    "submitting": 1,
+    "success": 2,
+    "supported": 1,
+    "surgery": 5,
+    "surgical": 2,
+    "sustainable": 1,
+    "system": 2,
+    "t": 1,
+    "talk": 2,
+    "technology": 1,
+    "tecnis": 2,
+    "tecvayli": 2,
+    "tell": 1,
+    "than": 7,
+    "thank": 1,
+    "that": 11,
+    "that's": 1,
+    "the": 46,
+    "their": 2,
+    "therapeutics": 2,
+    "therapies": 2,
+    "therapy": 3,
+    "there": 1,
+    "thermocool": 1,
+    "these": 4,
+    "they": 1,
+    "this": 6,
+    "three": 1,
+    "through": 2,
+    "throughout": 1,
+    "time": 3,
+    "to": 20,
+    "today": 2,
+    "together": 1,
+    "top": 1,
+    "trajectory": 1,
+    "transformation": 1,
+    "transforming": 1,
+    "translate": 1,
+    "treat": 2,
+    "treated": 3,
+    "treatment": 7,
+    "tremendous": 1,
+    "tremfya": 2,
+    "trials": 1,
+    "tumor": 2,
+    "turn": 1,
+    "turning": 3,
+    "two": 2,
+    "types": 1,
+    "ulcerative": 1,
+    "unmatched": 2,
+    "unmet": 1,
+    "unprecedented": 1,
+    "unrivaled": 1,
+    "updates": 1,
+    "urology": 1,
+    "us": 9,
+    "use": 1,
+    "used": 1,
+    "varipulse": 1,
+    "very": 1,
+    "vision": 3,
+    "was": 4,
+    "wave": 2,
+    "we": 39,
+    "we'll": 1,
+    "we're": 3,
+    "well": 1,
+    "what": 1,
+    "what's": 1,
+    "where": 3,
+    "which": 10,
+    "who": 2,
+    "why": 1,
+    "will": 10,
+    "with": 21,
+    "working": 1,
+    "worldwide": 2,
+    "would": 2,
+    "year": 19,
+    "years": 1,
+    "you": 4
+   },
+   "n_sentences": 72,
+   "source": "s203.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q4 2025 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s203.q4cdn.com/636242992/files/doc_financials/2025/q4/JNJ-USQ_Transcript_2026-01-21.pdf",
+   "words": 1420
+  },
+  {
+   "counts": {
+    "13th": 1,
+    "a": 22,
+    "abiomed": 1,
+    "able": 2,
+    "about": 4,
+    "accelerated": 1,
+    "accelerates": 1,
+    "accelerating": 4,
+    "accomplish": 1,
+    "achieved": 2,
+    "achievements": 1,
+    "acquisition": 1,
+    "across": 8,
+    "acute": 1,
+    "acuvue": 1,
+    "additional": 2,
+    "addressing": 1,
+    "adoption": 1,
+    "after": 1,
+    "again": 1,
+    "alive": 1,
+    "all": 3,
+    "almost": 1,
+    "alone": 2,
+    "already": 2,
+    "also": 6,
+    "an": 4,
+    "and": 52,
+    "announced": 1,
+    "annual": 1,
+    "annually": 1,
+    "another": 3,
+    "answered": 1,
+    "anticipate": 2,
+    "anticipated": 1,
+    "anyone": 1,
+    "appropriate": 1,
+    "approval": 4,
+    "approved": 2,
+    "approximately": 2,
+    "are": 17,
+    "areas": 4,
+    "as": 17,
+    "asset": 1,
+    "assets": 1,
+    "associated": 1,
+    "astigmatism": 1,
+    "at": 4,
+    "atherosclerotic": 1,
+    "attack": 1,
+    "average": 1,
+    "back": 1,
+    "based": 1,
+    "be": 7,
+    "become": 1,
+    "becoming": 1,
+    "been": 2,
+    "before": 2,
+    "beginning": 1,
+    "believe": 1,
+    "benefit": 1,
+    "best": 1,
+    "better": 2,
+    "big": 1,
+    "bigger": 1,
+    "biggest": 1,
+    "billion": 8,
+    "biosurgery": 1,
+    "bipolar": 1,
+    "bladder": 2,
+    "block": 1,
+    "blockbuster": 1,
+    "blockbusters": 1,
+    "blood": 1,
+    "both": 2,
+    "bowel": 1,
+    "brands": 1,
+    "brought": 1,
+    "build": 1,
+    "building": 2,
+    "business": 8,
+    "businesses": 2,
+    "but": 2,
+    "by": 10,
+    "call": 2,
+    "can": 1,
+    "cancer": 3,
+    "cancers": 1,
+    "capabilities": 2,
+    "capitalize": 1,
+    "caplyta": 4,
+    "capturing": 1,
+    "car": 2,
+    "cardiogenic": 1,
+    "cardiovascular": 7,
+    "care": 1,
+    "carvykti": 4,
+    "categories": 1,
+    "catheter": 1,
+    "cellular": 1,
+    "clear": 3,
+    "close": 1,
+    "closure": 1,
+    "colitis": 3,
+    "combination": 2,
+    "come": 1,
+    "commercial": 1,
+    "companies": 1,
+    "company": 3,
+    "compared": 2,
+    "competitiveness": 1,
+    "completed": 1,
+    "completion": 1,
+    "comprehensive": 1,
+    "confident": 3,
+    "consecutive": 1,
+    "constantly": 1,
+    "contact": 1,
+    "continue": 2,
+    "continues": 4,
+    "contribute": 1,
+    "convinced": 1,
+    "core": 1,
+    "could": 4,
+    "cp": 2,
+    "creates": 1,
+    "crohn": 1,
+    "danger": 1,
+    "darren": 2,
+    "darzalex": 4,
+    "data": 3,
+    "day": 2,
+    "days": 1,
+    "de": 1,
+    "deal": 1,
+    "deals": 1,
+    "death": 1,
+    "decision": 1,
+    "decisions": 1,
+    "deep": 2,
+    "deliver": 1,
+    "delivered": 4,
+    "delivering": 2,
+    "delivery": 1,
+    "depression": 1,
+    "depressive": 3,
+    "depuy": 2,
+    "details": 1,
+    "development": 2,
+    "did": 2,
+    "digit": 1,
+    "directly": 1,
+    "disciplined": 1,
+    "disease": 2,
+    "disorder": 3,
+    "do": 1,
+    "doctors": 1,
+    "doing": 1,
+    "dollar": 1,
+    "double": 1,
+    "driven": 2,
+    "drug": 1,
+    "each": 1,
+    "early": 2,
+    "effective": 1,
+    "effectiveness": 1,
+    "electrophysiology": 1,
+    "end": 1,
+    "england": 2,
+    "ensure": 1,
+    "episodes": 1,
+    "era": 2,
+    "erleada": 1,
+    "europe": 2,
+    "european": 1,
+    "evaluating": 1,
+    "even": 3,
+    "ever": 2,
+    "every": 1,
+    "everyone": 1,
+    "evolve": 1,
+    "example": 3,
+    "exclusivity": 1,
+    "exit": 1,
+    "expect": 2,
+    "expertise": 3,
+    "extend": 2,
+    "fact": 2,
+    "failed": 1,
+    "family": 1,
+    "fashion": 1,
+    "faspro": 1,
+    "fastest": 2,
+    "fda": 5,
+    "finally": 1,
+    "first": 4,
+    "flexibility": 1,
+    "focus": 4,
+    "focused": 1,
+    "follow": 1,
+    "following": 1,
+    "for": 17,
+    "formulation": 1,
+    "fortify": 1,
+    "forward": 3,
+    "from": 6,
+    "fronts": 1,
+    "fueling": 2,
+    "fully": 1,
+    "further": 3,
+    "future": 1,
+    "gaining": 1,
+    "globally": 2,
+    "going": 1,
+    "gold": 1,
+    "great": 1,
+    "greater": 2,
+    "greatest": 1,
+    "grew": 3,
+    "groundbreaking": 1,
+    "grow": 1,
+    "growing": 5,
+    "growth": 18,
+    "had": 1,
+    "half": 1,
+    "has": 2,
+    "have": 17,
+    "having": 3,
+    "healthcare": 3,
+    "heard": 1,
+    "heart": 2,
+    "hello": 1,
+    "helping": 1,
+    "high": 1,
+    "higher": 2,
+    "highlights": 1,
+    "historically": 1,
+    "how": 1,
+    "i": 8,
+    "icotrokinra": 3,
+    "ideas": 1,
+    "ideation": 1,
+    "ii": 2,
+    "il": 3,
+    "immunology": 6,
+    "impact": 3,
+    "impella": 2,
+    "impressive": 1,
+    "improve": 1,
+    "improvements": 1,
+    "in": 57,
+    "incidence": 1,
+    "includes": 1,
+    "including": 1,
+    "increased": 1,
+    "increasingly": 1,
+    "indications": 1,
+    "industry": 3,
+    "inflammatory": 1,
+    "information": 1,
+    "inhibitor": 1,
+    "initially": 1,
+    "injectables": 1,
+    "inlexzo": 3,
+    "innovation": 5,
+    "innovations": 1,
+    "innovative": 3,
+    "intervention": 1,
+    "into": 1,
+    "intra": 1,
+    "intraocular": 1,
+    "intravascular": 2,
+    "invest": 2,
+    "investment": 1,
+    "is": 28,
+    "it": 12,
+    "its": 3,
+    "j": 2,
+    "javelin": 1,
+    "joe": 1,
+    "johnson": 16,
+    "journal": 2,
+    "july": 1,
+    "just": 2,
+    "kind": 1,
+    "know": 1,
+    "korea": 1,
+    "largest": 1,
+    "last": 5,
+    "later": 1,
+    "latest": 2,
+    "launch": 3,
+    "launched": 1,
+    "launching": 1,
+    "lazcluze": 3,
+    "lead": 1,
+    "leader": 1,
+    "leaders": 2,
+    "leadership": 5,
+    "leading": 2,
+    "least": 1,
+    "led": 1,
+    "lens": 1,
+    "lenses": 1,
+    "let's": 2,
+    "levels": 1,
+    "like": 1,
+    "line": 1,
+    "lines": 1,
+    "lithotripsy": 2,
+    "live": 1,
+    "lives": 2,
+    "local": 1,
+    "long": 2,
+    "longer": 1,
+    "looking": 1,
+    "looks": 1,
+    "loss": 1,
+    "lung": 1,
+    "major": 3,
+    "make": 1,
+    "making": 4,
+    "mapping": 1,
+    "market": 4,
+    "markets": 1,
+    "max": 1,
+    "me": 1,
+    "mean": 1,
+    "meaningfully": 1,
+    "medicine": 5,
+    "medtech": 6,
+    "member": 1,
+    "millionth": 1,
+    "model": 2,
+    "moderate": 1,
+    "momentum": 4,
+    "month": 1,
+    "months": 1,
+    "more": 18,
+    "morning": 2,
+    "mortality": 1,
+    "most": 4,
+    "move": 1,
+    "moving": 1,
+    "much": 2,
+    "multifocal": 1,
+    "multiple": 5,
+    "multiplying": 1,
+    "myeloma": 4,
+    "namal": 1,
+    "nawana": 1,
+    "nearly": 2,
+    "need": 1,
+    "neuropsychiatry": 1,
+    "neuroscience": 3,
+    "new": 8,
+    "news": 2,
+    "next": 3,
+    "no": 2,
+    "not": 2,
+    "novo": 1,
+    "now": 9,
+    "oasys": 1,
+    "of": 48,
+    "offer": 1,
+    "on": 8,
+    "once": 1,
+    "oncology": 4,
+    "one": 3,
+    "only": 3,
+    "operating": 2,
+    "operational": 13,
+    "opportunities": 2,
+    "opportunity": 1,
+    "or": 1,
+    "oral": 1,
+    "orthopaedics": 4,
+    "osimertinib": 1,
+    "other": 2,
+    "ottava": 1,
+    "our": 44,
+    "outside": 1,
+    "outstanding": 1,
+    "over": 2,
+    "overall": 1,
+    "patient": 2,
+    "patients": 9,
+    "peak": 3,
+    "people": 1,
+    "peptide": 1,
+    "perfect": 1,
+    "perform": 1,
+    "performance": 1,
+    "peripheral": 1,
+    "phase": 1,
+    "pill": 1,
+    "pipeline": 2,
+    "place": 1,
+    "planned": 3,
+    "plaque": 3,
+    "platform": 2,
+    "plus": 3,
+    "portfolio": 7,
+    "position": 2,
+    "positioned": 1,
+    "positioning": 1,
+    "positions": 2,
+    "positive": 1,
+    "possible": 1,
+    "potential": 4,
+    "powerful": 1,
+    "presented": 1,
+    "prior": 1,
+    "priority": 1,
+    "process": 1,
+    "profitable": 1,
+    "progress": 4,
+    "project": 1,
+    "projected": 1,
+    "promising": 1,
+    "proof": 2,
+    "prouder": 1,
+    "provide": 2,
+    "psoriasis": 3,
+    "published": 2,
+    "pump": 1,
+    "q3": 9,
+    "quarter": 12,
+    "question": 1,
+    "rapidly": 1,
+    "reach": 1,
+    "real": 1,
+    "receive": 1,
+    "recent": 1,
+    "recently": 1,
+    "receptor": 1,
+    "reduced": 1,
+    "reduction": 1,
+    "reflects": 1,
+    "regimen": 1,
+    "release": 1,
+    "releasing": 1,
+    "relentless": 1,
+    "remains": 2,
+    "remarkable": 1,
+    "remicade": 2,
+    "reported": 1,
+    "resistant": 1,
+    "results": 2,
+    "retain": 1,
+    "revolutionize": 1,
+    "risk": 2,
+    "robotic": 1,
+    "rooms": 1,
+    "routine": 1,
+    "rybrevant": 3,
+    "safety": 1,
+    "said": 1,
+    "sales": 17,
+    "say": 3,
+    "schizophrenia": 1,
+    "second": 1,
+    "see": 1,
+    "seeing": 1,
+    "seen": 1,
+    "segments": 1,
+    "selectively": 1,
+    "separation": 4,
+    "severe": 1,
+    "share": 3,
+    "sharing": 1,
+    "sharpens": 1,
+    "shift": 1,
+    "shock": 2,
+    "shockwave": 3,
+    "shortly": 1,
+    "shot": 1,
+    "showing": 2,
+    "sign": 1,
+    "significant": 1,
+    "significantly": 2,
+    "simponi": 2,
+    "six": 2,
+    "smoldering": 1,
+    "solid": 2,
+    "some": 2,
+    "soon": 1,
+    "sourced": 1,
+    "spravato": 3,
+    "stage": 1,
+    "stakeholders": 1,
+    "stand": 1,
+    "standard": 2,
+    "start": 1,
+    "starting": 1,
+    "starts": 1,
+    "statistically": 1,
+    "stelara": 3,
+    "strength": 1,
+    "strengthened": 2,
+    "strengthening": 1,
+    "stroke": 1,
+    "strong": 5,
+    "stronger": 1,
+    "strongly": 1,
+    "studies": 1,
+    "study": 1,
+    "subcutaneous": 2,
+    "submission": 1,
+    "submitted": 1,
+    "success": 4,
+    "successful": 1,
+    "suicidal": 1,
+    "supported": 1,
+    "surgery": 4,
+    "surgical": 2,
+    "survival": 1,
+    "sustained": 1,
+    "synthes": 2,
+    "system": 1,
+    "t": 2,
+    "take": 1,
+    "talk": 1,
+    "talked": 1,
+    "talvey": 1,
+    "targeted": 1,
+    "team": 1,
+    "technologies": 1,
+    "technology": 2,
+    "tecnis": 1,
+    "tecvayli": 2,
+    "term": 1,
+    "than": 16,
+    "thank": 2,
+    "that": 11,
+    "the": 58,
+    "their": 1,
+    "therapies": 1,
+    "therapy": 3,
+    "there": 1,
+    "these": 1,
+    "thing": 1,
+    "third": 2,
+    "this": 14,
+    "thought": 1,
+    "thrilled": 1,
+    "thrive": 1,
+    "through": 3,
+    "to": 43,
+    "touch": 1,
+    "towards": 1,
+    "transformative": 2,
+    "treat": 1,
+    "treated": 2,
+    "treatment": 8,
+    "treatments": 3,
+    "tremfya": 6,
+    "trials": 1,
+    "truly": 1,
+    "tumors": 2,
+    "turn": 3,
+    "turning": 1,
+    "typical": 1,
+    "ulcerative": 3,
+    "unequivocally": 1,
+    "unique": 2,
+    "unmatched": 1,
+    "unmet": 1,
+    "unrivaled": 1,
+    "us": 2,
+    "use": 1,
+    "used": 1,
+    "varipulse": 1,
+    "very": 2,
+    "vision": 4,
+    "want": 2,
+    "was": 4,
+    "we": 52,
+    "well": 2,
+    "were": 3,
+    "what": 2,
+    "when": 2,
+    "where": 8,
+    "which": 3,
+    "while": 1,
+    "who": 1,
+    "will": 10,
+    "win": 1,
+    "with": 26,
+    "within": 1,
+    "word": 1,
+    "world": 2,
+    "would": 1,
+    "wound": 1,
+    "year": 7,
+    "years": 1,
+    "you": 7
+   },
+   "date": "2025-10-14",
+   "entries": {
+    "13th": [
+     14
+    ],
+    "a": [
+     4,
+     6,
+     9,
+     11,
+     15
+    ],
+    "able": [
+     22
+    ],
+    "about": [
+     4,
+     5,
+     8
+    ],
+    "accelerating": [
+     16
+    ],
+    "across": [
+     9
+    ],
+    "acuvue": [
+     18
+    ],
+    "additional": [
+     15
+    ],
+    "adoption": [
+     16
+    ],
+    "after": [
+     18
+    ],
+    "alive": [
+     15
+    ],
+    "almost": [
+     16
+    ],
+    "alone": [
+     11
+    ],
+    "also": [
+     4,
+     17
+    ],
+    "an": [
+     15
+    ],
+    "and": [
+     0,
+     1,
+     6,
+     9,
+     13,
+     16,
+     16,
+     18,
+     18,
+     19,
+     20,
+     20,
+     22,
+     22
+    ],
+    "annually": [
+     12
+    ],
+    "anticipate": [
+     14,
+     17
+    ],
+    "anyone": [
+     7
+    ],
+    "approval": [
+     13
+    ],
+    "approved": [
+     11
+    ],
+    "are": [
+     1,
+     7,
+     16,
+     20
+    ],
+    "areas": [
+     1
+    ],
+    "as": [
+     8,
+     17,
+     20
+    ],
+    "astigmatism": [
+     18
+    ],
+    "attack": [
+     15
+    ],
+    "average": [
+     15
+    ],
+    "be": [
+     22
+    ],
+    "becoming": [
+     14
+    ],
+    "been": [
+     10
+    ],
+    "best": [
+     20
+    ],
+    "big": [
+     8
+    ],
+    "billion": [
+     12,
+     14
+    ],
+    "biosurgery": [
+     16
+    ],
+    "brought": [
+     18
+    ],
+    "business": [
+     20,
+     21
+    ],
+    "by": [
+     14,
+     15,
+     16
+    ],
+    "can": [
+     22
+    ],
+    "cancer": [
+     6
+    ],
+    "caplyta": [
+     12
+    ],
+    "car": [
+     4
+    ],
+    "cardiogenic": [
+     15
+    ],
+    "care": [
+     15
+    ],
+    "carvykti": [
+     4
+    ],
+    "catheter": [
+     13
+    ],
+    "clear": [
+     1
+    ],
+    "closure": [
+     16
+    ],
+    "colitis": [
+     9
+    ],
+    "compared": [
+     6,
+     15
+    ],
+    "competitiveness": [
+     3
+    ],
+    "constantly": [
+     20
+    ],
+    "contact": [
+     18
+    ],
+    "continue": [
+     17
+    ],
+    "continues": [
+     20
+    ],
+    "cp": [
+     15
+    ],
+    "creates": [
+     21
+    ],
+    "crohn": [
+     9
+    ],
+    "danger": [
+     15
+    ],
+    "darren": [
+     0
+    ],
+    "day": [
+     18
+    ],
+    "days": [
+     15
+    ],
+    "de": [
+     17
+    ],
+    "death": [
+     6
+    ],
+    "deep": [
+     1
+    ],
+    "delivered": [
+     16
+    ],
+    "depression": [
+     11
+    ],
+    "depressive": [
+     11
+    ],
+    "disease": [
+     9
+    ],
+    "disorder": [
+     11
+    ],
+    "dollar": [
+     14
+    ],
+    "driven": [
+     16
+    ],
+    "early": [
+     17
+    ],
+    "effective": [
+     10
+    ],
+    "end": [
+     14
+    ],
+    "england": [
+     6
+    ],
+    "ensure": [
+     20
+    ],
+    "europe": [
+     18
+    ],
+    "european": [
+     13
+    ],
+    "evaluating": [
+     20
+    ],
+    "even": [
+     22
+    ],
+    "everyone": [
+     0
+    ],
+    "evolve": [
+     20
+    ],
+    "expect": [
+     13
+    ],
+    "expertise": [
+     1
+    ],
+    "extend": [
+     22
+    ],
+    "fact": [
+     13
+    ],
+    "family": [
+     18
+    ],
+    "fda": [
+     17
+    ],
+    "finally": [
+     19
+    ],
+    "first": [
+     2,
+     18
+    ],
+    "focus": [
+     22
+    ],
+    "follow": [
+     8
+    ],
+    "for": [
+     4,
+     6,
+     7,
+     11,
+     18,
+     21
+    ],
+    "forward": [
+     13
+    ],
+    "fully": [
+     9
+    ],
+    "further": [
+     18
+    ],
+    "gaining": [
+     15
+    ],
+    "globally": [
+     16
+    ],
+    "going": [
+     20
+    ],
+    "greater": [
+     22
+    ],
+    "grew": [
+     2
+    ],
+    "growth": [
+     16,
+     22
+    ],
+    "had": [
+     15
+    ],
+    "have": [
+     1,
+     8,
+     10,
+     15
+    ],
+    "healthcare": [
+     20,
+     20
+    ],
+    "heart": [
+     15
+    ],
+    "hello": [
+     0
+    ],
+    "higher": [
+     22
+    ],
+    "highlights": [
+     5
+    ],
+    "historically": [
+     10
+    ],
+    "i": [
+     4
+    ],
+    "ideas": [
+     22
+    ],
+    "ideation": [
+     11
+    ],
+    "il": [
+     9
+    ],
+    "immunology": [
+     10
+    ],
+    "impella": [
+     15
+    ],
+    "improve": [
+     22
+    ],
+    "in": [
+     6,
+     6,
+     6,
+     13,
+     13,
+     15,
+     15,
+     16,
+     16,
+     16,
+     16,
+     17,
+     18,
+     18,
+     22
+    ],
+    "industry": [
+     20
+    ],
+    "inhibitor": [
+     9
+    ],
+    "injectables": [
+     10
+    ],
+    "inlexzo": [
+     5
+    ],
+    "innovation": [
+     8
+    ],
+    "innovations": [
+     16
+    ],
+    "intravascular": [
+     13
+    ],
+    "investment": [
+     22
+    ],
+    "is": [
+     3,
+     5,
+     9,
+     20
+    ],
+    "javelin": [
+     13
+    ],
+    "johnson": [
+     5,
+     5,
+     20,
+     20
+    ],
+    "journal": [
+     6
+    ],
+    "know": [
+     20
+    ],
+    "korea": [
+     18
+    ],
+    "last": [
+     13,
+     18
+    ],
+    "latest": [
+     16,
+     18
+    ],
+    "launching": [
+     18
+    ],
+    "lazcluze": [
+     6
+    ],
+    "lead": [
+     20
+    ],
+    "leadership": [
+     1
+    ],
+    "lens": [
+     18
+    ],
+    "lithotripsy": [
+     13
+    ],
+    "live": [
+     7
+    ],
+    "lives": [
+     22
+    ],
+    "long": [
+     8
+    ],
+    "longer": [
+     7
+    ],
+    "lung": [
+     6
+    ],
+    "major": [
+     11
+    ],
+    "make": [
+     17
+    ],
+    "max": [
+     18
+    ],
+    "meaningfully": [
+     22
+    ],
+    "medicine": [
+     6
+    ],
+    "medtech": [
+     14
+    ],
+    "member": [
+     18
+    ],
+    "millionth": [
+     13
+    ],
+    "momentum": [
+     13,
+     18
+    ],
+    "more": [
+     16
+    ],
+    "morning": [
+     19
+    ],
+    "mortality": [
+     15
+    ],
+    "most": [
+     10,
+     16
+    ],
+    "moving": [
+     13
+    ],
+    "multifocal": [
+     18
+    ],
+    "multiple": [
+     3,
+     4
+    ],
+    "myeloma": [
+     3,
+     4
+    ],
+    "nearly": [
+     2
+    ],
+    "new": [
+     6,
+     21
+    ],
+    "news": [
+     19
+    ],
+    "next": [
+     8
+    ],
+    "novo": [
+     17
+    ],
+    "now": [
+     7
+    ],
+    "oasys": [
+     18
+    ],
+    "of": [
+     6,
+     6,
+     8,
+     13,
+     15,
+     15,
+     15,
+     16,
+     18
+    ],
+    "offer": [
+     9
+    ],
+    "oncology": [
+     2
+    ],
+    "only": [
+     9,
+     11
+    ],
+    "operating": [
+     16
+    ],
+    "operational": [
+     2
+    ],
+    "opportunities": [
+     21
+    ],
+    "orthopaedics": [
+     19,
+     21
+    ],
+    "osimertinib": [
+     6
+    ],
+    "ottava": [
+     17
+    ],
+    "our": [
+     3,
+     4,
+     14,
+     16,
+     16,
+     18,
+     20,
+     21,
+     22
+    ],
+    "overall": [
+     20
+    ],
+    "patient": [
+     13
+    ],
+    "patients": [
+     7,
+     15,
+     15
+    ],
+    "people": [
+     18
+    ],
+    "peripheral": [
+     13
+    ],
+    "place": [
+     22
+    ],
+    "planned": [
+     21
+    ],
+    "platform": [
+     14
+    ],
+    "plus": [
+     6
+    ],
+    "portfolio": [
+     20
+    ],
+    "positioned": [
+     20
+    ],
+    "positions": [
+     1
+    ],
+    "positive": [
+     17
+    ],
+    "possible": [
+     7
+    ],
+    "potential": [
+     7
+    ],
+    "progress": [
+     17
+    ],
+    "project": [
+     12
+    ],
+    "published": [
+     6
+    ],
+    "q3": [
+     2,
+     16,
+     18
+    ],
+    "quarter": [
+     13,
+     18
+    ],
+    "rapidly": [
+     20
+    ],
+    "reach": [
+     12
+    ],
+    "recent": [
+     13
+    ],
+    "recently": [
+     6
+    ],
+    "reduced": [
+     15
+    ],
+    "reduction": [
+     6
+    ],
+    "regimen": [
+     9
+    ],
+    "remains": [
+     11,
+     20
+    ],
+    "resistant": [
+     11
+    ],
+    "results": [
+     6
+    ],
+    "risk": [
+     6
+    ],
+    "rooms": [
+     16
+    ],
+    "routine": [
+     15
+    ],
+    "rybrevant": [
+     6
+    ],
+    "sales": [
+     2
+    ],
+    "say": [
+     4
+    ],
+    "seeing": [
+     7
+    ],
+    "separation": [
+     21
+    ],
+    "shock": [
+     15,
+     15
+    ],
+    "shockwave": [
+     13,
+     14
+    ],
+    "showing": [
+     6
+    ],
+    "significant": [
+     6
+    ],
+    "significantly": [
+     7
+    ],
+    "spravato": [
+     11
+    ],
+    "stand": [
+     11
+    ],
+    "standard": [
+     15
+    ],
+    "statistically": [
+     6
+    ],
+    "stelara": [
+     8
+    ],
+    "strengthening": [
+     18
+    ],
+    "strong": [
+     13
+    ],
+    "study": [
+     15
+    ],
+    "subcutaneous": [
+     9
+    ],
+    "submission": [
+     17
+    ],
+    "success": [
+     8
+    ],
+    "suicidal": [
+     11
+    ],
+    "supported": [
+     13
+    ],
+    "surgical": [
+     16
+    ],
+    "t": [
+     4
+    ],
+    "take": [
+     3
+    ],
+    "talked": [
+     8
+    ],
+    "technologies": [
+     16
+    ],
+    "than": [
+     7,
+     16
+    ],
+    "thank": [
+     0
+    ],
+    "the": [
+     6,
+     6,
+     7,
+     8,
+     8,
+     9,
+     10,
+     11,
+     13,
+     13,
+     13,
+     15,
+     15,
+     18,
+     18,
+     18,
+     20
+    ],
+    "their": [
+     13
+    ],
+    "therapy": [
+     11
+    ],
+    "these": [
+     1
+    ],
+    "this": [
+     18,
+     19
+    ],
+    "thought": [
+     7
+    ],
+    "to": [
+     4,
+     6,
+     7,
+     8,
+     9,
+     12,
+     15,
+     17,
+     18,
+     19
+    ],
+    "towards": [
+     22
+    ],
+    "treatment": [
+     4,
+     11
+    ],
+    "treatments": [
+     10
+    ],
+    "tremfya": [
+     8,
+     9
+    ],
+    "truly": [
+     20
+    ],
+    "ulcerative": [
+     9
+    ],
+    "unique": [
+     5
+    ],
+    "unrivaled": [
+     3
+    ],
+    "us": [
+     18
+    ],
+    "use": [
+     15
+    ],
+    "used": [
+     16
+    ],
+    "want": [
+     4
+    ],
+    "we": [
+     1,
+     6,
+     7,
+     8,
+     12,
+     13,
+     14,
+     16,
+     17,
+     17,
+     18
+    ],
+    "what": [
+     5
+    ],
+    "where": [
+     1,
+     2,
+     3,
+     20,
+     22
+    ],
+    "who": [
+     15
+    ],
+    "with": [
+     11,
+     13,
+     15,
+     15,
+     17,
+     18
+    ],
+    "word": [
+     4
+    ],
+    "world": [
+     18
+    ],
+    "wound": [
+     16
+    ],
+    "year": [
+     14,
+     15
+    ],
+    "you": [
+     0,
+     20
+    ]
+   },
+   "excerpts": [
+    "Thank you, Darren, and hello, everyone.",
+    "These are areas where we have deep expertise and clear leadership positions.",
+    "First, Oncology, where Q3 operational sales grew nearly 20%.",
+    "Take multiple myeloma, where our competitiveness is unrivaled.",
+    "I also want to say a word about CARVYKTI, our CAR-T treatment for multiple myeloma.",
+    "Inlexzo highlights what is unique about Johnson & Johnson.",
+    "And in lung cancer, we recently published results in the New England Journal of Medicine for RYBREVANT plus LAZCLUZE, showing a statistically significant reduction in the risk of death compared to osimertinib.",
+    "We are now seeing the potential for patients to live significantly longer than anyone thought possible.",
+    "We have long talked about TREMFYA as the next big innovation to follow the success of Stelara.",
+    "TREMFYA is the only IL-23 inhibitor to offer a fully subcutaneous regimen across ulcerative colitis and Crohn's disease.",
+    "Historically, the most effective Immunology treatments have been injectables.",
+    "SPRAVATO remains the only approved stand-alone therapy for treatment-resistant depression, a major depressive disorder with suicidal ideation.",
+    "We project CAPLYTA to reach $5 billion annually.",
+    "In fact, in the last quarter, Shockwave supported their 1 millionth patient, and with the recent European approval of the Javelin Peripheral Intravascular Lithotripsy Catheter, we expect strong momentum moving forward.",
+    "We anticipate Shockwave becoming our 13th billion dollar MedTech platform by year end.",
+    "In the 10-year DanGer Shock study, routine use of Impella CP in patients who have had a heart attack with cardiogenic shock reduced mortality by 16.3% compared to the standard of care, with patients gaining an average of 600 additional days alive.",
+    "Our surgical technologies are used in most operating rooms globally, and in Q3, we delivered more than 9% growth in biosurgery and almost 7% in wound closure, driven by accelerating adoption of our latest innovations.",
+    "We also continue to make positive progress with OTTAVA, as we anticipate FDA de novo submission in early 2026.",
+    "And after launching the world's first multifocal contact lens for people with astigmatism in the US last quarter, we brought this latest member of the ACUVUE OASYS Max 1-Day family to Europe and Korea in Q3, further strengthening our momentum.",
+    "And finally, to this morning's Orthopaedics news.",
+    "As you know, the healthcare industry continues to evolve rapidly, and we are constantly evaluating our overall business and portfolio to ensure Johnson & Johnson remains best positioned to truly lead where healthcare is going.",
+    "For our Orthopaedics business, the planned separation creates new opportunities.",
+    "And be able to place even greater focus in our investment towards higher growth ideas where we can meaningfully extend and improve lives."
+   ],
+   "id": "jnj-jnj-usq-transcript-2025-10-14",
+   "msent": {
+    "13th": 1,
+    "a": 19,
+    "abiomed": 1,
+    "able": 2,
+    "about": 4,
+    "accelerated": 1,
+    "accelerates": 1,
+    "accelerating": 4,
+    "accomplish": 1,
+    "achieved": 2,
+    "achievements": 1,
+    "acquisition": 1,
+    "across": 8,
+    "acute": 1,
+    "acuvue": 1,
+    "additional": 2,
+    "addressing": 1,
+    "adoption": 1,
+    "after": 1,
+    "again": 1,
+    "alive": 1,
+    "all": 3,
+    "almost": 1,
+    "alone": 2,
+    "already": 2,
+    "also": 6,
+    "an": 3,
+    "and": 39,
+    "announced": 1,
+    "annual": 1,
+    "annually": 1,
+    "another": 3,
+    "answered": 1,
+    "anticipate": 2,
+    "anticipated": 1,
+    "anyone": 1,
+    "appropriate": 1,
+    "approval": 4,
+    "approved": 2,
+    "approximately": 2,
+    "are": 16,
+    "areas": 4,
+    "as": 13,
+    "asset": 1,
+    "assets": 1,
+    "associated": 1,
+    "astigmatism": 1,
+    "at": 3,
+    "atherosclerotic": 1,
+    "attack": 1,
+    "average": 1,
+    "back": 1,
+    "based": 1,
+    "be": 7,
+    "become": 1,
+    "becoming": 1,
+    "been": 2,
+    "before": 2,
+    "beginning": 1,
+    "believe": 1,
+    "benefit": 1,
+    "best": 1,
+    "better": 2,
+    "big": 1,
+    "bigger": 1,
+    "biggest": 1,
+    "billion": 8,
+    "biosurgery": 1,
+    "bipolar": 1,
+    "bladder": 2,
+    "block": 1,
+    "blockbuster": 1,
+    "blockbusters": 1,
+    "blood": 1,
+    "both": 2,
+    "bowel": 1,
+    "brands": 1,
+    "brought": 1,
+    "build": 1,
+    "building": 2,
+    "business": 8,
+    "businesses": 2,
+    "but": 2,
+    "by": 10,
+    "call": 2,
+    "can": 1,
+    "cancer": 3,
+    "cancers": 1,
+    "capabilities": 2,
+    "capitalize": 1,
+    "caplyta": 4,
+    "capturing": 1,
+    "car": 2,
+    "cardiogenic": 1,
+    "cardiovascular": 6,
+    "care": 1,
+    "carvykti": 4,
+    "categories": 1,
+    "catheter": 1,
+    "cellular": 1,
+    "clear": 3,
+    "close": 1,
+    "closure": 1,
+    "colitis": 3,
+    "combination": 2,
+    "come": 1,
+    "commercial": 1,
+    "companies": 1,
+    "company": 3,
+    "compared": 2,
+    "competitiveness": 1,
+    "completed": 1,
+    "completion": 1,
+    "comprehensive": 1,
+    "confident": 3,
+    "consecutive": 1,
+    "constantly": 1,
+    "contact": 1,
+    "continue": 2,
+    "continues": 4,
+    "contribute": 1,
+    "convinced": 1,
+    "core": 1,
+    "could": 4,
+    "cp": 2,
+    "creates": 1,
+    "crohn": 1,
+    "danger": 1,
+    "darren": 2,
+    "darzalex": 3,
+    "data": 3,
+    "day": 2,
+    "days": 1,
+    "de": 1,
+    "deal": 1,
+    "deals": 1,
+    "death": 1,
+    "decision": 1,
+    "decisions": 1,
+    "deep": 2,
+    "deliver": 1,
+    "delivered": 4,
+    "delivering": 2,
+    "delivery": 1,
+    "depression": 1,
+    "depressive": 3,
+    "depuy": 2,
+    "details": 1,
+    "development": 2,
+    "did": 2,
+    "digit": 1,
+    "directly": 1,
+    "disciplined": 1,
+    "disease": 2,
+    "disorder": 3,
+    "do": 1,
+    "doctors": 1,
+    "doing": 1,
+    "dollar": 1,
+    "double": 1,
+    "driven": 2,
+    "drug": 1,
+    "each": 1,
+    "early": 2,
+    "effective": 1,
+    "effectiveness": 1,
+    "electrophysiology": 1,
+    "end": 1,
+    "england": 2,
+    "ensure": 1,
+    "episodes": 1,
+    "era": 2,
+    "erleada": 1,
+    "europe": 2,
+    "european": 1,
+    "evaluating": 1,
+    "even": 3,
+    "ever": 2,
+    "every": 1,
+    "everyone": 1,
+    "evolve": 1,
+    "example": 3,
+    "exclusivity": 1,
+    "exit": 1,
+    "expect": 2,
+    "expertise": 3,
+    "extend": 2,
+    "fact": 2,
+    "failed": 1,
+    "family": 1,
+    "fashion": 1,
+    "faspro": 1,
+    "fastest": 2,
+    "fda": 5,
+    "finally": 1,
+    "first": 4,
+    "flexibility": 1,
+    "focus": 4,
+    "focused": 1,
+    "follow": 1,
+    "following": 1,
+    "for": 16,
+    "formulation": 1,
+    "fortify": 1,
+    "forward": 3,
+    "from": 5,
+    "fronts": 1,
+    "fueling": 2,
+    "fully": 1,
+    "further": 3,
+    "future": 1,
+    "gaining": 1,
+    "globally": 2,
+    "going": 1,
+    "gold": 1,
+    "great": 1,
+    "greater": 2,
+    "greatest": 1,
+    "grew": 3,
+    "groundbreaking": 1,
+    "grow": 1,
+    "growing": 5,
+    "growth": 17,
+    "had": 1,
+    "half": 1,
+    "has": 2,
+    "have": 16,
+    "having": 3,
+    "healthcare": 2,
+    "heard": 1,
+    "heart": 2,
+    "hello": 1,
+    "helping": 1,
+    "high": 1,
+    "higher": 2,
+    "highlights": 1,
+    "historically": 1,
+    "how": 1,
+    "i": 8,
+    "icotrokinra": 3,
+    "ideas": 1,
+    "ideation": 1,
+    "ii": 2,
+    "il": 3,
+    "immunology": 6,
+    "impact": 3,
+    "impella": 2,
+    "impressive": 1,
+    "improve": 1,
+    "improvements": 1,
+    "in": 38,
+    "incidence": 1,
+    "includes": 1,
+    "including": 1,
+    "increased": 1,
+    "increasingly": 1,
+    "indications": 1,
+    "industry": 3,
+    "inflammatory": 1,
+    "information": 1,
+    "inhibitor": 1,
+    "initially": 1,
+    "injectables": 1,
+    "inlexzo": 3,
+    "innovation": 5,
+    "innovations": 1,
+    "innovative": 3,
+    "intervention": 1,
+    "into": 1,
+    "intra": 1,
+    "intraocular": 1,
+    "intravascular": 2,
+    "invest": 2,
+    "investment": 1,
+    "is": 22,
+    "it": 9,
+    "its": 2,
+    "j": 1,
+    "javelin": 1,
+    "joe": 1,
+    "johnson": 8,
+    "journal": 2,
+    "july": 1,
+    "just": 2,
+    "kind": 1,
+    "know": 1,
+    "korea": 1,
+    "largest": 1,
+    "last": 5,
+    "later": 1,
+    "latest": 2,
+    "launch": 2,
+    "launched": 1,
+    "launching": 1,
+    "lazcluze": 3,
+    "lead": 1,
+    "leader": 1,
+    "leaders": 2,
+    "leadership": 5,
+    "leading": 2,
+    "least": 1,
+    "led": 1,
+    "lens": 1,
+    "lenses": 1,
+    "let's": 2,
+    "levels": 1,
+    "like": 1,
+    "line": 1,
+    "lines": 1,
+    "lithotripsy": 2,
+    "live": 1,
+    "lives": 2,
+    "local": 1,
+    "long": 2,
+    "longer": 1,
+    "looking": 1,
+    "looks": 1,
+    "loss": 1,
+    "lung": 1,
+    "major": 3,
+    "make": 1,
+    "making": 4,
+    "mapping": 1,
+    "market": 3,
+    "markets": 1,
+    "max": 1,
+    "me": 1,
+    "mean": 1,
+    "meaningfully": 1,
+    "medicine": 5,
+    "medtech": 6,
+    "member": 1,
+    "millionth": 1,
+    "model": 2,
+    "moderate": 1,
+    "momentum": 4,
+    "month": 1,
+    "months": 1,
+    "more": 18,
+    "morning": 2,
+    "mortality": 1,
+    "most": 4,
+    "move": 1,
+    "moving": 1,
+    "much": 2,
+    "multifocal": 1,
+    "multiple": 5,
+    "multiplying": 1,
+    "myeloma": 4,
+    "namal": 1,
+    "nawana": 1,
+    "nearly": 2,
+    "need": 1,
+    "neuropsychiatry": 1,
+    "neuroscience": 3,
+    "new": 8,
+    "news": 2,
+    "next": 3,
+    "no": 2,
+    "not": 2,
+    "novo": 1,
+    "now": 9,
+    "oasys": 1,
+    "of": 36,
+    "offer": 1,
+    "on": 8,
+    "once": 1,
+    "oncology": 4,
+    "one": 3,
+    "only": 3,
+    "operating": 2,
+    "operational": 13,
+    "opportunities": 2,
+    "opportunity": 1,
+    "or": 1,
+    "oral": 1,
+    "orthopaedics": 4,
+    "osimertinib": 1,
+    "other": 2,
+    "ottava": 1,
+    "our": 36,
+    "outside": 1,
+    "outstanding": 1,
+    "over": 2,
+    "overall": 1,
+    "patient": 2,
+    "patients": 8,
+    "peak": 3,
+    "people": 1,
+    "peptide": 1,
+    "perfect": 1,
+    "perform": 1,
+    "performance": 1,
+    "peripheral": 1,
+    "phase": 1,
+    "pill": 1,
+    "pipeline": 2,
+    "place": 1,
+    "planned": 3,
+    "plaque": 3,
+    "platform": 2,
+    "plus": 3,
+    "portfolio": 7,
+    "position": 2,
+    "positioned": 1,
+    "positioning": 1,
+    "positions": 2,
+    "positive": 1,
+    "possible": 1,
+    "potential": 4,
+    "powerful": 1,
+    "presented": 1,
+    "prior": 1,
+    "priority": 1,
+    "process": 1,
+    "profitable": 1,
+    "progress": 4,
+    "project": 1,
+    "projected": 1,
+    "promising": 1,
+    "proof": 2,
+    "prouder": 1,
+    "provide": 2,
+    "psoriasis": 3,
+    "published": 2,
+    "pump": 1,
+    "q3": 9,
+    "quarter": 12,
+    "question": 1,
+    "rapidly": 1,
+    "reach": 1,
+    "real": 1,
+    "receive": 1,
+    "recent": 1,
+    "recently": 1,
+    "receptor": 1,
+    "reduced": 1,
+    "reduction": 1,
+    "reflects": 1,
+    "regimen": 1,
+    "release": 1,
+    "releasing": 1,
+    "relentless": 1,
+    "remains": 2,
+    "remarkable": 1,
+    "remicade": 2,
+    "reported": 1,
+    "resistant": 1,
+    "results": 2,
+    "retain": 1,
+    "revolutionize": 1,
+    "risk": 2,
+    "robotic": 1,
+    "rooms": 1,
+    "routine": 1,
+    "rybrevant": 3,
+    "safety": 1,
+    "said": 1,
+    "sales": 15,
+    "say": 3,
+    "schizophrenia": 1,
+    "second": 1,
+    "see": 1,
+    "seeing": 1,
+    "seen": 1,
+    "segments": 1,
+    "selectively": 1,
+    "separation": 4,
+    "severe": 1,
+    "share": 3,
+    "sharing": 1,
+    "sharpens": 1,
+    "shift": 1,
+    "shock": 1,
+    "shockwave": 3,
+    "shortly": 1,
+    "shot": 1,
+    "showing": 2,
+    "sign": 1,
+    "significant": 1,
+    "significantly": 2,
+    "simponi": 2,
+    "six": 2,
+    "smoldering": 1,
+    "solid": 2,
+    "some": 2,
+    "soon": 1,
+    "sourced": 1,
+    "spravato": 3,
+    "stage": 1,
+    "stakeholders": 1,
+    "stand": 1,
+    "standard": 2,
+    "start": 1,
+    "starting": 1,
+    "starts": 1,
+    "statistically": 1,
+    "stelara": 3,
+    "strength": 1,
+    "strengthened": 2,
+    "strengthening": 1,
+    "stroke": 1,
+    "strong": 5,
+    "stronger": 1,
+    "strongly": 1,
+    "studies": 1,
+    "study": 1,
+    "subcutaneous": 2,
+    "submission": 1,
+    "submitted": 1,
+    "success": 4,
+    "successful": 1,
+    "suicidal": 1,
+    "supported": 1,
+    "surgery": 4,
+    "surgical": 2,
+    "survival": 1,
+    "sustained": 1,
+    "synthes": 2,
+    "system": 1,
+    "t": 2,
+    "take": 1,
+    "talk": 1,
+    "talked": 1,
+    "talvey": 1,
+    "targeted": 1,
+    "team": 1,
+    "technologies": 1,
+    "technology": 2,
+    "tecnis": 1,
+    "tecvayli": 2,
+    "term": 1,
+    "than": 16,
+    "thank": 2,
+    "that": 9,
+    "the": 39,
+    "their": 1,
+    "therapies": 1,
+    "therapy": 2,
+    "there": 1,
+    "these": 1,
+    "thing": 1,
+    "third": 2,
+    "this": 14,
+    "thought": 1,
+    "thrilled": 1,
+    "thrive": 1,
+    "through": 3,
+    "to": 34,
+    "touch": 1,
+    "towards": 1,
+    "transformative": 1,
+    "treat": 1,
+    "treated": 2,
+    "treatment": 8,
+    "treatments": 3,
+    "tremfya": 6,
+    "trials": 1,
+    "truly": 1,
+    "tumors": 2,
+    "turn": 3,
+    "turning": 1,
+    "typical": 1,
+    "ulcerative": 3,
+    "unequivocally": 1,
+    "unique": 2,
+    "unmatched": 1,
+    "unmet": 1,
+    "unrivaled": 1,
+    "us": 2,
+    "use": 1,
+    "used": 1,
+    "varipulse": 1,
+    "very": 2,
+    "vision": 4,
+    "want": 2,
+    "was": 4,
+    "we": 43,
+    "well": 2,
+    "were": 2,
+    "what": 2,
+    "when": 2,
+    "where": 8,
+    "which": 3,
+    "while": 1,
+    "who": 1,
+    "will": 9,
+    "win": 1,
+    "with": 22,
+    "within": 1,
+    "word": 1,
+    "world": 2,
+    "would": 1,
+    "wound": 1,
+    "year": 7,
+    "years": 1,
+    "you": 7
+   },
+   "n_sentences": 81,
+   "source": "s203.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q3 2025 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s203.q4cdn.com/636242992/files/doc_financials/2025/q3/16/JNJ-USQ_Transcript_2025-10-14.pdf",
+   "words": 1699
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full text is not included; see each document's url.",
+ "slug": "duato"
+}

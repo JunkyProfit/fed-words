@@ -5,7 +5,7 @@
 A static website that lists every word a public figure said in their official
 documents, ranked from most to least frequent. Choose a **category** (Fed Chair, CEOs, US Government),
 then a **person**. Inside US Government, people are listed in labelled groups (Cabinet, Congress,
-Supreme Court; the `group` field in `people.json`). For CEOs and US Government an **A–Z index** filters the
+Supreme Court; the `group` field in `people.json`). For CEOs and US Government an **A–Z index** (plus, for CEOs, a search box and stock-index chips) filters the
 people by last name (a right-hand column in the Who card on wide screens, a compact scrolling row on phones;
 letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End move between letters, Esc resets):
 
@@ -16,6 +16,24 @@ letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End m
 | CEOs | **Andy Jassy** (Amazon) | 2025 and 2024 annual shareholder letters | aboutamazon.com |
 | CEOs | **Greg Abel** (Berkshire Hathaway) | his 2025 letter (his first as CEO) | berkshirehathaway.com |
 | CEOs | **Sundar Pichai** (Alphabet/Google) | his prepared remarks from the 8 most recent earnings calls (Q3 2024 to Q2 2026) | abc.xyz (Alphabet's own transcripts) |
+| CEOs | **Satya Nadella** (Microsoft, MSFT; Mag 7, S&P 500, Nasdaq 100, Dow 30) | his prepared section of the 4 most recent earnings calls (Q2 FY2025 to Q4 FY2026) | microsoft.com |
+| CEOs | **Mark Zuckerberg** (Meta, META; Mag 7, S&P 500, Nasdaq 100) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investor.atmeta.com |
+| CEOs | **Jamie Dimon** (JPMorgan Chase, JPM; S&P 500, Dow 30) | 2 signed annual shareholder letters (2025, 2024) | jpmorganchase.com |
+| CEOs | **John Furner** (Walmart, WMT; S&P 500, Nasdaq 100, Dow 30) | his prepared section of the 3 most recent earnings calls (Q4 FY2026 to Q2 FY2027) | stock.walmart.com |
+| CEOs | **Ryan McInerney** (Visa, V; S&P 500, Dow 30) | his prepared section of the 4 most recent earnings calls (Q4 FY2025 to Q3 FY2026) | investor.visa.com |
+| CEOs | **Joaquin Duato** (Johnson & Johnson, JNJ; S&P 500, Dow 30) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investor.jnj.com |
+| CEOs | **Ted Decker** (Home Depot, HD; S&P 500, Dow 30) | his prepared section of the 3 most recent earnings calls (Q1 2025 to Q1 2026) | ir.homedepot.com |
+| CEOs | **Brian Moynihan** (Bank of America, BAC; S&P 500) | his prepared section of the 2 most recent earnings calls (Q1 2026 to Q2 2026) | investor.bankofamerica.com |
+| CEOs | **Lisa Su** (AMD, AMD; S&P 500, Nasdaq 100) | her prepared section of the 4 most recent earnings calls (Q4 2024 to Q1 2026) | ir.amd.com |
+| CEOs | **Marc Benioff** (Salesforce, CRM; S&P 500, Dow 30) | his prepared section of the 4 most recent earnings calls (Q4 FY2025 to Q2 FY2027) | investor.salesforce.com |
+| CEOs | **Chuck Robbins** (Cisco, CSCO; S&P 500, Nasdaq 100, Dow 30) | his prepared section of the 4 most recent earnings calls (Q1 FY2026 to Q4 FY2026) | investor.cisco.com |
+| CEOs | **Ted Pick** (Morgan Stanley, MS; S&P 500) | 2 signed annual shareholder letters (2026, 2025) | morganstanley.com |
+| CEOs | **Jane Fraser** (Citigroup, C; S&P 500) | her prepared section of the 3 most recent earnings calls (Q4 2025 to Q2 2026) | citigroup.com |
+| CEOs | **John Stankey** (AT&T, T; S&P 500) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investors.att.com |
+| CEOs | **Cristiano Amon** (Qualcomm, QCOM; S&P 500, Nasdaq 100) | his prepared section of the 4 most recent earnings calls (Q4 FY2025 to Q3 FY2026) | investor.qualcomm.com |
+| CEOs | **Dara Khosrowshahi** (Uber, UBER; S&P 500) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investor.uber.com |
+| CEOs | **Brian Niccol** (Starbucks, SBUX; S&P 500, Nasdaq 100) | his prepared section of the 4 most recent earnings calls (Q4 FY2025 to Q3 FY2026) | investor.starbucks.com |
+| CEOs | **Kelly Ortberg** (Boeing, BA; S&P 500, Dow 30) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investors.boeing.com |
 | US Government › Cabinet | **Scott Bessent** (Treasury) | 5 speeches, Feb–Aug 2026 (as prepared for delivery) | home.treasury.gov |
 | US Government › Cabinet | **Marco Rubio** (State) | 5 transcripts, Feb–Sep 2026 (his turns only) | state.gov |
 | US Government › Cabinet | **Howard Lutnick** (Commerce) | 3 prepared testimony statements, 2025–2026 | appropriations.senate.gov |
@@ -27,6 +45,24 @@ All federal texts are U.S. government works, not subject to copyright (17 U.S.C.
 are embedded in full ("Show all", source links). commerce.gov, war.gov, defense.gov and congress.gov
 block the build machine, so Commerce/War testimony comes from the Senate committees' own pages and
 floor remarks from govinfo.gov.
+
+**Data-driven CEO list:** `ceos.json` lists each company (ticker, index membership, first day as CEO, and how to find
+the texts on the company's own IR site: a Q4 IR feed, links scraped from an IR page, or a URL pattern), and `kind`
+(`transcript`: keep only the CEO's own prepared section, from his speaker label to the next speaker or the Q&A;
+`letter`: the signed letter from the salutation to the signature). `fetch_ceo.py` reads it and `ceo_extract.py`
+does the generic cutting (speaker labels in the formats the IR vendors use, repeated page headers/footers, participant
+lists). `build.py` adds every `ceos.json` company to the CEO picker automatically (`order` sets the picker order,
+roughly by market cap), so adding a CEO is one JSON entry plus `python3 fetch_ceo.py --only <slug>`. Every CEO was
+checked against the company's own latest (2026) call transcript or letter. AMD's transcripts print no call date, so
+for those the PDF's own file date is used (it can be a few days after the call).
+The CEO picker has a **search box** (name, company or ticker), **index chips** (All, Mag 7, S&P 500, Nasdaq 100,
+Dow 30, with counts) and the A–Z index; all three combine.
+
+Skipped in this wave: **Jensen Huang** (Nvidia's own call materials have no prepared remarks by him: the CFO gives
+the prepared commentary and Huang speaks only in the Q&A; its annual report has no CEO letter), **Elon Musk** (Tesla
+blocks the build machine), **John Ternus** (Apple posts no call text, see below). Not yet checked: other large caps such
+as Broadcom, Eli Lilly, Mastercard, Oracle, Exxon Mobil, Costco and Netflix (next wave). Home Depot's 2Q26 transcript
+is skipped because no text could be extracted from the PDF.
 
 **CEO source types:** every CEO document carries a small **Source type** label in the document list
 (`Shareholder letter` or `Earnings call prepared remarks`, the `source_type` field written by `fetch_ceo.py`).
@@ -75,6 +111,17 @@ first 10 sentences are shown; "Show all N" expands a scrollable list. Each sente
 has a **source ↗** link, a text-fragment URL (`…htm#:~:text=start,end`) that jumps
 to and highlights that sentence on federalreserve.gov in Chrome, Edge, and Safari.
 The speech title link is a plain fallback for other browsers.
+
+**Ad slots:** three faint placeholder units (a mock hairline mark, the made-up name "Sponsor", "Your ad here",
+and a tiny "Advertisement" label; no real brands): a leaderboard below the results card (728x90, 320x50 on phones), a
+300x250 sidebar unit below Who/Timeframe (desktop only) and a 300x250 in-content unit between the method note and
+About. They never sit above the red stats or next to controls. To switch to AdSense, fill in the single `ADS` config
+block in `build.py` (`client` = your `ca-pub-...` id, plus each slot's `id`); the AdSense script then loads and real
+units replace the placeholders.
+
+**Polish:** the red stats count up when a person loads (skipped with prefers-reduced-motion); a **Share** button in the
+header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
+`/` (filter words), `V` (switch view), `S` (share), `?` (hint).
 
 **Views:** two thumbnail cards at the top, **Word Cloud** (the default, a framed mini cloud, shown in the stat red)
 and **Super Math** (the ranked table, a sketched page), are buttons with `aria-pressed` that switch

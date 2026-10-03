@@ -1,0 +1,2701 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "a": 11,
+    "about": 1,
+    "acquisition": 1,
+    "across": 1,
+    "addition": 2,
+    "addressable": 2,
+    "adjusted": 1,
+    "affordability": 1,
+    "air": 1,
+    "also": 1,
+    "always": 1,
+    "an": 6,
+    "and": 23,
+    "ann": 2,
+    "approximately": 2,
+    "apron": 1,
+    "are": 7,
+    "as": 6,
+    "assets": 1,
+    "associates": 4,
+    "assortment": 1,
+    "at": 1,
+    "best": 1,
+    "better": 1,
+    "biggest": 1,
+    "billion": 3,
+    "billy": 1,
+    "branches": 1,
+    "brings": 1,
+    "building": 1,
+    "business": 2,
+    "call": 1,
+    "can": 2,
+    "canada": 1,
+    "capabilities": 2,
+    "class": 1,
+    "combined": 1,
+    "command": 1,
+    "commercial": 1,
+    "comp": 1,
+    "compared": 1,
+    "complementary": 1,
+    "completed": 1,
+    "comprehensive": 1,
+    "comps": 3,
+    "conditioning": 1,
+    "confident": 1,
+    "consumer": 1,
+    "continue": 1,
+    "core": 1,
+    "create": 1,
+    "culture": 1,
+    "currency": 1,
+    "customer": 4,
+    "customers": 5,
+    "deliver": 1,
+    "delivered": 1,
+    "delivering": 1,
+    "delivery": 1,
+    "demand": 1,
+    "despite": 1,
+    "detail": 1,
+    "developing": 1,
+    "differentiated": 1,
+    "diluted": 1,
+    "distribution": 3,
+    "distributor": 1,
+    "divisions": 1,
+    "doing": 1,
+    "driving": 1,
+    "earnings": 1,
+    "easy": 1,
+    "engaged": 1,
+    "engaging": 1,
+    "enterprise": 1,
+    "equipment": 1,
+    "established": 1,
+    "even": 1,
+    "event": 1,
+    "everyone": 1,
+    "excellent": 1,
+    "exceptional": 2,
+    "executing": 2,
+    "execution": 1,
+    "existing": 1,
+    "expectations": 1,
+    "experience": 2,
+    "extensive": 1,
+    "facing": 1,
+    "favorable": 1,
+    "feel": 1,
+    "first": 4,
+    "fiscal": 1,
+    "five": 1,
+    "fleet": 1,
+    "focused": 1,
+    "for": 5,
+    "force": 1,
+    "fragmented": 1,
+    "frictionless": 1,
+    "from": 2,
+    "gains": 1,
+    "gives": 1,
+    "good": 1,
+    "great": 1,
+    "greater": 2,
+    "growth": 1,
+    "had": 2,
+    "have": 1,
+    "heating": 1,
+    "high": 1,
+    "highly": 2,
+    "housing": 1,
+    "hvac": 2,
+    "i'd": 1,
+    "in": 15,
+    "increase": 1,
+    "increased": 2,
+    "increases": 1,
+    "incredible": 2,
+    "innovation": 1,
+    "interconnected": 1,
+    "is": 3,
+    "isabel": 1,
+    "job": 1,
+    "know": 1,
+    "last": 4,
+    "leading": 2,
+    "let": 1,
+    "level": 1,
+    "leveraging": 1,
+    "like": 1,
+    "line": 1,
+    "local": 1,
+    "locations": 1,
+    "market": 6,
+    "me": 1,
+    "merchandising": 1,
+    "merchants": 1,
+    "mexico": 1,
+    "mingledorff": 3,
+    "moment": 1,
+    "more": 3,
+    "morning": 1,
+    "moving": 1,
+    "national": 1,
+    "negative": 1,
+    "network": 2,
+    "northern": 1,
+    "not": 1,
+    "now": 2,
+    "of": 9,
+    "offering": 1,
+    "on": 1,
+    "opportunity": 2,
+    "orange": 1,
+    "our": 19,
+    "outdoor": 1,
+    "outsized": 1,
+    "over": 3,
+    "partners": 1,
+    "partnerships": 1,
+    "parts": 1,
+    "penetrate": 1,
+    "per": 1,
+    "percent": 3,
+    "performance": 1,
+    "period": 2,
+    "platform": 1,
+    "plus": 1,
+    "portfolio": 1,
+    "positive": 2,
+    "power": 1,
+    "pressure": 1,
+    "pro": 4,
+    "product": 4,
+    "professional": 1,
+    "projects": 1,
+    "proposition": 2,
+    "pros": 2,
+    "providing": 2,
+    "quarter": 5,
+    "readiness": 1,
+    "relationships": 1,
+    "relatively": 1,
+    "remain": 1,
+    "reminder": 1,
+    "replicate": 1,
+    "represents": 2,
+    "residential": 2,
+    "results": 1,
+    "right": 1,
+    "robust": 1,
+    "sales": 3,
+    "same": 2,
+    "saw": 1,
+    "season": 1,
+    "serve": 2,
+    "service": 1,
+    "services": 1,
+    "serving": 2,
+    "share": 4,
+    "similar": 1,
+    "so": 1,
+    "southeastern": 1,
+    "space": 1,
+    "specialty": 1,
+    "spend": 1,
+    "spring": 1,
+    "srs": 3,
+    "states": 2,
+    "store": 3,
+    "strategic": 1,
+    "strategy": 1,
+    "strong": 1,
+    "superior": 1,
+    "supplier": 2,
+    "supplies": 1,
+    "sustained": 1,
+    "tasking": 1,
+    "team": 1,
+    "teams": 1,
+    "thank": 2,
+    "that": 2,
+    "the": 16,
+    "this": 3,
+    "through": 2,
+    "throughout": 1,
+    "time": 1,
+    "to": 14,
+    "total": 1,
+    "trillion": 1,
+    "turn": 1,
+    "u.s.": 2,
+    "uncertainty": 1,
+    "underlying": 1,
+    "unique": 1,
+    "united": 1,
+    "us": 1,
+    "value": 3,
+    "ventilation": 1,
+    "wallet": 1,
+    "warehouses": 1,
+    "was": 3,
+    "we": 11,
+    "weather": 1,
+    "week": 1,
+    "were": 3,
+    "western": 1,
+    "what": 2,
+    "when": 1,
+    "which": 1,
+    "while": 1,
+    "wholesale": 1,
+    "will": 3,
+    "win": 2,
+    "winning": 1,
+    "with": 4,
+    "year": 3,
+    "you": 1
+   },
+   "date": "2026-05-19",
+   "entries": {
+    "a": [
+     4,
+     5,
+     6,
+     6
+    ],
+    "about": [
+     3
+    ],
+    "acquisition": [
+     4
+    ],
+    "across": [
+     4
+    ],
+    "affordability": [
+     2
+    ],
+    "air": [
+     4
+    ],
+    "an": [
+     5
+    ],
+    "and": [
+     0,
+     2,
+     3,
+     3,
+     4,
+     4,
+     5
+    ],
+    "are": [
+     5
+    ],
+    "as": [
+     6
+    ],
+    "assortment": [
+     3
+    ],
+    "biggest": [
+     3
+    ],
+    "billion": [
+     6
+    ],
+    "brings": [
+     5
+    ],
+    "business": [
+     2,
+     5
+    ],
+    "canada": [
+     1
+    ],
+    "commercial": [
+     4
+    ],
+    "complementary": [
+     5
+    ],
+    "completed": [
+     4
+    ],
+    "comps": [
+     1
+    ],
+    "conditioning": [
+     4
+    ],
+    "consumer": [
+     2
+    ],
+    "currency": [
+     1
+    ],
+    "customer": [
+     5
+    ],
+    "customers": [
+     4
+    ],
+    "demand": [
+     2
+    ],
+    "despite": [
+     2
+    ],
+    "distribution": [
+     5
+    ],
+    "distributor": [
+     4
+    ],
+    "equipment": [
+     4
+    ],
+    "established": [
+     5
+    ],
+    "everyone": [
+     0
+    ],
+    "existing": [
+     5
+    ],
+    "extensive": [
+     5
+    ],
+    "feel": [
+     3
+    ],
+    "fiscal": [
+     2
+    ],
+    "five": [
+     4
+    ],
+    "good": [
+     0
+    ],
+    "great": [
+     3
+    ],
+    "greater": [
+     2
+    ],
+    "had": [
+     1
+    ],
+    "heating": [
+     4
+    ],
+    "highly": [
+     5
+    ],
+    "housing": [
+     2
+    ],
+    "in": [
+     1,
+     2,
+     4
+    ],
+    "is": [
+     3
+    ],
+    "isabel": [
+     0
+    ],
+    "last": [
+     4
+    ],
+    "leading": [
+     4
+    ],
+    "local": [
+     1
+    ],
+    "locations": [
+     4
+    ],
+    "market": [
+     6
+    ],
+    "mexico": [
+     1
+    ],
+    "mingledorff": [
+     4,
+     5
+    ],
+    "morning": [
+     0
+    ],
+    "negative": [
+     1
+    ],
+    "network": [
+     5
+    ],
+    "of": [
+     4,
+     4
+    ],
+    "opportunity": [
+     6
+    ],
+    "our": [
+     2,
+     3,
+     3
+    ],
+    "portfolio": [
+     5
+    ],
+    "positive": [
+     1
+    ],
+    "pressure": [
+     2
+    ],
+    "pro": [
+     6
+    ],
+    "product": [
+     3,
+     5
+    ],
+    "proposition": [
+     3
+    ],
+    "readiness": [
+     3
+    ],
+    "relationships": [
+     5
+    ],
+    "relatively": [
+     2
+    ],
+    "reminder": [
+     6
+    ],
+    "represents": [
+     6
+    ],
+    "residential": [
+     4
+    ],
+    "robust": [
+     5
+    ],
+    "saw": [
+     2
+    ],
+    "season": [
+     3
+    ],
+    "serving": [
+     4
+    ],
+    "similar": [
+     2
+    ],
+    "southeastern": [
+     4
+    ],
+    "spring": [
+     3
+    ],
+    "srs": [
+     5
+    ],
+    "states": [
+     4,
+     4
+    ],
+    "store": [
+     3
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     5
+    ],
+    "the": [
+     2,
+     4,
+     4
+    ],
+    "through": [
+     4
+    ],
+    "throughout": [
+     2
+    ],
+    "to": [
+     2,
+     5
+    ],
+    "uncertainty": [
+     2
+    ],
+    "underlying": [
+     2
+    ],
+    "united": [
+     4
+    ],
+    "value": [
+     3
+    ],
+    "ventilation": [
+     4
+    ],
+    "was": [
+     1,
+     2
+    ],
+    "we": [
+     2,
+     3,
+     4
+    ],
+    "week": [
+     4
+    ],
+    "what": [
+     2
+    ],
+    "while": [
+     1
+    ],
+    "wholesale": [
+     4
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Thank you, Isabel, and good morning everyone.",
+    "In local currency, Mexico had positive comps, while Canada was negative.",
+    "The underlying demand in our business was relatively similar to what we saw throughout fiscal 2025, despite greater consumer uncertainty and housing affordability pressure.",
+    "Spring is our biggest season, and we feel great about our store readiness, product assortment, and value proposition.",
+    "Last week we completed the acquisition of Mingledorff’s, a leading wholesale distributor of heating, ventilation and air conditioning equipment, serving residential and commercial customers through 42 locations in five states across the southeastern United States.",
+    "Mingledorff's brings an extensive product portfolio, a robust distribution network, and established customer relationships that are highly complementary to SRS's existing business.",
+    "As a reminder, Pro represents a $700 billion market opportunity."
+   ],
+   "id": "hd-hd-1q26-transcript",
+   "msent": {
+    "a": 8,
+    "about": 1,
+    "acquisition": 1,
+    "across": 1,
+    "addition": 2,
+    "addressable": 1,
+    "adjusted": 1,
+    "affordability": 1,
+    "air": 1,
+    "also": 1,
+    "always": 1,
+    "an": 6,
+    "and": 17,
+    "ann": 2,
+    "approximately": 2,
+    "apron": 1,
+    "are": 7,
+    "as": 6,
+    "assets": 1,
+    "associates": 4,
+    "assortment": 1,
+    "at": 1,
+    "best": 1,
+    "better": 1,
+    "biggest": 1,
+    "billion": 3,
+    "billy": 1,
+    "branches": 1,
+    "brings": 1,
+    "building": 1,
+    "business": 2,
+    "call": 1,
+    "can": 2,
+    "canada": 1,
+    "capabilities": 2,
+    "class": 1,
+    "combined": 1,
+    "command": 1,
+    "commercial": 1,
+    "comp": 1,
+    "compared": 1,
+    "complementary": 1,
+    "completed": 1,
+    "comprehensive": 1,
+    "comps": 3,
+    "conditioning": 1,
+    "confident": 1,
+    "consumer": 1,
+    "continue": 1,
+    "core": 1,
+    "create": 1,
+    "culture": 1,
+    "currency": 1,
+    "customer": 4,
+    "customers": 5,
+    "deliver": 1,
+    "delivered": 1,
+    "delivering": 1,
+    "delivery": 1,
+    "demand": 1,
+    "despite": 1,
+    "detail": 1,
+    "developing": 1,
+    "differentiated": 1,
+    "diluted": 1,
+    "distribution": 3,
+    "distributor": 1,
+    "divisions": 1,
+    "doing": 1,
+    "driving": 1,
+    "earnings": 1,
+    "easy": 1,
+    "engaged": 1,
+    "engaging": 1,
+    "enterprise": 1,
+    "equipment": 1,
+    "established": 1,
+    "even": 1,
+    "event": 1,
+    "everyone": 1,
+    "excellent": 1,
+    "exceptional": 2,
+    "executing": 1,
+    "execution": 1,
+    "existing": 1,
+    "expectations": 1,
+    "experience": 2,
+    "extensive": 1,
+    "facing": 1,
+    "favorable": 1,
+    "feel": 1,
+    "first": 3,
+    "fiscal": 1,
+    "five": 1,
+    "fleet": 1,
+    "focused": 1,
+    "for": 4,
+    "force": 1,
+    "fragmented": 1,
+    "frictionless": 1,
+    "from": 2,
+    "gains": 1,
+    "gives": 1,
+    "good": 1,
+    "great": 1,
+    "greater": 2,
+    "growth": 1,
+    "had": 2,
+    "have": 1,
+    "heating": 1,
+    "high": 1,
+    "highly": 2,
+    "housing": 1,
+    "hvac": 2,
+    "i'd": 1,
+    "in": 12,
+    "increase": 1,
+    "increased": 1,
+    "increases": 1,
+    "incredible": 2,
+    "innovation": 1,
+    "interconnected": 1,
+    "is": 3,
+    "isabel": 1,
+    "job": 1,
+    "know": 1,
+    "last": 4,
+    "leading": 2,
+    "let": 1,
+    "level": 1,
+    "leveraging": 1,
+    "like": 1,
+    "line": 1,
+    "local": 1,
+    "locations": 1,
+    "market": 5,
+    "me": 1,
+    "merchandising": 1,
+    "merchants": 1,
+    "mexico": 1,
+    "mingledorff": 3,
+    "moment": 1,
+    "more": 2,
+    "morning": 1,
+    "moving": 1,
+    "national": 1,
+    "negative": 1,
+    "network": 2,
+    "northern": 1,
+    "not": 1,
+    "now": 2,
+    "of": 7,
+    "offering": 1,
+    "on": 1,
+    "opportunity": 2,
+    "orange": 1,
+    "our": 13,
+    "outdoor": 1,
+    "outsized": 1,
+    "over": 3,
+    "partners": 1,
+    "partnerships": 1,
+    "parts": 1,
+    "penetrate": 1,
+    "per": 1,
+    "percent": 2,
+    "performance": 1,
+    "period": 2,
+    "platform": 1,
+    "plus": 1,
+    "portfolio": 1,
+    "positive": 2,
+    "power": 1,
+    "pressure": 1,
+    "pro": 4,
+    "product": 4,
+    "professional": 1,
+    "projects": 1,
+    "proposition": 2,
+    "pros": 2,
+    "providing": 2,
+    "quarter": 4,
+    "readiness": 1,
+    "relationships": 1,
+    "relatively": 1,
+    "remain": 1,
+    "reminder": 1,
+    "replicate": 1,
+    "represents": 2,
+    "residential": 2,
+    "results": 1,
+    "right": 1,
+    "robust": 1,
+    "sales": 3,
+    "same": 2,
+    "saw": 1,
+    "season": 1,
+    "serve": 2,
+    "service": 1,
+    "services": 1,
+    "serving": 2,
+    "share": 4,
+    "similar": 1,
+    "so": 1,
+    "southeastern": 1,
+    "space": 1,
+    "specialty": 1,
+    "spend": 1,
+    "spring": 1,
+    "srs": 3,
+    "states": 1,
+    "store": 3,
+    "strategic": 1,
+    "strategy": 1,
+    "strong": 1,
+    "superior": 1,
+    "supplier": 2,
+    "supplies": 1,
+    "sustained": 1,
+    "tasking": 1,
+    "team": 1,
+    "teams": 1,
+    "thank": 2,
+    "that": 2,
+    "the": 10,
+    "this": 3,
+    "through": 2,
+    "throughout": 1,
+    "time": 1,
+    "to": 12,
+    "total": 1,
+    "trillion": 1,
+    "turn": 1,
+    "u.s.": 2,
+    "uncertainty": 1,
+    "underlying": 1,
+    "unique": 1,
+    "united": 1,
+    "us": 1,
+    "value": 3,
+    "ventilation": 1,
+    "wallet": 1,
+    "warehouses": 1,
+    "was": 3,
+    "we": 9,
+    "weather": 1,
+    "week": 1,
+    "were": 3,
+    "western": 1,
+    "what": 2,
+    "when": 1,
+    "which": 1,
+    "while": 1,
+    "wholesale": 1,
+    "will": 3,
+    "win": 2,
+    "winning": 1,
+    "with": 4,
+    "year": 3,
+    "you": 1
+   },
+   "n_sentences": 26,
+   "source": "ir.homedepot.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q1 2026 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://ir.homedepot.com/~/media/Files/H/HomeDepot-IR/2026/hd-1q26-transcript.pdf",
+   "words": 500
+  },
+  {
+   "counts": {
+    "a": 7,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 2,
+    "activity": 2,
+    "addition": 2,
+    "additionally": 1,
+    "adjusted": 3,
+    "adjusting": 1,
+    "ahead": 1,
+    "all": 2,
+    "also": 1,
+    "an": 2,
+    "analyst": 1,
+    "and": 22,
+    "ann": 2,
+    "any": 1,
+    "approximately": 3,
+    "are": 7,
+    "as": 4,
+    "associates": 2,
+    "at": 1,
+    "back": 1,
+    "benefit": 1,
+    "best": 2,
+    "better": 1,
+    "billion": 1,
+    "billy": 1,
+    "business": 1,
+    "by": 5,
+    "call": 1,
+    "canada": 1,
+    "capabilities": 2,
+    "clear": 1,
+    "close": 1,
+    "comp": 2,
+    "comparable": 1,
+    "compared": 2,
+    "completed": 1,
+    "comps": 5,
+    "conference": 1,
+    "consistent": 1,
+    "consumer": 1,
+    "continue": 3,
+    "core": 1,
+    "culture": 1,
+    "currency": 1,
+    "customer": 4,
+    "customers": 3,
+    "december": 1,
+    "dedication": 1,
+    "deliver": 2,
+    "delivering": 2,
+    "delivery": 1,
+    "demand": 2,
+    "despite": 1,
+    "detail": 1,
+    "did": 1,
+    "digit": 1,
+    "digits": 1,
+    "diluted": 3,
+    "divisions": 1,
+    "drive": 1,
+    "dynamic": 1,
+    "earnings": 3,
+    "ecosystem": 1,
+    "elevating": 1,
+    "encouraged": 1,
+    "engaged": 1,
+    "enhancing": 1,
+    "environment": 1,
+    "events": 1,
+    "everyone": 1,
+    "evidenced": 1,
+    "exceptional": 1,
+    "execution": 1,
+    "expanded": 1,
+    "expect": 2,
+    "expectations": 1,
+    "experience": 4,
+    "fact": 1,
+    "fiscal": 3,
+    "flat": 2,
+    "focused": 2,
+    "focusing": 1,
+    "for": 3,
+    "forward": 1,
+    "fourth": 2,
+    "frictionless": 1,
+    "from": 5,
+    "gms": 1,
+    "going": 1,
+    "good": 1,
+    "greenfield": 1,
+    "grew": 1,
+    "grow": 4,
+    "growing": 1,
+    "growth": 3,
+    "half": 1,
+    "hard": 1,
+    "have": 1,
+    "hear": 1,
+    "home": 2,
+    "housing": 1,
+    "i": 1,
+    "improvement": 2,
+    "in": 27,
+    "increase": 1,
+    "increased": 3,
+    "incredible": 1,
+    "industry": 1,
+    "interconnected": 2,
+    "investing": 2,
+    "investor": 1,
+    "is": 1,
+    "isabel": 1,
+    "january": 1,
+    "job": 1,
+    "lack": 2,
+    "largely": 1,
+    "last": 3,
+    "let": 1,
+    "life": 1,
+    "line": 1,
+    "local": 1,
+    "locations": 1,
+    "looking": 1,
+    "low": 1,
+    "management": 1,
+    "market": 3,
+    "me": 1,
+    "merchants": 1,
+    "mexico": 1,
+    "midsingle": 1,
+    "momentum": 1,
+    "more": 1,
+    "morning": 1,
+    "negative": 1,
+    "northern": 1,
+    "number": 1,
+    "of": 10,
+    "offer": 1,
+    "on": 3,
+    "ongoing": 1,
+    "opened": 1,
+    "organic": 2,
+    "our": 17,
+    "over": 1,
+    "per": 3,
+    "percent": 5,
+    "percentage": 1,
+    "performance": 1,
+    "period": 2,
+    "positioned": 1,
+    "positive": 2,
+    "posting": 1,
+    "pressure": 1,
+    "pressured": 1,
+    "prior": 2,
+    "pro": 4,
+    "project": 1,
+    "projects": 1,
+    "proposition": 3,
+    "pros": 2,
+    "provided": 1,
+    "quarter": 6,
+    "record": 1,
+    "reflecting": 1,
+    "regional": 1,
+    "relationships": 1,
+    "relatively": 1,
+    "remain": 2,
+    "reported": 2,
+    "results": 1,
+    "sales": 9,
+    "same": 2,
+    "see": 1,
+    "service": 1,
+    "serving": 1,
+    "setting": 1,
+    "several": 1,
+    "share": 7,
+    "shared": 1,
+    "shopping": 1,
+    "single": 1,
+    "spending": 1,
+    "srs": 2,
+    "stable": 1,
+    "staying": 1,
+    "stores": 1,
+    "storm": 2,
+    "storms": 2,
+    "strategy": 1,
+    "strong": 1,
+    "support": 3,
+    "teams": 1,
+    "telling": 1,
+    "testament": 1,
+    "thank": 1,
+    "thanking": 1,
+    "that": 2,
+    "the": 27,
+    "their": 5,
+    "they": 1,
+    "third": 1,
+    "this": 2,
+    "throughout": 2,
+    "to": 22,
+    "total": 1,
+    "traction": 1,
+    "tremendous": 1,
+    "tuck": 1,
+    "turn": 1,
+    "u.s.": 2,
+    "uncertainty": 1,
+    "underlying": 1,
+    "uniquely": 1,
+    "up": 1,
+    "us": 2,
+    "utilizing": 1,
+    "value": 4,
+    "varied": 1,
+    "verticals": 1,
+    "wallet": 1,
+    "want": 1,
+    "was": 1,
+    "we": 12,
+    "we're": 1,
+    "were": 5,
+    "western": 1,
+    "who": 1,
+    "will": 2,
+    "win": 1,
+    "with": 7,
+    "work": 1,
+    "year": 9,
+    "you": 2,
+    "you'll": 1
+   },
+   "date": "2026-02-24",
+   "entries": {
+    "a": [
+     3,
+     6
+    ],
+    "acquisition": [
+     6
+    ],
+    "acquisitions": [
+     6
+    ],
+    "across": [
+     6
+    ],
+    "activity": [
+     3
+    ],
+    "addition": [
+     6
+    ],
+    "additionally": [
+     3
+    ],
+    "adjusted": [
+     1
+    ],
+    "adjusting": [
+     4
+    ],
+    "and": [
+     0,
+     2,
+     6,
+     7,
+     8
+    ],
+    "are": [
+     5
+    ],
+    "associates": [
+     5
+    ],
+    "benefit": [
+     3
+    ],
+    "best": [
+     8
+    ],
+    "canada": [
+     2
+    ],
+    "compared": [
+     1
+    ],
+    "completed": [
+     6
+    ],
+    "comps": [
+     2,
+     2
+    ],
+    "continue": [
+     5,
+     7
+    ],
+    "currency": [
+     2
+    ],
+    "customer": [
+     8
+    ],
+    "customers": [
+     5
+    ],
+    "deliver": [
+     5
+    ],
+    "delivering": [
+     8
+    ],
+    "demand": [
+     4
+    ],
+    "digits": [
+     7
+    ],
+    "diluted": [
+     1
+    ],
+    "earnings": [
+     1
+    ],
+    "everyone": [
+     0
+    ],
+    "exceptional": [
+     5
+    ],
+    "expect": [
+     7
+    ],
+    "experience": [
+     8
+    ],
+    "fact": [
+     5
+    ],
+    "fiscal": [
+     7
+    ],
+    "focused": [
+     8
+    ],
+    "for": [
+     4
+    ],
+    "forward": [
+     7
+    ],
+    "gms": [
+     6
+    ],
+    "going": [
+     7
+    ],
+    "good": [
+     0
+    ],
+    "greenfield": [
+     6
+    ],
+    "grow": [
+     7
+    ],
+    "home": [
+     8
+    ],
+    "improvement": [
+     8
+    ],
+    "in": [
+     1,
+     2,
+     3,
+     3,
+     5,
+     6,
+     6,
+     7,
+     8
+    ],
+    "isabel": [
+     0
+    ],
+    "january": [
+     3
+    ],
+    "local": [
+     2
+    ],
+    "locations": [
+     6
+    ],
+    "mexico": [
+     2
+    ],
+    "midsingle": [
+     7
+    ],
+    "momentum": [
+     7
+    ],
+    "morning": [
+     0
+    ],
+    "negative": [
+     2
+    ],
+    "number": [
+     6
+    ],
+    "of": [
+     6
+    ],
+    "on": [
+     8
+    ],
+    "opened": [
+     6
+    ],
+    "organic": [
+     7
+    ],
+    "our": [
+     5,
+     5
+    ],
+    "per": [
+     1
+    ],
+    "positive": [
+     2
+    ],
+    "prior": [
+     1
+    ],
+    "proposition": [
+     8
+    ],
+    "provided": [
+     3
+    ],
+    "quarter": [
+     3
+    ],
+    "relatively": [
+     4
+    ],
+    "remain": [
+     8
+    ],
+    "reported": [
+     2,
+     2
+    ],
+    "sales": [
+     3,
+     7
+    ],
+    "service": [
+     5
+    ],
+    "several": [
+     6
+    ],
+    "share": [
+     1
+    ],
+    "srs": [
+     7
+    ],
+    "stable": [
+     4
+    ],
+    "storm": [
+     3
+    ],
+    "storms": [
+     4
+    ],
+    "support": [
+     7
+    ],
+    "telling": [
+     5
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     5
+    ],
+    "the": [
+     1,
+     3,
+     4,
+     6,
+     8
+    ],
+    "their": [
+     6,
+     7
+    ],
+    "they": [
+     6
+    ],
+    "throughout": [
+     4
+    ],
+    "to": [
+     1,
+     5,
+     6,
+     7,
+     7
+    ],
+    "tuck": [
+     6
+    ],
+    "underlying": [
+     4
+    ],
+    "us": [
+     5
+    ],
+    "value": [
+     8
+    ],
+    "verticals": [
+     6
+    ],
+    "was": [
+     4
+    ],
+    "we": [
+     7,
+     7,
+     8
+    ],
+    "were": [
+     1
+    ],
+    "will": [
+     7
+    ],
+    "year": [
+     1,
+     4
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Thank you, Isabel, and good morning everyone.",
+    "Adjusted diluted earnings per share were $14.69 compared to $15.24 in the prior year.",
+    "In local currency, Mexico reported positive comps and Canada reported negative comps.",
+    "Additionally, storm activity in January provided a sales benefit in the quarter.",
+    "Adjusting for storms, underlying demand was relatively stable throughout the year.",
+    "In fact, our customers are telling us that our associates continue to deliver exceptional service.",
+    "In addition to the GMS acquisition, they completed several tuck in acquisitions and opened a number of greenfield locations across their verticals.",
+    "Going forward, we will continue to support SRS’ momentum, and we expect their organic sales to grow midsingle digits in Fiscal 2026.",
+    "We remain focused on delivering the best customer experience and value proposition in home improvement."
+   ],
+   "id": "hd-hd-4q25-transcript",
+   "msent": {
+    "a": 7,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 2,
+    "activity": 2,
+    "addition": 2,
+    "additionally": 1,
+    "adjusted": 3,
+    "adjusting": 1,
+    "ahead": 1,
+    "all": 2,
+    "also": 1,
+    "an": 2,
+    "analyst": 1,
+    "and": 18,
+    "ann": 2,
+    "any": 1,
+    "approximately": 1,
+    "are": 6,
+    "as": 4,
+    "associates": 2,
+    "at": 1,
+    "back": 1,
+    "benefit": 1,
+    "best": 2,
+    "better": 1,
+    "billion": 1,
+    "billy": 1,
+    "business": 1,
+    "by": 5,
+    "call": 1,
+    "canada": 1,
+    "capabilities": 2,
+    "clear": 1,
+    "close": 1,
+    "comp": 2,
+    "comparable": 1,
+    "compared": 2,
+    "completed": 1,
+    "comps": 4,
+    "conference": 1,
+    "consistent": 1,
+    "consumer": 1,
+    "continue": 3,
+    "core": 1,
+    "culture": 1,
+    "currency": 1,
+    "customer": 3,
+    "customers": 3,
+    "december": 1,
+    "dedication": 1,
+    "deliver": 2,
+    "delivering": 2,
+    "delivery": 1,
+    "demand": 2,
+    "despite": 1,
+    "detail": 1,
+    "did": 1,
+    "digit": 1,
+    "digits": 1,
+    "diluted": 3,
+    "divisions": 1,
+    "drive": 1,
+    "dynamic": 1,
+    "earnings": 3,
+    "ecosystem": 1,
+    "elevating": 1,
+    "encouraged": 1,
+    "engaged": 1,
+    "enhancing": 1,
+    "environment": 1,
+    "events": 1,
+    "everyone": 1,
+    "evidenced": 1,
+    "exceptional": 1,
+    "execution": 1,
+    "expanded": 1,
+    "expect": 2,
+    "expectations": 1,
+    "experience": 4,
+    "fact": 1,
+    "fiscal": 3,
+    "flat": 1,
+    "focused": 2,
+    "focusing": 1,
+    "for": 3,
+    "forward": 1,
+    "fourth": 2,
+    "frictionless": 1,
+    "from": 5,
+    "gms": 1,
+    "going": 1,
+    "good": 1,
+    "greenfield": 1,
+    "grew": 1,
+    "grow": 4,
+    "growing": 1,
+    "growth": 2,
+    "half": 1,
+    "hard": 1,
+    "have": 1,
+    "hear": 1,
+    "home": 2,
+    "housing": 1,
+    "i": 1,
+    "improvement": 2,
+    "in": 18,
+    "increase": 1,
+    "increased": 2,
+    "incredible": 1,
+    "industry": 1,
+    "interconnected": 2,
+    "investing": 2,
+    "investor": 1,
+    "is": 1,
+    "isabel": 1,
+    "january": 1,
+    "job": 1,
+    "lack": 2,
+    "largely": 1,
+    "last": 3,
+    "let": 1,
+    "life": 1,
+    "line": 1,
+    "local": 1,
+    "locations": 1,
+    "looking": 1,
+    "low": 1,
+    "management": 1,
+    "market": 3,
+    "me": 1,
+    "merchants": 1,
+    "mexico": 1,
+    "midsingle": 1,
+    "momentum": 1,
+    "more": 1,
+    "morning": 1,
+    "negative": 1,
+    "northern": 1,
+    "number": 1,
+    "of": 8,
+    "offer": 1,
+    "on": 3,
+    "ongoing": 1,
+    "opened": 1,
+    "organic": 2,
+    "our": 11,
+    "over": 1,
+    "per": 3,
+    "percent": 3,
+    "percentage": 1,
+    "performance": 1,
+    "period": 2,
+    "positioned": 1,
+    "positive": 2,
+    "posting": 1,
+    "pressure": 1,
+    "pressured": 1,
+    "prior": 2,
+    "pro": 4,
+    "project": 1,
+    "projects": 1,
+    "proposition": 3,
+    "pros": 2,
+    "provided": 1,
+    "quarter": 5,
+    "record": 1,
+    "reflecting": 1,
+    "regional": 1,
+    "relationships": 1,
+    "relatively": 1,
+    "remain": 2,
+    "reported": 1,
+    "results": 1,
+    "sales": 8,
+    "same": 2,
+    "see": 1,
+    "service": 1,
+    "serving": 1,
+    "setting": 1,
+    "several": 1,
+    "share": 7,
+    "shared": 1,
+    "shopping": 1,
+    "single": 1,
+    "spending": 1,
+    "srs": 2,
+    "stable": 1,
+    "staying": 1,
+    "stores": 1,
+    "storm": 2,
+    "storms": 2,
+    "strategy": 1,
+    "strong": 1,
+    "support": 2,
+    "teams": 1,
+    "telling": 1,
+    "testament": 1,
+    "thank": 1,
+    "thanking": 1,
+    "that": 2,
+    "the": 20,
+    "their": 5,
+    "they": 1,
+    "third": 1,
+    "this": 2,
+    "throughout": 2,
+    "to": 14,
+    "total": 1,
+    "traction": 1,
+    "tremendous": 1,
+    "tuck": 1,
+    "turn": 1,
+    "u.s.": 2,
+    "uncertainty": 1,
+    "underlying": 1,
+    "uniquely": 1,
+    "up": 1,
+    "us": 2,
+    "utilizing": 1,
+    "value": 4,
+    "varied": 1,
+    "verticals": 1,
+    "wallet": 1,
+    "want": 1,
+    "was": 1,
+    "we": 9,
+    "we're": 1,
+    "were": 5,
+    "western": 1,
+    "who": 1,
+    "will": 2,
+    "win": 1,
+    "with": 6,
+    "work": 1,
+    "year": 8,
+    "you": 2,
+    "you'll": 1
+   },
+   "n_sentences": 29,
+   "source": "ir.homedepot.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q4 2025 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://ir.homedepot.com/~/media/Files/H/HomeDepot-IR/reports-and-presentations/quarterly-earnings/hd-4q25-transcript.pdf",
+   "words": 528
+  },
+  {
+   "counts": {
+    "a": 4,
+    "about": 1,
+    "above": 1,
+    "across": 4,
+    "action": 1,
+    "addressable": 1,
+    "adjusted": 1,
+    "aging": 1,
+    "already": 1,
+    "also": 3,
+    "an": 1,
+    "and": 26,
+    "ann": 2,
+    "anticipate": 1,
+    "approximately": 1,
+    "are": 9,
+    "as": 5,
+    "asset": 1,
+    "associates": 4,
+    "assortment": 1,
+    "at": 2,
+    "average": 1,
+    "back": 1,
+    "because": 1,
+    "been": 1,
+    "believe": 1,
+    "below": 1,
+    "best": 3,
+    "better": 1,
+    "biggest": 1,
+    "billion": 1,
+    "break": 1,
+    "bullish": 1,
+    "business": 2,
+    "but": 1,
+    "by": 3,
+    "call": 1,
+    "canada": 1,
+    "care": 3,
+    "chain": 3,
+    "close": 1,
+    "comment": 1,
+    "comp": 1,
+    "company": 1,
+    "compared": 1,
+    "complex": 1,
+    "comps": 3,
+    "confidence": 1,
+    "confident": 1,
+    "consumer": 1,
+    "continue": 2,
+    "continued": 2,
+    "continues": 2,
+    "cost": 1,
+    "countries": 1,
+    "country": 3,
+    "credit": 1,
+    "currency": 1,
+    "customer": 1,
+    "customers": 5,
+    "cycles": 1,
+    "declined": 1,
+    "dedication": 1,
+    "deliver": 1,
+    "despite": 2,
+    "developed": 1,
+    "did": 1,
+    "diligently": 1,
+    "diluted": 1,
+    "disruption": 1,
+    "diversified": 1,
+    "diversify": 1,
+    "during": 2,
+    "earnings": 1,
+    "economic": 1,
+    "ecosystem": 1,
+    "effectively": 1,
+    "elasticity": 1,
+    "else": 1,
+    "engaged": 2,
+    "ensure": 1,
+    "equity": 1,
+    "events": 1,
+    "everyone": 1,
+    "everything": 1,
+    "exceptional": 1,
+    "exchange": 1,
+    "expectations": 2,
+    "february": 1,
+    "feel": 1,
+    "finance": 1,
+    "first": 5,
+    "fiscal": 1,
+    "flexibility": 1,
+    "focused": 3,
+    "for": 3,
+    "foreign": 1,
+    "fragmented": 1,
+    "from": 5,
+    "fundamentals": 1,
+    "further": 1,
+    "gain": 2,
+    "get": 1,
+    "giving": 1,
+    "global": 2,
+    "good": 1,
+    "great": 1,
+    "half": 1,
+    "hard": 1,
+    "has": 2,
+    "have": 6,
+    "healthy": 1,
+    "hear": 1,
+    "help": 1,
+    "highly": 1,
+    "home": 4,
+    "homeowner": 1,
+    "homes": 3,
+    "housing": 1,
+    "i'd": 1,
+    "if": 1,
+    "impacted": 1,
+    "impacts": 1,
+    "improvement": 1,
+    "in": 15,
+    "including": 1,
+    "increased": 1,
+    "into": 1,
+    "invest": 1,
+    "investing": 1,
+    "is": 3,
+    "isabel": 1,
+    "itself": 1,
+    "job": 1,
+    "know": 2,
+    "large": 1,
+    "last": 4,
+    "led": 1,
+    "let": 2,
+    "level": 2,
+    "levels": 1,
+    "like": 1,
+    "line": 1,
+    "local": 1,
+    "maintenance": 1,
+    "majority": 1,
+    "managing": 1,
+    "many": 1,
+    "market": 4,
+    "maturing": 1,
+    "me": 2,
+    "merchants": 2,
+    "met": 1,
+    "mexico": 1,
+    "models": 1,
+    "moment": 2,
+    "momentum": 1,
+    "months": 1,
+    "more": 5,
+    "morning": 1,
+    "most": 1,
+    "navigated": 1,
+    "need": 1,
+    "never": 1,
+    "no": 1,
+    "now": 3,
+    "of": 13,
+    "older": 2,
+    "on": 5,
+    "onboard": 1,
+    "operate": 1,
+    "or": 1,
+    "our": 28,
+    "outside": 1,
+    "outstanding": 1,
+    "over": 2,
+    "particularly": 1,
+    "partners": 3,
+    "people": 1,
+    "per": 1,
+    "percent": 5,
+    "perform": 1,
+    "period": 3,
+    "periods": 1,
+    "positioned": 2,
+    "positive": 1,
+    "posted": 2,
+    "pressure": 2,
+    "prices": 1,
+    "pro": 1,
+    "product": 2,
+    "program": 2,
+    "project": 1,
+    "projects": 2,
+    "proposition": 1,
+    "pros": 2,
+    "purchases": 2,
+    "quarter": 6,
+    "rates": 1,
+    "readiness": 1,
+    "ready": 1,
+    "record": 1,
+    "remain": 2,
+    "remained": 1,
+    "remains": 1,
+    "represent": 1,
+    "require": 1,
+    "result": 1,
+    "results": 2,
+    "right": 1,
+    "rise": 1,
+    "robust": 1,
+    "sales": 2,
+    "same": 2,
+    "seeing": 1,
+    "serve": 2,
+    "serving": 1,
+    "several": 2,
+    "severe": 1,
+    "share": 3,
+    "single": 1,
+    "sku": 1,
+    "smaller": 1,
+    "sourced": 1,
+    "sourcing": 3,
+    "spring": 2,
+    "srs": 2,
+    "states": 3,
+    "stock": 1,
+    "store": 2,
+    "storms": 1,
+    "strategic": 1,
+    "strategies": 1,
+    "strategy": 1,
+    "supplier": 2,
+    "supply": 3,
+    "take": 4,
+    "taking": 1,
+    "team": 1,
+    "teams": 4,
+    "than": 2,
+    "thank": 1,
+    "thanking": 1,
+    "that": 6,
+    "the": 32,
+    "their": 4,
+    "them": 1,
+    "they": 2,
+    "this": 1,
+    "those": 1,
+    "thoughts": 1,
+    "to": 20,
+    "today": 1,
+    "together": 1,
+    "tools": 1,
+    "tornadoes": 1,
+    "trade": 1,
+    "tremendous": 2,
+    "trillion": 1,
+    "turn": 1,
+    "twelve": 1,
+    "u.s.": 1,
+    "understand": 2,
+    "unfavorable": 1,
+    "united": 3,
+    "unplanned": 1,
+    "up": 1,
+    "updates": 1,
+    "us": 1,
+    "value": 1,
+    "vast": 1,
+    "vendor": 1,
+    "vendors": 1,
+    "volatility": 1,
+    "we": 20,
+    "weather": 1,
+    "were": 3,
+    "while": 1,
+    "who": 1,
+    "will": 4,
+    "win": 1,
+    "with": 5,
+    "work": 2,
+    "worked": 1,
+    "working": 1,
+    "year": 3,
+    "years": 2,
+    "yesterday": 1,
+    "you": 1,
+    "you'll": 1
+   },
+   "date": "2025-05-20",
+   "entries": {
+    "a": [
+     6
+    ],
+    "across": [
+     3
+    ],
+    "addressable": [
+     6
+    ],
+    "aging": [
+     7
+    ],
+    "also": [
+     8
+    ],
+    "and": [
+     0,
+     1,
+     5,
+     6,
+     7
+    ],
+    "approximately": [
+     6
+    ],
+    "are": [
+     7,
+     8
+    ],
+    "at": [
+     5
+    ],
+    "average": [
+     2
+    ],
+    "believe": [
+     5
+    ],
+    "below": [
+     2
+    ],
+    "best": [
+     5
+    ],
+    "better": [
+     8
+    ],
+    "by": [
+     5
+    ],
+    "canada": [
+     2
+    ],
+    "chain": [
+     5
+    ],
+    "company": [
+     2
+    ],
+    "complex": [
+     8
+    ],
+    "comps": [
+     2,
+     2
+    ],
+    "consumer": [
+     6
+    ],
+    "cost": [
+     5
+    ],
+    "countries": [
+     3
+    ],
+    "country": [
+     5
+    ],
+    "currency": [
+     2
+    ],
+    "cycles": [
+     4
+    ],
+    "despite": [
+     1
+    ],
+    "developed": [
+     3
+    ],
+    "diversified": [
+     3
+    ],
+    "during": [
+     3
+    ],
+    "economic": [
+     4
+    ],
+    "ecosystem": [
+     8
+    ],
+    "effectively": [
+     4
+    ],
+    "everyone": [
+     0
+    ],
+    "exceptional": [
+     5
+    ],
+    "exchange": [
+     1
+    ],
+    "expectations": [
+     1
+    ],
+    "february": [
+     1
+    ],
+    "finance": [
+     5
+    ],
+    "first": [
+     1
+    ],
+    "focused": [
+     8
+    ],
+    "foreign": [
+     1
+    ],
+    "fragmented": [
+     6
+    ],
+    "from": [
+     1
+    ],
+    "good": [
+     0
+    ],
+    "has": [
+     4
+    ],
+    "have": [
+     5
+    ],
+    "healthy": [
+     6
+    ],
+    "help": [
+     5
+    ],
+    "highly": [
+     6
+    ],
+    "homeowner": [
+     6
+    ],
+    "homes": [
+     7
+    ],
+    "housing": [
+     7
+    ],
+    "impacts": [
+     5
+    ],
+    "in": [
+     1,
+     1,
+     2,
+     6
+    ],
+    "including": [
+     3
+    ],
+    "is": [
+     7
+    ],
+    "isabel": [
+     0
+    ],
+    "large": [
+     8
+    ],
+    "level": [
+     5
+    ],
+    "line": [
+     1
+    ],
+    "local": [
+     2
+    ],
+    "majority": [
+     3
+    ],
+    "many": [
+     4
+    ],
+    "market": [
+     6
+    ],
+    "maturing": [
+     8
+    ],
+    "merchants": [
+     5
+    ],
+    "mexico": [
+     2
+    ],
+    "morning": [
+     0
+    ],
+    "navigated": [
+     4
+    ],
+    "of": [
+     3,
+     6,
+     7
+    ],
+    "older": [
+     7
+    ],
+    "on": [
+     8,
+     8
+    ],
+    "operate": [
+     6
+    ],
+    "or": [
+     7
+    ],
+    "our": [
+     1,
+     1,
+     3,
+     4,
+     6,
+     8
+    ],
+    "partners": [
+     3
+    ],
+    "percent": [
+     7
+    ],
+    "period": [
+     3
+    ],
+    "positive": [
+     2
+    ],
+    "posted": [
+     2,
+     2
+    ],
+    "pressure": [
+     1
+    ],
+    "pro": [
+     8
+    ],
+    "projects": [
+     8
+    ],
+    "pros": [
+     8
+    ],
+    "quarter": [
+     1
+    ],
+    "rates": [
+     1
+    ],
+    "remains": [
+     6
+    ],
+    "results": [
+     1
+    ],
+    "serve": [
+     8
+    ],
+    "several": [
+     3
+    ],
+    "sku": [
+     5
+    ],
+    "sourcing": [
+     3
+    ],
+    "states": [
+     3
+    ],
+    "stock": [
+     7
+    ],
+    "strategies": [
+     3
+    ],
+    "supplier": [
+     3
+    ],
+    "supply": [
+     5
+    ],
+    "team": [
+     4
+    ],
+    "teams": [
+     5
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     3
+    ],
+    "the": [
+     2,
+     3,
+     3,
+     5,
+     5,
+     6,
+     7
+    ],
+    "to": [
+     5,
+     8
+    ],
+    "tools": [
+     5
+    ],
+    "trillion": [
+     6
+    ],
+    "understand": [
+     5
+    ],
+    "unfavorable": [
+     1
+    ],
+    "united": [
+     3
+    ],
+    "unplanned": [
+     1
+    ],
+    "us": [
+     5
+    ],
+    "vast": [
+     3
+    ],
+    "we": [
+     5,
+     5,
+     6,
+     8
+    ],
+    "weather": [
+     1
+    ],
+    "were": [
+     1
+    ],
+    "while": [
+     2
+    ],
+    "with": [
+     1,
+     5
+    ],
+    "working": [
+     8
+    ],
+    "years": [
+     7
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Thank you, Isabel, and good morning everyone.",
+    "Our first quarter results were in line with our expectations, despite unfavorable weather in February and unplanned pressure from foreign exchange rates.",
+    "In local currency, Canada posted comps below the company average, while Mexico posted positive comps.",
+    "During that period, the vast majority of our supplier partners developed diversified sourcing strategies across several countries, including the United States.",
+    "Our team has effectively navigated many economic cycles.",
+    "We believe we have the best merchants, supply chain, and finance teams, with exceptional tools to help us understand cost impacts by country at the sku level.",
+    "We operate in a highly fragmented addressable market of approximately $1 trillion, and our consumer, the homeowner, remains healthy.",
+    "The housing stock is aging, and 55 percent of homes are 40 years or older.",
+    "We are also focused on maturing our Pro ecosystem to better serve Pros working on large, complex projects."
+   ],
+   "id": "hd-hd-1q25-transcript",
+   "msent": {
+    "a": 4,
+    "about": 1,
+    "above": 1,
+    "across": 4,
+    "action": 1,
+    "addressable": 1,
+    "adjusted": 1,
+    "aging": 1,
+    "already": 1,
+    "also": 3,
+    "an": 1,
+    "and": 21,
+    "ann": 2,
+    "anticipate": 1,
+    "approximately": 1,
+    "are": 8,
+    "as": 5,
+    "asset": 1,
+    "associates": 3,
+    "assortment": 1,
+    "at": 2,
+    "average": 1,
+    "back": 1,
+    "because": 1,
+    "been": 1,
+    "believe": 1,
+    "below": 1,
+    "best": 3,
+    "better": 1,
+    "biggest": 1,
+    "billion": 1,
+    "break": 1,
+    "bullish": 1,
+    "business": 2,
+    "but": 1,
+    "by": 3,
+    "call": 1,
+    "canada": 1,
+    "care": 1,
+    "chain": 3,
+    "close": 1,
+    "comment": 1,
+    "comp": 1,
+    "company": 1,
+    "compared": 1,
+    "complex": 1,
+    "comps": 2,
+    "confidence": 1,
+    "confident": 1,
+    "consumer": 1,
+    "continue": 2,
+    "continued": 2,
+    "continues": 2,
+    "cost": 1,
+    "countries": 1,
+    "country": 3,
+    "credit": 1,
+    "currency": 1,
+    "customer": 1,
+    "customers": 5,
+    "cycles": 1,
+    "declined": 1,
+    "dedication": 1,
+    "deliver": 1,
+    "despite": 2,
+    "developed": 1,
+    "did": 1,
+    "diligently": 1,
+    "diluted": 1,
+    "disruption": 1,
+    "diversified": 1,
+    "diversify": 1,
+    "during": 2,
+    "earnings": 1,
+    "economic": 1,
+    "ecosystem": 1,
+    "effectively": 1,
+    "elasticity": 1,
+    "else": 1,
+    "engaged": 2,
+    "ensure": 1,
+    "equity": 1,
+    "events": 1,
+    "everyone": 1,
+    "everything": 1,
+    "exceptional": 1,
+    "exchange": 1,
+    "expectations": 2,
+    "february": 1,
+    "feel": 1,
+    "finance": 1,
+    "first": 4,
+    "fiscal": 1,
+    "flexibility": 1,
+    "focused": 3,
+    "for": 3,
+    "foreign": 1,
+    "fragmented": 1,
+    "from": 5,
+    "fundamentals": 1,
+    "further": 1,
+    "gain": 2,
+    "get": 1,
+    "giving": 1,
+    "global": 2,
+    "good": 1,
+    "great": 1,
+    "half": 1,
+    "hard": 1,
+    "has": 2,
+    "have": 6,
+    "healthy": 1,
+    "hear": 1,
+    "help": 1,
+    "highly": 1,
+    "home": 3,
+    "homeowner": 1,
+    "homes": 3,
+    "housing": 1,
+    "i'd": 1,
+    "if": 1,
+    "impacted": 1,
+    "impacts": 1,
+    "improvement": 1,
+    "in": 12,
+    "including": 1,
+    "increased": 1,
+    "into": 1,
+    "invest": 1,
+    "investing": 1,
+    "is": 3,
+    "isabel": 1,
+    "itself": 1,
+    "job": 1,
+    "know": 2,
+    "large": 1,
+    "last": 4,
+    "led": 1,
+    "let": 2,
+    "level": 2,
+    "levels": 1,
+    "like": 1,
+    "line": 1,
+    "local": 1,
+    "maintenance": 1,
+    "majority": 1,
+    "managing": 1,
+    "many": 1,
+    "market": 4,
+    "maturing": 1,
+    "me": 2,
+    "merchants": 2,
+    "met": 1,
+    "mexico": 1,
+    "models": 1,
+    "moment": 2,
+    "momentum": 1,
+    "months": 1,
+    "more": 5,
+    "morning": 1,
+    "most": 1,
+    "navigated": 1,
+    "need": 1,
+    "never": 1,
+    "no": 1,
+    "now": 3,
+    "of": 10,
+    "older": 2,
+    "on": 4,
+    "onboard": 1,
+    "operate": 1,
+    "or": 1,
+    "our": 20,
+    "outside": 1,
+    "outstanding": 1,
+    "over": 2,
+    "particularly": 1,
+    "partners": 3,
+    "people": 1,
+    "per": 1,
+    "percent": 4,
+    "perform": 1,
+    "period": 3,
+    "periods": 1,
+    "positioned": 2,
+    "positive": 1,
+    "posted": 1,
+    "pressure": 2,
+    "prices": 1,
+    "pro": 1,
+    "product": 2,
+    "program": 1,
+    "project": 1,
+    "projects": 2,
+    "proposition": 1,
+    "pros": 2,
+    "purchases": 2,
+    "quarter": 5,
+    "rates": 1,
+    "readiness": 1,
+    "ready": 1,
+    "record": 1,
+    "remain": 2,
+    "remained": 1,
+    "remains": 1,
+    "represent": 1,
+    "require": 1,
+    "result": 1,
+    "results": 2,
+    "right": 1,
+    "rise": 1,
+    "robust": 1,
+    "sales": 2,
+    "same": 2,
+    "seeing": 1,
+    "serve": 2,
+    "serving": 1,
+    "several": 2,
+    "severe": 1,
+    "share": 3,
+    "single": 1,
+    "sku": 1,
+    "smaller": 1,
+    "sourced": 1,
+    "sourcing": 3,
+    "spring": 2,
+    "srs": 2,
+    "states": 3,
+    "stock": 1,
+    "store": 2,
+    "storms": 1,
+    "strategic": 1,
+    "strategies": 1,
+    "strategy": 1,
+    "supplier": 2,
+    "supply": 3,
+    "take": 2,
+    "taking": 1,
+    "team": 1,
+    "teams": 3,
+    "than": 2,
+    "thank": 1,
+    "thanking": 1,
+    "that": 6,
+    "the": 21,
+    "their": 3,
+    "them": 1,
+    "they": 2,
+    "this": 1,
+    "those": 1,
+    "thoughts": 1,
+    "to": 16,
+    "today": 1,
+    "together": 1,
+    "tools": 1,
+    "tornadoes": 1,
+    "trade": 1,
+    "tremendous": 2,
+    "trillion": 1,
+    "turn": 1,
+    "twelve": 1,
+    "u.s.": 1,
+    "understand": 2,
+    "unfavorable": 1,
+    "united": 3,
+    "unplanned": 1,
+    "up": 1,
+    "updates": 1,
+    "us": 1,
+    "value": 1,
+    "vast": 1,
+    "vendor": 1,
+    "vendors": 1,
+    "volatility": 1,
+    "we": 14,
+    "weather": 1,
+    "were": 3,
+    "while": 1,
+    "who": 1,
+    "will": 3,
+    "win": 1,
+    "with": 5,
+    "work": 2,
+    "worked": 1,
+    "working": 1,
+    "year": 3,
+    "years": 2,
+    "yesterday": 1,
+    "you": 1,
+    "you'll": 1
+   },
+   "n_sentences": 35,
+   "source": "ir.homedepot.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q1 2025 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://ir.homedepot.com/~/media/Files/H/HomeDepot-IR/reports-and-presentations/quarterly-earnings/2025/hd-1q25-transcript.pdf",
+   "words": 609
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full text is not included; see each document's url.",
+ "slug": "decker"
+}

@@ -214,6 +214,30 @@ def load_person(P, keep_numbers):
     docs.sort(key=lambda d: (d["date"], d["url"]), reverse=True)
     return docs
 
+def load_people():
+    """people.json plus the data-driven CEO list in ceos.json (adding a company there is enough)."""
+    people = json.loads((ROOT / "people.json").read_text(encoding="utf-8"))
+    cpath = ROOT / "ceos.json"
+    if not cpath.exists(): return people
+    cfg = json.loads(cpath.read_text(encoding="utf-8"))
+    have = {p["slug"] for p in people}
+    for p in people:
+        if p["slug"] in cfg.get("existing_indices", {}): p["indices"] = cfg["existing_indices"][p["slug"]]
+        if p["slug"] in cfg.get("existing_tickers", {}): p["ticker"] = cfg["existing_tickers"][p["slug"]]
+    for c in cfg["companies"]:
+        if c["slug"] in have: continue
+        letter = c["kind"] == "letter"
+        people.append({"slug": c["slug"], "name": c["name"], "display": c["name"], "category": "CEOs", "role": c["role"],
+                       "org": c["org"], "policy": "excerpt", "source": c["source"], "mode": "ceo", "eyebrow": "CEO · " + c["org"],
+                       "doc_noun": "shareholder letters" if letter else "earnings call prepared remarks",
+                       "doc_noun1": "shareholder letter" if letter else "earnings call prepared remarks",
+                       "unit": "letter" if letter else "call", "unit_pl": "letters" if letter else "calls",
+                       "indices": c.get("indices", []), "ticker": c.get("ticker")})
+    order = {s: i for i, s in enumerate(cfg.get("order", []))}
+    ceos = sorted([p for p in people if p["category"] == "CEOs"], key=lambda p: order.get(p["slug"], 999))
+    it = iter(ceos)
+    return [next(it) if p["category"] == "CEOs" else p for p in people]
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep-numbers", action="store_true", help="count digit-only tokens like 2026")
@@ -222,7 +246,7 @@ def main():
     a = ap.parse_args()
 
     people_out, report = [], []
-    for P in json.loads((ROOT / "people.json").read_text(encoding="utf-8")):
+    for P in load_people():
         docs = load_person(P, a.keep_numbers)
         if not docs:
             continue
@@ -249,7 +273,7 @@ def main():
             jdocs.append(jd)
         people_out.append({k: P[k] for k in ("slug", "name", "display", "category", "role", "org", "policy",
                                              "source", "doc_noun")}
-                          | {k: P[k] for k in ("group", "mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit") if P.get(k)}
+                          | {k: P[k] for k in ("group", "mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit", "indices", "ticker") if P.get(k)}
                           | {"vocab": vocab, "docs": jdocs})
 
         # ---- console report (all numbers come from here) ----
@@ -645,19 +669,154 @@ button.chip,label.chip,#cats button,.seg button{letter-spacing:0}
  .abtog::after{content:" \25BE";font-size:12px}#about.open .abtog::after{content:" \25B4"}
  #about:not(.open)>:not(h2){display:none}#about h2{font-size:15px;margin:0}#about.open h2{margin-bottom:8px}}
 /* tablets (641-899): Word Cloud keeps controls first, then the words card (stats sit inside it, above the cloud) */
+
+/* ==== v4 "black" theme: black page, black panels, cream type, hairline rules, red for numbers. Delete this block to revert ==== */
+:root{--num-red:#ff5449;--bg:#070707;--card:#111111;--panel2:#171717;--ink:#f3eee4;--cream:#0b0b0b;--muted:#a49e93;--rule:#2c2a27;--line:#232120;
+ --hair:rgba(243,238,228,.14);--hl:#3b1715;--chip-on:#f3eee4;--chip-ink:#0b0b0b;color-scheme:dark}
+html,body{background:var(--bg);color:var(--ink)}
+a{color:var(--ink);text-decoration-color:rgba(243,238,228,.4)}a:hover{text-decoration-color:var(--num-red)}
+body[class] header{background:#000;color:var(--ink);box-shadow:inset 0 -1px 0 var(--hair)!important;border-bottom:0}
+header .logo{background:#f4efe6!important;box-shadow:none!important;border-radius:4px}
+header p,header p#siteSub{color:#bdb6aa;opacity:1}
+.hact{position:absolute;top:50%;right:28px;transform:translateY(-50%);display:flex;gap:8px;align-items:center}
+header .hact a.about-link{position:static;transform:none;color:var(--ink);border:1px solid var(--hair);border-radius:3px;padding:4px 11px;font-size:13px;opacity:1}
+.hbtn{font:inherit;font-size:13px;font-weight:700;color:var(--ink);background:transparent;border:1px solid var(--hair);border-radius:3px;padding:4px 11px;cursor:pointer;line-height:1.2}
+.hbtn:hover,header .hact a.about-link:hover{border-color:var(--num-red);background:transparent}
+header .titles{padding-right:150px}
+main{max-width:1280px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px;box-shadow:none}
+h2,#words h2#personTitle,#about h2{color:var(--ink)}
+.muted,#personMeta,.stat,.hint,#method,#selSummary,.dl2,.dl2 a{color:var(--muted)}
+#method{border-top:1px solid var(--line);padding-top:10px}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:3px}
+.stat b,td.cnt{color:var(--num-red)}
+.stat b{text-shadow:0 0 18px rgba(255,84,73,.18)}
+th{color:var(--muted);border-bottom:1px solid var(--rule);text-transform:uppercase;font-size:10.5px!important;letter-spacing:.06em!important}
+td{border-bottom:1px solid var(--line)!important}tr[data-w]:hover td{background:#1a1919}tr.active td{background:var(--hl)}
+.bar{background:linear-gradient(90deg,rgba(255,84,73,.75),rgba(255,84,73,.35));opacity:1;border-radius:0}
+input[type=search],.cloud-bar select{background:#0b0b0b;color:var(--ink);border:1px solid var(--rule);border-radius:3px}
+input[type=search]::placeholder{color:#8a8479}
+input[type=search]:focus{border-color:var(--ink);box-shadow:0 0 0 2px rgba(243,238,228,.12);outline:0}
+input[type=checkbox]{accent-color:var(--num-red)}
+button.chip,label.chip,.seg button{background:transparent;color:var(--ink);border:1px solid var(--rule);border-radius:3px}
+button.chip:hover,label.chip:hover,.seg button:hover{background:#1c1b1a;border-color:#4a4743}
+button.chip.on,label.chip.on,.seg button.on{background:var(--ink);color:#0b0b0b;border-color:var(--ink)}
+label.chip.on .muted{color:#4a463f}label.chip.on input{accent-color:#0b0b0b}
+#persons .chip .tk{font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--muted)}#persons .chip.on .tk{color:#5a554d}
+#persons .pg{border-top:1px solid var(--line)}#persons .pg .lbl{color:var(--muted);background:var(--card)}
+#personInfo .eyebrow{background:transparent;color:var(--ink);border:1px solid var(--rule);border-radius:2px}
+.dl2 .stype{color:var(--ink);border-color:var(--rule);border-radius:2px}
+#docPick{border-top:1px solid var(--line)}#docPick>summary{color:var(--ink)}
+ul.speeches li{border-top:1px solid var(--line)}ul.speeches li.sel{background:#181716}
+button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)}button.only:hover{background:var(--ink);color:#0b0b0b}
+#pop{background:#141414;color:var(--ink);border:1px solid var(--rule);box-shadow:0 18px 50px rgba(0,0,0,.6)}
+#pop mark{background:rgba(255,84,73,.28);color:#fff}#pop .twice{background:#2a2414;color:#e9c46a}
+#pop .more{border-color:var(--ink);color:var(--ink)}#pop .more:hover{background:var(--ink);color:#0b0b0b}
+#cloud{background:#0b0b0b;border:1px solid var(--line);border-radius:3px;
+ background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-position:-1px -1px}
+#cloud span:hover,#cloud span.active{background:var(--hl)}
+.scrub .play{background:transparent;color:var(--ink);border:1px solid var(--rule)}.scrub .play:hover{background:var(--ink);color:#0b0b0b}
+.scrub input[type=range]{accent-color:var(--num-red)}
+.notice{background:#1b160c;border-color:#5a4520;color:var(--ink)}.notice strong{color:#e9c46a}
+:focus-visible{outline:2px solid var(--num-red);outline-offset:2px}
+.tftog,.abtog{color:var(--ink)}#timeframe>.tftog{background:transparent;border-color:var(--rule)}
+/* View cards: hairline panels; Word Cloud card framed in the stat red */
+.vcard{background:var(--card);border:1px solid var(--rule);border-radius:3px;box-shadow:none}
+.vcard:hover{background:#181818;border-color:#4a4743}
+.vcard svg{filter:invert(1) hue-rotate(180deg);opacity:.9}
+.vcard .vt b{color:var(--ink)}.vcard .vt small{color:var(--muted)}
+.vcard[aria-pressed="true"]{background:#1a1a1a;border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.vcard[aria-pressed="true"] .vt b{color:var(--ink)}.vcard[aria-pressed="true"] .vt small{color:var(--muted)}
+.vcard[data-view="visual"]{border-color:var(--num-red);box-shadow:inset 0 0 0 1px rgba(255,84,73,.5)}
+.vcard[data-view="visual"] .vt b{color:var(--num-red)}
+.vcard[data-view="visual"]:hover{background:#1d1110}
+.vcard[data-view="visual"][aria-pressed="true"]{background:linear-gradient(180deg,#2a0f0d,#1a0a09);border-color:var(--num-red);box-shadow:inset 0 0 0 1px var(--num-red),0 0 24px rgba(255,84,73,.18)}
+.vcard[data-view="visual"][aria-pressed="true"] .vt b{color:#fff}.vcard[data-view="visual"][aria-pressed="true"] .vt small{color:#ffb3ad}
+.vcard[aria-pressed="true"]::after{display:none}
+/* Category tiles: the first thing to click */
+.topbar{display:flex;align-items:stretch;gap:16px;margin:0 0 14px}
+.catbar{flex:1;min-width:0}
+#cats.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;background:none;border:0;padding:0;margin:0;border-radius:0;overflow:visible;-webkit-mask-image:none;mask-image:none}
+#cats button.cat{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 16px;min-height:62px;background:var(--card);color:var(--ink);
+ border:1px solid var(--rule);border-radius:4px;cursor:pointer;font:inherit;white-space:normal;flex:auto;transition:border-color .15s,background-color .15s}
+#cats button.cat:hover{border-color:#5a5650;background:#171717}
+#cats .ci svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;display:block}
+#cats .ct{display:flex;flex-direction:column;min-width:0}
+#cats .ct b{font-size:17px;font-weight:700;letter-spacing:-.025em;line-height:1.15}
+#cats .ct small{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:2px}
+#cats button.cat.on{background:var(--ink);color:#0b0b0b;border-color:var(--ink);box-shadow:inset 0 -3px 0 var(--num-red)}
+#cats button.cat.on .ct small{color:#4f4a43}
+.topbar .viewbar{margin:0;flex:none;align-items:center}.topbar #viewHint{display:none}#cats .ct b{white-space:nowrap}
+@media (min-width:900px){body main>.topbar{grid-column:1/-1;grid-row:1}}
+@media (max-width:899px){.topbar{display:contents}.catbar{margin:0 0 10px}}
+/* people search + index chips (CEOs, US Government) */
+#pfilter{margin:0 0 10px}#pfilter[hidden],#idx[hidden]{display:none!important}
+#psearch{width:100%;min-width:0;box-sizing:border-box;padding:7px 10px;font-size:14px}
+#idx{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+#idx .chip.ix{font-size:12.5px;padding:3px 9px}#idx .chip .n{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;margin-left:2px}
+#idx .chip[aria-pressed="true"]{background:var(--ink);color:#0b0b0b;border-color:var(--ink)}#idx .chip[aria-pressed="true"] .n{color:#5a554d}
+#idx .chip:disabled{opacity:.4;cursor:default}
+.nomatch{font-size:13px}.linkbtn{font:inherit;background:none;border:0;color:var(--ink);text-decoration:underline;cursor:pointer;padding:0}
+#az button{color:var(--ink)}#az button:disabled{color:#4d4943}#az{border-left-color:var(--line)}
+#az button[aria-pressed="true"]{background:var(--ink);color:#0b0b0b;border-color:var(--ink)}#az button.all{border-color:var(--rule)}
+/* Ad placeholders: faint mock units, kept clear of the stats and controls */
+aside.ad{display:block;margin:28px auto;width:min(100%,var(--aw));position:relative;clear:both}
+aside.ad .adl{display:block;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#77726a;margin:0 0 4px}
+aside.ad .adbox,aside.ad ins{height:var(--ah);box-sizing:border-box}
+aside.ad .adbox{border:1px solid #242220;border-radius:2px;display:flex;align-items:center;justify-content:center;gap:12px;
+ background:repeating-linear-gradient(135deg,transparent 0 9px,rgba(243,238,228,.018) 9px 10px);opacity:.75}
+aside.ad .admark{width:30px;height:30px;fill:none;stroke:#6a655d;stroke-width:1}
+aside.ad .adtx{display:flex;flex-direction:column;line-height:1.15}
+aside.ad .adtx b{font-size:15px;font-weight:700;letter-spacing:-.02em;color:#77726a}aside.ad .adtx small{font-size:11px;color:#6a655d}
+aside.ad[data-slot="side"]{margin:16px 0 0;width:100%;max-width:300px}
+aside.ad[data-slot="incontent"]{margin:24px auto}
+aside.ad[data-slot="leader"]{margin:24px auto 18px}
+@media (max-width:899px){aside.ad[data-slot="side"]{display:none}}
+@media (max-width:640px){aside.ad{width:min(100%,var(--amw))}aside.ad .adbox,aside.ad ins{height:var(--amh)}aside.ad .admark{width:20px;height:20px}
+ aside.ad .adtx b{font-size:13px}aside.ad{margin:18px auto}}
+@media (min-width:900px){body main>aside.ad{grid-column:1/-1}}
+/* toast + shortcut hint */
+#toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:var(--ink);color:#0b0b0b;font-size:13.5px;font-weight:700;padding:9px 16px;
+ border-radius:3px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:100;max-width:90vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.kbd-hint{display:block;margin-top:6px;transition:color .3s}.kbd-hint.flash{color:var(--ink)}
+kbd{font:inherit;font-size:11px;font-weight:700;border:1px solid var(--rule);border-bottom-width:2px;border-radius:3px;padding:0 5px;color:var(--ink)}
+@media (pointer:coarse){.kbd-hint{display:none}}
+@media (prefers-reduced-motion:reduce){#toast{transition:none}}
+/* phones: tiles keep 16px from the screen edges, never clipped */
+@media (max-width:640px){
+ header{padding:8px 16px}.hact{right:16px;gap:6px}header .titles{padding-right:118px}
+ .hbtn,header .hact a.about-link{font-size:12px;padding:3px 9px}
+ main{padding:10px 16px}
+ #cats.seg{gap:8px;margin:0}
+ #cats button.cat{flex-direction:column;align-items:flex-start;gap:4px;padding:8px 10px;min-height:0}
+ #cats .ci svg{width:20px;height:20px}#cats .ct b{font-size:14px;letter-spacing:-.02em}#cats .ct small{font-size:11px}
+ .catbar{margin:0 0 8px}
+ #pfilter{margin:0 0 6px}#psearch{font-size:16px;padding:5px 9px}#idx{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-top:6px}#idx::-webkit-scrollbar{display:none}
+ #idx .chip.ix{flex:none;font-size:12px;padding:2px 8px}
+ body[class] main>.catbar,body[class] main .catbar{order:-1}
+ #cats button.cat{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:5px;row-gap:2px;padding:7px 9px;align-items:center}
+ #cats .ct{display:contents}#cats .ct b{grid-column:1/-1;grid-row:1;white-space:nowrap;font-size:13.5px}
+ #cats .ci{grid-column:1;grid-row:2}#cats .ci svg{width:14px;height:14px}#cats .ct small{grid-column:2;grid-row:2;margin:0;white-space:nowrap}
+ #words h2#personTitle{font-size:16px}}
+#cats button.cat.on::before{content:none;display:none}
+@media (min-width:900px){.pk.has-az #persons:not(.grouped){display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start}
+ .pk.has-az #persons:not(.grouped)>.lbl{width:100%;margin:0 0 2px}.pk.has-az #persons:not(.grouped) .chip{margin:0}}
 </style></head><body class="mode-fed view-visual">
-<header><a class="about-link" href="#about">About</a>
+<header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.png?v=mm1" width="433" height="104" alt="Mouth Math"></a>
 <div class="titles"><h1 id="siteTitle">Every word they said, ranked</h1>
 <p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div></div></header>
 <main>
+<div class="topbar"><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div></nav>
 <div class="viewbar" role="group" aria-label="View"><span class="lbl">View</span>
-<div class="vcards" id="views"><button type="button" class="vcard" data-view="standard" aria-pressed="false"><svg viewBox="0 0 76 50" aria-hidden="true" fill="none" stroke="#2b2a26" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h36l8 8v36H16z" fill="#fffdf8"/><path d="M52 3v8h8"/><path d="M21 14h3M21 21h3M21 28h3M21 35h3M21 42h3" stroke-width="1.6"/><path d="M28 14h26M28 21h21M28 28h17M28 35h12M28 42h8" stroke-dasharray="3 2.2"/></svg><span class="vt"><b>Super Math</b><small>Ranked table</small></span></button>
-<button type="button" class="vcard" data-view="visual" aria-pressed="true"><svg viewBox="0 0 76 50" aria-hidden="true"><rect x="1.5" y="1.5" width="73" height="47" rx="2" fill="#fffdf8" stroke="#2b2a26" stroke-width="1.6"/><rect x="5.5" y="5.5" width="65" height="39" fill="none" stroke="#2b2a26" stroke-width=".8"/><g fill="#2b2a26" font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="38" y="29" font-size="13" font-weight="700">said</text><text x="20" y="16" font-size="7" font-weight="700">every</text><text x="55" y="17" font-size="8.5" font-weight="700">word</text><text x="19" y="38" font-size="6">we</text><text x="55" y="39" font-size="7.5" font-weight="700">math</text><text x="37" y="40" font-size="5.5">ranked</text><text x="61" y="29" font-size="5">yes</text><text x="15" y="27" font-size="5.5">now</text></g></svg><span class="vt"><b>Word Cloud</b><small>Bigger = said more</small></span></button></div>
-<span class="muted" id="viewHint"></span></div>
+<div class="vcards" id="views"><button type="button" class="vcard" data-view="visual" aria-pressed="true"><svg viewBox="0 0 76 50" aria-hidden="true"><rect x="1.5" y="1.5" width="73" height="47" rx="2" fill="#fffdf8" stroke="#2b2a26" stroke-width="1.6"/><rect x="5.5" y="5.5" width="65" height="39" fill="none" stroke="#2b2a26" stroke-width=".8"/><g fill="#2b2a26" font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="38" y="29" font-size="13" font-weight="700">said</text><text x="20" y="16" font-size="7" font-weight="700">every</text><text x="55" y="17" font-size="8.5" font-weight="700">word</text><text x="19" y="38" font-size="6">we</text><text x="55" y="39" font-size="7.5" font-weight="700">math</text><text x="37" y="40" font-size="5.5">ranked</text><text x="61" y="29" font-size="5">yes</text><text x="15" y="27" font-size="5.5">now</text></g></svg><span class="vt"><b>Word Cloud</b><small>Bigger = said more</small></span></button>
+<button type="button" class="vcard" data-view="standard" aria-pressed="false"><svg viewBox="0 0 76 50" aria-hidden="true" fill="none" stroke="#2b2a26" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h36l8 8v36H16z" fill="#fffdf8"/><path d="M52 3v8h8"/><path d="M21 14h3M21 21h3M21 28h3M21 35h3M21 42h3" stroke-width="1.6"/><path d="M28 14h26M28 21h21M28 28h17M28 35h12M28 42h8" stroke-dasharray="3 2.2"/></svg><span class="vt"><b>Super Math</b><small>Ranked table</small></span></button></div>
+<span class="muted" id="viewHint"></span></div></div>
 <div class="topgrid">
 <section class="card" id="picker"><div class="pk"><h2>Who</h2>
-<div class="seg" id="cats" role="tablist" aria-label="Category"></div>
+<div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
+<div id="idx" role="group" aria-label="Filter by stock index"></div></div>
 <div id="az" role="toolbar" aria-label="Filter by last name" aria-controls="persons" hidden></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
 <div id="personInfo"><span class="eyebrow" id="eyebrow"></span> <span class="muted" id="personMeta"></span></div>
@@ -671,6 +830,7 @@ button.chip,label.chip,#cats button,.seg button{letter-spacing:0}
 <p class="muted hint">Tick one or more · “only” selects just that one</p>
 <ul class="speeches" id="docList"></ul></details>
 </section>
+<aside class="ad" data-slot="side" aria-label="Advertisement"></aside>
 </div>
 <section class="card" id="words">
 <h2 id="personTitle">Every word __DEFAULT_TITLE__ said, ranked</h2>
@@ -696,6 +856,7 @@ button.chip,label.chip,#cats button,.seg button{letter-spacing:0}
 <tbody id="tb"></tbody></table>
 <p class="muted only-standard" id="more"></p>
 </section>
+<aside class="ad" data-slot="leader" aria-label="Advertisement"></aside>
 <p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
 possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span class="only-fed">Fed transcripts: footnotes and editorial notes excluded.</span>
 <span class="only-ceo">CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded. Earnings calls: only the CEO's prepared remarks; operator, other executives and analyst Q&amp;A excluded.</span>
@@ -703,16 +864,21 @@ possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span clas
 <span class="only-cong">Congressional Record (daily edition): only the leader's own floor remarks; other members, presiding-officer and clerk text, material inserted into the Record, and procedural unanimous-consent requests excluded.</span>
 <span class="only-scotus">Supreme Court opinions (October Term 2025): only the Justice's own signed opinion (opinion of the Court, concurrence or dissent); syllabus, footnotes, headings and captions excluded.</span>
 Totals, ranks and counts are recomputed in your browser for the selected person and documents.
-Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span></p>
+Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span>
+<span class="kbd-hint" id="kbdHint">Shortcuts: <kbd>/</kbd> filter words · <kbd>V</kbd> switch view · <kbd>S</kbd> share · <kbd>?</kbd> this hint</span></p>
+<div id="toast" role="status" aria-live="polite"></div>
+<aside class="ad" data-slot="incontent" aria-label="Advertisement"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About Mouth Math</button></h2>
 <p>This site was built by someone who believes in transparency and truth. It counts every word in official,
 publicly available texts by public figures, taken from each official source:</p>
 <ul class="sources">
 <li><strong>Fed Chair:</strong> speech and testimony transcripts published on
 <a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>.</li>
-<li><strong>CEOs:</strong> texts each company publishes on its own website, labeled by source type: shareholder letters
-(palantir.com, aboutamazon.com, berkshirehathaway.com) and earnings call prepared remarks (Sundar Pichai's own prepared
-section of the call transcripts Alphabet posts on abc.xyz; other speakers and the Q&amp;A are left out).</li>
+<li><strong>CEOs</strong> of large S&amp;P 500, Nasdaq 100 and Dow 30 companies: only texts each company publishes on its
+own investor-relations website, labeled by source type: shareholder letters signed by the CEO, and earnings call
+prepared remarks (only the CEO's own prepared section of the call transcript the company posts; other executives,
+the operator and the analyst Q&amp;A are left out). No third-party transcripts, filings or social posts. Filter by
+index (Mag 7, S&amp;P 500, Nasdaq 100, Dow 30), by last name, or search by name, company or ticker.</li>
 <li><strong>US Government</strong>, in three groups:
 <ul>
 <li><strong>Cabinet:</strong> remarks and testimony published by the
@@ -771,10 +937,17 @@ async function loadPerson(p){
 }
 
 // ---- category / person picker ----
-let azCat='',azSel='';
+let azCat='',azSel='',idxSel='',pq='';
+const IDX=['Mag 7','S&P 500','Nasdaq 100','Dow 30'];
+const CAT_ICON={   // hairline line-art icons for the category tiles
+ 'Fed Chair':'<svg viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9.7 10v8M14.3 10v8M19 10v8M3 20.5h18"/></svg>',
+ 'CEOs':'<svg viewBox="0 0 24 24"><path d="M3 20.5h18M6 20.5V13M10.5 20.5V9M15 20.5v-6M19.5 20.5V5"/><path d="m5 10 5-4 4 3 6-5"/></svg>',
+ 'US Government':'<svg viewBox="0 0 24 24"><path d="M12 3v2.5M8 10a4 4 0 0 1 8 0M5.5 10h13M7 10v8M10.3 10v8M13.7 10v8M17 10v8M3.5 20.5h17M5 18.5h14"/></svg>'};
+const matchQ=p=>{if(!pq)return true;const h=[p.name,p.org,p.ticker,p.role,p.group].filter(Boolean).join(' ').toLowerCase();
+  return pq.toLowerCase().split(/\s+/).filter(Boolean).every(t=>h.includes(t))};
 const lastName=p=>(p.sort_name||p.name.replace(/,?\s+(Jr|Sr)\.?$|,?\s+(II|III|IV)$/,'').trim().split(' ').pop()).toUpperCase();
-function renderAZ(inCat){
-  const az=$('az'),use=inCat.length>=4;     // only for the bigger categories (CEOs, US Government)
+function renderAZ(allIn,inCat){
+  const az=$('az'),use=allIn.length>=4;     // only for the bigger categories (CEOs, US Government)
   az.hidden=!use;az.parentElement.classList.toggle('has-az',use);if(!use){azSel='';return}
   const have=new Set(inCat.map(p=>lastName(p)[0]));
   if(azSel&&!have.has(azSel))azSel='';
@@ -790,23 +963,33 @@ function renderAZ(inCat){
     if(j>=0){e.preventDefault();btns[i].tabIndex=-1;btns[j].tabIndex=0;btns[j].focus()}};
 }
 function renderPicker(){
-  if(azCat!==P.category){azCat=P.category;azSel=''}
-  $('cats').innerHTML=CATS.map(c=>`<button class="${P.category===c?'on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
-  const allIn=PEOPLE.filter(p=>p.category===P.category);renderAZ(allIn);
-  const inCat=allIn.filter(p=>!azSel||lastName(p)[0]===azSel),groups=[...new Set(inCat.map(p=>p.group||''))];
-  const chip=p=>`<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}</button>`;
+  if(azCat!==P.category){azCat=P.category;azSel='';idxSel='';pq='';$('psearch').value=''}
+  $('cats').innerHTML=CATS.map(c=>{const n=PEOPLE.filter(p=>p.category===c).length;
+    return `<button class="cat${P.category===c?' on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}"><span class="ci" aria-hidden="true">${CAT_ICON[c]||''}</span><span class="ct"><b>${esc(c)}</b><small>${n} ${n===1?'person':'people'}</small></span></button>`}).join('');
+  const allIn=PEOPLE.filter(p=>p.category===P.category),useF=allIn.length>=8,hasIdx=allIn.some(p=>(p.indices||[]).length);
+  $('pfilter').hidden=!useF;$('idx').hidden=!hasIdx;if(!hasIdx)idxSel='';
+  if(hasIdx){$('idx').innerHTML=[''].concat(IDX).map(k=>{const n=k?allIn.filter(p=>(p.indices||[]).includes(k)).length:allIn.length;
+      return `<button type="button" class="chip ix" data-ix="${esc(k)}" aria-pressed="${idxSel===k}"${n?'':' disabled'}>${k?esc(k):'All'} <span class="n">${n}</span></button>`}).join('');
+    $('idx').querySelectorAll('button').forEach(b=>b.onclick=()=>{idxSel=b.dataset.ix;renderPicker();const n=[...$('idx').querySelectorAll('button')].find(x=>x.dataset.ix===idxSel);n&&n.focus()})}
+  const pre=allIn.filter(p=>(!idxSel||(p.indices||[]).includes(idxSel))&&matchQ(p));renderAZ(allIn,pre);
+  const inCat=pre.filter(p=>!azSel||lastName(p)[0]===azSel),groups=[...new Set(inCat.map(p=>p.group||''))];
+  const chip=p=>`<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}${p.ticker?`<span class="tk"> ${esc(p.ticker)}</span>`:''}</button>`;
   $('persons').classList.toggle('grouped',groups.length>1||!!groups[0]);
   $('persons').innerHTML=groups.length>1||groups[0]?   // a category with subgroups (US Government: Cabinet / Congress / Supreme Court)
     groups.map(g=>`<div class="pg" role="group" aria-label="${esc(g)}"><span class="lbl">${esc(g)}</span>${inCat.filter(p=>(p.group||'')===g).map(chip).join('')}</div>`).join(''):
-    '<span class="lbl">Person</span>'+inCat.map(chip).join('');
+    '<span class="lbl">Person</span>'+(inCat.length?inCat.map(chip).join(''):'<span class="muted nomatch">No one matches. <button type="button" class="linkbtn" id="clearF">Clear filters</button></span>');
+  const cf=$('clearF');if(cf)cf.onclick=()=>{pq='';idxSel='';azSel='';$('psearch').value='';renderPicker();$('psearch').focus()};
   $('personMeta').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun} from ${P.source}`;
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
-  document.querySelectorAll('#persons button').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
+  document.querySelectorAll('#persons button.chip').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
   ['#cats button.on','#persons button.on'].forEach(sel=>{const b=document.querySelector(sel);let r=b&&b.parentElement;
     while(r&&r.id!=='picker'&&!(r.scrollWidth>r.clientWidth))r=r.parentElement;if(r&&r.id==='picker')r=null;
     if(r){const l=r.querySelector('.lbl'),pad=l&&getComputedStyle(l).position==='sticky'?l.offsetWidth+12:24,
       x=b.offsetLeft-r.offsetLeft;if(x-pad<r.scrollLeft||x+b.offsetWidth>r.scrollLeft+r.clientWidth-20)r.scrollLeft=Math.max(0,x-pad)}});   // only if not fully visible
 }
+$('psearch').addEventListener('input',e=>{pq=e.target.value.trim();renderPicker()});
+$('psearch').addEventListener('keydown',e=>{if(e.key==='Enter'){const b=$('persons').querySelector('button.chip');if(b){e.preventDefault();setPerson(b.dataset.person)}}
+  else if(e.key==='Escape'&&e.target.value){e.target.value='';pq='';renderPicker();e.stopPropagation()}});
 async function setPerson(slug,docIds){
   hidePop();
   const p=await loadPerson(BY.get(slug)||BY.get(DEFAULT));
@@ -877,6 +1060,13 @@ function aggregate(){
   DOCS.forEach(d=>{if(!sel.has(d.id))return;d.cnt.forEach((n,wi)=>cnt.set(wi,(cnt.get(wi)||0)+n))});
   BASE=[...cnt].map(([i,n])=>({word:V[i],count:n,stop:STOP.has(V[i])}));
 }
+// ---- polish: count-up on the red stats when a person loads (skipped for reduced motion and automated browsers) ----
+let lastCountSlug='';const RM_CU=matchMedia('(prefers-reduced-motion: reduce)');
+function setStat(id,n,anim){const el=$(id);el.dataset.v=n;cancelAnimationFrame(el._raf||0);
+  if(!anim||RM_CU.matches||(navigator.webdriver&&!window.__countUp)||n<10){el.textContent=n.toLocaleString();return}
+  const t0=performance.now(),D=650;
+  const step=t=>{const k=Math.min(1,(t-t0)/D),e=1-Math.pow(1-k,3);el.textContent=Math.round(n*e).toLocaleString();if(k<1)el._raf=requestAnimationFrame(step)};
+  el._raf=requestAnimationFrame(step)}
 function render(){
   const base=BASE.filter(x=>!(hide.checked&&x.stop));
   base.sort((a,b)=>b.count-a.count||(a.word<b.word?-1:a.word>b.word?1:0));
@@ -885,14 +1075,15 @@ function render(){
   const list=s?base.filter(x=>re?re.test(x.word):x.word.includes(s)):base.slice();
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
   $('sDocs').textContent=sel.size+' / '+DOCS.length;
-  $('sTotal').textContent=base.reduce((t,x)=>t+x.count,0).toLocaleString();
-  $('sUnique').textContent=base.length.toLocaleString();
-  if(VIEW==='visual'){tb.innerHTML='';$('sShown').textContent=drawCloud(list).toLocaleString();return}
+  const anim=P.slug!==lastCountSlug;lastCountSlug=P.slug;
+  setStat('sTotal',base.reduce((t,x)=>t+x.count,0),anim);
+  setStat('sUnique',base.length,anim);
+  if(VIEW==='visual'){tb.innerHTML='';setStat('sShown',drawCloud(list),anim);return}
   cloud.innerHTML='';
   const max=base.length?base[0].count:1;
   tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
     :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
-  $('sShown').textContent=list.length.toLocaleString();
+  setStat('sShown',list.length,anim);
   $('more').textContent=list.length>LIMIT?`Showing first ${LIMIT} of ${list.length} — use the filter to find others.`:'';
   document.querySelectorAll('th[data-k]').forEach(th=>{th.textContent=th.textContent.replace(/ [▲▼]$/,'')+(th.dataset.k===sortK?(sortDir<0?' ▼':' ▲'):'')});
 }
@@ -987,11 +1178,41 @@ pop.addEventListener('click',e=>{e.stopPropagation(); // re-render detaches e.ta
   if(e.target.closest('.x')){hidePop();return}
   if(e.target.closest('.more')&&P.policy!=='excerpt'){showAll=true;pinned=true;pop.innerHTML=popHTML(curWord);pop.classList.add('expanded');placePop()}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePop()});
+// ---- polish: Share (copies the exact view's URL) and keyboard shortcuts ----
+let toastT=null;
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('on'),2200)}
+async function shareView(){syncHash();const url=location.href;
+  try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({title:document.title,url});return}
+    await navigator.clipboard.writeText(url);toast('Link copied: '+P.name+(VIEW==='visual'?' · Word Cloud':' · Super Math'))}
+  catch(err){if(err&&err.name==='AbortError')return;toast('Copy this link: '+url)}}
+$('share').onclick=shareView;
+document.addEventListener('keydown',e=>{
+  if(e.metaKey||e.ctrlKey||e.altKey||e.target.closest('input,textarea,select,[contenteditable]'))return;
+  if(e.key==='/'){e.preventDefault();q.focus();q.select()}
+  else if(e.key==='v'||e.key==='V'){setView(VIEW==='visual'?'standard':'visual',true)}
+  else if(e.key==='s'||e.key==='S'){shareView()}
+  else if(e.key==='?'){toast('Shortcuts: / filter words · V switch view · S share');const h=$('kbdHint');h.classList.add('flash');setTimeout(()=>h.classList.remove('flash'),1200)}});
+// ---- Ad slots: ONE config block. Placeholders until ADS.client and the slot ids are filled in (then AdSense units render) ----
+const ADS={
+  client:'',            // e.g. 'ca-pub-0000000000000000' (empty = faint mock placeholders, no ad code loaded)
+  slots:{               // desktop size (w x h) and phone size (mw x mh); id = AdSense data-ad-slot
+    leader:   {id:'',w:728,h:90, mw:320,mh:50},     // below the results card
+    side:     {id:'',w:300,h:250},                  // desktop left column, below Who / Timeframe (hidden on phones)
+    incontent:{id:'',w:300,h:250,mw:300,mh:250}}};  // between the method note and About
+function renderAds(){let live=false;
+  document.querySelectorAll('aside.ad').forEach(el=>{const c=ADS.slots[el.dataset.slot];if(!c){el.remove();return}
+    ['w','h','mw','mh'].forEach(k=>el.style.setProperty('--a'+k,(c[k]||c[k.slice(1)])+'px'));
+    if(ADS.client&&c.id){live=true;el.innerHTML=`<span class="adl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADS.client)}" data-ad-slot="${esc(c.id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`}
+    else el.innerHTML=`<span class="adl">Advertisement</span><div class="adbox" aria-hidden="true"><svg class="admark" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><path d="M20 6 32 27H8z"/><circle cx="20" cy="21" r="5"/></svg><span class="adtx"><b>Sponsor</b><small>Your ad here</small></span></div>`});
+  if(live&&!document.querySelector('script[src*="adsbygoogle"]')){const sc=document.createElement('script');sc.async=true;sc.crossOrigin='anonymous';
+    sc.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(ADS.client);document.head.appendChild(sc);
+    document.querySelectorAll('ins.adsbygoogle').forEach(()=>(window.adsbygoogle=window.adsbygoogle||[]).push({}))}}
+renderAds();
 document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.target)&&!e.target.closest('[data-w]'))hidePop()});
 
 // ---- Word Cloud mode (hash value mode=visual): word cloud (vanilla JS; spiral placement + measureText box collisions) ----
 let VIEW='standard',stopStd=null,cloudW=0,cloudInfo={placed:0,skipped:0,ms:0};
-const PAL=['#141413','#2f4f3b','#141413','#3a3833','#6a5f4e','#141413','#56705c','#7d6646'];
+const PAL=['#f4efe6','#d8d1c4','#f4efe6','#b9b2a5','#e9e2d5','#f4efe6','#c9c2b5','#a9a397'];   // cream/greys on the black cloud panel (all >= 7:1)
 const hcode=s=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
 const mctx=document.createElement('canvas').getContext('2d');
 function cloudLayout(words,W){
