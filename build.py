@@ -336,16 +336,118 @@ def main():
         if DATA_DIR.exists() and not any(DATA_DIR.iterdir()):
             DATA_DIR.rmdir()
     write_if_changed(ROOT / "index.html", page)
+    write_if_changed(ROOT / "privacy.html", PRIVACY)
     print(f"\nWrote {ROOT / 'index.html'} ({len(page.encode('utf-8')) / 1024:.0f} KB"
           f"{', per-person data in data/' if split else ', all data inline'})")
+
+# ---- privacy.html: static Privacy Policy page (same black / cream / Arial look); contact address assembled in JS ----
+PRIVACY = r"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm14">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm14">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm14">
+<title>Privacy Policy — Mouth Math</title>
+<meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
+<link rel="canonical" href="https://mouthmath.com/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mouth Math">
+<meta property="og:title" content="Privacy Policy — Mouth Math">
+<meta property="og:url" content="https://mouthmath.com/privacy.html">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm14">
+<style>
+:root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:#000;color:var(--ink);font-family:Arial,"Helvetica Neue",Helvetica,sans-serif}
+body{font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:var(--ink);text-decoration-color:rgba(243,238,228,.4);text-underline-offset:2px}
+a:hover{color:var(--red);text-decoration-color:var(--red)}
+a:focus-visible{outline:2px solid var(--red);outline-offset:2px;border-radius:2px}
+header{border-bottom:1px solid var(--rule);padding:14px 20px}
+header .in{max-width:780px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+header .logo{display:block;line-height:0}header .logo img{height:44px;width:auto;aspect-ratio:1141/236;display:block}
+header .back{font-size:15px;font-weight:700;white-space:nowrap}
+main{max-width:780px;margin:0 auto;padding:28px 20px 40px}
+h1{font-size:32px;line-height:1.15;letter-spacing:-.025em;margin:0 0 6px}
+.upd{color:var(--muted);font-size:14px;margin:0 0 26px}
+h2{font-size:20px;letter-spacing:-.015em;margin:30px 0 8px}
+p,li{color:#e4dfd5}ul{padding-left:22px}li{margin:4px 0}
+.sum{border:1px solid var(--rule);border-left:3px solid var(--red);border-radius:6px;padding:12px 16px;margin:0 0 8px;background:#0b0b0b}
+.sum p{margin:0}
+footer{border-top:1px solid var(--rule);color:var(--muted);font-size:14px;padding:18px 20px 28px;text-align:center}
+footer a{color:var(--muted)}
+@media (max-width:640px){header{padding:12px 16px}header .logo img{height:34px}main{padding:22px 16px 32px}h1{font-size:26px}h2{font-size:18px}body{font-size:15.5px}}
+</style></head>
+<body>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm14" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<main>
+<h1>Privacy Policy</h1>
+<p class="upd">Last updated: October 3, 2026</p>
+<div class="sum"><p><strong>In short:</strong> Mouth Math (mouthmath.com) has no accounts, no login, no sign-up and no forms. The site itself
+does not collect, store or sell personal data and does not set its own cookies. Ads on the site are served by Google AdSense, and
+Google and other third-party vendors may use cookies to show those ads, including personalized ads.</p></div>
+
+<h2>Information the site collects</h2>
+<p>None that identifies you. Mouth Math is a static website: the word counts are computed in your browser, and your
+choices (person, documents, view) are kept only in the page address so you can share a link. We don't use analytics,
+tracking pixels, or our own cookies or local storage, and we don't ask for your name, email address or any other personal information.</p>
+
+<h2>Advertising and cookies (Google AdSense)</h2>
+<p>Mouth Math uses Google AdSense, an advertising service from Google, to show ads. When ads are shown:</p>
+<ul>
+<li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</li>
+<li>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet.</li>
+<li>Google and its partners may place and read cookies in your browser, or use web beacons, IP addresses and similar identifiers, to show ads,
+measure them and prevent fraud. Your browser automatically sends Google information such as the address of the page you're viewing and your IP address.</li>
+<li>Learn more in Google's
+<a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a>.</li>
+</ul>
+<p><strong>Personalized ads and your choices.</strong> You can opt out of personalized advertising from Google at
+<a href="https://adssettings.google.com">Ads Settings (adssettings.google.com)</a>. If you opt out you'll still see ads, but they won't be
+based on your interests or browsing history. You can also opt out of some other third-party vendors' use of cookies for personalized
+advertising at <a href="https://www.aboutads.info/choices/">www.aboutads.info</a> (US) or
+<a href="https://www.youronlinechoices.eu/">www.youronlinechoices.eu</a> (Europe), and you can block or delete cookies in your browser settings.</p>
+<p>If ads from other ad networks or vendors are shown through AdSense, those vendors may also use cookies as described above; you can
+opt out of their personalized advertising through the links above. Where the law requires it (for example in the European Economic Area,
+the UK and Switzerland), cookies for personalized ads are only used with your consent, and you can change your choice at any time.</p>
+
+<h2>TradingView stock charts</h2>
+<p>On CEO pages, clicking a stock ticker opens a price chart embedded from <a href="https://www.tradingview.com/">TradingView</a>. The chart
+is loaded only when you click, directly from TradingView's servers, so TradingView receives your IP address and browser information and may
+set its own cookies. That is governed by the <a href="https://www.tradingview.com/privacy-policy/">TradingView Privacy Policy</a>.</p>
+
+<h2>Other services</h2>
+<ul>
+<li><strong>Hosting:</strong> the site is hosted on GitHub Pages. Like any web host, GitHub may log technical information such as IP addresses
+for security and operations; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</li>
+<li><strong>Animated word cloud:</strong> when Motion is on, the p5.js library is loaded from the jsDelivr CDN (cdn.jsdelivr.net), which receives
+standard request information such as your IP address; see the <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net">jsDelivr privacy policy</a>.</li>
+<li><strong>Links to sources:</strong> links to official documents open the publisher's own website, which has its own privacy policy.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Mouth Math is not directed to children under 13, and we don't knowingly collect personal information from children.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new "Last updated" date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a id="pmail" href="#">email us</a><noscript> (turn on JavaScript to see the address)</noscript>.</p>
+</main>
+<footer>&copy; 2026 Mouth Math · <a href="./">Home</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a></footer>
+<script>(()=>{const a=document.getElementById('pmail');if(!a)return;const m=[115,112,97,100,117,110,107,101,108].map(c=>String.fromCharCode(c)).join('')+'@'+['gmail','com'].join('.');
+a.href='mailto:'+m+'?subject='+encodeURIComponent('Mouth Math privacy');a.textContent=m})();
+document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'})</script>
+</body></html>
+"""
 
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm13">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm13">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm14">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm14">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm13">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm14">
 <title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -355,7 +457,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm13">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm14">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -999,6 +1101,7 @@ body header .viewbar.hview,body header #views{gap:24px!important}
 @media (max-width:640px){body header .viewbar.hview,body header #views{gap:18px!important}body header .viewbar.hview{padding:3px 5px 0}}
 @media (prefers-reduced-motion:reduce){body header .hview .vcard{transition:none}}
 /* ---- Logo v3: inline SVG (profile -> waves -> = ± -> animated red number -> MouthMath), no layout jump (fixed-width number) ---- */
+.sitefoot{max-width:1240px;margin:0 auto;padding:18px 16px 30px;border-top:1px solid var(--rule);text-align:center;font-size:14px;color:var(--muted)}.sitefoot a{color:var(--muted)}.sitefoot a:hover{color:var(--num-red)}
 header .logo svg.mmlogo{height:52px;width:auto;aspect-ratio:1141/236;display:block;overflow:visible}
 @media (max-width:1239px) and (min-width:641px){header .logo svg.mmlogo{height:44px}}
 @media (max-width:640px){header .logo svg.mmlogo{height:36px}}
@@ -1107,12 +1210,14 @@ any government, institution, company, or person listed.</p>
 Two views: <strong>Super Cloud</strong> (the default; bigger words were said more often, across the whole timeframe you select) and <strong>Super Math</strong> (every word, counted and ranked in a table). Either way the
 totals come first, in red.
 “Hide common stopwords” (on by default; uncheck it to see every word) removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
+<p><strong>Privacy.</strong> There is no account or login, and the site itself collects no personal data. Ads are served by Google AdSense, which uses cookies; see our <a href="privacy.html">Privacy Policy</a>.</p>
 <div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
 purposes only and is not financial, investment, or trading advice. It is not affiliated with or endorsed by the
 Federal Reserve, the White House, any federal department, Congress, the Supreme Court, or by any company
 or person listed.</div>
 </section>
 </main>
+<footer class="sitefoot">&copy; 2026 Mouth Math · <a href="privacy.html">Privacy Policy</a> · Not financial advice</footer>
 <div id="tvModal" class="tvm" hidden><div class="tvm-back" data-close></div>
 <div class="tvm-panel" role="dialog" aria-modal="true" aria-labelledby="tvmTitle"><div class="tvm-head"><h3 id="tvmTitle"></h3><span class="tvm-sub">1-year daily price</span>
 <button type="button" class="tvm-x" id="tvmX" aria-label="Close chart" data-close>&times;</button></div>
