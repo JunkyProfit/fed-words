@@ -1,4 +1,6 @@
-# Fed Words
+# Said Count
+
+*(Formerly "Fed Words". The repo and URL stay `fed-words` for now: https://junkyprofit.github.io/fed-words/.)*
 
 A static website that lists every word a public figure said in their official
 documents, ranked from most to least frequent. Choose a **category**, then a **person**:

@@ -307,7 +307,17 @@ TEMPLATE = r"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<title>Fed Words — every word __DEFAULT_TITLE__ said, ranked</title>
+<title>Said Count — every word __DEFAULT_TITLE__ said, ranked</title>
+<meta name="description" content="Said Count: every word public figures said in their official speeches, letters and texts, counted and ranked.">
+<meta name="application-name" content="Said Count">
+<meta name="apple-mobile-web-app-title" content="Said Count">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Said Count">
+<meta property="og:title" content="Said Count — every word they said, ranked">
+<meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
+<meta property="og:url" content="https://junkyprofit.github.io/fed-words/">
+<meta property="og:image" content="https://junkyprofit.github.io/fed-words/assets/logo.png">
+<meta name="twitter:card" content="summary">
 <style>
 :root{--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
@@ -386,7 +396,7 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 #cloud span:hover,#cloud span.active{background:#e2f0e7}#cloud .empty{position:static}
 </style></head><body class="mode-fed">
 <header><a class="about-link" href="#about">About</a>
-<div class="brand"><a class="logo" href="./" title="Fed Words home"><img src="assets/logo.png" width="342" height="104" alt="Fed Words"></a>
+<div class="brand"><a class="logo" href="./" title="Said Count home"><img src="assets/logo.png" width="341" height="104" alt="Said Count"></a>
 <div class="titles"><div class="eyebrow" id="eyebrow"></div><h1 id="h1">Every word __DEFAULT_TITLE__ said, ranked</h1>
 <p id="sub">Word frequencies from official sources</p></div></div></header>
 <main>
@@ -431,7 +441,7 @@ possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span clas
 <span class="only-rel">Vatican texts: English text as published by the Holy See; page headings, footnotes, scripture citations in parentheses, and summaries read by others excluded.</span>
 Totals, ranks and counts are recomputed in your browser for the selected person and documents.
 Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span></p>
-<section class="card" id="about"><h2>About this site</h2>
+<section class="card" id="about"><h2>About Said Count</h2>
 <p>This site was built by someone who believes in transparency and truth. It counts every word in official,
 publicly available texts by public figures, taken from each official source:</p>
 <ul class="sources">
@@ -501,7 +511,7 @@ async function setPerson(slug,docIds){
   ['fed','ceo','pol','rel'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('h1').textContent=`Every word ${P.display} said, ranked`;
-  document.title=`Fed Words — every word ${P.display} said, ranked`;
+  document.title=`Said Count — every word ${P.display} said, ranked`;
   const noun=n=>n===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun;
   $('sub').textContent=`Word frequencies across ${DOCS.length} ${noun(DOCS.length)} from ${P.source}`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
