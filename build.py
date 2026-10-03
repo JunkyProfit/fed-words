@@ -344,9 +344,10 @@ def main():
 PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm14">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm14">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm14">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm15">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm15">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm15">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -354,7 +355,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm14">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm15">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -379,7 +380,7 @@ footer a{color:var(--muted)}
 @media (max-width:640px){header{padding:12px 16px}header .logo img{height:34px}main{padding:22px 16px 32px}h1{font-size:26px}h2{font-size:18px}body{font-size:15.5px}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm14" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm15" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -444,10 +445,11 @@ document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm14">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm14">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm15">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm15">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm14">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm15">
 <title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -457,7 +459,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm14">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm15">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -1506,7 +1508,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='?'){toast('Shortcuts: / filter words · V switch view · S share');const h=$('kbdHint');h.classList.add('flash');setTimeout(()=>h.classList.remove('flash'),1200)}});
 // ---- Ad slots: ONE config block. Placeholders until ADS.client and the slot ids are filled in (then AdSense units render) ----
 const ADS={
-  client:'',            // e.g. 'ca-pub-0000000000000000' (empty = faint mock placeholders, no ad code loaded)
+  client:'',            // set to 'ca-pub-5930727143587260' with real slot ids after approval (empty = mock placeholders; the AdSense script itself is in <head>)
   slots:{               // desktop size (w x h) and phone size (mw x mh); id = AdSense data-ad-slot
     leader:   {id:'',w:728,h:90, mw:320,mh:50},     // below the results card
     side:     {id:'',w:300,h:250},                  // desktop left column, below Who / Timeframe (hidden on phones)
@@ -1520,8 +1522,8 @@ function renderAds(){let live=false;
     if(ADS.client&&c.id){live=true;el.innerHTML=`<span class="adl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADS.client)}" data-ad-slot="${esc(c.id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`}
     else{el.innerHTML=`<span class="adl">Advertisement</span><a class="adbox" title="Advertise here" aria-label="Advertise here: email about advertising on Mouth Math"><svg class="admark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 6 32 27H8z"/><circle cx="20" cy="21" r="5"/></svg><span class="adtx" aria-hidden="true"><b>Sponsor</b><small>Your ad here</small></span><span class="adhint" aria-hidden="true">Advertise here &rarr;</span></a><a class="adcta">Sponsor your ad here</a>`;
       el.querySelectorAll('a').forEach(a=>a.href=AD_MAIL())}});
-  if(live&&!document.querySelector('script[src*="adsbygoogle"]')){const sc=document.createElement('script');sc.async=true;sc.crossOrigin='anonymous';
-    sc.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(ADS.client);document.head.appendChild(sc);
+  if(live){if(!document.querySelector('script[src*="adsbygoogle"]')){const sc=document.createElement('script');sc.async=true;sc.crossOrigin='anonymous';   // the AdSense script is already in <head>; this is a fallback
+    sc.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(ADS.client);document.head.appendChild(sc)}
     document.querySelectorAll('ins.adsbygoogle').forEach(()=>(window.adsbygoogle=window.adsbygoogle||[]).push({}))}}
 renderAds();
 document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.target)&&!e.target.closest('[data-w]'))hidePop()});
