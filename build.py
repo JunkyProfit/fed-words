@@ -243,7 +243,7 @@ def main():
             jdocs.append(jd)
         people_out.append({k: P[k] for k in ("slug", "name", "display", "category", "role", "org", "policy",
                                              "source", "doc_noun")}
-                          | {k: P[k] for k in ("mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit") if P.get(k)}
+                          | {k: P[k] for k in ("group", "mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit") if P.get(k)}
                           | {"vocab": vocab, "docs": jdocs})
 
         # ---- console report (all numbers come from here) ----
@@ -291,6 +291,10 @@ def main():
             inline.append({k: p[k] for k in p if k not in ("vocab", "docs")} | {"external": f"data/{p['slug']}.json",
                                                                                "ndocs": len(p["docs"])})
         page = render(inline)
+        keep = {f"{p['slug']}.json" for p in people_out[1:]}
+        for f in DATA_DIR.glob("*.json"):       # people no longer listed in people.json
+            if f.name not in keep:
+                f.unlink()
     else:       # remove stale generated per-person files from a previous split build
         for p in people_out:
             f = DATA_DIR / f"{p['slug']}.json"
@@ -346,13 +350,23 @@ h2{font-size:16px;margin:0 0 10px}.muted{color:var(--muted);font-size:13px}
 button.chip,label.chip{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
 button.chip.on,label.chip.on{background:var(--chip-on);color:var(--chip-ink);border-color:var(--sage)}label.chip.on .muted{color:#47604f}
 label.chip input{margin:0}
-ul.speeches{list-style:none;margin:0;padding:0}ul.speeches li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid var(--line)}
-ul.speeches li.sel{background:var(--green-soft)}ul.speeches input{margin-top:5px}
+ul.speeches{list-style:none;margin:0;padding:0;font-size:14px}
+ul.speeches li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:0 10px;align-items:start;padding:8px 8px;border-top:1px solid var(--line);border-radius:6px}
+ul.speeches li.sel{background:var(--green-soft)}ul.speeches input{margin:3px 0 0}
+.dl1{display:grid;grid-template-columns:7.4em minmax(0,1fr) auto;gap:2px 12px;align-items:baseline;cursor:pointer}
+.dl1 .dt{font-weight:500;line-height:1.35}.dl1 .dw{color:var(--muted);font-size:13px;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.dl2{margin:3px 0 0 calc(7.4em + 12px);font-size:12.5px;line-height:1.45}.dl2>*+*::before{content:"\00b7";display:inline-block;padding:0 6px;color:#b3a891;text-decoration:none}
+.dl2 a{white-space:nowrap}
+button.only{border:1px solid var(--line);background:var(--bg);color:var(--accent);border-radius:999px;font:inherit;font-size:12px;line-height:1.5;padding:0 9px;cursor:pointer}
+button.only:hover{border-color:var(--sage)}
+@media (max-width:600px){.dl1{grid-template-columns:minmax(0,1fr) auto}.dl1 .dw{grid-row:1;grid-column:2}.dl1 .dt{grid-column:1/-1}.dl2{margin-left:0}
+ ul.speeches li{padding:8px 4px}}
 .date{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
-a.only{font-size:12px;margin-left:6px;cursor:pointer}
 #selSummary{margin-top:8px;font-size:14px}
 .stats{display:flex;gap:14px;flex-wrap:wrap}.stat{flex:1;min-width:150px;background:var(--bg);border-radius:8px;padding:10px 14px}
 .stat b{display:block;font-size:24px;color:var(--accent)}
+@media (max-width:640px){.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:10px}.stat{min-width:0;padding:6px 6px;font-size:11.5px;line-height:1.25}
+ .stat b{font-size:17px}}
 .controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
 input[type=search]{flex:1;min-width:220px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;font-size:15px}
 input[type=search]:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(127,169,139,.25)}
@@ -385,14 +399,75 @@ header p#siteSub{max-width:640px}
 .seg button:hover{color:var(--ink);background:rgba(255,253,248,.6)}
 .seg button.on{background:var(--chip-on);color:var(--chip-ink);box-shadow:inset 0 0 0 2px var(--accent),0 1px 2px rgba(60,45,20,.15)}.seg button.on::before{content:"\2713\00a0"}
 #persons button.chip.on{font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
-body.mode-pol header{background:#4f5b66;box-shadow:inset 0 -4px 0 #bfcad3}
-body.mode-rel header{background:#5f5568;box-shadow:inset 0 -4px 0 #d4c8db}
-.only-fed,.only-ceo,.only-pol,.only-rel{display:none}
-body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-pol .only-pol,body.mode-rel .only-rel{display:inline}
+body.mode-cab header{background:#56604a;box-shadow:inset 0 -4px 0 #c9d0b5}
+body.mode-cong header{background:#6b5148;box-shadow:inset 0 -4px 0 #d9bfb3}
+body.mode-scotus header{background:#3f4a45;box-shadow:inset 0 -4px 0 #c2cbc5}
+.only-fed,.only-ceo,.only-cab,.only-cong,.only-scotus{display:none}
+body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-cab .only-cab,body.mode-cong .only-cong,body.mode-scotus .only-scotus{display:inline}
 #cats{flex-wrap:wrap}#pop .credit{font-size:11px;color:var(--muted);margin-top:4px}
 #pop .cap{font-size:12px;color:var(--muted);margin-top:8px;padding-top:6px;border-top:1px dashed var(--line)}
 .viewbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 14px}
-.viewbar .lbl{font-weight:600;font-size:13px;color:var(--muted)}.viewbar .seg{margin:0}.viewbar .seg button{font-size:14px;padding:6px 18px}
+.viewbar .lbl{font-weight:600;font-size:13px;color:var(--muted)}
+.vcards{display:flex;gap:10px}
+.vcard{position:relative;display:flex;align-items:center;gap:10px;width:200px;padding:7px 12px 7px 8px;border:1px solid #d9cdb6;border-radius:12px;
+ background:var(--card);color:var(--ink);font:inherit;text-align:left;cursor:pointer;transition:border-color .12s,background-color .12s,box-shadow .12s}
+.vcard svg{flex:none;width:76px;height:50px;display:block}
+.vcard .vt{display:flex;flex-direction:column;line-height:1.2;min-width:0}.vcard .vt b{font-size:15px}.vcard .vt small{font-size:12px;color:var(--muted)}
+.vcard:hover{border-color:var(--sage);background:#fbf8f0}
+.vcard[aria-pressed="true"]{background:var(--chip-on);border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent),0 1px 3px rgba(60,45,20,.15)}
+.vcard[aria-pressed="true"] .vt b{color:var(--chip-ink)}.vcard[aria-pressed="true"] .vt small{color:#47604f}
+.vcard[aria-pressed="true"]::after{content:"\2713";position:absolute;top:-7px;right:-7px;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;
+ font-size:12px;font-weight:700;line-height:20px;text-align:center;box-shadow:0 0 0 2px var(--bg)}
+@media (max-width:640px){.viewbar{gap:6px 10px}.viewbar .lbl{width:100%}#viewHint{display:none}.vcards{width:100%}
+ .vcard{flex:1;width:auto;gap:8px;padding:6px 8px 6px 6px}.vcard svg{width:58px;height:40px}.vcard .vt b{font-size:14px}.vcard .vt small{font-size:11.5px}}
+.topgrid{display:block}
+@media (min-width:900px){.topgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}}
+#cats button{font-size:14px;padding:6px 14px}#picker .seg{margin-bottom:10px}
+#persons.grouped{display:block}#persons .pg{display:flex;gap:6px 8px;flex-wrap:wrap;align-items:center;padding:6px 0;border-top:1px dashed var(--line)}
+#persons .pg:first-child{border-top:0;padding-top:0}#persons .pg .lbl{min-width:96px}
+#timeframe .tf-row{margin-bottom:8px}.yrs{display:contents}
+#docPick{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+#docPick>summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--accent);list-style:none;display:inline-flex;align-items:center;gap:6px;padding:3px 0}
+#docPick>summary::-webkit-details-marker{display:none}
+#docPick>summary::before{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s;margin:0 3px 0 1px}
+#docPick[open]>summary::before{transform:rotate(45deg)}#docPick>summary .muted{font-weight:400}
+#docPick .hint{margin:4px 0 6px}
+#timeframe{container-type:inline-size}
+@container (max-width:520px){.dl1{grid-template-columns:minmax(0,1fr) auto}.dl1 .dw{grid-row:1;grid-column:2}.dl1 .dt{grid-column:1/-1}.dl2{margin-left:0}ul.speeches li{padding:8px 4px}}
+/* WordViz, wide screens: Who + Timeframe in a sidebar, the cloud beside it */
+@media (min-width:900px){
+ body.view-visual main{display:grid;grid-template-columns:300px minmax(0,1fr);column-gap:16px;max-width:1280px;align-items:start}
+ body.view-visual main>*{grid-column:1/-1}
+ body.view-visual .topgrid{grid-column:1;grid-row:2/span 2;display:block}
+ body.view-visual #words{grid-column:2;grid-row:2}
+ body.view-visual .stats{grid-column:2;grid-row:3}
+ body.view-visual .stat{min-width:120px}}
+@media (min-width:1100px){body.view-visual main{grid-template-columns:340px minmax(0,1fr)}}
+/* WordViz, narrow screens: results right after the compact Who + Timeframe area; stats and filters below the cloud */
+@media (max-width:899px){
+ body.view-visual main{display:flex;flex-direction:column}body.view-visual main>*{order:2}
+ body.view-visual .viewbar,body.view-visual .topgrid{order:0}body.view-visual #words{order:1}}
+@media (max-width:640px){
+ header{padding:12px 14px}header a.about-link{top:12px;right:14px;font-size:13px;padding:2px 10px}header .brand{gap:8px}
+ header .logo{padding:5px 9px}header .logo img{height:28px}header h1{font-size:19px}header p#siteSub{font-size:13px;line-height:1.35}
+ main{padding:12px}.card{padding:12px 14px;margin-bottom:10px}h2{font-size:15px;margin-bottom:8px}
+ .viewbar{margin-bottom:10px}.viewbar .lbl{display:none}
+ #cats,#persons:not(.grouped),#persons .pg{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:-14px;padding-right:14px;
+  -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+ #cats::-webkit-scrollbar,#persons::-webkit-scrollbar,#persons .pg::-webkit-scrollbar{display:none}
+ #persons.grouped{overflow:visible;margin-right:0;padding-right:0;-webkit-mask-image:none;mask-image:none}
+ #persons .pg .lbl{position:sticky;left:0;z-index:1;width:auto;height:auto;clip:auto;overflow:visible;min-width:0;flex:none;font-size:12px;
+  background:var(--card);padding:4px 6px 4px 0;box-shadow:6px 0 6px -2px var(--card)}
+ #timeframe h2{float:left;margin:5px 12px 0 0}#timeframe .tf-row .lbl{display:none}#selSummary{clear:both;font-size:13.5px}
+ body.view-visual #personInfo{display:none}body.view-visual #persons{margin-bottom:0}
+ #cats{display:flex;background:none;border:0;padding:0;gap:6px;margin-bottom:8px}
+ #cats button{flex:none;font-size:13.5px;padding:5px 12px;border:1px solid #d9cdb6;background:#efe7d8}
+ #persons{margin-bottom:6px}#persons .chip{flex:none}#persons .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+ #personInfo{font-size:12.5px;line-height:1.4}#timeframe .tf-row .lbl{min-width:0}
+ #words h2#personTitle{font-size:16px}
+ body.view-visual #words{display:flex;flex-direction:column}body.view-visual #words>*{order:2}
+ body.view-visual #personTitle{order:0}body.view-visual #words>.only-visual{order:1;display:flex;flex-direction:column}
+ body.view-visual #cloud{order:0}body.view-visual .cloud-bar{order:1;margin-top:6px}body.view-visual #words .controls{margin:8px 0 0}}
 body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none}
 .cloud-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:2px 0 6px;font-size:14px}
 .cloud-bar select{font:inherit;font-size:14px;padding:3px 6px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
@@ -403,24 +478,27 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 <header><a class="about-link" href="#about">About</a>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home"><img src="assets/logo.png?v=mm1" width="433" height="104" alt="Mouth Math"></a>
 <div class="titles"><h1 id="siteTitle">Every word they said, ranked</h1>
-<p id="siteSub">Word counts from official speeches, letters and texts by public figures: Fed chairs, CEOs, presidents, popes and more.</p></div></div></header>
+<p id="siteSub">Word counts from official speeches, testimony, letters and court opinions by public figures: Fed chairs, CEOs and the US Government (Cabinet secretaries, congressional leaders and Supreme Court Justices).</p></div></div></header>
 <main>
-<div class="viewbar"><span class="lbl">View</span>
-<div class="seg" id="views" role="tablist" aria-label="View"><button data-view="standard" role="tab">Standard</button><button data-view="visual" role="tab">Visual</button></div>
+<div class="viewbar" role="group" aria-label="View"><span class="lbl">View</span>
+<div class="vcards" id="views"><button type="button" class="vcard" data-view="standard" aria-pressed="true"><svg viewBox="0 0 76 50" aria-hidden="true" fill="none" stroke="#2b2a26" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h36l8 8v36H16z" fill="#fffdf8"/><path d="M52 3v8h8"/><path d="M21 14h3M21 21h3M21 28h3M21 35h3M21 42h3" stroke-width="1.6"/><path d="M28 14h26M28 21h21M28 28h17M28 35h12M28 42h8" stroke-dasharray="3 2.2"/></svg><span class="vt"><b>Standard</b><small>Ranked table</small></span></button>
+<button type="button" class="vcard" data-view="visual" aria-pressed="false"><svg viewBox="0 0 76 50" aria-hidden="true"><rect x="1.5" y="1.5" width="73" height="47" rx="2" fill="#fffdf8" stroke="#2b2a26" stroke-width="1.6"/><rect x="5.5" y="5.5" width="65" height="39" fill="none" stroke="#2b2a26" stroke-width=".8"/><g fill="#2b2a26" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" text-anchor="middle"><text x="38" y="29" font-size="13" font-weight="700">said</text><text x="20" y="16" font-size="7" font-weight="600">every</text><text x="55" y="17" font-size="8.5" font-weight="600">word</text><text x="19" y="38" font-size="6">we</text><text x="55" y="39" font-size="7.5" font-weight="600">math</text><text x="37" y="40" font-size="5.5">ranked</text><text x="61" y="29" font-size="5">yes</text><text x="15" y="27" font-size="5.5">now</text></g></svg><span class="vt"><b>WordViz</b><small>Word cloud</small></span></button></div>
 <span class="muted" id="viewHint"></span></div>
+<div class="topgrid">
 <section class="card" id="picker"><h2>Who</h2>
 <div class="seg" id="cats" role="tablist" aria-label="Category"></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
 <div id="personInfo"><span class="eyebrow" id="eyebrow"></span> <span class="muted" id="personMeta"></span></div>
 </section>
 <section class="card" id="timeframe"><h2>Timeframe</h2>
-<div class="tf-row"><span class="lbl">Quick</span>
-  <button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button></div>
-<div class="tf-row" id="years"><span class="lbl">By year</span></div>
-<div class="tf-row"><span class="lbl">Documents</span><span class="muted">tick one or more · “only” selects just that one</span></div>
-<ul class="speeches" id="docList"></ul>
+<div class="tf-row"><span class="lbl">Range</span>
+  <button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><span class="yrs" id="years"></span></div>
 <div id="selSummary"></div>
+<details id="docPick"><summary>Choose documents <span class="muted" id="docCount"></span></summary>
+<p class="muted hint">Tick one or more · “only” selects just that one</p>
+<ul class="speeches" id="docList"></ul></details>
 </section>
+</div>
 <section class="card stats">
 <div class="stat"><b id="sDocs">–</b>documents selected</div>
 <div class="stat"><b id="sTotal">–</b>total words</div>
@@ -443,8 +521,9 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 <p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
 possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span class="only-fed">Fed transcripts: footnotes and editorial notes excluded.</span>
 <span class="only-ceo">CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded.</span>
-<span class="only-pol">Presidential transcripts (Daily Compilation of Presidential Documents): only the President's words; audience reactions, [bracketed] notes, other speakers and closing notes excluded.</span>
-<span class="only-rel">Vatican texts: English text as published by the Holy See; page headings, footnotes, scripture citations in parentheses, and summaries read by others excluded.</span>
+<span class="only-cab">Cabinet texts: remarks as prepared for delivery, prepared testimony, and the Secretary's own turns in hearing transcripts; cover pages, headings, other speakers and bracketed notes excluded.</span>
+<span class="only-cong">Congressional Record (daily edition): only the leader's own floor remarks; other members, presiding-officer and clerk text, material inserted into the Record, and procedural unanimous-consent requests excluded.</span>
+<span class="only-scotus">Supreme Court opinions (October Term 2025): only the Justice's own signed opinion (opinion of the Court, concurrence or dissent); syllabus, footnotes, headings and captions excluded.</span>
 Totals, ranks and counts are recomputed in your browser for the selected person and documents.
 Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span></p>
 <section class="card" id="about"><h2>About Mouth Math</h2>
@@ -454,27 +533,36 @@ publicly available texts by public figures, taken from each official source:</p>
 <li><strong>Fed Chair:</strong> speech and testimony transcripts published on
 <a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>.</li>
 <li><strong>CEOs:</strong> shareholder letters posted by each company on its own website (palantir.com, aboutamazon.com, berkshirehathaway.com).</li>
-<li><strong>U.S. President:</strong> official transcripts from the
-<a href="https://www.govinfo.gov/app/collection/cpd" target="_blank" rel="noopener">Daily Compilation of Presidential Documents</a>
-(U.S. Government Publishing Office, govinfo.gov), the official record of the President's remarks.</li>
-<li><strong>Pope:</strong> English texts published by the Holy See on <a href="https://www.vatican.va/" target="_blank" rel="noopener">vatican.va</a>
-(© Dicastery for Communication – Libreria Editrice Vaticana).</li>
+<li><strong>US Government</strong>, in three groups:
+<ul>
+<li><strong>Cabinet:</strong> remarks and testimony published by the
+<a href="https://home.treasury.gov/news/press-releases" target="_blank" rel="noopener">Treasury Department</a> and the
+<a href="https://www.state.gov/" target="_blank" rel="noopener">State Department</a>, and testimony posted by the Senate
+Appropriations and Armed Services Committees (Commerce and War/Defense secretaries).</li>
+<li><strong>Congress:</strong> floor remarks by the Republican and Democratic leaders of the House and Senate, from the
+<a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> (daily edition, govinfo.gov).</li>
+<li><strong>Supreme Court:</strong> signed opinions of all nine Justices from the October Term 2025, published on
+<a href="https://www.supremecourt.gov/opinions/slipopinion/25" target="_blank" rel="noopener">supremecourt.gov</a>.</li>
+</ul></li>
 </ul>
-<p><strong>Licensing approach.</strong> Works of the U.S. government (Fed and White House transcripts) are in the public
-domain, so every sentence is available on hover. Other texts (CEO letters, Vatican texts) are copyrighted by their
+<p><strong>Licensing approach.</strong> Works of the U.S. government, including texts by federal officials such as the
+Fed Chair, Cabinet secretaries, members of Congress and Supreme Court Justices, are not subject to copyright
+(<a href="https://www.law.cornell.edu/uscode/text/17/105" target="_blank" rel="noopener">17 U.S.C. §105</a>), so every
+sentence is available on hover. Other texts (CEO letters) are copyrighted by their
 publishers: for those we publish only word counts and short excerpts (at most about a quarter of each text, and at most
 10 sentences per word), each linked to the original, and never the full text.</p>
-<p><strong>Translations.</strong> Where a text was originally given in another language, we use the official English
-translation published by that government or institution. Counts reflect that published English text.</p>
 <p><strong>Neutrality.</strong> We present word counts without commentary. Nothing is edited or interpreted; footnotes,
 editorial notes and other speakers' words are left out, and every sentence shown links back to its source so you can
-check it yourself. Inclusion of a person does not imply endorsement, and this site is not affiliated with or endorsed by
+check it yourself. The same selection rules apply to everyone in a group (for example, the most recent
+qualifying floor remarks for each congressional leader of both parties, and the most recent signed opinions for every
+Justice). Inclusion of a person does not imply endorsement, and this site is not affiliated with or endorsed by
 any government, institution, company, or person listed.</p>
 <p><strong>How it works:</strong> words are lowercased and counted across the documents you select.
 “Hide common stopwords” removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
 <div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
 purposes only and is not financial, investment, or trading advice. It is not affiliated with or endorsed by the
-Federal Reserve, the White House, the Holy See, or by any company or person listed.</div>
+Federal Reserve, the White House, any federal department, Congress, the Supreme Court, or by any company
+or person listed.</div>
 </section>
 </main>
 <script id="data" type="application/json">__DATA__</script>
@@ -502,11 +590,18 @@ async function loadPerson(p){
 // ---- category / person picker ----
 function renderPicker(){
   $('cats').innerHTML=CATS.map(c=>`<button class="${P.category===c?'on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
-  $('persons').innerHTML='<span class="lbl">Person</span>'+PEOPLE.filter(p=>p.category===P.category).map(p=>
-    `<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}</button>`).join('');
+  const inCat=PEOPLE.filter(p=>p.category===P.category),groups=[...new Set(inCat.map(p=>p.group||''))];
+  const chip=p=>`<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}</button>`;
+  $('persons').classList.toggle('grouped',groups.length>1||!!groups[0]);
+  $('persons').innerHTML=groups.length>1||groups[0]?   // a category with subgroups (US Government: Cabinet / Congress / Supreme Court)
+    groups.map(g=>`<div class="pg" role="group" aria-label="${esc(g)}"><span class="lbl">${esc(g)}</span>${inCat.filter(p=>(p.group||'')===g).map(chip).join('')}</div>`).join(''):
+    '<span class="lbl">Person</span>'+inCat.map(chip).join('');
   $('personMeta').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun} from ${P.source}`;
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
   document.querySelectorAll('#persons button').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
+  ['#cats button.on','#persons button.on'].forEach(sel=>{const b=document.querySelector(sel),r=b&&b.parentElement;
+    if(r&&r.scrollWidth>r.clientWidth){const l=r.querySelector('.lbl'),pad=l&&getComputedStyle(l).position==='sticky'?l.offsetWidth+12:24;
+      r.scrollLeft=Math.max(0,b.offsetLeft-r.offsetLeft-pad)}});
 }
 async function setPerson(slug,docIds){
   hidePop();
@@ -514,7 +609,7 @@ async function setPerson(slug,docIds){
   P=p;V=p.vocab;VI=p.VI;DOCS=p.docs;YEARS=[...new Set(DOCS.map(d=>d.year))].sort().reverse();
   const ids=(docIds||[]).filter(i=>DOCS.some(d=>d.id===i));
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
-  ['fed','ceo','pol','rel'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
+  ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('personTitle').textContent=`Every word ${P.display} said, ranked`;
   document.title=P.slug===DEFAULT?'Mouth Math — every word they said, ranked':`Mouth Math — every word ${P.display} said, ranked`;
@@ -524,14 +619,16 @@ async function setPerson(slug,docIds){
 
 // ---- timeframe UI ----
 function buildTimeframe(){
-  $('docList').innerHTML=DOCS.map(d=>`<li data-id="${d.id}"><input type="checkbox" id="cb_${d.id}" data-id="${d.id}">
- <label for="cb_${d.id}"><span class="date">${fmtDate(d.date)}</span> <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>
- <span class="muted">(${d.type}, ${d.words.toLocaleString()} words)${[d.location,d.note].filter(Boolean).map(esc).join(' · ').replace(/^(?=.)/,' — ')}</span></label>
- <a class="only" data-only="${d.id}">only</a></li>`).join('');
-  $('years').innerHTML='<span class="lbl">By year</span>'+YEARS.map(y=>{const n=DOCS.filter(d=>d.year===y).length;
+  const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return 'source'}};
+  $('docList').innerHTML=DOCS.map(d=>`<li data-id="${d.id}"><input type="checkbox" id="cb_${d.id}" data-id="${d.id}" aria-describedby="dm_${d.id}">
+ <div><label for="cb_${d.id}" class="dl1"><span class="date">${fmtDate(d.date)}</span><span class="dt">${esc(d.title)}</span><span class="dw">${d.words.toLocaleString()} words</span></label>
+ <div class="dl2 muted" id="dm_${d.id}"><span>${esc(d.type[0].toUpperCase()+d.type.slice(1))}</span>${[d.location,d.note].filter(Boolean).map(x=>`<span>${esc(x)}</span>`).join('')}<a href="${esc(d.url)}" target="_blank" rel="noopener" title="Open the original">${esc(host(d.url))}&nbsp;↗</a></div></div>
+ <button type="button" class="only" data-only="${d.id}" aria-label="Select only ${esc(d.title)}">only</button></li>`).join('');
+  $('docCount').textContent=`(${DOCS.length} ${unitOf(DOCS.length)})`;
+  $('years').innerHTML=YEARS.map(y=>{const n=DOCS.filter(d=>d.year===y).length;
     return `<label class="chip" id="yc_${y}"><input type="checkbox" data-year="${y}"> ${y} <span class="muted">(${n})</span></label>`}).join('');
   document.querySelectorAll('#docList input').forEach(cb=>cb.onchange=()=>{cb.checked?sel.add(cb.dataset.id):sel.delete(cb.dataset.id);update()});
-  document.querySelectorAll('#docList a.only').forEach(a=>a.onclick=()=>{sel=new Set([a.dataset.only]);update()});
+  document.querySelectorAll('#docList .only').forEach(a=>a.onclick=()=>{sel=new Set([a.dataset.only]);update()});
   document.querySelectorAll('#years input').forEach(cb=>cb.onchange=()=>{
     DOCS.filter(d=>d.year===cb.dataset.year).forEach(d=>cb.checked?sel.add(d.id):sel.delete(d.id));update()});
 }
@@ -679,7 +776,7 @@ pop.addEventListener('click',e=>{e.stopPropagation(); // re-render detaches e.ta
 document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePop()});
 document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.target)&&!e.target.closest('[data-w]'))hidePop()});
 
-// ---- Visual mode: word cloud (vanilla JS; spiral placement + measureText box collisions) ----
+// ---- WordViz mode (hash value mode=visual): word cloud (vanilla JS; spiral placement + measureText box collisions) ----
 let VIEW='standard',stopStd=null,cloudW=0,cloudInfo={placed:0,skipped:0,ms:0};
 const PAL=['#3f6250','#2f4f3b','#4f6656','#5e7f63','#6a5f4e','#7d6646','#56705c'];
 const hcode=s=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
@@ -737,8 +834,8 @@ function drawCloud(list){
 }
 function setView(v,user){
   v=v==='visual'?'visual':'standard';
-  document.querySelectorAll('#views button').forEach(b=>{const on=b.dataset.view===v;b.classList.toggle('on',on);b.setAttribute('aria-selected',on)});
-  $('viewHint').textContent=v==='visual'?'Word cloud: bigger words were used more often.':'Ranked table of every word.';
+  document.querySelectorAll('#views button').forEach(b=>{const on=b.dataset.view===v;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
+  $('viewHint').textContent=v==='visual'?'WordViz: bigger words were used more often.':'Ranked table of every word.';
   if(v===VIEW)return;
   hidePop();VIEW=v;document.body.classList.toggle('view-visual',v==='visual');
   // Visual turns "hide stopwords" on (so "the" doesn't dominate); Standard restores the previous setting

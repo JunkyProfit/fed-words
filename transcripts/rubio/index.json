@@ -1,0 +1,67 @@
+[
+ {
+  "id": "foundry-2026",
+  "file": "foundry-2026.txt",
+  "person": "Marco Rubio",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/09/secretary-of-state-marco-rubio-at-the-trump-administrations-foundry-school-launch/",
+  "type": "remarks",
+  "title": "Secretary of State Marco Rubio at the Trump Administration’s Foundry School Launch",
+  "date": "2026-09-03",
+  "location": "Washington, D.C.",
+  "source": "state.gov",
+  "note": "U.S. Department of State transcript; only the Secretary's own words",
+  "fetched": "2026-10-02T21:29:43"
+ },
+ {
+  "id": "hfac-fy27",
+  "file": "hfac-fy27.txt",
+  "person": "Marco Rubio",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/06/secretary-of-state-marco-rubio-before-the-house-foreign-affairs-committee-on-the-fy27-department-of-state-budget-request/",
+  "type": "testimony",
+  "title": "Secretary of State Marco Rubio Before the House Foreign Affairs Committee on the FY27 Department of State Budget Request",
+  "date": "2026-06-03",
+  "location": "",
+  "source": "state.gov",
+  "note": "U.S. Department of State transcript; only the Secretary's own words",
+  "fetched": "2026-10-02T21:29:43"
+ },
+ {
+  "id": "sfrc-fy27",
+  "file": "sfrc-fy27.txt",
+  "person": "Marco Rubio",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/06/secretary-of-state-marco-rubio-before-the-senate-foreign-relations-committee-on-the-fy27-department-of-state-budget-request/",
+  "type": "testimony",
+  "title": "Secretary of State Marco Rubio Before the Senate Foreign Relations Committee on the FY27 Department of State Budget Request",
+  "date": "2026-06-02",
+  "location": "",
+  "source": "state.gov",
+  "note": "U.S. Department of State transcript; only the Secretary's own words",
+  "fetched": "2026-10-02T21:29:43"
+ },
+ {
+  "id": "caricom-2026",
+  "file": "caricom-2026.txt",
+  "person": "Marco Rubio",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/02/secretary-of-state-marco-rubio-at-the-50th-regular-meeting-of-the-conference-of-caricom-heads-of-government/",
+  "type": "address",
+  "title": "Secretary of State Marco Rubio at the 50th Regular Meeting of the Conference of CARICOM Heads of Government",
+  "date": "2026-02-25",
+  "location": "Basseterre, St. Kitts and Nevis",
+  "source": "state.gov",
+  "note": "U.S. Department of State transcript; only the Secretary's own words",
+  "fetched": "2026-10-02T21:29:43"
+ },
+ {
+  "id": "munich-2026",
+  "file": "munich-2026.txt",
+  "person": "Marco Rubio",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/02/secretary-of-state-marco-rubio-at-the-munich-security-conference/",
+  "type": "speech",
+  "title": "Secretary of State Marco Rubio at the Munich Security Conference",
+  "date": "2026-02-14",
+  "location": "Munich, Germany",
+  "source": "state.gov",
+  "note": "U.S. Department of State transcript; only the Secretary's own words",
+  "fetched": "2026-10-02T21:29:43"
+ }
+]

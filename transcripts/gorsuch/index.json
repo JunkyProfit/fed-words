@@ -1,0 +1,41 @@
+[
+ {
+  "id": "24-43-concurrence",
+  "file": "24-43-concurrence.txt",
+  "person": "Neil M. Gorsuch",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/24-43_2b35.pdf",
+  "type": "concurrence",
+  "title": "West Virginia v. B. P. J. (concurrence)",
+  "date": "2026-06-30",
+  "location": "No. 24-43",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-365-dissent",
+  "file": "25-365-dissent.txt",
+  "person": "Neil M. Gorsuch",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_new_5if6.pdf",
+  "type": "dissent",
+  "title": "Trump v. Barbara (dissent)",
+  "date": "2026-06-30",
+  "location": "No. 25-365",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-112-concurrence",
+  "file": "25-112-concurrence.txt",
+  "person": "Neil M. Gorsuch",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
+  "type": "concurrence",
+  "title": "Chatrie v. United States (concurrence)",
+  "date": "2026-06-29",
+  "location": "No. 25-112",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]

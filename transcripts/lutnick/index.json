@@ -1,0 +1,41 @@
+[
+ {
+  "id": "sac-fy27",
+  "file": "sac-fy27.txt",
+  "person": "Howard Lutnick",
+  "url": "https://www.appropriations.senate.gov/download/lutnick-testimony-fy27",
+  "type": "testimony",
+  "title": "Prepared testimony: Senate Appropriations (CJS) hearing on the FY2027 Commerce budget request",
+  "date": "2026-04-22",
+  "location": "",
+  "source": "appropriations.senate.gov",
+  "note": "Remarks as prepared, as posted by the committee",
+  "fetched": "2026-10-02T21:36:15"
+ },
+ {
+  "id": "sac-broadband",
+  "file": "sac-broadband.txt",
+  "person": "Howard Lutnick",
+  "url": "https://www.appropriations.senate.gov/download/secretary-howard-lutnick-testimony-21026",
+  "type": "testimony",
+  "title": "Prepared testimony: Senate Appropriations (CJS) hearing on broadband deployment funding",
+  "date": "2026-02-10",
+  "location": "",
+  "source": "appropriations.senate.gov",
+  "note": "Remarks as prepared, as posted by the committee",
+  "fetched": "2026-10-02T21:36:15"
+ },
+ {
+  "id": "sac-fy26",
+  "file": "sac-fy26.txt",
+  "person": "Howard Lutnick",
+  "url": "https://www.appropriations.senate.gov/download/secretary-howard-lutnick-testimony",
+  "type": "testimony",
+  "title": "Prepared testimony: Senate Appropriations (CJS) hearing on the FY2026 Commerce budget request",
+  "date": "2025-06-04",
+  "location": "",
+  "source": "appropriations.senate.gov",
+  "note": "Remarks as prepared, as posted by the committee",
+  "fetched": "2026-10-02T21:36:15"
+ }
+]

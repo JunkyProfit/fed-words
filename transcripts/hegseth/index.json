@@ -1,0 +1,41 @@
+[
+ {
+  "id": "sasc-fy27",
+  "file": "sasc-fy27.txt",
+  "person": "Pete Hegseth",
+  "url": "https://www.armed-services.senate.gov/download/testimony/04/29/2026/hegseth-testimony",
+  "type": "testimony",
+  "title": "Statement before the Senate Armed Services Committee on the FY2027 Department of War budget request",
+  "date": "2026-04-30",
+  "location": "",
+  "source": "armed-services.senate.gov",
+  "note": "Prepared statement (record version), as posted by the committee",
+  "fetched": "2026-10-02T21:36:15"
+ },
+ {
+  "id": "sasc-fy27-hearing",
+  "file": "sasc-fy27-hearing.txt",
+  "person": "Pete Hegseth",
+  "url": "https://www.armed-services.senate.gov/imo/media/doc/04-30-2026_transcript-full.pdf",
+  "type": "hearing remarks",
+  "title": "Senate Armed Services Committee hearing on the FY2027 budget (his spoken remarks)",
+  "date": "2026-04-30",
+  "location": "",
+  "source": "armed-services.senate.gov",
+  "note": "Official hearing transcript; only the Secretary's own spoken turns",
+  "fetched": "2026-10-02T21:36:15"
+ },
+ {
+  "id": "sac-fy26",
+  "file": "sac-fy26.txt",
+  "person": "Pete Hegseth",
+  "url": "https://www.appropriations.senate.gov/download/secretary-peter-b-hegseth-testimony",
+  "type": "testimony",
+  "title": "Statement before Senate Appropriations (Defense) on the FY2026 budget request",
+  "date": "2025-06-11",
+  "location": "",
+  "source": "appropriations.senate.gov",
+  "note": "Prepared statement (record version), as posted by the committee",
+  "fetched": "2026-10-02T21:36:15"
+ }
+]

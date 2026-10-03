@@ -1,0 +1,41 @@
+[
+ {
+  "id": "24-43-dissent",
+  "file": "24-43-dissent.txt",
+  "person": "Sonia Sotomayor",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/24-43_2b35.pdf",
+  "type": "dissent",
+  "title": "West Virginia v. B. P. J. (dissent)",
+  "date": "2026-06-30",
+  "location": "No. 24-43",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-332-dissent",
+  "file": "25-332-dissent.txt",
+  "person": "Sonia Sotomayor",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r62_g314.pdf",
+  "type": "dissent",
+  "title": "Trump v. Slaughter (dissent)",
+  "date": "2026-06-29",
+  "location": "No. 25-332",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-5-dissent",
+  "file": "25-5-dissent.txt",
+  "person": "Sonia Sotomayor",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r59_kjfl.pdf",
+  "type": "dissent",
+  "title": "Mullin v. Al Otro Lado (dissent)",
+  "date": "2026-06-25",
+  "location": "No. 25-5",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]

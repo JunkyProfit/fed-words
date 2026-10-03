@@ -1,0 +1,41 @@
+[
+ {
+  "id": "24-43-court",
+  "file": "24-43-court.txt",
+  "person": "Brett M. Kavanaugh",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/24-43_2b35.pdf",
+  "type": "opinion of the Court",
+  "title": "West Virginia v. B. P. J. (opinion of the Court)",
+  "date": "2026-06-30",
+  "location": "No. 24-43",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "24-621-court",
+  "file": "24-621-court.txt",
+  "person": "Brett M. Kavanaugh",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/24-621_h315.pdf",
+  "type": "opinion of the Court",
+  "title": "National Republican Senatorial Committee v. Federal Election Comm’n (opinion of the Court)",
+  "date": "2026-06-30",
+  "location": "No. 24-621",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-365-dissent",
+  "file": "25-365-dissent.txt",
+  "person": "Brett M. Kavanaugh",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_new_5if6.pdf",
+  "type": "dissent",
+  "title": "Trump v. Barbara (dissent)",
+  "date": "2026-06-30",
+  "location": "No. 25-365",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]

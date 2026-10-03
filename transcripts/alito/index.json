@@ -1,0 +1,41 @@
+[
+ {
+  "id": "25-365-dissent",
+  "file": "25-365-dissent.txt",
+  "person": "Samuel A. Alito, Jr.",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_new_5if6.pdf",
+  "type": "dissent",
+  "title": "Trump v. Barbara (dissent)",
+  "date": "2026-06-30",
+  "location": "No. 25-365",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "24-1260-dissent",
+  "file": "24-1260-dissent.txt",
+  "person": "Samuel A. Alito, Jr.",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r65_g314.pdf",
+  "type": "dissent",
+  "title": "Watson v. Republican National Committee (dissent)",
+  "date": "2026-06-29",
+  "location": "No. 24-1260",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-112-dissent",
+  "file": "25-112-dissent.txt",
+  "person": "Samuel A. Alito, Jr.",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
+  "type": "dissent",
+  "title": "Chatrie v. United States (dissent)",
+  "date": "2026-06-29",
+  "location": "No. 25-112",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]

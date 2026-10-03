@@ -1,0 +1,41 @@
+[
+ {
+  "id": "24-43-dissent",
+  "file": "24-43-dissent.txt",
+  "person": "Ketanji Brown Jackson",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/24-43_2b35.pdf",
+  "type": "dissent",
+  "title": "West Virginia v. B. P. J. (dissent)",
+  "date": "2026-06-30",
+  "location": "No. 24-43",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-365-concurrence",
+  "file": "25-365-concurrence.txt",
+  "person": "Ketanji Brown Jackson",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_new_5if6.pdf",
+  "type": "concurrence",
+  "title": "Trump v. Barbara (concurrence)",
+  "date": "2026-06-30",
+  "location": "No. 25-365",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-112-concurrence",
+  "file": "25-112-concurrence.txt",
+  "person": "Ketanji Brown Jackson",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
+  "type": "concurrence",
+  "title": "Chatrie v. United States (concurrence)",
+  "date": "2026-06-29",
+  "location": "No. 25-112",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]

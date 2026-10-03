@@ -1,0 +1,115 @@
+Executive Order No. 14160 establishes new exceptions to birthright citizenship for children born to foreign citizens unlawfully or temporarily in the country. 90 Fed. Reg. 8449 (2025). The Court today holds that the Order violates the Fourteenth Amendment to the Constitution. I respectfully disagree with the Court’s constitutional holding. In my view, the Executive Order does not violate the Fourteenth Amendment.
+
+But the Order does contravene a federal statute, 8 U.S.C. §1401(a). Congress could—consistent with the Fourteenth Amendment—amend §1401(a) or otherwise enact new legislation establishing exceptions to birthright citizenship for children born to foreign citizens unlawfully or temporarily in the country. But Congress has not yet done so.
+
+I
+
+I first consider plaintiffs’ statutory argument. The statutory analysis is straightforward, and the Court could have (and in my respectful view, should have) decided the case on that narrow ground.
+
+Initially enacted in 1940, §1401(a) of Title 8 provides that persons “born in the United States, and subject to the jurisdiction thereof ” “shall be nationals and citizens of the United States at birth.” Nationality Act of 1940, §201(a), 54 Stat. 1138; Immigration and Nationality Act of 1952, §301(a), 66 Stat. 235. That statutory language mirrors the text of §1 of the Fourteenth Amendment, which was ratified in 1868 and similarly provides: “All persons born . . . in the United States, and subject to the jurisdiction thereof, are citizens of the United States.”
+
+This Court’s 1898 Wong Kim Ark decision interpreted the “subject to the jurisdiction” language of the Fourteenth Amendment. United States v. Wong Kim Ark, 169 U.S. 649. That decision adopted a general rule of birthright citizenship for those born in the United States—with four disparate exceptions for “children of foreign sovereigns or their ministers, or born on foreign public ships, or of enemies within and during a hostile occupation of part of our territory” and “children of members of the Indian tribes.” Id., at 693; see also Elk v. Wilkins, 112 U.S. 94, 102 (1884). Importantly, the Wong Kim Ark decision treated those four exceptions as a closed set for constitutional purposes, meaning that Congress could not create other exceptions to birthright citizenship, although Congress could eliminate one or more of those four exceptions. See 169 U.S., at 682, 693.
+
+In 1940 and 1952, Congress employed the exact language from
+
+the
+
+Fourteenth
+
+Amendment—“subject
+
+to
+
+the jurisdiction thereof ”—in comprehensive new immigration and naturalization laws that provided for birthright citizenship. 54 Stat. 1138; 66 Stat. 235. The relevant provisions are now codified at 8 U.S.C. §1401(a).
+
+Because §1401(a) uses the same language as the Fourteenth Amendment, the statute has long been interpreted to adopt Wong Kim Ark’s general rule of birthright citizenship, subject to the exceptions identified in that case. If Congress in 1940 or 1952 wanted to create new exceptions—and thereby test Wong Kim Ark’s statement treating the four exceptions as a closed set— Congress presumably would not have repeated the precise language that this Court had interpreted in Wong Kim Ark to contain only those four exceptions.
+
+Stated more doctrinally, Congress “must be considered to have adopted also the construction given by this Court to such language, and made it a part of the enactment.” Shapiro v. United States, 335 U.S. 1, 16 (1948) (quotation marks omitted); see George v. McDonough, 596 U.S. 740, 752 (2022); Sekhar v. United States, 570 U.S. 729, 733 (2013); Director, Office of Workers’ Compensation Programs v. Greenwich Collieries, 512 U.S. 267, 275 (1994); United States v. Kozminski, 487 U.S. 931, 945 (1988); Lorillard v. Pons, 434 U.S. 575, 580– 581 (1978).
+
+Importantly, moreover, from the time of those statutory enactments in 1940 and 1952 all the way through 2025, the Executive Branch consistently interpreted §1401(a) to encompass only those Wong Kim Ark exceptions to birthright citizenship. (The Government here does not contest that historical point.) That long and consistent Executive Branch interpretation further indicates that §1401(a) incorporates only those exceptions. See Loper Bright Enterprises v. Raimondo, 603 U.S. 369, 394 (2024) (“interpretations issued contemporaneously with the statute at issue, and which have remained consistent over time, may be especially useful in determining the statute’s meaning”).
+
+In 2025, however, Executive Order No. 14160 sought to add two new exceptions to birthright citizenship for children born to foreign citizens who are either illegally or temporarily in the United States.
+
+In doing so, the Executive Order goes beyond what §1401(a) authorizes. For the Executive Order to be lawful, therefore, Congress would need to amend §1401(a) or otherwise enact new legislation to encompass those two new exceptions. As of now, Congress has not done so. Over the last 30 years, Congress has considered numerous proposed bills to alter birthright citizenship, but Congress has never actually passed such legislation. See, e.g., Birthright Citizenship Act of 2021, H.R. 140, 117th Cong., 1st Sess.; Citizenship Reform Act of 1997, H.R. 7, 105th Cong., 1st Sess.
+
+Unless and until Congress enacts such legislation, the Executive Order contravenes the federal statute, §1401(a).
+
+II
+
+I next address the Fourteenth Amendment issue. As revealed by the Court’s opinion with its detailed account of history and precedent, and by the weighty and thoughtful dissents, the constitutional issue is far more complicated than the statutory issue. After reading those scholarly opinions, one thing seems evident: The constitutional issue is not straightforward, much as we might want it to be.
+
+That is another reason why, in my respectful view, the Court should have decided the case on the narrow and straightforward statutory ground. In any event, because the Court addresses the Constitution, and because I respectfully disagree with its analysis of that highly consequential issue, I too will briefly address it.
+
+Ratified in 1868, the Citizenship Clause of §1 of the Fourteenth Amendment provides:
+
+“All persons born or naturalized in the United States, and subject to the jurisdiction thereof, are citizens of the United States and of the State wherein they reside.”
+
+In 1898, as noted above, Wong Kim Ark interpreted the Fourteenth Amendment’s “subject to the jurisdiction” language to provide a general right of birthright citizenship with four disparate exceptions—for “children of foreign sovereigns or their ministers, or born on foreign public ships, or of enemies within and during a hostile occupation of part of our territory” and “children of members of the Indian tribes.” 169 U.S. 649, 693. Importantly, Wong Kim Ark indicated that the four exceptions were a closed set, id., at 682, 693—meaning that there can be no additional exceptions recognized based on subsequent circumstances or developments. And the decision has consistently been read that way, including by plaintiffs and the Court today. But Wong Kim Ark’s treatment of the exceptions as a “closed set” is incorrect, in my view. Considering the four exceptions as a permanently frozen or closed set as of the Fourteenth Amendment’s ratification in 1868—such that there can be no subsequent exceptions recognized based on new developments after 1868—is inconsistent with the Court’s
+
+longstanding
+
+approach
+
+to
+
+constitutional interpretation in a variety of areas.
+
+To spell that out: The Constitution is an enduring document, and its principles were designed to, and do, apply to modern conditions and developments. The original constitutional
+
+principles
+
+do
+
+not
+
+change
+
+absent
+
+constitutional amendment, but the relevant principles— both the rules and exceptions alike—must be faithfully applied not only to circumstances as they existed in 1787, 1791, and 1868, for example, but also to modern situations that were unknown or unanticipated by the Constitution’s Framers.
+
+Stated otherwise, the “meaning of rules is constant. Only their application to new situations presents a novelty.” A. Scalia & B. Garner, Reading Law 86 (2012); see also Heller v. District of Columbia, 670 F. 3d 1244, 1275 (CADC 2011) (Kavanaugh, J., dissenting); A. Scalia, A Matter of Interpretation 45 (1997) (courts apply “original meaning” to “new and unforeseen phenomena”); Tr. of Oral Arg. 14–16, 115, 121–124, 127–131 (discussing those interpretive principles).
+
+In Fourth Amendment cases, for example, courts apply the reasonableness requirement to searches of cars even though cars did not exist in 1791 or 1868. See, e.g., Carroll v. United States, 267 U.S. 132 (1925). In First Amendment cases, courts apply free speech protections to the Internet notwithstanding that the Internet did not exist in 1791 or 1868. See, e.g., Moody v. NetChoice LLC, 603 U.S. 707, 733–734 (2024). In Second Amendment cases, this Court applies the Amendment to semi-automatic handguns even though those did not exist in 1791 or 1868. Cf. District of Columbia v. Heller, 554 U.S. 570, 628–629 (2008). From the other direction, moreover, this Court recognizes constitutional exceptions based on new circumstances when the new exception is relevantly similar to those exceptions that existed in 1791 or 1868. This Court’s constitutional precedents do not treat the 1791 or 1868 exceptions as a closed set “trapped in amber.” United States v. Rahimi, 602 U.S. 680, 691 (2024).
+
+So ordinarily, both the relevant constitutional rule and the constitutional exceptions (as of 1787, 1791, or 1868, as the case may be) apply to new circumstances. As the Court has said before, “[d]iscerning and developing the law in this way is a commonplace task for any lawyer or judge.” Id., at 692 (quotation marks omitted). Indeed, at oral argument in this case, many Members of the Court explored that critical interpretive point at some length with counsel. See Tr. of Oral Arg. 14–16, 115, 121–124, 127–131.
+
+The Citizenship Clause of §1 of the Fourteenth Amendment should be no different. The Court’s 1898 decision in Wong Kim Ark recognized four exceptions that existed as of the Fourteenth Amendment’s ratification in 1868.
+
+Therefore, under basic tenets of constitutional interpretation, other exceptions can be recognized when the new exceptions (i) are based on subsequent developments or circumstances that are new, i.e., largely unknown or unanticipated
+
+by
+
+the
+
+Framers
+
+of
+
+the
+
+Fourteenth Amendment, and (ii) are relevantly similar to the four previously recognized Wong Kim Ark exceptions.
+
+See generally, e.g., United States v. Hemani, 608 U.S. ___, ___ (2026) (slip op., at 7); Rahimi, 602 U.S., at 692; Moody, 603 U.S., at 733–734; Bucklew v. Precythe, 587 U.S. 119, 130– 134 (2019); United States v. Jones, 565 U.S. 400, 404–405 (2012); Brown v. Entertainment Merchants Assn., 564 U.S. 786, 790 (2011); Kyllo v. United States, 533 U.S. 27, 33–34 (2001).
+
+Here,
+
+that
+
+interpretive
+
+principle
+
+would
+
+support additional exceptions for children born to foreign citizens unlawfully or temporarily in the country.
+
+First, significant illegal immigration into the United States is a new circumstance that was largely unknown as of 1868 and that the Framers of the Fourteenth Amendment could not have fully anticipated. And the Framers likely would not have anticipated (and presumably would not have intended) the odd result of granting a substantial birthright citizenship benefit to (i) those foreign citizens who violate U.S. immigration law and illegally enter or overstay and then have children in the United States over (ii) those foreign citizens who follow U.S. immigration law and have children in their home countries while seeking to lawfully immigrate to the United States. Nor presumably would they have wanted to grant constitutional birthright citizenship to children of foreign citizens unlawfully in the country while simultaneously denying constitutional birthright citizenship to children of tribal American Indians. So too, the issue of temporary visitors who give birth in the United States presents a new and different circumstance than in 1868 given the significant changes in immigration laws and travel.
+
+And second, those two categories of foreign citizens— namely, those unlawfully or temporarily in the country— are relevantly similar to the four categories of persons recognized as exceptions in Wong Kim Ark.
+
+The only apparent principle unifying the four disparate exceptions listed by the Court in Wong Kim Ark—especially in light of the exception for tribal American Indians—is that the parents in all of those varied circumstances were not U.S. citizens and were citizens of other nations, whether tribal or foreign. Cf. post, at 3–22 (ALITO, J., dissenting). An exception for those born in the United States to foreign parents unlawfully or temporarily in the country is consistent with that principle and therefore with the Fourteenth Amendment.
+
+All of that said, as noted above, Congress in 1940 and 1952 enacted a statute, §1401(a), that at the time and since has always been understood to authorize only the four Wong Kim Ark exceptions. If Congress amends §1401(a) or otherwise enacts a statute creating new exceptions along the lines of the Executive Order for children born to foreign citizens unlawfully or temporarily in the country, such a statute, as I see it, would pass constitutional muster.
+
+For those reasons, to reiterate, the Executive Order does not violate the Fourteenth Amendment. But the Order does contravene 8 U.S.C. §1401(a). Consistent with the Fourteenth Amendment, Congress could amend §1401(a) or otherwise enact new legislation establishing exceptions to birthright citizenship for children born to foreign citizens unlawfully or temporarily in the country. But Congress has not yet done so.

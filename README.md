@@ -3,7 +3,9 @@
 *(Formerly "Said Count" and "Fed Words". The repo and URL stay `fed-words` for now: https://junkyprofit.github.io/fed-words/.)*
 
 A static website that lists every word a public figure said in their official
-documents, ranked from most to least frequent. Choose a **category**, then a **person**:
+documents, ranked from most to least frequent. Choose a **category** (Fed Chair, CEOs, US Government),
+then a **person**. Inside US Government, people are listed in labelled groups (Cabinet, Congress,
+Supreme Court; the `group` field in `people.json`):
 
 | Category | Person | Documents | Source |
 |---|---|---|---|
@@ -11,21 +13,34 @@ documents, ranked from most to least frequent. Choose a **category**, then a **p
 | CEOs | **Alex Karp** (Palantir) | 4 most recent quarterly letters to shareholders | palantir.com |
 | CEOs | **Andy Jassy** (Amazon) | 2025 and 2024 annual shareholder letters | aboutamazon.com |
 | CEOs | **Greg Abel** (Berkshire Hathaway) | his 2025 letter (his first as CEO) | berkshirehathaway.com |
-| Politics | **President Donald J. Trump** | 5 major addresses, Feb–Jul 2026 (full text, President's lines only) | govinfo.gov (Daily Compilation of Presidential Documents) |
-| Religious leaders | **Pope Leo XIV** | 5 texts from his Sep 2026 journey to France (homilies, addresses, general audience) | vatican.va |
+| US Government › Cabinet | **Scott Bessent** (Treasury) | 5 speeches, Feb–Aug 2026 (as prepared for delivery) | home.treasury.gov |
+| US Government › Cabinet | **Marco Rubio** (State) | 5 transcripts, Feb–Sep 2026 (his turns only) | state.gov |
+| US Government › Cabinet | **Howard Lutnick** (Commerce) | 3 prepared testimony statements, 2025–2026 | appropriations.senate.gov |
+| US Government › Cabinet | **Pete Hegseth** (War/Defense) | 2 written statements + his spoken turns in the Apr 30, 2026 SASC hearing | armed-services.senate.gov, appropriations.senate.gov |
+| US Government › Congress | **Mike Johnson** (Speaker), **Hakeem Jeffries** (House Democratic Leader), **John Thune** (Senate Majority Leader), **Charles E. Schumer** (Senate Democratic Leader) | up to 5 most recent floor speeches each in 2026 (his own remarks only) | Congressional Record via govinfo.gov |
+| US Government › Supreme Court | **all nine Justices** | up to 3 most recent signed opinions each, October Term 2025 (opinion of the Court, concurrence or dissent) | supremecourt.gov |
+
+All federal texts are U.S. government works, not subject to copyright (17 U.S.C. §105), so they
+are embedded in full ("Show all", source links). commerce.gov, war.gov, defense.gov and congress.gov
+block the build machine, so Commerce/War testimony comes from the Senate committees' own pages and
+floor remarks from govinfo.gov.
 
 The page header is site-wide ("Every word they said, ranked"), not tied to the default person.
 The selected person's label pill, role, document count and source appear in the Who card, and
 "Every word <person> said, ranked" heads the results. Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
 `doc_noun1`, `unit`/`unit_pl` and an optional popover `credit` line in `people.json`).
 
-Open `index.html` in a browser. It's one self-contained file (inline CSS/JS, no
-external dependencies) with a filter box (plain text or regex), a
+Open `index.html` in a browser (serve the folder over HTTP: with this many people the page is
+over 1.5 MB, so `build.py` keeps the default person inline and writes the others to
+`data/<person>.json`, loaded on demand). No external dependencies; it has with a filter box (plain text or regex), a
 "hide common stopwords" toggle (off by default, so every word is listed), and
 sortable Rank / Word / Count columns. People and their metadata are listed in
 `people.json`.
 
-**Timeframe selector:** check one or more speeches, use "only" to pick a single
+**Timeframe selector:** the Range row (All / None / per-year chips) and a selection summary are
+always visible; the document list sits behind a **Choose documents** expander (closed by default).
+Each document shows its date, title and word count on one line, and its type, location/note and
+source link on a second line. Check one or more documents, use "only" to pick a single
 one, tick a year to add or remove all of that year's speeches, or use All / None.
 Counts, ranks, totals, the stopword toggle, and the filter all recompute in the
 browser for whatever is selected. Per-transcript counts are embedded in
@@ -44,11 +59,14 @@ has a **source ↗** link, a text-fragment URL (`…htm#:~:text=start,end`) that
 to and highlights that sentence on federalreserve.gov in Chrome, Edge, and Safari.
 The speech title link is a plain fallback for other browsers.
 
-**Visual mode (word cloud):** the **View: Standard | Visual** toggle at the top switches
+**WordViz mode (word cloud):** two thumbnail cards at the top (**Standard**, a sketched page, and
+**WordViz**, a framed mini cloud; buttons with `aria-pressed`) switch
 between the ranked table and a word cloud for the same person, timeframe, filter, and
 stopword setting. Font size scales with the square root of the count, from 12px to 72px
 (the largest size is smaller on narrow screens). "Show top 50 / 150 / 300" sets how many
-words are drawn; the default is 150. Switching to Visual turns on "Hide common stopwords"
+words are drawn; the default is 150. On wide screens (900px and up) WordViz puts Who and Timeframe in a
+left sidebar with the cloud beside them; on narrow screens the cloud comes right after the compact
+Who/Timeframe cards (stats and filter below it). Switching to WordViz turns on "Hide common stopwords"
 so "the" doesn't dominate. You can turn it off again, and going back to Standard restores
 your earlier setting. Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it. The layout is plain JavaScript
@@ -60,29 +78,31 @@ resize). The view is kept in the URL (`#mode=visual`, plus `&n=50|300` when not 
 | Source | Status | Treatment |
 |---|---|---|
 | federalreserve.gov (Fed Chair) | U.S. government work, public domain | full sentences embedded, "Show all" |
-| govinfo.gov DCPD (U.S. President) | U.S. government work, public domain | full sentences embedded, "Show all"; credit line in popover |
+| treasury.gov, state.gov, Senate committee sites, govinfo.gov CREC, supremecourt.gov | U.S. government works (17 U.S.C. §105) | full sentences embedded, "Show all"; credit line in popover |
 | company sites (CEO letters) | copyrighted | derived data only (below) |
-| vatican.va (Pope) | © Dicastery for Communication – Libreria Editrice Vaticana | derived data only, same caps as CEO letters; credit line in popover |
 
-**Why govinfo instead of whitehouse.gov:** in 2026 whitehouse.gov publishes only short
-staff-selected quotes for most remarks (the only full transcript there is the January 2025
-Inaugural Address). The Daily Compilation of Presidential Documents (GPO) is the official
-U.S. government record of the President's remarks, so it is used instead. DCPD lags by a few
-weeks (the September 22, 2026 UN address wasn't in it yet when this was built). Only the
-President's lines are kept: GPO sets speaker labels in italics, and other speakers' turns,
-audience lines, `[bracketed]` notes and GPO subheadings are removed.
-
-**Vatican texts** are the English versions published by the Holy See. Page headings, footnote
-markers, scripture references in parentheses and the general audience's summaries read by others
-(after the second rule on the page) are removed. Embedded share of each text's sentences:
-29.5–34.1% (under the 50% hard stop).
+**How the federal texts are cleaned** (`fetch_officials.py`):
+- Treasury/State pages: only the official's own words (State transcripts keep only "SECRETARY RUBIO:" turns);
+  press-release leads, headings and tags are removed. A speech given through an interpreter (Peru) is skipped.
+- Committee PDFs/DOCX: cover pages, running headers, page numbers and headings are removed. Hegseth's FY27
+  Senate Appropriations statement was 99% identical to his SASC statement, so only one is used; from the SASC
+  hearing transcript only "Secretary Hegseth:" turns are kept.
+- Congressional Record: only paragraphs under the leader's own label ("Mr. THUNE." etc.); other members,
+  presiding-officer/clerk lines, material inserted into the Record (indented) and procedural
+  unanimous-consent granules are dropped; at most one speech per day, minimum 250 words. Speaker Johnson
+  rarely speaks on the floor, so he has 3.
+- Supreme Court opinions: page heads attribute each page; each opinion starts at "Justice X delivered the
+  opinion of the Court" / "Justice X, … dissenting." Syllabus, footnotes (smaller type), captions and headings
+  are removed; per curiam opinions are not used. Preliminary prints lose the "i"/"l" of fi/fl ligatures, so
+  those glyphs are detected by width with PyMuPDF and repaired; spaced initialisms ("U. S.") are written
+  "U.S." like other sources.
 
 **Not included (yet):** a "World leaders" category was planned (Vladimir Putin via en.kremlin.ru,
 Benjamin Netanyahu via gov.il, Ayatollah Ali Khamenei via english.khamenei.ir), but none of those
 official sites could be reached from the build machine (kremlin.ru doesn't connect; gov.il and
 khamenei.ir return bot challenges), and they weren't bypassed.
 
-### CEO letters (and Vatican texts): counts + short excerpts only
+### CEO letters: counts + short excerpts only
 The Fed's transcripts are US-government works (public domain), so they're embedded in
 full. CEO letters are copyrighted, so the repo and the page contain **only derived data**:
 per-letter word counts, and for hover, a limited set of individual excerpt sentences,
@@ -111,19 +131,19 @@ each linked to the original letter.
 | `fetch.py` | Downloads the chair's speeches + testimony from federalreserve.gov's JSON feeds (`/json/ne-speeches.json`, `/json/ne-testimony.json`), pulls out just the body text (no nav, footnotes, or editorial notes), and saves it to `transcripts/*.txt`, with source URLs/dates in `transcripts/index.json`. |
 | `fetch.py` → `transcripts/warsh/` | Cleaned text of each Fed speech, plus `index.json` metadata. |
 | `fetch_ceo.py` | **Manual**, not run by `publish.sh`. Downloads the CEO letters from the companies' own sites (Palantir's letter pages, aboutamazon.com articles, and the Berkshire PDF via `pdftotext`) into `local_sources/<person>/` (gitignored). It's polite (about 1 request/s, identifying User-Agent) and only fetches what's missing (`--refresh` re-downloads; `--only karp` limits it to one person). Karp's 4 newest letters are discovered from palantir.com/investors (`max` in `PEOPLE`); the Amazon letter URLs are listed in the script; Berkshire's are `letters/<year>ltr.pdf` for 2025 onward (Abel's years as CEO). |
-| `fetch_speeches.py` | **Manual**, not run by `publish.sh`. `--only trump` downloads the listed DCPD addresses from govinfo.gov and writes the President's lines to `transcripts/trump/` (committed; public domain). `--only leo` downloads the listed vatican.va texts into `local_sources/leo/` (gitignored). Documents are listed in the script (`TRUMP`, `LEO`); polite (about 1 request/s, identifying User-Agent), only fetches what's missing (`--refresh` re-extracts). |
+| `fetch_officials.py` | **Manual**, not run by `publish.sh`. Cabinet (`--only cabinet`), congressional leaders (`--only congress`) and Supreme Court (`--only scotus`), or one slug (`--only thune`). Writes `transcripts/<slug>/` (committed; public domain); raw downloads are cached in `raw/officials/` (gitignored). Idempotent: skips people already fetched unless `--refresh`. Polite (about 1 request/s, identifying User-Agent). The Court needs PyMuPDF (`pip install pymupdf`) for ligature repair. |
 | `people.json` | Categories, people, display names, sources, and `policy` (`full` = embed all sentences, `excerpt` = derived data only). |
-| `derived/` | Committed derived data for each `excerpt`-policy person (CEOs, Pope): per-letter word counts and the excerpt sentences. No full text. |
-| `build.py` | Splits each document into sentences, tokenizes and counts the words, builds the word→sentence index, prints a summary per person, and writes `index.html` (about 740 KB with all 6 people). If the page would go over 1.5 MB (or with `--split`), the non-default people are written to `data/<person>.json` and loaded on demand. |
+| `derived/` | Committed derived data for each `excerpt`-policy person (CEOs): per-letter word counts and the excerpt sentences. No full text. |
+| `build.py` | Splits each document into sentences, tokenizes and counts the words, builds the word→sentence index, prints a summary per person, and writes `index.html`. If the page would go over 1.5 MB (or with `--split`), the non-default people are written to `data/<person>.json` and loaded on demand. |
 | `raw/`, `local_sources/` | Downloads and raw CEO text (gitignored). |
 
-Python 3.8+ standard library only; nothing to install.
+Python 3.8+ standard library only, except PyMuPDF for the Supreme Court step of `fetch_officials.py`.
 
 ## Run it
 ```bash
 python3 fetch.py            # add any new speeches/testimony by "Chair(man) Kevin Warsh"
 python3 fetch_ceo.py        # (manual, occasional) refresh CEO letters into local_sources/
-python3 fetch_speeches.py   # (manual, occasional) President (govinfo) + Pope (vatican.va)
+python3 fetch_officials.py  # (manual, occasional) Cabinet, Congress leaders, Supreme Court
 python3 build.py            # regenerate derived/ + index.html and print totals/top words
 python3 -m http.server 8000 # then open http://localhost:8000/
 ```
@@ -176,8 +196,8 @@ run this every week:
 ./publish.sh
 ```
 This pulls the latest from GitHub, then runs `python3 fetch.py && python3 build.py`
-(Fed only; CEO letters and Vatican texts come from the committed `derived/` files, or from
-`local_sources/` if it exists; the President's transcripts are committed in `transcripts/trump/`).
+(Fed only; CEO letters come from the committed `derived/` files, or from `local_sources/` if it
+exists; the federal officials' transcripts are committed in `transcripts/<slug>/`).
 If `git status --porcelain` shows changes, it commits "Add new transcript(s)
 <today's date>" and pushes. Otherwise it prints "No changes". GitHub Pages redeploys
 on its own about 1–2 minutes after a push. The manual equivalent is

@@ -1,0 +1,41 @@
+[
+ {
+  "id": "24-621-dissent",
+  "file": "24-621-dissent.txt",
+  "person": "Elena Kagan",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/24-621_h315.pdf",
+  "type": "dissent",
+  "title": "National Republican Senatorial Committee v. Federal Election Comm’n (dissent)",
+  "date": "2026-06-30",
+  "location": "No. 24-621",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-112-court",
+  "file": "25-112-court.txt",
+  "person": "Elena Kagan",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
+  "type": "opinion of the Court",
+  "title": "Chatrie v. United States (opinion of the Court)",
+  "date": "2026-06-29",
+  "location": "No. 25-112",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-1083-dissent",
+  "file": "25-1083-dissent.txt",
+  "person": "Elena Kagan",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r60_7mip.pdf",
+  "type": "dissent",
+  "title": "Mullin v. Doe (dissent)",
+  "date": "2026-06-25",
+  "location": "No. 25-1083",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]

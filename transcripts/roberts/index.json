@@ -1,0 +1,41 @@
+[
+ {
+  "id": "25-365-court",
+  "file": "25-365-court.txt",
+  "person": "John G. Roberts, Jr.",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_new_5if6.pdf",
+  "type": "opinion of the Court",
+  "title": "Trump v. Barbara (opinion of the Court)",
+  "date": "2026-06-30",
+  "location": "No. 25-365",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25A312-court",
+  "file": "25A312-court.txt",
+  "person": "John G. Roberts, Jr.",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r63_e2pg.pdf",
+  "type": "opinion of the Court",
+  "title": "Trump v. Cook (opinion of the Court)",
+  "date": "2026-06-29",
+  "location": "No. 25A312",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25-332-court",
+  "file": "25-332-court.txt",
+  "person": "John G. Roberts, Jr.",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r62_g314.pdf",
+  "type": "opinion of the Court",
+  "title": "Trump v. Slaughter (opinion of the Court)",
+  "date": "2026-06-29",
+  "location": "No. 25-332",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]

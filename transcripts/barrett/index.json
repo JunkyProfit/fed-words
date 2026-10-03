@@ -1,0 +1,41 @@
+[
+ {
+  "id": "24-1260-court",
+  "file": "24-1260-court.txt",
+  "person": "Amy Coney Barrett",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r65_g314.pdf",
+  "type": "opinion of the Court",
+  "title": "Watson v. Republican National Committee (opinion of the Court)",
+  "date": "2026-06-29",
+  "location": "No. 24-1260",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "25A312-dissent",
+  "file": "25A312-dissent.txt",
+  "person": "Amy Coney Barrett",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r63_e2pg.pdf",
+  "type": "dissent",
+  "title": "Trump v. Cook (dissent)",
+  "date": "2026-06-29",
+  "location": "No. 25A312",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ },
+ {
+  "id": "24-1046-concurrence",
+  "file": "24-1046-concurrence.txt",
+  "person": "Amy Coney Barrett",
+  "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r58_a8cf.pdf",
+  "type": "concurrence",
+  "title": "Wolford v. Lopez (concurrence)",
+  "date": "2026-06-25",
+  "location": "No. 24-1046",
+  "source": "supremecourt.gov",
+  "note": "Supreme Court opinion; syllabus, footnotes and headings excluded",
+  "fetched": "2026-10-02T22:14:56"
+ }
+]
