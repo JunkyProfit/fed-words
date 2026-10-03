@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary">
 <style>
-:root{--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
+:root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
 html{scroll-behavior:smooth}
 header{background:var(--header);color:#fff;padding:22px 28px;position:relative;box-shadow:inset 0 -4px 0 #b9d3bf}
@@ -56,7 +56,7 @@ button.only:hover{border-color:var(--sage)}
 .date{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
 #selSummary{margin-top:8px;font-size:14px}
 .stats{display:flex;gap:14px;flex-wrap:wrap}.stat{flex:1;min-width:150px;background:var(--bg);border-radius:8px;padding:10px 14px}
-.stat b{display:block;font-size:24px;color:var(--accent)}
+.stat b{display:block;font-size:24px;color:var(--num-red)}
 @media (max-width:640px){.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:10px}.stat{min-width:0;padding:6px 6px;font-size:11.5px;line-height:1.25}
  .stat b{font-size:17px}}
 .controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
@@ -67,7 +67,7 @@ table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line)}
 th{cursor:pointer;user-select:none;background:var(--bg);position:sticky;top:0;border-bottom-color:var(--sage)}th:hover{color:var(--accent)}
 td.num,th.num{text-align:right}.bar{height:8px;background:#a9c9b2;border-radius:4px}
-tr.stop td.w{color:var(--muted)}
+tr.stop td.w{color:var(--muted)}td.cnt{color:var(--num-red);font-weight:600} /* word-count numbers: one variable, easy to revert */
 tr[data-w]{cursor:help}tr[data-w]:hover td{background:#f0f7f2}tr.active td{background:#e2f0e7}
 #pop{position:absolute;z-index:50;background:var(--card);border:1px solid #d9cdb6;border-radius:10px;box-shadow:0 10px 30px rgba(60,45,20,.18);
  padding:12px 14px;font-size:14px;max-height:60vh;overflow:auto;line-height:1.45}
@@ -369,7 +369,7 @@ function render(){
   if(VIEW==='visual'){tb.innerHTML='';$('sShown').textContent=drawCloud(list).toLocaleString();return}
   cloud.innerHTML='';
   const max=base.length?base[0].count:1;
-  tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
+  tb.innerHTML=list.length?list.slice(0,LIMIT).map(x=>`<tr class="${x.stop?'stop':''}" data-w="${esc(x.word)}"><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
     :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
   $('sShown').textContent=list.length.toLocaleString();
   $('more').textContent=list.length>LIMIT?`Showing first ${LIMIT} of ${list.length} — use the filter to find others.`:'';
