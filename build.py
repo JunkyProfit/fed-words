@@ -345,9 +345,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm15">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm15">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm15">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm16">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm16">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm16">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -355,7 +355,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm15">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm16">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -380,7 +380,7 @@ footer a{color:var(--muted)}
 @media (max-width:640px){header{padding:12px 16px}header .logo img{height:34px}main{padding:22px 16px 32px}h1{font-size:26px}h2{font-size:18px}body{font-size:15.5px}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm15" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm16" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -446,10 +446,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm15">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm15">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm16">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm16">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm15">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm16">
 <title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -459,7 +459,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm15">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm16">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -710,6 +710,8 @@ header p#siteSub{letter-spacing:0}
 h2{font-weight:700;letter-spacing:-.01em}
 #words h2#personTitle{font-size:21px;letter-spacing:-.025em;line-height:1.2}
 #about h2{letter-spacing:-.02em}
+#about h3.ablead{font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-weight:700;font-size:24px;line-height:1.2;letter-spacing:-.02em;color:var(--num-red);margin:2px 0 10px}
+@media (max-width:640px){#about h3.ablead{font-size:20px;margin:4px 0 8px}}
 .stat{font-size:12.5px;line-height:1.3;color:var(--muted)}
 .stat b{font-size:28px;font-weight:700;letter-spacing:-.035em;line-height:1.1;font-variant-numeric:tabular-nums;margin-bottom:2px}
 td.cnt,td.num,.dl1 .dw,#sDocs,#sTotal,#sUnique,#sShown,#docCount,.date{font-variant-numeric:tabular-nums}
@@ -1174,6 +1176,7 @@ Hover a word to see the sentences where it was used (click or tap to pin). <span
 <div id="toast" role="status" aria-live="polite"></div>
 <aside class="ad" data-slot="incontent" aria-label="Advertisement"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About Mouth Math</button></h2>
+<h3 class="ablead">Out of the mouth, into the math.</h3>
 <p>This site was created with transparency and truth in mind. It counts every word in official,
 publicly available texts by public figures, taken from each official source:</p>
 <ul class="sources">
