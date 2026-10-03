@@ -9,6 +9,11 @@ documents, ranked from most to least frequent. Choose a **category**, then a **p
 | CEOs | **Alex Karp** (Palantir) | 4 most recent quarterly letters to shareholders | palantir.com |
 | CEOs | **Andy Jassy** (Amazon) | 2025 and 2024 annual shareholder letters | aboutamazon.com |
 | CEOs | **Greg Abel** (Berkshire Hathaway) | his 2025 letter (his first as CEO) | berkshirehathaway.com |
+| Politics | **President Donald J. Trump** | 5 major addresses, Feb–Jul 2026 (full text, President's lines only) | govinfo.gov (Daily Compilation of Presidential Documents) |
+| Religious leaders | **Pope Leo XIV** | 5 texts from his Sep 2026 journey to France (homilies, addresses, general audience) | vatican.va |
+
+Each person has a header tint, an eyebrow label and a document noun (`mode`, `eyebrow`,
+`doc_noun1`, `unit`/`unit_pl` and an optional popover `credit` line in `people.json`).
 
 Open `index.html` in a browser. It's one self-contained file (inline CSS/JS, no
 external dependencies) with a filter box (plain text or regex), a
@@ -47,7 +52,33 @@ with no library: words are sized with canvas `measureText` and placed largest-fi
 spiral with box collision checks. It re-lays out when the width changes (rotation or window
 resize). The view is kept in the URL (`#mode=visual`, plus `&n=50|300` when not 150).
 
-### CEO letters: counts + short excerpts only
+### Licensing: public domain vs. excerpts
+| Source | Status | Treatment |
+|---|---|---|
+| federalreserve.gov (Fed Chair) | U.S. government work, public domain | full sentences embedded, "Show all" |
+| govinfo.gov DCPD (U.S. President) | U.S. government work, public domain | full sentences embedded, "Show all"; credit line in popover |
+| company sites (CEO letters) | copyrighted | derived data only (below) |
+| vatican.va (Pope) | © Dicastery for Communication – Libreria Editrice Vaticana | derived data only, same caps as CEO letters; credit line in popover |
+
+**Why govinfo instead of whitehouse.gov:** in 2026 whitehouse.gov publishes only short
+staff-selected quotes for most remarks (the only full transcript there is the January 2025
+Inaugural Address). The Daily Compilation of Presidential Documents (GPO) is the official
+U.S. government record of the President's remarks, so it is used instead. DCPD lags by a few
+weeks (the September 22, 2026 UN address wasn't in it yet when this was built). Only the
+President's lines are kept: GPO sets speaker labels in italics, and other speakers' turns,
+audience lines, `[bracketed]` notes and GPO subheadings are removed.
+
+**Vatican texts** are the English versions published by the Holy See. Page headings, footnote
+markers, scripture references in parentheses and the general audience's summaries read by others
+(after the second rule on the page) are removed. Embedded share of each text's sentences:
+29.5–34.1% (under the 50% hard stop).
+
+**Not included (yet):** a "World leaders" category was planned (Vladimir Putin via en.kremlin.ru,
+Benjamin Netanyahu via gov.il, Ayatollah Ali Khamenei via english.khamenei.ir), but none of those
+official sites could be reached from the build machine (kremlin.ru doesn't connect; gov.il and
+khamenei.ir return bot challenges), and they weren't bypassed.
+
+### CEO letters (and Vatican texts): counts + short excerpts only
 The Fed's transcripts are US-government works (public domain), so they're embedded in
 full. CEO letters are copyrighted, so the repo and the page contain **only derived data**:
 per-letter word counts, and for hover, a limited set of individual excerpt sentences,
@@ -76,9 +107,10 @@ each linked to the original letter.
 | `fetch.py` | Downloads the chair's speeches + testimony from federalreserve.gov's JSON feeds (`/json/ne-speeches.json`, `/json/ne-testimony.json`), pulls out just the body text (no nav, footnotes, or editorial notes), and saves it to `transcripts/*.txt`, with source URLs/dates in `transcripts/index.json`. |
 | `fetch.py` → `transcripts/warsh/` | Cleaned text of each Fed speech, plus `index.json` metadata. |
 | `fetch_ceo.py` | **Manual**, not run by `publish.sh`. Downloads the CEO letters from the companies' own sites (Palantir's letter pages, aboutamazon.com articles, and the Berkshire PDF via `pdftotext`) into `local_sources/<person>/` (gitignored). It's polite (about 1 request/s, identifying User-Agent) and only fetches what's missing (`--refresh` re-downloads; `--only karp` limits it to one person). Karp's 4 newest letters are discovered from palantir.com/investors (`max` in `PEOPLE`); the Amazon letter URLs are listed in the script; Berkshire's are `letters/<year>ltr.pdf` for 2025 onward (Abel's years as CEO). |
+| `fetch_speeches.py` | **Manual**, not run by `publish.sh`. `--only trump` downloads the listed DCPD addresses from govinfo.gov and writes the President's lines to `transcripts/trump/` (committed; public domain). `--only leo` downloads the listed vatican.va texts into `local_sources/leo/` (gitignored). Documents are listed in the script (`TRUMP`, `LEO`); polite (about 1 request/s, identifying User-Agent), only fetches what's missing (`--refresh` re-extracts). |
 | `people.json` | Categories, people, display names, sources, and `policy` (`full` = embed all sentences, `excerpt` = derived data only). |
-| `derived/` | Committed derived data for each CEO: per-letter word counts and the excerpt sentences. No full text. |
-| `build.py` | Splits each document into sentences, tokenizes and counts the words, builds the word→sentence index, prints a summary per person, and writes `index.html` (about 270 KB with all 4 people). If the page would go over 1.5 MB (or with `--split`), the non-default people are written to `data/<person>.json` and loaded on demand. |
+| `derived/` | Committed derived data for each `excerpt`-policy person (CEOs, Pope): per-letter word counts and the excerpt sentences. No full text. |
+| `build.py` | Splits each document into sentences, tokenizes and counts the words, builds the word→sentence index, prints a summary per person, and writes `index.html` (about 740 KB with all 6 people). If the page would go over 1.5 MB (or with `--split`), the non-default people are written to `data/<person>.json` and loaded on demand. |
 | `raw/`, `local_sources/` | Downloads and raw CEO text (gitignored). |
 
 Python 3.8+ standard library only; nothing to install.
@@ -87,6 +119,7 @@ Python 3.8+ standard library only; nothing to install.
 ```bash
 python3 fetch.py            # add any new speeches/testimony by "Chair(man) Kevin Warsh"
 python3 fetch_ceo.py        # (manual, occasional) refresh CEO letters into local_sources/
+python3 fetch_speeches.py   # (manual, occasional) President (govinfo) + Pope (vatican.va)
 python3 build.py            # regenerate derived/ + index.html and print totals/top words
 python3 -m http.server 8000 # then open http://localhost:8000/
 ```
@@ -139,8 +172,8 @@ run this every week:
 ./publish.sh
 ```
 This pulls the latest from GitHub, then runs `python3 fetch.py && python3 build.py`
-(Fed only; CEO letters come from the committed `derived/` files, or from `local_sources/`
-if it exists and you ran `fetch_ceo.py`).
+(Fed only; CEO letters and Vatican texts come from the committed `derived/` files, or from
+`local_sources/` if it exists; the President's transcripts are committed in `transcripts/trump/`).
 If `git status --porcelain` shows changes, it commits "Add new transcript(s)
 <today's date>" and pushes. Otherwise it prints "No changes". GitHub Pages redeploys
 on its own about 1–2 minutes after a push. The manual equivalent is

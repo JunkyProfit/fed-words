@@ -1,0 +1,67 @@
+[
+  {
+    "id": "DCPD-202600469",
+    "file": "DCPD-202600469.txt",
+    "person": "Donald J. Trump",
+    "url": "https://www.govinfo.gov/content/pkg/DCPD-202600469/html/DCPD-202600469.htm",
+    "type": "address",
+    "title": "Address to the Nation on Election Reforms",
+    "date": "2026-07-16",
+    "location": "",
+    "source": "govinfo.gov",
+    "note": "Daily Compilation of Presidential Documents",
+    "fetched": "2026-10-02T19:52:29"
+  },
+  {
+    "id": "DCPD-202600443",
+    "file": "DCPD-202600443.txt",
+    "person": "Donald J. Trump",
+    "url": "https://www.govinfo.gov/content/pkg/DCPD-202600443/html/DCPD-202600443.htm",
+    "type": "speech",
+    "title": "Remarks at an Independence Day Celebration",
+    "date": "2026-07-04",
+    "location": "",
+    "source": "govinfo.gov",
+    "note": "Daily Compilation of Presidential Documents",
+    "fetched": "2026-10-02T19:52:30"
+  },
+  {
+    "id": "DCPD-202600354",
+    "file": "DCPD-202600354.txt",
+    "person": "Donald J. Trump",
+    "url": "https://www.govinfo.gov/content/pkg/DCPD-202600354/html/DCPD-202600354.htm",
+    "type": "address",
+    "title": "Commencement Address at the United States Coast Guard Academy in New London, Connecticut",
+    "date": "2026-05-20",
+    "location": "New London, CT",
+    "source": "govinfo.gov",
+    "note": "Daily Compilation of Presidential Documents",
+    "fetched": "2026-10-02T19:52:31"
+  },
+  {
+    "id": "DCPD-202600220",
+    "file": "DCPD-202600220.txt",
+    "person": "Donald J. Trump",
+    "url": "https://www.govinfo.gov/content/pkg/DCPD-202600220/html/DCPD-202600220.htm",
+    "type": "address",
+    "title": "Address to the Nation on United States Military Operations in Iran",
+    "date": "2026-04-01",
+    "location": "",
+    "source": "govinfo.gov",
+    "note": "Daily Compilation of Presidential Documents",
+    "fetched": "2026-10-02T19:52:32"
+  },
+  {
+    "id": "DCPD-202600136",
+    "file": "DCPD-202600136.txt",
+    "person": "Donald J. Trump",
+    "url": "https://www.govinfo.gov/content/pkg/DCPD-202600136/html/DCPD-202600136.htm",
+    "type": "address",
+    "title": "Address Before a Joint Session of the Congress on the State of the Union",
+    "date": "2026-02-24",
+    "location": "Washington, DC",
+    "source": "govinfo.gov",
+    "note": "Daily Compilation of Presidential Documents",
+    "fetched": "2026-10-02T19:52:33"
+  }
+]

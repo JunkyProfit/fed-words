@@ -6110,6 +6110,6 @@
  "excerpt_budget": 0.25,
  "excerpts_per_word": 10,
  "keep_numbers": false,
- "note": "Derived data only: word counts and a limited excerpt set. Full letter text is not included; see each document's url.",
+ "note": "Derived data only: word counts and a limited excerpt set. Full text is not included; see each document's url.",
  "slug": "karp"
 }

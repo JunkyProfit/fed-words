@@ -1,14 +1,8 @@
 [
-  {"slug": "warsh", "name": "Kevin Warsh", "display": "Chairman Kevin Warsh", "category": "Fed Chair",
-   "role": "Chair of the Federal Reserve", "org": "Federal Reserve", "policy": "full",
-   "source": "federalreserve.gov", "doc_noun": "official transcripts"},
-  {"slug": "karp", "name": "Alex Karp", "display": "Alex Karp", "category": "CEOs",
-   "role": "Co-Founder & CEO, Palantir Technologies", "org": "Palantir", "policy": "excerpt",
-   "source": "palantir.com", "doc_noun": "shareholder letters"},
-  {"slug": "jassy", "name": "Andy Jassy", "display": "Andy Jassy", "category": "CEOs",
-   "role": "President & CEO, Amazon", "org": "Amazon", "policy": "excerpt",
-   "source": "aboutamazon.com", "doc_noun": "shareholder letters"},
-  {"slug": "abel", "name": "Greg Abel", "display": "Greg Abel", "category": "CEOs",
-   "role": "CEO, Berkshire Hathaway", "org": "Berkshire Hathaway", "policy": "excerpt",
-   "source": "berkshirehathaway.com", "doc_noun": "shareholder letters"}
+  {"slug": "warsh", "name": "Kevin Warsh", "display": "Chairman Kevin Warsh", "category": "Fed Chair", "role": "Chair of the Federal Reserve", "org": "Federal Reserve", "policy": "full", "source": "federalreserve.gov", "doc_noun": "official transcripts", "mode": "fed", "eyebrow": "Fed Chair · Federal Reserve", "doc_noun1": "official transcript", "unit": "document", "unit_pl": "documents"},
+  {"slug": "karp", "name": "Alex Karp", "display": "Alex Karp", "category": "CEOs", "role": "Co-Founder & CEO, Palantir Technologies", "org": "Palantir", "policy": "excerpt", "source": "palantir.com", "doc_noun": "shareholder letters", "mode": "ceo", "eyebrow": "CEO · Palantir", "doc_noun1": "shareholder letter", "unit": "letter", "unit_pl": "letters"},
+  {"slug": "jassy", "name": "Andy Jassy", "display": "Andy Jassy", "category": "CEOs", "role": "President & CEO, Amazon", "org": "Amazon", "policy": "excerpt", "source": "aboutamazon.com", "doc_noun": "shareholder letters", "mode": "ceo", "eyebrow": "CEO · Amazon", "doc_noun1": "shareholder letter", "unit": "letter", "unit_pl": "letters"},
+  {"slug": "abel", "name": "Greg Abel", "display": "Greg Abel", "category": "CEOs", "role": "CEO, Berkshire Hathaway", "org": "Berkshire Hathaway", "policy": "excerpt", "source": "berkshirehathaway.com", "doc_noun": "shareholder letters", "mode": "ceo", "eyebrow": "CEO · Berkshire Hathaway", "doc_noun1": "shareholder letter", "unit": "letter", "unit_pl": "letters"},
+  {"slug": "trump", "name": "Donald J. Trump", "display": "President Donald J. Trump", "category": "Politics", "role": "45th & 47th President of the United States", "org": "The White House", "policy": "full", "source": "govinfo.gov", "doc_noun": "official transcripts", "mode": "pol", "eyebrow": "U.S. President · The White House", "doc_noun1": "official transcript", "unit": "speech", "unit_pl": "speeches", "credit": "Daily Compilation of Presidential Documents (U.S. Government Publishing Office); U.S. government work, public domain"},
+  {"slug": "leo", "name": "Pope Leo XIV", "display": "Pope Leo XIV", "category": "Religious leaders", "role": "Bishop of Rome and Head of the Catholic Church", "org": "Holy See", "policy": "excerpt", "source": "vatican.va", "doc_noun": "texts", "mode": "rel", "eyebrow": "Religious leader · Holy See", "doc_noun1": "text", "unit": "text", "unit_pl": "texts", "credit": "© Dicastery for Communication – Libreria Editrice Vaticana"}
 ]

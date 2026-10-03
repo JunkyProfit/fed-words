@@ -162,6 +162,7 @@ def build_excerpt_derived(P, keep_numbers):
         emb = choose_excerpts(toks, total)
         idx = word_index(toks, emb)
         d = {k: m[k] for k in ("id", "date", "title", "url", "type", "source")}
+        d.update({k: m[k] for k in ("location", "note") if m.get(k)})
         d.update(words=total, n_sentences=len(sents),
                  excerpts=[sents[i] for i in sorted(emb)],
                  counts={w: e[0] for w, e in sorted(idx.items())},
@@ -171,7 +172,7 @@ def build_excerpt_derived(P, keep_numbers):
             d["pages"] = [m["para_pages"][pairs[i][0]] for i in sorted(emb)]
         docs.append(d)
     out = {"slug": P["slug"], "note": "Derived data only: word counts and a limited excerpt set. "
-           "Full letter text is not included; see each document's url.", "keep_numbers": keep_numbers,
+           "Full text is not included; see each document's url.", "keep_numbers": keep_numbers,
            "excerpt_budget": EXCERPT_BUDGET, "excerpts_per_word": EXCERPTS_PER_WORD, "docs": docs}
     write_if_changed(DERIVED / f"{P['slug']}.json", json.dumps(out, indent=1, ensure_ascii=False, sort_keys=True) + "\n")
 
@@ -179,6 +180,8 @@ def load_person(P, keep_numbers):
     """Return a list of uniform doc dicts: meta + s (sentences shown) + sp (pages) + idx {w: [n, m, entries]}."""
     docs = []
     if P["policy"] == "full":
+        if not (TDIR / P["slug"] / "index.json").exists():
+            print(f"WARN: no transcripts for {P['slug']} (run fetch.py / fetch_speeches.py); skipped"); return []
         for m in json.loads((TDIR / P["slug"] / "index.json").read_text(encoding="utf-8")):
             path = TDIR / P["slug"] / m["file"]
             if not path.exists():
@@ -188,21 +191,21 @@ def load_person(P, keep_numbers):
             toks = [tokenize(s, keep_numbers) for s in sents]
             assert Counter(t for ts in toks for t in ts) == Counter(tokenize(text, keep_numbers)), m["file"]
             docs.append({"id": Path(m["file"]).stem, "date": m["date"], "type": m["type"], "title": m["title"],
-                         "location": m.get("location", ""), "url": m["url"], "words": sum(map(len, toks)),
+                         "location": m.get("location", ""), "note": m.get("note", ""), "url": m["url"], "words": sum(map(len, toks)),
                          "n_sentences": len(sents), "s": sents, "sp": None, "idx": word_index(toks, None)})
     else:
         if (LOCAL / P["slug"] / "index.json").exists():
             build_excerpt_derived(P, keep_numbers)          # refresh committed derived data from local text
         dpath = DERIVED / f"{P['slug']}.json"
         if not dpath.exists():
-            print(f"WARN: no data for {P['slug']} (run fetch_ceo.py); skipped"); return []
+            print(f"WARN: no data for {P['slug']} (run fetch_ceo.py / fetch_speeches.py); skipped"); return []
         der = json.loads(dpath.read_text(encoding="utf-8"))
         if der.get("keep_numbers", False) != keep_numbers:
             print(f"WARN: derived/{P['slug']}.json was built with keep_numbers={der.get('keep_numbers')}")
         for d in der["docs"]:
             idx = {w: [n, d["msent"][w], d["entries"].get(w, [])] for w, n in d["counts"].items()}
             docs.append({"id": d["id"], "date": d["date"], "type": d["type"], "title": d["title"],
-                         "location": d["source"], "url": d["url"], "words": d["words"],
+                         "location": d.get("location") or d["source"], "note": d.get("note", ""), "url": d["url"], "words": d["words"],
                          "n_sentences": d["n_sentences"], "s": d["excerpts"], "sp": d.get("pages"), "idx": idx})
     docs.sort(key=lambda d: (d["date"], d["url"]), reverse=True)
     return docs
@@ -233,11 +236,15 @@ def main():
                 x += [vidx[w], n, m, len(ent)] + ent
             jd = {k: d[k] for k in ("id", "date", "type", "title", "location", "url", "words", "n_sentences")}
             jd.update(year=d["date"][:4], s=d["s"], x=x)
+            if d.get("note"):
+                jd["note"] = d["note"]
             if d["sp"]:
                 jd["sp"] = d["sp"]
             jdocs.append(jd)
         people_out.append({k: P[k] for k in ("slug", "name", "display", "category", "role", "org", "policy",
-                                             "source", "doc_noun")} | {"vocab": vocab, "docs": jdocs})
+                                             "source", "doc_noun")}
+                          | {k: P[k] for k in ("mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit") if P.get(k)}
+                          | {"vocab": vocab, "docs": jdocs})
 
         # ---- console report (all numbers come from here) ----
         ns = [(w, c) for w, c in rows if w not in STOPWORDS]
@@ -315,7 +322,7 @@ header .titles{min-width:0}
 @media (max-width:640px){header{padding:16px}header a.about-link{top:16px;right:16px}
  header .brand{flex-direction:column;align-items:flex-start;gap:10px;padding-right:0}
  header .logo img{height:34px}header h1{font-size:20px}}
-#about{scroll-margin-top:16px}#about h2{font-size:18px}#about p{margin:0 0 10px;max-width:72ch}
+#about{scroll-margin-top:16px}#about ul.sources{margin:0 0 10px;padding-left:20px;max-width:72ch}#about ul.sources li{margin:3px 0}#about h2{font-size:18px}#about p{margin:0 0 10px;max-width:72ch}
 .notice{border:1px solid #e0b252;background:#fff8e6;border-left:5px solid #d99a1e;border-radius:8px;padding:10px 14px;margin-top:12px;max-width:72ch}
 .notice strong{color:#7a4d00}header h1{margin:0;font-size:24px}header p{margin:4px 0 0;opacity:.85}
 main{max-width:960px;margin:0 auto;padding:20px}
@@ -363,7 +370,11 @@ header .eyebrow{display:inline-block;font-size:12px;font-weight:600;text-transfo
 .seg button:hover{color:var(--ink);background:rgba(255,253,248,.6)}
 .seg button.on{background:var(--chip-on);color:var(--chip-ink);box-shadow:inset 0 0 0 2px var(--accent),0 1px 2px rgba(60,45,20,.15)}.seg button.on::before{content:"\2713\00a0"}
 #persons button.chip.on{font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
-body.mode-fed .only-ceo,body.mode-ceo .only-fed{display:none}
+body.mode-pol header{background:#4f5b66;box-shadow:inset 0 -4px 0 #bfcad3}
+body.mode-rel header{background:#5f5568;box-shadow:inset 0 -4px 0 #d4c8db}
+.only-fed,.only-ceo,.only-pol,.only-rel{display:none}
+body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-pol .only-pol,body.mode-rel .only-rel{display:inline}
+#cats{flex-wrap:wrap}#pop .credit{font-size:11px;color:var(--muted);margin-top:4px}
 #pop .cap{font-size:12px;color:var(--muted);margin-top:8px;padding-top:6px;border-top:1px dashed var(--line)}
 .viewbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 14px}
 .viewbar .lbl{font-weight:600;font-size:13px;color:var(--muted)}.viewbar .seg{margin:0}.viewbar .seg button{font-size:14px;padding:6px 18px}
@@ -416,24 +427,38 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 <p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
 possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span class="only-fed">Fed transcripts: footnotes and editorial notes excluded.</span>
 <span class="only-ceo">CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded.</span>
+<span class="only-pol">Presidential transcripts (Daily Compilation of Presidential Documents): only the President's words; audience reactions, [bracketed] notes, other speakers and closing notes excluded.</span>
+<span class="only-rel">Vatican texts: English text as published by the Holy See; page headings, footnotes, scripture citations in parentheses, and summaries read by others excluded.</span>
 Totals, ranks and counts are recomputed in your browser for the selected person and documents.
 Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span></p>
 <section class="card" id="about"><h2>About this site</h2>
-<p>This site was built by someone who believes in transparency and truth. It takes the official, publicly available
-speech and testimony transcripts of the Chair of the Federal Reserve, published on
-<a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>,
-and shareholder letters written by the CEOs of well-known companies, and counts every word. Nothing is edited or
-interpreted; footnotes and editorial notes are left out. Every number comes straight from the source documents,
-and every sentence shown links back to its original source so you can check it yourself.</p>
-<p>CEO letters are publicly posted by each company on its own website; we show word counts and short excerpts with
-links to the original. This site is not affiliated with or endorsed by any company or person listed.</p>
-<p>Our goal is simply to offer a more fun way to explore what the Fed Chair and these CEOs say. We aren't pushing a
-viewpoint, and the word counts are presented without commentary.</p>
+<p>This site was built by someone who believes in transparency and truth. It counts every word in official,
+publicly available texts by public figures, taken from each official source:</p>
+<ul class="sources">
+<li><strong>Fed Chair:</strong> speech and testimony transcripts published on
+<a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener">federalreserve.gov</a>.</li>
+<li><strong>CEOs:</strong> shareholder letters posted by each company on its own website (palantir.com, aboutamazon.com, berkshirehathaway.com).</li>
+<li><strong>U.S. President:</strong> official transcripts from the
+<a href="https://www.govinfo.gov/app/collection/cpd" target="_blank" rel="noopener">Daily Compilation of Presidential Documents</a>
+(U.S. Government Publishing Office, govinfo.gov), the official record of the President's remarks.</li>
+<li><strong>Pope:</strong> English texts published by the Holy See on <a href="https://www.vatican.va/" target="_blank" rel="noopener">vatican.va</a>
+(© Dicastery for Communication – Libreria Editrice Vaticana).</li>
+</ul>
+<p><strong>Licensing approach.</strong> Works of the U.S. government (Fed and White House transcripts) are in the public
+domain, so every sentence is available on hover. Other texts (CEO letters, Vatican texts) are copyrighted by their
+publishers: for those we publish only word counts and short excerpts (at most about a quarter of each text, and at most
+10 sentences per word), each linked to the original, and never the full text.</p>
+<p><strong>Translations.</strong> Where a text was originally given in another language, we use the official English
+translation published by that government or institution. Counts reflect that published English text.</p>
+<p><strong>Neutrality.</strong> We present word counts without commentary. Nothing is edited or interpreted; footnotes,
+editorial notes and other speakers' words are left out, and every sentence shown links back to its source so you can
+check it yourself. Inclusion of a person does not imply endorsement, and this site is not affiliated with or endorsed by
+any government, institution, company, or person listed.</p>
 <p><strong>How it works:</strong> words are lowercased and counted across the documents you select.
 “Hide common stopwords” removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
 <div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
 purposes only and is not financial, investment, or trading advice. It is not affiliated with or endorsed by the
-Federal Reserve or by any company or person listed.</div>
+Federal Reserve, the White House, the Holy See, or by any company or person listed.</div>
 </section>
 </main>
 <script id="data" type="application/json">__DATA__</script>
@@ -445,6 +470,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10;
+const unitOf=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
 const q=$('q'),hide=$('hideStop'),tb=$('tb');
 
 // ---- per-person data (inline, or data/<slug>.json when the page would be too large) ----
@@ -462,7 +488,7 @@ function renderPicker(){
   $('cats').innerHTML=CATS.map(c=>`<button class="${P.category===c?'on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
   $('persons').innerHTML='<span class="lbl">Person</span>'+PEOPLE.filter(p=>p.category===P.category).map(p=>
     `<button class="chip${p.slug===P.slug?' on':''}" data-person="${p.slug}" title="${esc(p.role)}">${esc(p.name)}</button>`).join('');
-  $('personInfo').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?P.doc_noun.replace(/s$/,''):P.doc_noun} from ${P.source}`;
+  $('personInfo').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun} from ${P.source}`;
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
   document.querySelectorAll('#persons button').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
 }
@@ -472,11 +498,11 @@ async function setPerson(slug,docIds){
   P=p;V=p.vocab;VI=p.VI;DOCS=p.docs;YEARS=[...new Set(DOCS.map(d=>d.year))].sort().reverse();
   const ids=(docIds||[]).filter(i=>DOCS.some(d=>d.id===i));
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
-  const fed=P.category===PEOPLE[0].category;document.body.classList.toggle('mode-fed',fed);document.body.classList.toggle('mode-ceo',!fed);
-  $('eyebrow').textContent=`${P.category.replace(/s$/,'')} · ${P.org}`;
+  ['fed','ceo','pol','rel'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
+  $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('h1').textContent=`Every word ${P.display} said, ranked`;
   document.title=`Fed Words — every word ${P.display} said, ranked`;
-  const noun=n=>n===1?P.doc_noun.replace(/s$/,''):P.doc_noun;
+  const noun=n=>n===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun;
   $('sub').textContent=`Word frequencies across ${DOCS.length} ${noun(DOCS.length)} from ${P.source}`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();
@@ -486,7 +512,7 @@ async function setPerson(slug,docIds){
 function buildTimeframe(){
   $('docList').innerHTML=DOCS.map(d=>`<li data-id="${d.id}"><input type="checkbox" id="cb_${d.id}" data-id="${d.id}">
  <label for="cb_${d.id}"><span class="date">${fmtDate(d.date)}</span> <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>
- <span class="muted">(${d.type}, ${d.words.toLocaleString()} words) — ${esc(d.location)}</span></label>
+ <span class="muted">(${d.type}, ${d.words.toLocaleString()} words)${[d.location,d.note].filter(Boolean).map(esc).join(' · ').replace(/^(?=.)/,' — ')}</span></label>
  <a class="only" data-only="${d.id}">only</a></li>`).join('');
   $('years').innerHTML='<span class="lbl">By year</span>'+YEARS.map(y=>{const n=DOCS.filter(d=>d.year===y).length;
     return `<label class="chip" id="yc_${y}"><input type="checkbox" data-year="${y}"> ${y} <span class="muted">(${n})</span></label>`}).join('');
@@ -504,8 +530,8 @@ function syncTimeframe(){
     $('yc_'+y).classList.toggle('on',k===ids.length)});
   const all=sel.size===DOCS.length;$('btnAll').classList.toggle('on',all);$('btnNone').classList.toggle('on',sel.size===0);
   const ds=DOCS.filter(d=>sel.has(d.id));
-  $('selSummary').innerHTML=!ds.length?'<b>No documents selected.</b>':
-    `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> document${(all?ds.length:DOCS.length)>1?'s':''}`+
+  $('selSummary').innerHTML=!ds.length?`<b>No ${unitOf(2)} selected.</b>`:
+    `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> ${unitOf(all?ds.length:DOCS.length)}`+
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
   syncHash();
 }
@@ -589,10 +615,10 @@ const pop=document.createElement('div');pop.id='pop';pop.hidden=true;pop.setAttr
 let pinned=false,curWord=null,curRow=null,showAll=false,hoverT=null,hideT=null;
 function popHTML(word){
   const st=stats(word),items=occurrences(word),excerpt=P.policy==='excerpt';
-  const shown=(showAll&&!excerpt)?items:items.slice(0,FIRST),noun=excerpt?'letter':'document';
+  const shown=(showAll&&!excerpt)?items:items.slice(0,FIRST),unit=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
   let h=`<div class="ph"><div><b>${esc(word)}</b>
    <div class="t" id="popCount">${st.n.toLocaleString()} occurrence${st.n===1?'':'s'} in ${st.m.toLocaleString()} sentence${st.m===1?'':'s'}`+
-   ` · ${st.docs.length} of ${sel.size} selected ${noun}${sel.size===1?'':'s'}${st.n!==st.m?' · some sentences use it more than once':''}</div></div>
+   ` · ${st.docs.length} of ${sel.size} selected ${unit(sel.size)}${st.n!==st.m?' · some sentences use it more than once':''}</div></div>
    <button class="x" title="Close (Esc)" aria-label="Close">×</button></div>`;
   let lastDoc=null;
   shown.forEach(it=>{if(it.doc!==lastDoc){if(lastDoc)h+='</ol>';lastDoc=it.doc;
@@ -604,9 +630,9 @@ function popHTML(word){
   if(excerpt){
     const links=st.docs.map(d=>`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>`).join(', ');
     h+=`<div class="cap" id="popCap">${shown.length?`Showing ${shown.length} of ${st.m.toLocaleString()} sentence${st.m===1?'':'s'}`:'No excerpt shown for this word'}`+
-       ` — read the full letter${st.docs.length>1?'s':''} at ${esc(P.source)}: ${links}</div>`;
+       ` — read the full ${unit(st.docs.length)} at ${esc(P.source)}: ${links}</div>`;
   }else if(items.length>FIRST&&!showAll)h+=`<button class="more">Show all ${items.length.toLocaleString()} sentences (${st.n.toLocaleString()} occurrences)</button>`;
-  h+=`<div class="hint">${pinned?'Pinned. Press Esc or × to close.':'Click the word to pin this panel.'} “source ↗” opens the original at that sentence${excerpt?' (PDFs: at that page)':' (Chrome/Edge/Safari)'}; the title link opens the document.</div>`;
+  h+=`<div class="hint">${pinned?'Pinned. Press Esc or × to close.':'Click the word to pin this panel.'} “source ↗” opens the original at that sentence${excerpt?(DOCS.some(d=>d.sp)?' (PDFs: at that page)':''):' (Chrome/Edge/Safari)'}; the title link opens the document.</div>`+(P.credit?`<div class="credit">Source: ${esc(P.credit)}</div>`:'');
   return h;
 }
 function placePop(){
