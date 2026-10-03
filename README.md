@@ -158,8 +158,9 @@ It is 52px tall on desktop, 44px from 641 to 1239px, 36px on phones and 30px bel
 has a second outer ring in its color and a raised look (top highlight, drop shadow) that presses in on tap. The Fed Chair / CEOs /
 US Government category buttons sit at the top of the Who panel, with that category's people right below. Person names are red
 (#ff5449 on dark; a darker red #a8201a on the light selected chip); ticker pills stay green.
-**Phones (640px and below):** logo (with Share/About) on the first row, the headline on its own line, the two view buttons in a row under it (no subline); category, person and A–Z
-chips in single horizontal-scroll rows; the Timeframe row stays one line (years scroll sideways, 36px tap targets,
+**Phones (640px and below):** logo (with Share/About) on the first row, the headline on its own line, the two view buttons in a row under it (no subline); category and person
+chips in single horizontal-scroll rows; the A–Z index wraps into a grid of 40px-tall tap targets with 17px letters (9 x 3, so about
+37px wide at 390px, 34px at 360px and 30px at 320px; 14 x 2 from 560px; the cells touch and the visible box is drawn inside, empty letters grayed); the Timeframe row stays one line (years scroll sideways, 36px tap targets,
 13px text); About starts collapsed
 (the header's About link opens it). At 390×844 the red stats are at about y=310 and the table or cloud starts right below.
 

@@ -342,10 +342,10 @@ def main():
 TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm12">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm12">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm13">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm13">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm12">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm13">
 <title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
 <meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
 <meta name="application-name" content="Mouth Math">
@@ -355,7 +355,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
 <meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm12">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm13">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
@@ -812,6 +812,18 @@ kbd{font:inherit;font-size:11px;font-weight:700;border:1px solid var(--rule);bor
  #words h2#personTitle{font-size:16px}}
 #cats button.cat.on::before{content:none;display:none}
 tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num-red)}
+/* Phones: A-Z as a wrapping grid of ~40px tap targets (9 x 3; 14 x 2 from 560px), 17px letters; the cells touch (every pixel
+   is tappable) and the visible rounded box is drawn 2px inside each one; empty letters stay grayed and disabled */
+@media (max-width:640px){
+ .pk.has-az #az{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:0;overflow:visible;padding:0;margin:-2px -2px 6px;border-left:0}
+ .pk.has-az #az button{position:relative;isolation:isolate;width:auto;height:40px;margin:0;padding:0;font-size:17px;border:0;border-radius:8px;
+  background:transparent!important;touch-action:manipulation;outline-offset:-2px}
+ .pk.has-az #az button::before{content:"";position:absolute;inset:2px;z-index:-1;border:1px solid #2a2925;border-radius:6px}
+ .pk.has-az #az button.all{grid-column:auto;width:auto;margin:0;padding:0;font-size:15px;letter-spacing:.02em}
+ .pk.has-az #az button.all::before{border-color:var(--rule)}
+ .pk.has-az #az button:disabled{font-weight:400}.pk.has-az #az button:disabled::before{border-color:transparent}
+ .pk.has-az #az button[aria-pressed="true"]{color:#0b0b0b}.pk.has-az #az button[aria-pressed="true"]::before{background:var(--ink);border-color:var(--ink)}}
+@media (min-width:560px) and (max-width:640px){.pk.has-az #az{grid-template-columns:repeat(14,minmax(0,1fr))}}
 @media (min-width:900px){.pk.has-az #persons:not(.grouped){display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start}
  .pk.has-az #persons:not(.grouped)>.lbl{width:100%;margin:0 0 2px}.pk.has-az #persons:not(.grouped) .chip{margin:0}}
 /* ---- Logo: red-outline mouth straight on the black header (no cream tile) ---- */
