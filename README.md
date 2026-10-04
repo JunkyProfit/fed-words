@@ -163,7 +163,7 @@ are plain cream 15px text buttons (no fill; a thin cream outline marks the selec
 inside the documents sheet. On phones (480px and narrower) category names like "US Government" wrap to two lines rather than shrink below 14px or get clipped.
 One Show row only (the duplicate above the cloud is gone). Arial throughout; black, cream/white, red and green.
 
-**Slim page text (mm23):** the page carries no methodology prose. About is short, in this order (mm24): the red lead "Out of the mouth, into the math.", the tagline "Every Word Out Of Their Mouth Counts", the short "Word counts from official ..." line, the transparency-and-truth line, the plain SEO sentence (Federal Reserve, banks, earnings calls), then the Contact form (Web3Forms; no email address anywhere on the site) and the Privacy Policy link. The fine print (not financial advice; not affiliated with anyone listed) is in the site footer. The note under
+**Slim page text (mm23):** the page carries no methodology prose. About is short, in this order (mm24): the red lead "Out of the Mouth, into the Math.", the tagline "Every Word Out Of Their Mouth Counts", the short "Word counts from official ..." line, the transparency-and-truth line, the plain SEO sentence (Federal Reserve, banks, earnings calls), then the Contact form (Web3Forms; no email address anywhere on the site) and the Privacy Policy link. The fine print (not financial advice; not affiliated with anyone listed) is in the site footer. The note under
 the cloud is just "Data through <date>" (plus the keyboard shortcuts on desktop). Helper captions are gone: no "Tick one
 or more" line in Choose documents, a shorter popover hint (hidden on touch screens), and on phones the "Showing the top N"
 line under the table and the cloud's "Top N of M words" line are hidden (the stats row already shows the count). The
@@ -180,6 +180,20 @@ names; no A–Z needed there). A–Z taps keep it open; picking a person folds i
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
 `/` (filter words), `V` (switch between the Super Math and Super Cloud tabs; nothing to do side by side), `S` (share), `?` (hint).
 
+**Speaker search (mm24, label mm27):** on phones the selected speaker is one big row (red name, ticker, a large white triangle and a cream
+**Search** label; "Close" while the list is open). Tapping it opens the speaker list with the search box focused. Once the red stats scroll away, a slim
+sticky top bar shows the speaker, the triangle and **Search**. Tapping it goes back to the top with the list open and the search box focused.
+After a pick the list folds and the name and red stats come into view.
+
+**Common words at the bottom (mm27):** with "Hide common stopwords" checked (the default), the Super Math table still shows exactly N rows.
+It fills them with meaningful words first. The stopwords that would have ranked in the top N (the, and, to ...) go at the bottom in faint gray
+italics, with their real rank in parentheses, e.g. "and (#1)", and no bar. So if 6 stopwords are in the top 100, rows 95–100 are those gray
+stopwords. Right below the table, **View words in actual order** unchecks Hide common stopwords, puts them back in their true ranks (italic) and
+scrolls back up to the red stats. The cloud never shows stopwords while hidden. The bar column header reads FREQUENCY.
+
+**Stopwords (mm27):** with "Hide common stopwords" unchecked, stopwords (the, and, to ...) are shown in italics in both the Super Math table
+and the Super Cloud (DOM and the live canvas), so they stand apart from the meaningful words.
+
 **Fed Chair label (mm25):** on the Fed Chair page the results heading reads **What the Fed Said** (small cream Arial line, 15px bold)
 above the chair's name, in place of "From the mouth of"; every other speaker keeps "From the mouth of <name>".
 
@@ -189,7 +203,7 @@ one is laid out at zero height and invisible, so the swap is instant. The same p
 and stopword setting feed both. From **1100px wide** both views sit **side by side** (table left, cloud right, each under a small cream
 heading, `h3.secth`; the cloud is sticky so it stays in view next to a long table) and the tabs are hidden. The faint `between` ad placeholder sits below the views. Font size scales with the square root of the count, from 12px to 72px
 (the largest size is smaller on narrow screens). One shared **Show 20 / 100 / ALL** chip row (stair steps: bottom-aligned, each chip a little taller than the last, 20 shortest and ALL tallest; 36/41/46px tall on phones, 30/35/40px on desktop)
-(Arial, red outline; the selected chip is filled red) sits right under the tabs and sets how many words both sections show; the default is **20** on every device. Super Math lists the top N most frequent words
+(Arial, red outline; the selected chip is filled red) sits right under the tabs and sets how many words both sections show; the default is **100** on every device (mm27). Super Math lists the top N most frequent words
 (after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
 at most 300 words, so All means the top 300 in the cloud. "Hide common stopwords" (on by default) applies to both.
 Sorting a table column only reorders the table (the cloud is left as is). Hover a word for its count and the same sentence popover as the table
@@ -242,7 +256,7 @@ the cream backgrounds). The theme is one block at the end of the CSS in `build.p
 the person heading and the red stat numbers; normal tracking for body text; uppercase with +0.06em only on tiny
 labels (category pill, source type, group labels). Counts use tabular numerals.
 
-URL state: the default is a clean URL, plus `person=`, `docs=` and `n=100|all` when not 20 (old links: `n=300` maps to All, `n=150` to 100, and `n=10`, `n=25`, `n=50` to the default 20). The Super Cloud
+URL state: the default is a clean URL, plus `person=`, `docs=` and `n=20|all` when not 100 (old links: `n=300` maps to All, `n=150` to 100, and `n=10`, `n=25`, `n=50` to 20). The Super Cloud
 tab adds `view=cloud` (not side by side). `#view=cloud`, old `#mode=cloud` / `#mode=visual` links and the plain `#cloud` anchor open the Super Cloud tab;
 old `#mode=standard` links open on Super Math.
 

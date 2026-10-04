@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm26">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm26">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm26">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm27">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm27">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm27">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm26">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm27">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -388,7 +388,7 @@ footer a{color:var(--muted)}
 .mmform{display:grid;gap:4px;max-width:520px;margin:6px 0 12px;font-family:Arial,Helvetica,sans-serif}.mmform label{font-size:13px;font-weight:700;color:#f3eee4;margin-top:6px}.mmform .opt{font-weight:400;color:var(--muted)}.mmform input:not([type=checkbox]),.mmform textarea{font:16px/1.35 Arial,Helvetica,sans-serif;color:#f3eee4;background:#0b0b0b;border:1px solid #3a3733;border-radius:6px;padding:9px 11px;width:100%;box-sizing:border-box}.mmform textarea{resize:vertical;min-height:96px}.mmform input:focus,.mmform textarea:focus{outline:2px solid #ff5449;outline-offset:1px;border-color:#ff5449}.mmform button{justify-self:start;margin-top:10px;min-height:44px;padding:0 24px;border:0;border-radius:8px;background:#ff5449;color:#fff;font:700 16px Arial,Helvetica,sans-serif;cursor:pointer}.mmform button:hover{background:#ff6b61}.mmform button:disabled{opacity:.6;cursor:default}.mmform button:focus-visible{outline:2px solid #fff;outline-offset:2px}.mmform .mmhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}.mmform .fmsg{margin:6px 0 0;min-height:1.2em;font-size:14px;color:#f3eee4}.mmform .fmsg.ok{color:#85bb65}.mmform .fmsg.err{color:#ff5449}@media (max-width:640px){.mmform button{width:100%}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm26" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm27" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -459,10 +459,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm26">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm26">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm27">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm27">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm26">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm27">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -475,14 +475,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm26">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm27">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm26">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm27">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1242,7 +1242,7 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
 .mmform{display:grid;gap:4px;max-width:520px;margin:6px 0 12px;font-family:Arial,Helvetica,sans-serif}.mmform label{font-size:13px;font-weight:700;color:#f3eee4;margin-top:6px}.mmform .opt{font-weight:400;color:var(--muted)}.mmform input:not([type=checkbox]),.mmform textarea{font:16px/1.35 Arial,Helvetica,sans-serif;color:#f3eee4;background:#0b0b0b;border:1px solid #3a3733;border-radius:6px;padding:9px 11px;width:100%;box-sizing:border-box}.mmform textarea{resize:vertical;min-height:96px}.mmform input:focus,.mmform textarea:focus{outline:2px solid #ff5449;outline-offset:1px;border-color:#ff5449}.mmform button{justify-self:start;margin-top:10px;min-height:44px;padding:0 24px;border:0;border-radius:8px;background:#ff5449;color:#fff;font:700 16px Arial,Helvetica,sans-serif;cursor:pointer}.mmform button:hover{background:#ff6b61}.mmform button:disabled{opacity:.6;cursor:default}.mmform button:focus-visible{outline:2px solid #fff;outline-offset:2px}.mmform .mmhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}.mmform .fmsg{margin:6px 0 0;min-height:1.2em;font-size:14px;color:#f3eee4}.mmform .fmsg.ok{color:#85bb65}.mmform .fmsg.err{color:#ff5449}@media (max-width:640px){.mmform button{width:100%}}
 #about h4.abcontact{font:700 16px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;margin:14px 0 0}
 /* ---- mm24 minimalist pass: fewer borders/labels/decoration, readable sizes (>=14px body on phones), Arial, black/cream/red/green ---- */
-#cats button .ci,header .hview .vcard svg,header .hview .vcard .vt small{display:none!important}body #cats button.cat{grid-template-columns:1fr!important;column-gap:0!important}body #picker #cats .ct small{grid-column:1/-1!important}@media (max-width:480px){body #picker #cats .ct b{white-space:normal!important;font-size:14px!important;line-height:1.1!important;overflow-wrap:anywhere}}@media (max-width:379px){body .tbwrap td.w{overflow-wrap:anywhere}body .tbwrap th.barc{min-width:36px;width:36px}}@media (max-width:480px){body #tfbar{flex-wrap:wrap!important;row-gap:8px!important}body #tfbar .yrs{flex:1 1 0!important;min-width:0!important;order:0!important}body #tfbar #docPick{flex-basis:100%;order:5}}   /* phones: All · None · years on one row, Choose documents below */   /* decorative icons + "Ranked table"/"Bigger = said more" */
+#cats button .ci,header .hview .vcard svg,header .hview .vcard .vt small{display:none!important}body #cats button.cat{grid-template-columns:1fr!important;column-gap:0!important}body #picker #cats .ct small{grid-column:1/-1!important}@media (max-width:480px){body #picker #cats .ct b{white-space:normal!important;font-size:14px!important;line-height:1.1!important;overflow-wrap:anywhere}}@media (max-width:379px){body .tbwrap td.w{overflow-wrap:anywhere}body .tbwrap th.barc{min-width:36px;width:36px}}@media (max-width:480px){body .tbwrap th.barc{letter-spacing:0!important;padding-left:4px!important;padding-right:2px!important;font-size:11px!important}}@media (max-width:480px){body #tfbar{flex-wrap:wrap!important;row-gap:8px!important}body #tfbar .yrs{flex:1 1 0!important;min-width:0!important;order:0!important}body #tfbar #docPick{flex-basis:100%;order:5}}   /* phones: All · None · years on one row, Choose documents below */   /* decorative icons + "Ranked table"/"Bigger = said more" */
 body .pk.pcoll #pdisc .pdg{display:none!important}body .pk.psolo #persons button.chip.on::before{content:none!important;display:none!important}   /* "CEO"/"FED CHAIR" repeat the tab */
 body #stats .stat{border:0!important}   /* boxes inside a bordered card: background only */
 #more:not(.lim),.cloudwrap .cloud-bar{display:none!important}   /* the stats row already says how many words are shown */
@@ -1330,13 +1330,23 @@ html.dsopen,html.dsopen body{overflow:hidden}
  #docPick .dsheet{position:absolute;left:0;right:auto;bottom:auto;top:calc(100% + 6px);width:min(580px,calc(100vw - 40px));max-height:min(70vh,560px);
   border:1px solid #3a3733;border-radius:8px;padding:0 16px 14px;box-shadow:0 12px 32px rgba(0,0,0,.7)}
 }
+
+/* mm27: with "Hide common stopwords" unchecked, stopwords (the, and, to ...) are italic in the table and the cloud */
+#tb tr.stop td.w,#cloud span.stop{font-style:italic}
+
+/* mm27: common words (stopwords) that would rank in the top N sit at the bottom of the table in faint gray italics with their real rank;
+   "View words in actual order" (right below) turns Hide common stopwords off and puts them back in place */
+#tb tr.tail td{color:#7d776d!important;font-weight:400!important}#tb tr.tail td.w{font-style:italic}#tb tr.tail .rr{font-style:normal;font-size:.86em;color:#6c675e}
+#tb tr.tail td.cnt{color:#8a5550!important}
+.rsrow{display:flex;align-items:center;gap:8px;margin:12px 2px 4px;font:400 15px/1.3 Arial,Helvetica,sans-serif;color:#f3eee4;cursor:pointer}
+.rsrow[hidden]{display:none}.rsrow input{width:18px;height:18px;accent-color:var(--num-red);margin:0}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home">__LOGO__</a>
 
 </div>
 </header>
-<button type="button" id="spkbar" aria-hidden="true" tabindex="-1"><span class="sbn"></span><span class="tk sbt"></span><span class="sba" aria-hidden="true"></span><span class="sbc">Change</span></button>
+<button type="button" id="spkbar" aria-hidden="true" tabindex="-1"><span class="sbn"></span><span class="tk sbt"></span><span class="sba" aria-hidden="true"></span><span class="sbc">Search</span></button>
 <main>
 <div class="topgrid">
 <section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div></nav>
@@ -1373,9 +1383,10 @@ html.dsopen,html.dsopen body{overflow:hidden}
 </div>
 <div id="vpanes" class="tab-math">
 <div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Super Math</h3>
-<div class="tbwrap"><table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc" aria-hidden="true"></th></tr></thead>
+<div class="tbwrap"><table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc">Frequency</th></tr></thead>
 <tbody id="tb"></tbody></table><div class="topring" id="topRing" aria-hidden="true" hidden></div></div>
-<p class="muted" id="more"></p></div>
+<p class="muted" id="more"></p>
+<label class="rsrow" id="rsrow" hidden><input type="checkbox" id="realSpots"> View words in actual order</label></div>
 <div class="vpane" id="vCloud" role="tabpanel" aria-labelledby="tabCloud"><h3 class="secth" id="superCloud">Super Cloud</h3>
 <div class="cloudwrap"><div id="cloud"></div>
 <div class="cloud-bar"><span class="muted" id="cloudNote"></span></div></div></div>
@@ -1391,7 +1402,7 @@ html.dsopen,html.dsopen body{overflow:hidden}
 <!-- ad slot: incontent · 300x250 desktop and phone · reserved for an AdSense unit after approval -->
 <aside class="ad" data-slot="incontent" data-ad-slot-name="incontent" data-ad-size="300x250" data-ad-size-phone="300x250"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About Mouth Math</button></h2>
-<h3 class="ablead">Out of the mouth, into the math.</h3>
+<h3 class="ablead">Out of the Mouth, into the Math.</h3>
 <p class="abtitle">Every Word Out Of Their Mouth Counts</p>
 <p class="absub">Word counts from official speeches, testimony, letters and court opinions by Fed chairs, CEOs and US Government officials.</p>
 <p>This site was created with transparency and truth in mind.</p>
@@ -1415,7 +1426,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10,CLOUD_MAX=300;
-const NOPTS=['20','100','all'],NDEF='20';let NSHOW=NDEF;   // words shown in both views: 20 (default on every device), 100 or all (the cloud caps at CLOUD_MAX)
+const NOPTS=['20','100','all'],NDEF='100';let NSHOW=NDEF;   // words shown in both views: 20 (default on every device), 100 or all (the cloud caps at CLOUD_MAX)
 const nCap=()=>NSHOW==='all'?Infinity:+NSHOW;
 const unitOf=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
 const q=$('q'),hide=$('hideStop'),tb=$('tb');
@@ -1478,9 +1489,9 @@ function renderPicker(){
   pk.classList.toggle('pcoll',coll);pk.classList.toggle('psolo',!coll);pk.classList.toggle('pgrp',coll&&grp);
   if(!coll){const on=$('persons').querySelector('.chip.on');if(on)on.dataset.glabel=P.group||P.category.replace(/s$/,'')}   // phones: single-person category (Fed Chair) shows its name like the collapse row
   pk.classList.toggle('popen',coll&&pOpen);pd.hidden=!coll;pd.setAttribute('aria-expanded',coll&&pOpen?'true':'false');
-  if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?`<span class="tk">${esc(P.ticker)}</span>`:''}<span class="pda" aria-hidden="true"></span><span class="pdc" aria-hidden="true">${pOpen?'Close':'Change'}</span>`;
-    pd.setAttribute('aria-label',`Change speaker: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
-    pd.onclick=()=>{pOpen=!pOpen;renderPicker();$('pdisc').focus()}}
+  if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?`<span class="tk">${esc(P.ticker)}</span>`:''}<span class="pda" aria-hidden="true"></span><span class="pdc" aria-hidden="true">${pOpen?'Close':'Search'}</span>`;
+    pd.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
+    pd.onclick=()=>{pOpen=!pOpen;renderPicker();const s=$('psearch');if(pOpen&&s&&s.getClientRects().length)s.focus({preventScroll:true});else $('pdisc').focus()}}   // open = search box focused (phones show the keyboard)
   const cf=$('clearF');if(cf)cf.onclick=()=>{pq='';idxSel='';azSel='';$('psearch').value='';renderPicker();$('psearch').focus()};
   $('personMeta').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun} from ${P.source}`;
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
@@ -1588,7 +1599,12 @@ function render(cloudToo=true){   // one selection feeds both: the Super Math ta
   let r=0,prev=null;base.forEach((x,i)=>{if(x.count!==prev){r=i+1;prev=x.count}x.rank=r});
   const s=q.value.trim().toLowerCase();let re=null;if(s){try{re=new RegExp(s)}catch(e){}}
   const match=s?base.filter(x=>re?re.test(x.word):x.word.includes(s)):base.slice();
-  const list=match.slice(0,Math.min(nCap(),LIMIT));   // table: the top N most frequent matches, then sorted as chosen
+  const cap=Math.min(nCap(),LIMIT);let tail=[];
+  if(hide.checked){   // stopwords that WOULD rank in the top N go to the bottom of the N rows (faint gray italics, real rank)
+    const full=BASE.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:a.word>b.word?1:0));
+    let r2=0,p2=null;full.forEach((x,i)=>{if(x.count!==p2){r2=i+1;p2=x.count}x.rr=r2});
+    tail=(s?full.filter(x=>re?re.test(x.word):x.word.includes(s)):full).slice(0,cap).filter(x=>x.stop)}
+  const list=match.slice(0,cap-tail.length);   // table: the top N most frequent matches (minus the stopword tail), then sorted as chosen
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
   $('sDocs').textContent=sel.size+' / '+DOCS.length;
   const anim=P.slug!==lastCountSlug;lastCountSlug=P.slug;
@@ -1596,10 +1612,12 @@ function render(cloudToo=true){   // one selection feeds both: the Super Math ta
   setStat('sUnique',base.length,anim);
   const max=base.length?base[0].count:1;
   const topW=list.length?list.reduce((a,b)=>b.count>a.count||(b.count===a.count&&b.word<a.word)?b:a).word:null;   // the single most frequent word (red)
-  tb.innerHTML=list.length?list.map(x=>`<tr class="${x.stop?'stop':''}${x.word===topW?' top':''}" data-w="${esc(x.word)}"${x.word===topW?` tabindex="0" role="button" aria-label="#1 word, ${esc(x.word)}: ${x.count.toLocaleString()} — show excerpts"`:''}><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')
+  tb.innerHTML=(list.length||tail.length)?list.map(x=>`<tr class="${x.stop?'stop':''}${x.word===topW?' top':''}" data-w="${esc(x.word)}"${x.word===topW?` tabindex="0" role="button" aria-label="#1 word, ${esc(x.word)}: ${x.count.toLocaleString()} — show excerpts"`:''}><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')+
+      tail.map(x=>`<tr class="stop tail" data-w="${esc(x.word)}"><td class="num"></td><td class="w">${esc(x.word)} <span class="rr">(#${x.rr})</span></td><td class="num cnt">${x.count.toLocaleString()}</td><td></td></tr>`).join('')
     :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
-  setStat('sShown',list.length,anim);
-  $('more').textContent=match.length>list.length?`Showing the top ${list.length.toLocaleString()} of ${match.length.toLocaleString()} words${match.length>LIMIT&&NSHOW==='all'?' (table limit; use the filter to find others)':' · choose All above to list every word'}.`:'';
+  setStat('sShown',list.length+tail.length,anim);
+  $('realSpots').checked=!hide.checked;$('rsrow').hidden=!(tail.length||!hide.checked);
+  $('more').textContent=match.length>list.length?`Showing the top ${(list.length+tail.length).toLocaleString()} of ${match.length.toLocaleString()} words${match.length>LIMIT&&NSHOW==='all'?' (table limit; use the filter to find others)':' · choose All above to list every word'}.`:'';
   $('more').classList.toggle('lim',match.length>LIMIT&&NSHOW==='all');   // the line only shows when the table limit is hit
   document.querySelectorAll('th[data-k]').forEach(th=>{const l=th.dataset.l||(th.dataset.l=th.textContent.replace(/ [▲▼]$/,''));th.innerHTML=esc(l)+(th.dataset.k===sortK?`<span class="sarr" aria-hidden="true">${sortDir<0?' ▼':' ▲'}</span>`:'')});
   placeTopRing();
@@ -1613,6 +1631,8 @@ function update(){hidePop();syncTimeframe();aggregate();render()}
 document.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{hidePop();const k=th.dataset.k;
   if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=k==='count'?-1:1}render(false)});   // sorting only reorders the table; the cloud stays as is
 q.oninput=()=>{hidePop();render()};hide.onchange=()=>{hidePop();render()};
+$('realSpots').onchange=()=>{hide.checked=!$('realSpots').checked;hidePop();render();   // common words back in their real ranks (italic), then back to the top of the table
+  requestAnimationFrame(()=>{const top=scrollY+$('stats').getBoundingClientRect().top-8;if(top<scrollY)scrollTo({top:Math.max(0,top),behavior:RM.matches?'instant':'smooth'})})};
 
 // ---- sentence popover (hover = preview, click/tap = pin) ----
 const TOK=/[a-z](?:\.[a-z])+\.?(?:'s)?(?![a-z0-9])|[a-z0-9]+(?:'[a-z]+)*/g; // = TOKEN_RE in build.py
@@ -1788,7 +1808,7 @@ function drawCloud(list){
   const minH=placed.length<=25?(W<600?200:230):0,y0=py0-Math.max(0,minH-ph)/2;   // short clouds (10/25 words) get room to float, words centered
   cloud.style.height=Math.ceil(Math.max(ph,minH))+'px';
   cloud.innerHTML=placed.map(c=>{const b=c.b,x=b.x;return `<span data-w="${esc(x.word)}" data-c="${x.count}" role="button" tabindex="0" aria-label="${x.word===words[0].word?'#1 word, ':''}${esc(x.word)}: ${x.count}${x.word===words[0].word?' — show excerpts':''}" `+
-    `style="left:${(c.x+1+b.mx).toFixed(1)}px;top:${(c.y-y0+1+b.my).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2-2*b.my}px;height:${c.h-2-2*b.my}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word?' class="top"':''}>${esc(x.word)}</span>`}).join('');
+    `style="left:${(c.x+1+b.mx).toFixed(1)}px;top:${(c.y-y0+1+b.my).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2-2*b.my}px;height:${c.h-2-2*b.my}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word||x.stop?` class="${[x.word===words[0].word?'top':'',x.stop?'stop':''].join(' ').trim()}"`:''}>${esc(x.word)}</span>`}).join('');
   TOPW=words[0].word;
   cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0),mode:'static'};
   buildBodies(placed,y0,W);markTop();
@@ -1885,7 +1905,7 @@ function paint(p){
   const ctx=p.drawingContext,pd=p.pixelDensity()||1;p.clear();ctx.setTransform(pd,0,0,pd,0,0);ctx.textAlign='center';ctx.textBaseline='middle';
   for(let i=BODIES.length-1;i>=0;i--){const b=BODIES[i];if(!b.w)continue;
     if(b.word===curWord){ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--hl').trim()||'#e2f0e7';ctx.beginPath();ctx.roundRect?ctx.roundRect(b.x-b.w/2,b.y-b.h/2,b.w,b.h,5):ctx.rect(b.x-b.w/2,b.y-b.h/2,b.w,b.h);ctx.fill()}
-    ctx.font=`${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;
+    ctx.font=`${STOP.has(b.word)?'italic ':''}${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;   // stopwords italic (they only appear with 'Hide common stopwords' off)
     ctx.fillStyle=b.word===TOPW?REDC:b.col;
     if(b.rot){const c=Math.cos(b.rot)*pd,sn=Math.sin(b.rot)*pd;ctx.setTransform(c,sn,-sn,c,b.x*pd,(b.y+b.f*0.03)*pd);ctx.fillText(b.word,0,0);ctx.setTransform(pd,0,0,pd,0,0)}
     else ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
@@ -1903,7 +1923,7 @@ function openSpeakers(){hidePop();if($('picker').querySelector('.pk').classList.
   scrollTo({top:0,behavior:RM.matches?'instant':'smooth'})}
 const SB=$('spkbar');let sbOn=false,sbRaf=0;
 function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
-  SB.setAttribute('aria-label',`Change speaker: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected`)}
+  SB.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected`)}
 function sbCheck(){sbRaf=0;const on=!!P&&$('stats').getBoundingClientRect().bottom<0;if(on===sbOn)return;sbOn=on;if(on)sbFill();
   SB.classList.toggle('show',on);SB.setAttribute('aria-hidden',on?'false':'true');SB.tabIndex=on?0:-1;document.body.classList.toggle('sbar',on)}
 addEventListener('scroll',()=>{if(!sbRaf)sbRaf=requestAnimationFrame(sbCheck)},{passive:true});addEventListener('resize',()=>{if(!sbRaf)sbRaf=requestAnimationFrame(sbCheck)});
@@ -1957,7 +1977,7 @@ window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,jumpTo,get view
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
 // initial state from URL: #person=<slug>&docs=<ids>  (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
-  {const n=hp.get('n');if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> All, 150 -> 100, 10/25/50 -> the default (20)
+  {const n=hp.get('n');if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(['10','25','50'].includes(n))setN('20',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> All, 150 -> 100, 10/25/50 -> 20
   const toCloud=hp.get('view')==='cloud'||['cloud','visual'].includes(hp.get('mode'))||location.hash==='#cloud';   // #view=cloud, old Super Cloud links and the #cloud anchor open the cloud tab
   setView(toCloud?'cloud':'math');
   return setPerson(hp.get('person')||DEFAULT,(hp.get('docs')||'').split(',').filter(Boolean)).then(()=>{
