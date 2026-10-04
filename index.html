@@ -2,24 +2,31 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm20">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm20">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm21">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm21">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm20">
-<title>Mouth Math — Every Word Out Of Their Mouth Counts</title>
-<meta name="description" content="Mouth Math: every word public figures said in their official speeches, letters and texts, counted and ranked.">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm21">
+<title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
+<meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
+<meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
+<link rel="canonical" href="https://mouthmath.com/">
+<meta name="robots" content="index, follow">
 <meta name="application-name" content="Mouth Math">
 <meta name="apple-mobile-web-app-title" content="Mouth Math">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mouth Math">
-<meta property="og:title" content="Mouth Math — Every Word Out Of Their Mouth Counts">
-<meta property="og:description" content="Word counts from official speeches, letters and texts by public figures, ranked from most to least frequent.">
+<meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
+<meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm20">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm21">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
+<meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm21">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 Arial,"Helvetica Neue",Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
@@ -181,7 +188,6 @@ body.view-visual .only-standard,body:not(.view-visual) .only-visual{display:none
 #cloud canvas.cloudcv{position:absolute;left:0;top:0;pointer-events:none;z-index:0}
 #cloud.live span{color:transparent!important;background:transparent!important;font-size:0!important;padding:0!important;z-index:1}
 #cloud.live span:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.cloud-bar .motion{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
 /* ---- Black line-art theme (matches the logo's thin black strokes); delete this block to revert ---- */
 :root{--ink:#141413;--cream:#f5efe2;--rule:#1c1b19;--hl:#ece3cf;--ink:#141413}
 body{color:var(--ink)}a{color:var(--ink);text-decoration-color:rgba(20,20,19,.45);text-underline-offset:2px}a:hover{text-decoration-color:var(--ink)}
@@ -430,23 +436,13 @@ aside.ad .adl{display:block;font-size:9.5px;font-weight:700;letter-spacing:.12em
 aside.ad .adbox,aside.ad ins{height:var(--ah);box-sizing:border-box}
 aside.ad .adbox{border:1px solid #242220;border-radius:2px;display:flex;align-items:center;justify-content:center;gap:12px;
  background:repeating-linear-gradient(135deg,transparent 0 9px,rgba(243,238,228,.018) 9px 10px);opacity:.75}
-aside.ad .admark{width:30px;height:30px;fill:none;stroke:#6a655d;stroke-width:1}
-aside.ad .adtx{display:flex;flex-direction:column;line-height:1.15}
-aside.ad .adtx b{font-size:15px;font-weight:700;letter-spacing:-.02em;color:#77726a}aside.ad .adtx small{font-size:11px;color:#6a655d}
+/* Mock ad blocks (until AdSense units go live): no text, just a faint decorative tile of math marks (+ = ± × in cream, one red minus) */
+aside.ad .adbox.adfaint{display:block;border:1px solid #1d1b19;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='none' stroke-width='1.2' stroke-linecap='round'%3E%3Cg stroke='rgba%28243,238,228,.085%29'%3E%3Cpath d='M10 14h8M14 10v8'/%3E%3Cpath d='M46 16h8M46 20h8'/%3E%3Cpath d='M28 44h8M32 40v8M28 51h8'/%3E%3Cpath d='M8 56l5 5M13 56l-5 5'/%3E%3C/g%3E%3Cpath stroke='rgba%28255,84,73,.10%29' d='M56 57h8'/%3E%3C/svg%3E") repeat 0 0/72px 72px;opacity:1}
 aside.ad[data-slot="side"]{margin:16px 0 0;width:100%;max-width:300px}
-aside.ad a.adbox{position:relative;text-decoration:none;color:inherit;cursor:pointer;transition:border-color .15s,background .15s}
-aside.ad a.adbox:hover,aside.ad a.adbox:focus-visible{border-color:var(--num-red);background:#140d0c}
-aside.ad a.adbox:focus-visible{outline:2px solid var(--num-red);outline-offset:2px}
-aside.ad .adhint{position:absolute;right:8px;bottom:6px;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--num-red);opacity:0;transition:opacity .15s}
-aside.ad a.adbox:hover .adhint,aside.ad a.adbox:focus-visible .adhint{opacity:1}
-@media (hover:none),(max-width:640px){aside.ad .adhint{display:none}}   /* touch: the 'Sponsor your ad here' link below does the job */
-aside.ad a.adcta{display:inline-block;margin:6px 0 0;font-size:12.5px;color:var(--ink);text-decoration:underline;text-decoration-color:var(--num-red);text-underline-offset:3px}
-aside.ad a.adcta:hover{color:var(--num-red)}
 aside.ad[data-slot="incontent"]{margin:24px auto}
 aside.ad[data-slot="leader"]{margin:24px auto 18px}
 @media (max-width:899px){aside.ad[data-slot="side"]{display:none}}
-@media (max-width:640px){aside.ad{width:min(100%,var(--amw))}aside.ad .adbox,aside.ad ins{height:var(--amh)}aside.ad .admark{width:20px;height:20px}
- aside.ad .adtx b{font-size:13px}aside.ad{margin:18px auto}}
+@media (max-width:640px){aside.ad{width:min(100%,var(--amw))}aside.ad .adbox,aside.ad ins{height:var(--amh)}aside.ad{margin:18px auto}}
 @media (min-width:900px){body main>aside.ad{grid-column:1/-1}}
 /* toast + shortcut hint */
 #toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:var(--ink);color:#0b0b0b;font-size:13.5px;font-weight:700;padding:9px 16px;
@@ -611,12 +607,12 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:21px;lin
 #nbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:-4px 0 12px;font-family:Arial,Helvetica,sans-serif}
 #nbar .nbl{font-size:14px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.04em}
 #nbar .nbl:first-child{margin-right:2px}#nbar .nbl:last-child{margin-left:2px;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400}
-#nbar .nchip{font:700 14px/1 Arial,Helvetica,sans-serif;min-width:46px;min-height:32px;padding:0 12px;border-radius:6px;cursor:pointer;
+#nbar .nchip{font:700 13px/1 Arial,Helvetica,sans-serif;min-width:40px;min-height:32px;padding:0 11px;border-radius:6px;cursor:pointer;
  color:var(--num-red);background:transparent;border:1.5px solid var(--num-red);font-variant-numeric:tabular-nums}
 #nbar .nchip:hover{background:color-mix(in srgb,var(--num-red) 16%,transparent)}
 #nbar .nchip[aria-pressed="true"]{background:var(--num-red);color:#fff;border-color:var(--num-red)}
 #nbar .nchip:focus-visible{outline:2px solid #fff;outline-offset:2px}
-@media (max-width:640px){#nbar{gap:6px;margin:0 0 10px;flex-wrap:nowrap}#nbar .nchip{flex:1 1 0;min-width:0;min-height:40px;padding:0 4px;font-size:15px}
+@media (max-width:640px){#nbar{gap:6px;margin:0 0 10px;flex-wrap:nowrap}#nbar .nchip{flex:none;min-width:40px;min-height:36px;padding:0 10px;font-size:14px}
  #nbar .nbl:last-child{display:none}body.view-visual #words>#nbar{order:0}}
 /* ---- "Choose documents" arrow: 1.5x and white (label text stays red) ---- */
 #tfbar #docPick>summary::before{width:10.5px;height:10.5px;border-right-width:3px;border-bottom-width:3px;border-color:#fff;margin:0 5px 0 2px}
@@ -650,7 +646,7 @@ body #cats{gap:9px!important}body #cats button{padding:9px 13px!important}
 body #persons{gap:8px!important;column-gap:8px!important;row-gap:8px!important}body #persons button.chip{padding:6px 14px!important}
 body #idx{gap:8px!important}body #idx button{padding:5px 11px!important}
 body #tfbar{gap:9px!important}body #tfbar .chip,body #tfbar label.chip,body #tfbar #docPick>summary{min-height:32px!important;padding:6px 12px!important}
-body #nbar{gap:9px!important}body #nbar .nchip{min-height:36px!important;padding:0 14px!important}
+body #nbar{gap:7px!important}body #nbar .nchip{min-height:32px!important;padding:0 11px!important}
 body header .hact{gap:10px!important}body header .hact button,body header .hact a{padding:6px 13px!important}
 @media (max-width:640px){
  body header .viewbar.hview,body header #views{gap:12px!important}body header .hview .vcard{padding:9px 10px!important;min-height:42px}
@@ -658,8 +654,28 @@ body header .hact{gap:10px!important}body header .hact button,body header .hact 
  body #persons{gap:8px!important}body #persons button.chip{padding:4px 12px!important}
  body #idx{gap:8px!important}body #idx button{padding:3px 10px!important}
  body #tfbar{gap:8px!important}body #tfbar .chip,body #tfbar label.chip,body #tfbar #docPick>summary{min-height:40px!important;padding:7px 12px!important}
- body #nbar{gap:8px!important}body #nbar .nchip{min-height:42px!important;padding:0 4px!important}
+ body #nbar{gap:6px!important}body #nbar .nchip{min-height:36px!important;padding:0 10px!important}
  body header .hact{gap:8px!important}body header .hact button,body header .hact a{padding:5px 11px!important}}
+/* Show chips, smaller (Oct 2026): content-sized, 36px tall on phones; tighter padding on narrow phones keeps one row at 320 */
+@media (max-width:374px){body #nbar{gap:5px!important}body #nbar .nchip{min-width:34px;padding:0 7px!important}}
+@media (max-width:330px){body #nbar .nchip{padding:0 6px!important}#nbar .nbl:first-child{font-size:13px;margin-right:0}}
+/* ---- Phones: collapsible people list for categories with small sub-groups (US Government). Closed = selected name (red) + white arrow ---- */
+#pdisc{display:none}
+@media (max-width:640px){
+ .pk.pcoll #pdisc{display:flex;align-items:center;gap:10px;width:100%;min-height:46px;margin:2px 0 8px;padding:8px 14px;box-sizing:border-box;border:1.5px solid var(--rule);border-radius:10px;
+  background:transparent;color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+ .pk.pcoll #pdisc:focus-visible{outline:2px solid #fff;outline-offset:2px}
+ .pk.pcoll #pdisc .pdg{flex:none;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+ .pk.pcoll #pdisc .pdn{flex:1;min-width:0;font-size:16px;font-weight:700;color:var(--num-red);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .pk.pcoll #pdisc .pda::after{content:"\25BE";color:#fff;font-size:16.5px;line-height:1}
+ .pk.pcoll.popen #pdisc .pda::after{content:"\25B4"}
+ .pk.pcoll #az{display:none!important}
+ .pk.pcoll:not(.popen) #pfilter,.pk.pcoll:not(.popen) #persons{display:none!important}
+ .pk.pcoll.popen #persons,.pk.pcoll.popen #persons.grouped{display:block!important;overflow:visible!important;margin:0 0 6px!important;padding:0!important;-webkit-mask-image:none!important;mask-image:none!important}
+ .pk.pcoll.popen #persons .pg{display:flex!important;flex-wrap:wrap!important;gap:8px!important;overflow:visible!important;margin:0!important;padding:8px 0!important;-webkit-mask-image:none!important;mask-image:none!important;border-top:1px dashed var(--line)}
+ .pk.pcoll.popen #persons .pg:first-child{border-top:0;padding-top:2px!important}
+ .pk.pcoll.popen #persons .pg .lbl{position:static!important;width:100%!important;flex:0 0 100%!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;background:none!important;font-size:10.5px}
+ .pk.pcoll.popen #persons .chip{min-height:40px}}
 /* ---- View buttons: second outer ring (outline + offset, no layout cost) and a raised 3D look; pressed-in on :active ---- */
 body header .hview .vcard{outline:2px solid color-mix(in srgb,var(--vc) 50%,transparent);outline-offset:3px;
  background-image:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,0) 48%,rgba(0,0,0,.24));
@@ -696,13 +712,15 @@ body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!im
 <main>
 <div class="topgrid">
 <section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div></nav>
+<button type="button" id="pdisc" aria-expanded="false" aria-controls="persons" hidden></button>
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
 <div id="az" role="toolbar" aria-label="Filter by last name" aria-controls="persons" hidden></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
 <div id="personInfo"><span class="eyebrow" id="eyebrow"></span> <span class="muted" id="personMeta"></span></div>
 </div></section>
-<aside class="ad" data-slot="side" aria-label="Advertisement"></aside>
+<!-- ad slot: side · 300x250 desktop (hidden on phones) · reserved for an AdSense unit after approval -->
+<aside class="ad" data-slot="side" data-ad-slot-name="side" data-ad-size="300x250" data-ad-size-phone="none"></aside>
 </div>
 <section class="card" id="words">
 <h2 id="personTitle"><span class="ft">From the mouth of</span> <span class="pn">Chairman Kevin Warsh</span></h2>
@@ -725,14 +743,14 @@ body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!im
 <label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
 </div>
 <div class="only-visual"><div class="cloud-bar">
-<label class="motion" title="Animated Super Cloud (p5.js; off = static layout)"><input type="checkbox" id="motion"> Motion</label>
 <span class="muted" id="cloudNote"></span></div>
 <div id="cloud"></div></div>
 <table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc" aria-hidden="true"></th></tr></thead>
 <tbody id="tb"></tbody></table>
 <p class="muted only-standard" id="more"></p>
 </section>
-<aside class="ad" data-slot="leader" aria-label="Advertisement"></aside>
+<!-- ad slot: leader · 728x90 desktop, 320x50 phone · reserved for an AdSense unit after approval -->
+<aside class="ad" data-slot="leader" data-ad-slot-name="leader" data-ad-size="728x90" data-ad-size-phone="320x50"></aside>
 <p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
 possessive 's removed (Fed's → fed); digit-only tokens excluded. <span class="only-fed">Fed transcripts: footnotes and editorial notes excluded.</span>
 <span class="only-ceo">CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded. Earnings calls: only the CEO's prepared remarks; operator, other executives and analyst Q&amp;A excluded.</span>
@@ -743,7 +761,8 @@ Totals, ranks and counts are recomputed in your browser for the selected person 
 Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span>
 <span class="kbd-hint" id="kbdHint">Shortcuts: <kbd>/</kbd> filter words · <kbd>V</kbd> switch view · <kbd>S</kbd> share · <kbd>?</kbd> this hint</span></p>
 <div id="toast" role="status" aria-live="polite"></div>
-<aside class="ad" data-slot="incontent" aria-label="Advertisement"></aside>
+<!-- ad slot: incontent · 300x250 desktop and phone · reserved for an AdSense unit after approval -->
+<aside class="ad" data-slot="incontent" data-ad-slot-name="incontent" data-ad-size="300x250" data-ad-size-phone="300x250"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About Mouth Math</button></h2>
 <h3 class="ablead">Out of the mouth, into the math.</h3>
 <p>This site was created with transparency and truth in mind. It counts every word in official,
@@ -768,6 +787,7 @@ Appropriations and Armed Services Committees (Commerce and War/Defense secretari
 <a href="https://www.supremecourt.gov/opinions/slipopinion/25" target="_blank" rel="noopener noreferrer">supremecourt.gov</a>.</li>
 </ul></li>
 </ul>
+<p>Mouth Math counts and ranks every word in Federal Reserve Chair speeches and testimony, CEO earnings calls and shareholder letters from major banks and companies, and remarks by US government officials, so you can see at a glance which words, like inflation, interest rates or AI, come up most.</p>
 <p><strong>Licensing approach.</strong> Works of the U.S. government, including texts by federal officials such as the
 Fed Chair, Cabinet secretaries, members of Congress and Supreme Court Justices, are not subject to copyright
 (<a href="https://www.law.cornell.edu/uscode/text/17/105" target="_blank" rel="noopener noreferrer">17 U.S.C. §105</a>), so every
@@ -821,7 +841,7 @@ async function loadPerson(p){
 }
 
 // ---- category / person picker ----
-let azCat='',azSel='',idxSel='',pq='';
+let azCat='',azSel='',idxSel='',pq='',pOpen=false;
 const IDX=['Mag 7','S&P 500','Nasdaq 100','Dow 30'];
 const CAT_ICON={   // hairline line-art icons for the category tiles
  'Fed Chair':'<svg viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9.7 10v8M14.3 10v8M19 10v8M3 20.5h18"/></svg>',
@@ -847,7 +867,7 @@ function renderAZ(allIn,inCat){
     if(j>=0){e.preventDefault();btns[i].tabIndex=-1;btns[j].tabIndex=0;btns[j].focus()}};
 }
 function renderPicker(){
-  if(azCat!==P.category){azCat=P.category;azSel='';idxSel='';pq='';$('psearch').value=''}
+  if(azCat!==P.category){azCat=P.category;azSel='';idxSel='';pq='';pOpen=false;$('psearch').value=''}
   $('cats').innerHTML=CATS.map(c=>{const n=PEOPLE.filter(p=>p.category===c).length;
     return `<button class="cat${P.category===c?' on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}"><span class="ci" aria-hidden="true">${CAT_ICON[c]||''}</span><span class="ct"><b>${esc(c)}</b><small>${n} ${n===1?'person':'people'}</small></span></button>`}).join('');
   const allIn=PEOPLE.filter(p=>p.category===P.category),useF=allIn.length>=8,hasIdx=allIn.some(p=>(p.indices||[]).length);
@@ -862,10 +882,17 @@ function renderPicker(){
   $('persons').innerHTML=groups.length>1||groups[0]?   // a category with subgroups (US Government: Cabinet / Congress / Supreme Court)
     groups.map(g=>`<div class="pg" role="group" aria-label="${esc(g)}"><span class="lbl">${esc(g)}</span>${inCat.filter(p=>(p.group||'')===g).map(chip).join('')}</div>`).join(''):
     '<span class="lbl">Person</span>'+(inCat.length?inCat.map(chip).join(''):'<span class="muted nomatch">No one matches. <button type="button" class="linkbtn" id="clearF">Clear filters</button></span>');
+  // Phones: a category made of small sub-groups (US Government: Cabinet / Congress / Supreme Court) folds its people list behind one
+  // disclosure that shows the selected person in red + the white arrow; tapping it opens the grouped list (no A-Z needed there).
+  const coll=allIn.length>1&&allIn.some(p=>p.group),pk=$('picker').querySelector('.pk'),pd=$('pdisc');
+  pk.classList.toggle('pcoll',coll);pk.classList.toggle('popen',coll&&pOpen);pd.hidden=!coll;pd.setAttribute('aria-expanded',coll&&pOpen?'true':'false');
+  if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category)}</span><span class="pdn">${esc(P.name)}</span><span class="pda" aria-hidden="true"></span>`;
+    pd.setAttribute('aria-label',`${P.name}. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
+    pd.onclick=()=>{pOpen=!pOpen;renderPicker();$('pdisc').focus()}}
   const cf=$('clearF');if(cf)cf.onclick=()=>{pq='';idxSel='';azSel='';$('psearch').value='';renderPicker();$('psearch').focus()};
   $('personMeta').textContent=`${P.role} · ${P.docs.length} ${P.docs.length===1?(P.doc_noun1||P.doc_noun.replace(/s$/,'')):P.doc_noun} from ${P.source}`;
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
-  document.querySelectorAll('#persons button.chip').forEach(b=>b.onclick=()=>{if(b.dataset.person!==P.slug)setPerson(b.dataset.person)});
+  document.querySelectorAll('#persons button.chip').forEach(b=>b.onclick=()=>{pOpen=false;if(b.dataset.person!==P.slug)setPerson(b.dataset.person);else renderPicker()});
   ['#cats button.on','#persons button.on'].forEach(sel=>{const b=document.querySelector(sel);let r=b&&b.parentElement;
     while(r&&r.id!=='picker'&&!(r.scrollWidth>r.clientWidth))r=r.parentElement;if(r&&r.id==='picker')r=null;
     if(r){const l=r.querySelector('.lbl'),pad=l&&getComputedStyle(l).position==='sticky'?l.offsetWidth+12:24,
@@ -883,7 +910,7 @@ async function setPerson(slug,docIds){
   ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('personTitle').innerHTML=`<span class="ft">From the mouth of</span> <span class="pn">${esc(P.display)}</span>${P.ticker?(P.tv?` <button type="button" class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart" aria-label="${esc(P.ticker)}: show 1-year price chart">${esc(P.ticker)}</button>`:` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`):''}`;
-  document.title=P.slug===DEFAULT?'Mouth Math — Every Word Out Of Their Mouth Counts':`Mouth Math — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
+  document.title=P.slug===DEFAULT?'Mouth Math — Word Counts from Fed Chair Speeches & CEO Earnings Calls':`Mouth Math — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();
 }
@@ -1078,22 +1105,20 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='v'||e.key==='V'){setView(VIEW==='visual'?'standard':'visual',true)}
   else if(e.key==='s'||e.key==='S'){shareView()}
   else if(e.key==='?'){toast('Shortcuts: / filter words · V switch view · S share');const h=$('kbdHint');h.classList.add('flash');setTimeout(()=>h.classList.remove('flash'),1200)}});
-// ---- Ad slots: ONE config block. Placeholders until ADS.client and the slot ids are filled in (then AdSense units render) ----
+// ---- Ad slots: ONE config block. Faint decorative placeholders (same sizes, no text) until ADS.client and the slot ids are filled in (then AdSense units render) ----
 const ADS={
   client:'',            // set to 'ca-pub-5930727143587260' with real slot ids after approval (empty = mock placeholders; the AdSense script itself is in <head>)
   slots:{               // desktop size (w x h) and phone size (mw x mh); id = AdSense data-ad-slot
     leader:   {id:'',w:728,h:90, mw:320,mh:50},     // below the results card
     side:     {id:'',w:300,h:250},                  // desktop left column, below Who / Timeframe (hidden on phones)
     incontent:{id:'',w:300,h:250,mw:300,mh:250}}};  // between the method note and About
-// "Advertise here": the placeholders (and the text link under each) open an email. The address is assembled at
-// runtime from char codes so it never appears as plain text in the HTML.
-const AD_MAIL=()=>'mailto:'+[115,112,97,100,117,110,107,101,108].map(c=>String.fromCharCode(c)).join('')+'@'+['gmail','com'].join('.')+'?subject='+encodeURIComponent('Advertising on Mouth Math');
 function renderAds(){let live=false;
   document.querySelectorAll('aside.ad').forEach(el=>{const c=ADS.slots[el.dataset.slot];if(!c){el.remove();return}
     ['w','h','mw','mh'].forEach(k=>el.style.setProperty('--a'+k,(c[k]||c[k.slice(1)])+'px'));
-    if(ADS.client&&c.id){live=true;el.innerHTML=`<span class="adl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADS.client)}" data-ad-slot="${esc(c.id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`}
-    else{el.innerHTML=`<span class="adl">Advertisement</span><a class="adbox" title="Advertise here" aria-label="Advertise here: email about advertising on Mouth Math"><svg class="admark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 6 32 27H8z"/><circle cx="20" cy="21" r="5"/></svg><span class="adtx" aria-hidden="true"><b>Sponsor</b><small>Your ad here</small></span><span class="adhint" aria-hidden="true">Advertise here &rarr;</span></a><a class="adcta">Sponsor your ad here</a>`;
-      el.querySelectorAll('a').forEach(a=>a.href=AD_MAIL())}});
+    if(ADS.client&&c.id){live=true;el.removeAttribute('aria-hidden');el.removeAttribute('role');el.setAttribute('aria-label','Advertisement');el.innerHTML=`<span class="adl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADS.client)}" data-ad-slot="${esc(c.id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`}
+    else{const sz=`${c.w}x${c.h}`,ph=c.mw?`${c.mw}x${c.mh}`:'none';   // mock: decorative, no text; invisible metadata so a real unit can drop in later
+      el.innerHTML=`<div class="adbox adfaint" role="presentation" aria-hidden="true" data-ad-slot-name="${el.dataset.slot}" data-ad-size="${sz}" data-ad-size-phone="${ph}"></div>`;
+      el.removeAttribute('aria-label');el.setAttribute('aria-hidden','true');el.setAttribute('role','presentation')}});
   if(live){if(!document.querySelector('script[src*="adsbygoogle"]')){const sc=document.createElement('script');sc.async=true;sc.crossOrigin='anonymous';   // the AdSense script is already in <head>; this is a fallback
     sc.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+encodeURIComponent(ADS.client);document.head.appendChild(sc)}
     document.querySelectorAll('ins.adsbygoogle').forEach(()=>(window.adsbygoogle=window.adsbygoogle||[]).push({}))}}
@@ -1163,11 +1188,11 @@ function drawCloud(list){
 }
 
 // ---- Super Cloud motion: p5.js sketch (words as soft physics bodies); always the full selected timeframe ----
-// p5 is loaded only when Super Cloud is shown with Motion on: pinned version, Subresource Integrity checked by the browser.
+// p5 is loaded only when Super Cloud is shown (and motion isn't reduced): pinned version, Subresource Integrity checked by the browser.
 const P5_URL='https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js',P5_SRI='sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii',MAX_BODIES=300;
-const motion=$('motion'),RM=matchMedia('(prefers-reduced-motion: reduce)');
-motion.checked=!RM.matches;RM.addEventListener('change',()=>{motion.checked=!RM.matches;if(VIEW==='visual'&&P)render()});
-motion.onchange=()=>{hidePop();render()};
+// Words always float (no on/off toggle); prefers-reduced-motion users get the static layout, and so does everyone if p5 can't load.
+const RM=matchMedia('(prefers-reduced-motion: reduce)'),motion={checked:!RM.matches,disabled:false};
+RM.addEventListener('change',()=>{motion.checked=!RM.matches&&!motion.disabled;if(VIEW==='visual'&&P)render()});
 let P5P=null,SK=null,IO=null,BODIES=[],drawTok=0,frameN=0,TOPW=null,REDC='#ff5449';
 const PULSE_MS=2200,PULSE={ph:0};   // top-word pulse period (CSS keyframes use the same 2.2 s)
 // the single most frequent word in the cloud is drawn in the stat red (canvas + DOM spans)

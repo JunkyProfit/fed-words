@@ -114,15 +114,28 @@ has a **source ↗** link, a text-fragment URL (`…htm#:~:text=start,end`) that
 to and highlights that sentence on federalreserve.gov in Chrome, Edge, and Safari.
 The speech title link is a plain fallback for other browsers.
 
-**Ad slots:** three faint placeholder units (a mock hairline mark, the made-up name "Sponsor", "Your ad here",
-and a tiny "Advertisement" label; no real brands): a leaderboard below the results card (728x90, 320x50 on phones), a
-300x250 sidebar unit below Who (desktop only) and a 300x250 in-content unit between the method note and
-About. They never sit above the red stats or next to controls. To switch to AdSense, fill in the single `ADS` config
-block in `build.py` (`client` = `ca-pub-5930727143587260`, plus each slot's `id`) and real units replace the placeholders.
-The AdSense script (publisher `ca-pub-5930727143587260`) is already in the `<head>` of every page (index.html and privacy.html),
-and `/ads.txt` lists `google.com, pub-5930727143587260, DIRECT, f08c47fec0942fa0`. Each placeholder (and the "Sponsor your ad here" text link under it) is an
-"Advertise here" mailto link with the subject "Advertising on Mouth Math"; the address is assembled in JS
-(`AD_MAIL` in `build.py`) so it never appears as plain text in the HTML.
+**Ad slots:** three reserved, text-free placeholder blocks at their final sizes: a leaderboard below the results card
+(728x90, 320x50 on phones), a 300x250 sidebar unit below Who (desktop only) and a 300x250 in-content unit between the
+method note and About. Until AdSense is approved each block is purely decorative: a faint tile of math marks (+ = ± × in
+cream, one red minus, ~9% opacity) on a hairline border, with no words, links or `ins.adsbygoogle` tags. Each slot carries
+invisible metadata only: an HTML comment naming the slot and its sizes, `data-slot` / `data-ad-slot-name`, `data-ad-size`
+and `data-ad-size-phone` (on the aside and the inner block), and `aria-hidden="true"` + `role="presentation"` so screen
+readers skip it. They never sit above the red stats or next to controls. To switch to AdSense, fill in the single `ADS`
+config block in `build.py` (`client` = `ca-pub-5930727143587260`, plus each slot's `id`); real units then replace the
+placeholders (with an "Advertisement" label and `aria-label`). The AdSense script (publisher `ca-pub-5930727143587260`)
+is already in the `<head>` of every page (index.html and privacy.html), and `/ads.txt` lists
+`google.com, pub-5930727143587260, DIRECT, f08c47fec0942fa0`.
+
+**SEO:** descriptive `<title>` and meta description (Fed Chair speeches, CEO earnings calls, US government), meta
+keywords, canonical `https://mouthmath.com/`, Open Graph + Twitter title/description, and schema.org JSON-LD
+(`WebSite`, `WebApplication`, `Dataset`). `build.py` also writes `robots.txt` (allow all + sitemap) and `sitemap.xml`
+(`/` and `/privacy.html`). No hidden text or keyword blocks anywhere; the About section has one visible plain-language
+summary sentence.
+
+**People list on phones (US Government):** categories made of small sub-groups (US Government: Cabinet / Congress /
+Supreme Court) fold their people list behind one disclosure on phones (≤640px): closed, it shows the group and the
+selected person's name in red with the white ▾ arrow; tapping opens the grouped list (all 17 names wrapped, plus search;
+no A–Z needed there) and picking a person folds it again. CEOs (A–Z) and Fed Chair (one person) are unchanged; desktop is unchanged.
 
 **Polish:** the red stats count up when a person loads (skipped with prefers-reduced-motion); a **Share** button in the
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
@@ -160,18 +173,20 @@ chips in single horizontal-scroll rows; the A–Z index wraps into a grid of 40p
 
 **Super Math table columns:** Rank, Word and Count shrink to their content (`width:1%`), so the count sits a short, fixed gap after the longest word in the list (numbers right-aligned and lined up); the frequency bar fills the rest of the row.
 
-**Top word pulse:** the #1 word of the current selection (speaker, documents, word count) is drawn in the stat red and pulses slowly (2.2 s ease-in-out glow with a slight brighten and 2.5% scale; canvas `paint()` in Motion mode, CSS `@keyframes mmTopPulse` otherwise). No pulse under `prefers-reduced-motion`.
+**Show N words chips:** compact, content-sized red chips (desktop 32px tall, 13px text; phones 36px tall, 14px text, no longer stretched across the row). Below 375px wide the padding tightens (and the gap shrinks) so SHOW + all five chips stay on one row down to 320px.
+
+**Top word pulse:** the #1 word of the current selection (speaker, documents, word count) is drawn in the stat red and pulses slowly (2.2 s ease-in-out glow with a slight brighten and 2.5% scale; canvas `paint()` while words float, CSS `@keyframes mmTopPulse` in the static fallback). No pulse under `prefers-reduced-motion`.
 
 **Super Cloud motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
-largest words first along a spiral with box collision checks). With **Motion** on, a
+largest words first along a spiral with box collision checks). Words always float (there is no Motion toggle): a
 [p5.js](https://p5js.org/) sketch takes over: each word is a soft physics body that drifts gently
 (Perlin noise) around its spot, held by a weak spring, and boxes are pushed apart so words never overlap
 (spatial hash; bigger words move less). Invisible, focusable hit boxes follow the words, so hover, click/tap
 to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when Super Cloud is
-shown with Motion on, from jsDelivr with Subresource Integrity
+shown (and motion isn't reduced), from jsDelivr with Subresource Integrity
 (`sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii`). The sketch pauses when the
 cloud is off-screen (IntersectionObserver) and is removed in Super Math view. With `prefers-reduced-motion:
-reduce`, Motion off, or if the CDN can't be reached, the static layout is used.
+reduce` (no float and no pulse) or if the CDN can't be reached, the static layout is used.
 The cloud always shows the full selected timeframe (no date slider or play button).
 Up to 300 bodies (the Top 300 option).
 
