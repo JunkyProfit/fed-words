@@ -313,7 +313,7 @@ def main():
     common = {"stop": sorted(STOPWORDS), "sc": sorted(S_CONTRACTIONS), "keepNum": a.keep_numbers}
     def render(inline_people):
         data = dict(common, people=inline_people)
-        return TEMPLATE.replace("__LOGO__", (ROOT / "assets" / "logo-inline.svg").read_text(encoding="utf-8").strip()).replace("__DEFAULT_TITLE__", html.escape(people_out[0]["display"])).replace(
+        return TEMPLATE.replace("__DEFAULT_FT__", '<span class="ft fedsaid">What the Fed Said</span>' if people_out[0].get("category") == "Fed Chair" else '<span class="ft">From the mouth of</span>').replace("__LOGO__", (ROOT / "assets" / "logo-inline.svg").read_text(encoding="utf-8").strip()).replace("__DEFAULT_TITLE__", html.escape(people_out[0]["display"])).replace(
             "__NUMNOTE__", "included" if a.keep_numbers else "excluded").replace(
             "__DATA__", json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"))
     page = render(people_out)
@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm24">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm24">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm24">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm25">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm25">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm25">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm24">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm25">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -388,7 +388,7 @@ footer a{color:var(--muted)}
 .mmform{display:grid;gap:4px;max-width:520px;margin:6px 0 12px;font-family:Arial,Helvetica,sans-serif}.mmform label{font-size:13px;font-weight:700;color:#f3eee4;margin-top:6px}.mmform .opt{font-weight:400;color:var(--muted)}.mmform input:not([type=checkbox]),.mmform textarea{font:16px/1.35 Arial,Helvetica,sans-serif;color:#f3eee4;background:#0b0b0b;border:1px solid #3a3733;border-radius:6px;padding:9px 11px;width:100%;box-sizing:border-box}.mmform textarea{resize:vertical;min-height:96px}.mmform input:focus,.mmform textarea:focus{outline:2px solid #ff5449;outline-offset:1px;border-color:#ff5449}.mmform button{justify-self:start;margin-top:10px;min-height:44px;padding:0 24px;border:0;border-radius:8px;background:#ff5449;color:#fff;font:700 16px Arial,Helvetica,sans-serif;cursor:pointer}.mmform button:hover{background:#ff6b61}.mmform button:disabled{opacity:.6;cursor:default}.mmform button:focus-visible{outline:2px solid #fff;outline-offset:2px}.mmform .mmhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}.mmform .fmsg{margin:6px 0 0;min-height:1.2em;font-size:14px;color:#f3eee4}.mmform .fmsg.ok{color:#85bb65}.mmform .fmsg.err{color:#ff5449}@media (max-width:640px){.mmform button{width:100%}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm24" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm25" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -459,10 +459,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm24">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm24">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm25">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm25">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm24">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm25">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -475,14 +475,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm24">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm25">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm24">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm25">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1290,6 +1290,9 @@ body #tfbar #years label.chip:focus-within,body #tfbar button.chip:focus-visible
 body #tfbar .yrs{-webkit-mask-image:none!important;mask-image:none!important;padding-right:0!important;gap:4px!important}
 body #tfbar .yrs.ovf{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent)!important;mask-image:linear-gradient(90deg,#000 85%,transparent)!important;padding-right:18px!important}
 body #tfbar{gap:6px!important}
+
+/* Fed Chair page: a small cream "What the Fed Said" label above the name, in place of "From the mouth of" */
+body #words h1#personTitle .ft.fedsaid{display:block;margin:0 0 3px;color:#f3eee4!important;font:700 15px/1.2 Arial,Helvetica,sans-serif!important;letter-spacing:0}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home">__LOGO__</a>
@@ -1311,7 +1314,7 @@ body #tfbar{gap:6px!important}
 <aside class="ad" data-slot="side" data-ad-slot-name="side" data-ad-size="300x250" data-ad-size-phone="none"></aside>
 </div>
 <section class="card" id="words">
-<h1 id="personTitle"><span class="ft">From the mouth of</span> <span class="pn">__DEFAULT_TITLE__</span></h1>
+<h1 id="personTitle">__DEFAULT_FT__ <span class="pn">__DEFAULT_TITLE__</span></h1>
 <div class="stats" id="stats" aria-label="Word counts for the selection">
 <div class="stat"><b id="sDocs">–</b><span class="sl" data-s="docs">documents selected</span></div>
 <div class="stat"><b id="sTotal">–</b><span class="sl" data-s="total words">total words</span></div>
@@ -1460,7 +1463,7 @@ async function setPerson(slug,docIds){
   sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
   ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
-  $('personTitle').innerHTML=`<span class="ft">From the mouth of</span> <span class="pn">${esc(P.display)}</span>${P.ticker?(P.tv?` <button type="button" class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart" aria-label="${esc(P.ticker)}: show 1-year price chart">${esc(P.ticker)}</button>`:` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`):''}`;
+  $('personTitle').innerHTML=`${P.category==='Fed Chair'?'<span class="ft fedsaid">What the Fed Said</span>':'<span class="ft">From the mouth of</span>'} <span class="pn">${esc(P.display)}</span>${P.ticker?(P.tv?` <button type="button" class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart" aria-label="${esc(P.ticker)}: show 1-year price chart">${esc(P.ticker)}</button>`:` <span class="tk" title="Stock ticker">${esc(P.ticker)}</span>`):''}`;
   document.title=P.slug===DEFAULT?'Mouth Math — Word Counts from Fed Chair Speeches & CEO Earnings Calls':`Mouth Math — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();if(typeof sbFill==='function'&&sbOn)sbFill();

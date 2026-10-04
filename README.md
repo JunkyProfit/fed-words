@@ -178,6 +178,9 @@ names; no A–Z needed there). A–Z taps keep it open; picking a person folds i
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
 `/` (filter words), `V` (switch between the Super Math and Super Cloud tabs; nothing to do side by side), `S` (share), `?` (hint).
 
+**Fed Chair label (mm25):** on the Fed Chair page the results heading reads **What the Fed Said** (small cream Arial line, 15px bold)
+above the chair's name, in place of "From the mouth of"; every other speaker keeps "From the mouth of <name>".
+
 **Super Math / Super Cloud tabs (mm24):** right under the red stats sit two tabs, red **Super Math** (left, the default) and green
 **Super Cloud** (right). Tapping one swaps the view in place, in the same spot, with no scrolling. Both views are always rendered; the hidden
 one is laid out at zero height and invisible, so the swap is instant. The same person, documents, Show chips, word filter
