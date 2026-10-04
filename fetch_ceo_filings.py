@@ -21,14 +21,15 @@ fetch_ceo.py; build.py turns it into derived/<slug>.json. SEC asks automated cli
 a contact address (www.sec.gov/os/accessing-edgar-data) and to stay under 10 requests/s; we send one request
 per second. Usage: python3 fetch_ceo_filings.py [--only cook,jobs] [--refresh]
 """
-import argparse, html, json, os, re, tempfile, time, urllib.parse, urllib.request
+import argparse, html, json, os, re, sys, tempfile, time, urllib.parse, urllib.request
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 LOCAL = ROOT / "local_sources"
-_C = [115, 112, 97, 100, 117, 110, 107, 101, 108]          # contact mailbox (assembled, like the site's mailto)
-CONTACT = os.environ.get("SEC_CONTACT") or "".join(map(chr, _C)) + "@" + ".".join(["gmail", "com"])
+# SEC asks automated clients for a User-Agent with a contact address. It comes only from the environment (never stored in the repo):
+#   SEC_CONTACT="you@example.com" python3 fetch_ceo_filings.py
+CONTACT = os.environ.get("SEC_CONTACT", "").strip()
 UA = f"MouthMath/1.0 (+https://mouthmath.com) {CONTACT}"
 MIN_WORDS = 8
 TYPES = {"quote": "Press release quote", "letter": "Investor letter", "email": "Email to employees",
@@ -36,6 +37,8 @@ TYPES = {"quote": "Press release quote", "letter": "Investor letter", "email": "
 
 _last = [0.0]
 def get(url):
+    if not CONTACT:   # only network fetches need it; rebuilding from local_sources/ works without
+        sys.exit("fetch_ceo_filings.py: set SEC_CONTACT (a contact email for SEC's User-Agent rule) to download from sec.gov")
     wait = 1.0 - (time.time() - _last[0])
     if wait > 0: time.sleep(wait)
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Encoding": "identity"})
