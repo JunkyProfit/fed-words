@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm31">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm31">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm32">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm32">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm31">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm32">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm31">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm32">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm31">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm32">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -716,11 +716,6 @@ body header .hview .vcard[aria-pressed="true"]{outline:2px solid var(--vc);outli
 body header .hview .vcard:active{transform:translateY(2px);background-image:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,0) 55%);
  box-shadow:inset 0 2px 7px rgba(0,0,0,.6),0 1px 0 color-mix(in srgb,var(--vc) 38%,#000),0 2px 4px rgba(0,0,0,.6)}
 body header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:3px}
-/* ---- Super Cloud button (green, right): while not selected and not yet tried, its thin outer ring slowly fades to black and back
-   (outline colour only, 2.8 s ease-in-out; label and border steady; none for reduced motion) ---- */
-body header .hview .vcard.mmfade{animation:mmRingFade 2.8s ease-in-out infinite}
-@keyframes mmRingFade{0%,100%{outline-color:color-mix(in srgb,var(--vc) 50%,transparent)}50%{outline-color:#000}}
-@media (prefers-reduced-motion:reduce){body header .hview .vcard.mmfade{animation:none}}
 body header .viewbar.hview,body header #views{gap:24px!important}
 @media (max-width:640px){body header .viewbar.hview,body header #views{gap:18px!important}body header .viewbar.hview{padding:3px 5px 0}}
 /* ---- Stacked layout (Oct 2026): stats -> Super Math table -> ad -> Super Cloud on one page; header buttons are jump links ---- */
@@ -806,21 +801,18 @@ body #stats .stat{border:0!important}   /* boxes inside a bordered card: backgro
 #vtabs{display:flex;gap:14px;margin:16px 4px 14px}
 #vtabs button{--vc:var(--num-red);flex:1;min-height:46px;padding:10px 8px;font:700 16px/1.2 Arial,Helvetica,sans-serif;color:var(--vc);background:#0b0b0b;
  border:2px solid var(--vc);border-radius:6px;outline:2px solid color-mix(in srgb,var(--vc) 45%,transparent);outline-offset:3px;cursor:pointer;transition:background-color .15s}
-#vtabs button[data-view="cloud"]{--vc:var(--money)}
+#vtabs button[data-view="cloud"]{--vc:var(--num-red)}   /* mm32: no green; Super Cloud matches Super Math */
 #vtabs button:hover{background:color-mix(in srgb,var(--vc) 12%,#0b0b0b)}
 #vtabs button[aria-selected="true"]{color:#fff;background:color-mix(in srgb,var(--vc) 34%,#0b0b0b);outline-color:var(--vc)}
 #vtabs button:focus-visible{outline:2px solid #fff}
-#vtabs button.mmfade:not([aria-selected="true"]){animation:mmRingFade 2.8s ease-in-out infinite}   /* Super Cloud: outer line fades until first use */
-@media (prefers-reduced-motion:reduce){#vtabs button.mmfade{animation:none!important}}
 /* mm30: selected states match. Super Math / Super Cloud tabs use the category buttons' look: unselected = card black, thin #2c2a27 border, text in
    the tab's identity color (red / green); selected = the category's medium gray (#9a958c), dark text, a 3px identity-color underline
-   (like the category's red underline). The old outer rings are gone; Super Cloud's first-visit hint now fades its border instead. */
+   (like the category's red underline). The old outer rings are gone; (mm32: Super Cloud now uses red too; the first-visit fade hint is gone.) */
 #vtabs button{background:var(--card);border:1px solid var(--rule);border-radius:4px;outline:none;color:var(--vc);transition:border-color .15s,background-color .15s}
 #vtabs button:hover{background:#171717;border-color:#5a5650}
 #vtabs button[aria-selected="true"],#vtabs button[aria-selected="true"]:hover{background:#9a958c;border-color:#9a958c;color:#0b0b0b;box-shadow:inset 0 -3px 0 var(--vc)}
 #vtabs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
-@keyframes mmBorderFade{0%,100%{border-color:color-mix(in srgb,var(--vc) 55%,var(--rule))}50%{border-color:var(--rule)}}
-#vtabs button.mmfade:not([aria-selected="true"]){animation:mmBorderFade 2.8s ease-in-out infinite}
+#cloud.live span:focus-visible{outline:2px solid #fff}   /* mm32: no green focus ring on cloud words */
 #vpanes{position:relative}
 #vpanes.tab-math #vCloud,#vpanes.tab-cloud #vMath{position:absolute;top:0;left:0;right:0;height:0;overflow:hidden;visibility:hidden;pointer-events:none}   /* the other view stays laid out (zero height, invisible), so a tap swaps instantly */
 #vpanes .secth{display:none}   /* the tabs already name the view */
@@ -879,6 +871,19 @@ body #tfbar #docPick[open]>summary{background:none!important;color:var(--num-red
 body #docPick .dsq .yrs{flex:1 1 auto!important;min-width:0!important;order:0!important}
 body #docPick .dsheet .speeches{max-height:none!important;overflow:visible!important;margin:0!important}
 html.dsopen,html.dsopen body{overflow:hidden}
+/* mm32 docs button (Eric's pick, variant B): full-width outlined button under the red stats; the docs stat gets a small ▾ cue */
+body #tfbar #docPick{display:block!important;width:100%;max-width:560px}   /* mm32: capped on wider screens, left-aligned under the stats */
+body #tfbar #docPick>summary.dbtn{display:flex!important;flex-direction:column;align-items:stretch;gap:3px!important;width:100%!important;box-sizing:border-box;min-height:48px!important;
+ padding:10px 14px!important;border:1px solid #6f6a62!important;border-radius:4px;background:#0f0f0f!important;white-space:normal;text-decoration:none!important;justify-content:center!important}
+body #tfbar #docPick>summary.dbtn::after,body #tfbar #docPick>summary.dbtn::before{display:none!important;content:none!important}
+body #tfbar #docPick>summary.dbtn:hover{border-color:#f3eee4!important;background:#151515!important}
+body #tfbar #docPick[open]>summary.dbtn{border-color:#f3eee4!important}
+#docPick .dbl1{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+#docPick .dbn{font:700 17px/1.2 Arial,Helvetica,sans-serif;color:var(--num-red)}
+#docPick .dbv{font:700 15px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;white-space:nowrap}#docPick .dbv::after{content:" \25BE";font-size:15px}#docPick[open] .dbv::after{content:" \25B4"}
+#docPick .dbl2{font:400 13px/1.3 Arial,Helvetica,sans-serif;color:#8f897f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body #stats .stat:first-child .sl::after{content:" \25BE"}@media (max-width:640px){body #stats .stat:first-child .sl::after{content:attr(data-s) " \25BE"!important}}
+body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;text-underline-offset:3px}
 #stats .stat:first-child{cursor:pointer}#stats .stat:first-child:focus-visible{outline:2px solid #fff;outline-offset:2px}
 @media (min-width:641px){
  #docPick .dsback{background:transparent}
@@ -925,13 +930,13 @@ html.dsopen,html.dsopen body{overflow:hidden}
 <div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
 </div>
 <div id="tfbar" role="group" aria-label="Documents">
-<details id="docPick"><summary><span class="dpc">Choose</span> documents <span class="muted" id="docCount"></span></summary>
+<details id="docPick"><summary class="dbtn" aria-label="Choose documents"><span class="dbl1"><span class="dbn" id="dbN">documents</span><span class="dbv">View</span></span><span class="dbl2" id="dbLatest"></span><span class="muted" id="docCount"></span></summary>
 <div class="dsback" aria-hidden="true"></div>
 <div class="dsheet" role="dialog" aria-label="Choose documents"><div class="dshead"><b>Documents</b><button type="button" class="dsx" id="dsClose" aria-label="Close">&times;</button></div>
 <div class="dsq"><button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><div class="yrs" id="years" role="group" aria-label="Years"></div></div>
 <ul class="speeches" id="docList"></ul></div></details>
 <div id="selSummary" class="sr-only"></div></div>
-<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Super Math</button><button type="button" role="tab" id="tabCloud" class="mmfade" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Super Cloud</button></div>
+<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Super Math</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Super Cloud</button></div>
 <div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="20">20</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
@@ -1109,6 +1114,9 @@ function buildTimeframe(){
  ds.onclick=()=>{DP.open=true};ds.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();DP.open=true}}}
 $('btnAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
 $('btnNone').onclick=()=>{sel=new Set();update()};
+function dbFill(){const n=DOCS.length,k=sel.size,u=unitOf(n),e=$('dbN');if(!e)return;e.textContent=k===n?`${n.toLocaleString()} ${u}`:`${k.toLocaleString()} of ${n.toLocaleString()} ${u}`;
+  const l=$('dbLatest');if(l){const d=n?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;l.textContent=d?`Latest · ${fmtDate(d.date)} · ${d.title}`:''}
+  e.closest('summary').setAttribute('aria-label',`Choose documents: ${e.textContent} selected`)}
 function yrsFit(){const y=$('years');if(y)y.classList.toggle('ovf',y.scrollWidth>y.clientWidth+1)}   // fade only when the years overflow
 addEventListener('resize',()=>yrsFit());
 function syncTimeframe(){
@@ -1163,7 +1171,7 @@ function render(cloudToo=true){   // one selection feeds both: the Super Math ta
     tail=(s?full.filter(x=>re?re.test(x.word):x.word.includes(s)):full).slice(0,cap).filter(x=>x.stop)}
   const list=match.slice(0,cap);   // table: always the full top N real words (hide on), then sorted as chosen; the stopwords that would rank in the top N fold into ONE '+K common words' line
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
-  $('sDocs').textContent=sel.size+' / '+DOCS.length;
+  $('sDocs').textContent=sel.size+' / '+DOCS.length;dbFill();
   const anim=P.slug!==lastCountSlug;lastCountSlug=P.slug;
   setStat('sTotal',base.reduce((t,x)=>t+x.count,0),anim);
   setStat('sUnique',base.length,anim);
@@ -1476,7 +1484,7 @@ function paint(p){
     else ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
 }
 // (mm24) The header jump links became the Super Math / Super Cloud tabs under the red stats (setView below).
-// Super Cloud's thin outer ring slowly fades to black and back (CSS .mmfade) until it is tapped once (remembered); never for reduced motion.
+// (mm32) The Super Cloud first-visit fade hint was removed; Super Cloud is red like Super Math.
 // ---- Change speaker: after a pick the list folds and the name + red stats come to the top; a slim sticky bar (shown once the
 // stats scroll away) brings the visitor back to the speaker list with the search focused ----
 function toStats(){requestAnimationFrame(()=>{const r=$('personTitle').getBoundingClientRect();
@@ -1497,11 +1505,11 @@ SB.onclick=openSpeakers;
 let VIEW='math';const SIDE=matchMedia('(min-width:1100px)');
 function setView(v,user=false){VIEW=v==='cloud'?'cloud':'math';hidePop();$('vpanes').className='tab-'+VIEW;
   document.querySelectorAll('#vtabs [role="tab"]').forEach(t=>{const on=t.dataset.view===VIEW;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1});
-  if(VIEW==='cloud'&&user){try{localStorage.setItem('mm_cloud_tried','1')}catch(_){}$('tabCloud').classList.remove('mmfade')}
+  if(VIEW==='cloud'&&user){try{localStorage.setItem('mm_cloud_tried','1')}catch(_){}}
   if(P&&cloud.clientWidth&&cloud.clientWidth!==cloudW)render();else placeTopRing();   // the cloud is laid out when it first becomes visible
   if(user)syncHash()}
 function jumpTo(which){setView(which,true)}   // kept for old callers/tests: same as tapping the tab
-function cloudGlow(){let tried=false;try{tried=localStorage.getItem('mm_cloud_tried')==='1'}catch(e){}$('tabCloud').classList.toggle('mmfade',!tried)}
+function cloudGlow(){}   // mm32: the Super Cloud first-visit fade hint was removed
 document.querySelectorAll('#vtabs [role="tab"]').forEach(t=>{t.onclick=()=>setView(t.dataset.view,true);
   t.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const v=(e.key==='ArrowLeft'||e.key==='Home')?'math':'cloud';setView(v,true);$(v==='cloud'?'tabCloud':'tabMath').focus()}}});
 cloudGlow();
