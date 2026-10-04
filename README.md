@@ -92,7 +92,7 @@ only on apple.com), so they are left out. SEC asks automated clients to send a U
 script takes it only from the `SEC_CONTACT` environment variable (no address is stored in the repo; downloads stop with a message if it is unset) and makes about 1 request/s. Both show in the CEO list (Former CEO · Apple,
 AAPL pill); `kind: filings` + `fetcher` in `ceos.json` mark them, and `fetch_ceo.py` skips them.
 
-The page header is site-wide ("Every Word Out Of Their Mouth Counts": title case, Arial, tight tracking; on phones it sits on its own line under the logo and scales with the screen width so it stays on one line), not tied to the default person.
+The page header is site-wide and slim (mm24): just the logo and Share/About (the Super Math / Super Cloud buttons are tabs under the red stats now). The logo is 25% bigger than before (70px tall on desktop, 60px on tablets, up to 50px on phones; on phones it is sized to the space next to Share/About, about 40px at 320px, so it stays on one row). The tagline "Every Word Out Of Their Mouth Counts" and the short "Word counts from official ..." line now live in About. The page's one visible `<h1>` is the person heading ("From the mouth of ..."), styled exactly as before (no hidden text).
 
 CEO stock tickers (from `ceos.json`: `companies[].ticker`, plus `existing_tickers` for the original five) show as a small money-green outlined pill in Arial caps, both on each CEO's chip in the people list and after the selected speaker's name in the results title (e.g. "From the mouth of Jamie Dimon [JPM]"). Fed and government people have no ticker, so no pill.
 The selected person's label pill, role, document count and source appear in the Who card, and
@@ -130,7 +130,7 @@ to and highlights that sentence on federalreserve.gov in Chrome, Edge, and Safar
 The speech title link is a plain fallback for other browsers.
 
 **Ad slots:** four reserved, text-free placeholder blocks at their final sizes: a `between` unit inside the results card,
-between the Super Math table and the Super Cloud (728x90, 320x100 on phones; for a future relevant ad unit), a leaderboard below the results card
+below the Super Math / Super Cloud views (728x90, 320x100 on phones; for a future relevant ad unit), a leaderboard below the results card
 (728x90, 320x50 on phones), a 300x250 sidebar unit below Who (desktop only) and a 300x250 in-content unit between the
 method note and About. Until AdSense is approved each block is purely decorative: a faint tile of math marks (+ = ± × in
 cream, one red minus, ~9% opacity) on a hairline border, with no words, links or `ins.adsbygoogle` tags. Each slot carries
@@ -148,10 +148,20 @@ keywords, canonical `https://mouthmath.com/`, Open Graph + Twitter title/descrip
 (`/` and `/privacy.html`). No hidden text or keyword blocks anywhere; the About section has one visible plain-language
 summary sentence.
 
-**Slim page text (mm23):** the page carries no methodology prose. About is short: the red lead "Out of the mouth, into
-the math.", the transparency-and-truth line, the plain SEO sentence (Federal Reserve, banks, earnings calls), a one-line
-"Sources are public and linked" note, the Contact form (Web3Forms) with the Privacy Policy
-link, and one fine-print line (not financial advice; not affiliated with or endorsed by anyone listed). The note under
+**Readable names (mm24):** in every category's people list the unselected names are cream (#f3eee4) and 2px bigger
+(14.5px on phones, 15px on desktop; tighter chip padding on phones keeps two names per row at 390px), the selected person
+stays dark red on its light pill, and the role label under the name ("CEO · JPMorgan Chase", "Former CEO · Apple") is
+white and a size up (10.5px on phones, 11.5px on desktop).
+
+**Minimalist pass (mm24):** no decorative icons on the category tabs, no "Ranked table" / "Bigger = said more"
+captions, no "CEO" / "FED CHAIR" label in the name row (the tab already says it), stat boxes without borders, no "Showing the top N" /
+"Top N of M words" status lines (the table-limit note still appears when ALL hits the 2,000-row cap), and phone text at 14px or more for
+body copy (person line, "From the mouth of", timeframe, Choose documents, stopwords, form labels). The documents quick-select (All / None / year chips)
+are plain cream 15px text buttons (no fill; a thin cream outline marks the selected one; no checkbox box). The years fade at the right edge only when they overflow,
+and on phones they share the All / None row with Choose documents below. On very narrow phones (under 380px) category names may wrap rather than shrink below 14px.
+One Show row only (the duplicate above the cloud is gone). Arial throughout; black, cream/white, red and green.
+
+**Slim page text (mm23):** the page carries no methodology prose. About is short, in this order (mm24): the red lead "Out of the mouth, into the math.", the tagline "Every Word Out Of Their Mouth Counts", the short "Word counts from official ..." line, the transparency-and-truth line, the plain SEO sentence (Federal Reserve, banks, earnings calls), then the Contact form (Web3Forms; no email address anywhere on the site) and the Privacy Policy link. The fine print (not financial advice; not affiliated with anyone listed) is in the site footer. The note under
 the cloud is just "Data through <date>" (plus the keyboard shortcuts on desktop). Helper captions are gone: no "Tick one
 or more" line in Choose documents, a shorter popover hint (hidden on touch screens), and on phones the "Showing the top N"
 line under the table and the cloud's "Top N of M words" line are hidden (the stats row already shows the count). The
@@ -166,36 +176,37 @@ names; no A–Z needed there). A–Z taps keep it open; picking a person folds i
 
 **Polish:** the red stats count up when a person loads (skipped with prefers-reduced-motion); a **Share** button in the
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
-`/` (filter words), `V` (jump between Super Math and Super Cloud), `S` (share), `?` (hint).
+`/` (filter words), `V` (switch between the Super Math and Super Cloud tabs; nothing to do side by side), `S` (share), `?` (hint).
 
-**One page, two sections (stacked layout, Oct 2026):** every speaker page shows the red stats, then the
-**Super Math** table, then (below a faint ad placeholder) the **Super Cloud**, each under a small cream Arial section heading
-(`h3.secth`, ids `superMath` / `superCloud`). There is no view toggle any more: the same person, documents, Show chips, word filter
-and stopword setting feed both. The header's two thumbnail cards are jump links (see "Jump links" below). Font size scales with the square root of the count, from 12px to 72px
-(the largest size is smaller on narrow screens). One shared **Show 10 / 25 / 100 / ALL** chip row (stair steps: bottom-aligned, each chip a little taller than the last, 10 shortest and ALL tallest; 34–46px tall on phones, 28–40px on desktop)
-(Arial, red outline; the selected chip is filled red; 40px tall, full-width on phones) sits right under the Timeframe
-row and sets how many words both sections show; the default is **10 on phones** (viewport under 600px wide, read once when the page loads) and **25 on wider screens**. Super Math lists the top N most frequent words
+**Super Math / Super Cloud tabs (mm24):** right under the red stats sit two tabs, red **Super Math** (left, the default) and green
+**Super Cloud** (right). Tapping one swaps the view in place, in the same spot, with no scrolling. Both views are always rendered; the hidden
+one is laid out at zero height and invisible, so the swap is instant. The same person, documents, Show chips, word filter
+and stopword setting feed both. From **1100px wide** both views sit **side by side** (table left, cloud right, each under a small cream
+heading, `h3.secth`; the cloud is sticky so it stays in view next to a long table) and the tabs are hidden. The faint `between` ad placeholder sits below the views. Font size scales with the square root of the count, from 12px to 72px
+(the largest size is smaller on narrow screens). One shared **Show 20 / 100 / ALL** chip row (stair steps: bottom-aligned, each chip a little taller than the last, 20 shortest and ALL tallest; 36/41/46px tall on phones, 30/35/40px on desktop)
+(Arial, red outline; the selected chip is filled red) sits right under the Timeframe
+row and sets how many words both sections show; the default is **20** on every device. Super Math lists the top N most frequent words
 (after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
 at most 300 words, so All means the top 300 in the cloud. "Hide common stopwords" (on by default) applies to both.
 Sorting a table column only reorders the table (the cloud is left as is). Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
 
 **Layout order (every screen size):** the person's name ("From the mouth of <person>"), then the
-red stats (documents, total words, unique words, words shown), the Timeframe / Show / filter rows, then the Super Math table, the `between` ad slot and the Super Cloud. The stats
+red stats (documents, total words, unique words, words shown), the Super Math / Super Cloud tabs, the Timeframe / Show / filter rows, then the view (or both side by side from 1100px) and the `between` ad slot. The stats
 live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
 screens (900px and up) the Who panel sits in a left sidebar in both views.
 **Privacy Policy:** `privacy.html` (generated by `build.py` from the `PRIVACY` template, same black/cream Arial look) covers Google AdSense cookies and personalized ads (links to Google's "How Google uses information from sites or apps that use our services" and adssettings.google.com), third-party vendor cookies, no accounts/logins and no personal data collected by the site itself, the TradingView chart embed, hosting and jsDelivr. Contact is a small form (Name optional, Email, Message, red Send button) in About and on the privacy page. It posts to Web3Forms (`https://api.web3forms.com/submit`, public access key in the HTML, `botcheck` honeypot, no hCaptcha), shows an inline thank-you or error and never leaves the page. Web3Forms forwards messages by email, so no email address appears anywhere on the site or in the repo. The policy discloses the form and the one local-storage flag (`mm_cloud_tried`). It is linked from the page footer and the About section.
 
 **Header:** the logo is an inline SVG (`assets/logo-inline.svg`, inlined by `build.py`): the original Mouth Math line art, open lips with "+ − = 1" inside and three sound waves, drawn as a faithful vector of `/workspace/logo-options/mouth-math-logo.jpg` in cream lines on black with the lip strokes in the site red (#ff5449, the stat / Super Cloud red; `LIPS=red` in `gen_lips.py`), with the "MouthMath" wordmark (one word, both M capitals; "Mouth" in the site red #ff5449 like the lips, "Math" cream; 1.12× the original size, letter spacing +0.045 em (`SCALE=1.12 TRACK=45` in `qs_glyphs.py`), chosen from current / wider / much wider in `/workspace/shots/wordmark-spacing-options.png` because it stays on one row next to Share/About at 320px) in Quicksand (a thin rounded geometric sans, SIL Open Font License, converted to outlines so no font is loaded). No animation. It is 56px tall on desktop, 48px from 641 to 1239px, 40px on phones and 34px below 360px. The static `assets/logo.svg`/`logo.png`, the favicon (`favicon.svg` / 32px `favicon.png`: the lips with the math, heavier lines), the `apple-touch-icon.png` and the 1200×630 `og-image.png` (logo on black) are generated from the same source (`/workspace/logo-options/lips/gen_lips.py`, `qs_glyphs.py`, `site_assets_lips.py`). After the logo comes a compact headline block, then the red
-**Super Math** and green **Super Cloud** jump links (green = one CSS variable, `--money`; set it to a gray to switch). Each one
-has a second outer ring in its color and a raised look (top highlight, drop shadow) that presses in on tap. The Fed Chair / CEOs /
+**Super Math** and green **Super Cloud** tabs (green = one CSS variable, `--money`; set it to a gray to switch). Each one
+has a thin second outer ring in its color; the selected tab is filled with a dark tint of its color. The Fed Chair / CEOs /
 US Government category buttons sit at the top of the Who panel, with that category's people right below. Person names are red
 (#ff5449 on dark; a darker red #a8201a on the light selected chip); ticker pills stay green.
-**Phones (640px and below):** logo (with Share/About) on the first row, the headline on its own line, the two view buttons in a row under it (no subline); category and person
+**Phones (640px and below):** logo (with Share/About) on the first row, the two view buttons in a row under it (no headline in the header since mm24); category and person
 chips in single horizontal-scroll rows; the A–Z index wraps into a grid of 40px-tall tap targets with 17px letters (9 x 3, so about
 37px wide at 390px, 34px at 360px and 30px at 320px; 14 x 2 from 560px; the cells touch and the visible box is drawn inside, empty letters grayed); the Timeframe row stays one line (years scroll sideways, 36px tap targets,
 13px text); About starts collapsed
-(the header's About link opens it). At 390×844 the red stats are at about y=310 and the table or cloud starts right below.
+(the header's About link opens it). At 390×844 the red stats are at about y=332 (y=160 at 1366 wide) and the table or cloud starts right below.
 
 **Super Math table columns:** Rank, Word and Count shrink to their content (`width:1%`), so the count sits a short, fixed gap after the longest word in the list (numbers right-aligned and lined up); the frequency bar fills the rest of the row.
 
@@ -227,13 +238,11 @@ the cream backgrounds). The theme is one block at the end of the CSS in `build.p
 the person heading and the red stat numbers; normal tracking for body text; uppercase with +0.06em only on tiny
 labels (category pill, source type, group labels). Counts use tabular numerals.
 
-URL state: the default is a clean URL, plus `person=`, `docs=` and `n=10|25|100|all` when it differs from the device default (10 on phones, 25 wider), so a shared link always carries an explicit pick (old links: `n=300` maps to All, `n=150` to 100, `n=50` to the device default). Jumping
-does not change the URL. Old `#mode=cloud` / `#mode=visual` links and the plain `#cloud` anchor load the page and scroll to the Super Cloud;
-old `#mode=standard` links open at the top.
+URL state: the default is a clean URL, plus `person=`, `docs=` and `n=100|all` when not 20 (old links: `n=300` maps to All, `n=150` to 100, and `n=10`, `n=25`, `n=50` to the default 20). The Super Cloud
+tab adds `view=cloud` (not side by side). `#view=cloud`, old `#mode=cloud` / `#mode=visual` links and the plain `#cloud` anchor open the Super Cloud tab;
+old `#mode=standard` links open on Super Math.
 
-**Jump links:** the header's **Super Math** (left, red double ring, red 3D look) scrolls smoothly to the table and **Super Cloud** (right, green double ring)
-scrolls smoothly to the cloud (`<a href="#superMath">` / `<a href="#cloud">`, so they also work without JavaScript; instant scroll with
-`prefers-reduced-motion`). Super Cloud's thin outer ring (the outline) slowly fades to black and back (2.8 s ease-in-out; border and label steady)
+**Tabs:** `#vtabs` (`role="tablist"`, arrow keys move between them). Super Cloud's thin outer ring (the outline) slowly fades to black and back (2.8 s ease-in-out; border and label steady)
 until it is tapped once (remembered in `localStorage` key `mm_cloud_tried`); none with `prefers-reduced-motion`. The red stats, the red #1 word pulse and other site reds are unchanged.
 
 ### Licensing: public domain vs. excerpts
