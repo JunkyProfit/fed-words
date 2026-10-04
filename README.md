@@ -107,8 +107,10 @@ out when you first open the site; uncheck it to list every word), and
 sortable Rank / Word / Count columns. People and their metadata are listed in
 `people.json`.
 
-**Timeframe selector:** one slim row inside the results card, right under the red stats: All / None, per-year
-chips and a small **Choose documents** toggle (the document list opens below it; closed by default).
+**Documents (mm26):** one compact **Choose documents ▾** link right under the red stats (white "Choose", red "documents",
+white triangle); tapping the docs stat ("42 / 42 docs") opens it too. On phones it opens a bottom sheet, and from 641px a popover
+under the link. Either one holds All / None, the per-year chips and the document list, and closes on the ×, the backdrop or Esc (`details#docPick`;
+the page behind does not scroll while the phone sheet is open).
 Each document shows its date, title and word count on one line, and its type, location/note and
 source link on a second line. Check one or more documents, use "only" to pick a single
 one, tick a year to add or remove all of that year's speeches, or use All / None.
@@ -158,7 +160,7 @@ captions, no "CEO" / "FED CHAIR" label in the name row (the tab already says it)
 "Top N of M words" status lines (the table-limit note still appears when ALL hits the 2,000-row cap), and phone text at 14px or more for
 body copy (person line, "From the mouth of", timeframe, Choose documents, stopwords, form labels). The documents quick-select (All / None / year chips)
 are plain cream 15px text buttons (no fill; a thin cream outline marks the selected one; no checkbox box). The years fade at the right edge only when they overflow,
-and on phones they share the All / None row with Choose documents below. On very narrow phones (under 380px) category names may wrap rather than shrink below 14px.
+inside the documents sheet. On phones (480px and narrower) category names like "US Government" wrap to two lines rather than shrink below 14px or get clipped.
 One Show row only (the duplicate above the cloud is gone). Arial throughout; black, cream/white, red and green.
 
 **Slim page text (mm23):** the page carries no methodology prose. About is short, in this order (mm24): the red lead "Out of the mouth, into the math.", the tagline "Every Word Out Of Their Mouth Counts", the short "Word counts from official ..." line, the transparency-and-truth line, the plain SEO sentence (Federal Reserve, banks, earnings calls), then the Contact form (Web3Forms; no email address anywhere on the site) and the Privacy Policy link. The fine print (not financial advice; not affiliated with anyone listed) is in the site footer. The note under
@@ -187,15 +189,14 @@ one is laid out at zero height and invisible, so the swap is instant. The same p
 and stopword setting feed both. From **1100px wide** both views sit **side by side** (table left, cloud right, each under a small cream
 heading, `h3.secth`; the cloud is sticky so it stays in view next to a long table) and the tabs are hidden. The faint `between` ad placeholder sits below the views. Font size scales with the square root of the count, from 12px to 72px
 (the largest size is smaller on narrow screens). One shared **Show 20 / 100 / ALL** chip row (stair steps: bottom-aligned, each chip a little taller than the last, 20 shortest and ALL tallest; 36/41/46px tall on phones, 30/35/40px on desktop)
-(Arial, red outline; the selected chip is filled red) sits right under the Timeframe
-row and sets how many words both sections show; the default is **20** on every device. Super Math lists the top N most frequent words
+(Arial, red outline; the selected chip is filled red) sits right under the tabs and sets how many words both sections show; the default is **20** on every device. Super Math lists the top N most frequent words
 (after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
 at most 300 words, so All means the top 300 in the cloud. "Hide common stopwords" (on by default) applies to both.
 Sorting a table column only reorders the table (the cloud is left as is). Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
 
 **Layout order (every screen size):** the person's name ("From the mouth of <person>"), then the
-red stats (documents, total words, unique words, words shown), the Super Math / Super Cloud tabs, the Timeframe / Show / filter rows, then the view (or both side by side from 1100px) and the `between` ad slot. The stats
+red stats (documents, total words, unique words, words shown), the Choose documents link, the Super Math / Super Cloud tabs, the Show / filter rows, then the view (or both side by side from 1100px) and the `between` ad slot. The stats
 live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
 screens (900px and up) the Who panel sits in a left sidebar in both views.
 **Privacy Policy:** `privacy.html` (generated by `build.py` from the `PRIVACY` template, same black/cream Arial look) covers Google AdSense cookies and personalized ads (links to Google's "How Google uses information from sites or apps that use our services" and adssettings.google.com), third-party vendor cookies, no accounts/logins and no personal data collected by the site itself, the TradingView chart embed, hosting and jsDelivr. Contact is a small form (Name optional, Email, Message, red Send button) in About and on the privacy page. It posts to Web3Forms (`https://api.web3forms.com/submit`, public access key in the HTML, `botcheck` honeypot, no hCaptcha), shows an inline thank-you or error and never leaves the page. Web3Forms forwards messages by email, so no email address appears anywhere on the site or in the repo. The policy discloses the form and the one local-storage flag (`mm_cloud_tried`). It is linked from the page footer and the About section.

@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm25">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm25">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm25">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm26">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm26">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm26">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm25">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm26">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -388,7 +388,7 @@ footer a{color:var(--muted)}
 .mmform{display:grid;gap:4px;max-width:520px;margin:6px 0 12px;font-family:Arial,Helvetica,sans-serif}.mmform label{font-size:13px;font-weight:700;color:#f3eee4;margin-top:6px}.mmform .opt{font-weight:400;color:var(--muted)}.mmform input:not([type=checkbox]),.mmform textarea{font:16px/1.35 Arial,Helvetica,sans-serif;color:#f3eee4;background:#0b0b0b;border:1px solid #3a3733;border-radius:6px;padding:9px 11px;width:100%;box-sizing:border-box}.mmform textarea{resize:vertical;min-height:96px}.mmform input:focus,.mmform textarea:focus{outline:2px solid #ff5449;outline-offset:1px;border-color:#ff5449}.mmform button{justify-self:start;margin-top:10px;min-height:44px;padding:0 24px;border:0;border-radius:8px;background:#ff5449;color:#fff;font:700 16px Arial,Helvetica,sans-serif;cursor:pointer}.mmform button:hover{background:#ff6b61}.mmform button:disabled{opacity:.6;cursor:default}.mmform button:focus-visible{outline:2px solid #fff;outline-offset:2px}.mmform .mmhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}.mmform .fmsg{margin:6px 0 0;min-height:1.2em;font-size:14px;color:#f3eee4}.mmform .fmsg.ok{color:#85bb65}.mmform .fmsg.err{color:#ff5449}@media (max-width:640px){.mmform button{width:100%}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm25" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm26" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -459,10 +459,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm25">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm25">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm26">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm26">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm25">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm26">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -475,14 +475,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm25">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm26">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm25">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm26">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1242,7 +1242,7 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
 .mmform{display:grid;gap:4px;max-width:520px;margin:6px 0 12px;font-family:Arial,Helvetica,sans-serif}.mmform label{font-size:13px;font-weight:700;color:#f3eee4;margin-top:6px}.mmform .opt{font-weight:400;color:var(--muted)}.mmform input:not([type=checkbox]),.mmform textarea{font:16px/1.35 Arial,Helvetica,sans-serif;color:#f3eee4;background:#0b0b0b;border:1px solid #3a3733;border-radius:6px;padding:9px 11px;width:100%;box-sizing:border-box}.mmform textarea{resize:vertical;min-height:96px}.mmform input:focus,.mmform textarea:focus{outline:2px solid #ff5449;outline-offset:1px;border-color:#ff5449}.mmform button{justify-self:start;margin-top:10px;min-height:44px;padding:0 24px;border:0;border-radius:8px;background:#ff5449;color:#fff;font:700 16px Arial,Helvetica,sans-serif;cursor:pointer}.mmform button:hover{background:#ff6b61}.mmform button:disabled{opacity:.6;cursor:default}.mmform button:focus-visible{outline:2px solid #fff;outline-offset:2px}.mmform .mmhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}.mmform .fmsg{margin:6px 0 0;min-height:1.2em;font-size:14px;color:#f3eee4}.mmform .fmsg.ok{color:#85bb65}.mmform .fmsg.err{color:#ff5449}@media (max-width:640px){.mmform button{width:100%}}
 #about h4.abcontact{font:700 16px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;margin:14px 0 0}
 /* ---- mm24 minimalist pass: fewer borders/labels/decoration, readable sizes (>=14px body on phones), Arial, black/cream/red/green ---- */
-#cats button .ci,header .hview .vcard svg,header .hview .vcard .vt small{display:none!important}body #cats button.cat{grid-template-columns:1fr!important;column-gap:0!important}body #picker #cats .ct small{grid-column:1/-1!important}@media (max-width:379px){body #picker #cats .ct b{white-space:normal!important;font-size:14px!important;line-height:1.1!important;overflow-wrap:anywhere}body .tbwrap td.w{overflow-wrap:anywhere}body .tbwrap th.barc{min-width:36px;width:36px}}@media (max-width:480px){body #tfbar{flex-wrap:wrap!important;row-gap:8px!important}body #tfbar .yrs{flex:1 1 0!important;min-width:0!important;order:0!important}body #tfbar #docPick{flex-basis:100%;order:5}}   /* phones: All · None · years on one row, Choose documents below */   /* decorative icons + "Ranked table"/"Bigger = said more" */
+#cats button .ci,header .hview .vcard svg,header .hview .vcard .vt small{display:none!important}body #cats button.cat{grid-template-columns:1fr!important;column-gap:0!important}body #picker #cats .ct small{grid-column:1/-1!important}@media (max-width:480px){body #picker #cats .ct b{white-space:normal!important;font-size:14px!important;line-height:1.1!important;overflow-wrap:anywhere}}@media (max-width:379px){body .tbwrap td.w{overflow-wrap:anywhere}body .tbwrap th.barc{min-width:36px;width:36px}}@media (max-width:480px){body #tfbar{flex-wrap:wrap!important;row-gap:8px!important}body #tfbar .yrs{flex:1 1 0!important;min-width:0!important;order:0!important}body #tfbar #docPick{flex-basis:100%;order:5}}   /* phones: All · None · years on one row, Choose documents below */   /* decorative icons + "Ranked table"/"Bigger = said more" */
 body .pk.pcoll #pdisc .pdg{display:none!important}body .pk.psolo #persons button.chip.on::before{content:none!important;display:none!important}   /* "CEO"/"FED CHAIR" repeat the tab */
 body #stats .stat{border:0!important}   /* boxes inside a bordered card: background only */
 #more:not(.lim),.cloudwrap .cloud-bar{display:none!important}   /* the stats row already says how many words are shown */
@@ -1293,6 +1293,43 @@ body #tfbar{gap:6px!important}
 
 /* Fed Chair page: a small cream "What the Fed Said" label above the name, in place of "From the mouth of" */
 body #words h1#personTitle .ft.fedsaid{display:block;margin:0 0 3px;color:#f3eee4!important;font:700 15px/1.2 Arial,Helvetica,sans-serif!important;letter-spacing:0}
+
+/* ---- mm26: documents controls folded into one compact "Choose documents" link under the red stats (white Choose, red documents,
+   white triangle; tapping the docs stat opens it too). Opens a bottom sheet on phones, a popover on wider screens, holding
+   All / None / years and the document list. ---- */
+body #tfbar{display:block!important;margin:8px 0 0!important;position:relative;min-height:0}
+body #tfbar #docPick{display:inline-block;margin:0!important;padding:0;border:0}
+body #tfbar #docPick>summary{display:inline-flex!important;align-items:center;min-height:32px!important;padding:4px 2px!important;border:0!important;background:none!important;
+ box-shadow:none!important;font:700 15px/1.2 Arial,Helvetica,sans-serif!important;color:var(--num-red)!important;list-style:none;cursor:pointer;white-space:nowrap}
+body #tfbar #docPick>summary::-webkit-details-marker{display:none}
+body #tfbar #docPick>summary{gap:0!important;justify-content:flex-start!important;width:auto!important;flex:none!important}body #tfbar #docPick>summary>*{margin-left:0;flex:none}
+body #docPick .dsx{font-size:30px!important;line-height:1!important;padding:0!important}
+@media (min-width:1100px){body #tfbar{margin-bottom:12px!important}}
+body #tfbar #docPick>summary::before{display:none!important}
+body #tfbar #docPick>summary::after{content:"\25BE"!important;color:#fff!important;font-size:17px!important;line-height:1!important;margin-left:6px}
+body #tfbar #docPick[open]>summary::after{content:"\25B4"!important}
+body #tfbar #docPick>summary #docCount{display:none!important}
+body #tfbar #docPick>summary .dpc{color:#fff!important;margin-right:5px}
+body #tfbar #docPick>summary:hover{text-decoration:underline;text-underline-offset:3px;background:none!important}
+body #tfbar #docPick>summary:focus-visible{outline:2px solid #fff;outline-offset:2px}
+body #tfbar #docPick[open]>summary{background:none!important;color:var(--num-red)!important;margin:0!important}
+#docPick .dsback{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.6)}
+#docPick .dsheet{position:fixed;left:0;right:0;bottom:0;z-index:1001;max-height:min(80vh,640px);overflow:auto;overscroll-behavior:contain;background:#121212;
+ border-top:1px solid #3a3733;border-radius:14px 14px 0 0;padding:0 16px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(0,0,0,.6)}
+#docPick .dshead{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:10px 0 8px;background:#121212}
+#docPick .dshead b{font:700 16px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4}
+#docPick .dsx{background:none;border:0;color:#f3eee4;font:400 28px/1 Arial,Helvetica,sans-serif;width:44px;height:44px;margin-right:-12px;cursor:pointer}
+#docPick .dsx:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+#docPick .dsq{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+body #docPick .dsq .yrs{flex:1 1 auto!important;min-width:0!important;order:0!important}
+body #docPick .dsheet .speeches{max-height:none!important;overflow:visible!important;margin:0!important}
+html.dsopen,html.dsopen body{overflow:hidden}
+#stats .stat:first-child{cursor:pointer}#stats .stat:first-child:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media (min-width:641px){
+ #docPick .dsback{background:transparent}
+ #docPick .dsheet{position:absolute;left:0;right:auto;bottom:auto;top:calc(100% + 6px);width:min(580px,calc(100vw - 40px));max-height:min(70vh,560px);
+  border:1px solid #3a3733;border-radius:8px;padding:0 16px 14px;box-shadow:0 12px 32px rgba(0,0,0,.7)}
+}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home">__LOGO__</a>
@@ -1321,13 +1358,14 @@ body #words h1#personTitle .ft.fedsaid{display:block;margin:0 0 3px;color:#f3eee
 <div class="stat"><b id="sUnique">–</b><span class="sl" data-s="unique">unique words</span></div>
 <div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
 </div>
-<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Super Math</button><button type="button" role="tab" id="tabCloud" class="mmfade" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Super Cloud</button></div>
-<div id="tfbar" role="group" aria-label="Timeframe"><span class="tfl">Timeframe</span>
-<button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><span class="tfsep" aria-hidden="true"></span>
-<div class="yrs" id="years" role="group" aria-label="Years"></div>
+<div id="tfbar" role="group" aria-label="Documents">
 <details id="docPick"><summary><span class="dpc">Choose</span> documents <span class="muted" id="docCount"></span></summary>
-<ul class="speeches" id="docList"></ul></details>
+<div class="dsback" aria-hidden="true"></div>
+<div class="dsheet" role="dialog" aria-label="Choose documents"><div class="dshead"><b>Documents</b><button type="button" class="dsx" id="dsClose" aria-label="Close">&times;</button></div>
+<div class="dsq"><button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><div class="yrs" id="years" role="group" aria-label="Years"></div></div>
+<ul class="speeches" id="docList"></ul></div></details>
 <div id="selSummary" class="sr-only"></div></div>
+<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Super Math</button><button type="button" role="tab" id="tabCloud" class="mmfade" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Super Cloud</button></div>
 <div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="20">20</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
@@ -1456,6 +1494,7 @@ $('psearch').addEventListener('input',e=>{pq=e.target.value.trim();renderPicker(
 $('psearch').addEventListener('keydown',e=>{if(e.key==='Enter'){const b=$('persons').querySelector('button.chip');if(b){e.preventDefault();setPerson(b.dataset.person)}}
   else if(e.key==='Escape'&&e.target.value){e.target.value='';pq='';renderPicker();e.stopPropagation()}});
 async function setPerson(slug,docIds){
+  {const dp=$('docPick');if(dp&&dp.open)dp.open=false}   // mm26: a new speaker closes the documents sheet/popover
   hidePop();
   const p=await loadPerson(BY.get(slug)||BY.get(DEFAULT));
   P=p;V=p.vocab;VI=p.VI;DOCS=p.docs;YEARS=[...new Set(DOCS.map(d=>d.year))].sort().reverse();
@@ -1493,6 +1532,14 @@ function buildTimeframe(){
   document.querySelectorAll('#years input').forEach(cb=>cb.onchange=()=>{
     DOCS.filter(d=>d.year===cb.dataset.year).forEach(d=>cb.checked?sel.add(d.id):sel.delete(d.id));update()});
 }
+// ---- mm26: the documents sheet (phones) / popover (wider): close on the backdrop, the x, Esc; the docs stat opens it ----
+{const DP=$('docPick'),sm=DP.querySelector('summary'),phone=matchMedia('(max-width:640px)');
+ DP.addEventListener('toggle',()=>{const o=DP.open;document.documentElement.classList.toggle('dsopen',o&&phone.matches);
+  if(o){hidePop();yrsFit();requestAnimationFrame(()=>$('dsClose').focus({preventScroll:true}))}else if(DP.contains(document.activeElement))sm.focus({preventScroll:true})});
+ DP.querySelector('.dsback').onclick=()=>{DP.open=false};$('dsClose').onclick=()=>{DP.open=false};
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&DP.open){e.preventDefault();DP.open=false}});
+ const ds=$('sDocs').closest('.stat');ds.tabIndex=0;ds.setAttribute('role','button');ds.setAttribute('aria-label','Choose documents');
+ ds.onclick=()=>{DP.open=true};ds.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();DP.open=true}}}
 $('btnAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
 $('btnNone').onclick=()=>{sel=new Set();update()};
 function yrsFit(){const y=$('years');if(y)y.classList.toggle('ovf',y.scrollWidth>y.clientWidth+1)}   // fade only when the years overflow
