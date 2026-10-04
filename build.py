@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm32">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm32">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm32">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm33">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm33">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm33">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm32">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm33">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -387,9 +387,13 @@ footer a{color:var(--muted)}
 @media (max-width:640px){header{padding:12px 16px}header .logo img{height:38px}main{padding:22px 16px 32px}h1{font-size:26px}h2{font-size:18px}body{font-size:15.5px}}
 @media (max-width:420px){header .in{flex-wrap:wrap;row-gap:6px}}
 .mmform{display:grid;gap:4px;max-width:520px;margin:6px 0 12px;font-family:Arial,Helvetica,sans-serif}.mmform label{font-size:13px;font-weight:700;color:#f3eee4;margin-top:6px}.mmform .opt{font-weight:400;color:var(--muted)}.mmform input:not([type=checkbox]),.mmform textarea{font:16px/1.35 Arial,Helvetica,sans-serif;color:#f3eee4;background:#0b0b0b;border:1px solid #3a3733;border-radius:6px;padding:9px 11px;width:100%;box-sizing:border-box}.mmform textarea{resize:vertical;min-height:96px}.mmform input:focus,.mmform textarea:focus{outline:2px solid #ff5449;outline-offset:1px;border-color:#ff5449}.mmform button{justify-self:start;margin-top:10px;min-height:44px;padding:0 24px;border:0;border-radius:8px;background:#ff5449;color:#fff;font:700 16px Arial,Helvetica,sans-serif;cursor:pointer}.mmform button:hover{background:#ff6b61}.mmform button:disabled{opacity:.6;cursor:default}.mmform button:focus-visible{outline:2px solid #fff;outline-offset:2px}.mmform .mmhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}.mmform .fmsg{margin:6px 0 0;min-height:1.2em;font-size:14px;color:#f3eee4}.mmform .fmsg.ok{color:#85bb65}.mmform .fmsg.err{color:#ff5449}@media (max-width:640px){.mmform button{width:100%}}
+/* mm33: Back to top (same as the main page's) */
+.abtop{margin:28px 0 0}
+.totop{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 16px;font:700 15px/1 Arial,Helvetica,sans-serif;color:#f3eee4;background:transparent;border:1px solid #6f6a62;border-radius:4px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm32" alt="MouthMath"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm33" alt="MouthMath"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -449,9 +453,11 @@ standard request information such as your IP address; see the <a href="https://w
 <h2>Contact</h2>
 <p>Questions about this policy? Send us a message:</p>
 <form class="mmform" id="pform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath privacy question"><input type="hidden" name="from_name" value="Mouth Math website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="pformN">Name <span class="opt">(optional)</span></label><input id="pformN" name="name" autocomplete="name" maxlength="100"><label for="pformE">Email</label><input id="pformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="pformM">Message</label><textarea id="pformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
+<p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
 </main>
 <footer><a href="./">Home</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
+<script>document.getElementById('toTop').onclick=()=>{scrollTo({top:0,left:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const L=document.querySelector('header .logo');if(L)L.focus({preventScroll:true})}</script>
 <script>document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'})</script>
 </body></html>
 """
@@ -460,10 +466,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm32">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm32">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm33">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm33">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm33">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -476,14 +482,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm32">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm33">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm32">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm33">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1359,6 +1365,21 @@ body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;tex
 #tb tr.cwl td{color:#7d776d!important;font-weight:400!important;font-style:italic;cursor:pointer;padding-top:12px;padding-bottom:12px;user-select:none}#tb tr.cwl:hover td{background:#1a1919}#tb tr.cwl:focus-visible{outline:2px solid #7d776d;outline-offset:-2px}
 .rsrow{display:flex;align-items:center;gap:8px;margin:12px 2px 4px;font:400 15px/1.3 Arial,Helvetica,sans-serif;color:#f3eee4;cursor:pointer}
 .rsrow[hidden]{display:none}.rsrow input{width:18px;height:18px;accent-color:var(--num-red);margin:0}
+/* mm33: Back to top button at the end of About: outlined like the docs button (cream Arial text, thin gray border), 44px tap target; shown even when About is collapsed on phones */
+#about .abtop{margin:14px 0 2px;max-width:none}
+#about .totop{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 16px;font:700 15px/1 Arial,Helvetica,sans-serif;color:#f3eee4;background:transparent;border:1px solid #6f6a62;border-radius:4px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#about .totop .tri{font-size:12px;line-height:1}
+#about .totop:hover{border-color:#f3eee4}
+#about .totop:active{background:rgba(243,238,228,.08)}
+#about .totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
+#about:not(.open)>.abtop{display:block;margin-top:8px}
+/* mm33: category buttons (Fed Chair / CEOs / US Government) text ~20% bigger, name and count; phones may wrap "US Government" to two lines */
+body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small{font-size:13.8px!important}   /* was 14.5 / 11.5 */
+@media (max-width:640px){body #picker #cats .ct b{font-size:18px!important}body #picker #cats .ct small{font-size:15.6px!important}}   /* was 15 / 13 */
+@media (max-width:480px){body #picker #cats .ct b{font-size:16.8px!important;overflow-wrap:normal!important;word-break:normal!important}   /* was 14 / 13 */
+ body #picker #cats.seg{grid-template-columns:repeat(3,minmax(min-content,1fr))!important}   /* equal widths when they fit; else the widest word ("Government") gets room instead of breaking mid-word */
+ body #picker #cats .ct small{white-space:normal!important}}
+@media (max-width:360px){body #cats button{padding:6px 7px!important}}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -1429,6 +1450,7 @@ body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;tex
 <h4 class="abcontact" id="contact">Contact</h4>
 <form class="mmform" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact"><input type="hidden" name="from_name" value="Mouth Math website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="cformN">Name <span class="opt">(optional)</span></label><input id="cformN" name="name" autocomplete="name" maxlength="100"><label for="cformE">Email</label><input id="cformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="cformM">Message</label><textarea id="cformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abfoot"><a href="privacy.html">Privacy Policy</a></p>
+<p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
 </section>
 </main>
 <footer class="sitefoot"><a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
@@ -1546,6 +1568,8 @@ setAbout(!PHONE.matches||location.hash==='#about');
 $('aboutToggle').onclick=()=>setAbout(!$('about').classList.contains('open'));
 document.querySelector('header a.about-link').addEventListener('click',()=>setAbout(true));
 addEventListener('hashchange',()=>{if(location.hash==='#about')setAbout(true)});
+$('toTop').onclick=()=>{const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;   // mm33: smooth, or instant with reduced motion
+  scrollTo({top:0,left:0,behavior:rm?'instant':'smooth'});const L=document.querySelector('header .logo');if(L)L.focus({preventScroll:true})};
 
 // ---- timeframe UI ----
 function buildTimeframe(){

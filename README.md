@@ -438,3 +438,11 @@ Every disclosure or sort arrow on the page is white: the larger "Choose document
 **Empty ticker pills (mm31):** a ticker pill with no ticker (Fed Chair, US Government) is never shown. The sticky speaker bar used to show an empty green pill for them.
 
 **Super Cloud tab (mm32):** no green. It looks exactly like Super Math: red text when unselected, the category gray with a red underline when selected. The first-visit fading border hint and the green keyboard-focus ring on cloud words were removed. Ticker pills stay green.
+
+**Back to top (mm33):** a "▲ Back to top" button is the last thing in About (shown even when About is collapsed on phones, so it is
+also the bottom-of-page button right above the footer) and at the bottom of privacy.html. Outlined like the documents button
+(cream Arial text, 1px #6f6a62 border, 4px radius), 44px tall. Smooth scroll to the top, instant with reduced motion; focus moves to the logo.
+
+**Category buttons (mm33):** Fed Chair / CEOs / US Government name and count text are ~20% bigger (phones 16.8/15.6px, was 14/13;
+481-640px 18/15.6, was 15/13; desktop 17.4/13.8, was 14.5/11.5). On phones the three columns are equal when they fit, otherwise the widest
+word gets room (`minmax(min-content,1fr)`) so "Government" never breaks mid-word; at 320px the count line may wrap ("24 / people").

@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm32">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm32">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm33">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm33">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm33">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm32">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm33">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm32">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm33">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -901,6 +901,21 @@ body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;tex
 #tb tr.cwl td{color:#7d776d!important;font-weight:400!important;font-style:italic;cursor:pointer;padding-top:12px;padding-bottom:12px;user-select:none}#tb tr.cwl:hover td{background:#1a1919}#tb tr.cwl:focus-visible{outline:2px solid #7d776d;outline-offset:-2px}
 .rsrow{display:flex;align-items:center;gap:8px;margin:12px 2px 4px;font:400 15px/1.3 Arial,Helvetica,sans-serif;color:#f3eee4;cursor:pointer}
 .rsrow[hidden]{display:none}.rsrow input{width:18px;height:18px;accent-color:var(--num-red);margin:0}
+/* mm33: Back to top button at the end of About: outlined like the docs button (cream Arial text, thin gray border), 44px tap target; shown even when About is collapsed on phones */
+#about .abtop{margin:14px 0 2px;max-width:none}
+#about .totop{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 16px;font:700 15px/1 Arial,Helvetica,sans-serif;color:#f3eee4;background:transparent;border:1px solid #6f6a62;border-radius:4px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#about .totop .tri{font-size:12px;line-height:1}
+#about .totop:hover{border-color:#f3eee4}
+#about .totop:active{background:rgba(243,238,228,.08)}
+#about .totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
+#about:not(.open)>.abtop{display:block;margin-top:8px}
+/* mm33: category buttons (Fed Chair / CEOs / US Government) text ~20% bigger, name and count; phones may wrap "US Government" to two lines */
+body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small{font-size:13.8px!important}   /* was 14.5 / 11.5 */
+@media (max-width:640px){body #picker #cats .ct b{font-size:18px!important}body #picker #cats .ct small{font-size:15.6px!important}}   /* was 15 / 13 */
+@media (max-width:480px){body #picker #cats .ct b{font-size:16.8px!important;overflow-wrap:normal!important;word-break:normal!important}   /* was 14 / 13 */
+ body #picker #cats.seg{grid-template-columns:repeat(3,minmax(min-content,1fr))!important}   /* equal widths when they fit; else the widest word ("Government") gets room instead of breaking mid-word */
+ body #picker #cats .ct small{white-space:normal!important}}
+@media (max-width:360px){body #cats button{padding:6px 7px!important}}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home"><svg width="273" height="56" focusable="false" xmlns="http://www.w3.org/2000/svg" class="mmlogo" viewBox="144 238 1140.2 234" role="img" aria-label="MouthMath"><title>MouthMath</title><path d="M150,337.5 C160,312 186,276 213,256 C226,246 236,244 244,244.5 C256,245 266,252 277.5,254.5 C289,252 299,245 311,244.5 C319,244 329,246 342,256 C369,276 395,312 405,339.5 M150,337.5 C178,309 214,285 243,284.5 C258,284 268,289.5 277.5,289.5 C287,289.5 297,284 312,284.5 C341,285 377,309 405,339.5 M150,337.5 C178,394 226,428.5 277.5,428.5 C329,428.5 377,394 405,339.5 M150,337.5 C162,392 212,466 277.5,466 C343,466 393,392 405,339.5" fill="none" stroke="#ff5449" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M196,351 H234 M215,332 V370 M260,329.5 H298 M260,374.5 H298 M260,389.5 H298 M330,346 L340.5,338.5 V374.5 M333.5,374.5 H349.5" fill="none" stroke="#f3eee4" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M430.3,319.1 A56,56 0 0 1 430.3,384.9 M447.6,297.5 A83,83 0 0 1 447.6,406.5 M470.8,280.0 A112,112 0 0 1 470.8,424.0" fill="none" stroke="#f3eee4" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/><text class="mmwm" x="528.8" y="407.0" fill="#ff5449" style="font-family:Arial,'Helvetica Neue',Helvetica,'Liberation Sans',sans-serif;font-weight:700;font-size:153.57px;letter-spacing:-0.02em">MOUTH</text><text x="1082.8" y="333.3" fill="#f3eee4" style="font-family:Arial,'Helvetica Neue',Helvetica,'Liberation Sans',sans-serif;font-weight:700;font-size:84.46px;letter-spacing:-0.005em">Math</text></svg></a>
@@ -971,6 +986,7 @@ body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;tex
 <h4 class="abcontact" id="contact">Contact</h4>
 <form class="mmform" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact"><input type="hidden" name="from_name" value="Mouth Math website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="cformN">Name <span class="opt">(optional)</span></label><input id="cformN" name="name" autocomplete="name" maxlength="100"><label for="cformE">Email</label><input id="cformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="cformM">Message</label><textarea id="cformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abfoot"><a href="privacy.html">Privacy Policy</a></p>
+<p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
 </section>
 </main>
 <footer class="sitefoot"><a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
@@ -1088,6 +1104,8 @@ setAbout(!PHONE.matches||location.hash==='#about');
 $('aboutToggle').onclick=()=>setAbout(!$('about').classList.contains('open'));
 document.querySelector('header a.about-link').addEventListener('click',()=>setAbout(true));
 addEventListener('hashchange',()=>{if(location.hash==='#about')setAbout(true)});
+$('toTop').onclick=()=>{const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;   // mm33: smooth, or instant with reduced motion
+  scrollTo({top:0,left:0,behavior:rm?'instant':'smooth'});const L=document.querySelector('header .logo');if(L)L.focus({preventScroll:true})};
 
 // ---- timeframe UI ----
 function buildTimeframe(){
