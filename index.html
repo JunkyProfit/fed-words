@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm28">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm28">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm29">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm29">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm28">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm29">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm28">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm29">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm28">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm29">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -417,6 +417,8 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 #cats .ct small{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:2px}
 #cats button.cat.on{background:var(--ink);color:#0b0b0b;border-color:var(--ink);box-shadow:inset 0 -3px 0 var(--num-red)}
 #cats button.cat.on .ct small{color:#4f4a43}
+/* mm29: the selected category tab (e.g. 'Fed Chair' on the default load) softened from bright cream to a medium warm gray; dark text keeps ~6.6:1 contrast, the count ~5:1; the red underline stays */
+#cats button.cat.on{background:#9a958c;border-color:#9a958c}#cats button.cat.on .ct small{color:#26231f}
 .topbar .viewbar{margin:0;flex:none;align-items:center}.topbar #viewHint{display:none}#cats .ct b{white-space:nowrap}
 @media (min-width:900px){body main>.topbar{grid-column:1/-1;grid-row:1}}
 @media (max-width:899px){.topbar{display:contents}.catbar{margin:0 0 10px}}
@@ -1253,13 +1255,20 @@ function showPop(tr,pin){
   curRow=tr;curWord=tr.dataset.w;pinned=pin||pinned&&curWord===tr.dataset.w;tr.classList.add('active');
   pop.innerHTML=popHTML(curWord);pop.classList.toggle('expanded',showAll);pop.hidden=false;placePop();
 }
+// mm29: a tapped / clicked word (not a hover) scrolls the PAGE so the excerpts panel's top sits near the top of the screen, under the
+// sticky speaker bar when that bar will be showing; the panel's own text is never scrolled. Reduced motion = instant jump.
+function popToTop(){requestAnimationFrame(()=>{if(pop.hidden)return;const r=pop.getBoundingClientRect(),st=$('stats').getBoundingClientRect(),de=document.documentElement;
+  const y=scrollY+r.top,bar=$('spkbar'),barH=bar&&getComputedStyle(bar).display!=='none'?bar.offsetHeight:0;
+  let t=y-10-barH;if(scrollY+st.bottom-t>=0)t=y-10;   // the bar only shows once the red stats have scrolled away
+  t=Math.max(0,Math.min(de.scrollHeight-innerHeight,Math.round(t)));if(Math.abs(t-scrollY)<4)return;
+  scrollTo({top:t,behavior:RM.matches?'instant':'smooth'})})}
 function hidePop(){pop.hidden=true;pinned=false;showAll=false;curWord=null;if(curRow)curRow.classList.remove('active');curRow=null}
 const cloud=$('cloud');
 [tb,cloud].forEach(box=>{
 box.addEventListener('mouseover',e=>{const tr=e.target.closest('[data-w]');if(!tr||pinned)return;clearTimeout(hideT);
   if(tr===curRow)return;clearTimeout(hoverT);hoverT=setTimeout(()=>showPop(tr,false),120)});
 box.addEventListener('mouseleave',()=>{clearTimeout(hoverT);if(!pinned)hideT=setTimeout(hidePop,300)});
-box.addEventListener('click',e=>{const tr=e.target.closest('[data-w]');if(!tr)return;clearTimeout(hoverT);clearTimeout(hideT);pinned=false;showPop(tr,true)});
+box.addEventListener('click',e=>{const tr=e.target.closest('[data-w]');if(!tr)return;clearTimeout(hoverT);clearTimeout(hideT);pinned=false;showPop(tr,true);popToTop()});
 });
 pop.addEventListener('mouseenter',()=>clearTimeout(hideT));
 pop.addEventListener('mouseleave',()=>{if(!pinned)hideT=setTimeout(hidePop,300)});
@@ -1514,8 +1523,8 @@ document.addEventListener('keydown',e=>{if(tvM.hidden)return;if(e.key==='Escape'
 document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(a&&/^https?:/.test(a.href)&&a.origin!==location.origin&&!a.closest('.tradingview-widget-container')){a.target='_blank';a.rel='noopener noreferrer'}},true);setN(NSHOW,false);
 tb.addEventListener('click',e=>{if(e.target.closest('tr.cwl')){cwOpen=!cwOpen;hidePop();render(false)}});   // tap '+K common words' to expand / collapse the gray rows
 tb.addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('tr.cwl')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();cwOpen=!cwOpen;hidePop();render(false);const l=tb.querySelector('tr.cwl');if(l)l.focus();return}});
-tb.addEventListener('keydown',e=>{const r=e.target.closest('tr.top[data-w]');if(r&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(r,true)}});
-cloud.addEventListener('keydown',e=>{const s=e.target.closest('[data-w]');if(s&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(s,true)}});
+tb.addEventListener('keydown',e=>{const r=e.target.closest('tr.top[data-w]');if(r&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(r,true);popToTop()}});
+cloud.addEventListener('keydown',e=>{const s=e.target.closest('[data-w]');if(s&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(s,true);popToTop()}});
 let rsT=null;
 addEventListener('resize',()=>{placePop();clearTimeout(rsT);rsT=setTimeout(()=>{ // re-layout when the width changes (rotation, window resize)
   if(P&&cloud.clientWidth!==cloudW){hidePop();render()}},150)});

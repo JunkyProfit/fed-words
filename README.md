@@ -424,3 +424,7 @@ Every disclosure or sort arrow on the page is white: the larger "Choose document
 **Links:** every link to a source document or an original source (the Choose documents list, sentence popovers, source credits, the About page) opens in a new tab with `target="_blank" rel="noopener noreferrer"`; a click handler also forces this for any other off-site link. Checkboxes and "only" buttons just change the selection.
 
 **Copyright line (mm28):** the footer of index.html and privacy.html ends with one faint gray, small (12px Arial), centered line, "© 2026 MouthMath", right under the Privacy link. There is no name and no "All rights reserved"; the old "© 2026 Mouth Math ·" prefix was removed from the footer link line so the © appears once.
+
+**Tap a word, read its sentences (mm29):** tapping or clicking a word in Super Math or Super Cloud (or Enter on the #1 word) opens its excerpts panel and smoothly scrolls the page so the panel's top sits near the top of the screen, just under the sticky speaker bar when that bar is showing. The panel's own text is never scrolled. Hovering on desktop never scrolls. With prefers-reduced-motion the page jumps instantly.
+
+**Selected category tab (mm29):** the selected category tab (e.g. "Fed Chair" on the default load, `#cats button.cat.on`) is a medium warm gray (#9a958c) instead of bright cream. Its dark label keeps about 6.6:1 contrast, the count (#26231f) about 5.3:1, and the red underline stays. Selected speaker names stay red.
