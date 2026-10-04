@@ -226,12 +226,13 @@ def load_people():
         if p["slug"] in cfg.get("existing_tickers", {}): p["ticker"] = cfg["existing_tickers"][p["slug"]]
     for c in cfg["companies"]:
         if c["slug"] in have: continue
-        letter = c["kind"] == "letter"
+        letter, filings = c["kind"] == "letter", c["kind"] == "filings"   # filings: past CEOs (fetch_ceo_filings.py), mixed doc types
         people.append({"slug": c["slug"], "name": c["name"], "display": c["name"], "category": "CEOs", "role": c["role"],
-                       "org": c["org"], "policy": "excerpt", "source": c["source"], "mode": "ceo", "eyebrow": "CEO · " + c["org"],
-                       "doc_noun": "shareholder letters" if letter else "earnings call prepared remarks",
-                       "doc_noun1": "shareholder letter" if letter else "earnings call prepared remarks",
-                       "unit": "letter" if letter else "call", "unit_pl": "letters" if letter else "calls",
+                       "org": c["org"], "policy": "excerpt", "source": c["source"], "mode": "ceo", "eyebrow": c.get("eyebrow") or "CEO · " + c["org"],
+                       "doc_noun": "documents" if filings else "shareholder letters" if letter else "earnings call prepared remarks",
+                       "doc_noun1": "document" if filings else "shareholder letter" if letter else "earnings call prepared remarks",
+                       "unit": "document" if filings else "letter" if letter else "call",
+                       "unit_pl": "documents" if filings else "letters" if letter else "calls",
                        "indices": c.get("indices", []), "ticker": c.get("ticker")})
     tvx = cfg.get("tv_exchange", {})
     for p in people:   # TradingView symbol for the price-chart popup (EXCHANGE:TICKER), only when the exchange is known
@@ -350,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm22">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm22">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm22">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm23">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm23">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm23">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -360,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm22">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm23">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -386,7 +387,7 @@ footer a{color:var(--muted)}
 @media (max-width:420px){header .in{flex-wrap:wrap;row-gap:6px}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm22" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm23" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -452,10 +453,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm22">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm22">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm23">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm23">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm22">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm23">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -468,14 +469,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm22">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm23">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm22">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm23">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -927,26 +928,15 @@ table.only-standard th[data-k="count"],table.only-standard td.cnt{width:1%;white
 table.only-standard th.barc{width:auto}
 @media (max-width:640px){table.only-standard th[data-k="rank"],table.only-standard td.num:first-child{padding-left:2px;padding-right:12px}table.only-standard th[data-k="word"],table.only-standard td.w{padding-right:6px}table.only-standard th[data-k="count"],table.only-standard td.cnt{padding-left:0;padding-right:12px}table.only-standard th[data-k="count"]{letter-spacing:.02em}}
 tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num-red)}
-/* the #1 word in the Super Cloud pulses: slow, gentle glow (2.2 s ease-in-out); canvas mode does the same in paint() */
-@keyframes mmTopPulse{0%,100%{text-shadow:0 0 2px rgba(255,84,73,.22);filter:brightness(1);transform:scale(1)}
- 50%{text-shadow:0 0 6px rgba(255,84,73,.55),0 0 16px rgba(255,84,73,.38);filter:brightness(1.16);transform:scale(1.025)}}
-#cloud span.top{animation:mmTopPulse 2.2s ease-in-out infinite;transform-origin:50% 55%;will-change:transform}
-#cloud.live span.top{animation:none}
-@media (prefers-reduced-motion:reduce){#cloud span.top{animation:none!important;text-shadow:none;filter:none;transform:none}}
-/* ---- The #1 word as an inviting button (Oct 2026): a pill with two faint white rings (inner ~40%, outer further out ~15%, like the
-   header buttons' double ring). In the Super Cloud they breathe with the red pulse (--ph 0..1: CSS keyframes for the static cloud,
-   set per frame by paint() when p5 is running); static with reduced motion. Tap = the word's excerpts popover. ---- */
-@property --ph{syntax:'<number>';inherits:true;initial-value:0}
-@keyframes mmTopPh{0%,100%{--ph:0}50%{--ph:1}}
+/* the #1 word in the Super Cloud is solid red (no pulse, Oct 2026); it floats a little more than the others instead (physics) */
+/* ---- The #1 word as an inviting button (Oct 2026): a pill with two faint, static white rings (inner ~40%, outer further out ~15%,
+   like the header buttons' double ring); the rings travel with the word as it floats. Tap = the word's excerpts popover. ---- */
 #cloud span.top{cursor:pointer;overflow:visible}
-#cloud span.top{animation:mmTopPulse 2.2s ease-in-out infinite,mmTopPh 2.2s ease-in-out infinite}
-#cloud.live span.top{animation:none}
 #cloud span.top::before,#cloud span.top::after{content:"";position:absolute;pointer-events:none;border-radius:999px}
-#cloud span.top::before{inset:-3px -6px;box-shadow:0 0 0 1.5px rgba(255,255,255,calc(.32 + .12*var(--ph)))}
-#cloud span.top::after{inset:calc(-8px - 2px*var(--ph)) calc(-12px - 2px*var(--ph));border:1px solid rgba(255,255,255,calc(.11 + .07*var(--ph)))}
+#cloud span.top::before{inset:-3px -6px;box-shadow:0 0 0 1.5px rgba(255,255,255,.4)}
+#cloud span.top::after{inset:-9px -13px;border:1px solid rgba(255,255,255,.15)}
 #cloud span.top:hover,#cloud span.top.active{background:transparent}
 #cloud span.top:hover::before,#cloud span.top.active::before{background:rgba(255,255,255,.06)}
-@media (prefers-reduced-motion:reduce){#cloud span.top{--ph:.5}#cloud span.top::after{inset:-9px -13px}}
 /* Super Math #1 row: the rings are an overlay laid over the row (pseudo-elements on a <tr> break the table layout in Chrome) */
 #tb tr.top{cursor:pointer}#tb tr.top:focus-visible{outline:none}
 .tbwrap{position:relative}
@@ -1132,6 +1122,12 @@ body header .hact{gap:10px!important}body header .hact button,body header .hact 
 /* Show chips, smaller (Oct 2026): content-sized, 36px tall on phones; tighter padding on narrow phones keeps one row at 320 */
 @media (max-width:374px){body #nbar{gap:5px!important}body #nbar .nchip{min-width:34px;padding:0 7px!important}}
 @media (max-width:330px){body #nbar .nchip{padding:0 6px!important}#nbar .nbl:first-child{font-size:13px;margin-right:0}}
+/* Show 10 / 25 / 100 / ALL as stair steps (Oct 2026): bottom-aligned, each chip a little taller than the last so the tops rise like stairs */
+body #nbar{align-items:flex-end!important}body #nbar .nbl{align-self:center}
+body #nbar .nchip[data-n="10"]{min-height:28px!important}body #nbar .nchip[data-n="25"]{min-height:32px!important}
+body #nbar .nchip[data-n="100"]{min-height:36px!important}body #nbar .nchip[data-n="all"]{min-height:40px!important}
+@media (max-width:640px){body #nbar .nchip{min-width:44px}body #nbar .nchip[data-n="10"]{min-height:34px!important}body #nbar .nchip[data-n="25"]{min-height:38px!important}
+ body #nbar .nchip[data-n="100"]{min-height:42px!important}body #nbar .nchip[data-n="all"]{min-height:46px!important}}
 /* ---- Phones: collapsible people list for every multi-person category (CEOs, US Government). Closed = selected name (red, + ticker) + white arrow ---- */
 #pdisc{display:none}
 @media (max-width:640px){
@@ -1153,7 +1149,14 @@ body header .hact{gap:10px!important}body header .hact button,body header .hact 
  .pk.pcoll.popen #persons .pg{display:flex!important;flex-wrap:wrap!important;gap:8px!important;overflow:visible!important;margin:0!important;padding:8px 0!important;-webkit-mask-image:none!important;mask-image:none!important;border-top:1px dashed var(--line)}
  .pk.pcoll.popen #persons .pg:first-child{border-top:0;padding-top:2px!important}
  .pk.pcoll.popen #persons .pg .lbl{position:static!important;width:100%!important;flex:0 0 100%!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;background:none!important;font-size:10.5px}
- .pk.pcoll.popen #persons .chip{min-height:40px}}
+ .pk.pcoll.popen #persons .chip{min-height:40px}
+ /* single-person category (Fed Chair): the selected name looks like the CEO / US Government collapse row (red name, dark row), not a cream chip */
+ body .pk.psolo #persons{display:block!important;margin:0!important;padding:0!important;-webkit-mask-image:none!important;mask-image:none!important}
+ body .pk.psolo #persons>.lbl{display:none!important}
+ body .pk.psolo #persons button.chip.on,body .pk.psolo #persons button.chip.on:hover{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;margin:2px 0 8px;padding:8px 14px!important;box-sizing:border-box;
+  border:1.5px solid var(--rule)!important;border-radius:10px;background:transparent!important;box-shadow:none!important;color:var(--num-red)!important;font-size:20px;font-weight:700;line-height:1.15;letter-spacing:-.01em;text-align:left;cursor:default}
+ body .pk.psolo #persons button.chip.on::before{content:attr(data-glabel);flex:none;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+ @media (max-width:360px){body .pk.psolo #persons button.chip.on{gap:8px;padding:8px 12px!important;font-size:19px}body .pk.psolo #persons button.chip.on::before{display:none}}}
 /* ---- View buttons: second outer ring (outline + offset, no layout cost) and a raised 3D look; pressed-in on :active ---- */
 body header .hview .vcard{outline:2px solid color-mix(in srgb,var(--vc) 50%,transparent);outline-offset:3px;
  background-image:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,0) 48%,rgba(0,0,0,.24));
@@ -1192,6 +1195,15 @@ header .logo svg.mmlogo{height:56px;width:auto;aspect-ratio:1095/234;display:blo
 body #persons button.chip{color:#ff5449!important}
 body #persons button.chip:hover{color:#ff7a70!important}
 body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!important}
+/* slim About (mm23): short text, contact + privacy on one line, fine print last */
+#about p{margin:0 0 10px;line-height:1.5}#about .abnote{color:var(--muted)}
+#about .abfoot{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin:12px 0 6px;font-size:15px}#about .abfoot a{color:var(--ink);text-decoration-color:var(--rule);text-underline-offset:3px}
+#about .abfine{font-size:12.5px;color:var(--muted);margin:0}
+#method:has(#kbdHint){border-top:0;padding-top:0}
+@media (max-width:640px){#about p{font-size:15px;line-height:1.5}#about .abfoot{font-size:15px}#about .abfoot{margin:2px 0 0}#about .abfoot a{display:inline-flex;align-items:center;min-height:44px}
+ #more,.cloudwrap .cloud-bar{display:none}   /* phones: the stats row already says how many words are shown */
+ #method{font-size:12px;margin:6px 0 10px}}
+@media (pointer:coarse){#pop .hint{display:none}}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="Mouth Math home">__LOGO__</a>
@@ -1226,10 +1238,9 @@ body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!im
 <button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><span class="tfsep" aria-hidden="true"></span>
 <div class="yrs" id="years" role="group" aria-label="Years"></div>
 <details id="docPick"><summary><span class="dpc">Choose</span> documents <span class="muted" id="docCount"></span></summary>
-<p class="muted hint">Tick one or more · “only” selects just that one</p>
 <ul class="speeches" id="docList"></ul></details>
 <div id="selSummary" class="sr-only"></div></div>
-<div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="25">25</button><button class="nchip" data-n="50">50</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="150">150</button><button class="nchip" data-n="all">All</button><span class="nbl">words</span></div>
+<div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="10">10</button><button class="nchip" data-n="25">25</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
 <label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
@@ -1246,64 +1257,18 @@ body #persons button.chip.on,body #persons button.chip.on:hover{color:#a8201a!im
 </section>
 <!-- ad slot: leader · 728x90 desktop, 320x50 phone · reserved for an AdSense unit after approval -->
 <aside class="ad" data-slot="leader" data-ad-slot-name="leader" data-ad-size="728x90" data-ad-size-phone="320x50"></aside>
-<p class="muted" id="method">Tokenization: lowercase; punctuation and hyphens split words; contractions kept (don't, it's, we're);
-possessive 's removed (Fed's → fed); digit-only tokens __NUMNOTE__. <span class="only-fed">Fed transcripts: footnotes and editorial notes excluded.</span>
-<span class="only-ceo">CEO letters: signature blocks, tables, section headings/numerals and quoted epigraphs excluded. Earnings calls: only the CEO's prepared remarks; operator, other executives and analyst Q&amp;A excluded.</span>
-<span class="only-cab">Cabinet texts: remarks as prepared for delivery, prepared testimony, and the Secretary's own turns in hearing transcripts; cover pages, headings, other speakers and bracketed notes excluded.</span>
-<span class="only-cong">Congressional Record (daily edition): only the leader's own floor remarks; other members, presiding-officer and clerk text, material inserted into the Record, and procedural unanimous-consent requests excluded.</span>
-<span class="only-scotus">Supreme Court opinions (October Term 2025): only the Justice's own signed opinion (opinion of the Court, concurrence or dissent); syllabus, footnotes, headings and captions excluded.</span>
-Totals, ranks and counts are recomputed in your browser for the selected person and documents.
-Hover a word to see the sentences where it was used (click or tap to pin). <span id="dataThrough"></span>
+<p class="muted" id="method"><span id="dataThrough"></span>
 <span class="kbd-hint" id="kbdHint">Shortcuts: <kbd>/</kbd> filter words · <kbd>V</kbd> jump Math ↔ Cloud · <kbd>S</kbd> share · <kbd>?</kbd> this hint</span></p>
 <div id="toast" role="status" aria-live="polite"></div>
 <!-- ad slot: incontent · 300x250 desktop and phone · reserved for an AdSense unit after approval -->
 <aside class="ad" data-slot="incontent" data-ad-slot-name="incontent" data-ad-size="300x250" data-ad-size-phone="300x250"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About Mouth Math</button></h2>
 <h3 class="ablead">Out of the mouth, into the math.</h3>
-<p>This site was created with transparency and truth in mind. It counts every word in official,
-publicly available texts by public figures, taken from each official source:</p>
-<ul class="sources">
-<li><strong>Fed Chair:</strong> speech and testimony transcripts published on
-<a href="https://www.federalreserve.gov/newsevents/speeches.htm" target="_blank" rel="noopener noreferrer">federalreserve.gov</a>.</li>
-<li><strong>CEOs</strong> of large S&amp;P 500, Nasdaq 100 and Dow 30 companies: only texts each company publishes on its
-own investor-relations website, labeled by source type: shareholder letters signed by the CEO, and earnings call
-prepared remarks (only the CEO's own prepared section of the call transcript the company posts; other executives,
-the operator and the analyst Q&amp;A are left out). No third-party transcripts, filings or social posts. Filter by
-index (Mag 7, S&amp;P 500, Nasdaq 100, Dow 30), by last name, or search by name, company or ticker.</li>
-<li><strong>US Government</strong>, in three groups:
-<ul>
-<li><strong>Cabinet:</strong> remarks and testimony published by the
-<a href="https://home.treasury.gov/news/press-releases" target="_blank" rel="noopener noreferrer">Treasury Department</a> and the
-<a href="https://www.state.gov/" target="_blank" rel="noopener noreferrer">State Department</a>, and testimony posted by the Senate
-Appropriations and Armed Services Committees (Commerce and War/Defense secretaries).</li>
-<li><strong>Congress:</strong> floor remarks by the Republican and Democratic leaders of the House and Senate, from the
-<a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener noreferrer">Congressional Record</a> (daily edition, govinfo.gov).</li>
-<li><strong>Supreme Court:</strong> signed opinions of all nine Justices from the October Term 2025, published on
-<a href="https://www.supremecourt.gov/opinions/slipopinion/25" target="_blank" rel="noopener noreferrer">supremecourt.gov</a>.</li>
-</ul></li>
-</ul>
+<p>This site was created with transparency and truth in mind.</p>
 <p>Mouth Math counts and ranks every word in Federal Reserve Chair speeches and testimony, CEO earnings calls and shareholder letters from major banks and companies, and remarks by US government officials, so you can see at a glance which words, like inflation, interest rates or AI, come up most.</p>
-<p><strong>Licensing approach.</strong> Works of the U.S. government, including texts by federal officials such as the
-Fed Chair, Cabinet secretaries, members of Congress and Supreme Court Justices, are not subject to copyright
-(<a href="https://www.law.cornell.edu/uscode/text/17/105" target="_blank" rel="noopener noreferrer">17 U.S.C. §105</a>), so every
-sentence is available on hover. Other texts (CEO letters and remarks) are copyrighted by their
-publishers: for those we publish only word counts and short excerpts (at most about a quarter of each text, and at most
-10 sentences per word), each linked to the original, and never the full text.</p>
-<p><strong>Neutrality.</strong> We present word counts without commentary. Nothing is edited or interpreted; footnotes,
-editorial notes and other speakers' words are left out, and every sentence shown links back to its source so you can
-check it yourself. The same selection rules apply to everyone in a group (for example, the most recent
-qualifying floor remarks for each congressional leader of both parties, and the most recent signed opinions for every
-Justice). Inclusion of a person does not imply endorsement, and this site is not affiliated with or endorsed by
-any government, institution, company, or person listed.</p>
-<p><strong>How it works:</strong> words are lowercased and counted across the documents you select.
-The totals come first, in red, then <strong>Super Math</strong> (every word, counted and ranked in a sortable table) and, below it, <strong>Super Cloud</strong>
-(bigger words were said more often); both follow the same documents, Show and filter choices.
-“Hide common stopwords” (on by default; uncheck it to see every word) removes very common words like “the” and “and”. Press conference Q&amp;A isn't included yet.</p>
-<p><strong>Privacy.</strong> There is no account or login, and the site itself collects no personal data. Ads are served by Google AdSense, which uses cookies; see our <a href="privacy.html">Privacy Policy</a>.</p>
-<div class="notice" role="note"><strong>Not financial advice.</strong> This site is for informational and entertainment
-purposes only and is not financial, investment, or trading advice. It is not affiliated with or endorsed by the
-Federal Reserve, the White House, any federal department, Congress, the Supreme Court, or by any company
-or person listed.</div>
+<p class="abnote">Sources are public and linked: every excerpt links back to the original.</p>
+<p class="abfoot"><a id="amail" href="#">Email us</a><noscript> (turn on JavaScript to see the address)</noscript> · <a href="privacy.html">Privacy Policy</a></p>
+<p class="abfine">Not financial advice. Not affiliated with or endorsed by anyone listed.</p>
 </section>
 </main>
 <footer class="sitefoot">&copy; 2026 Mouth Math · <a href="privacy.html">Privacy Policy</a> · Not financial advice</footer>
@@ -1320,7 +1285,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10,CLOUD_MAX=300;
-let NSHOW='50';const NOPTS=['25','50','100','150','all'],NDEF='50';   // words shown in both views; 'all' = every word (cloud caps at CLOUD_MAX)
+const NOPTS=['10','25','100','all'],NDEF=matchMedia('(max-width:599px)').matches?'10':'25';let NSHOW=NDEF;   // words shown in both views; default 10 on phones (<600px wide, read once at load), 25 on wider screens; 'all' = every word (cloud caps at CLOUD_MAX)
 const nCap=()=>NSHOW==='all'?Infinity:+NSHOW;
 const unitOf=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
 const q=$('q'),hide=$('hideStop'),tb=$('tb');
@@ -1380,7 +1345,9 @@ function renderPicker(){
   // Phones: a category made of small sub-groups (US Government: Cabinet / Congress / Supreme Court) folds its people list behind one
   // disclosure that shows the selected person in red + the white arrow; tapping it opens the grouped list (no A-Z needed there).
   const coll=allIn.length>1,grp=allIn.some(p=>p.group),pk=$('picker').querySelector('.pk'),pd=$('pdisc');   // every multi-person category (CEOs, US Government)
-  pk.classList.toggle('pcoll',coll);pk.classList.toggle('pgrp',coll&&grp);pk.classList.toggle('popen',coll&&pOpen);pd.hidden=!coll;pd.setAttribute('aria-expanded',coll&&pOpen?'true':'false');
+  pk.classList.toggle('pcoll',coll);pk.classList.toggle('psolo',!coll);pk.classList.toggle('pgrp',coll&&grp);
+  if(!coll){const on=$('persons').querySelector('.chip.on');if(on)on.dataset.glabel=P.group||P.category.replace(/s$/,'')}   // phones: single-person category (Fed Chair) shows its name like the collapse row
+  pk.classList.toggle('popen',coll&&pOpen);pd.hidden=!coll;pd.setAttribute('aria-expanded',coll&&pOpen?'true':'false');
   if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?`<span class="tk">${esc(P.ticker)}</span>`:''}<span class="pda" aria-hidden="true"></span>`;
     pd.setAttribute('aria-label',`${P.name}${P.ticker?' ('+P.ticker+')':''}. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
     pd.onclick=()=>{pOpen=!pOpen;renderPicker();$('pdisc').focus()}}
@@ -1416,6 +1383,7 @@ const PHONE=matchMedia('(max-width:640px)');
 function setAbout(o){$('about').classList.toggle('open',o);$('aboutToggle').setAttribute('aria-expanded',o)}
 setAbout(!PHONE.matches||location.hash==='#about');
 $('aboutToggle').onclick=()=>setAbout(!$('about').classList.contains('open'));
+{const a=$('amail'),m=[115,112,97,100,117,110,107,101,108].map(c=>String.fromCharCode(c)).join('')+'@'+['gmail','com'].join('.');a.href='mailto:'+m+'?subject='+encodeURIComponent('Mouth Math');a.textContent=m}   // contact address built in JS (not in the HTML)
 document.querySelector('header a.about-link').addEventListener('click',()=>setAbout(true));
 addEventListener('hashchange',()=>{if(location.hash==='#about')setAbout(true)});
 
@@ -1448,13 +1416,13 @@ function syncTimeframe(){
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
   syncHash();
 }
-// URL state: #person=<slug>&docs=<id,...>&n=<25|100|150|all>; default (Warsh, all docs, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Super Cloud; mode=standard is ignored. Leaves #about etc. alone.
+// URL state: #person=<slug>&docs=<id,...>&n=<10|25|100|all>; default (Warsh, all docs, 10 words on phones / 25 on wider screens) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Super Cloud; mode=standard is ignored. Leaves #about etc. alone.
 const OURS=/^#(person|docs|mode|n)=/;
 function syncHash(){
   if(!P)return;const all=sel.size===DOCS.length,parts=[];
   if(P.slug!==DEFAULT||!all)parts.push('person='+P.slug);
   if(!all)parts.push('docs='+[...sel].join(','));
-  if(NSHOW!==NDEF)parts.push('n='+NSHOW);   // 50 words is the default
+  if(NSHOW!==NDEF)parts.push('n='+NSHOW);   // the device default (10 phone / 25 wider) stays out of the URL
   const h=location.hash,ours=!h||OURS.test(h),want=parts.length?'#'+parts.join('&'):'';
   if(want)history.replaceState(null,'',want);else if(ours&&h)history.replaceState(null,'',location.pathname+location.search);
 }
@@ -1559,7 +1527,7 @@ function popHTML(word){
     h+=`<div class="cap" id="popCap">${shown.length?`Showing ${shown.length} of ${st.m.toLocaleString()} sentence${st.m===1?'':'s'}`:'No excerpt shown for this word'}`+
        ` — read the full ${unit(st.docs.length)} at ${esc(P.source)}: ${links}</div>`;
   }else if(items.length>FIRST&&!showAll)h+=`<button class="more">Show all ${items.length.toLocaleString()} sentences (${st.n.toLocaleString()} occurrences)</button>`;
-  h+=`<div class="hint">${pinned?'Pinned. Press Esc or × to close.':'Click the word to pin this panel.'} “source ↗” opens the original at that sentence${excerpt?(DOCS.some(d=>d.sp)?' (PDFs: at that page)':''):' (Chrome/Edge/Safari)'}; the title link opens the document.</div>`+(P.credit?`<div class="credit">Source: ${esc(P.credit)}</div>`:'');
+  h+=`<div class="hint">${pinned?'Esc or × to close':'Click the word to pin'} · “source ↗” opens the original</div>`+(P.credit?`<div class="credit">Source: ${esc(P.credit)}</div>`:'');
   return h;
 }
 function placePop(){
@@ -1674,8 +1642,9 @@ function drawCloud(list){
   if(!words.length){cloud.style.height='';cloud.innerHTML=`<div class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</div>`;
     $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0,mode:'static'};BODIES=[];return 0}
   const {placed,miss,tries,steps}=cloudLayout(words,W);
-  const y0=Math.min(...placed.map(c=>c.y)),y1=Math.max(...placed.map(c=>c.y+c.h));
-  cloud.style.height=Math.ceil(y1-y0+4)+'px';
+  const py0=Math.min(...placed.map(c=>c.y)),y1=Math.max(...placed.map(c=>c.y+c.h)),ph=y1-py0+4;
+  const minH=placed.length<=25?(W<600?200:230):0,y0=py0-Math.max(0,minH-ph)/2;   // short clouds (10/25 words) get room to float, words centered
+  cloud.style.height=Math.ceil(Math.max(ph,minH))+'px';
   cloud.innerHTML=placed.map(c=>{const b=c.b,x=b.x;return `<span data-w="${esc(x.word)}" data-c="${x.count}" role="button" tabindex="0" aria-label="${x.word===words[0].word?'#1 word, ':''}${esc(x.word)}: ${x.count}${x.word===words[0].word?' — show excerpts':''}" `+
     `style="left:${(c.x+1+b.mx).toFixed(1)}px;top:${(c.y-y0+1+b.my).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2-2*b.my}px;height:${c.h-2-2*b.my}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word?' class="top"':''}>${esc(x.word)}</span>`}).join('');
   TOPW=words[0].word;
@@ -1683,7 +1652,7 @@ function drawCloud(list){
   buildBodies(placed,y0,W);markTop();
   if(motion.checked&&BODIES.length)armSketch();
   $('cloudNote').textContent=`Top ${placed.length.toLocaleString()} of ${list.length.toLocaleString()} words${hide.checked?' (stopwords hidden)':''}`+
-    `${miss?` · ${miss} didn't fit`:''} · size ∝ √count · hover or tap a word for its count and sentences`;
+    `${miss?` · ${miss} didn't fit`:''}`;
   return placed.length;
 }
 
@@ -1694,7 +1663,7 @@ const P5_URL='https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js',P5_SRI='sha38
 const RM=matchMedia('(prefers-reduced-motion: reduce)'),motion={checked:!RM.matches,disabled:false};
 RM.addEventListener('change',()=>{motion.checked=!RM.matches&&!motion.disabled;if(P)render()});
 let P5P=null,SK=null,IO=null,BODIES=[],drawTok=0,frameN=0,TOPW=null,TOPB=null,REDC='#ff5449';
-const PULSE_MS=2200,PULSE={ph:0},RING_MX=15,RING_MY=11;   // RING_*: room kept around the #1 word for its two pill rings (see .top::before/::after)   // top-word pulse period (CSS keyframes use the same 2.2 s)
+const PULSE={ph:0},RING_MX=15,RING_MY=11;   // PULSE.ph stays 0 (the #1 word no longer pulses; kept for the test hook). RING_*: room kept around the #1 word for its two pill rings (see .top::before/::after)   // top-word pulse period (CSS keyframes use the same 2.2 s)
 // the single most frequent word in the cloud is drawn in the stat red (canvas + DOM spans)
 function markTop(){if(!BODIES.length)return;const cn=b=>b.count;
   const t=BODIES.reduce((a,b)=>cn(b)>cn(a)||(cn(b)===cn(a)&&(b.count>a.count||(b.count===a.count&&b.word<a.word)))?b:a);
@@ -1751,10 +1720,10 @@ function physics(p,W,H){
   const t=p.millis()/1000,dt=Math.min(0.05,Math.max(0.001,t-(lastT||t-1/60)));lastT=t;
   const B=BODIES,GAP=1,ease=1-Math.pow(1-0.07,dt*60),sc=Math.max(0.65,Math.min(1,W/700))*(B.length>120?0.8:1);   // smaller swing on narrow or very dense clouds
   for(const b of B){b.f+=(b.ft-b.f)*0.1;if(Math.abs(b.ft-b.f)<0.03)b.f=b.ft;boxOf(b);if(!b.w)continue;
-    const v=b.wv,sz=Math.max(0.4,Math.min(1,1.3-b.f/55))*sc,swell=b.hx*0.009+b.hy*0.004;     // big words float less
+    const v=b.wv,top=b===TOPB,sz=top?Math.min(26,12+W*0.025)/15:Math.max(0.4,Math.min(1,1.3-b.f/55))*sc,swell=b.hx*0.009+b.hy*0.004;   // big words float less; the #1 word floats more (up to ~26px sway, ~17px bob)
     // main layer rides the shared swell (neighbours move together); a smaller second layer gives each word its own rhythm
     const ox=15*sz*(0.7*Math.sin(t*0.5-swell+v.p1*0.3)+0.3*Math.sin(t*v.sx2+v.p2)),
-          oy=10*sz*(0.7*Math.sin(t*1.05-swell*1.2+v.p3*0.3)+0.3*Math.sin(t*v.by2+v.p4));
+          oy=10*sz*(0.7*Math.sin(t*(top?1.25:1.05)-swell*1.2+v.p3*0.3)+0.3*Math.sin(t*v.by2+v.p4));   // #1: a slightly livelier bob
     b.sx=(b.sx||0)*0.985;b.sy=(b.sy||0)*0.985;                                                // separation offset relaxes slowly
     b.tx=Math.max((b.w/2+b.mx),Math.min(W-(b.w/2+b.mx),b.hx+ox+b.sx));b.ty=Math.max((b.h/2+b.my),Math.min(H-(b.h/2+b.my),b.hy+oy+b.sy));   // soft edges: the target stays inside
     b.x+=(b.tx-b.x)*ease;b.y+=(b.ty-b.y)*ease;
@@ -1775,10 +1744,6 @@ function paint(p){
   for(let i=BODIES.length-1;i>=0;i--){const b=BODIES[i];if(!b.w)continue;
     if(b.word===curWord){ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--hl').trim()||'#e2f0e7';ctx.beginPath();ctx.roundRect?ctx.roundRect(b.x-b.w/2,b.y-b.h/2,b.w,b.h,5):ctx.rect(b.x-b.w/2,b.y-b.h/2,b.w,b.h);ctx.fill()}
     ctx.font=`${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;
-    if(b.word===TOPW&&!RM.matches){const ph=(1-Math.cos(performance.now()/PULSE_MS*2*Math.PI))/2,k=1+0.025*ph;   // 0 -> 1 -> 0, eased
-      ctx.save();ctx.translate(b.x,b.y+b.f*0.03);if(b.rot)ctx.rotate(b.rot);ctx.scale(k,k);ctx.shadowColor=`rgba(255,84,73,${(0.25+0.45*ph).toFixed(3)})`;ctx.shadowBlur=(3+13*ph)*(p.pixelDensity()||1);
-      ctx.fillStyle=`rgb(255,${Math.round(84+40*ph)},${Math.round(73+40*ph)})`;ctx.fillText(b.word,0,0);/* #ff5449 -> a little brighter at the peak */ctx.restore();PULSE.ph=ph;
-      if(b.el)b.el.style.setProperty('--ph',ph.toFixed(3));continue}   // pill rings breathe in sync with the red pulse
     ctx.fillStyle=b.word===TOPW?REDC:b.col;
     if(b.rot){const c=Math.cos(b.rot)*pd,sn=Math.sin(b.rot)*pd;ctx.setTransform(c,sn,-sn,c,b.x*pd,(b.y+b.f*0.03)*pd);ctx.fillText(b.word,0,0);ctx.setTransform(pd,0,0,pd,0,0)}
     else ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
@@ -1794,7 +1759,7 @@ document.querySelectorAll('#views a[data-jump]').forEach(a=>a.addEventListener('
   jumpTo(a.dataset.jump)}));
 cloudGlow();
 function setN(n,go=true){NSHOW=n;document.querySelectorAll('#nbar .nchip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.n===n?'true':'false'));if(go){hidePop();render();syncHash()}}
-document.querySelectorAll('#nbar .nchip').forEach(b=>b.onclick=()=>setN(b.dataset.n));
+document.querySelectorAll('#nbar .nchip').forEach(b=>b.onclick=()=>setN(b.dataset.n));setN(NSHOW,false);
 // ---- Ticker price chart: TradingView's free official Advanced Chart widget (their attribution kept as provided), loaded only on click ----
 const tvM=$('tvModal'),tvBody=$('tvmBody');let tvBack=null;
 function openChart(sym,tk,org){
@@ -1830,7 +1795,7 @@ window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,jumpTo,get view
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
 // initial state from URL: #person=<slug>&docs=<ids>  (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
-  {const n=hp.get('n');if(n==='300')setN('all',false);else if(NOPTS.includes(n))setN(n,false)}
+  {const n=hp.get('n');if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> All, 150 -> 100, 50 -> the device default
   const toCloud=['cloud','visual'].includes(hp.get('mode'))||location.hash==='#cloud';   // old Super Cloud links and the #cloud anchor land on the cloud
   return setPerson(hp.get('person')||DEFAULT,(hp.get('docs')||'').split(',').filter(Boolean)).then(()=>{
     if(toCloud)requestAnimationFrame(()=>$('superCloud').scrollIntoView({block:'start'}))}).catch(e=>{

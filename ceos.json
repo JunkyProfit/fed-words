@@ -1,5 +1,5 @@
 {
- "_doc": "Data-driven CEO sources for fetch_ceo.py. Only texts the company itself publishes on its own site. discover.type: q4 = Q4 IR feed (host + document-title regex); links = scrape hrefs matching a regex on an IR page; pattern = URL template over recent quarters; urls = explicit list. kind: transcript (keep only the CEO's prepared section, label regex 'ceo') or letter (signed letter, 'signer'). 'since' = first day as CEO (earlier documents are ignored). indices: S&P 500, Nasdaq 100, Mag 7, Dow 30.",
+ "_doc": "Data-driven CEO sources for fetch_ceo.py. Only texts the company itself publishes on its own site. discover.type: q4 = Q4 IR feed (host + document-title regex); links = scrape hrefs matching a regex on an IR page; pattern = URL template over recent quarters; urls = explicit list. kind: transcript (keep only the CEO's prepared section, label regex 'ceo') or letter (signed letter, 'signer'). 'since' = first day as CEO (earlier documents are ignored). indices: S&P 500, Nasdaq 100, Mag 7, Dow 30. kind filings + fetcher fetch_ceo_filings.py: a past CEO whose words come only from SEC filings (press-release quotes, filed letters/transcripts) and official congressional hearing records (filings.docs lists the non-quote documents; since/until bound the tenure); fetch_ceo.py skips these.",
  "companies": [
   {
    "slug": "nadella",
@@ -370,11 +370,136 @@
     "title": "^Transcript$"
    },
    "source": "investors.boeing.com"
+  },
+  {
+   "slug": "cook",
+   "name": "Tim Cook",
+   "org": "Apple",
+   "ticker": "AAPL",
+   "role": "Apple CEO, Aug 2011–Aug 2026 (handed over to John Ternus; now Executive Chairman)",
+   "eyebrow": "Former CEO · Apple",
+   "since": "2011-08-24",
+   "until": "2026-08-31",
+   "indices": [
+    "Mag 7",
+    "S&P 500",
+    "Nasdaq 100",
+    "Dow 30"
+   ],
+   "kind": "filings",
+   "fetcher": "fetch_ceo_filings.py",
+   "source": "sec.gov and govinfo.gov",
+   "filings": {
+    "cik": "0000320193",
+    "speaker": "Tim Cook",
+    "quotes": {
+     "forms": "8-K"
+    },
+    "docs": [
+     {
+      "type": "letter",
+      "id": "aapl-cook-2019-01-02-investor-letter",
+      "date": "2019-01-02",
+      "title": "Letter from Tim Cook to Apple Investors",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019319000002/a8-kexhibit991122019.htm",
+      "start": "^To Apple investors:",
+      "signature": "^Tim$",
+      "note": "Apple 8-K EX-99.1 (filed 2019-01-02)"
+     },
+     {
+      "type": "conference",
+      "id": "aapl-cook-2013-02-12-goldman-sachs",
+      "date": "2013-02-12",
+      "title": "Goldman Sachs Technology and Internet Conference (partial transcript filed by Apple)",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000119312513052003/d485445ddefa14a.htm",
+      "label": "^Tim Cook\\s*:\\s*",
+      "others": "^Questioner\\s*:",
+      "stop": "^(ADDITIONAL INFORMATION|CAUTIONARY STATEMENT)",
+      "note": "Apple DEFA14A (filed 2013-02-12); Tim Cook's answers only"
+     },
+     {
+      "type": "hearing",
+      "id": "aapl-cook-2013-05-21-senate-psi",
+      "date": "2013-05-21",
+      "title": "Senate hearing: Offshore Profit Shifting and the U.S. Tax Code, Part 2 (Apple Inc.)",
+      "url": "https://www.govinfo.gov/content/pkg/CHRG-113shrg81657/html/CHRG-113shrg81657.htm",
+      "label": "^Mr\\. Cook(?: \\[[^\\]]{0,30}\\])?\\.\\s",
+      "note": "S. Hrg. 113-90, Senate Permanent Subcommittee on Investigations; his spoken turns only"
+     },
+     {
+      "type": "hearing",
+      "id": "aapl-cook-2020-07-29-house-antitrust",
+      "date": "2020-07-29",
+      "title": "House hearing: Online Platforms and Market Power, Part 6 (Amazon, Apple, Facebook, Google)",
+      "url": "https://www.govinfo.gov/content/pkg/CHRG-116hhrg41317/html/CHRG-116hhrg41317.htm",
+      "label": "^Mr\\. Cook(?: \\[[^\\]]{0,30}\\])?\\.\\s",
+      "note": "House Judiciary Subcommittee on Antitrust (Serial No. 116-94); his spoken turns only"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "jobs",
+   "name": "Steve Jobs",
+   "org": "Apple",
+   "ticker": "AAPL",
+   "role": "Apple CEO, Sept 1997–Aug 2011 (interim CEO until 2000); Apple co-founder",
+   "eyebrow": "Former CEO · Apple",
+   "since": "1997-09-16",
+   "until": "2011-08-24",
+   "indices": [
+    "S&P 500",
+    "Nasdaq 100"
+   ],
+   "kind": "filings",
+   "fetcher": "fetch_ceo_filings.py",
+   "source": "sec.gov",
+   "filings": {
+    "cik": "0000320193",
+    "speaker": "Steve Jobs",
+    "quotes": {
+     "forms": "8-K"
+    },
+    "docs": [
+     {
+      "type": "email",
+      "id": "aapl-jobs-2003-03-20-email",
+      "date": "2003-03-20",
+      "title": "Email to Apple employees: Stock Option Exchange Program and Al Gore joining the board",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000104746903009460/a2106210zex-99_a1f.htm",
+      "start": "^Team:",
+      "signature": "^Steve$",
+      "note": "Apple SC TO-I Exhibit (a)(1)(F), \"Email from Steven P. Jobs dated March 20, 2003\""
+     },
+     {
+      "type": "email",
+      "id": "aapl-jobs-2009-01-14-email",
+      "date": "2009-01-14",
+      "title": "Email to Apple employees: medical leave of absence",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000118143109003017/rrd229456_27079.htm",
+      "start": "^Team,",
+      "signature": "^Steve$",
+      "note": "Apple 8-K EX-99.1 media advisory (filed 2009-01-16)"
+     },
+     {
+      "type": "email",
+      "id": "aapl-jobs-2011-01-17-email",
+      "date": "2011-01-17",
+      "title": "Email to Apple employees: medical leave of absence",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000118143111003847/rrd297847_33925.htm",
+      "start": "^Team,",
+      "signature": "^Steve$",
+      "note": "Apple 8-K EX-99.1 media advisory (filed 2011-01-18)"
+     }
+    ]
+   }
   }
  ],
  "order": [
   "nadella",
   "ternus",
+  "cook",
+  "jobs",
   "pichai",
   "jassy",
   "zuckerberg",

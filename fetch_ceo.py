@@ -246,6 +246,7 @@ def ternus_extract(raw):
 import zipfile, io
 from ceo_extract import transcript_section, letter_body
 CONFIG = json.loads((ROOT / "ceos.json").read_text(encoding="utf-8"))["companies"]
+CONFIG = [_c for _c in CONFIG if not _c.get("fetcher")]       # e.g. past CEOs built by fetch_ceo_filings.py
 for _c in CONFIG:
     PEOPLE.setdefault(_c["slug"], {"name": _c["name"], "display": _c["name"], "category": "CEOs", "role": _c["role"],
                                    "org": _c["org"], "max": _c.get("max", 4), "cfg": _c,

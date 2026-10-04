@@ -34,6 +34,8 @@ letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End m
 | CEOs | **Dara Khosrowshahi** (Uber, UBER; S&P 500) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investor.uber.com |
 | CEOs | **Brian Niccol** (Starbucks, SBUX; S&P 500, Nasdaq 100) | his prepared section of the 4 most recent earnings calls (Q4 FY2025 to Q3 FY2026) | investor.starbucks.com |
 | CEOs | **Kelly Ortberg** (Boeing, BA; S&P 500, Dow 30) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investors.boeing.com |
+| CEOs (former) | **Tim Cook** (Apple, AAPL; CEO Aug 2011 to Aug 2026, then Executive Chairman) | 67 documents: his quotes in 63 Apple press releases filed as 8-K exhibits (Oct 2011 to Jul 2026), his Jan 2, 2019 letter to investors (8-K), Apple's own partial transcript of his Feb 2013 Goldman Sachs conference remarks (DEFA14A), and his spoken turns in two congressional hearings (Senate PSI, May 21, 2013; House Judiciary antitrust, Jul 29, 2020) | sec.gov (EDGAR), govinfo.gov |
+| CEOs (former) | **Steve Jobs** (Apple, AAPL; CEO Sept 1997 to Aug 2011) | 42 texts Apple filed with the SEC, 2003–2011: his quotes in 39 press releases (8-K exhibits) and 3 emails to employees (2003 option exchange, 2009 and 2011 medical leaves) | sec.gov (EDGAR) |
 | US Government › Cabinet | **Scott Bessent** (Treasury) | 42 speeches & testimony, Mar 2025–Sep 2026: every speech (as prepared for delivery) and prepared testimony posted by Treasury since he took office; found automatically from Treasury's press-release index, readouts/joint statements/press statements excluded, a statement repeated to a second committee counted once | home.treasury.gov |
 | US Government › Cabinet | **Marco Rubio** (State) | 5 transcripts, Feb–Sep 2026 (his turns only) | state.gov |
 | US Government › Cabinet | **Howard Lutnick** (Commerce) | 3 prepared testimony statements, 2025–2026 | appropriations.senate.gov |
@@ -76,6 +78,19 @@ Not added: **Elon Musk** (ir.tesla.com and tesla.com return 403 to the build mac
 and **Ryan Cohen** (GameStop's press releases only paraphrase him, the proxy letter is signed by the Board, and
 his own annual-meeting remarks exist only as an SEC filing, which is blocked). Third-party transcripts and social
 posts are not used.
+
+**Apple's former CEOs (Tim Cook, Steve Jobs):** Apple publishes no call transcripts or prepared remarks, and its webcast
+replay comes down after about two weeks, so neither man's earnings calls are used. Instead `fetch_ceo_filings.py` builds
+them only from texts Apple itself filed with the SEC (found with EDGAR full-text search) and from official hearing records on
+govinfo.gov. Each document is labelled by type: `Press release quote` (only the quoted words attributed to him in an
+8-K exhibit press release, within his tenure), `Investor letter`, `Email to employees`, `Conference transcript` (his
+answers only) and `Congressional hearing` (his own spoken turns; other speakers, inserted statements and bracketed notes
+removed). They are treated like company text (counts plus capped excerpts, linked to the filing), not as public-domain
+government text. Not used: keynotes, the Stanford speech, the Steve Jobs Archive, apple.com pages, and third-party
+transcripts. The Jan 5, 2009 letter and the Aug 24, 2011 resignation letter were never filed with the SEC (they appear
+only on apple.com), so they are left out. SEC asks automated clients to send a User-Agent with a contact address; the
+script sends one (override with `SEC_CONTACT`) and makes about 1 request/s. Both show in the CEO list (Former CEO · Apple,
+AAPL pill); `kind: filings` + `fetcher` in `ceos.json` mark them, and `fetch_ceo.py` skips them.
 
 The page header is site-wide ("Every Word Out Of Their Mouth Counts": title case, Arial, tight tracking; on phones it sits on its own line under the logo and scales with the screen width so it stays on one line), not tied to the default person.
 
@@ -133,12 +148,21 @@ keywords, canonical `https://mouthmath.com/`, Open Graph + Twitter title/descrip
 (`/` and `/privacy.html`). No hidden text or keyword blocks anywhere; the About section has one visible plain-language
 summary sentence.
 
+**Slim page text (mm23):** the page carries no methodology prose. About is short: the red lead "Out of the mouth, into
+the math.", the transparency-and-truth line, the plain SEO sentence (Federal Reserve, banks, earnings calls), a one-line
+"Sources are public and linked" note, the contact address (assembled in JS, like `privacy.html`) with the Privacy Policy
+link, and one fine-print line (not financial advice; not affiliated with or endorsed by anyone listed). The note under
+the cloud is just "Data through <date>" (plus the keyboard shortcuts on desktop). Helper captions are gone: no "Tick one
+or more" line in Choose documents, a shorter popover hint (hidden on touch screens), and on phones the "Showing the top N"
+line under the table and the cloud's "Top N of M words" line are hidden (the stats row already shows the count). The
+counting rules, source details and licensing approach below remain the reference (this README).
+
 **People list on phones (CEOs and US Government):** every multi-person category folds its people list behind one
 disclosure on phones (≤640px), right under the category tiles: closed, it shows the group (CEO / Cabinet / Congress /
 Supreme Court) and the selected person's name in red at 20px (19px at ≤360px, where the small group label is dropped; long names wrap
 to a second line), plus the ticker pill for CEOs, with the white ▾ arrow. Tapping opens the list: for CEOs the search,
 index chips, A–Z and all 22 CEOs (wrapped, not a sideways row); for US Government the search and the grouped list (all 17
-names; no A–Z needed there). A–Z taps keep it open; picking a person folds it again. Fed Chair (one person) and desktop are unchanged.
+names; no A–Z needed there). A–Z taps keep it open; picking a person folds it again. Fed Chair (one person) has nothing to fold, but its selected name uses the same look (dark row with a thin border, "FED CHAIR" label, name in red #ff5449, no arrow) so all three categories match: red underline under the selected category tile and the selected name in red. Desktop is unchanged (selected names are dark red on a cream chip in every category).
 
 **Polish:** the red stats count up when a person loads (skipped with prefers-reduced-motion); a **Share** button in the
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
@@ -148,9 +172,9 @@ header copies the exact view's URL (person, documents, view; the native share sh
 **Super Math** table, then (below a faint ad placeholder) the **Super Cloud**, each under a small cream Arial section heading
 (`h3.secth`, ids `superMath` / `superCloud`). There is no view toggle any more: the same person, documents, Show chips, word filter
 and stopword setting feed both. The header's two thumbnail cards are jump links (see "Jump links" below). Font size scales with the square root of the count, from 12px to 72px
-(the largest size is smaller on narrow screens). One shared **Show 25 / 50 / 100 / 150 / All words** chip row
+(the largest size is smaller on narrow screens). One shared **Show 10 / 25 / 100 / ALL** chip row (stair steps: bottom-aligned, each chip a little taller than the last, 10 shortest and ALL tallest; 34–46px tall on phones, 28–40px on desktop)
 (Arial, red outline; the selected chip is filled red; 40px tall, full-width on phones) sits right under the Timeframe
-row and sets how many words both sections show; the default is **50**. Super Math lists the top N most frequent words
+row and sets how many words both sections show; the default is **10 on phones** (viewport under 600px wide, read once when the page loads) and **25 on wider screens**. Super Math lists the top N most frequent words
 (after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
 at most 300 words, so All means the top 300 in the cloud. "Hide common stopwords" (on by default) applies to both.
 Sorting a table column only reorders the table (the cloud is left as is). Hover a word for its count and the same sentence popover as the table
@@ -203,7 +227,7 @@ the cream backgrounds). The theme is one block at the end of the CSS in `build.p
 the person heading and the red stat numbers; normal tracking for body text; uppercase with +0.06em only on tiny
 labels (category pill, source type, group labels). Counts use tabular numerals.
 
-URL state: the default is a clean URL, plus `person=`, `docs=` and `n=25|100|150|all` when not 50 (old `n=300` links map to All). Jumping
+URL state: the default is a clean URL, plus `person=`, `docs=` and `n=10|25|100|all` when it differs from the device default (10 on phones, 25 wider), so a shared link always carries an explicit pick (old links: `n=300` maps to All, `n=150` to 100, `n=50` to the device default). Jumping
 does not change the URL. Old `#mode=cloud` / `#mode=visual` links and the plain `#cloud` anchor load the page and scroll to the Super Cloud;
 old `#mode=standard` links open at the top.
 
@@ -271,6 +295,7 @@ each linked to the original letter.
 | `fetch.py` | Downloads the chair's speeches + testimony from federalreserve.gov's JSON feeds (`/json/ne-speeches.json`, `/json/ne-testimony.json`), pulls out just the body text (no nav, footnotes, or editorial notes), and saves it to `transcripts/*.txt`, with source URLs/dates in `transcripts/index.json`. |
 | `fetch.py` → `transcripts/warsh/` | Cleaned text of each Fed speech, plus `index.json` metadata. |
 | `fetch_ceo.py` | **Manual**, not run by `publish.sh`. Downloads the CEO letters from the companies' own sites (Palantir's letter pages, aboutamazon.com articles, and the Berkshire PDF via `pdftotext`, Alphabet's earnings-call transcript pages on abc.xyz found through its IR feed, and Apple's investor event feed for Ternus) into `local_sources/<person>/` (gitignored). Each document's metadata has a `source_type`. It's polite (about 1 request/s, identifying User-Agent) and only fetches what's missing (`--refresh` re-downloads; `--only karp` limits it to one person). Karp's 4 newest letters are discovered from palantir.com/investors (`max` in `PEOPLE`); the Amazon letter URLs are listed in the script; Berkshire's are `letters/<year>ltr.pdf` for 2025 onward (Abel's years as CEO). |
+| `fetch_ceo_filings.py` | **Manual**, not run by `publish.sh`. Former CEOs from SEC filings and hearing records (`ceos.json` entries with `"fetcher": "fetch_ceo_filings.py"`; now Tim Cook and Steve Jobs). Discovers press releases quoting the person through EDGAR full-text search (8-K EX-99.x, inside since/until), plus the letters, transcripts and hearings listed under `filings.docs`; cuts only the person's own words; raw downloads cached in `local_sources/<slug>/raw/`, text in `local_sources/<slug>/` (gitignored). SEC-requested User-Agent with contact; ~1 request/s. `--only cook`, `--refresh`. |
 | `fetch_officials.py` | **Manual**, not run by `publish.sh`. Cabinet (`--only cabinet`), congressional leaders (`--only congress`) and Supreme Court (`--only scotus`), or one slug (`--only thune`). Writes `transcripts/<slug>/` (committed; public domain); raw downloads are cached in `raw/officials/` (gitignored). Idempotent: skips people already fetched unless `--refresh`. Polite (about 1 request/s, identifying User-Agent). The Court needs PyMuPDF (`pip install pymupdf`) for ligature repair. |
 | `people.json` | Categories, people, display names, sources, and `policy` (`full` = embed all sentences, `excerpt` = derived data only). |
 | `derived/` | Committed derived data for each `excerpt`-policy person (CEOs): per-letter word counts and the excerpt sentences. No full text. |
