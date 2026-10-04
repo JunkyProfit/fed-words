@@ -1,4 +1,4 @@
-# Mouth Math
+# MouthMath
 
 *(Formerly "Said Count" and "Fed Words". The repo and URL stay `fed-words` for now: https://junkyprofit.github.io/fed-words/.)*
 
@@ -96,7 +96,7 @@ The page header is site-wide and slim (mm24): just the logo and Share/About (the
 
 CEO stock tickers (from `ceos.json`: `companies[].ticker`, plus `existing_tickers` for the original five) show as a small money-green outlined pill in Arial caps, both on each CEO's chip in the people list and after the selected speaker's name in the results title (e.g. "From the mouth of Jamie Dimon [JPM]"). Fed and government people have no ticker, so no pill.
 The selected person's label pill, role, document count and source appear in the Who card, and
-"From the mouth of <person>" heads the results (lead-in lighter and slightly smaller, the name bold; per-person page title "Mouth Math — From the mouth of <person> (TICKER)"). Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
+"From the mouth of <person>" heads the results (lead-in lighter and slightly smaller, the name bold; per-person page title "MouthMath — From the mouth of <person> (TICKER)"). Each person has a header tint, a label pill and a document noun (`mode`, `eyebrow`,
 `doc_noun1`, `unit`/`unit_pl` and an optional popover `credit` line in `people.json`).
 
 Open `index.html` in a browser (serve the folder over HTTP: with this many people the page is
@@ -265,7 +265,7 @@ tab adds `view=cloud` (not side by side). `#view=cloud`, old `#mode=cloud` / `#m
 old `#mode=standard` links open on Super Math.
 
 **Tabs:** `#vtabs` (`role="tablist"`, arrow keys move between them). Super Cloud's thin outer ring (the outline) slowly fades to black and back (2.8 s ease-in-out; border and label steady)
-until it is tapped once (remembered in `localStorage` key `mm_cloud_tried`); none with `prefers-reduced-motion`. The red stats, the red #1 word pulse and other site reds are unchanged.
+until it is tapped once; none with `prefers-reduced-motion`. (Removed in mm32; the `mm_cloud_tried` localStorage flag was dropped in mm34, so the site stores nothing in the browser.) The red stats, the red #1 word pulse and other site reds are unchanged.
 
 ### Licensing: public domain vs. excerpts
 | Source | Status | Treatment |
@@ -446,3 +446,6 @@ also the bottom-of-page button right above the footer) and at the bottom of priv
 **Category buttons (mm33):** Fed Chair / CEOs / US Government name and count text are ~20% bigger (phones 16.8/15.6px, was 14/13;
 481-640px 18/15.6, was 15/13; desktop 17.4/13.8, was 14.5/11.5). On phones the three columns are equal when they fit, otherwise the widest
 word gets room (`minmax(min-content,1fr)`) so "Government" never breaks mid-word; at 320px the count line may wrap ("24 / people").
+
+**Name and storage (mm34):** the name is always "MouthMath" (one word) in visible text, titles, meta/og/twitter tags, JSON-LD and the
+About toggle ("About MouthMath"). The site no longer writes any localStorage; the privacy policy says it stores nothing in your browser (updated Oct 4, 2026).
