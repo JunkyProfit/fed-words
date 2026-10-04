@@ -185,11 +185,11 @@ header copies the exact view's URL (person, documents, view; the native share sh
 sticky top bar shows the speaker, the triangle and **Search**. Tapping it goes back to the top with the list open and the search box focused.
 After a pick the list folds and the name and red stats come into view.
 
-**Common words at the bottom (mm27):** with "Hide common stopwords" checked (the default), the Super Math table still shows exactly N rows.
-It fills them with meaningful words first. The stopwords that would have ranked in the top N (the, and, to ...) go at the bottom in faint gray
-italics, with their real rank in parentheses, e.g. "and (#1)", and no bar. So if 6 stopwords are in the top 100, rows 95–100 are those gray
-stopwords. Right below the table, **View words in actual order** unchecks Hide common stopwords, puts them back in their true ranks (italic) and
-scrolls back up to the red stats. The cloud never shows stopwords while hidden. The bar column header reads FREQUENCY.
+**Common words line (mm28):** with "Hide common stopwords" checked (the default), the Super Math table always shows the full N real
+(non-stopword) words for the chosen Show count (20 / 100 / ALL). It ends with ONE faint gray italic line, e.g. **+42 common words**, giving the
+number of stopwords that would rank within the top N. Tap it to expand those gray rows, each with its real rank in parentheses (e.g. "the (#3)") and
+no bar. The line then reads "Hide 42 common words", and tapping it again collapses them (Enter/Space work too). Right below the table, **View words
+in actual order** unchecks Hide common stopwords, puts them back in their true ranks (italic) and scrolls back up to the red stats. The cloud never shows stopwords while hidden. The bar column header reads FREQUENCY.
 
 **Stopwords (mm27):** with "Hide common stopwords" unchecked, stopwords (the, and, to ...) are shown in italics in both the Super Math table
 and the Super Cloud (DOM and the live canvas), so they stand apart from the meaningful words.
@@ -422,3 +422,5 @@ Every disclosure or sort arrow on the page is white: the larger "Choose document
 **Ticker charts:** each CEO's ticker pill (in the people list and after the name in the results title) opens an in-page popup with a 1-year daily price chart from TradingView's free, official embeddable Advanced Chart widget (dark theme, 1Y range, daily candles). TradingView's attribution link stays exactly as their widget provides it (required by their terms), and no market data is scraped or stored. The widget script loads only when a pill is clicked, and the widget is removed when the popup closes. Close it with the X, Esc, or a tap on the backdrop; on phones it fills the screen. Clicking a pill inside a person button opens the chart without selecting that person. Exchange prefixes live in `ceos.json` → `tv_exchange` (e.g. NASDAQ:MSFT, NYSE:JPM, NYSE:BRK.B); each was checked to resolve in the widget.
 
 **Links:** every link to a source document or an original source (the Choose documents list, sentence popovers, source credits, the About page) opens in a new tab with `target="_blank" rel="noopener noreferrer"`; a click handler also forces this for any other off-site link. Checkboxes and "only" buttons just change the selection.
+
+**Copyright line (mm28):** the footer of index.html and privacy.html ends with one faint gray, small (12px Arial), centered line, "© 2026 MouthMath", right under the Privacy link. There is no name and no "All rights reserved"; the old "© 2026 Mouth Math ·" prefix was removed from the footer link line so the © appears once.

@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm27">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm27">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm27">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm28">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm28">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm28">
 <title>Privacy Policy — Mouth Math</title>
 <meta name="description" content="Mouth Math privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="Mouth Math">
 <meta property="og:title" content="Privacy Policy — Mouth Math">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm27">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm28">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -383,12 +383,13 @@ p,li{color:#e4dfd5}ul{padding-left:22px}li{margin:4px 0}
 .sum p{margin:0}
 footer{border-top:1px solid var(--rule);color:var(--muted);font-size:14px;padding:18px 20px 28px;text-align:center}
 footer a{color:var(--muted)}
+.mmcopy{margin-top:8px;font:400 12px/1.4 Arial,Helvetica,sans-serif;color:#7d776d;text-align:center;letter-spacing:0}
 @media (max-width:640px){header{padding:12px 16px}header .logo img{height:38px}main{padding:22px 16px 32px}h1{font-size:26px}h2{font-size:18px}body{font-size:15.5px}}
 @media (max-width:420px){header .in{flex-wrap:wrap;row-gap:6px}}
 .mmform{display:grid;gap:4px;max-width:520px;margin:6px 0 12px;font-family:Arial,Helvetica,sans-serif}.mmform label{font-size:13px;font-weight:700;color:#f3eee4;margin-top:6px}.mmform .opt{font-weight:400;color:var(--muted)}.mmform input:not([type=checkbox]),.mmform textarea{font:16px/1.35 Arial,Helvetica,sans-serif;color:#f3eee4;background:#0b0b0b;border:1px solid #3a3733;border-radius:6px;padding:9px 11px;width:100%;box-sizing:border-box}.mmform textarea{resize:vertical;min-height:96px}.mmform input:focus,.mmform textarea:focus{outline:2px solid #ff5449;outline-offset:1px;border-color:#ff5449}.mmform button{justify-self:start;margin-top:10px;min-height:44px;padding:0 24px;border:0;border-radius:8px;background:#ff5449;color:#fff;font:700 16px Arial,Helvetica,sans-serif;cursor:pointer}.mmform button:hover{background:#ff6b61}.mmform button:disabled{opacity:.6;cursor:default}.mmform button:focus-visible{outline:2px solid #fff;outline-offset:2px}.mmform .mmhp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}.mmform .fmsg{margin:6px 0 0;min-height:1.2em;font-size:14px;color:#f3eee4}.mmform .fmsg.ok{color:#85bb65}.mmform .fmsg.err{color:#ff5449}@media (max-width:640px){.mmform button{width:100%}}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm27" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="Mouth Math home"><img src="assets/logo.svg?v=mm28" alt="Mouth Math"></a><a class="back" href="./">&larr; Back to Mouth Math</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 3, 2026</p>
@@ -449,7 +450,7 @@ standard request information such as your IP address; see the <a href="https://w
 <p>Questions about this policy? Send us a message:</p>
 <form class="mmform" id="pform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath privacy question"><input type="hidden" name="from_name" value="Mouth Math website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="pformN">Name <span class="opt">(optional)</span></label><input id="pformN" name="name" autocomplete="name" maxlength="100"><label for="pformE">Email</label><input id="pformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="pformM">Message</label><textarea id="pformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 </main>
-<footer>&copy; 2026 Mouth Math · <a href="./">Home</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a></footer>
+<footer><a href="./">Home</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
 <script>document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'})</script>
 </body></html>
@@ -459,10 +460,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm27">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm27">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm28">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm28">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm27">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm28">
 <title>Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -475,14 +476,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm27">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm28">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mouth Math logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mouth Math — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm27">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm28">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"Mouth Math","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"Mouth Math","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"Mouth Math word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"Mouth Math","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1191,6 +1192,7 @@ aside.ad[data-slot="between"]{margin:26px auto 4px}
 @media (prefers-reduced-motion:reduce){body header .hview .vcard{transition:none}}
 /* ---- Logo v3: inline SVG (profile -> waves -> = ± -> animated red number -> MouthMath), no layout jump (fixed-width number) ---- */
 .sitefoot{max-width:1240px;margin:0 auto;padding:18px 16px 30px;border-top:1px solid var(--rule);text-align:center;font-size:14px;color:var(--muted)}.sitefoot a{color:var(--muted)}.sitefoot a:hover{color:var(--num-red)}
+.mmcopy{margin-top:8px;font:400 12px/1.4 Arial,Helvetica,sans-serif;color:#7d776d;text-align:center;letter-spacing:0}
 header .logo svg.mmlogo{height:70px;width:auto;aspect-ratio:1095/234;display:block;overflow:visible}   /* mm24: +25% (the header headline moved to About) */
 @media (max-width:1239px) and (min-width:641px){header .logo svg.mmlogo{height:60px}}
 /* phones: as big as fits next to Share/About (one row down to 320px): 50px from ~375px, ~41px at 320px */
@@ -1331,13 +1333,14 @@ html.dsopen,html.dsopen body{overflow:hidden}
   border:1px solid #3a3733;border-radius:8px;padding:0 16px 14px;box-shadow:0 12px 32px rgba(0,0,0,.7)}
 }
 
-/* mm27: with "Hide common stopwords" unchecked, stopwords (the, and, to ...) are italic in the table and the cloud */
+/* mm28: with "Hide common stopwords" unchecked, stopwords (the, and, to ...) are italic in the table and the cloud */
 #tb tr.stop td.w,#cloud span.stop{font-style:italic}
 
-/* mm27: common words (stopwords) that would rank in the top N sit at the bottom of the table in faint gray italics with their real rank;
+/* mm28: common words (stopwords) that would rank in the top N sit at the bottom of the table in faint gray italics with their real rank;
    "View words in actual order" (right below) turns Hide common stopwords off and puts them back in place */
 #tb tr.tail td{color:#7d776d!important;font-weight:400!important}#tb tr.tail td.w{font-style:italic}#tb tr.tail .rr{font-style:normal;font-size:.86em;color:#6c675e}
 #tb tr.tail td.cnt{color:#8a5550!important}
+#tb tr.cwl td{color:#7d776d!important;font-weight:400!important;font-style:italic;cursor:pointer;padding-top:12px;padding-bottom:12px;user-select:none}#tb tr.cwl:hover td{background:#1a1919}#tb tr.cwl:focus-visible{outline:2px solid #7d776d;outline-offset:-2px}
 .rsrow{display:flex;align-items:center;gap:8px;margin:12px 2px 4px;font:400 15px/1.3 Arial,Helvetica,sans-serif;color:#f3eee4;cursor:pointer}
 .rsrow[hidden]{display:none}.rsrow input{width:18px;height:18px;accent-color:var(--num-red);margin:0}
 </style></head><body class="mode-fed">
@@ -1412,7 +1415,7 @@ html.dsopen,html.dsopen body{overflow:hidden}
 <p class="abfoot"><a href="privacy.html">Privacy Policy</a></p>
 </section>
 </main>
-<footer class="sitefoot">&copy; 2026 Mouth Math · <a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed</footer>
+<footer class="sitefoot"><a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <div id="tvModal" class="tvm" hidden><div class="tvm-back" data-close></div>
 <div class="tvm-panel" role="dialog" aria-modal="true" aria-labelledby="tvmTitle"><div class="tvm-head"><h3 id="tvmTitle"></h3><span class="tvm-sub">1-year daily price</span>
 <button type="button" class="tvm-x" id="tvmX" aria-label="Close chart" data-close>&times;</button></div>
@@ -1593,6 +1596,7 @@ function setStat(id,n,anim){const el=$(id);el.dataset.v=n;cancelAnimationFrame(e
   const t0=performance.now(),D=650;
   const step=t=>{const k=Math.min(1,(t-t0)/D),e=1-Math.pow(1-k,3);el.textContent=Math.round(n*e).toLocaleString();if(k<1)el._raf=requestAnimationFrame(step)};
   el._raf=requestAnimationFrame(step)}
+let cwOpen=false;   // the '+K common words' line: collapsed until tapped
 function render(cloudToo=true){   // one selection feeds both: the Super Math table (top N, sortable) and the Super Cloud (top N by count)
   const base=BASE.filter(x=>!(hide.checked&&x.stop));
   base.sort((a,b)=>b.count-a.count||(a.word<b.word?-1:a.word>b.word?1:0));
@@ -1604,7 +1608,7 @@ function render(cloudToo=true){   // one selection feeds both: the Super Math ta
     const full=BASE.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:a.word>b.word?1:0));
     let r2=0,p2=null;full.forEach((x,i)=>{if(x.count!==p2){r2=i+1;p2=x.count}x.rr=r2});
     tail=(s?full.filter(x=>re?re.test(x.word):x.word.includes(s)):full).slice(0,cap).filter(x=>x.stop)}
-  const list=match.slice(0,cap-tail.length);   // table: the top N most frequent matches (minus the stopword tail), then sorted as chosen
+  const list=match.slice(0,cap);   // table: always the full top N real words (hide on), then sorted as chosen; the stopwords that would rank in the top N fold into ONE '+K common words' line
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
   $('sDocs').textContent=sel.size+' / '+DOCS.length;
   const anim=P.slug!==lastCountSlug;lastCountSlug=P.slug;
@@ -1613,11 +1617,12 @@ function render(cloudToo=true){   // one selection feeds both: the Super Math ta
   const max=base.length?base[0].count:1;
   const topW=list.length?list.reduce((a,b)=>b.count>a.count||(b.count===a.count&&b.word<a.word)?b:a).word:null;   // the single most frequent word (red)
   tb.innerHTML=(list.length||tail.length)?list.map(x=>`<tr class="${x.stop?'stop':''}${x.word===topW?' top':''}" data-w="${esc(x.word)}"${x.word===topW?` tabindex="0" role="button" aria-label="#1 word, ${esc(x.word)}: ${x.count.toLocaleString()} — show excerpts"`:''}><td class="num">${x.rank}</td><td class="w">${esc(x.word)}</td><td class="num cnt">${x.count.toLocaleString()}</td><td><div class="bar" style="width:${(100*x.count/max).toFixed(1)}%"></div></td></tr>`).join('')+
-      tail.map(x=>`<tr class="stop tail" data-w="${esc(x.word)}"><td class="num"></td><td class="w">${esc(x.word)} <span class="rr">(#${x.rr})</span></td><td class="num cnt">${x.count.toLocaleString()}</td><td></td></tr>`).join('')
+      (tail.length?`<tr class="cwl" tabindex="0" role="button" aria-expanded="${cwOpen}"><td class="num"></td><td class="w" colspan="3">${cwOpen?'Hide':'+'}${cwOpen?' ':''}${tail.length.toLocaleString()} common words</td></tr>`:'')+
+      (cwOpen?tail:[]).map(x=>`<tr class="stop tail" data-w="${esc(x.word)}"><td class="num"></td><td class="w">${esc(x.word)} <span class="rr">(#${x.rr})</span></td><td class="num cnt">${x.count.toLocaleString()}</td><td></td></tr>`).join('')
     :`<tr><td colspan="4" class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</td></tr>`;
-  setStat('sShown',list.length+tail.length,anim);
+  setStat('sShown',list.length,anim);
   $('realSpots').checked=!hide.checked;$('rsrow').hidden=!(tail.length||!hide.checked);
-  $('more').textContent=match.length>list.length?`Showing the top ${(list.length+tail.length).toLocaleString()} of ${match.length.toLocaleString()} words${match.length>LIMIT&&NSHOW==='all'?' (table limit; use the filter to find others)':' · choose All above to list every word'}.`:'';
+  $('more').textContent=match.length>list.length?`Showing the top ${list.length.toLocaleString()} of ${match.length.toLocaleString()} words${match.length>LIMIT&&NSHOW==='all'?' (table limit; use the filter to find others)':' · choose All above to list every word'}.`:'';
   $('more').classList.toggle('lim',match.length>LIMIT&&NSHOW==='all');   // the line only shows when the table limit is hit
   document.querySelectorAll('th[data-k]').forEach(th=>{const l=th.dataset.l||(th.dataset.l=th.textContent.replace(/ [▲▼]$/,''));th.innerHTML=esc(l)+(th.dataset.k===sortK?`<span class="sarr" aria-hidden="true">${sortDir<0?' ▼':' ▲'}</span>`:'')});
   placeTopRing();
@@ -1965,6 +1970,8 @@ document.addEventListener('keydown',e=>{if(tvM.hidden)return;if(e.key==='Escape'
 
 // Safety net: any off-site link (sources, documents, credits) opens in a new tab so visitors can come back; mailto and in-page links are left alone.
 document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(a&&/^https?:/.test(a.href)&&a.origin!==location.origin&&!a.closest('.tradingview-widget-container')){a.target='_blank';a.rel='noopener noreferrer'}},true);setN(NSHOW,false);
+tb.addEventListener('click',e=>{if(e.target.closest('tr.cwl')){cwOpen=!cwOpen;hidePop();render(false)}});   // tap '+K common words' to expand / collapse the gray rows
+tb.addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('tr.cwl')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();cwOpen=!cwOpen;hidePop();render(false);const l=tb.querySelector('tr.cwl');if(l)l.focus();return}});
 tb.addEventListener('keydown',e=>{const r=e.target.closest('tr.top[data-w]');if(r&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(r,true)}});
 cloud.addEventListener('keydown',e=>{const s=e.target.closest('[data-w]');if(s&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pinned=false;showPop(s,true)}});
 let rsT=null;
