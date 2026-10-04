@@ -431,3 +431,5 @@ Every disclosure or sort arrow on the page is white: the larger "Choose document
 **Selected category tab (mm29):** the selected category tab (e.g. "Fed Chair" on the default load, `#cats button.cat.on`) is a medium warm gray (#9a958c) instead of bright cream. Its dark label keeps about 6.6:1 contrast, the count (#26231f) about 5.3:1, and the red underline stays. Selected speaker names stay red.
 
 **Super Cloud background (mm30):** plain #0b0b0b with its thin border; the background grid lines were removed.
+
+**Empty ticker pills (mm31):** a ticker pill with no ticker (Fed Chair, US Government) is never shown. The sticky speaker bar used to show an empty green pill for them.
