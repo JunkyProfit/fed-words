@@ -114,7 +114,8 @@ has a **source ↗** link, a text-fragment URL (`…htm#:~:text=start,end`) that
 to and highlights that sentence on federalreserve.gov in Chrome, Edge, and Safari.
 The speech title link is a plain fallback for other browsers.
 
-**Ad slots:** three reserved, text-free placeholder blocks at their final sizes: a leaderboard below the results card
+**Ad slots:** four reserved, text-free placeholder blocks at their final sizes: a `between` unit inside the results card,
+between the Super Math table and the Super Cloud (728x90, 320x100 on phones; for a future relevant ad unit), a leaderboard below the results card
 (728x90, 320x50 on phones), a 300x250 sidebar unit below Who (desktop only) and a 300x250 in-content unit between the
 method note and About. Until AdSense is approved each block is purely decorative: a faint tile of math marks (+ = ± × in
 cream, one red minus, ~9% opacity) on a hairline border, with no words, links or `ins.adsbygoogle` tags. Each slot carries
@@ -132,36 +133,37 @@ keywords, canonical `https://mouthmath.com/`, Open Graph + Twitter title/descrip
 (`/` and `/privacy.html`). No hidden text or keyword blocks anywhere; the About section has one visible plain-language
 summary sentence.
 
-**People list on phones (US Government):** categories made of small sub-groups (US Government: Cabinet / Congress /
-Supreme Court) fold their people list behind one disclosure on phones (≤640px): closed, it shows the group and the
-selected person's name in red with the white ▾ arrow; tapping opens the grouped list (all 17 names wrapped, plus search;
-no A–Z needed there) and picking a person folds it again. CEOs (A–Z) and Fed Chair (one person) are unchanged; desktop is unchanged.
+**People list on phones (CEOs and US Government):** every multi-person category folds its people list behind one
+disclosure on phones (≤640px), right under the category tiles: closed, it shows the group (CEO / Cabinet / Congress /
+Supreme Court) and the selected person's name in red at 20px (19px at ≤360px, where the small group label is dropped; long names wrap
+to a second line), plus the ticker pill for CEOs, with the white ▾ arrow. Tapping opens the list: for CEOs the search,
+index chips, A–Z and all 22 CEOs (wrapped, not a sideways row); for US Government the search and the grouped list (all 17
+names; no A–Z needed there). A–Z taps keep it open; picking a person folds it again. Fed Chair (one person) and desktop are unchanged.
 
 **Polish:** the red stats count up when a person loads (skipped with prefers-reduced-motion); a **Share** button in the
 header copies the exact view's URL (person, documents, view; the native share sheet on phones); keyboard shortcuts
-`/` (filter words), `V` (switch view), `S` (share), `?` (hint).
+`/` (filter words), `V` (jump between Super Math and Super Cloud), `S` (share), `?` (hint).
 
-**Views:** two thumbnail cards at the top, **Super Cloud** (the default, a framed mini cloud, shown in the stat red)
-and **Super Math** (the ranked table, a sketched page), are buttons with `aria-pressed` that switch
-between the ranked table and a word cloud (Super Cloud) for the same person, timeframe, filter, and
-stopword setting. Font size scales with the square root of the count, from 12px to 72px
+**One page, two sections (stacked layout, Oct 2026):** every speaker page shows the red stats, then the
+**Super Math** table, then (below a faint ad placeholder) the **Super Cloud**, each under a small cream Arial section heading
+(`h3.secth`, ids `superMath` / `superCloud`). There is no view toggle any more: the same person, documents, Show chips, word filter
+and stopword setting feed both. The header's two thumbnail cards are jump links (see "Jump links" below). Font size scales with the square root of the count, from 12px to 72px
 (the largest size is smaller on narrow screens). One shared **Show 25 / 50 / 100 / 150 / All words** chip row
 (Arial, red outline; the selected chip is filled red; 40px tall, full-width on phones) sits right under the Timeframe
-row and sets how many words both views show; the default is **50**. Super Math lists the top N most frequent words
+row and sets how many words both sections show; the default is **50**. Super Math lists the top N most frequent words
 (after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
-at most 300 words, so All in Super Cloud means the top 300. Super Cloud turns on "Hide common stopwords"
-so "the" doesn't dominate. You can turn it off again, and going back to Super Math restores
-your earlier setting (on, unless you unchecked it). Hover a word for its count and the same sentence popover as the table
+at most 300 words, so All means the top 300 in the cloud. "Hide common stopwords" (on by default) applies to both.
+Sorting a table column only reorders the table (the cloud is left as is). Hover a word for its count and the same sentence popover as the table
 (source links, CEO 10-sentence caps); click or tap to pin it.
 
-**Layout order (every view, every screen size):** the person's name ("From the mouth of <person>"), then the
-red stats (documents, total words, unique words, words shown), then the Super Cloud or the Super Math table. The stats
+**Layout order (every screen size):** the person's name ("From the mouth of <person>"), then the
+red stats (documents, total words, unique words, words shown), the Timeframe / Show / filter rows, then the Super Math table, the `between` ad slot and the Super Cloud. The stats
 live inside the results card, right under the name, so nothing can push them below the cloud or table. On wide
 screens (900px and up) the Who panel sits in a left sidebar in both views.
 **Privacy Policy:** `privacy.html` (generated by `build.py` from the `PRIVACY` template, same black/cream Arial look) covers Google AdSense cookies and personalized ads (links to Google's "How Google uses information from sites or apps that use our services" and adssettings.google.com), third-party vendor cookies, no accounts/logins and no personal data collected by the site itself, the TradingView chart embed, hosting and jsDelivr. The contact address is assembled in JS (like the ad mailto). It is linked from the page footer and the About section.
 
-**Header:** the logo is an inline SVG (`assets/logo-inline.svg`, inlined by `build.py`): the original Mouth Math line art, open lips with "+ − = 1" inside and three sound waves, drawn as a faithful vector of `/workspace/logo-options/mouth-math-logo.jpg` in cream lines on black with the lip strokes in the site red (#ff5449, the stat / Super Cloud red; `LIPS=red` in `gen_lips.py`), with the "MouthMath" wordmark (one word, both M capitals, all cream) in Quicksand (a thin rounded geometric sans, SIL Open Font License, converted to outlines so no font is loaded). No animation. It is 56px tall on desktop, 48px from 641 to 1239px, 40px on phones and 34px below 360px. The static `assets/logo.svg`/`logo.png`, the favicon (`favicon.svg` / 32px `favicon.png`: the lips with the math, heavier lines), the `apple-touch-icon.png` and the 1200×630 `og-image.png` (logo on black) are generated from the same source (`/workspace/logo-options/lips/gen_lips.py`, `qs_glyphs.py`, `site_assets_lips.py`). After the logo comes a compact headline block, then the red
-**Super Cloud** and green **Super Math** view buttons (green = one CSS variable, `--money`; set it to a gray to switch). Each view button
+**Header:** the logo is an inline SVG (`assets/logo-inline.svg`, inlined by `build.py`): the original Mouth Math line art, open lips with "+ − = 1" inside and three sound waves, drawn as a faithful vector of `/workspace/logo-options/mouth-math-logo.jpg` in cream lines on black with the lip strokes in the site red (#ff5449, the stat / Super Cloud red; `LIPS=red` in `gen_lips.py`), with the "MouthMath" wordmark (one word, both M capitals; "Mouth" in the site red #ff5449 like the lips, "Math" cream; 1.12× the original size, letter spacing +0.045 em (`SCALE=1.12 TRACK=45` in `qs_glyphs.py`), chosen from current / wider / much wider in `/workspace/shots/wordmark-spacing-options.png` because it stays on one row next to Share/About at 320px) in Quicksand (a thin rounded geometric sans, SIL Open Font License, converted to outlines so no font is loaded). No animation. It is 56px tall on desktop, 48px from 641 to 1239px, 40px on phones and 34px below 360px. The static `assets/logo.svg`/`logo.png`, the favicon (`favicon.svg` / 32px `favicon.png`: the lips with the math, heavier lines), the `apple-touch-icon.png` and the 1200×630 `og-image.png` (logo on black) are generated from the same source (`/workspace/logo-options/lips/gen_lips.py`, `qs_glyphs.py`, `site_assets_lips.py`). After the logo comes a compact headline block, then the red
+**Super Math** and green **Super Cloud** jump links (green = one CSS variable, `--money`; set it to a gray to switch). Each one
 has a second outer ring in its color and a raised look (top highlight, drop shadow) that presses in on tap. The Fed Chair / CEOs /
 US Government category buttons sit at the top of the Who panel, with that category's people right below. Person names are red
 (#ff5449 on dark; a darker red #a8201a on the light selected chip); ticker pills stay green.
@@ -179,13 +181,15 @@ chips in single horizontal-scroll rows; the A–Z index wraps into a grid of 40p
 
 **Super Cloud motion (p5.js):** the starting layout is computed in plain JavaScript (canvas `measureText`,
 largest words first along a spiral with box collision checks). Words always float (there is no Motion toggle): a
-[p5.js](https://p5js.org/) sketch takes over: each word is a soft physics body that drifts gently
-(Perlin noise) around its spot, held by a weak spring, and boxes are pushed apart so words never overlap
-(spatial hash; bigger words move less). Invisible, focusable hit boxes follow the words, so hover, click/tap
-to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when Super Cloud is
-shown (and motion isn't reduced), from jsDelivr with Subresource Integrity
+[p5.js](https://p5js.org/) sketch takes over: words float like on water. Each word follows layered, eased sine waves around its
+spot (a slow ~6 s vertical bob, a slower ~12 s sideways sway up to ~15 px, and a tilt of at most ~1.3°), riding a shared swell that
+travels across the cloud so neighbours move together; bigger words and narrow or very dense clouds float less. Positions ease
+toward their target (frame-rate independent), overlaps feed a smoothed separation offset (at most ~3 px of overlap), and targets stay
+inside the cloud, so there is no jitter (spatial hash for neighbour checks). Invisible, focusable hit boxes follow the words, so hover, click/tap
+to pin, and keyboard access use the same popover as the table. p5.js **2.3.4** is loaded only when the Super Cloud first
+scrolls into view (IntersectionObserver; and motion isn't reduced), from jsDelivr with Subresource Integrity
 (`sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii`). The sketch pauses when the
-cloud is off-screen (IntersectionObserver) and is removed in Super Math view. With `prefers-reduced-motion:
+cloud is off-screen (IntersectionObserver), so the cloud only animates while it is on screen. With `prefers-reduced-motion:
 reduce` (no float and no pulse) or if the CDN can't be reached, the static layout is used.
 The cloud always shows the full selected timeframe (no date slider or play button).
 Up to 300 bodies (the Top 300 option).
@@ -199,8 +203,14 @@ the cream backgrounds). The theme is one block at the end of the CSS in `build.p
 the person heading and the red stat numbers; normal tracking for body text; uppercase with +0.06em only on tiny
 labels (category pill, source type, group labels). Counts use tabular numerals.
 
-The view is kept in the URL: Super Cloud is the default (clean URL, plus `n=25|100|150|all` when not 50; old `n=300` links map to All); Super Math adds
-`#mode=standard`. Old `#mode=visual` links still open the Super Cloud.
+URL state: the default is a clean URL, plus `person=`, `docs=` and `n=25|100|150|all` when not 50 (old `n=300` links map to All). Jumping
+does not change the URL. Old `#mode=cloud` / `#mode=visual` links and the plain `#cloud` anchor load the page and scroll to the Super Cloud;
+old `#mode=standard` links open at the top.
+
+**Jump links:** the header's **Super Math** (left, red double ring, red 3D look) scrolls smoothly to the table and **Super Cloud** (right, green double ring)
+scrolls smoothly to the cloud (`<a href="#superMath">` / `<a href="#cloud">`, so they also work without JavaScript; instant scroll with
+`prefers-reduced-motion`). Super Cloud's thin outer ring (the outline) slowly fades to black and back (2.8 s ease-in-out; border and label steady)
+until it is tapped once (remembered in `localStorage` key `mm_cloud_tried`); none with `prefers-reduced-motion`. The red stats, the red #1 word pulse and other site reds are unchanged.
 
 ### Licensing: public domain vs. excerpts
 | Source | Status | Treatment |
@@ -355,7 +365,7 @@ on its own about 1–2 minutes after a push. The manual equivalent is
 - Warsh's 2006–2011 speeches as a Governor are left out on purpose. The speaker
   filter only matches remarks given as Chair.
 
-Every disclosure or sort arrow on the page is white: the larger "Choose documents" arrow (its label stays red; chevron on desktop, ▾/▴ on phones), the phone About toggle ▾, and the Super Math column sort ▲/▼.
+Every disclosure or sort arrow on the page is white: the larger "Choose documents" arrow (in the label only the word "Choose" is white, "documents" stays red; chevron on desktop, ▾/▴ on phones), the phone About toggle ▾, and the Super Math column sort ▲/▼.
 
 **Ticker charts:** each CEO's ticker pill (in the people list and after the name in the results title) opens an in-page popup with a 1-year daily price chart from TradingView's free, official embeddable Advanced Chart widget (dark theme, 1Y range, daily candles). TradingView's attribution link stays exactly as their widget provides it (required by their terms), and no market data is scraped or stored. The widget script loads only when a pill is clicked, and the widget is removed when the popup closes. Close it with the X, Esc, or a tap on the backdrop; on phones it fills the screen. Clicking a pill inside a person button opens the chart without selecting that person. Exchange prefixes live in `ceos.json` → `tv_exchange` (e.g. NASDAQ:MSFT, NYSE:JPM, NYSE:BRK.B); each was checked to resolve in the widget.
 
