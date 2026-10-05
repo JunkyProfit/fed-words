@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm38">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm38">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm38">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm39">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm39">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm39">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm38">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm39">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -393,7 +393,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm38" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm39" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -465,10 +465,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm38">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm38">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm39">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm39">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm38">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm39">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -481,14 +481,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm38">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm39">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm38">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm39">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1240,6 +1240,9 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
 .tk[hidden],.tk:empty{display:none!important}   /* mm31: no empty ticker pill anywhere (e.g. the Fed Chair in the sticky bar) */
 #spkbar .sba{display:inline-flex;align-items:center}#spkbar .sba::after{content:"\25BE";color:#fff;font-size:30px;line-height:.7}
 #spkbar .sbc{flex:none;font-size:13px;font-weight:700;color:#f3eee4;margin-left:-3px}
+/* mm39: longer label ("Search other CEOs" / "Search other officials") stays on one line; the name shrinks/ellipsizes or wraps first */
+#spkbar .sbc,.pk.pcoll #pdisc .pdc{white-space:nowrap}
+@media (max-width:360px){#spkbar{gap:6px;padding:0 10px}#spkbar .sbn{font-size:16px}#spkbar .sbc{font-size:12px}}
 #spkbar:focus-visible{outline:2px solid #fff;outline-offset:-4px}
 @media (prefers-reduced-motion:reduce){#spkbar,#spkbar.show{transition:none}}
 .secth{scroll-margin-top:58px!important}#cloud{scroll-margin-top:88px!important}#about{scroll-margin-top:56px!important}   /* jump targets clear the bar */
@@ -1276,6 +1279,10 @@ body #stats .stat{border:0!important}   /* boxes inside a bordered card: backgro
 #vtabs button[aria-selected="true"],#vtabs button[aria-selected="true"]:hover{background:#a8807a;border-color:#a8807a;color:#0b0b0b;box-shadow:inset 0 -3px 0 var(--vc)}
 #vtabs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
 #cloud.live span:focus-visible{outline:2px solid #fff}   /* mm32: no green focus ring on cloud words */
+/* mm39: Super Math / Super Cloud tabs: content-sized pair (equal widths), left-aligned with the stats, comfortable padding, 46px tall */
+#vtabs{display:flex;justify-content:flex-start;gap:10px;margin-left:0;margin-right:0;width:auto}   /* mm39: full-width row (inherits), content-sized equal tabs left-aligned */
+#vtabs button{flex:0 0 auto;width:9.6em;padding:10px 14px;white-space:nowrap;box-sizing:border-box}
+@media (max-width:359px){#vtabs button{width:8.6em;padding:10px 10px;font-size:15px}}
 #vpanes{position:relative}
 #vpanes.tab-math #vCloud,#vpanes.tab-cloud #vMath{position:absolute;top:0;left:0;right:0;height:0;overflow:hidden;visibility:hidden;pointer-events:none}   /* the other view stays laid out (zero height, invisible), so a tap swaps instantly */
 #vpanes .secth{display:none}   /* the tabs already name the view */
@@ -1543,7 +1550,7 @@ function renderPicker(){
   pk.classList.toggle('pcoll',coll);pk.classList.toggle('psolo',!coll);pk.classList.toggle('pgrp',coll&&grp);
   if(!coll){const on=$('persons').querySelector('.chip.on');if(on)on.dataset.glabel=P.group||P.category.replace(/s$/,'')}   // phones: single-person category (Fed Chair) shows its name like the collapse row
   pk.classList.toggle('popen',coll&&pOpen);pd.hidden=!coll;pd.setAttribute('aria-expanded',coll&&pOpen?'true':'false');
-  if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?`<span class="tk">${esc(P.ticker)}</span>`:''}<span class="pda" aria-hidden="true"></span><span class="pdc" aria-hidden="true">${pOpen?'Close':'Search'}</span>`;
+  if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?`<span class="tk">${esc(P.ticker)}</span>`:''}<span class="pda" aria-hidden="true"></span><span class="pdc" aria-hidden="true">${pOpen?'Close':srchLbl()}</span>`;
     pd.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
     pd.onclick=()=>{pOpen=!pOpen;renderPicker();const s=$('psearch');if(pOpen&&s&&s.getClientRects().length)s.focus({preventScroll:true});else $('pdisc').focus()}}   // open = search box focused (phones show the keyboard)
   const cf=$('clearF');if(cf)cf.onclick=()=>{pq='';idxSel='';azSel='';$('psearch').value='';renderPicker();$('psearch').focus()};
@@ -2030,8 +2037,10 @@ function openSpeakers(){hidePop();if($('picker').querySelector('.pk').classList.
   const f=[s,document.querySelector('#persons button.chip.on'),$('pdisc'),document.querySelector('#cats button.on')].find(vis);
   if(f)f.focus({preventScroll:true});   // in the tap itself, so phones open the keyboard for the search
   scrollTo({top:0,behavior:RM.matches?'instant':'smooth'})}
+// mm39: the speaker row / sticky bar label names who else you can search (Fed Chair: plain 'Search')
+function srchLbl(){return !P?'Search':P.category==='CEOs'?'Search other CEOs':P.category==='US Government'?'Search other officials':'Search'}
 const SB=$('spkbar');let sbOn=false,sbRaf=0;
-function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
+function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;SB.querySelector('.sbc').textContent=srchLbl();const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
   SB.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected`)}
 function sbCheck(){sbRaf=0;const on=!!P&&$('stats').getBoundingClientRect().bottom<0;if(on===sbOn)return;sbOn=on;if(on)sbFill();
   SB.classList.toggle('show',on);SB.setAttribute('aria-hidden',on?'false':'true');SB.tabIndex=on?0:-1;document.body.classList.toggle('sbar',on)}
