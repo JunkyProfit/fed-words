@@ -456,3 +456,6 @@ warm red-gray `#a8807a` (was the plain gray `#9a958c`), dark text `#0b0b0b` (5.7
 **Show 5 / 50 / 100 / ALL (mm35):** the Show row is now 5 / 50 / 100 / ALL (was 20 / 100 / ALL), still stair steps (bottom-aligned, each chip taller:
 desktop 30/33/36/40px, phones 36/40/44/48px). 50 is the default for both Super Math and Super Cloud on every device (clean URL); `#n=5`, `#n=100`, `#n=all`
 go in the URL. Old links: `n=10` -> 5, `n=20`/`n=25` -> 50, `n=150` -> 100, `n=300` -> ALL.
+
+**Choose your docs (mm36):** the documents button's right side reads "Choose your docs ▾" (cream Arial bold 15px; ▴ while the sheet is open), was "View ▾".
+When the count and the label don't fit on one line (e.g. "66 of 67 documents" at 320px) the label drops under the count, right-aligned; the "Latest · …" line keeps its ellipsis.
