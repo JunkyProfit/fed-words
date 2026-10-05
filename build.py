@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm34">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm34">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm34">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm35">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm35">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm35">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm34">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm35">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -393,7 +393,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm34" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm35" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -465,10 +465,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm34">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm34">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm35">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm35">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm34">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm35">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -481,14 +481,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm34">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm35">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm34">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm35">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -881,7 +881,7 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 #cats button.cat.on{background:var(--ink);color:#0b0b0b;border-color:var(--ink);box-shadow:inset 0 -3px 0 var(--num-red)}
 #cats button.cat.on .ct small{color:#4f4a43}
 /* mm29: the selected category tab (e.g. 'Fed Chair' on the default load) softened from bright cream to a medium warm gray; dark text keeps ~6.6:1 contrast, the count ~5:1; the red underline stays */
-#cats button.cat.on{background:#9a958c;border-color:#9a958c}#cats button.cat.on .ct small{color:#26231f}
+#cats button.cat.on{background:#a8807a;border-color:#a8807a}#cats button.cat.on .ct small{color:#24191a}   /* mm35: warm red-gray (was #9a958c); text #0b0b0b 5.7:1, count #24191a 4.9:1 */
 .topbar .viewbar{margin:0;flex:none;align-items:center}.topbar #viewHint{display:none}#cats .ct b{white-space:nowrap}
 @media (min-width:900px){body main>.topbar{grid-column:1/-1;grid-row:1}}
 @media (max-width:899px){.topbar{display:contents}.catbar{margin:0 0 10px}}
@@ -1136,10 +1136,10 @@ body header .hact{gap:10px!important}body header .hact button,body header .hact 
 /* Show chips, smaller (Oct 2026): content-sized, 36px tall on phones; tighter padding on narrow phones keeps one row at 320 */
 @media (max-width:374px){body #nbar{gap:5px!important}body #nbar .nchip{min-width:34px;padding:0 7px!important}}
 @media (max-width:330px){body #nbar .nchip{padding:0 6px!important}#nbar .nbl:first-child{font-size:13px;margin-right:0}}
-/* Show 20 / 100 / ALL as stair steps (Oct 2026): bottom-aligned, each chip a little taller than the last so the tops rise like stairs */
+/* Show 5 / 50 / 100 / ALL as stair steps (Oct 2026; 5/50 added mm35): bottom-aligned, each chip a little taller than the last so the tops rise like stairs */
 body #nbar{align-items:flex-end!important}body #nbar .nbl{align-self:center}
-body #nbar .nchip[data-n="20"]{min-height:30px!important}body #nbar .nchip[data-n="100"]{min-height:35px!important}body #nbar .nchip[data-n="all"]{min-height:40px!important}
-@media (max-width:640px){body #nbar .nchip{min-width:48px}body #nbar .nchip[data-n="20"]{min-height:36px!important}body #nbar .nchip[data-n="100"]{min-height:41px!important}body #nbar .nchip[data-n="all"]{min-height:46px!important}}
+body #nbar .nchip[data-n="5"]{min-height:30px!important}body #nbar .nchip[data-n="50"]{min-height:33px!important}body #nbar .nchip[data-n="100"]{min-height:36px!important}body #nbar .nchip[data-n="all"]{min-height:40px!important}
+@media (max-width:640px){body #nbar .nchip{min-width:48px}body #nbar .nchip[data-n="5"]{min-height:36px!important}body #nbar .nchip[data-n="50"]{min-height:40px!important}body #nbar .nchip[data-n="100"]{min-height:44px!important}body #nbar .nchip[data-n="all"]{min-height:48px!important}}
 /* ---- Phones: collapsible people list for every multi-person category (CEOs, US Government). Closed = selected name (red, + ticker) + white arrow ---- */
 #pdisc{display:none}
 @media (max-width:640px){
@@ -1269,11 +1269,11 @@ body #stats .stat{border:0!important}   /* boxes inside a bordered card: backgro
 #vtabs button[aria-selected="true"]{color:#fff;background:color-mix(in srgb,var(--vc) 34%,#0b0b0b);outline-color:var(--vc)}
 #vtabs button:focus-visible{outline:2px solid #fff}
 /* mm30: selected states match. Super Math / Super Cloud tabs use the category buttons' look: unselected = card black, thin #2c2a27 border, text in
-   the tab's identity color (red / green); selected = the category's medium gray (#9a958c), dark text, a 3px identity-color underline
+   the tab's identity color (red / green); selected = the category's warm red-gray (#a8807a since mm35; was #9a958c), dark text, a 3px identity-color underline
    (like the category's red underline). The old outer rings are gone; (mm32: Super Cloud now uses red too; the first-visit fade hint is gone.) */
 #vtabs button{background:var(--card);border:1px solid var(--rule);border-radius:4px;outline:none;color:var(--vc);transition:border-color .15s,background-color .15s}
 #vtabs button:hover{background:#171717;border-color:#5a5650}
-#vtabs button[aria-selected="true"],#vtabs button[aria-selected="true"]:hover{background:#9a958c;border-color:#9a958c;color:#0b0b0b;box-shadow:inset 0 -3px 0 var(--vc)}
+#vtabs button[aria-selected="true"],#vtabs button[aria-selected="true"]:hover{background:#a8807a;border-color:#a8807a;color:#0b0b0b;box-shadow:inset 0 -3px 0 var(--vc)}
 #vtabs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
 #cloud.live span:focus-visible{outline:2px solid #fff}   /* mm32: no green focus ring on cloud words */
 #vpanes{position:relative}
@@ -1415,7 +1415,7 @@ body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small
 <ul class="speeches" id="docList"></ul></div></details>
 <div id="selSummary" class="sr-only"></div></div>
 <div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Super Math</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Super Cloud</button></div>
-<div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="20">20</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
+<div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="5">5</button><button class="nchip" data-n="50">50</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
 <label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
@@ -1466,7 +1466,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10,CLOUD_MAX=300;
-const NOPTS=['20','100','all'],NDEF='100';let NSHOW=NDEF;   // words shown in both views: 20 (default on every device), 100 or all (the cloud caps at CLOUD_MAX)
+const NOPTS=['5','50','100','all'],NDEF='50';let NSHOW=NDEF;   // words shown in both views: 5, 50 (default on every device, mm35), 100 or all (the cloud caps at CLOUD_MAX)
 const nCap=()=>NSHOW==='all'?Infinity:+NSHOW;
 const unitOf=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
 const q=$('q'),hide=$('hideStop'),tb=$('tb');
@@ -1612,13 +1612,13 @@ function syncTimeframe(){
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
   syncHash();
 }
-// URL state: #person=<slug>&docs=<id,...>&n=<100|all>; default (Warsh, all docs, 20 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Super Cloud; mode=standard is ignored. Leaves #about etc. alone.
+// URL state: #person=<slug>&docs=<id,...>&n=<5|100|all>; default (Warsh, all docs, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Super Cloud; mode=standard is ignored. Leaves #about etc. alone.
 const OURS=/^#(person|docs|mode|n|view)=/;
 function syncHash(){
   if(!P)return;const all=sel.size===DOCS.length,parts=[];
   if(P.slug!==DEFAULT||!all)parts.push('person='+P.slug);
   if(!all)parts.push('docs='+[...sel].join(','));
-  if(NSHOW!==NDEF)parts.push('n='+NSHOW);   // 20 words is the default (clean URL)
+  if(NSHOW!==NDEF)parts.push('n='+NSHOW);   // 50 words is the default (clean URL)
   if(VIEW==='cloud'&&!SIDE.matches)parts.push('view=cloud');   // the Super Cloud tab (side by side on wide screens: nothing to keep)
   const h=location.hash,ours=!h||OURS.test(h),want=parts.length?'#'+parts.join('&'):'';
   if(want)history.replaceState(null,'',want);else if(ours&&h)history.replaceState(null,'',location.pathname+location.search);
@@ -2032,7 +2032,7 @@ window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,jumpTo,get view
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
 // initial state from URL: #person=<slug>&docs=<ids>  (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
-  {const n=hp.get('n');if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(['10','25','50'].includes(n))setN('20',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> All, 150 -> 100, 10/25/50 -> 20
+  {const n=hp.get('n');if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(n==='10')setN('5',false);else if(['20','25'].includes(n))setN('50',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> All, 150 -> 100, 10 -> 5, 20/25 -> 50
   const toCloud=hp.get('view')==='cloud'||['cloud','visual'].includes(hp.get('mode'))||location.hash==='#cloud';   // #view=cloud, old Super Cloud links and the #cloud anchor open the cloud tab
   setView(toCloud?'cloud':'math');
   return setPerson(hp.get('person')||DEFAULT,(hp.get('docs')||'').split(',').filter(Boolean)).then(()=>{

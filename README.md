@@ -189,7 +189,7 @@ sticky top bar shows the speaker, the triangle and **Search**. Tapping it goes b
 After a pick the list folds and the name and red stats come into view.
 
 **Common words line (mm28):** with "Hide common stopwords" checked (the default), the Super Math table always shows the full N real
-(non-stopword) words for the chosen Show count (20 / 100 / ALL). It ends with ONE faint gray italic line, e.g. **+42 common words**, giving the
+(non-stopword) words for the chosen Show count (5 / 50 / 100 / ALL since mm35). It ends with ONE faint gray italic line, e.g. **+42 common words**, giving the
 number of stopwords that would rank within the top N. Tap it to expand those gray rows, each with its real rank in parentheses (e.g. "the (#3)") and
 no bar. The line then reads "Hide 42 common words", and tapping it again collapses them (Enter/Space work too). Right below the table, **View words
 in actual order** unchecks Hide common stopwords, puts them back in their true ranks (italic) and scrolls back up to the red stats. The cloud never shows stopwords while hidden. The bar column header reads FREQUENCY.
@@ -206,8 +206,8 @@ and the Super Cloud (DOM and the live canvas), so they stand apart from the mean
 one is laid out at zero height and invisible, so the swap is instant. The same person, documents, Show chips, word filter
 and stopword setting feed both. From **1100px wide** both views sit **side by side** (table left, cloud right, each under a small cream
 heading, `h3.secth`; the cloud is sticky so it stays in view next to a long table) and the tabs are hidden. The faint `between` ad placeholder sits below the views. Font size scales with the square root of the count, from 12px to 72px
-(the largest size is smaller on narrow screens). One shared **Show 20 / 100 / ALL** chip row (stair steps: bottom-aligned, each chip a little taller than the last, 20 shortest and ALL tallest; 36/41/46px tall on phones, 30/35/40px on desktop)
-(Arial, red outline; the selected chip is filled red) sits right under the tabs and sets how many words both sections show; the default is **100** on every device (mm27). Super Math lists the top N most frequent words
+(the largest size is smaller on narrow screens). One shared **Show 5 / 50 / 100 / ALL** (mm35; default 50) chip row (stair steps: bottom-aligned, each chip a little taller than the last, 5 shortest and ALL tallest; 36/40/44/48px tall on phones, 30/33/36/40px on desktop)
+(Arial, red outline; the selected chip is filled red) sits right under the tabs and sets how many words both sections show; the default is **50** on every device (mm35; was 100 from mm27). Super Math lists the top N most frequent words
 (after the word filter) and then applies the column sort; All lists every word (table limit 2,000). The cloud draws
 at most 300 words, so All means the top 300 in the cloud. "Hide common stopwords" (on by default) applies to both.
 Sorting a table column only reorders the table (the cloud is left as is). Hover a word for its count and the same sentence popover as the table
@@ -449,3 +449,10 @@ word gets room (`minmax(min-content,1fr)`) so "Government" never breaks mid-word
 
 **Name and storage (mm34):** the name is always "MouthMath" (one word) in visible text, titles, meta/og/twitter tags, JSON-LD and the
 About toggle ("About MouthMath"). The site no longer writes any localStorage; the privacy policy says it stores nothing in your browser (updated Oct 4, 2026).
+
+**Selected fill (mm35):** the selected category button (Fed Chair / CEOs / US Government) and the selected Super Math / Super Cloud tab use a
+warm red-gray `#a8807a` (was the plain gray `#9a958c`), dark text `#0b0b0b` (5.7:1), category count `#24191a` (4.9:1), red 3px underline kept.
+
+**Show 5 / 50 / 100 / ALL (mm35):** the Show row is now 5 / 50 / 100 / ALL (was 20 / 100 / ALL), still stair steps (bottom-aligned, each chip taller:
+desktop 30/33/36/40px, phones 36/40/44/48px). 50 is the default for both Super Math and Super Cloud on every device (clean URL); `#n=5`, `#n=100`, `#n=all`
+go in the URL. Old links: `n=10` -> 5, `n=20`/`n=25` -> 50, `n=150` -> 100, `n=300` -> ALL.
