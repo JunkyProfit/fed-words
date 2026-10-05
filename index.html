@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm44">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm44">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm45">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm45">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm44">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm45">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm44">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm45">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm44">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm45">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -730,6 +730,25 @@ aside.ad[data-slot="between"]{margin:26px auto 4px}
 @media (max-width:640px){.secth{font-size:17px;margin:18px 0 8px}#superMath{margin-top:14px}aside.ad[data-slot="between"]{margin:20px auto 2px}}
 @media (prefers-reduced-motion:reduce){body header .hview .vcard{transition:none}}
 /* ---- Logo v3: inline SVG (profile -> waves -> = ± -> animated red number -> MouthMath), no layout jump (fixed-width number) ---- */
+/* ---- mm45: Latest / All combined segmented toggle (right above the red stats) ---- */
+.docseg{display:flex;gap:0;margin:0 0 10px;width:100%;max-width:100%;box-sizing:border-box;border-radius:8px;overflow:hidden}
+.docseg[hidden]{display:none!important}
+.docseg button{flex:1 1 0;min-width:0;min-height:40px;padding:8px 10px;margin:0;border:1.5px solid var(--rule);background:transparent;color:var(--ink);
+ font:600 14px/1.2 Arial,Helvetica,sans-serif;letter-spacing:-.01em;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-sizing:border-box}
+.docseg button+button{border-left-width:0}
+.docseg button:first-child{border-radius:8px 0 0 8px}.docseg button:last-child{border-radius:0 8px 8px 0}
+.docseg button[aria-pressed="true"]{background:#a8807a;border-color:#a8807a;color:#fff;font-weight:700}
+.docseg button[aria-pressed="false"]:hover{background:color-mix(in srgb,#fff 6%,transparent)}
+.docseg button:focus-visible{outline:2px solid #fff;outline-offset:2px;z-index:1;position:relative}
+@media (max-width:640px){.docseg{margin:0 0 8px}.docseg button{min-height:44px;padding:10px 8px;font-size:13.5px}}
+@media (max-width:360px){.docseg button{padding:10px 6px;font-size:12.5px}}
+@media (max-width:320px){.docseg button{padding:9px 4px;font-size:12px}}
+/* ---- mm45: desktop people list scrolls inside itself so the selected chip stays in view ---- */
+@media (min-width:900px){
+ #persons{max-height:min(58vh,560px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;padding-right:2px;margin-bottom:6px;scroll-behavior:auto}
+ #persons.grouped{max-height:min(58vh,560px);overflow-y:auto}
+ .pk.has-az>#persons{max-height:min(58vh,560px)}
+}
 .sitefoot{max-width:1240px;margin:0 auto;padding:18px 16px 30px;border-top:1px solid var(--rule);text-align:center;font-size:14px;color:var(--muted)}.sitefoot a{color:var(--muted)}.sitefoot a:hover{color:var(--num-red)}
 .mmcopy{margin-top:8px;font:400 12px/1.4 Arial,Helvetica,sans-serif;color:#7d776d;text-align:center;letter-spacing:0}
 header .logo svg.mmlogo{height:70px;width:auto;aspect-ratio:1140.2/234;display:block;overflow:visible}   /* mm24: +25% (the header headline moved to About) */
@@ -959,6 +978,10 @@ body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small
 </div>
 <section class="card" id="words">
 <h1 id="personTitle" class="sr-only"><span class="ft">From the mouth of</span> <span class="pn">Chairman Kevin Warsh</span></h1>
+<div id="docSeg" class="docseg" role="group" aria-label="Document range" hidden>
+<button type="button" id="segLatest" aria-pressed="true">Latest</button>
+<button type="button" id="segAll" aria-pressed="false">All combined</button>
+</div>
 <div class="stats" id="stats" aria-label="Word counts for the selection">
 <div class="stat"><b id="sDocs">–</b><span class="sl" data-s="docs">documents selected</span></div>
 <div class="stat"><b id="sTotal">–</b><span class="sl" data-s="total words">total words</span></div>
@@ -1011,7 +1034,7 @@ body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
 </section>
 </main>
-<footer class="sitefoot"><a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer class="sitefoot"><a href="./">Home</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <div id="tvModal" class="tvm" hidden><div class="tvm-back" data-close></div>
 <div class="tvm-panel" role="dialog" aria-modal="true" aria-labelledby="tvmTitle"><div class="tvm-head"><h3 id="tvmTitle"></h3><span class="tvm-sub">1-year daily price</span>
 <button type="button" class="tvm-x" id="tvmX" aria-label="Close chart" data-close>&times;</button></div>
@@ -1099,6 +1122,14 @@ function renderPicker(){
     while(r&&r.id!=='picker'&&!(r.scrollWidth>r.clientWidth))r=r.parentElement;if(r&&r.id==='picker')r=null;
     if(r){const l=r.querySelector('.lbl'),pad=l&&getComputedStyle(l).position==='sticky'?l.offsetWidth+12:24,
       x=b.offsetLeft-r.offsetLeft;if(x-pad<r.scrollLeft||x+b.offsetWidth>r.scrollLeft+r.clientWidth-20)r.scrollLeft=Math.max(0,x-pad)}});   // only if not fully visible
+  scrollSelChip();
+}
+function scrollSelChip(){   // mm45: keep the selected speaker chip visible inside #persons without scrolling the page
+  const b=document.querySelector('#persons button.chip.on'),host=$('persons');if(!b||!host)return;
+  if(host.scrollHeight<=host.clientHeight+2)return;   // only when #persons is its own scroller
+  const br=b.getBoundingClientRect(),hr=host.getBoundingClientRect();
+  if(br.top<hr.top+4)host.scrollTop+=br.top-hr.top-8;
+  else if(br.bottom>hr.bottom-4)host.scrollTop+=br.bottom-hr.bottom+8;
 }
 $('psearch').addEventListener('input',e=>{pq=e.target.value.trim();renderPicker()});
 $('psearch').addEventListener('keydown',e=>{if(e.key==='Enter'){const b=$('persons').querySelector('button.chip');if(b){e.preventDefault();setPerson(b.dataset.person)}}
@@ -1156,6 +1187,20 @@ function buildTimeframe(){
  ds.onclick=()=>{DP.open=true};ds.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();DP.open=true}}}
 $('btnAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
 $('btnNone').onclick=()=>{sel=new Set();update()};
+$('segLatest').onclick=()=>{const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;sel=new Set(latest?[latest.id]:[]);update()};
+$('segAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
+function docSegLabels(){   // short noun when it fits; otherwise Latest / All combined
+  const u=P&&P.unit||'',up=P&&P.unit_pl||'';
+  const use=u&&!/\s/.test(u)&&u.length<=10&&up&&!/\s/.test(up)&&up.length<=12;
+  return use?[`Latest ${u}`,`All ${up}`]:['Latest','All combined']}
+function syncDocSeg(){const box=$('docSeg');if(!box)return;
+  const show=DOCS.length>1;box.hidden=!show;if(!show)return;
+  const [lLab,aLab]=docSegLabels();$('segLatest').textContent=lLab;$('segAll').textContent=aLab;
+  const latest=DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]);
+  const isLatest=!!latest&&sel.size===1&&sel.has(latest.id),isAll=sel.size===DOCS.length&&DOCS.length>0;
+  $('segLatest').setAttribute('aria-pressed',isLatest?'true':'false');
+  $('segAll').setAttribute('aria-pressed',isAll?'true':'false');
+}
 function dbFill(){const n=DOCS.length,k=sel.size,u=unitOf(n),e=$('dbN');if(!e)return;e.textContent=k===n?`${n.toLocaleString()} ${u}`:`${k.toLocaleString()} of ${n.toLocaleString()} ${u}`;
   const l=$('dbLatest');if(l){const d=n?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;l.textContent=d?`Latest · ${fmtDate(d.date)} · ${d.title}`:''}
   e.closest('summary').setAttribute('aria-label',`Choose documents: ${e.textContent} selected`)}
@@ -1166,7 +1211,7 @@ function syncTimeframe(){
   YEARS.forEach(y=>{const ids=DOCS.filter(d=>d.year===y).map(d=>d.id),k=ids.filter(i=>sel.has(i)).length;
     const cb=document.querySelector(`#years input[data-year="${y}"]`);cb.checked=k===ids.length;cb.indeterminate=k>0&&k<ids.length;
     $('yc_'+y).classList.toggle('on',k===ids.length)});
-  const all=sel.size===DOCS.length;$('btnAll').classList.toggle('on',all);$('btnNone').classList.toggle('on',sel.size===0);yrsFit();
+  const all=sel.size===DOCS.length;$('btnAll').classList.toggle('on',all);$('btnNone').classList.toggle('on',sel.size===0);yrsFit();syncDocSeg();
   const ds=DOCS.filter(d=>sel.has(d.id));
   $('selSummary').innerHTML=!ds.length?`<b>No ${unitOf(2)} selected.</b>`:
     `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> ${unitOf(all?ds.length:DOCS.length)}`+
