@@ -459,3 +459,7 @@ go in the URL. Old links: `n=10` -> 5, `n=20`/`n=25` -> 50, `n=150` -> 100, `n=3
 
 **Choose your docs (mm36):** the documents button's right side reads "Choose your docs ▾" (cream Arial bold 15px; ▴ while the sheet is open), was "View ▾".
 When the count and the label don't fit on one line (e.g. "66 of 67 documents" at 320px) the label drops under the count, right-aligned; the "Latest · …" line keeps its ellipsis.
+
+**Excerpt highlights (mm37):** in the excerpts panel every occurrence of the selected word is red (#ff5449) bold with no fill (was a pink fill).
+The first occurrence glows softly 3 times (1.8 s each, ~5 s total) and then stays steady red. The glow plays once per opening
+(not again on pin / "Show all"); none with `prefers-reduced-motion`. Only inside the panel: the cloud's #1 word never pulses.
