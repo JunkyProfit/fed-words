@@ -2,9 +2,9 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm42">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm42">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm42">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm43">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm43">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm43">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm42">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm43">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -44,7 +44,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm42" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm43" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -105,7 +105,7 @@ standard request information such as your IP address; see the <a href="https://w
 <form class="mmform" id="pform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath privacy question"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="pformN">Name <span class="opt">(optional)</span></label><input id="pformN" name="name" autocomplete="name" maxlength="100"><label for="pformE">Email</label><input id="pformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="pformM">Message</label><textarea id="pformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
 </main>
-<footer><a href="./">Home</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer><a href="./">Home</a> · <a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
 <script>document.getElementById('toTop').onclick=()=>{scrollTo({top:0,left:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const L=document.querySelector('header .logo');if(L)L.focus({preventScroll:true})}</script>
 <script>document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'})</script>

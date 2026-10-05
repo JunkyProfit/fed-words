@@ -338,22 +338,42 @@ def main():
             DATA_DIR.rmdir()
     write_if_changed(ROOT / "index.html", page)
     write_if_changed(ROOT / "privacy.html", PRIVACY)
+    write_if_changed(ROOT / "contact.html", contact_page())
     write_if_changed(ROOT / "robots.txt", "User-agent: *\nAllow: /\n\nSitemap: https://mouthmath.com/sitemap.xml\n")
     lastmod = datetime.now().strftime("%Y-%m-%d")
     write_if_changed(ROOT / "sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                      f'  <url><loc>https://mouthmath.com/</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
+                     f'  <url><loc>https://mouthmath.com/contact.html</loc><lastmod>{lastmod}</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>\n'
                      f'  <url><loc>https://mouthmath.com/privacy.html</loc><lastmod>{lastmod}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>\n</urlset>\n')
     print(f"\nWrote {ROOT / 'index.html'} ({len(page.encode('utf-8')) / 1024:.0f} KB"
           f"{', per-person data in data/' if split else ', all data inline'})")
+
+
+# ---- contact.html: same look as privacy.html, built from it (mm43) ----
+def contact_page():
+    head, rest = PRIVACY.split("<main>", 1)
+    tail = rest.split("</main>", 1)[1]
+    head = (head.replace("<title>Privacy Policy — MouthMath</title>", "<title>Contact — MouthMath</title>")
+                .replace("https://mouthmath.com/privacy.html", "https://mouthmath.com/contact.html")
+                .replace('content="Privacy Policy — MouthMath"', 'content="Contact — MouthMath"'))
+    import re as _re
+    head = _re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Contact MouthMath: questions, corrections or ideas for speakers to add.">', head, 1)
+    tail = tail.replace('<a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a>',
+                        '<a href="contact.html" aria-current="page">Contact</a> · <a href="privacy.html">Privacy Policy</a>')
+    body = ('<main>\n<h1>Contact</h1>\n<p>Questions, corrections or a speaker you want counted? Send a message.</p>\n'
+            '<form class="mmform" id="kform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact page"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="kformN">Name <span class="opt">(optional)</span></label><input id="kformN" name="name" autocomplete="name" maxlength="100"><label for="kformE">Email</label><input id="kformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="kformM">Message</label><textarea id="kformM" name="message" required rows="5" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>\n'
+            '</main>')
+    tail = tail.replace("document.getElementById('toTop').onclick", "(document.getElementById('toTop')||{}).onclick")
+    return head + body + tail
 
 # ---- privacy.html: static Privacy Policy page (same black / cream / Arial look); contact address assembled in JS ----
 PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm42">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm42">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm42">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm43">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm43">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm43">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +381,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm42">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm43">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -393,7 +413,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm42" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm43" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -454,7 +474,7 @@ standard request information such as your IP address; see the <a href="https://w
 <form class="mmform" id="pform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath privacy question"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="pformN">Name <span class="opt">(optional)</span></label><input id="pformN" name="name" autocomplete="name" maxlength="100"><label for="pformE">Email</label><input id="pformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="pformM">Message</label><textarea id="pformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
 </main>
-<footer><a href="./">Home</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer><a href="./">Home</a> · <a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
 <script>document.getElementById('toTop').onclick=()=>{scrollTo({top:0,left:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const L=document.querySelector('header .logo');if(L)L.focus({preventScroll:true})}</script>
 <script>document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'})</script>
@@ -465,10 +485,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm42">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm42">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm43">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm43">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm42">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm43">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -481,14 +501,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm42">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm43">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm42">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm43">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1469,11 +1489,11 @@ body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small
 <p>MouthMath counts and ranks every word in Federal Reserve Chair speeches and testimony, CEO earnings calls and shareholder letters from major banks and companies, and remarks by US government officials, so you can see at a glance which words, like inflation, interest rates or AI, come up most.</p>
 <h4 class="abcontact" id="contact">Contact</h4>
 <form class="mmform" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="cformN">Name <span class="opt">(optional)</span></label><input id="cformN" name="name" autocomplete="name" maxlength="100"><label for="cformE">Email</label><input id="cformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="cformM">Message</label><textarea id="cformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
-<p class="abfoot"><a href="privacy.html">Privacy Policy</a></p>
+<p class="abfoot"><a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a></p>
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
 </section>
 </main>
-<footer class="sitefoot"><a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer class="sitefoot"><a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <div id="tvModal" class="tvm" hidden><div class="tvm-back" data-close></div>
 <div class="tvm-panel" role="dialog" aria-modal="true" aria-labelledby="tvmTitle"><div class="tvm-head"><h3 id="tvmTitle"></h3><span class="tvm-sub">1-year daily price</span>
 <button type="button" class="tvm-x" id="tvmX" aria-label="Close chart" data-close>&times;</button></div>
