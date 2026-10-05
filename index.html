@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm41">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm41">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm42">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm42">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm41">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm42">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm41">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm42">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm41">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm42">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1107,8 +1107,10 @@ async function setPerson(slug,docIds){
   hidePop();
   const p=await loadPerson(BY.get(slug)||BY.get(DEFAULT));
   P=p;V=p.vocab;VI=p.VI;DOCS=p.docs;YEARS=[...new Set(DOCS.map(d=>d.year))].sort().reverse();
-  const ids=(docIds||[]).filter(i=>DOCS.some(d=>d.id===i));
-  sel=new Set(ids.length?ids:DOCS.map(d=>d.id));
+  if(docIds===undefined){const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;sel=new Set(latest?[latest.id]:[])}
+  else if(docIds.includes('all'))sel=new Set(DOCS.map(d=>d.id));
+  else if(docIds.includes('none')||!docIds.length)sel=new Set();
+  else sel=new Set(docIds.filter(i=>DOCS.some(d=>d.id===i)));
   ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('personTitle').innerHTML=`<span class="ft">From the mouth of</span> <span class="pn">${esc(P.display)}</span>`;   // mm40: no ticker here; it shows once, in the speaker row (and sticky bar)
@@ -1170,12 +1172,17 @@ function syncTimeframe(){
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
   syncHash();
 }
-// URL state: #person=<slug>&docs=<id,...>&n=<5|100|all>; default (Warsh, all docs, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Super Cloud; mode=standard is ignored. Leaves #about etc. alone.
+// URL state: #person=<slug>&docs=<all|none|id,...>&n=<5|100|all>; default (Warsh, latest doc only, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Super Cloud; mode=standard is ignored. Leaves #about etc. alone.
 const OURS=/^#(person|docs|mode|n|view)=/;
 function syncHash(){
-  if(!P)return;const all=sel.size===DOCS.length,parts=[];
-  if(P.slug!==DEFAULT||!all)parts.push('person='+P.slug);
-  if(!all)parts.push('docs='+[...sel].join(','));
+  if(!P)return;const all=sel.size===DOCS.length&&DOCS.length>0,none=!sel.size;
+  const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;
+  const latestOnly=!!latest&&sel.size===1&&sel.has(latest.id),parts=[];
+  if(P.slug!==DEFAULT)parts.push('person='+P.slug);
+  if(latestOnly);   // latest-only is the default: omit docs= (clean URL when also default person)
+  else if(all)parts.push('docs=all');
+  else if(none)parts.push('docs=none');
+  else parts.push('docs='+[...sel].join(','));
   if(NSHOW!==NDEF)parts.push('n='+NSHOW);   // 50 words is the default (clean URL)
   if(VIEW==='cloud'&&!SIDE.matches)parts.push('view=cloud');   // the Super Cloud tab (side by side on wide screens: nothing to keep)
   const h=location.hash,ours=!h||OURS.test(h),want=parts.length?'#'+parts.join('&'):'';
@@ -1631,14 +1638,16 @@ window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,jumpTo,get view
   const its=occurrences(w);its.forEach(it=>{if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push(['hl',w,it.doc.id,it.si])});
   const st=stats(w),o=its.reduce((t,i)=>t+i.n,0);
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
-// initial state from URL: #person=<slug>&docs=<ids>  (old links: #docs=<ids> = default person)
+// initial state from URL: #person=<slug>&docs=<all|none|ids>; absent docs = latest only (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
   {const n=hp.get('n');if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(n==='10')setN('5',false);else if(['20','25'].includes(n))setN('50',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> All, 150 -> 100, 10 -> 5, 20/25 -> 50
   const toCloud=hp.get('view')==='cloud'||['cloud','visual'].includes(hp.get('mode'))||location.hash==='#cloud';   // #view=cloud, old Super Cloud links and the #cloud anchor open the cloud tab
   setView(toCloud?'cloud':'math');
-  return setPerson(hp.get('person')||DEFAULT,(hp.get('docs')||'').split(',').filter(Boolean)).then(()=>{
+  {const raw=hp.get('docs');let docIds;   // null = latest; none/empty = []; all = ['all']; else listed ids
+    if(raw===null)docIds=undefined;else if(raw===''||raw==='none')docIds=[];else if(raw==='all')docIds=['all'];else docIds=raw.split(',').filter(Boolean);
+    return setPerson(hp.get('person')||DEFAULT,docIds).then(()=>{
     if(toCloud)setView('cloud')}).catch(e=>{
-    tb.innerHTML=`<tr><td colspan="4" class="empty">Could not load data: ${esc(e.message)}</td></tr>`;console.error(e)})}
+    tb.innerHTML=`<tr><td colspan="4" class="empty">Could not load data: ${esc(e.message)}</td></tr>`;console.error(e)})}}
 fromHash();
 // pasted/edited #person= links and back/forward on an open page (in-page anchors like #about are ignored)
 addEventListener('hashchange',()=>{if(!location.hash||OURS.test(location.hash)){hidePop();fromHash()}});
