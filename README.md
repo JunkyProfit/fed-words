@@ -12,6 +12,10 @@ letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End m
 | Category | Person | Documents | Source |
 |---|---|---|---|
 | Fed Chair | **Kevin Warsh** (sworn in May 22, 2026) | official speeches + testimony as Chair (full text) | federalreserve.gov |
+| Fed Chair | **Jerome Powell** (Chair 2018–2026) | his 20 most recent speeches + testimony as Chair (full text) | federalreserve.gov |
+| Fed Chair | **Janet Yellen** (Chair 2014–2018) | her 20 most recent speeches + testimony as Chair (full text) | federalreserve.gov |
+| Fed Chair | **Ben Bernanke** (Chair 2006–2014) | his 20 most recent speeches + testimony as Chair (full text) | federalreserve.gov |
+| Fed Chair | **Alan Greenspan** (Chair 1987–2006) | his 20 most recent speeches + testimony as Chair (full text; the Board's pre-2006 archive pages) | federalreserve.gov |
 | CEOs | **Alex Karp** (Palantir) | 4 most recent quarterly letters to shareholders | palantir.com |
 | CEOs | **Andy Jassy** (Amazon) | 2025 and 2024 annual shareholder letters | aboutamazon.com |
 | CEOs | **Greg Abel** (Berkshire Hathaway) | his 2025 letter (his first as CEO) | berkshirehathaway.com |
@@ -324,7 +328,7 @@ each linked to the original letter.
 | File | Purpose |
 |---|---|
 | `fetch.py` | Downloads the chair's speeches + testimony from federalreserve.gov's JSON feeds (`/json/ne-speeches.json`, `/json/ne-testimony.json`), pulls out just the body text (no nav, footnotes, or editorial notes), and saves it to `transcripts/*.txt`, with source URLs/dates in `transcripts/index.json`. |
-| `fetch.py` → `transcripts/warsh/` | Cleaned text of each Fed speech, plus `index.json` metadata. |
+| `fetch.py` → `transcripts/<slug>/` | Cleaned text of each Fed speech, plus `index.json` metadata (`warsh`, and the past Chairs `powell`, `yellen`, `bernanke`, `greenspan`). |
 | `fetch_ceo.py` | **Manual**, not run by `publish.sh`. Downloads the CEO letters from the companies' own sites (Palantir's letter pages, aboutamazon.com articles, and the Berkshire PDF via `pdftotext`, Alphabet's earnings-call transcript pages on abc.xyz found through its IR feed, and Apple's investor event feed for Ternus) into `local_sources/<person>/` (gitignored). Each document's metadata has a `source_type`. It's polite (about 1 request/s, identifying User-Agent) and only fetches what's missing (`--refresh` re-downloads; `--only karp` limits it to one person). Karp's 4 newest letters are discovered from palantir.com/investors (`max` in `PEOPLE`); the Amazon letter URLs are listed in the script; Berkshire's are `letters/<year>ltr.pdf` for 2025 onward (Abel's years as CEO). |
 | `fetch_ceo_filings.py` | **Manual**, not run by `publish.sh`. Former CEOs from SEC filings and hearing records (`ceos.json` entries with `"fetcher": "fetch_ceo_filings.py"`; now Tim Cook and Steve Jobs). Discovers press releases quoting the person through EDGAR full-text search (8-K EX-99.x, inside since/until), plus the letters, transcripts and hearings listed under `filings.docs`; cuts only the person's own words; raw downloads cached in `local_sources/<slug>/raw/`, text in `local_sources/<slug>/` (gitignored). SEC-requested User-Agent with contact; ~1 request/s. `--only cook`, `--refresh`. |
 | `fetch_officials.py` | **Manual**, not run by `publish.sh`. Cabinet (`--only cabinet`), congressional leaders (`--only congress`) and Supreme Court (`--only scotus`), or one slug (`--only thune`). Writes `transcripts/<slug>/` (committed; public domain); raw downloads are cached in `raw/officials/` (gitignored). Idempotent: skips people already fetched unless `--refresh`. Polite (about 1 request/s, identifying User-Agent). The Court needs PyMuPDF (`pip install pymupdf`) for ligature repair. |
@@ -338,6 +342,7 @@ Python 3.8+ standard library only, except PyMuPDF for the Supreme Court step of 
 ## Run it
 ```bash
 python3 fetch.py            # add any new speeches/testimony by "Chair(man) Kevin Warsh"
+python3 fetch.py --slug powell --max 20   # (manual, one-off) a past Chair: 20 most recent items as Chair
 python3 fetch_ceo.py        # (manual, occasional) refresh CEO letters into local_sources/
 python3 fetch_officials.py  # (manual, occasional) Cabinet, Congress leaders, Supreme Court
 python3 build.py            # regenerate derived/ + index.html and print totals/top words
@@ -420,6 +425,13 @@ on its own about 1–2 minutes after a push. The manual equivalent is
   companies' own websites instead.
 - Warsh's 2006–2011 speeches as a Governor are left out on purpose. The speaker
   filter only matches remarks given as Chair.
+- Past Chairs (Powell, Yellen, Bernanke, Greenspan) use the same `fetch.py` pipeline and the same
+  counting (`fetch.py --slug <slug> --max 20`; patterns in `CHAIRS`). Each is capped at the 20 most recent
+  speeches/testimonies as Chair so each `data/<slug>.json` stays near the size of the larger existing files.
+  Only remarks given as Chair are matched (never as Governor or Vice Chair). Greenspan's items come from the
+  yearly archive pages (`/newsevents/speech/<year>speech.htm`, `/newsevents/testimony/<year>testimony.htm`)
+  because the JSON feeds start in 2006. Video-player help text, "Watch live"/"Audio" links, and
+  References/Appendix sections are dropped for every Chair.
 
 Every disclosure or sort arrow on the page is white: the larger "Choose documents" arrow (in the label only the word "Choose" is white, "documents" stays red; chevron on desktop, ▾/▴ on phones), the phone About toggle ▾, and the Super Math column sort ▲/▼.
 

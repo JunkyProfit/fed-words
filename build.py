@@ -371,9 +371,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm57">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm57">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm57">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm58">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm58">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm58">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -381,7 +381,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm57">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm58">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -413,7 +413,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm57" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm58" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -458,7 +458,7 @@ set its own cookies. That is governed by the <a href="https://www.tradingview.co
 <ul>
 <li><strong>Hosting:</strong> the site is hosted on GitHub Pages. Like any web host, GitHub may log technical information such as IP addresses
 for security and operations; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</li>
-<li><strong>Animated word cloud:</strong> when the Super Cloud first scrolls into view (unless your device asks for reduced motion), the p5.js library is loaded from the jsDelivr CDN (cdn.jsdelivr.net), which receives
+<li><strong>Animated word cloud:</strong> when the Word Cloud first scrolls into view (unless your device asks for reduced motion), the p5.js library is loaded from the jsDelivr CDN (cdn.jsdelivr.net), which receives
 standard request information such as your IP address; see the <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net">jsDelivr privacy policy</a>.</li>
 <li><strong>Links to sources:</strong> links to official documents open the publisher's own website, which has its own privacy policy.</li>
 </ul>
@@ -485,13 +485,13 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm57">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm57">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm58">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm58">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm57">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm58">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
-<meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
+<meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
 <link rel="canonical" href="https://mouthmath.com/">
 <meta name="robots" content="index, follow">
 <meta name="application-name" content="MouthMath">
@@ -499,17 +499,17 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
-<meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
+<meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm57">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm58">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
-<meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm57">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
+<meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm58">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 Arial,"Helvetica Neue",Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
@@ -635,7 +635,7 @@ body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-cab .only-cab,body.mod
  body #words{grid-column:2;grid-row:1/span 2}
  body .stat{min-width:110px}}
 @media (min-width:1100px){body main{grid-template-columns:340px minmax(0,1fr)}}
-/* Super Cloud, narrow screens: results right after the compact Who + Timeframe area; stats and filters below the cloud */
+/* Word Cloud, narrow screens: results right after the compact Who + Timeframe area; stats and filters below the cloud */
 @media (max-width:899px){
  body.view-visual main{display:flex;flex-direction:column}body.view-visual main>*{order:2}
  body.view-visual .viewbar,body.view-visual .topgrid{order:0}body.view-visual #words{order:1}}
@@ -660,7 +660,7 @@ body.mode-fed .only-fed,body.mode-ceo .only-ceo,body.mode-cab .only-cab,body.mod
  body.view-visual #words{display:flex;flex-direction:column}body.view-visual #words>*{order:2}
  body.view-visual #personTitle{order:0}body.view-visual #words>.only-visual{order:1;display:flex;flex-direction:column}
  body.view-visual #cloud{order:0}body.view-visual .cloud-bar{order:2;margin-top:6px}body.view-visual #words .controls{margin:8px 0 0}}
-/* (stacked layout: Super Math and Super Cloud are both always shown) */
+/* (stacked layout: Mouth Math and Word Cloud are both always shown) */
 .cloud-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:2px 0 6px;font-size:14px}
 .cloud-bar select{font:inherit;font-size:14px;padding:3px 6px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
 #cloud{position:relative;width:100%;min-height:120px;overflow:hidden;margin:4px 0 2px}
@@ -739,7 +739,7 @@ tr[data-w]:hover td{background:#f6efe0}tr.active td{background:var(--hl)}
  header h1{font-size:21px}header p#siteSub{max-width:820px;font-size:13.5px;line-height:1.4;margin-top:2px}
  .viewbar{margin-bottom:10px}.vcard{padding:4px 10px 4px 6px;width:auto;min-width:170px}.vcard svg{width:54px;height:36px}
  .vcard .vt b{font-size:14px}.vcard .vt small{font-size:11.5px}main{padding-top:14px}}
-/* ---- Super Cloud card in the stat red (default view) ---- */
+/* ---- Word Cloud card in the stat red (default view) ---- */
 .vcard[data-view="visual"]{border-color:var(--num-red);box-shadow:inset 0 0 0 1px var(--num-red)}
 .vcard[data-view="visual"] .vt b{color:var(--num-red)}
 .vcard[data-view="visual"]:hover{background:#fbf1ef}
@@ -818,7 +818,7 @@ button.chip,label.chip,#cats button,.seg button{letter-spacing:0}
  .abtog{display:inline;font:inherit;font-weight:700;border:0;background:none;color:var(--ink);padding:0;cursor:pointer}
  .abtog::after{content:" \25BE";font-size:12px}#about.open .abtog::after{content:" \25B4"}
  #about:not(.open)>:not(h2){display:none}#about h2{font-size:15px;margin:0}#about.open h2{margin-bottom:8px}}
-/* tablets (641-899): Super Cloud keeps controls first, then the words card (stats sit inside it, above the cloud) */
+/* tablets (641-899): Word Cloud keeps controls first, then the words card (stats sit inside it, above the cloud) */
 
 /* ==== v4 "black" theme: black page, black panels, cream type, hairline rules, red for numbers. Delete this block to revert ==== */
 :root{--num-red:#ff5449;--money:#85bb65;--bg:#070707;--card:#111111;--panel2:#171717;--ink:#f3eee4;--cream:#0b0b0b;--muted:#a49e93;--rule:#2c2a27;--line:#232120;
@@ -868,7 +868,7 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 .notice{background:#1b160c;border-color:#5a4520;color:var(--ink)}.notice strong{color:#e9c46a}
 :focus-visible{outline:2px solid var(--num-red);outline-offset:2px}
 .tftog,.abtog{color:var(--ink)}#timeframe>.tftog{background:transparent;border-color:var(--rule)}
-/* View cards: hairline panels; Super Cloud card framed in the stat red */
+/* View cards: hairline panels; Word Cloud card framed in the stat red */
 .vcard{background:var(--card);border:1px solid var(--rule);border-radius:3px;box-shadow:none}
 .vcard:hover{background:#181818;border-color:#4a4743}
 .vcard svg{filter:invert(1) hue-rotate(180deg);opacity:.9}
@@ -880,7 +880,7 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 .vcard[data-view="visual"]:hover{background:#1d1110}
 .vcard[data-view="visual"][aria-pressed="true"]{background:linear-gradient(180deg,#2a0f0d,#1a0a09);border-color:var(--num-red);box-shadow:inset 0 0 0 1px var(--num-red),0 0 24px rgba(255,84,73,.18)}
 .vcard[data-view="visual"][aria-pressed="true"] .vt b{color:#fff}.vcard[data-view="visual"][aria-pressed="true"] .vt small{color:#ffb3ad}
-/* Super Math card: dollar-bill green, ONE variable (--money in :root above; set it to e.g. #a49e93 for gray) */
+/* Mouth Math card: dollar-bill green, ONE variable (--money in :root above; set it to e.g. #a49e93 for gray) */
 .vcard[data-view="standard"]{border-color:var(--money);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--money) 50%,transparent)}
 .vcard[data-view="standard"] .vt b{color:var(--money)}
 .vcard[data-view="standard"]:hover{background:color-mix(in srgb,var(--money) 9%,#111)}
@@ -954,7 +954,7 @@ kbd{font:inherit;font-size:11px;font-weight:700;border:1px solid var(--rule);bor
  #cats .ci{grid-column:1;grid-row:2}#cats .ci svg{width:14px;height:14px}#cats .ct small{grid-column:2;grid-row:2;margin:0;white-space:nowrap}
  #words h1#personTitle{font-size:16px}}
 #cats button.cat.on::before{content:none;display:none}
-/* Super Math: rank, word and count columns shrink to their content so the count sits a short, fixed gap after the
+/* Mouth Math: rank, word and count columns shrink to their content so the count sits a short, fixed gap after the
    longest word (numbers right-aligned in their column); the frequency bar takes the rest of the row */
 table.only-standard th[data-k="rank"],table.only-standard td.num:first-child{width:1%;white-space:nowrap}
 table.only-standard th[data-k="word"],table.only-standard td.w{width:1%;padding-right:22px}
@@ -962,7 +962,7 @@ table.only-standard th[data-k="count"],table.only-standard td.cnt{width:1%;white
 table.only-standard th.barc{width:auto}
 @media (max-width:640px){table.only-standard th[data-k="rank"],table.only-standard td.num:first-child{padding-left:2px;padding-right:12px}table.only-standard th[data-k="word"],table.only-standard td.w{padding-right:6px}table.only-standard th[data-k="count"],table.only-standard td.cnt{padding-left:0;padding-right:12px}table.only-standard th[data-k="count"]{letter-spacing:.02em}}
 tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num-red)}
-/* the #1 word in the Super Cloud is solid red (no pulse, Oct 2026); it floats a little more than the others instead (physics) */
+/* the #1 word in the Word Cloud is solid red (no pulse, Oct 2026); it floats a little more than the others instead (physics) */
 /* ---- The #1 word as an inviting button (Oct 2026): a pill with two faint, static white rings (inner ~40%, outer further out ~15%,
    like the header buttons' double ring); the rings travel with the word as it floats. Tap = the word's excerpts popover. ---- */
 #cloud span.top{cursor:pointer;overflow:visible}
@@ -971,7 +971,7 @@ tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num
 #cloud span.top::after{inset:-9px -13px;border:1px solid rgba(255,255,255,.15)}
 #cloud span.top:hover,#cloud span.top.active{background:transparent}
 #cloud span.top:hover::before,#cloud span.top.active::before{background:rgba(255,255,255,.06)}
-/* Super Math #1 row: the rings are an overlay laid over the row (pseudo-elements on a <tr> break the table layout in Chrome) */
+/* Mouth Math #1 row: the rings are an overlay laid over the row (pseudo-elements on a <tr> break the table layout in Chrome) */
 #tb tr.top{cursor:pointer}#tb tr.top:focus-visible{outline:none}
 .tbwrap{position:relative}
 .topring{position:absolute;pointer-events:none;z-index:1}
@@ -997,7 +997,7 @@ tr.top td.w{color:var(--num-red);font-weight:700}#cloud span.top{color:var(--num
 header .logo{background:none!important;padding:0!important;box-shadow:none!important;border-radius:0!important}
 header .logo img{height:44px!important;width:auto}
 @media (max-width:640px){header .logo img{height:26px!important}header .brand{padding-right:0!important}header .titles{padding-right:122px!important}}  /* phones: reserve the Share/About width once */
-/* ---- Header: logo | compact headline block | red Super Cloud + green Super Math buttons | Share/About ---- */
+/* ---- Header: logo | compact headline block | red Word Cloud + green Mouth Math buttons | Share/About ---- */
 header .brand{flex-wrap:nowrap;align-items:center;gap:20px;padding-right:150px!important}
 header .titles{flex:0 1 auto;max-width:470px;padding-right:0!important}
 header h1{line-height:1.12;margin:0}
@@ -1100,7 +1100,7 @@ header h1#siteTitle{text-transform:none;letter-spacing:-.02em;font-size:21px;lin
 #persons .chip.on .tk{color:#1f4d12;border-color:#2f6b1f;background:#cfe6c0}
 #words h1#personTitle .ft{font-weight:500;color:#c9c2b5;font-size:.86em;letter-spacing:-.01em}#words h1#personTitle .pn{font-weight:700;color:var(--ink)}
 #words h1#personTitle .tk{font-size:max(11px,.62em);padding:3px 6px 2px;margin:0 2px;letter-spacing:.04em}
-/* ---- "Show N words" chips: one shared control for Super Cloud and Super Math, right under the Timeframe row ---- */
+/* ---- "Show N words" chips: one shared control for Word Cloud and Mouth Math, right under the Timeframe row ---- */
 #nbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:-4px 0 12px;font-family:Arial,Helvetica,sans-serif}
 #nbar .nbl{font-size:14px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.04em}
 #nbar .nbl:first-child{margin-right:2px}#nbar .nbl:last-child{margin-left:2px;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400}
@@ -1201,11 +1201,11 @@ body header .hview .vcard:active{transform:translateY(2px);background-image:line
 body header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:3px}
 body header .viewbar.hview,body header #views{gap:24px!important}
 @media (max-width:640px){body header .viewbar.hview,body header #views{gap:18px!important}body header .viewbar.hview{padding:3px 5px 0}}
-/* ---- Stacked layout (Oct 2026): stats -> Super Math table -> ad -> Super Cloud on one page; header buttons are jump links ---- */
+/* ---- Stacked layout (Oct 2026): stats -> Mouth Math table -> ad -> Word Cloud on one page; header buttons are jump links ---- */
 body header .hview a.vcard{text-decoration:none;color:inherit;cursor:pointer}
 .secth{margin:22px 0 10px;font:700 19px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;letter-spacing:-.005em;scroll-margin-top:12px}
 #superMath{margin-top:18px}
-#cloud{scroll-margin-top:42px}   /* a plain #cloud link shows the Super Cloud heading too */
+#cloud{scroll-margin-top:42px}   /* a plain #cloud link shows the Word Cloud heading too */
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 #more{margin:8px 0 0}
 aside.ad[data-slot="between"]{margin:26px auto 4px}
@@ -1301,24 +1301,24 @@ body #stats .stat{border:0!important}   /* boxes inside a bordered card: backgro
  .mmform label{font-size:14px!important}#method{font-size:13px!important}
  th,th.num{font-size:12px!important}}
 
-/* ---- Super Math / Super Cloud tabs (mm24): right under the red stats; tapping swaps the view in place (no scrolling).
+/* ---- Mouth Math / Word Cloud tabs (mm24): right under the red stats; tapping swaps the view in place (no scrolling).
    From 1100px wide both views sit side by side (table left, cloud right) and the tabs are hidden. ---- */
 #vtabs{display:flex;gap:14px;margin:16px 4px 14px}
 #vtabs button{--vc:var(--num-red);flex:1;min-height:46px;padding:10px 8px;font:700 16px/1.2 Arial,Helvetica,sans-serif;color:var(--vc);background:#0b0b0b;
  border:2px solid var(--vc);border-radius:6px;outline:2px solid color-mix(in srgb,var(--vc) 45%,transparent);outline-offset:3px;cursor:pointer;transition:background-color .15s}
-#vtabs button[data-view="cloud"]{--vc:var(--num-red)}   /* mm32: no green; Super Cloud matches Super Math */
+#vtabs button[data-view="cloud"]{--vc:var(--num-red)}   /* mm32: no green; Word Cloud matches Mouth Math */
 #vtabs button:hover{background:color-mix(in srgb,var(--vc) 12%,#0b0b0b)}
 #vtabs button[aria-selected="true"]{color:#fff;background:color-mix(in srgb,var(--vc) 34%,#0b0b0b);outline-color:var(--vc)}
 #vtabs button:focus-visible{outline:2px solid #fff}
-/* mm30: selected states match. Super Math / Super Cloud tabs use the category buttons' look: unselected = card black, thin #2c2a27 border, text in
+/* mm30: selected states match. Mouth Math / Word Cloud tabs use the category buttons' look: unselected = card black, thin #2c2a27 border, text in
    the tab's identity color (red / green); selected = the category's warm red-gray (#a8807a since mm35; was #9a958c), dark text, a 3px identity-color underline
-   (like the category's red underline). The old outer rings are gone; (mm32: Super Cloud now uses red too; the first-visit fade hint is gone.) */
+   (like the category's red underline). The old outer rings are gone; (mm32: Word Cloud now uses red too; the first-visit fade hint is gone.) */
 #vtabs button{background:var(--card);border:1px solid var(--rule);border-radius:4px;outline:none;color:var(--vc);transition:border-color .15s,background-color .15s}
 #vtabs button:hover{background:#171717;border-color:#5a5650}
 #vtabs button[aria-selected="true"],#vtabs button[aria-selected="true"]:hover{background:#a8807a;border-color:#a8807a;color:#0b0b0b;box-shadow:inset 0 -3px 0 var(--vc)}
 #vtabs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
 #cloud.live span:focus-visible{outline:2px solid #fff}   /* mm32: no green focus ring on cloud words */
-/* mm39: Super Math / Super Cloud tabs: content-sized pair (equal widths), left-aligned with the stats, comfortable padding, 46px tall */
+/* mm39: Mouth Math / Word Cloud tabs: content-sized pair (equal widths), left-aligned with the stats, comfortable padding, 46px tall */
 #vtabs{display:flex;justify-content:flex-start;gap:10px;margin-left:0;margin-right:0;width:auto}   /* mm39: full-width row (inherits), content-sized equal tabs left-aligned */
 #vtabs button{flex:0 0 auto;width:9.6em;padding:10px 14px;white-space:nowrap;box-sizing:border-box}
 @media (max-width:359px){#vtabs button{width:8.6em;padding:10px 10px;font-size:15px}}
@@ -1433,7 +1433,7 @@ body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small
 #pop ol:first-of-type>li:first-child mark:first-of-type{animation:mmExGlow 1.8s ease-in-out 3}
 #pop.noglow mark{animation:none!important}
 @media (prefers-reduced-motion:reduce){#pop mark{animation:none!important}}
-/* mm38: the Super Cloud #1 word = red word + a thin red contour that follows the letter shapes (one thin red line), no pill rings, no pulse.
+/* mm38: the Word Cloud #1 word = red word + a thin red contour that follows the letter shapes (one thin red line), no pill rings, no pulse.
    Live cloud: drawn on the p5 canvas; static / reduced-motion cloud: the same contour as the span's ::before background image. */
 #cloud span.top::before,#cloud span.top::after{display:none}
 #cloud:not(.live) span.top.ctr::before{display:block;content:"";position:absolute;pointer-events:none;inset:calc(var(--cm) * -1);border-radius:0;box-shadow:none;border:0;
@@ -1446,7 +1446,7 @@ body #cats button.cat:hover,body #vtabs button:hover,body .docseg button:hover{b
 body #cats button.cat.on,body #cats button.cat.on:hover,body #vtabs button[aria-selected="true"],body #vtabs button[aria-selected="true"]:hover,body .docseg button[aria-pressed="true"],body .docseg button[aria-pressed="true"]:hover{background:radial-gradient(120% 140% at 50% 0%,#2a0d0b 0%,#120606 60%,#0a0505 100%);border-color:#ff5449;color:#ff5449;box-shadow:inset 0 0 18px rgba(255,84,73,.28),0 0 0 1px rgba(255,84,73,.35),0 0 22px rgba(255,84,73,.35)}
 body #cats button.cat.on .ct small{color:#e9a29c}
 body .docseg{gap:8px}body .docseg button:first-child,body .docseg button:last-child{border-radius:12px}body .docseg button[aria-pressed="false"]{color:#d9d3ca}
-/* mm51: Latest/All and Super Math/Super Cloud share the same dimensions: two equal full-width buttons, same height, gap and font */
+/* mm51: Latest/All and Mouth Math/Word Cloud share the same dimensions: two equal full-width buttons, same height, gap and font */
 body .docseg,body #vtabs{display:flex;gap:10px;width:100%;margin-left:0;margin-right:0}
 body .docseg button,body #vtabs button{flex:1 1 0;width:auto;min-width:0;height:48px;min-height:48px;padding:0 10px;font:700 16px/1 Arial,Helvetica,sans-serif;letter-spacing:-.01em;display:flex;align-items:center;justify-content:center;box-sizing:border-box;white-space:nowrap}
 @media (min-width:641px){body .docseg button,body #vtabs button{height:44px;min-height:44px;font-size:15px}}
@@ -1475,6 +1475,13 @@ body header{--th:49px}
 body header .tagline{margin-left:calc(var(--th) * 1.259 - .07em)!important}
 #pop .x{color:#fff!important;font-size:32px!important;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;margin:-10px -10px -10px 0}
 body #docPick .dsx{color:#fff!important;font-size:38px!important}
+/* mm58: stats sit right above the Super tabs; the tab jump lands on the stats */
+body #stats{scroll-margin-top:12px;margin-top:10px}
+/* mm58: selected person chip was cream-on-cream; dark with a soft red edge like the other selected buttons */
+body #persons button.chip.on,body #persons button.chip.on:hover{background:linear-gradient(180deg,#221515,#120b0b)!important;border-color:#9c3f39!important;color:#f3eee4!important}
+/* mm58: close × tucked further into the corner, a bit smaller, deliberately not level with the title */
+#pop .x{font-size:28px!important;position:relative;top:-9px;right:-7px}
+body #docPick .dsx{font-size:34px!important;position:relative;top:-10px;right:-6px}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -1502,12 +1509,6 @@ body #docPick .dsx{color:#fff!important;font-size:38px!important}
 <button type="button" id="segLatest" aria-pressed="true">Latest</button>
 <button type="button" id="segAll" aria-pressed="false">All combined</button>
 </div>
-<div class="stats" id="stats" aria-label="Word counts for the selection">
-<div class="stat"><b id="sDocs">–</b><span class="sl" data-s="docs">documents selected</span></div>
-<div class="stat"><b id="sTotal">–</b><span class="sl" data-s="total words">total words</span></div>
-<div class="stat"><b id="sUnique">–</b><span class="sl" data-s="unique">unique words</span></div>
-<div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
-</div>
 <div id="tfbar" role="group" aria-label="Documents">
 <details id="docPick"><summary class="dbtn" aria-label="Choose documents"><span class="dbl1"><span class="dbn" id="dbN">documents</span><span class="dbv">Choose your docs</span></span><span class="dbl2" id="dbLatest"></span><span class="muted" id="docCount"></span></summary>
 <div class="dsback" aria-hidden="true"></div>
@@ -1515,23 +1516,29 @@ body #docPick .dsx{color:#fff!important;font-size:38px!important}
 <div class="dsq"><button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><div class="yrs" id="years" role="group" aria-label="Years"></div></div>
 <ul class="speeches" id="docList"></ul></div></details>
 <div id="selSummary" class="sr-only"></div></div>
-<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Super Math</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Super Cloud</button></div>
+<div class="stats" id="stats" aria-label="Word counts for the selection">
+<div class="stat"><b id="sDocs">–</b><span class="sl" data-s="docs">documents selected</span></div>
+<div class="stat"><b id="sTotal">–</b><span class="sl" data-s="total words">total words</span></div>
+<div class="stat"><b id="sUnique">–</b><span class="sl" data-s="unique">unique words</span></div>
+<div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
+</div>
+<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button></div>
 <div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="5">5</button><button class="nchip" data-n="50">50</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
 <label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
 </div>
 <div id="vpanes" class="tab-math">
-<div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Super Math</h3>
+<div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Mouth Math</h3>
 <div class="tbwrap"><table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc">Frequency</th></tr></thead>
 <tbody id="tb"></tbody></table><div class="topring" id="topRing" aria-hidden="true" hidden></div></div>
 <p class="muted" id="more"></p>
 <label class="rsrow" id="rsrow" hidden><input type="checkbox" id="realSpots"> View words in actual order</label></div>
-<div class="vpane" id="vCloud" role="tabpanel" aria-labelledby="tabCloud"><h3 class="secth" id="superCloud">Super Cloud</h3>
+<div class="vpane" id="vCloud" role="tabpanel" aria-labelledby="tabCloud"><h3 class="secth" id="superCloud">Word Cloud</h3>
 <div class="cloudwrap"><div id="cloud"></div>
 <div class="cloud-bar"><span class="muted" id="cloudNote"></span></div></div></div>
 </div>
-<!-- ad slot: between · 728x90 desktop, 320x100 phone · reserved for a relevant AdSense unit after approval (below the Super Math / Super Cloud views) -->
+<!-- ad slot: between · 728x90 desktop, 320x100 phone · reserved for a relevant AdSense unit after approval (below the Mouth Math / Word Cloud views) -->
 <aside class="ad" data-slot="between" data-ad-slot-name="between" data-ad-size="728x90" data-ad-size-phone="320x100"></aside>
 </section>
 <!-- ad slot: leader · 728x90 desktop, 320x50 phone · reserved for an AdSense unit after approval -->
@@ -1594,7 +1601,7 @@ const matchQ=p=>{if(!pq)return true;const h=[p.name,p.org,p.ticker,p.role,p.grou
   return pq.toLowerCase().split(/\s+/).filter(Boolean).every(t=>h.includes(t))};
 const lastName=p=>(p.sort_name||p.name.replace(/,?\s+(Jr|Sr)\.?$|,?\s+(II|III|IV)$/,'').trim().split(' ').pop()).toUpperCase();
 function renderAZ(allIn,inCat){
-  const az=$('az'),use=allIn.length>=4;     // only for the bigger categories (CEOs, US Government)
+  const az=$('az'),use=allIn.length>=8;     // only for the bigger categories (CEOs, US Government), not the five Fed Chairs
   az.hidden=!use;az.parentElement.classList.toggle('has-az',use);if(!use){azSel='';return}
   const have=new Set(inCat.map(p=>lastName(p)[0]));
   if(azSel&&!have.has(azSel))azSel='';
@@ -1739,7 +1746,7 @@ function syncTimeframe(){
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
   syncHash();
 }
-// URL state: #person=<slug>&docs=<all|none|id,...>&n=<5|100|all>; default (Warsh, latest doc only, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Super Cloud; mode=standard is ignored. Leaves #about etc. alone.
+// URL state: #person=<slug>&docs=<all|none|id,...>&n=<5|100|all>; default (Warsh, latest doc only, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Word Cloud; mode=standard is ignored. Leaves #about etc. alone.
 const OURS=/^#(person|docs|mode|n|view)=/;
 function syncHash(){
   if(!P)return;const all=sel.size===DOCS.length&&DOCS.length>0,none=!sel.size;
@@ -1751,7 +1758,7 @@ function syncHash(){
   else if(none)parts.push('docs=none');
   else parts.push('docs='+[...sel].join(','));
   if(NSHOW!==NDEF)parts.push('n='+NSHOW);   // 50 words is the default (clean URL)
-  if(VIEW==='cloud'&&!SIDE.matches)parts.push('view=cloud');   // the Super Cloud tab (side by side on wide screens: nothing to keep)
+  if(VIEW==='cloud'&&!SIDE.matches)parts.push('view=cloud');   // the Word Cloud tab (side by side on wide screens: nothing to keep)
   const h=location.hash,ours=!h||OURS.test(h),want=parts.length?'#'+parts.join('&'):'';
   if(want)history.replaceState(null,'',want);else if(ours&&h)history.replaceState(null,'',location.pathname+location.search);
 }
@@ -1771,7 +1778,7 @@ function setStat(id,n,anim){const el=$(id);el.dataset.v=n;cancelAnimationFrame(e
   const step=t=>{const k=Math.min(1,(t-t0)/D),e=1-Math.pow(1-k,3);el.textContent=Math.round(n*e).toLocaleString();if(k<1)el._raf=requestAnimationFrame(step)};
   el._raf=requestAnimationFrame(step)}
 let cwOpen=false;   // the '+K common words' line: collapsed until tapped
-function render(cloudToo=true){   // one selection feeds both: the Super Math table (top N, sortable) and the Super Cloud (top N by count)
+function render(cloudToo=true){   // one selection feeds both: the Mouth Math table (top N, sortable) and the Word Cloud (top N by count)
   const base=BASE.filter(x=>!(hide.checked&&x.stop));
   base.sort((a,b)=>b.count-a.count||(a.word<b.word?-1:a.word>b.word?1:0));
   let r=0,prev=null;base.forEach((x,i)=>{if(x.count!==prev){r=i+1;prev=x.count}x.rank=r});
@@ -1927,7 +1934,7 @@ const ADS={
   slots:{               // desktop size (w x h) and phone size (mw x mh); id = AdSense data-ad-slot
     leader:   {id:'',w:728,h:90, mw:320,mh:50},     // below the results card
     side:     {id:'',w:300,h:250},                  // desktop left column, below Who / Timeframe (hidden on phones)
-    between:  {id:'',w:728,h:90, mw:320,mh:100},    // inside the results card, between the Super Math table and the Super Cloud
+    between:  {id:'',w:728,h:90, mw:320,mh:100},    // inside the results card, between the Mouth Math table and the Word Cloud
     incontent:{id:'',w:300,h:250,mw:300,mh:250}}};  // between the method note and About
 function renderAds(){let live=false;
   document.querySelectorAll('aside.ad').forEach(el=>{const c=ADS.slots[el.dataset.slot];if(!c){el.remove();return}
@@ -1942,7 +1949,7 @@ function renderAds(){let live=false;
 renderAds();
 document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.target)&&!e.target.closest('[data-w]'))hidePop()});
 
-// ---- Super Cloud (below the Super Math table): word cloud (vanilla JS; spiral placement + measureText box collisions) ----
+// ---- Word Cloud (below the Mouth Math table): word cloud (vanilla JS; spiral placement + measureText box collisions) ----
 let cloudW=0,cloudInfo={placed:0,skipped:0,ms:0};
 const PAL=['#f4efe6','#d8d1c4','#f4efe6','#b9b2a5','#e9e2d5','#f4efe6','#c9c2b5','#a9a397'];   // cream/greys on the black cloud panel (all >= 7:1)
 const hcode=s=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
@@ -2005,8 +2012,8 @@ function drawCloud(list){
   return placed.length;
 }
 
-// ---- Super Cloud motion: p5.js sketch (words as soft physics bodies); always the full selected timeframe ----
-// p5 is loaded only when the Super Cloud first scrolls into view (and motion isn't reduced): pinned version, Subresource Integrity checked by the browser.
+// ---- Word Cloud motion: p5.js sketch (words as soft physics bodies); always the full selected timeframe ----
+// p5 is loaded only when the Word Cloud first scrolls into view (and motion isn't reduced): pinned version, Subresource Integrity checked by the browser.
 const P5_URL='https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js',P5_SRI='sha384-Cs48F1uukMPysq29xNsf/FZL5ZNGsPfi6lDSGOxo6dypVFFiWO9Q3YbRKoXPPBii',MAX_BODIES=300;
 // Words always float (no on/off toggle); prefers-reduced-motion users get the static layout, and so does everyone if p5 can't load.
 const RM=matchMedia('(prefers-reduced-motion: reduce)'),motion={checked:!RM.matches,disabled:false};
@@ -2137,8 +2144,8 @@ function paint(p){
     if(b.rot){const c=Math.cos(b.rot)*pd,sn=Math.sin(b.rot)*pd;ctx.setTransform(c,sn,-sn,c,b.x*pd,(b.y+b.f*0.03)*pd);ctx.fillText(b.word,0,0);ctx.setTransform(pd,0,0,pd,0,0)}
     else ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
 }
-// (mm24) The header jump links became the Super Math / Super Cloud tabs under the red stats (setView below).
-// (mm32) The Super Cloud first-visit fade hint was removed; Super Cloud is red like Super Math.
+// (mm24) The header jump links became the Mouth Math / Word Cloud tabs under the red stats (setView below).
+// (mm32) The Word Cloud first-visit fade hint was removed; Word Cloud is red like Mouth Math.
 // ---- Change speaker: after a pick the list folds and the name + red stats come to the top; a slim sticky bar (shown once the
 // stats scroll away) brings the visitor back to the speaker list with the search focused ----
 function toStats(){requestAnimationFrame(()=>{const r=$('stats').getBoundingClientRect();
@@ -2157,16 +2164,16 @@ function sbCheck(){sbRaf=0;const on=!!P&&$('stats').getBoundingClientRect().bott
   SB.classList.toggle('show',on);SB.setAttribute('aria-hidden',on?'false':'true');SB.tabIndex=on?0:-1;document.body.classList.toggle('sbar',on)}
 addEventListener('scroll',()=>{if(!sbRaf)sbRaf=requestAnimationFrame(sbCheck)},{passive:true});addEventListener('resize',()=>{if(!sbRaf)sbRaf=requestAnimationFrame(sbCheck)});
 SB.onclick=openSpeakers;
-// ---- Super Math / Super Cloud tabs: swap the view in place (no scrolling); from 1100px wide both show side by side ----
+// ---- Mouth Math / Word Cloud tabs: swap the view in place (no scrolling); from 1100px wide both show side by side ----
 let VIEW='math';const SIDE=matchMedia('(min-width:1100px)');
 function setView(v,user=false){VIEW=v==='cloud'?'cloud':'math';hidePop();$('vpanes').className='tab-'+VIEW;
   document.querySelectorAll('#vtabs [role="tab"]').forEach(t=>{const on=t.dataset.view===VIEW;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1});
   if(P&&cloud.clientWidth&&cloud.clientWidth!==cloudW)render();else placeTopRing();   // the cloud is laid out when it first becomes visible
   if(user)syncHash()}
 function jumpTo(which){setView(which,true)}   // kept for old callers/tests: same as tapping the tab
-function cloudGlow(){}   // mm32: the Super Cloud first-visit fade hint was removed
+function cloudGlow(){}   // mm32: the Word Cloud first-visit fade hint was removed
 // mm52: tapping a Super tab scrolls the page so the tabs sit near the top and the chosen view fills the screen
-function tabsToTop(){const vt=$('vtabs');if(!vt||!vt.getClientRects().length)return;requestAnimationFrame(()=>vt.scrollIntoView({block:'start',behavior:RM.matches?'instant':'smooth'}))}
+function tabsToTop(){const vt=$('stats')&&$('stats').getClientRects().length?$('stats'):$('vtabs');if(!vt||!vt.getClientRects().length)return;requestAnimationFrame(()=>vt.scrollIntoView({block:'start',behavior:RM.matches?'instant':'smooth'}))}
 document.querySelectorAll('#vtabs [role="tab"]').forEach(t=>{t.onclick=()=>{setView(t.dataset.view,true);tabsToTop()};
   t.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const v=(e.key==='ArrowLeft'||e.key==='Home')?'math':'cloud';setView(v,true);$(v==='cloud'?'tabCloud':'tabMath').focus()}}});
 cloudGlow();
@@ -2210,7 +2217,7 @@ window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,jumpTo,get view
 // initial state from URL: #person=<slug>&docs=<all|none|ids>; absent docs = latest only (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
   {const n=hp.get('n');if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(n==='10')setN('5',false);else if(['20','25'].includes(n))setN('50',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> All, 150 -> 100, 10 -> 5, 20/25 -> 50
-  const toCloud=hp.get('view')==='cloud'||['cloud','visual'].includes(hp.get('mode'))||location.hash==='#cloud';   // #view=cloud, old Super Cloud links and the #cloud anchor open the cloud tab
+  const toCloud=hp.get('view')==='cloud'||['cloud','visual'].includes(hp.get('mode'))||location.hash==='#cloud';   // #view=cloud, old Word Cloud links and the #cloud anchor open the cloud tab
   setView(toCloud?'cloud':'math');
   {const raw=hp.get('docs');let docIds;   // null = latest; none/empty = []; all = ['all']; else listed ids
     if(raw===null)docIds=undefined;else if(raw===''||raw==='none')docIds=[];else if(raw==='all')docIds=['all'];else docIds=raw.split(',').filter(Boolean);
