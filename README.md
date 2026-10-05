@@ -463,3 +463,7 @@ When the count and the label don't fit on one line (e.g. "66 of 67 documents" at
 **Excerpt highlights (mm37):** in the excerpts panel every occurrence of the selected word is red (#ff5449) bold with no fill (was a pink fill).
 The first occurrence glows softly 3 times (1.8 s each, ~5 s total) and then stays steady red. The glow plays once per opening
 (not again on pin / "Show all"); none with `prefers-reduced-motion`. Only inside the panel: the cloud's #1 word never pulses.
+
+**Top-word contour (mm38):** the Super Cloud #1 word is red text (no fill) with one thin red line (#ff5449) that follows the letter shapes
+just outside the glyphs (letter holes in e/a/o stay clean), replacing the two faint white pill rings. Live cloud: drawn on the p5 canvas
+(cached per word/size); static / reduced-motion cloud: the same contour as the span's background image. No pulse.

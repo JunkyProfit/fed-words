@@ -351,9 +351,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm37">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm37">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm37">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm38">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm38">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm38">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -361,7 +361,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm37">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm38">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -393,7 +393,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm37" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm38" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -465,10 +465,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm37">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm37">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm38">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm38">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm37">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm38">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -481,14 +481,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm37">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm38">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Super Cloud and the sortable Super Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm37">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm38">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Super Cloud (words sized by count) or Super Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1387,6 +1387,12 @@ body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small
 #pop ol:first-of-type>li:first-child mark:first-of-type{animation:mmExGlow 1.8s ease-in-out 3}
 #pop.noglow mark{animation:none!important}
 @media (prefers-reduced-motion:reduce){#pop mark{animation:none!important}}
+/* mm38: the Super Cloud #1 word = red word + a thin red contour that follows the letter shapes (one thin red line), no pill rings, no pulse.
+   Live cloud: drawn on the p5 canvas; static / reduced-motion cloud: the same contour as the span's ::before background image. */
+#cloud span.top::before,#cloud span.top::after{display:none}
+#cloud:not(.live) span.top.ctr::before{display:block;content:"";position:absolute;pointer-events:none;inset:calc(var(--cm) * -1);border-radius:0;box-shadow:none;border:0;
+ background:var(--ctr) center/100% 100% no-repeat}
+#cloud:not(.live) span.top:hover::before,#cloud:not(.live) span.top.active::before{background-color:transparent}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -1874,7 +1880,7 @@ function drawCloud(list){
     `style="left:${(c.x+1+b.mx).toFixed(1)}px;top:${(c.y-y0+1+b.my).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2-2*b.my}px;height:${c.h-2-2*b.my}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word||x.stop?` class="${[x.word===words[0].word?'top':'',x.stop?'stop':''].join(' ').trim()}"`:''}>${esc(x.word)}</span>`}).join('');
   TOPW=words[0].word;
   cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0),mode:'static'};
-  buildBodies(placed,y0,W);markTop();
+  buildBodies(placed,y0,W);markTop();ctrStatic();
   if(motion.checked&&BODIES.length)armSketch();
   $('cloudNote').textContent=`Top ${placed.length.toLocaleString()} of ${list.length.toLocaleString()} words${hide.checked?' (stopwords hidden)':''}`+
     `${miss?` · ${miss} didn't fit`:''}`;
@@ -1888,7 +1894,7 @@ const P5_URL='https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js',P5_SRI='sha38
 const RM=matchMedia('(prefers-reduced-motion: reduce)'),motion={checked:!RM.matches,disabled:false};
 RM.addEventListener('change',()=>{motion.checked=!RM.matches&&!motion.disabled;if(P)render()});
 let P5P=null,SK=null,IO=null,BODIES=[],drawTok=0,frameN=0,TOPW=null,TOPB=null,REDC='#ff5449';
-const PULSE={ph:0},RING_MX=15,RING_MY=11;   // PULSE.ph stays 0 (the #1 word no longer pulses; kept for the test hook). RING_*: room kept around the #1 word for its two pill rings (see .top::before/::after)   // top-word pulse period (CSS keyframes use the same 2.2 s)
+const PULSE={ph:0},RING_MX=15,RING_MY=11;   // PULSE.ph stays 0 (the #1 word no longer pulses; kept for the test hook). RING_*: room kept around the #1 word for its red contour (mm38, see ctrDims)   // top-word pulse period (CSS keyframes use the same 2.2 s)
 // the single most frequent word in the cloud is drawn in the stat red (canvas + DOM spans)
 function markTop(){if(!BODIES.length)return;const cn=b=>b.count;
   const t=BODIES.reduce((a,b)=>cn(b)>cn(a)||(cn(b)===cn(a)&&(b.count>a.count||(b.count===a.count&&b.word<a.word)))?b:a);
@@ -1964,11 +1970,51 @@ function physics(p,W,H){
       else{const s=A.y<C.y?-1:1;A.sy+=s*oy*ma*k;C.sy-=s*oy*(1-ma)*k;if(oy>3){A.y+=s*(oy-3)*ma*0.5;C.y-=s*(oy-3)*(1-ma)*0.5}}}}   // hard limit: never more than 3px of overlap
   for(const b of B){if(!b.w)continue;b.x=Math.max((b.w/2+b.mx),Math.min(W-(b.w/2+b.mx),b.x));b.y=Math.max((b.h/2+b.my),Math.min(H-(b.h/2+b.my),b.y))}
 }
+// ---- mm38: #1-word contour. Glyphs are dilated by a small gap, letter holes and narrow openings (e.g. inside "e") are filled, then thin
+// red line(s) are traced just outside that silhouette. Cached per word/font/size. Used by the live canvas and the static span. ----
+const CTR_TWO=false,CTR_RED='255,84,73';
+const mkCv=(w,h)=>{const c=document.createElement('canvas');c.width=Math.max(1,w);c.height=Math.max(1,h);return c};
+const CTRC=new Map();
+function ctrDims(f){const g=Math.max(3,f*.085),w1=Math.max(1,f*.018),g2=Math.max(3,f*.07),w2=Math.max(.9,f*.014);const M=Math.ceil(g+w1+(CTR_TWO?g2+w2:0)+3);return {g,w1,g2,w2,M}}
+// draw(c) paints the word in white on a context already scaled to CSS px; W,H in CSS px; pd = device pixel ratio
+function ctrCanvas(key,W,H,pd,f,draw){const k=key+'|'+W+'|'+H+'|'+pd+'|'+(CTR_TWO?2:1);if(CTRC.has(k))return CTRC.get(k);
+  const Wp=Math.ceil(W*pd),Hp=Math.ceil(H*pd),d=ctrDims(f);
+  const S=mkCv(Wp,Hp),sx=S.getContext('2d');sx.setTransform(pd,0,0,pd,0,0);sx.fillStyle='#fff';draw(sx);
+  const dil=(src,r)=>{const D=mkCv(Wp,Hp),c=D.getContext('2d'),R=r*pd;c.drawImage(src,0,0);if(R<=0)return D;
+    const n=Math.max(16,Math.ceil(R*6));for(const m of [1,.75,.5,.25])for(let j=0;j<n;j++){const t=j/n*2*Math.PI;c.drawImage(src,Math.cos(t)*R*m,Math.sin(t)*R*m)}return D};
+  // inner silhouette: dilate by the gap, then fill everything not reachable from the border (holes + closed-off openings)
+  const I=dil(S,d.g),ic=I.getContext('2d',{willReadFrequently:true}),id=ic.getImageData(0,0,Wp,Hp),a=id.data,out=new Uint8Array(Wp*Hp),st=[];
+  const push=i=>{if(!out[i]&&a[i*4+3]<128){out[i]=1;st.push(i)}};
+  for(let x=0;x<Wp;x++){push(x);push((Hp-1)*Wp+x)}for(let y=0;y<Hp;y++){push(y*Wp);push(y*Wp+Wp-1)}
+  while(st.length){const i=st.pop(),x=i%Wp;if(x>0)push(i-1);if(x<Wp-1)push(i+1);if(i>=Wp)push(i-Wp);if(i<Wp*(Hp-1))push(i+Wp)}
+  for(let i=0;i<Wp*Hp;i++)if(!out[i]){a[i*4]=a[i*4+1]=a[i*4+2]=255;a[i*4+3]=255}
+  ic.putImageData(id,0,0);
+  const ring=(base,wd,alpha)=>{const A=dil(base,wd),c=A.getContext('2d');c.globalCompositeOperation='destination-out';c.drawImage(base,0,0);
+    c.globalCompositeOperation='source-in';c.fillStyle=`rgba(${CTR_RED},${alpha})`;c.fillRect(0,0,Wp,Hp);return A};
+  const C=mkCv(Wp,Hp),cc=C.getContext('2d');cc.drawImage(ring(I,d.w1,.95),0,0);
+  if(CTR_TWO){const I2=dil(I,d.w1+d.g2);cc.drawImage(ring(I2,d.w2,.4),0,0)}
+  if(CTRC.size>12)CTRC.clear();CTRC.set(k,C);return C}
+const TOPCV=document.createElement('canvas'),TOPX=TOPCV.getContext('2d');
+function paintTop(ctx,b,pd){const f=b.f,d=ctrDims(f),M=d.M,W=Math.ceil(b.w+2*M),H=Math.ceil(b.h+2*M),font=ctx.font,cx=W/2,cy=H/2+f*.03;
+  const C=ctrCanvas(b.word+'|'+font,W,H,pd,f,c=>{c.font=font;c.textAlign='center';c.textBaseline='middle';c.fillText(b.word,cx,cy)});
+  const Wp=C.width,Hp=C.height;if(TOPCV.width!==Wp||TOPCV.height!==Hp){TOPCV.width=Wp;TOPCV.height=Hp}
+  const c=TOPX;c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,Wp,Hp);c.drawImage(C,0,0);
+  c.setTransform(pd,0,0,pd,0,0);c.font=font;c.textAlign='center';c.textBaseline='middle';c.fillStyle=REDC;c.fillText(b.word,cx,cy);
+  if(b.rot){const co=Math.cos(b.rot)*pd,sn=Math.sin(b.rot)*pd;ctx.setTransform(co,sn,-sn,co,b.x*pd,b.y*pd);ctx.drawImage(TOPCV,-W/2,-H/2,W,H);ctx.setTransform(pd,0,0,pd,0,0)}
+  else ctx.drawImage(TOPCV,b.x-W/2,b.y-H/2,W,H)}
+// static / reduced-motion cloud: the same contour behind the DOM span (text baseline matched with the font's ascent/descent)
+function ctrStatic(){const e=cloud.querySelector('span.top');if(!e||cloud.classList.contains('live'))return;const cs=getComputedStyle(e),f=parseFloat(cs.fontSize);if(!f)return;
+  const w0=e.offsetWidth;if(!w0)return;const d=ctrDims(f),M=d.M,w=e.offsetWidth,h=e.offsetHeight,W=w+2*M,H=h+2*M,pd=Math.min(3,devicePixelRatio||1),font=`${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const C=ctrCanvas(e.dataset.w+'|'+font+'|s',W,H,pd,f,c=>{c.font=font;try{c.letterSpacing=cs.letterSpacing}catch(_){}c.textAlign='left';c.textBaseline='alphabetic';
+    const mt=c.measureText(e.dataset.w),A=mt.fontBoundingBoxAscent||f*.905,D=mt.fontBoundingBoxDescent||f*.212,L=parseFloat(cs.lineHeight)||h;
+    c.fillText(e.textContent,M+parseFloat(cs.paddingLeft||0),M+(L-(A+D))/2+A)});
+  e.style.setProperty('--cm',M+'px');e.style.setProperty('--ctr',`url(${C.toDataURL()})`);e.classList.add('ctr')}
 function paint(p){
   const ctx=p.drawingContext,pd=p.pixelDensity()||1;p.clear();ctx.setTransform(pd,0,0,pd,0,0);ctx.textAlign='center';ctx.textBaseline='middle';
   for(let i=BODIES.length-1;i>=0;i--){const b=BODIES[i];if(!b.w)continue;
     if(b.word===curWord){ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--hl').trim()||'#e2f0e7';ctx.beginPath();ctx.roundRect?ctx.roundRect(b.x-b.w/2,b.y-b.h/2,b.w,b.h,5):ctx.rect(b.x-b.w/2,b.y-b.h/2,b.w,b.h);ctx.fill()}
     ctx.font=`${STOP.has(b.word)?'italic ':''}${b.wt} ${b.f.toFixed(2)}px ${b.fam}`;   // stopwords italic (they only appear with 'Hide common stopwords' off)
+    if(b.word===TOPW){paintTop(ctx,b,pd);continue}
     ctx.fillStyle=b.word===TOPW?REDC:b.col;
     if(b.rot){const c=Math.cos(b.rot)*pd,sn=Math.sin(b.rot)*pd;ctx.setTransform(c,sn,-sn,c,b.x*pd,(b.y+b.f*0.03)*pd);ctx.fillText(b.word,0,0);ctx.setTransform(pd,0,0,pd,0,0)}
     else ctx.fillText(b.word,b.x,b.y+b.f*0.03)}
