@@ -2,7 +2,7 @@
 """Count every word each person said and write a single self-contained index.html.
 
 People are listed in people.json.
-  policy "full"    (Fed Chair; public domain): full transcripts in transcripts/<slug>/ (fetch.py);
+  policy "full"    (Fed Chairman; public domain): full transcripts in transcripts/<slug>/ (fetch.py);
                     every sentence is embedded for the hover popover.
   policy "excerpt" (CEO letters; copyrighted): the full text lives ONLY in the gitignored
                     local_sources/<slug>/ (fetch_ceo.py). From it we write derived/<slug>.json,
@@ -371,9 +371,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm67">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm67">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm67">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm68">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm68">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm68">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -381,7 +381,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm67">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm68">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -413,7 +413,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:24px;line-height:0;color:#fff}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm67" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm68" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -485,31 +485,31 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm67">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm67">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm68">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm68">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm67">
-<title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
-<meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
-<meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm68">
+<title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
+<meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
+<meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
 <link rel="canonical" href="https://mouthmath.com/">
 <meta name="robots" content="index, follow">
 <meta name="application-name" content="MouthMath">
 <meta name="apple-mobile-web-app-title" content="MouthMath">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MouthMath">
-<meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
-<meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
+<meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
+<meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm67">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm68">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
-<meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm67">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
+<meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
+<meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm68">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 Arial,"Helvetica Neue",Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
@@ -900,7 +900,7 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 #cats .ct small{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:2px}
 #cats button.cat.on{background:var(--ink);color:#0b0b0b;border-color:var(--ink);box-shadow:inset 0 -3px 0 var(--num-red)}
 #cats button.cat.on .ct small{color:#4f4a43}
-/* mm29: the selected category tab (e.g. 'Fed Chair' on the default load) softened from bright cream to a medium warm gray; dark text keeps ~6.6:1 contrast, the count ~5:1; the red underline stays */
+/* mm29: the selected category tab (e.g. 'Fed Chairman' on the default load) softened from bright cream to a medium warm gray; dark text keeps ~6.6:1 contrast, the count ~5:1; the red underline stays */
 #cats button.cat.on{background:#a8807a;border-color:#a8807a}#cats button.cat.on .ct small{color:#24191a}   /* mm35: warm red-gray (was #9a958c); text #0b0b0b 5.7:1, count #24191a 4.9:1 */
 .topbar .viewbar{margin:0;flex:none;align-items:center}.topbar #viewHint{display:none}#cats .ct b{white-space:nowrap}
 @media (min-width:900px){body main>.topbar{grid-column:1/-1;grid-row:1}}
@@ -1182,7 +1182,7 @@ body #nbar .nchip[data-n="5"]{min-height:30px!important}body #nbar .nchip[data-n
  .pk.pcoll.popen #persons .pg:first-child{border-top:0;padding-top:2px!important}
  .pk.pcoll.popen #persons .pg .lbl{position:static!important;width:100%!important;flex:0 0 100%!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;background:none!important;font-size:10.5px}
  .pk.pcoll.popen #persons .chip{min-height:40px}
- /* single-person category (Fed Chair): the selected name looks like the CEO / US Government collapse row (red name, dark row), not a cream chip */
+ /* single-person category (Fed Chairman): the selected name looks like the CEO / US Government collapse row (red name, dark row), not a cream chip */
  body .pk.psolo #persons{display:block!important;margin:0!important;padding:0!important;-webkit-mask-image:none!important;mask-image:none!important}
  body .pk.psolo #persons>.lbl{display:none!important}
  body .pk.psolo #persons button.chip.on,body .pk.psolo #persons button.chip.on:hover{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;margin:2px 0 8px;padding:8px 14px!important;box-sizing:border-box;
@@ -1276,7 +1276,7 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
 #spkbar.show{transform:none;visibility:visible;transition:transform .22s ease}
 #spkbar .sbn{min-width:0;font:700 17px/1.1 Arial,Helvetica,sans-serif;letter-spacing:-.01em;color:var(--num-red);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #spkbar .tk{flex:none;font-size:11.5px;padding:2px 6px 1px;color:var(--money)}
-.tk[hidden],.tk:empty{display:none!important}   /* mm31: no empty ticker pill anywhere (e.g. the Fed Chair in the sticky bar) */
+.tk[hidden],.tk:empty{display:none!important}   /* mm31: no empty ticker pill anywhere (e.g. the Fed Chairman in the sticky bar) */
 #spkbar .sba{display:inline-flex;align-items:center}#spkbar .sba::after{content:"\25BE";color:#fff;font-size:30px;line-height:.7}
 #spkbar .sbc{flex:none;font-size:13px;font-weight:700;color:#f3eee4;margin-left:-3px}
 /* mm39: longer label ("Search other CEOs" / "Search other officials") stays on one line; the name shrinks/ellipsizes or wraps first */
@@ -1348,7 +1348,7 @@ body #tfbar .yrs{-webkit-mask-image:none!important;mask-image:none!important;pad
 body #tfbar .yrs.ovf{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent)!important;mask-image:linear-gradient(90deg,#000 85%,transparent)!important;padding-right:18px!important}
 body #tfbar{gap:6px!important}
 
-/* mm30: the Fed Chair page uses the same "From the mouth of <name>" line as CEOs and US Government (the mm25 "What the Fed Said" label is gone) */
+/* mm30: the Fed Chairman page uses the same "From the mouth of <name>" line as CEOs and US Government (the mm25 "What the Fed Said" label is gone) */
 
 /* ---- mm26: documents controls folded into one compact "Choose documents" link under the red stats (white Choose, red documents,
    white triangle; tapping the docs stat opens it too). Opens a bottom sheet on phones, a popover on wider screens, holding
@@ -1419,7 +1419,7 @@ body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;tex
 #about .totop:active{background:rgba(243,238,228,.08)}
 #about .totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 #about:not(.open)>.abtop{display:block;margin-top:8px}
-/* mm33: category buttons (Fed Chair / CEOs / US Government) text ~20% bigger, name and count; phones may wrap "US Government" to two lines */
+/* mm33: category buttons (Fed Chairman / CEOs / US Government) text ~20% bigger, name and count; phones may wrap "US Government" to two lines */
 body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small{font-size:13.8px!important}   /* was 14.5 / 11.5 */
 @media (max-width:640px){body #picker #cats .ct b{font-size:18px!important}body #picker #cats .ct small{font-size:15.6px!important}}   /* was 15 / 13 */
 @media (max-width:480px){body #picker #cats .ct b{font-size:16.8px!important;overflow-wrap:normal!important;word-break:normal!important}   /* was 14 / 13 */
@@ -1562,7 +1562,7 @@ body #docList li{grid-template-columns:auto minmax(0,1fr)!important;grid-templat
 <aside class="ad" data-slot="incontent" data-ad-slot-name="incontent" data-ad-size="300x250" data-ad-size-phone="300x250"></aside>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About MouthMath</button></h2>
 <h3 class="ablead">Out of the Mouth, into the Math.</h3>
-<p class="absub">Word counts from official speeches, testimony, letters and court opinions by Fed chairs, CEOs and US Government officials.</p>
+<p class="absub">Word counts from official speeches, testimony, letters and court opinions by Fed Chairmen, CEOs and US Government officials.</p>
 <p>MouthMath was created to offer a quantitative view of public speech. By measuring how often each word is used, it lets anyone grasp the substance of a speech at a glance.</p>
 <p>This site was created with transparency and truth in mind. It is politically neutral, with no bias: every speaker is counted the same way.</p>
 <p>MouthMath counts and ranks every word in Federal Reserve Chair speeches and testimony, CEO earnings calls and shareholder letters from major banks and companies, and remarks by US government officials, so you can see at a glance which words, like inflation, interest rates or AI, come up most.</p>
@@ -1606,14 +1606,14 @@ async function loadPerson(p){
 let azCat='',azSel='',idxSel='',pq='',pOpen=false;
 const IDX=['Mag 7','S&P 500','Nasdaq 100','Dow 30'];
 const CAT_ICON={   // hairline line-art icons for the category tiles
- 'Fed Chair':'<svg viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9.7 10v8M14.3 10v8M19 10v8M3 20.5h18"/></svg>',
+ 'Fed Chairman':'<svg viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9.7 10v8M14.3 10v8M19 10v8M3 20.5h18"/></svg>',
  'CEOs':'<svg viewBox="0 0 24 24"><path d="M3 20.5h18M6 20.5V13M10.5 20.5V9M15 20.5v-6M19.5 20.5V5"/><path d="m5 10 5-4 4 3 6-5"/></svg>',
  'US Government':'<svg viewBox="0 0 24 24"><path d="M12 3v2.5M8 10a4 4 0 0 1 8 0M5.5 10h13M7 10v8M10.3 10v8M13.7 10v8M17 10v8M3.5 20.5h17M5 18.5h14"/></svg>'};
 const matchQ=p=>{if(!pq)return true;const h=[p.name,p.org,p.ticker,p.role,p.group].filter(Boolean).join(' ').toLowerCase();
   return pq.toLowerCase().split(/\s+/).filter(Boolean).every(t=>h.includes(t))};
 const lastName=p=>(p.sort_name||p.name.replace(/,?\s+(Jr|Sr)\.?$|,?\s+(II|III|IV)$/,'').trim().split(' ').pop()).toUpperCase();
 function renderAZ(allIn,inCat){
-  const az=$('az'),use=allIn.length>=8;     // only for the bigger categories (CEOs, US Government), not the five Fed Chairs
+  const az=$('az'),use=allIn.length>=8;     // only for the bigger categories (CEOs, US Government), not the five Fed Chairmen
   az.hidden=!use;az.parentElement.classList.toggle('has-az',use);if(!use){azSel='';return}
   const have=new Set(inCat.map(p=>lastName(p)[0]));
   if(azSel&&!have.has(azSel))azSel='';
@@ -1648,7 +1648,7 @@ function renderPicker(){
   // disclosure that shows the selected person in red + the white arrow; tapping it opens the grouped list (no A-Z needed there).
   const coll=allIn.length>1,grp=allIn.some(p=>p.group),pk=$('picker').querySelector('.pk'),pd=$('pdisc');   // every multi-person category (CEOs, US Government)
   pk.classList.toggle('pcoll',coll);pk.classList.toggle('psolo',!coll);pk.classList.toggle('pgrp',coll&&grp);
-  if(!coll){const on=$('persons').querySelector('.chip.on');if(on)on.dataset.glabel=P.group||P.category.replace(/s$/,'')}   // phones: single-person category (Fed Chair) shows its name like the collapse row
+  if(!coll){const on=$('persons').querySelector('.chip.on');if(on)on.dataset.glabel=P.group||P.category.replace(/s$/,'')}   // phones: single-person category (Fed Chairman) shows its name like the collapse row
   pk.classList.toggle('popen',coll&&pOpen);pd.hidden=!coll;pd.setAttribute('aria-expanded',coll&&pOpen?'true':'false');
   if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?(P.tv?`<span class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart">${esc(P.ticker)}</span>`:`<span class="tk">${esc(P.ticker)}</span>`):''}<span class="pda" aria-hidden="true"></span><span class="pdc" aria-hidden="true">${pOpen?'Close':srchLbl()}</span>`;
     pd.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
@@ -1685,7 +1685,7 @@ async function setPerson(slug,docIds){
   ['fed','ceo','cab','cong','scotus'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('personTitle').innerHTML=`<span class="ft">From the mouth of</span> <span class="pn">${esc(P.display)}</span>`;   // mm40: no ticker here; it shows once, in the speaker row (and sticky bar)
-  document.title=P.slug===DEFAULT?'MouthMath — Word Counts from Fed Chair Speeches & CEO Earnings Calls':`MouthMath — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
+  document.title=P.slug===DEFAULT?'MouthMath — Word Counts from Fed Chairman Speeches & CEO Earnings Calls':`MouthMath — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
   $('dataThrough').textContent='Data through '+fmtDate(DOCS.map(d=>d.date).sort().pop())+'.';
   renderPicker();buildTimeframe();update();if(typeof sbFill==='function'&&sbOn)sbFill();
 }
@@ -2170,8 +2170,8 @@ function openSpeakers(){hidePop();if($('picker').querySelector('.pk').classList.
   const f=[s,document.querySelector('#persons button.chip.on'),$('pdisc'),document.querySelector('#cats button.on')].find(vis);
   if(f)f.focus({preventScroll:true});   // in the tap itself, so phones open the keyboard for the search
   scrollTo({top:0,behavior:RM.matches?'instant':'smooth'})}
-// mm39: the speaker row / sticky bar label names who else you can search (Fed Chair: plain 'Search')
-function srchLbl(){return !P?'Search':P.category==='CEOs'?'Search CEOs':P.category==='US Government'?'Search officials':P.category==='Fed Chair'?'Search Fed Chairs':'Search'}
+// mm39: the speaker row / sticky bar label names who else you can search (Fed Chairman: plain 'Search')
+function srchLbl(){return !P?'Search':P.category==='CEOs'?'Search CEOs':P.category==='US Government'?'Search officials':P.category==='Fed Chairman'?'Search Fed Chairmen':'Search'}
 const SB=$('spkbar');let sbOn=false,sbRaf=0;
 function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;SB.querySelector('.sbc').textContent=srchLbl();const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
   SB.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected`)}
