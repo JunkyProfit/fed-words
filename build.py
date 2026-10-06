@@ -371,9 +371,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm62">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm62">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm62">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm63">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm63">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm63">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -381,7 +381,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm62">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm63">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -410,10 +410,10 @@ footer a{color:var(--muted)}
 /* mm33: Back to top (same as the main page's) */
 .abtop{margin:28px 0 0}
 .totop{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 16px;font:700 15px/1 Arial,Helvetica,sans-serif;color:#f3eee4;background:transparent;border:1px solid #6f6a62;border-radius:4px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.totop .tri{font-size:12px;line-height:1}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.totop .tri{font-size:24px;line-height:0;color:#fff}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm62" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm63" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -472,7 +472,7 @@ standard request information such as your IP address; see the <a href="https://w
 <h2>Contact</h2>
 <p>Questions about this policy? Send us a message:</p>
 <form class="mmform" id="pform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath privacy question"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="pformN">Name <span class="opt">(optional)</span></label><input id="pformN" name="name" autocomplete="name" maxlength="100"><label for="pformE">Email</label><input id="pformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="pformM">Message</label><textarea id="pformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
-<p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
+<p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9652;</span>Back to top</button></p>
 </main>
 <footer><a href="./">Home</a> · <a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
@@ -485,10 +485,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm62">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm62">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm63">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm63">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm62">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm63">
 <title>MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chair Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chair, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -501,14 +501,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm62">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm63">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chair Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chair speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm62">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm63">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chair","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1414,7 +1414,7 @@ body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;tex
 /* mm33: Back to top button at the end of About: outlined like the docs button (cream Arial text, thin gray border), 44px tap target; shown even when About is collapsed on phones */
 #about .abtop{margin:14px 0 2px;max-width:none}
 #about .totop{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 16px;font:700 15px/1 Arial,Helvetica,sans-serif;color:#f3eee4;background:transparent;border:1px solid #6f6a62;border-radius:4px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-#about .totop .tri{font-size:12px;line-height:1}
+#about .totop .tri{font-size:24px;line-height:0;color:#fff}
 #about .totop:hover{border-color:#f3eee4}
 #about .totop:active{background:rgba(243,238,228,.08)}
 #about .totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
@@ -1484,6 +1484,13 @@ body #persons button.chip.on,body #persons button.chip.on:hover{background:linea
 body #docPick .dsx{font-size:34px!important;position:relative;top:-10px;right:-6px}
 /* mm59: Word Cloud #1 word = white with a soft red glow (no red contour) */
 #cloud span.top{color:#ff5449!important;text-shadow:none!important}   /* mm60: plain red #1 word */
+/* mm63: every white triangle is the same medium size (24px glyph), between the old small (11-17px) and big (30-33px) ones */
+body .pk.pcoll #pdisc .pda::after,body #spkbar .sba::after{font-size:24px!important;line-height:1!important}
+body #docPick .dbv::after,body #tfbar #docPick>summary::after,body #aboutToggle.abtog::after,body .tftog::after{font-size:24px!important;line-height:0!important;vertical-align:-3px;color:#fff}
+body #stats .stat:first-child .sl::after{content:none!important}
+@media (max-width:640px){body #stats .stat:first-child .sl::after{content:attr(data-s)!important}}
+body #stats .stat:first-child b::after{content:" \25BE";color:#fff;font-size:24px;line-height:0;vertical-align:-2px}
+body .sarr{font-size:24px!important;line-height:0;vertical-align:-3px;color:#fff}
 #cloud:not(.live) span.top.ctr::before{display:none!important}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
@@ -1561,7 +1568,7 @@ body #docPick .dsx{font-size:34px!important;position:relative;top:-10px;right:-6
 <h4 class="abcontact" id="contact">Contact</h4>
 <form class="mmform" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="cformN">Name <span class="opt">(optional)</span></label><input id="cformN" name="name" autocomplete="name" maxlength="100"><label for="cformE">Email</label><input id="cformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="cformM">Message</label><textarea id="cformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abfoot"><a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a></p>
-<p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9650;</span>Back to top</button></p>
+<p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9652;</span>Back to top</button></p>
 </section>
 </main>
 <footer class="sitefoot"><a href="./">Home</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
@@ -1808,7 +1815,7 @@ function render(cloudToo=true){   // one selection feeds both: the Mouth Math ta
   $('realSpots').checked=!hide.checked;$('rsrow').hidden=!(tail.length||!hide.checked);
   $('more').textContent=match.length>list.length?`Showing the top ${list.length.toLocaleString()} of ${match.length.toLocaleString()} words${match.length>LIMIT&&NSHOW==='all'?' (table limit; use the filter to find others)':' · choose All above to list every word'}.`:'';
   $('more').classList.toggle('lim',match.length>LIMIT&&NSHOW==='all');   // the line only shows when the table limit is hit
-  document.querySelectorAll('th[data-k]').forEach(th=>{const l=th.dataset.l||(th.dataset.l=th.textContent.replace(/ [▲▼]$/,''));th.innerHTML=esc(l)+(th.dataset.k===sortK?`<span class="sarr" aria-hidden="true">${sortDir<0?' ▼':' ▲'}</span>`:'')});
+  document.querySelectorAll('th[data-k]').forEach(th=>{const l=th.dataset.l||(th.dataset.l=th.textContent.replace(/ [▲▼▴▾]$/,''));th.innerHTML=esc(l)+(th.dataset.k===sortK?`<span class="sarr" aria-hidden="true">${sortDir<0?' ▾':' ▴'}</span>`:'')});
   placeTopRing();
   if(cloudToo)drawCloud(match);
 }
