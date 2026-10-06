@@ -1,0 +1,229 @@
+I appreciate this opportunity to discuss and review the Federal Reserve System's expenses and budget with this Subcommittee. In view of my testimony in late January on the broader issues of Federal Reserve budgetary independence, I will concentrate today on the record of our expense and budget performance over time and prospects for 1986. I will also present the Board's views on H.R. 2204.
+
+The Committee has been given copies of our new publica- | tion entitled Annual Report: Budget Review. It brings together in one place detailed information about our spending plans for 1986 and comparisons with expenditures in 1984 and 1985. We are now in the process of reviewing the format of that document for 1987 and would welcome any comments and suggestions | you may have to make next year's edition even more useful. We | have also supplied the Committee with answers to specific questions raised in Chairman Fauntroy's letter, other information requested by your staff, and copies of our Planning and Control System (PACS) reports which detail expenditures, employment, and productivity, service by service and unit by unit.
+
+In my January testimony I summarized the planning, budget and control processes that we have established for both the Reserve Banks and the Board of Governors. Additional detail is presented in the Budget Review and I would be happy to answer any questions that you may have about the process.
+
+I believe the process is thorough and effective, supported by strong management and staffs. Within the Reserve Banks, experienced and widely respected directors, drawn from business and various professions, are an integral part of the process. Many of. those directors are responsible in their private capacities for managing large organizations and staffs. Their input to management of the Reserve Banks — I think unique for a public body — is truly one of the strengths of the System. I am delighted to have with me today Chairmen Rogers and Weitnauer of the Federal Reserve Banks of Dallas and Atlanta, who I am sure, would be happy to respond to any questions you would like to direct to them.
+
+As another matter of general background, Reserve Banks' budgets are in large part subject to the competitive discipline of the marketplace. Specifically, about 40 percent of Reserve Bank expenses arises from services provided to depository institutions for which, by law, we charge fees adequate to cover costs and imputed taxes and profits; in fact, fees collected for these services amount to some 50 percent of all our spending. These services, to a great extent, are actually and potentially available elsewhere, so there is a strong and direct incentive to maintain efficiency. Indeed, in some respects the Federal Reserve is at a competitive disadvantage because of our commitment to provide our basic services to all depository institutions that request them on a non-discriminatory basis. In other words, we neither price on the basis of what the market can bear nor limit our provisions of particular services to "profitable" high volume areas. A 10-year Overview
+
+The effectiveness of our budget process must be measured by its results. As I indicated in my January testimony, in the ten-year period from 1976 to 1986 Federal Reserve spending has increased at an average annual rate of about 0.8 percent in constant dollars or 6.8 percent in nominal terms. During that period, as you know, System operations and therefore expenses were heavily impacted by the Monetary Control Act (MCA) which extended reserve requirements to all nonmember banks and thrifts, requiring us to create and maintain new data collection and account maintenance systems, and extended access to our services to all depository institutions. In 1980, for instance, only 5,400 member banks were subject to reserve requirements; today some 17,250 banks and thrift institutions have such requirements.
+
+If the ten-year period is divided into roughly three equal parts — pre-MCA, a transition period for implementation, and post-MCA — performance stands out even more clearly:
+
+Pre-MCA, from 1976 to 1979, nominal expenses
+
+increased at an annual rate of 4.7 percent, more
+
+Slowly than the consumer price index;
+
+During the MCA implementation phase from 1980
+
+to 1982, expenses increased at an annual rate of
+
+11.7 percent, only 1.7 percent faster than
+
+consumer prices despite the large outlays involved
+
+in dealing with so many more institutions; and
+
+Post-MCA, from 1983 to 1986, expenses increased by
+
+4.7 percent on average, about 1 percent faster than
+
+the CPI.
+
+Total employment in the Federal Reserve System is budgeted at 24,886 for 1986, a decline of 1,746 or 6.6 percent from the level at the end of 1976. During that period, weighted measures of aggregate unit volume of services increased by 41.2 percent. Clearly, productivity in the System has increased very significantly by almost 4 percent per year.
+
+Attached charts and tables depict changes real unit costs and volumes for various priced and non-priced services since 1977 (the first year of entirely comparable data). For priced services — wire and securities transfers, check processing and ACH transactions — the data show that during the transition period to pricing of our services, there were sharp volume losses, particularly in check collection, by far the most costly service. Because of substantial elements of fixed costs, real expenses could not be cut at the same rate as volume decreased; thus, real unit costs increased. However, since 1983 unit costs have again declined in almost every area, bringing real unit costs substantially lower than in the 1970's,
+
+Gains in productivity have also been made in non-priced service areas, which are comprised principally of fiscal agency operations for other governmental units and the provision of currency and coin. In these services also, volumes have increased and real unit costs have declined or risen only slightly during the same time periods. Gramm-Rudman-Hollings
+
+Before I review the Reserve Banks' and the Board's 1986 budgets let me comment on our actions in response to the Gramm-Rudman-Hollings Act. As I indicated to the Subcommittee in January, even though the System is not covered by the Act, the Board decided to reduce total System budgeted expenses for 1986 in a manner consistent with the spirit of the law. The Board carefully reviewed possible approaches to comparability with Gramm-Rudman-Hollings requirements and determined that a reduction of $18 million in the System's (Reserve Banks and Board of Governors) approved 1986 budget for non-priced services (and for the total budget) was appropriate. The Board also decided the reduction should be borne by the Reserve Banks and the Board on the basis of both the relative size of the budgets of each of the thirteen components of the System and the relative size of their expense increases over the last three years. The Board provided guidance on the areas in which cuts were to be avoided if possible — including bank supervision — and the Reserve Banks and Board responded with specific plans for achieving the required reductions.
+
+‘Tables 6 and 7 detail where reductions are being made by the Reserve Banks and the Board. The revised budget for the Reserve Banks now totals $1,165 million, an increase of 4.3 percent over 1985 expenses, and a staff level of 23,381, an increase of 1.7 percent or 397 positions over 1985 staff levels. Over half the staff increase is due to increases in supervision and regulation. The Board's budget now totals $85 million, an increase of 3.9 percent over 1985 expenses. Board employment is budgeted at 1,505, a decline of 26 or 1.7 percent from 1985.
+
+Our revised budget for the System now totals $1,251 million, an increase of $51 million or 4.3 percent over 1985 actual expenses.* Table 8 gives a breakdown of total expenses by our four service lines. *Budget data excludes expenditures for new currency paid to the Bureau of Engraving and Printing, budgeted at $186 million in 1986. Reserve Bank Budgets for 1986
+
+The Banks' 1986 budgets are affected by several new initiatives, which we believe to be of high priority. These initiatives include:
+
+Budget Additional
+
+expense staff 1) Supervision and Regulation: $8.2 million 180
+
+efforts to increase the
+
+frequency and scope of
+
+examinations of state member
+
+banks and inspections of bank
+
+holding companies. 2) Treasury Direct Access Book-Entry: $5.4 million 111
+
+an on-line book-entry system for
+
+the safekeeping of marketable
+
+Treasury securities for indivi-
+
+duals and small investors. 3) Large Dollar Return Item Notification: $4.0 million 118
+
+implementation of a program on
+
+large dollar return item notifica-
+
+tion consistent with legislative
+
+proposals to improve funds avail-
+
+ability to consumers. 4) Small and Disadvantaged Businesses: $1.2 million 16
+
+implementation of procedures for
+
+acquiring goods and services from
+
+small and disadvantaged businesses. 5) Building Moves: $5.1 million
+
+one-time expenses relating to
+
+current year costs incurred in
+
+moving into three new branch
+
+buildings and renovating one
+
+head-office building. Excluding these initiatives and one-time costs, adjusted Reserve Bank budgets would increase only 2.2 percent from the 1985 expense level.
+
+On a service line basis, the largest budget increase is planned in Supervision and Regulation where the 1986 budget totals $166 million, an increase of 9.0 percent over 1985 expenses. | Examination activities alone are budgeted to increase 18 percent to provide for increasing the frequency and scope of bank and bank holding company examinations and for improving communications with those institutions’ directors. Most Banks began to implement the new program in 1985 and it is expected to be fully in place by the end of 1987.
+
+Employment in Supervision and Regulation as a whole is budgeted to increase by 219, or 11.4 percent; within this total we are planning to add 180 people for the expanded supervisory program. Our total bank and bank holding company field examination force is budgeted at 983 by year end. Increases in applications, offsite monitoring and analysis of banks and bank holding companies, and monitoring of reserve accounts also require additional supervisory personnel. Table 9 shows the increases in staff and volume of activities in supervision and regulation from 1979 to 1986. As indicated, this has been an area of personnel growth, but at a far slower rate than most activity measures.
+
+Expenses for Services to Financial Institutions and the | Public constitute the largest portion of Bank budgets at $764 million, nearly 66 percent of the total budget for the Reserve | Banks.* Expenses are budgeted to increase $21 million, to a level 2.8 percent higher than in 1985.
+
+Most of this expense category ($489 million) relates to services offered to depository institutions for which fees are collected in accordance with the provisions of the MCA. The volume of priced services from year to year is largely driven by demand, and expenses are fully recovered by revenue received, which is * These services include (1) check and noncash collection, wire
+
+transfers, automated clearinghouse transactions, book-entry | securities transfers, securities safekeeping, and cash trans- | portation, primarily on a priced basis; and (2) currency and
+
+coin processing, government check processing, loans to depository
+
+institutions, and public programs, on a non-priced basis. i anticipated to be $617 million in 1986. This revenue amount provides for full recovery of actual expenses plus imputed costs that would have actually been incurred had a private business firm provided the service — largely taxes and cost of capital.
+
+Volumes are expected to increase in all major operations while real unit costs are expected to decline (see Table 10). Staf£ for these services is budgeted at 8,859, an increase of 105 or 1.2 percent. Those staff increases are primarily devoted to improvements to the payments mechanism, such as the wire notification program for the return of large dollar checks.
+
+Expenses for Services to the U. S. Treasury and Government Agencies total $140 million, an increase of $9 million or 6.8 percent over 1985.* Most of this increase is accounted for by the new "Treasury Direct" system for on-line book entry safekeeping of marketable Treasury securities for individual * These services include savings bonds, sales and safekeeping
+
+of government securities, government account and coupon pro-
+
+cessing, funds and ACH transfers, and processing of checks. investors. Reserve Banks expect to add about 111 additional people to run “Treasury Direct." At the same time, the Treasury will be able to reduce its staff by approximately 400 as a result of the transfer of this function to the System, resulting in considerable overall cost savings to the government.
+
+In the past a sizable proportion of the costs from the services provided to the Treasury and other government agencies has been reimbursed by those agencies. We had anticipated receiving $107 million in reimbursements from the U. S. Treasury and other government agencies at the time the Reserve Bank budgets were approved. We have been informed by Treasury, however, that its reimbursement to us this year could be considerably less — perhaps only 30 percent of the amount budgeted. This is obviously a matter of concern to us, and we believe it inconsistent with appropriate budgetary policies especially when we are acting, at their request, as fiscal agent. Other agencies for which we provide fiscal services reimburse our full costs.
+
+The Monetary and Economic Policy service line budget totals $96 million, an increase of $5 million or 5.4 percent over 1985, with no changes in employment. The increase in expenses reflects primarily growth in salaries and benefits as well as the design and development of new computer programs for banking statistics to provide for uniform systems for the entire System and to enhance our capacity to process and analyze financial data from depository institutions.
+
+In addition to analyzing the Reserve Bank budgets by service lines, we also look at individual objects of expense. Of the 1986 budget increase of $48 million, personnel expenses are expected to increase $29 million or 4.2 percent, including provisions for staff growth of about 397 persons as noted above. Because personnel expenses account for about 60 percent of Reserve Bank expenses, human resources receive considerable attention in the System. We pride ourselves on our ability to attract and retain high caliber employees. At the Reserve Banks our salary policies are based on those prevalent in the area in which each office is located. Market salary surveys are conducted annually to help establish salary ranges.
+
+According to our internal studies, the practice of using local salary surveys resulted in annual 1984 savings to the Federal Reserve System of $28.5 million in salary costs relative to costs that would have been incurred if the Reserve Bank employees had been paid under the Federal Government's pay schedules. In some areas, including bank examination and data processing, it is, of course, particularly important that we maintain reasonably competitive salary levels, and that requires special attention.
+
+Equipment costs account for 13 percent of the total budget and are budgeted at $160 million, an increase of 9.4 percent. Several automation efforts significantly affect equipment expense growth. The System's long range automation strategy commits us to standardize automation and communication capabilities and software applications across all Reserve Banks and the Board. That costs money now, but we expect both savings and better "back up" capability in the future.
+
+The System's plans also include upgrading and replacing obsolete check equipment in order to provide better service and continuing implementation of enhanced office automation systems in order to achieve greater productivity. We plan to purchase additional personal computers used in our communications network with financial institutions in order to expand the number of depository institutions that have electronic access to the Federal Reserve's financial services.
+
+Equipment expenses primarily reflect rental, repairs and maintenance, and depreciation. The depreciation expenses ($75 million) reflect the current year effect of both current and prior year capital outlays in accordance with GAAP accounting. Total capital outlays of $124 million for equipment are anticipated in 1986, with about 75 percent accounted for by data processing and data communications equipment. These are accounted for directly in a capital budget (See Table 11). | -17-
+
+I might add that as part of our planning process, the Reserve Banks develop long-range automation and communication plans that cover virtually all data processing and data communications equipment acquisitions over a five-year planning period, with specific cost projections over three years. Reserve Bank policies require that competitive bidding practices be followed and that careful lease-versus-buy analyses be performed.
+
+Current building expenses are another large component of bank budgets. These expenses are expected to increase 7.4 percent to $99 million in 1986 reflecting increases in local tax rates and assessments, utility rates and usage, renovations and refurbishments, and rental costs in some Districts.
+
+New buildings are expected to be completed this year in Jacksonville, Omaha, and Los Angeles. One-time costs of moving into new buildings are treated as current expenses, and are expected to total $5.4 million in 1986. The building being replaced in Omaha was occupied in 1925, while the Los Angeles ttp://fraser.stlouisfed.org/ toon for FRASER ‘ederal Reserve Bank of St. Louis building was constructed in 1928, and the Jacksonville building in 1952. Rapid growth in operational volumes has resulted in insufficient space in the present buildings and needs for modernization have also contributed to the need for new facilities. In each case a thorough analysis was made to explore the justification for, and all alternatives to, a new building project. This analysis included costs of the proposed building project, projections of volume growth, the impact on operating efficiency, and the alternative possibilities of renovation of old buildings or lease. Board Budget
+
+The budget and personnel of the Board of Governors in Washington is a relatively small part of total System expense, amounting to about 6.8 percent of the whole.
+
+The Board's 1986 budget is affected by three major factors:
+
+Budget Positions 1) Program Improvement Project (PIP): ($1.3 million) (51)
+
+A self-initiated staff reduction savings savings
+
+project designed to enhance pro-
+
+ductivity and eliminate lower-
+
+priority work. The reduction
+
+of 9 positions in 1984, 91 in
+
+1985, and 51 in 1986 (151
+
+positions) is expected to yield
+
+$4.5 million in full-year
+
+savings in 1987. 2) Supervision and Regulation: $0.9 million 29
+
+An increase in staff, consistent
+
+with a System-wide effort, to
+
+enhance supervision of state
+
+member banks and bank holding
+
+companies. 3) Automation: $1.1 million
+
+Provides for the operating
+
+expense, including deprecia-
+
+tion, for a new computer that
+
+is expected to meet a usage
+
+demand increase of 80 percent
+
+over three years and office
+
+automation equipment to improve
+
+staff productivity. | In 1984 the Board of Governors undertook, at its own | initiative, a project to reduce or eliminate lower priority programs in order to increase the overall efficiency of our operations. The PIP program reduces staffing by 151 or 9.2 percent over a two year period. A variety of personnel programs were used in an effort to minimize the impact of the program — early retirement, | Djlized for FRASER internal training and reassignment, and outplacement. Some personnel savings will be offset by a decision to add 29 positions to the supervision and regulation function.
+
+Expenses in the Board's largest functional area, Monetary and Economic Policy, are budgeted to increase by only 2.2 percent to $46 million in 1986. The increase provides additional automation resources necessary to improve handling of the large volume of data required in analyzing and implementing monetary and economic trends.
+
+The Supervision and Regulation function is expected to grow by 5.2 percent to $20 million in 1986. The increase in the supervision area, which supports expanded and more frequent examinations, is held down by the siower rate of growth in the area of consumer affairs supervision and regulation.
+
+The Board's personnel services budget totals $60 million, an increase of $1 million or 2.1 percent from 1985. This increase is significantly smaller than those registered in recent years due to the deferral of a general pay increase, savings from the PIP project, and continued efforts to reduce fringe benefit costs.
+
+In general, the Board of Governors has followed federal pay scales in compensating its staff. As a result, salary relationships are seriously distorted, with salary distinctions among our top-level people entirely insufficient to reflect differences in levels of responsibilities. Adverse effects on the Board's ability to attract and retain the high caliber young professionals we need are becoming clearer. Naturally, in the light of our responsibilities this is a serious matter.
+
+The Board's operating budget for nonpersonnel services in 1986 totals $25 million, an increase of $3 million or 14.8 percent; The largest factor in this rise is equipment costs, (including depreciation due to the addition of office automation equipment), a new computer, and a backup data processing system. Charts 8 and 9 show the Board's total operating expenses and employment from 1981 through 1986. Miscellaneous Topics
+
+Mr. Chairman, you have asked that I specifically address certain other topics. One of these is the cost of the several advisory councils to the Federal Reserve. The aggregate cost of the advisory councils to the Federal Reserve Banks, including those established for small business and agriculture, was about $92,000 in 1985. These councils are comprised of some 250 representatives of nonmember banks and thrifts, small businesses, and agriculture. Our expenditures represent travel reimbursements and meals at council meetings. There are also three advisory councils to the Board of Governors: the Federal Advisory Council and the Consumer Advisory Council, created by statute, and the Thrift Institution Advisory Council, created by the Board when the MCA was enacted. In 1985, the cost of these three councils was $164,000, representing travel, lodging, meals, and compensation.
+
+We believe the cost to us of having the Advisory Councils is minor compared to the benefits we and the council members derive from the exchange of information and views between the private sector representatives and System officials. We believe this interaction has been very benefical to the System in its ongoing operations and has provided additional insights into conditions in the economies in which we operate.
+
+In the case of cafeteria subsidies, Reserve Banks are authorized to absorb up to two-thirds of the costs of employees' food, equipment and miscellaneous operating expenditures. Asa matter of practice, no Reserve Bank provides a subsidy of this magnitude. On average the subsidy is about 55 percent, and has been declining in recent years.
+
+The Federal Reserve Board spends around $1.2 million annually for printing of publications for distribution to the public. Most of this cost is offset by receipts of about $1.1 million, primarily from subscriptions to the Federal Reserve Regulatory Service. At the Federal Reserve Banks about $4 million is spent for publications with roughly $150,000 offset by receipts. The policy of the Federal Reserve has been to provide to the public at minimal or no charge publications that improve public understanding of the monetary policy process and the Central Bank. We are, however, looking at our publications' policy throughout the System to identify areas where additional cost recovery may be appropriate.
+
+The cost of acquiring currency has increased in recent years. Essentially, the Board must incur these expenses in order to provide the public with sufficient currency to meet its demands. The actual cost of printing the currency is controlled by the Bureau of Engraving and Printing. Nevertheless, the Board, to the extent possible, endeavors to control these expenditures through continuing contact and consultation with the Bureau to encourage the use of the lowest-cost methods consistent with quality. The Board also monitors the currency-processing operations at the Reserve Banks to ensure that the amounts of currency destroyed are the minimum necessary to meet System guidelines on the quality of currency. In this way the Board minimizes the number of new notes ordered each year and the cost of printing new currency. H.R. 2204
+
+I would also like to express today the Board's support for H.R. 2204, which would increase the number of Class C directors of the Federal Reserve Banks from three to five.
+
+The Federal Reserve System derives significant benefits from the participation of directors drawn from each District. The System receives from the directors of Federal Reserve Banks and branches the benefit of their close contact with emerging economic developments and opinion throughout the nation as well as leadership and management skills in directing the operations of the Reserve Banks that would not otherwise be available at any price.
+
+Under the Federal Reserve Act, the nine directors of each Reserve Bank are divided into three classes of three directors each, designated as Classes A, B, and C. The Class A and B directors are elected by the member banks of the District; the Class C directors are appointed by the Board of Governors. The Act specifies that all directors shall be chosen without ttp://fraser.stlouisfed.org/ precast ederal Reserve Bank of St. Louis discrimination on the basis of race, creed, color, sex, or national origin.
+
+Class A directors are representative of the member banks, and in practice have always been officers or directors of such banks or of their holding companies. Class B and C directors are to be selected to represent the public, with due but not exclusive consideration to the interests of agriculture, commerce, industry, services, labor, and consumers.
+
+In appointing Class C directors, the Board seeks individuals from diversified backgrounds so that a variety of viewpoints may be brought to bear upon decisions relating to both the administration of the Reserve Banks and decisions and advice with respect to monetary and other policies. By increasing the number of Class C directors from three to five, H.R. 2204 would broaden further the opportunity for diversity among the directors appointed by the Board of Governors.
+
+Passage of H.R. 2204 would also address an issue raised by the changed relationship of the Federal Reserve to nonmember banks and thrift institutions as a result of the Monetary Control Act. As I mentioned before, the Monetary Control Act applied reserve requirements to all depository institutions over a certain size and made access to the Federal Reserve discount window and payments services available to these institutions as well. The System has taken a number of steps to ensure more effective mutual communication with nonmember banks and thrift institutions, including the appointment of thrift industry representatives to the boards of 19 of our 25 Reserve Bank branches. Nevertheless, among the types of depository institutions subject to reserve requirements and with access to the discount window and payments services, at present only member banks are assured of representation on the Boards of Directors of the Reserve Banks. The Board therefore supports H.R. 2204's inclusion of nonmember depository institutions specifically among the various groups that should be considered in choosing Class C directors.
+
+I might add that the Board would undertake normally to provide that one Class C director at each Federal Reserve Bank would be drawn from nonmember banks or the thrift industry, with some diversity across the System of individuals with nonmember bank, savings and loan, savings bank, and credit union backgrounds. We would also continue to encourage the service of those individuals on branch boards.
+
+In summary, the Board believes that providing an opportunity for nonmember banks and thrift institutions to participate in the deliberations of the Reserve Bank Boards of Directors as provided by H.R. 2204, would be beneficial. At the same time, the larger number of Class C directors, from a greater variety of backgrounds, would permit the Board added flexibility in the selection process to assure that our Bank directors adequately reflect the diversity of the American economy and society. Conclusion
+
+The focus of my testimony today has been primarily on the 1986 budget. I hope this and the additional materials submitted in advance of the hearing have been helpful in enabling the Subcommittee to review the Federal Reserve's expenditures and budgetary processes. In closing, I would like to reemphasize that the Board believes the Federal Reserve's budget processes have worked well in controlling expenses. I would welcome any comments you may have on our presentation of budget information and I am prepared to address any questions you may have on either our budget or H.R. 2204.
+
+, a ed
