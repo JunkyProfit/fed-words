@@ -371,9 +371,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm75">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm75">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm75">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm76">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm76">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm76">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -381,7 +381,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm75">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm76">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -413,7 +413,7 @@ footer a{color:var(--muted)}
 .totop .tri{font-size:24px;line-height:0;color:#fff}.totop:hover{border-color:#f3eee4}.totop:active{background:rgba(243,238,228,.08)}.totop:focus-visible{outline:2px solid #fff;outline-offset:2px}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm75" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm76" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -485,10 +485,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm75">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm75">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm76">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm76">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm75">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm76">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -501,14 +501,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm75">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm76">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm75">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm76">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, congressional leaders and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -923,7 +923,7 @@ aside.ad .adbox{border:1px solid #242220;border-radius:2px;display:flex;align-it
  background:repeating-linear-gradient(135deg,transparent 0 9px,rgba(243,238,228,.018) 9px 10px);opacity:.75}
 /* Mock ad blocks (until AdSense units go live): no text, just a faint decorative tile of math marks (+ = ± × in cream, one red minus) */
 aside.ad .adbox.adfaint{display:block;border:1px solid #1d1b19;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='none' stroke-width='1.2' stroke-linecap='round'%3E%3Cg stroke='rgba%28243,238,228,.085%29'%3E%3Cpath d='M10 14h8M14 10v8'/%3E%3Cpath d='M46 16h8M46 20h8'/%3E%3Cpath d='M28 44h8M32 40v8M28 51h8'/%3E%3Cpath d='M8 56l5 5M13 56l-5 5'/%3E%3C/g%3E%3Cpath stroke='rgba%28255,84,73,.10%29' d='M56 57h8'/%3E%3C/svg%3E") repeat 0 0/72px 72px;opacity:1}
-aside.ad[data-slot="side"]{margin:16px 0 0;width:100%;max-width:300px}
+aside.ad[data-slot="side"]{margin:16px 0 0;width:100%;max-width:200px}
 aside.ad[data-slot="incontent"]{margin:24px auto}
 aside.ad[data-slot="leader"]{margin:24px auto 18px}
 @media (max-width:899px){aside.ad[data-slot="side"]{display:none}}
@@ -1508,6 +1508,7 @@ body #persons button.chip.on,body #persons button.chip.on:hover{background:linea
 #cloud:not(.live) span.top.ctr::before{display:none!important}
 .rplay .rtri{font-size:24px;line-height:0;vertical-align:-2px}
 body #nbar .nchip{font-size:12px!important}@media (max-width:640px){body #nbar .nchip{font-size:12.5px!important}}
+html,body{background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520' fill='none' stroke='%23c8504a' stroke-opacity='.13' stroke-width='1'%3E%3Cpath d='M-20 90C60 40 140 130 230 80S400 20 540 70'/%3E%3Cpath d='M-20 120C70 75 150 160 240 112S410 55 540 100'/%3E%3Cpath d='M-20 150C80 112 160 190 250 146S420 90 540 132'/%3E%3Cpath d='M-20 300C90 260 170 340 270 290S430 240 540 280'/%3E%3Cpath d='M-20 332C95 296 180 372 280 324S440 276 540 312'/%3E%3Cpath d='M-20 470C80 430 170 500 270 455S430 420 540 450'/%3E%3Cpath d='M-20 500C85 465 175 530 275 488S435 455 540 482'/%3E%3Cellipse cx='390' cy='205' rx='70' ry='34'/%3E%3Cellipse cx='390' cy='205' rx='44' ry='20'/%3E%3Cellipse cx='390' cy='205' rx='18' ry='8'/%3E%3Cellipse cx='120' cy='395' rx='62' ry='30'/%3E%3Cellipse cx='120' cy='395' rx='36' ry='16'/%3E%3C/svg%3E");background-size:520px 520px;background-attachment:scroll}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -1962,10 +1963,10 @@ document.addEventListener('keydown',e=>{
 const ADS={
   client:'',            // set to 'ca-pub-5930727143587260' with real slot ids after approval (empty = mock placeholders; the AdSense script itself is in <head>)
   slots:{               // desktop size (w x h) and phone size (mw x mh); id = AdSense data-ad-slot
-    leader:   {id:'',w:728,h:90, mw:320,mh:50},     // below the results card
-    side:     {id:'',w:300,h:250},                  // desktop left column, below Who / Timeframe (hidden on phones)
-    between:  {id:'',w:728,h:90, mw:320,mh:100},    // inside the results card, between the Mouth Math table and the Word Cloud
-    incontent:{id:'',w:300,h:250,mw:300,mh:250}}};  // between the method note and About
+    leader:   {id:'',w:468,h:60, mw:320,mh:50},     // below the results card
+    side:     {id:'',w:200,h:200},                  // desktop left column, below Who / Timeframe (hidden on phones)
+    between:  {id:'',w:468,h:60, mw:320,mh:50},    // inside the results card, between the Mouth Math table and the Word Cloud
+    incontent:{id:'',w:468,h:60, mw:320,mh:50}}};  // between the method note and About
 function renderAds(){let live=false;
   document.querySelectorAll('aside.ad').forEach(el=>{const c=ADS.slots[el.dataset.slot];if(!c){el.remove();return}
     ['w','h','mw','mh'].forEach(k=>el.style.setProperty('--a'+k,(c[k]||c[k.slice(1)])+'px'));
