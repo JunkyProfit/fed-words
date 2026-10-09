@@ -522,21 +522,25 @@ def fetch_scotus(args):
 # State works are not covered by 17 U.S.C. 105, so governors use the "excerpt" policy (like the CEOs): the text stays in
 # the gitignored local_sources/<slug>/ and only word counts + a limited excerpt set are committed (derived/<slug>.json).
 LOCAL = ROOT / "local_sources"
-GOV_N, GOV_MIN, GOV_SCAN = 20, 40, 90
+GOV_N, GOV_MIN, GOV_SCAN = 20, 40, 240
 GOVERNORS = {   # slug: (name, surname, state, newsroom page URL template, article-link regex, first page)
     "abbott": ("Greg Abbott", "Abbott", "Texas", "https://gov.texas.gov/news/P{o8}", r"https://gov\.texas\.gov/news/post/[a-z0-9\-]+", 0),
     "desantis": ("Ron DeSantis", "DeSantis", "Florida", "https://www.flgov.com/eog/news/press?page={n}", r"/eog/news/press/20\d\d/[a-z0-9\-]+", 0),
     "kemp": ("Brian P. Kemp", "Kemp", "Georgia", "https://gov.georgia.gov/press-releases?page={n}", r"/press-releases/20\d\d-\d\d-\d\d/[a-z0-9\-]+", 0),
     "sanders": ("Sarah Huckabee Sanders", "Sanders", "Arkansas", "https://governor.arkansas.gov/news_post/page/{n1}/", r"https://governor\.arkansas\.gov/news_post/[a-z0-9\-]+/", 0),
     "cox": ("Spencer J. Cox", "Cox", "Utah", "https://governor.utah.gov/news/page/{n1}/", r"https://governor\.utah\.gov/(?!news/|category/|tag/|wp-|comments/|feed/)[a-z0-9\-]+/[a-z0-9\-]{12,}/", 0),
+    "reynolds": ("Kim Reynolds", "Reynolds", "Iowa", "https://governor.iowa.gov/newsroom?page={n}", r"/press-release/20\d\d-\d\d-\d\d/[a-z0-9\-]+", 0),
     "hochul": ("Kathy Hochul", "Hochul", "New York", "https://www.governor.ny.gov/news?page={n}", r"/news/[a-z0-9\-]+", 0),
     "newsom": ("Gavin Newsom", "Newsom", "California", "https://www.gov.ca.gov/newsroom/page/{n1}/", r"https://www\.gov\.ca\.gov/20\d\d/\d\d/\d\d/[^\"'#?]+/", 0),
     "moore": ("Wes Moore", "Moore", "Maryland", "https://governor.maryland.gov/news/press-releases?page={n}", r"/news/press-releases/[a-z0-9\-]+", 0),
     "ferguson": ("Bob Ferguson", "Ferguson", "Washington", "https://www.governor.wa.gov/news/news-releases?page={n}", r"/news/20\d\d/[a-z0-9\-]+", 0),
     "hobbs": ("Katie Hobbs", "Hobbs", "Arizona", "https://azgovernor.gov/news-releases?page={n}", r"https://azgovernor\.gov/office-arizona-governor/news/20\d\d/\d\d/[a-z0-9\-]+", 0),
+    # mm90: governor.colorado.gov (Polis) refuses connections from this machine (TLS reset; colorado.gov answers 403), so
+    # Hawaii's governor was added as the sixth Democrat instead.
+    "green": ("Josh Green", "Green", "Hawaii", "https://governor.hawaii.gov/category/newsroom/page/{n1}/", r"https://governor\.hawaii\.gov/(?!category/|contact-us/|about/|wp-)[a-z0-9\-]+/[^\"'/#?]{12,}/", 0),
 }
 SPANISH = re.compile(r"(?i)gobernador|anuncia|\bdel\b.*\bde la\b|-la-|-el-|-los-|-las-")
-ADVISORY = re.compile(r"(?i)media advisory|advisory|public schedule|flags?[- ](to[- ]fly[- ])?(at[- ])?half[- ]staff|appoint|proclamation|-schedule")
+ADVISORY = re.compile(r"(?i)media advisory|advisory|public schedule|flags?[- ](to[- ]fly[- ])?(at[- ])?half[- ]staff|flag-order|flags?-lowered|appoint|proclamation|-schedule")
 MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
 
 def gov_date(raw, url):
@@ -556,7 +560,8 @@ def gov_date(raw, url):
 
 def gov_title(raw):
     m = re.search(r'property="og:title"\s+content="([^"]+)"', raw) or re.search(r"(?s)<h1[^>]*>(.*?)</h1>", raw) or re.search(r"(?s)<title>(.*?)</title>", raw)
-    return re.split(r" \| | - (?:Office of|Governor|The Office)", clean(m.group(1)))[0].strip() if m else ""
+    t = re.split(r" \| | - (?:Office of|Governor|The Office)", clean(m.group(1)))[0].strip() if m else ""
+    return re.sub(r"(?i)^(?:Office of the Governor\s*[\u2013\u2014-]\s*)?(?:News Release(?: 20\d\d-\d+)?\s*[:\u2013\u2014-]\s*)", "", t)
 
 def gov_paras(raw):
     raw = re.sub(r"(?is)<(script|style|nav|footer|header|noscript)\b.*?</\1>", " ", raw)
@@ -651,7 +656,7 @@ def gov_list(slug, refresh):
     name, sur, state, tmpl, link_re, p0 = GOVERNORS[slug]
     base = re.match(r"https://[^/]+", tmpl).group(0)
     seen, out = set(), []
-    for n in range(p0, p0 + 14):
+    for n in range(p0, p0 + 30):
         url = tmpl.format(n=n, n1=n + 1, o8=n * 8)
         if "/P0" in url or url.endswith("/page/1/"): url = re.sub(r"/P0$|page/1/$", "", url)
         try: raw = get(url, RAW / "gov" / slug / f"list-{n}.htm", True).decode("utf-8", "replace")
