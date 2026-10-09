@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm95">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm95">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm96">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm96">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm95">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm96">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm95">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm96">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm95">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm96">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1073,6 +1073,28 @@ html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 #vRing .ringwrap{background:#0b0b0b;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
 #ring{display:block;width:100%;height:min(78vh,640px);touch-action:manipulation}
 @media (max-width:640px){#ring{height:min(62vh,440px)}html body #vtabs{display:grid!important;grid-template-columns:1fr 1fr;gap:12px}}
+/* mm96: tiny animated previews inside the view buttons */
+html body #vtabs button{display:flex!important;align-items:center;justify-content:center;gap:8px}
+#vtabs .vic{flex:none;width:34px;height:26px;overflow:visible}
+#vtabs .vic *{transform-box:fill-box}
+#vtabs .vm rect{transform-origin:left center;animation:vmBar 2.4s ease-in-out infinite}
+#vtabs .vm rect:nth-child(2){animation-delay:.25s}#vtabs .vm rect:nth-child(3){animation-delay:.5s}
+@keyframes vmBar{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.45)}}
+#vtabs .vr rect{animation:vrA 3s ease-in-out infinite}#vtabs .vr rect:nth-child(2){animation-name:vrB}#vtabs .vr rect:nth-child(3){animation-name:vrC}
+@keyframes vrA{0%,30%{transform:translateY(0)}45%,80%{transform:translateY(7px)}95%,100%{transform:translateY(0)}}
+@keyframes vrB{0%,30%{transform:translateY(0)}45%,80%{transform:translateY(-7px)}95%,100%{transform:translateY(0)}}
+@keyframes vrC{0%,100%{transform:scaleX(1)}50%{transform:scaleX(1.3)}}
+#vtabs .vr rect{transform-origin:left center}
+#vtabs .vc rect{animation:vcF 3.2s ease-in-out infinite}#vtabs .vc rect:nth-child(2){animation-delay:-1s}#vtabs .vc rect:nth-child(3){animation-delay:-2s}#vtabs .vc rect:nth-child(4){animation-delay:-.5s}
+@keyframes vcF{0%,100%{transform:translate(0,0);opacity:1}50%{transform:translate(1.5px,-1.5px);opacity:.55}}
+#vtabs .vg{animation:vgS 9s linear infinite;transform-origin:50% 50%}
+@keyframes vgS{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){#vtabs .vic,#vtabs .vic *{animation:none!important}}
+@media (max-width:359px){#vtabs .vic{display:none}}
+/* mm96: +1 mouth logo badge in the corner of the selected view button */
+html body #vtabs button[aria-selected="true"]::before{content:"";position:absolute;top:5px;right:6px;width:20px;height:20px;border-radius:5px;background:url("assets/favicon.svg?v=mm96") center/contain no-repeat;box-shadow:0 0 0 1px rgba(255,255,255,.55),0 0 8px rgba(0,0,0,.5);pointer-events:none}
+@media (max-width:640px){html body #vtabs button[aria-selected="true"]::before{width:18px;height:18px;top:4px;right:5px}}
+@media (max-width:640px){#vtabs .vic{width:26px;height:20px}html body #vtabs button{gap:6px;padding:0 20px 0 8px!important}}
 </style></head><body class="mode-fed">
 <header><div class="hact"><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button><a class="about-link" href="#about">About</a></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home"><svg width="254" height="40" focusable="false" xmlns="http://www.w3.org/2000/svg" class="mmlogo" viewBox="278 268 925 144" role="img" aria-label="MouthMath"><title>MouthMath</title><g transform="translate(405.5,299.8) scale(0.4718) translate(-405,-244.5)"><path d="M150,337.5 C160,312 186,276 213,256 C226,246 236,244 244,244.5 C256,245 266,252 277.5,254.5 C289,252 299,245 311,244.5 C319,244 329,246 342,256 C369,276 395,312 405,339.5 M150,337.5 C178,309 214,285 243,284.5 C258,284 268,289.5 277.5,289.5 C287,289.5 297,284 312,284.5 C341,285 377,309 405,339.5 M150,337.5 C178,394 226,428.5 277.5,428.5 C329,428.5 377,394 405,339.5 M150,337.5 C162,392 212,466 277.5,466 C343,466 393,392 405,339.5" fill="none" stroke="#ff5449" stroke-width="11.87" stroke-linecap="round" stroke-linejoin="round"/><path d="M212,347 H274 M243,316 V378" fill="none" stroke="#f3eee4" stroke-width="15" stroke-linecap="round"/><text x="320" y="386" text-anchor="middle" fill="#f3eee4" style="font-family:Arial,'Helvetica Neue',Helvetica,'Liberation Sans',sans-serif;font-weight:700;font-size:110px">1</text></g><text class="mmwm" x="448" y="407.0" fill="#ff5449" style="font-family:Arial,'Helvetica Neue',Helvetica,'Liberation Sans',sans-serif;font-weight:700;font-size:153.57px;letter-spacing:-0.02em">MOUTH</text><text x="1002" y="333.3" fill="#f3eee4" style="font-family:Arial,'Helvetica Neue',Helvetica,'Liberation Sans',sans-serif;font-weight:700;font-size:84.46px;letter-spacing:-0.005em">Math</text></svg></a>
@@ -1113,7 +1135,12 @@ html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 <div class="stat"><b id="sUnique">–</b><span class="sl" data-s="unique">unique words</span></div>
 <div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
 </div>
-<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><button type="button" role="tab" id="tabRace" data-view="race" aria-selected="false" aria-controls="vRace" tabindex="-1">Word Race</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button><button type="button" role="tab" id="tabRing" data-view="ring" aria-selected="false" aria-controls="vRing" tabindex="-1">Word Ring</button></div>
+<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><button type="button" role="tab" id="tabRace" data-view="race" aria-selected="false" aria-controls="vRace" tabindex="-1">Word Race</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button><button type="button" role="tab" id="tabRing" data-view="ring" aria-selected="false" aria-controls="vRing" tabindex="-1">Word Ring</button></div><script>(()=>{const I={
+math:'<svg class="vic vm" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="24" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="8" width="17" height="4" rx="1.5" fill="currentColor" opacity=".8"/><rect x="1" y="14" width="11" height="4" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
+race:'<svg class="vic vr" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="20" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="9" width="14" height="4" rx="1.5" fill="currentColor" opacity=".75"/><rect x="1" y="16" width="9" height="3" rx="1.5" fill="currentColor" opacity=".55"/></svg>',
+cloud:'<svg class="vic vc" viewBox="0 0 26 20" aria-hidden="true"><rect x="2" y="3" width="9" height="3" rx="1.5" fill="currentColor" opacity=".7"/><rect x="13" y="2" width="11" height="4" rx="2" fill="currentColor"/><rect x="4" y="9" width="17" height="5" rx="2.5" fill="currentColor"/><rect x="7" y="16" width="12" height="3" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
+ring:'<svg class="vic" viewBox="0 0 26 20" aria-hidden="true"><g class="vg" stroke="currentColor" stroke-linecap="round">'+[...Array(16)].map((_,i)=>{const a=i/16*6.283,r0=4,r1=r0+(i%4===0?5.5:i%2?3:4),c=Math.cos(a),s=Math.sin(a);return `<line x1="${13+c*r0}" y1="${10+s*r0}" x2="${13+c*r1}" y2="${10+s*r1}" stroke-width="${i%4===0?1.6:1}"/>`}).join('')+'</g></svg>'};
+document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.view];if(v&&!b.querySelector('.vic'))b.insertAdjacentHTML('afterbegin',v)})})();</script>
 <div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="5">5</button><button class="nchip" data-n="20">20</button><button class="nchip" data-n="50">50</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
