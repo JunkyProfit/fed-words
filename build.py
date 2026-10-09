@@ -371,9 +371,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm138">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm138">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm138">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm139">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm139">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm139">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -381,7 +381,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm138">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm139">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -414,7 +414,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm138" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm139" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -486,10 +486,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm138">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm138">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm139">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm139">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm138">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm139">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -502,14 +502,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm138">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm139">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm138">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm139">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -2348,16 +2348,16 @@ function playRing(){const c=$('ring');if(!c||!P)return;stopRing();const x=c.getC
     x.fillStyle=o===words[0]?'#ff5449':'#fff';x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,1.5+2*f,0,7);x.fill();
     const fs=Math.round(((nar?9:9)+(nar?5:12)*f)*(1+(nar?.9:1.1)*zb));x.font=`${hv||f>.5||zb>.5?700:400} ${fs+(hv?3:0)}px Arial`;x.save();x.translate(cx+ca*(r1+5),cy+sa*(r1+5));const left=Math.cos(a)<0;x.rotate(left?a+Math.PI:a);x.textAlign=left?'right':'left';
     x.fillStyle=hv||zb>.6?'#fff':o===words[0]?'#ff5449':`rgba(243,238,228,${Math.min(1,(ringHov>=0?.3+.3*f:.55+.45*f)+zb)})`;if(zb>.2){x.shadowColor='rgba(255,84,73,.8)';x.shadowBlur=12*zb}x.fillText(o.w,0,0);x.shadowBlur=0;x.textBaseline='middle';x.restore()}
-   x.textAlign='center';const o=ringHov>=0?order[ringHov]:null;
+   x.textAlign='center';let tI=-1,tD=9;ringPos.forEach((p,i)=>{let d=Math.abs((((p+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<tD){tD=d;tI=i}});const o=tI>=0?order[tI]:null;
    if(o){const fs=Math.min(nar?30:44,W*.42/Math.max(3,o.w.length)*1.8);x.textAlign='right';x.textBaseline='top';x.font=`700 ${fs}px Arial`;x.fillStyle='#ff5449';x.shadowColor='rgba(255,84,73,.6)';x.shadowBlur=18;x.fillText(o.w,W-12,10);x.shadowBlur=0;
-    x.font=`700 ${nar?14:17}px Arial`;x.fillStyle='#f3eee4';x.fillText(`said ${o.n.toLocaleString()} times \u00b7 #${words.indexOf(o)+1}`,W-12,14+fs);x.textAlign='center';x.textBaseline='middle'}
+    x.font=`700 ${nar?14:17}px Arial`;x.fillStyle='#f3eee4';x.fillText(`${o.n.toLocaleString()} ${o.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(o)+1}`,W-12,14+fs);x.textAlign='center';x.textBaseline='middle'}
    else{x.font=`400 ${Math.max(12,R*.13)}px Arial`;x.fillStyle='rgba(243,238,228,.6)';x.fillText(matchMedia('(hover:hover)').matches?'Hover a word':'Tap a word',cx,cy)}
    if(ringPX>=0){const r=c.getBoundingClientRect(),px=ringPX-r.left,py=ringPY-r.top,ang=Math.atan2(py-cy,px-cx),dist=Math.hypot(px-cx,py-cy);
     if(dist>R*.9){let best=-1,bd=1e9;ringPos.forEach((p,i)=>{let d=Math.abs(((p%6.283)+6.283)%6.283-((ang+6.283)%6.283));d=Math.min(d,6.283-d);if(d<bd){bd=d;best=i}});ringHov=bd<(nar?.09:.06)?best:-1}
     else if(!ringTap)ringHov=-1}
    if(!RM&&VIEW==='ring'&&!document.hidden)ringRAF=requestAnimationFrame(frame)}
   ringRAF=requestAnimationFrame(frame);
-  if(!c.dataset.on){c.dataset.on=1;c.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){ringTap=false;ringPX=e.clientX;ringPY=e.clientY;if(ringStill())playRing()}});
+  if(false){c.dataset.on=1;c.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){ringTap=false;ringPX=e.clientX;ringPY=e.clientY;if(ringStill())playRing()}});
    c.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){ringPX=-1;ringHov=-1}});
    c.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'){ringTap=true;ringPX=e.clientX;ringPY=e.clientY;if(ringStill())playRing()}})}
 }
