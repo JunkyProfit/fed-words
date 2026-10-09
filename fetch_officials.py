@@ -6,7 +6,7 @@ or employees as part of their official duties are not subject to copyright), so 
 committed under transcripts/<slug>/ and gets the full-text treatment (like the Fed and the President).
 
   python3 fetch_officials.py                 # everything (only fetches what's missing)
-  python3 fetch_officials.py --only cabinet  # cabinet | congress | scotus | <slug>
+  python3 fetch_officials.py --only cabinet  # cabinet | congress | senators | governors | scotus | <slug>
   python3 fetch_officials.py --refresh       # re-extract (raw downloads are cached in raw/officials/)
 
 Sources (all official .gov):
@@ -274,6 +274,20 @@ LEADERS = {"johnson": ("Mike Johnson", "Speaker of the House", "Mr. JOHNSON of L
            "jeffries": ("Hakeem S. Jeffries", "House Democratic Leader", "Mr. JEFFRIES", "House"),
            "thune": ("John Thune", "Senate Majority Leader", "Mr. THUNE", "Senate"),
            "schumer": ("Charles E. Schumer", "Senate Democratic Leader", "Mr. SCHUMER", "Senate")}
+# mm84: ten more senators (5 R, 5 D; varied states), same Congressional Record method as the leaders, up to 20 speeches each.
+# label None = detected per page ("Mr. CRUZ", "Mrs. BLACKBURN", "Mr. PAUL" ...).
+SENATORS = {"barrasso": ("John Barrasso", "Senate Majority Whip", None, "Senate"),
+            "grassley": ("Chuck Grassley", "President pro tempore of the Senate", None, "Senate"),
+            "cruz": ("Ted Cruz", "U.S. Senator", None, "Senate"),
+            "blackburn": ("Marsha Blackburn", "U.S. Senator", None, "Senate"),
+            "paul": ("Rand Paul", "U.S. Senator", None, "Senate"),
+            "durbin": ("Richard J. Durbin", "Senate Democratic Whip", None, "Senate"),
+            "schiff": ("Adam B. Schiff", "U.S. Senator", None, "Senate"),
+            "booker": ("Cory A. Booker", "U.S. Senator", None, "Senate"),
+            "murphy": ("Christopher Murphy", "U.S. Senator", None, "Senate"),
+            "klobuchar": ("Amy Klobuchar", "U.S. Senator", None, "Senate")}
+SENATOR_MAX = 20
+LEADERS.update(SENATORS)
 CREC_FROM, CREC_TO, CREC_MAX, CREC_MIN = dt.date(2026, 1, 3), dt.date(2026, 10, 1), 5, 250
 SKIP_TITLE = re.compile(r"(?i)^(tribute|recogniz|remember|congratulat|commemorat|honoring|celebrat|additional statements|introductory statement|statements on|submitted resolutions|resolutions submitted|amendments submitted|executive calendar|orders? for|unanimous consent|measures|.*authority$|morning business|legislative session|executive session|cloture|adjournment|waiving|privileges of the floor|appointment|executive reports|nominations|messages|petitions|quorum|recess|schedule|calendar|prayer|pledge of allegiance|reservation of leader time|recognition of the|conclusion of|house of representatives|senate$|daily digest|program)")
 LABEL_C = re.compile(r"^  ((?:Mr|Ms|Mrs|Miss|Dr)\. [A-Z][A-Z'\-]+(?: [A-Z][A-Z'\-]+)*(?: of [A-Z][a-z]+(?: [A-Z][a-z]+)*)?|The (?:ACTING |VICE )?(?:PRESIDENT|PRESIDING OFFICER|SPEAKER|CHAIR|CHAIRMAN|CLERK)(?: pro tempore)?)\.\s")
@@ -319,7 +333,7 @@ def smart_title(t):
     return re.sub(r" -- (\w)", lambda m: ": " + m.group(1).upper(), out)
 
 def fetch_congress(args):
-    todo = [k for k in LEADERS if args.only in (None, "congress", k) and (args.refresh or not (TDIR / k / "index.json").exists())]
+    todo = [k for k in LEADERS if (args.only in (None, "congress", k) or (args.only == "senators" and k in SENATORS)) and (args.refresh or not (TDIR / k / "index.json").exists())]
     if not todo:
         if args.only in (None, "congress") or args.only in LEADERS: print("  congress: up to date")
         return
@@ -333,7 +347,7 @@ def fetch_congress(args):
         if m: mods[day] = m
     for slug, (name, role, label, chamber) in LEADERS.items():
         if slug not in todo: continue
-        docs = []
+        docs, cmax = [], SENATOR_MAX if slug in SENATORS else CREC_MAX
         for day in days:
             if day not in mods: continue
             for r in re.split(r'(?=<relatedItem type="constituent")', mods[day])[1:]:
@@ -345,14 +359,20 @@ def fetch_congress(args):
                 if any(x["date"] == str(day) for x in docs): continue        # at most one speech per day
                 gid = h.group(1).rsplit("/", 1)[1][:-4]
                 raw = get(h.group(1), RAW / "crec_htm" / f"{gid}.htm").decode("utf-8", "replace")
-                paras = crec_turns(raw, label)
+                lab = label
+                if lab is None:   # the senator's own label on this page, e.g. "Mr. CRUZ" / "Mrs. BLACKBURN" / "Mr. PAUL"
+                    sur = re.escape(name.split()[-1].upper())
+                    hits = Counter(m.group(1) for m in re.finditer(rf"\n  ((?:Mr|Ms|Mrs|Miss|Dr)\. {sur}(?: of [A-Z][a-z]+(?: [A-Z][a-z]+)*)?)\.\s", raw))
+                    if not hits: continue
+                    lab = hits.most_common(1)[0][0]
+                paras = crec_turns(raw, lab)
                 if sum(len(p.split()) for p in paras) < CREC_MIN: continue
                 if len(re.findall(r"unanimous consent", " ".join(paras), re.I)) >= 2: continue   # procedural (UC requests)
                 docs.append(dict(id=gid, url=h.group(1), type="floor remarks", title=smart_title(title), date=str(day),
                                  location=f"{chamber} floor", source="govinfo.gov", paras=paras,
-                                 note="Congressional Record (daily edition); only his own spoken remarks"))
-                if len(docs) >= CREC_MAX: break
-            if len(docs) >= CREC_MAX: break
+                                 note="Congressional Record (daily edition); only the senator's own spoken remarks" if slug in SENATORS else "Congressional Record (daily edition); only his own spoken remarks"))
+                if len(docs) >= cmax: break
+            if len(docs) >= cmax: break
         if docs: write_person(slug, name, docs)
         else: print(f"  SKIP {slug}: no floor remarks of >= {CREC_MIN} words between {CREC_FROM} and {CREC_TO}")
 
@@ -493,11 +513,208 @@ def fetch_scotus(args):
                      paras=w["paras"], note="Supreme Court opinion; syllabus, footnotes and headings excluded") for w in ws]
         write_person(j, JUSTICES[j], docs)
 
+# ------------------------------------------------------------------ governors
+# mm84: ten sitting governors (5 R, 5 D; varied states). Same method for every governor: walk the official newsroom
+# (newest first) and keep the 20 latest items that contain at least GOV_MIN words in the governor's OWN words:
+#   - a posted transcript / remarks (only the text after "transcript ... below" / "as prepared", minus other speakers' turns);
+#   - otherwise only the passages the release quotes as the governor's ("...," said Governor X. / Governor X said: "...").
+# Staff-written third-person text, other officials' quotes, Spanish duplicates and media advisories are excluded.
+# State works are not covered by 17 U.S.C. 105, so governors use the "excerpt" policy (like the CEOs): the text stays in
+# the gitignored local_sources/<slug>/ and only word counts + a limited excerpt set are committed (derived/<slug>.json).
+LOCAL = ROOT / "local_sources"
+GOV_N, GOV_MIN, GOV_SCAN = 20, 40, 90
+GOVERNORS = {   # slug: (name, surname, state, newsroom page URL template, article-link regex, first page)
+    "abbott": ("Greg Abbott", "Abbott", "Texas", "https://gov.texas.gov/news/P{o8}", r"https://gov\.texas\.gov/news/post/[a-z0-9\-]+", 0),
+    "desantis": ("Ron DeSantis", "DeSantis", "Florida", "https://www.flgov.com/eog/news/press?page={n}", r"/eog/news/press/20\d\d/[a-z0-9\-]+", 0),
+    "kemp": ("Brian P. Kemp", "Kemp", "Georgia", "https://gov.georgia.gov/press-releases?page={n}", r"/press-releases/20\d\d-\d\d-\d\d/[a-z0-9\-]+", 0),
+    "sanders": ("Sarah Huckabee Sanders", "Sanders", "Arkansas", "https://governor.arkansas.gov/news_post/page/{n1}/", r"https://governor\.arkansas\.gov/news_post/[a-z0-9\-]+/", 0),
+    "cox": ("Spencer J. Cox", "Cox", "Utah", "https://governor.utah.gov/news/page/{n1}/", r"https://governor\.utah\.gov/(?!news/|category/|tag/|wp-|comments/|feed/)[a-z0-9\-]+/[a-z0-9\-]{12,}/", 0),
+    "hochul": ("Kathy Hochul", "Hochul", "New York", "https://www.governor.ny.gov/news?page={n}", r"/news/[a-z0-9\-]+", 0),
+    "newsom": ("Gavin Newsom", "Newsom", "California", "https://www.gov.ca.gov/newsroom/page/{n1}/", r"https://www\.gov\.ca\.gov/20\d\d/\d\d/\d\d/[^\"'#?]+/", 0),
+    "moore": ("Wes Moore", "Moore", "Maryland", "https://governor.maryland.gov/news/press-releases?page={n}", r"/news/press-releases/[a-z0-9\-]+", 0),
+    "ferguson": ("Bob Ferguson", "Ferguson", "Washington", "https://www.governor.wa.gov/news/news-releases?page={n}", r"/news/20\d\d/[a-z0-9\-]+", 0),
+    "hobbs": ("Katie Hobbs", "Hobbs", "Arizona", "https://azgovernor.gov/news-releases?page={n}", r"https://azgovernor\.gov/office-arizona-governor/news/20\d\d/\d\d/[a-z0-9\-]+", 0),
+}
+SPANISH = re.compile(r"(?i)gobernador|anuncia|\bdel\b.*\bde la\b|-la-|-el-|-los-|-las-")
+ADVISORY = re.compile(r"(?i)media advisory|advisory|public schedule|flags?[- ](to[- ]fly[- ])?(at[- ])?half[- ]staff|appoint|proclamation|-schedule")
+MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
+
+def gov_date(raw, url):
+    for pat in (r'property="article:published_time"\s+content="(\d{4}-\d\d-\d\d)', r'"datePublished"\s*:\s*"(\d{4}-\d\d-\d\d)'):
+        m = re.search(pat, raw)
+        if m: return m.group(1)
+    m = re.search(r"/(20\d\d)[/-](\d\d)[/-](\d\d)/", url)
+    if m: return "-".join(m.groups())
+    body = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", raw)
+    body = re.sub(r"<[^>]+>", " ", body[body.find("<h1"):] if "<h1" in body else body)
+    m = re.search(rf"({MONTHS})\.?\s+(\d{{1,2}}),?\s+(20\d\d)", body)
+    if m: return dt.datetime.strptime(" ".join(m.groups()), "%B %d %Y").strftime("%Y-%m-%d")
+    for pat in (r'name="(?:dcterms\.date|date|publish[-_]date)"\s+content="(\d{4}-\d\d-\d\d)', r"<time[^>]+datetime=\"(\d{4}-\d\d-\d\d)"):
+        m = re.search(pat, raw)
+        if m: return m.group(1)
+    return None
+
+def gov_title(raw):
+    m = re.search(r'property="og:title"\s+content="([^"]+)"', raw) or re.search(r"(?s)<h1[^>]*>(.*?)</h1>", raw) or re.search(r"(?s)<title>(.*?)</title>", raw)
+    return re.split(r" \| | - (?:Office of|Governor|The Office)", clean(m.group(1)))[0].strip() if m else ""
+
+def gov_paras(raw):
+    raw = re.sub(r"(?is)<(script|style|nav|footer|header|noscript)\b.*?</\1>", " ", raw)
+    i = raw.find("<h1")
+    raw = raw[i:] if i >= 0 else raw
+    ps = [clean(q) for p in re.findall(r"(?s)<p\b[^>]*>(.*?)</p>", raw) for q in re.split(r"(?i)(?:<br\s*/?>\s*(?:&nbsp;)?\s*){2,}", p)]
+    if sum(len(p.split()) for p in ps) < 120:      # pages laid out with <div>/<br> blocks instead of <p> (e.g. flgov.com)
+        b = re.sub(r"(?i)<br\s*/?>|</?(?:div|p|li|ul|ol|h[1-6]|section|article|table|tr|td|blockquote)\b[^>]*>", "\n\n", raw)
+        ps = [clean(p) for p in re.split(r"\n\s*\n", b)]
+    ps = [p for p in ps if p and not re.match(r"(?i)(an official website|a \.?gov website|a lock icon|this page is available in other languages|###|share this|related)", p)]
+    out = []
+    for p in ps:
+        if p.startswith("###"): break
+        out.append(p.replace("\u201f", "\u201c"))
+    return out
+
+ATTR_VERB = r"(?:said|says|added|continued|stated|noted|remarked|explained|emphasized|shared|wrote|concluded|declared|urged|stressed)"
+def gov_attr(text, sur):
+    """True if text (the part of a paragraph outside quotes) attributes a quote to the governor."""
+    g = rf"(?:Governor|Gov\.)\s+(?:[A-Z][a-zA-Z.]*\s+){{0,3}}{sur}\b|\bthe Governor\b|\b{sur}\b"
+    return bool(re.search(rf"{ATTR_VERB}[,]?\s+(?:{g})|(?:{g})(?:,[^,]{{0,60}},)?\s+{ATTR_VERB}\b|(?:{g})\s*:\s*$|^\s*(?:{g})\s*:", text))
+
+def other_attr(text, sur):
+    """Another named speaker in the same paragraph (Commissioner X said ...)."""
+    for m in re.finditer(rf"{ATTR_VERB},?\s+((?:[A-Z][a-zA-Z.\-']+\s*){{1,4}})|((?:[A-Z][a-zA-Z.\-']+\s+){{1,4}}){ATTR_VERB}\b", text):
+        who = (m.group(1) or m.group(2) or "")
+        if sur not in who and not re.search(r"\bGovernor\b|\bGov\b", who) and re.search(r"[A-Z][a-z]+\s+[A-Z][a-z]+|Secretary|Director|Commissioner|Mayor|Senator|Representative|President|Chair|CEO|Chief", who):
+            return True
+    return False
+
+def quote_spans(p):
+    """[(text, closed)] for each quoted span in a paragraph; an unclosed quote runs to the paragraph end."""
+    p = p.replace("\u201e", "\u201c")
+    out, i = [], 0
+    if "\u201c" not in p and p.count('"') >= 1:
+        p = re.sub(r'(^|[\s(\[—–-])"', "\\1\u201c", p); p = p.replace('"', "\u201d")
+    while True:
+        a = p.find("\u201c", i)
+        if a < 0: break
+        b = p.find("\u201d", a + 1)
+        if b < 0: out.append((p[a + 1:].strip(), False, a, len(p))); break
+        out.append((p[a + 1:b].strip(), True, a, b + 1)); i = b + 1
+    return out
+
+def gov_quotes(paras, sur, title):
+    """The governor's quoted words in a press release."""
+    whole = bool(re.search(rf"(?i)^(?:joint )?statement (?:from|by|of) (?:governor|gov\.)", title)) and "joint" not in title.lower()
+    words, cont, pending = [], False, False
+    sig = re.compile(rf"^[\u2014\u2013-]?\s*(?:Governor|Gov\.)\s+(?:[A-Z][a-zA-Z.]*\s+){{0,3}}{sur}\s*$")
+    for k, p in enumerate(paras):     # pull-quote blocks: the quote, then a signature line "Governor Gavin Newsom"
+        if k and sig.match(p) and not re.search(rf"\b{sur}\b", paras[k - 1]) and len(paras[k - 1].split()) >= 8:
+            words.append(paras[k - 1].strip("\u201c\u201d\" "))
+    if words: return words
+    for p in paras:
+        if cont and not p.lstrip().startswith(("\u201c", '"')) and not re.search(rf"\b{sur}\b", p):     # quote continues without a new opening mark
+            b = p.find("\u201d")
+            if b < 0: words.append(p); continue
+            words.append(p[:b].strip()); cont = False; p = p[b + 1:]
+        spans = quote_spans(p)
+        if not spans:
+            pending = p.rstrip().endswith(":") and gov_attr(p, sur); cont = False; continue
+        outside = p
+        for _, _, a, b in reversed(spans): outside = outside[:a] + " " + outside[b:]
+        mine = gov_attr(outside, sur) and not other_attr(outside, sur)
+        bare = not outside.strip(" ,.;:-—–")
+        for k, (t, closed, a, b) in enumerate(spans):
+            ok = mine or (k == 0 and a == 0 and (cont or pending)) or (whole and bare)
+            if ok and t: words.append(t)
+            cont = ok and not closed
+        if spans[-1][1]: cont = False
+        pending = p.rstrip().endswith(":") and gov_attr(outside, sur)
+    return words
+
+TRANSCRIPT_MARK = re.compile(r"(?i)(?:rush )?transcript of (?:the )?governor.{0,40}(?:remarks|address|speech|conference|briefing|appearance|interview).{0,40}(?:is |are )?available below|remarks as prepared for delivery|as prepared for delivery|full remarks (?:are )?(?:available )?below|the governor's remarks (?:are )?(?:available )?below")
+SPK_LABEL = re.compile(r"^([A-Z][A-Za-z.'\- ]{1,40}|Q|A):\s")
+def gov_transcript(paras, sur):
+    i = next((k for k, p in enumerate(paras) if TRANSCRIPT_MARK.search(p)), None)
+    if i is None: return None
+    out, me = [], True
+    for p in paras[i + 1:]:
+        if re.match(r"(?i)^(contact|###|for immediate release|this page is available|\*\*\*)", p): break
+        m = SPK_LABEL.match(p)
+        if m:
+            me = bool(re.search(rf"(?i)\b(governor|gov\.)\b.*{sur}|^{sur}$|^governor$", m.group(1).strip()))
+            p = p[m.end():]
+        if me:
+            p = drop_parens(p)
+            if p: out.append(p)
+    return out
+
+def gov_list(slug, refresh):
+    name, sur, state, tmpl, link_re, p0 = GOVERNORS[slug]
+    base = re.match(r"https://[^/]+", tmpl).group(0)
+    seen, out = set(), []
+    for n in range(p0, p0 + 14):
+        url = tmpl.format(n=n, n1=n + 1, o8=n * 8)
+        if "/P0" in url or url.endswith("/page/1/"): url = re.sub(r"/P0$|page/1/$", "", url)
+        try: raw = get(url, RAW / "gov" / slug / f"list-{n}.htm", True).decode("utf-8", "replace")
+        except Exception as e: print(f"  {slug} list {url}: {e}"); break
+        new = 0
+        for h in re.findall(r'href="([^"]+)"', raw):
+            h = html.unescape(h).split("#")[0]
+            if not re.fullmatch(link_re, h) and not re.fullmatch(link_re, h.replace(base, "")): continue
+            h = h if h.startswith("http") else base + h
+            if h in seen or h.rstrip("/") == tmpl.split("?")[0].rstrip("/"): continue
+            seen.add(h); out.append(h); new += 1
+        if not new or len(out) >= GOV_SCAN: break
+    return out[:GOV_SCAN]
+
+def gov_doc(slug, url, refresh):
+    name, sur, state = GOVERNORS[slug][:3]
+    key = re.sub(r"[^a-z0-9\-]+", "-", url.rstrip("/").split("/", 3)[3].lower())[-120:]
+    raw = get(url, RAW / "gov" / slug / f"{key}.htm", refresh).decode("utf-8", "replace")
+    title, date = gov_title(raw), gov_date(raw, url)
+    paras = gov_paras(raw)
+    tr = gov_transcript(paras, sur)
+    if tr and sum(len(p.split()) for p in tr) >= GOV_MIN:
+        typ, words, note = "remarks", tr, f"Transcript posted by the Office of the Governor; only Governor {sur}'s own words"
+    else:
+        typ, words, note = "statement", gov_quotes(paras, sur, title), f"Press release, Office of the Governor; only the passages quoted as Governor {sur}'s own words"
+    did = re.sub(r"[^a-z0-9]+", "-", key.split("/")[-1])[:60].strip("-")
+    return dict(id=f"{date}-{did}"[:72], url=url, type=typ, title=title, date=date, location=state,
+                source=re.match(r"https://(?:www\.)?([^/]+)", url).group(1), paras=words, note=note)
+
+def fetch_governors(args):
+    for slug, (name, sur, state, *_ ) in GOVERNORS.items():
+        if args.only not in (None, "governors", slug): continue
+        if (LOCAL / slug / "index.json").exists() and not args.refresh: print(f"  {slug}: up to date"); continue
+        docs, seen = [], []
+        for url in gov_list(slug, args.refresh):
+            slugpart = url.rstrip("/").rsplit("/", 1)[-1]
+            if SPANISH.search(slugpart) or ADVISORY.search(slugpart): continue
+            try: d = gov_doc(slug, url, args.refresh)
+            except Exception as e: print(f"  SKIP {slug} {url}: {e}"); continue
+            n = sum(len(p.split()) for p in d["paras"])
+            if not d["date"] or n < GOV_MIN: continue
+            ss = {s_.strip().lower() for p in d["paras"] for s_ in re.split(r"(?<=[.!?])\s+", p) if len(s_.split()) >= 6}
+            if any(ss and len(ss & t) / len(ss) >= 0.85 for t in seen): continue          # same quote/speech posted twice
+            seen.append(ss); docs.append(d)
+            if len(docs) >= GOV_N: break
+        if not docs: print(f"  SKIP {slug}: nothing usable"); continue
+        out = LOCAL / slug; out.mkdir(parents=True, exist_ok=True)
+        for f in out.glob("*.txt"): f.unlink()
+        idx = []
+        for d in sorted(docs, key=lambda d: d["date"], reverse=True):
+            (out / f"{d['id']}.txt").write_text("\n\n".join(d["paras"]) + "\n", encoding="utf-8")
+            idx.append({"id": d["id"], "file": f"{d['id']}.txt", "person": name, "category": "US Government", "url": d["url"], "type": d["type"],
+                        "source": d["source"], "title": d["title"], "date": d["date"], "location": d["location"], "note": d["note"],
+                        "source_type": "Remarks" if d["type"] == "remarks" else "Statement",
+                        "fetched": dt.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")})
+            print(f"  {slug:9s} {d['date']} {d['type']:9s} {sum(len(p.split()) for p in d['paras']):6d} words | {d['title'][:80]}")
+        (out / "index.json").write_text(json.dumps(idx, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--only"); ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
-    for fn in (fetch_cabinet, fetch_congress, fetch_scotus):
+    for fn in (fetch_cabinet, fetch_congress, fetch_governors, fetch_scotus):
         fn(args)
 
 if __name__ == "__main__":

@@ -1,0 +1,3712 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "a": 2,
+    "alone": 1,
+    "an": 1,
+    "and": 5,
+    "back": 1,
+    "been": 1,
+    "can": 1,
+    "communities": 3,
+    "cost": 1,
+    "damage": 1,
+    "devastating": 1,
+    "enormous": 1,
+    "federal": 1,
+    "feet": 1,
+    "first": 1,
+    "flooding": 1,
+    "for": 1,
+    "getting": 1,
+    "grateful": 1,
+    "has": 1,
+    "helping": 1,
+    "hit": 1,
+    "i'm": 1,
+    "important": 1,
+    "is": 2,
+    "more": 1,
+    "mudslides": 1,
+    "need": 1,
+    "of": 1,
+    "on": 1,
+    "one": 1,
+    "our": 1,
+    "partners": 1,
+    "president": 1,
+    "punch": 1,
+    "rebuilding": 1,
+    "recognizing": 1,
+    "recover": 1,
+    "rural": 1,
+    "severe": 1,
+    "shoulder": 1,
+    "step": 1,
+    "summer": 1,
+    "than": 1,
+    "the": 3,
+    "their": 1,
+    "then": 1,
+    "these": 3,
+    "this": 2,
+    "to": 1,
+    "toward": 1,
+    "trump": 1,
+    "two": 1,
+    "utah": 1,
+    "were": 1,
+    "wildfire": 1,
+    "with": 1
+   },
+   "date": "2026-10-08",
+   "entries": {
+    "and": [
+     0,
+     0
+    ],
+    "federal": [
+     0
+    ],
+    "for": [
+     0
+    ],
+    "grateful": [
+     0
+    ],
+    "helping": [
+     0
+    ],
+    "i'm": [
+     0
+    ],
+    "need": [
+     0
+    ],
+    "our": [
+     0
+    ],
+    "partners": [
+     0
+    ],
+    "president": [
+     0
+    ],
+    "recognizing": [
+     0
+    ],
+    "recover": [
+     0
+    ],
+    "the": [
+     0
+    ],
+    "to": [
+     0
+    ],
+    "trump": [
+     0
+    ],
+    "utah": [
+     0
+    ]
+   },
+   "excerpts": [
+    "I’m grateful to President Trump and our federal partners for recognizing the need and helping Utah recover."
+   ],
+   "id": "2026-10-08-uncategorized-utah-receives-major-disaster-declaration-for-f",
+   "location": "Utah",
+   "msent": {
+    "a": 1,
+    "alone": 1,
+    "an": 1,
+    "and": 3,
+    "back": 1,
+    "been": 1,
+    "can": 1,
+    "communities": 3,
+    "cost": 1,
+    "damage": 1,
+    "devastating": 1,
+    "enormous": 1,
+    "federal": 1,
+    "feet": 1,
+    "first": 1,
+    "flooding": 1,
+    "for": 1,
+    "getting": 1,
+    "grateful": 1,
+    "has": 1,
+    "helping": 1,
+    "hit": 1,
+    "i'm": 1,
+    "important": 1,
+    "is": 2,
+    "more": 1,
+    "mudslides": 1,
+    "need": 1,
+    "of": 1,
+    "on": 1,
+    "one": 1,
+    "our": 1,
+    "partners": 1,
+    "president": 1,
+    "punch": 1,
+    "rebuilding": 1,
+    "recognizing": 1,
+    "recover": 1,
+    "rural": 1,
+    "severe": 1,
+    "shoulder": 1,
+    "step": 1,
+    "summer": 1,
+    "than": 1,
+    "the": 2,
+    "their": 1,
+    "then": 1,
+    "these": 3,
+    "this": 2,
+    "to": 1,
+    "toward": 1,
+    "trump": 1,
+    "two": 1,
+    "utah": 1,
+    "were": 1,
+    "wildfire": 1,
+    "with": 1
+   },
+   "n_sentences": 4,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Utah receives major disaster declaration for flooding and mudslides that followed the 2026 Cottonwood Fire",
+   "type": "statement",
+   "url": "https://governor.utah.gov/uncategorized/utah-receives-major-disaster-declaration-for-flooding-and-mudslides-that-followed-the-2026-cottonwood-fire/",
+   "words": 70
+  },
+  {
+   "counts": {
+    "a": 2,
+    "accountable": 1,
+    "ai": 1,
+    "always": 1,
+    "and": 3,
+    "approach": 1,
+    "better": 1,
+    "between": 1,
+    "but": 1,
+    "by": 1,
+    "can": 1,
+    "choice": 1,
+    "cutting": 1,
+    "demonstrating": 1,
+    "deploying": 1,
+    "dignity": 1,
+    "edge": 1,
+    "enhancing": 1,
+    "ensuring": 1,
+    "false": 1,
+    "generational": 1,
+    "government": 2,
+    "guided": 1,
+    "how": 1,
+    "human": 3,
+    "in": 2,
+    "individual": 1,
+    "innovation": 1,
+    "is": 3,
+    "lead": 1,
+    "liberty": 1,
+    "must": 1,
+    "nation": 1,
+    "one": 1,
+    "opportunity": 1,
+    "our": 1,
+    "people": 1,
+    "preserving": 1,
+    "privacy": 1,
+    "remain": 1,
+    "represents": 1,
+    "safety": 1,
+    "serve": 1,
+    "state": 1,
+    "strictly": 1,
+    "technology": 2,
+    "the": 3,
+    "to": 2,
+    "utah": 1,
+    "utahns": 1,
+    "while": 1
+   },
+   "date": "2026-10-06",
+   "entries": {
+    "a": [
+     0
+    ],
+    "and": [
+     0
+    ],
+    "between": [
+     0
+    ],
+    "choice": [
+     0
+    ],
+    "false": [
+     0
+    ],
+    "government": [
+     0
+    ],
+    "in": [
+     0
+    ],
+    "innovation": [
+     0
+    ],
+    "is": [
+     0
+    ],
+    "one": [
+     0
+    ],
+    "safety": [
+     0
+    ],
+    "the": [
+     0
+    ]
+   },
+   "excerpts": [
+    "The choice between innovation and safety in government is a false one,"
+   ],
+   "id": "2026-10-06-uncategorized-news-release-gov-cox-signs-executive-order-est",
+   "location": "Utah",
+   "msent": {
+    "a": 2,
+    "accountable": 1,
+    "ai": 1,
+    "always": 1,
+    "and": 2,
+    "approach": 1,
+    "better": 1,
+    "between": 1,
+    "but": 1,
+    "by": 1,
+    "can": 1,
+    "choice": 1,
+    "cutting": 1,
+    "demonstrating": 1,
+    "deploying": 1,
+    "dignity": 1,
+    "edge": 1,
+    "enhancing": 1,
+    "ensuring": 1,
+    "false": 1,
+    "generational": 1,
+    "government": 2,
+    "guided": 1,
+    "how": 1,
+    "human": 1,
+    "in": 2,
+    "individual": 1,
+    "innovation": 1,
+    "is": 2,
+    "lead": 1,
+    "liberty": 1,
+    "must": 1,
+    "nation": 1,
+    "one": 1,
+    "opportunity": 1,
+    "our": 1,
+    "people": 1,
+    "preserving": 1,
+    "privacy": 1,
+    "remain": 1,
+    "represents": 1,
+    "safety": 1,
+    "serve": 1,
+    "state": 1,
+    "strictly": 1,
+    "technology": 2,
+    "the": 3,
+    "to": 1,
+    "utah": 1,
+    "utahns": 1,
+    "while": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "NEWS RELEASE: Gov. Cox Signs Executive Order Establishing Utah’s Pro-Human Approach to AI in State Government",
+   "type": "statement",
+   "url": "https://governor.utah.gov/uncategorized/news-release-gov-cox-signs-executive-order-establishing-utahs-pro-human-approach-to-ai-in-state-government/",
+   "words": 64
+  },
+  {
+   "counts": {
+    "a": 6,
+    "abby": 1,
+    "adults": 1,
+    "age": 1,
+    "all": 1,
+    "and": 6,
+    "are": 1,
+    "at": 2,
+    "book": 2,
+    "build": 1,
+    "can": 1,
+    "carry": 1,
+    "chance": 1,
+    "choose": 1,
+    "day": 1,
+    "discover": 1,
+    "down": 1,
+    "every": 1,
+    "everyone": 1,
+    "excitement": 1,
+    "families": 1,
+    "for": 1,
+    "forward": 1,
+    "gives": 1,
+    "grateful": 1,
+    "habit": 1,
+    "happen": 1,
+    "help": 1,
+    "helped": 1,
+    "helps": 1,
+    "home": 1,
+    "hope": 1,
+    "i": 2,
+    "it": 2,
+    "keep": 1,
+    "kids": 3,
+    "let": 1,
+    "let's": 1,
+    "lives": 1,
+    "look": 1,
+    "make": 2,
+    "making": 1,
+    "matters": 1,
+    "new": 1,
+    "of": 2,
+    "older": 1,
+    "our": 2,
+    "parents": 1,
+    "part": 1,
+    "picked": 1,
+    "read": 2,
+    "reading": 2,
+    "rest": 1,
+    "see": 2,
+    "serve": 1,
+    "slow": 1,
+    "something": 1,
+    "spend": 1,
+    "story": 1,
+    "students": 1,
+    "that": 3,
+    "the": 1,
+    "their": 2,
+    "them": 3,
+    "this": 1,
+    "time": 2,
+    "to": 4,
+    "together": 2,
+    "up": 1,
+    "us": 1,
+    "when": 1,
+    "who": 1,
+    "will": 2,
+    "with": 1,
+    "work": 1,
+    "you": 1,
+    "your": 2
+   },
+   "date": "2026-10-02",
+   "entries": {
+    "a": [
+     0,
+     0
+    ],
+    "and": [
+     0
+    ],
+    "book": [
+     0
+    ],
+    "carry": [
+     1
+    ],
+    "chance": [
+     0
+    ],
+    "discover": [
+     0
+    ],
+    "down": [
+     0
+    ],
+    "excitement": [
+     1
+    ],
+    "families": [
+     1
+    ],
+    "gives": [
+     0
+    ],
+    "home": [
+     1
+    ],
+    "hope": [
+     1
+    ],
+    "i": [
+     1
+    ],
+    "new": [
+     0
+    ],
+    "slow": [
+     0
+    ],
+    "something": [
+     0
+    ],
+    "spend": [
+     0
+    ],
+    "that": [
+     1
+    ],
+    "time": [
+     0
+    ],
+    "to": [
+     0
+    ],
+    "together": [
+     0
+    ],
+    "us": [
+     0
+    ],
+    "will": [
+     1
+    ]
+   },
+   "excerpts": [
+    "A book gives us a chance to slow down, spend time together and discover something new,",
+    "I hope families will carry that excitement home."
+   ],
+   "id": "2026-10-02-uncategorized-news-release-utahns-make-time-to-read-for-stat",
+   "location": "Utah",
+   "msent": {
+    "a": 4,
+    "abby": 1,
+    "adults": 1,
+    "age": 1,
+    "all": 1,
+    "and": 5,
+    "are": 1,
+    "at": 1,
+    "book": 2,
+    "build": 1,
+    "can": 1,
+    "carry": 1,
+    "chance": 1,
+    "choose": 1,
+    "day": 1,
+    "discover": 1,
+    "down": 1,
+    "every": 1,
+    "everyone": 1,
+    "excitement": 1,
+    "families": 1,
+    "for": 1,
+    "forward": 1,
+    "gives": 1,
+    "grateful": 1,
+    "habit": 1,
+    "happen": 1,
+    "help": 1,
+    "helped": 1,
+    "helps": 1,
+    "home": 1,
+    "hope": 1,
+    "i": 2,
+    "it": 2,
+    "keep": 1,
+    "kids": 3,
+    "let": 1,
+    "let's": 1,
+    "lives": 1,
+    "look": 1,
+    "make": 2,
+    "making": 1,
+    "matters": 1,
+    "new": 1,
+    "of": 2,
+    "older": 1,
+    "our": 2,
+    "parents": 1,
+    "part": 1,
+    "picked": 1,
+    "read": 2,
+    "reading": 2,
+    "rest": 1,
+    "see": 1,
+    "serve": 1,
+    "slow": 1,
+    "something": 1,
+    "spend": 1,
+    "story": 1,
+    "students": 1,
+    "that": 3,
+    "the": 1,
+    "their": 2,
+    "them": 3,
+    "this": 1,
+    "time": 2,
+    "to": 4,
+    "together": 2,
+    "up": 1,
+    "us": 1,
+    "when": 1,
+    "who": 1,
+    "will": 2,
+    "with": 1,
+    "work": 1,
+    "you": 1,
+    "your": 1
+   },
+   "n_sentences": 6,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "NEWS RELEASE: Utahns make time to read for statewide Utah Reads Read-a-Thon",
+   "type": "statement",
+   "url": "https://governor.utah.gov/uncategorized/news-release-utahns-make-time-to-read-for-statewide-utah-reads-read-a-thon/",
+   "words": 111
+  },
+  {
+   "counts": {
+    "about": 1,
+    "and": 2,
+    "award": 1,
+    "better": 1,
+    "care": 1,
+    "count": 1,
+    "day": 1,
+    "dedication": 1,
+    "doing": 1,
+    "employees": 1,
+    "every": 1,
+    "for": 2,
+    "getting": 1,
+    "grateful": 1,
+    "i'm": 1,
+    "it": 1,
+    "knowing": 1,
+    "life": 1,
+    "making": 1,
+    "names": 1,
+    "of": 1,
+    "often": 1,
+    "on": 1,
+    "our": 1,
+    "people": 2,
+    "proud": 1,
+    "recipients": 1,
+    "recognize": 1,
+    "right": 1,
+    "serve": 1,
+    "state": 1,
+    "the": 4,
+    "their": 1,
+    "them": 1,
+    "these": 1,
+    "they": 1,
+    "to": 1,
+    "utahns": 1,
+    "without": 1,
+    "work": 1
+   },
+   "date": "2026-10-01",
+   "entries": {
+    "and": [
+     0
+    ],
+    "dedication": [
+     0
+    ],
+    "for": [
+     0
+    ],
+    "grateful": [
+     0
+    ],
+    "i'm": [
+     0
+    ],
+    "proud": [
+     0
+    ],
+    "recognize": [
+     0
+    ],
+    "their": [
+     0
+    ],
+    "them": [
+     0
+    ],
+    "to": [
+     0
+    ]
+   },
+   "excerpts": [
+    "I’m grateful for their dedication and proud to recognize them."
+   ],
+   "id": "2026-10-01-uncategorized-gov-cox-honors-state-employees-with-governors",
+   "location": "Utah",
+   "msent": {
+    "about": 1,
+    "and": 2,
+    "award": 1,
+    "better": 1,
+    "care": 1,
+    "count": 1,
+    "day": 1,
+    "dedication": 1,
+    "doing": 1,
+    "employees": 1,
+    "every": 1,
+    "for": 2,
+    "getting": 1,
+    "grateful": 1,
+    "i'm": 1,
+    "it": 1,
+    "knowing": 1,
+    "life": 1,
+    "making": 1,
+    "names": 1,
+    "of": 1,
+    "often": 1,
+    "on": 1,
+    "our": 1,
+    "people": 2,
+    "proud": 1,
+    "recipients": 1,
+    "recognize": 1,
+    "right": 1,
+    "serve": 1,
+    "state": 1,
+    "the": 2,
+    "their": 1,
+    "them": 1,
+    "these": 1,
+    "they": 1,
+    "to": 1,
+    "utahns": 1,
+    "without": 1,
+    "work": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox honors state employees with Governor’s Award for Excellence",
+   "type": "statement",
+   "url": "https://governor.utah.gov/uncategorized/gov-cox-honors-state-employees-with-governors-award-for-excellence/",
+   "words": 46
+  },
+  {
+   "counts": {
+    "a": 4,
+    "across": 1,
+    "administration": 1,
+    "ahead": 1,
+    "and": 6,
+    "another": 1,
+    "back": 1,
+    "big": 1,
+    "but": 1,
+    "can": 1,
+    "collaboration": 1,
+    "continue": 1,
+    "decades": 1,
+    "details": 1,
+    "dispute": 1,
+    "example": 2,
+    "federal": 1,
+    "finish": 1,
+    "focused": 1,
+    "for": 2,
+    "go": 1,
+    "got": 1,
+    "grateful": 1,
+    "great": 2,
+    "habitat": 1,
+    "happen": 1,
+    "health": 1,
+    "his": 1,
+    "i'm": 1,
+    "in": 1,
+    "into": 2,
+    "is": 5,
+    "it": 1,
+    "lake": 4,
+    "legislative": 1,
+    "legislature": 1,
+    "line": 1,
+    "lot": 1,
+    "making": 1,
+    "million": 1,
+    "more": 2,
+    "natural": 1,
+    "of": 4,
+    "old": 1,
+    "on": 1,
+    "or": 1,
+    "our": 2,
+    "partners": 1,
+    "practical": 1,
+    "president": 1,
+    "progress": 1,
+    "protect": 1,
+    "put": 1,
+    "real": 1,
+    "right": 1,
+    "salt": 1,
+    "solutions": 1,
+    "state": 1,
+    "stay": 1,
+    "still": 1,
+    "teams": 1,
+    "that": 1,
+    "the": 9,
+    "there": 1,
+    "this": 5,
+    "through": 1,
+    "to": 2,
+    "took": 1,
+    "trump": 1,
+    "turned": 1,
+    "utah": 2,
+    "vital": 1,
+    "water": 1,
+    "we": 2,
+    "we'll": 1,
+    "what": 1,
+    "when": 1,
+    "who": 1,
+    "will": 1,
+    "win": 1,
+    "with": 1,
+    "work": 1,
+    "worked": 1
+   },
+   "date": "2026-09-25",
+   "entries": {
+    "a": [
+     0
+    ],
+    "ahead": [
+     0
+    ],
+    "and": [
+     1
+    ],
+    "but": [
+     0
+    ],
+    "continue": [
+     1
+    ],
+    "habitat": [
+     1
+    ],
+    "in": [
+     1
+    ],
+    "is": [
+     0,
+     0
+    ],
+    "lake": [
+     1
+    ],
+    "lot": [
+     0
+    ],
+    "making": [
+     0
+    ],
+    "more": [
+     1
+    ],
+    "natural": [
+     1
+    ],
+    "of": [
+     0
+    ],
+    "progress": [
+     0
+    ],
+    "protect": [
+     1
+    ],
+    "put": [
+     1
+    ],
+    "real": [
+     0
+    ],
+    "still": [
+     0
+    ],
+    "the": [
+     1
+    ],
+    "there": [
+     0
+    ],
+    "this": [
+     1
+    ],
+    "to": [
+     1
+    ],
+    "utah": [
+     0
+    ],
+    "vital": [
+     1
+    ],
+    "water": [
+     1
+    ],
+    "we'll": [
+     1
+    ],
+    "work": [
+     0
+    ]
+   },
+   "excerpts": [
+    "There is still a lot of work ahead, but Utah is making real progress.",
+    "We’ll continue to put more water in the lake and protect this vital natural habitat."
+   ],
+   "id": "2026-09-25-uncategorized-utah-secures-60-million-for-great-salt-lake-th",
+   "location": "Utah",
+   "msent": {
+    "a": 4,
+    "across": 1,
+    "administration": 1,
+    "ahead": 1,
+    "and": 3,
+    "another": 1,
+    "back": 1,
+    "big": 1,
+    "but": 1,
+    "can": 1,
+    "collaboration": 1,
+    "continue": 1,
+    "decades": 1,
+    "details": 1,
+    "dispute": 1,
+    "example": 2,
+    "federal": 1,
+    "finish": 1,
+    "focused": 1,
+    "for": 2,
+    "go": 1,
+    "got": 1,
+    "grateful": 1,
+    "great": 2,
+    "habitat": 1,
+    "happen": 1,
+    "health": 1,
+    "his": 1,
+    "i'm": 1,
+    "in": 1,
+    "into": 1,
+    "is": 4,
+    "it": 1,
+    "lake": 4,
+    "legislative": 1,
+    "legislature": 1,
+    "line": 1,
+    "lot": 1,
+    "making": 1,
+    "million": 1,
+    "more": 2,
+    "natural": 1,
+    "of": 4,
+    "old": 1,
+    "on": 1,
+    "or": 1,
+    "our": 2,
+    "partners": 1,
+    "practical": 1,
+    "president": 1,
+    "progress": 1,
+    "protect": 1,
+    "put": 1,
+    "real": 1,
+    "right": 1,
+    "salt": 1,
+    "solutions": 1,
+    "state": 1,
+    "stay": 1,
+    "still": 1,
+    "teams": 1,
+    "that": 1,
+    "the": 6,
+    "there": 1,
+    "this": 5,
+    "through": 1,
+    "to": 2,
+    "took": 1,
+    "trump": 1,
+    "turned": 1,
+    "utah": 2,
+    "vital": 1,
+    "water": 1,
+    "we": 2,
+    "we'll": 1,
+    "what": 1,
+    "when": 1,
+    "who": 1,
+    "will": 1,
+    "win": 1,
+    "with": 1,
+    "work": 1,
+    "worked": 1
+   },
+   "n_sentences": 7,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Utah secures $60 million for Great Salt Lake through settlement agreement",
+   "type": "statement",
+   "url": "https://governor.utah.gov/uncategorized/utah-secures-60-million-for-great-salt-lake-through-settlement-agreement/",
+   "words": 122
+  },
+  {
+   "counts": {
+    "a": 1,
+    "about": 1,
+    "access": 1,
+    "across": 1,
+    "alone": 1,
+    "and": 5,
+    "but": 1,
+    "by": 1,
+    "can": 1,
+    "cares": 1,
+    "connected": 1,
+    "deeply": 1,
+    "dignity": 1,
+    "easier": 1,
+    "every": 1,
+    "family": 1,
+    "federal": 1,
+    "for": 1,
+    "government": 1,
+    "have": 1,
+    "heal": 1,
+    "individual": 1,
+    "is": 1,
+    "it": 2,
+    "journey": 1,
+    "lives": 1,
+    "long": 1,
+    "make": 1,
+    "no": 1,
+    "one": 1,
+    "our": 1,
+    "partners": 1,
+    "personal": 1,
+    "purpose": 1,
+    "rebuild": 1,
+    "reclaim": 1,
+    "recovery": 1,
+    "remain": 1,
+    "should": 1,
+    "support": 1,
+    "term": 1,
+    "their": 1,
+    "to": 4,
+    "together": 1,
+    "treatment": 1,
+    "utah": 1,
+    "utahns": 1,
+    "walk": 1,
+    "we": 1,
+    "with": 2,
+    "working": 2
+   },
+   "date": "2026-09-21",
+   "entries": {
+    "about": [
+     0
+    ],
+    "and": [
+     0,
+     0
+    ],
+    "cares": [
+     0
+    ],
+    "deeply": [
+     0
+    ],
+    "every": [
+     0
+    ],
+    "family": [
+     0
+    ],
+    "heal": [
+     0
+    ],
+    "individual": [
+     0
+    ],
+    "rebuild": [
+     0
+    ],
+    "to": [
+     0
+    ],
+    "utah": [
+     0
+    ],
+    "working": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Utah cares deeply about every individual and family working to rebuild and heal,"
+   ],
+   "id": "2026-09-21-iative-executive-order-strengthens-coordination-to-help-utah",
+   "location": "Utah",
+   "msent": {
+    "a": 1,
+    "about": 1,
+    "access": 1,
+    "across": 1,
+    "alone": 1,
+    "and": 2,
+    "but": 1,
+    "by": 1,
+    "can": 1,
+    "cares": 1,
+    "connected": 1,
+    "deeply": 1,
+    "dignity": 1,
+    "easier": 1,
+    "every": 1,
+    "family": 1,
+    "federal": 1,
+    "for": 1,
+    "government": 1,
+    "have": 1,
+    "heal": 1,
+    "individual": 1,
+    "is": 1,
+    "it": 2,
+    "journey": 1,
+    "lives": 1,
+    "long": 1,
+    "make": 1,
+    "no": 1,
+    "one": 1,
+    "our": 1,
+    "partners": 1,
+    "personal": 1,
+    "purpose": 1,
+    "rebuild": 1,
+    "reclaim": 1,
+    "recovery": 1,
+    "remain": 1,
+    "should": 1,
+    "support": 1,
+    "term": 1,
+    "their": 1,
+    "to": 3,
+    "together": 1,
+    "treatment": 1,
+    "utah": 1,
+    "utahns": 1,
+    "walk": 1,
+    "we": 1,
+    "with": 1,
+    "working": 2
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox launches Recovery Utah Initiative Executive order strengthens coordination to help Utahns access treatment, recovery support and long-term stability",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-launches-recovery-utah-initiative-executive-order-strengthens-coordination-to-help-utahns-access-treatment-recovery-support-and-long-term-stability/",
+   "words": 61
+  },
+  {
+   "counts": {
+    "americans": 1,
+    "and": 3,
+    "as": 1,
+    "attacks": 1,
+    "carry": 1,
+    "courage": 1,
+    "day": 1,
+    "even": 1,
+    "followed": 1,
+    "for": 1,
+    "forget": 1,
+    "forward": 1,
+    "history": 1,
+    "honor": 1,
+    "important": 1,
+    "is": 1,
+    "lessons": 1,
+    "lives": 1,
+    "lost": 2,
+    "makes": 1,
+    "mark": 1,
+    "memory": 1,
+    "millions": 1,
+    "more": 1,
+    "never": 1,
+    "now": 1,
+    "of": 2,
+    "our": 1,
+    "promise": 1,
+    "rather": 1,
+    "remember": 1,
+    "sacrifice": 1,
+    "september": 2,
+    "since": 1,
+    "story": 1,
+    "tell": 1,
+    "than": 1,
+    "that": 3,
+    "the": 5,
+    "those": 1,
+    "to": 2,
+    "we": 3,
+    "years": 1
+   },
+   "date": "2026-09-10",
+   "entries": {
+    "americans": [
+     0
+    ],
+    "for": [
+     0
+    ],
+    "history": [
+     0
+    ],
+    "is": [
+     0
+    ],
+    "memory": [
+     0
+    ],
+    "millions": [
+     0
+    ],
+    "now": [
+     0
+    ],
+    "of": [
+     0
+    ],
+    "rather": [
+     0
+    ],
+    "september": [
+     0
+    ],
+    "than": [
+     0
+    ]
+   },
+   "excerpts": [
+    "For millions of Americans, September 11 is now history rather than memory."
+   ],
+   "id": "2026-09-10-press-gov-cox-orders-flags-lowered-to-half-staff-on-sept-11",
+   "location": "Utah",
+   "msent": {
+    "americans": 1,
+    "and": 2,
+    "as": 1,
+    "attacks": 1,
+    "carry": 1,
+    "courage": 1,
+    "day": 1,
+    "even": 1,
+    "followed": 1,
+    "for": 1,
+    "forget": 1,
+    "forward": 1,
+    "history": 1,
+    "honor": 1,
+    "important": 1,
+    "is": 1,
+    "lessons": 1,
+    "lives": 1,
+    "lost": 2,
+    "makes": 1,
+    "mark": 1,
+    "memory": 1,
+    "millions": 1,
+    "more": 1,
+    "never": 1,
+    "now": 1,
+    "of": 2,
+    "our": 1,
+    "promise": 1,
+    "rather": 1,
+    "remember": 1,
+    "sacrifice": 1,
+    "september": 2,
+    "since": 1,
+    "story": 1,
+    "tell": 1,
+    "than": 1,
+    "that": 2,
+    "the": 2,
+    "those": 1,
+    "to": 1,
+    "we": 2,
+    "years": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox orders flags lowered to half-staff on Sept. 11",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-orders-flags-lowered-to-half-staff-on-sept-11/",
+   "words": 57
+  },
+  {
+   "counts": {
+    "accomplish": 1,
+    "action": 2,
+    "ago": 1,
+    "ahead": 1,
+    "all": 1,
+    "along": 1,
+    "and": 4,
+    "being": 1,
+    "both": 1,
+    "can": 1,
+    "changes": 2,
+    "children": 4,
+    "chosen": 1,
+    "clear": 1,
+    "companies": 1,
+    "continue": 1,
+    "could": 1,
+    "determined": 1,
+    "ensure": 1,
+    "every": 2,
+    "fighting": 1,
+    "has": 1,
+    "have": 1,
+    "help": 1,
+    "historic": 1,
+    "hold": 1,
+    "i": 1,
+    "implement": 1,
+    "it": 1,
+    "made": 1,
+    "make": 2,
+    "media": 1,
+    "meta": 2,
+    "millions": 1,
+    "more": 1,
+    "necessary": 1,
+    "not": 1,
+    "of": 4,
+    "our": 1,
+    "platform": 1,
+    "profit": 1,
+    "promise": 1,
+    "protect": 3,
+    "proves": 1,
+    "puts": 1,
+    "reforms": 1,
+    "said": 1,
+    "settlement": 1,
+    "social": 1,
+    "state": 1,
+    "strong": 1,
+    "than": 1,
+    "that": 3,
+    "the": 3,
+    "these": 2,
+    "they": 1,
+    "three": 1,
+    "to": 4,
+    "today": 1,
+    "unprecedented": 1,
+    "urgency": 1,
+    "warning": 1,
+    "we": 2,
+    "well": 1,
+    "what": 1,
+    "will": 3,
+    "without": 1,
+    "would": 1,
+    "years": 1
+   },
+   "date": "2026-08-26",
+   "entries": {
+    "accomplish": [
+     0
+    ],
+    "action": [
+     0
+    ],
+    "and": [
+     0
+    ],
+    "both": [
+     0
+    ],
+    "can": [
+     0
+    ],
+    "determined": [
+     0
+    ],
+    "historic": [
+     0
+    ],
+    "of": [
+     0
+    ],
+    "proves": [
+     0
+    ],
+    "settlement": [
+     0
+    ],
+    "state": [
+     0
+    ],
+    "that": [
+     0
+    ],
+    "the": [
+     0
+    ],
+    "today": [
+     0
+    ],
+    "urgency": [
+     0
+    ],
+    "warning": [
+     0
+    ],
+    "what": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Today’s historic settlement proves both the urgency of that warning and what determined state action can accomplish."
+   ],
+   "id": "2026-08-26-press-utah-secures-12-2-billion-settlement-with-meta-over-ch",
+   "location": "Utah",
+   "msent": {
+    "accomplish": 1,
+    "action": 2,
+    "ago": 1,
+    "ahead": 1,
+    "all": 1,
+    "along": 1,
+    "and": 3,
+    "being": 1,
+    "both": 1,
+    "can": 1,
+    "changes": 2,
+    "children": 3,
+    "chosen": 1,
+    "clear": 1,
+    "companies": 1,
+    "continue": 1,
+    "could": 1,
+    "determined": 1,
+    "ensure": 1,
+    "every": 1,
+    "fighting": 1,
+    "has": 1,
+    "have": 1,
+    "help": 1,
+    "historic": 1,
+    "hold": 1,
+    "i": 1,
+    "implement": 1,
+    "it": 1,
+    "made": 1,
+    "make": 2,
+    "media": 1,
+    "meta": 2,
+    "millions": 1,
+    "more": 1,
+    "necessary": 1,
+    "not": 1,
+    "of": 3,
+    "our": 1,
+    "platform": 1,
+    "profit": 1,
+    "promise": 1,
+    "protect": 2,
+    "proves": 1,
+    "puts": 1,
+    "reforms": 1,
+    "said": 1,
+    "settlement": 1,
+    "social": 1,
+    "state": 1,
+    "strong": 1,
+    "than": 1,
+    "that": 3,
+    "the": 3,
+    "these": 1,
+    "they": 1,
+    "three": 1,
+    "to": 3,
+    "today": 1,
+    "unprecedented": 1,
+    "urgency": 1,
+    "warning": 1,
+    "we": 1,
+    "well": 1,
+    "what": 1,
+    "will": 2,
+    "without": 1,
+    "would": 1,
+    "years": 1
+   },
+   "n_sentences": 4,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Utah Secures $12.2 Billion Settlement With Meta Over Child Safety Practices",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/utah-secures-12-2-billion-settlement-with-meta-over-child-safety-practices/",
+   "words": 96
+  },
+  {
+   "counts": {
+    "aid": 1,
+    "and": 5,
+    "andersen": 1,
+    "came": 1,
+    "chris": 1,
+    "dedicated": 1,
+    "elliott": 1,
+    "families": 1,
+    "forget": 1,
+    "honors": 1,
+    "lives": 1,
+    "loved": 1,
+    "made": 1,
+    "men": 1,
+    "miles": 1,
+    "most": 1,
+    "mourns": 1,
+    "needed": 1,
+    "never": 1,
+    "ones": 1,
+    "others": 1,
+    "our": 2,
+    "protecting": 1,
+    "sacrifice": 2,
+    "service": 1,
+    "serving": 1,
+    "state": 1,
+    "the": 1,
+    "their": 3,
+    "them": 1,
+    "they": 1,
+    "to": 2,
+    "two": 1,
+    "ultimate": 1,
+    "utah": 1,
+    "we": 2,
+    "when": 1,
+    "while": 1,
+    "who": 1,
+    "will": 1,
+    "with": 1
+   },
+   "date": "2026-08-11",
+   "entries": {
+    "and": [
+     0
+    ],
+    "forget": [
+     0
+    ],
+    "never": [
+     0
+    ],
+    "sacrifice": [
+     0
+    ],
+    "service": [
+     0
+    ],
+    "their": [
+     0
+    ],
+    "we": [
+     0
+    ],
+    "will": [
+     0
+    ]
+   },
+   "excerpts": [
+    "We will never forget their service and sacrifice."
+   ],
+   "id": "2026-08-11-press-gov-cox-orders-flags-lowered-in-honor-of-firefighter-p",
+   "location": "Utah",
+   "msent": {
+    "aid": 1,
+    "and": 3,
+    "andersen": 1,
+    "came": 1,
+    "chris": 1,
+    "dedicated": 1,
+    "elliott": 1,
+    "families": 1,
+    "forget": 1,
+    "honors": 1,
+    "lives": 1,
+    "loved": 1,
+    "made": 1,
+    "men": 1,
+    "miles": 1,
+    "most": 1,
+    "mourns": 1,
+    "needed": 1,
+    "never": 1,
+    "ones": 1,
+    "others": 1,
+    "our": 2,
+    "protecting": 1,
+    "sacrifice": 2,
+    "service": 1,
+    "serving": 1,
+    "state": 1,
+    "the": 1,
+    "their": 3,
+    "them": 1,
+    "they": 1,
+    "to": 2,
+    "two": 1,
+    "ultimate": 1,
+    "utah": 1,
+    "we": 2,
+    "when": 1,
+    "while": 1,
+    "who": 1,
+    "will": 1,
+    "with": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox orders flags lowered in honor of firefighter pilots killed battling Widemouth 2 Fire",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-orders-flags-lowered-in-honor-of-firefighter-pilots-killed-battling-widemouth-2-fire/",
+   "words": 51
+  },
+  {
+   "counts": {
+    "a": 3,
+    "about": 1,
+    "advanced": 1,
+    "already": 1,
+    "and": 7,
+    "are": 1,
+    "assets": 1,
+    "base": 1,
+    "building": 1,
+    "built": 1,
+    "change": 1,
+    "class": 1,
+    "comes": 1,
+    "communicate": 1,
+    "compute": 1,
+    "connecting": 1,
+    "country": 1,
+    "defend": 1,
+    "defense": 1,
+    "discover": 1,
+    "for": 1,
+    "future": 1,
+    "going": 1,
+    "growing": 1,
+    "has": 1,
+    "have": 1,
+    "help": 1,
+    "here": 1,
+    "how": 1,
+    "important": 1,
+    "in": 1,
+    "infrastructure": 1,
+    "initiative": 1,
+    "invented": 1,
+    "is": 2,
+    "lead": 1,
+    "making": 1,
+    "manufacture": 1,
+    "manufacturing": 1,
+    "medicines": 1,
+    "new": 1,
+    "next": 1,
+    "of": 1,
+    "our": 1,
+    "people": 1,
+    "put": 1,
+    "quantum": 1,
+    "ready": 1,
+    "researchers": 1,
+    "sector": 1,
+    "semiconductor": 1,
+    "strengths": 1,
+    "strong": 1,
+    "sure": 1,
+    "technologies": 1,
+    "technology": 2,
+    "that": 1,
+    "the": 3,
+    "this": 1,
+    "those": 1,
+    "to": 3,
+    "transformation": 1,
+    "utah": 2,
+    "we": 2,
+    "what": 1,
+    "work": 1,
+    "workforce": 1,
+    "world": 1
+   },
+   "date": "2026-08-10",
+   "entries": {
+    "a": [
+     0,
+     0
+    ],
+    "advanced": [
+     0
+    ],
+    "already": [
+     0
+    ],
+    "and": [
+     0,
+     0
+    ],
+    "assets": [
+     0
+    ],
+    "base": [
+     0
+    ],
+    "class": [
+     0
+    ],
+    "defense": [
+     0
+    ],
+    "growing": [
+     0
+    ],
+    "have": [
+     0
+    ],
+    "important": [
+     0
+    ],
+    "manufacturing": [
+     0
+    ],
+    "researchers": [
+     0
+    ],
+    "sector": [
+     0
+    ],
+    "semiconductor": [
+     0
+    ],
+    "strong": [
+     0
+    ],
+    "technology": [
+     0
+    ],
+    "we": [
+     0
+    ],
+    "world": [
+     0
+    ]
+   },
+   "excerpts": [
+    "We already have world-class researchers, a strong semiconductor and advanced manufacturing base, a growing technology sector and important defense assets."
+   ],
+   "id": "2026-08-10-press-gov-cox-launches-utah-quantum-initiative",
+   "location": "Utah",
+   "msent": {
+    "a": 2,
+    "about": 1,
+    "advanced": 1,
+    "already": 1,
+    "and": 3,
+    "are": 1,
+    "assets": 1,
+    "base": 1,
+    "building": 1,
+    "built": 1,
+    "change": 1,
+    "class": 1,
+    "comes": 1,
+    "communicate": 1,
+    "compute": 1,
+    "connecting": 1,
+    "country": 1,
+    "defend": 1,
+    "defense": 1,
+    "discover": 1,
+    "for": 1,
+    "future": 1,
+    "going": 1,
+    "growing": 1,
+    "has": 1,
+    "have": 1,
+    "help": 1,
+    "here": 1,
+    "how": 1,
+    "important": 1,
+    "in": 1,
+    "infrastructure": 1,
+    "initiative": 1,
+    "invented": 1,
+    "is": 2,
+    "lead": 1,
+    "making": 1,
+    "manufacture": 1,
+    "manufacturing": 1,
+    "medicines": 1,
+    "new": 1,
+    "next": 1,
+    "of": 1,
+    "our": 1,
+    "people": 1,
+    "put": 1,
+    "quantum": 1,
+    "ready": 1,
+    "researchers": 1,
+    "sector": 1,
+    "semiconductor": 1,
+    "strengths": 1,
+    "strong": 1,
+    "sure": 1,
+    "technologies": 1,
+    "technology": 2,
+    "that": 1,
+    "the": 2,
+    "this": 1,
+    "those": 1,
+    "to": 2,
+    "transformation": 1,
+    "utah": 2,
+    "we": 2,
+    "what": 1,
+    "work": 1,
+    "workforce": 1,
+    "world": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox launches Utah Quantum Initiative",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-launches-utah-quantum-initiative/",
+   "words": 84
+  },
+  {
+   "counts": {
+    "a": 1,
+    "an": 1,
+    "and": 5,
+    "are": 3,
+    "areas": 2,
+    "around": 1,
+    "available": 1,
+    "avoid": 1,
+    "become": 1,
+    "below": 1,
+    "burn": 1,
+    "by": 1,
+    "can": 2,
+    "caused": 1,
+    "clock": 1,
+    "communities": 2,
+    "continue": 1,
+    "continued": 1,
+    "countless": 1,
+    "crews": 1,
+    "deadly": 1,
+    "declaration": 1,
+    "difficult": 1,
+    "emergency": 1,
+    "endured": 1,
+    "enforcement": 1,
+    "ensures": 1,
+    "every": 2,
+    "everyone": 1,
+    "facing": 1,
+    "firefighters": 1,
+    "fires": 1,
+    "flood": 1,
+    "flooded": 1,
+    "flooding": 2,
+    "for": 1,
+    "grateful": 1,
+    "grieving": 1,
+    "have": 1,
+    "heartbreaking": 1,
+    "hearts": 1,
+    "heed": 1,
+    "help": 1,
+    "in": 2,
+    "incredibly": 1,
+    "it's": 1,
+    "keep": 1,
+    "law": 1,
+    "life": 1,
+    "local": 1,
+    "loss": 1,
+    "managers": 1,
+    "many": 1,
+    "moments": 1,
+    "moving": 1,
+    "never": 1,
+    "now": 1,
+    "of": 2,
+    "officers": 1,
+    "others": 1,
+    "our": 1,
+    "painful": 1,
+    "particularly": 1,
+    "power": 1,
+    "prepare": 1,
+    "providing": 1,
+    "public": 1,
+    "recover": 1,
+    "remain": 1,
+    "reminder": 1,
+    "resource": 1,
+    "respond": 1,
+    "risks": 1,
+    "safe": 1,
+    "same": 1,
+    "scar": 1,
+    "season": 1,
+    "summer": 1,
+    "that": 2,
+    "the": 5,
+    "these": 1,
+    "this": 2,
+    "those": 1,
+    "threatening": 1,
+    "throughout": 1,
+    "to": 4,
+    "underestimate": 1,
+    "urge": 1,
+    "utahn": 1,
+    "utahns": 2,
+    "warnings": 1,
+    "water": 1,
+    "we": 3,
+    "wildfire": 1,
+    "with": 1,
+    "working": 1,
+    "works": 1
+   },
+   "date": "2026-07-22",
+   "entries": {
+    "and": [
+     0
+    ],
+    "are": [
+     0
+    ],
+    "around": [
+     0
+    ],
+    "clock": [
+     0
+    ],
+    "countless": [
+     0
+    ],
+    "crews": [
+     0
+    ],
+    "emergency": [
+     0
+    ],
+    "enforcement": [
+     0
+    ],
+    "firefighters": [
+     0
+    ],
+    "grateful": [
+     0
+    ],
+    "keep": [
+     0
+    ],
+    "law": [
+     0
+    ],
+    "managers": [
+     0
+    ],
+    "officers": [
+     0
+    ],
+    "others": [
+     0
+    ],
+    "public": [
+     0
+    ],
+    "safe": [
+     0
+    ],
+    "the": [
+     0,
+     0
+    ],
+    "to": [
+     0,
+     0
+    ],
+    "utahns": [
+     0
+    ],
+    "we": [
+     0
+    ],
+    "working": [
+     0
+    ],
+    "works": [
+     0
+    ]
+   },
+   "excerpts": [
+    "We are grateful to the firefighters, emergency managers, law enforcement officers, public works crews and countless others working around the clock to keep Utahns safe."
+   ],
+   "id": "2026-07-22-d-gov-cox-declares-state-of-emergency-for-beaver-piute-and-s",
+   "location": "Utah",
+   "msent": {
+    "a": 1,
+    "an": 1,
+    "and": 5,
+    "are": 3,
+    "areas": 2,
+    "around": 1,
+    "available": 1,
+    "avoid": 1,
+    "become": 1,
+    "below": 1,
+    "burn": 1,
+    "by": 1,
+    "can": 2,
+    "caused": 1,
+    "clock": 1,
+    "communities": 2,
+    "continue": 1,
+    "continued": 1,
+    "countless": 1,
+    "crews": 1,
+    "deadly": 1,
+    "declaration": 1,
+    "difficult": 1,
+    "emergency": 1,
+    "endured": 1,
+    "enforcement": 1,
+    "ensures": 1,
+    "every": 2,
+    "everyone": 1,
+    "facing": 1,
+    "firefighters": 1,
+    "fires": 1,
+    "flood": 1,
+    "flooded": 1,
+    "flooding": 2,
+    "for": 1,
+    "grateful": 1,
+    "grieving": 1,
+    "have": 1,
+    "heartbreaking": 1,
+    "hearts": 1,
+    "heed": 1,
+    "help": 1,
+    "in": 1,
+    "incredibly": 1,
+    "it's": 1,
+    "keep": 1,
+    "law": 1,
+    "life": 1,
+    "local": 1,
+    "loss": 1,
+    "managers": 1,
+    "many": 1,
+    "moments": 1,
+    "moving": 1,
+    "never": 1,
+    "now": 1,
+    "of": 2,
+    "officers": 1,
+    "others": 1,
+    "our": 1,
+    "painful": 1,
+    "particularly": 1,
+    "power": 1,
+    "prepare": 1,
+    "providing": 1,
+    "public": 1,
+    "recover": 1,
+    "remain": 1,
+    "reminder": 1,
+    "resource": 1,
+    "respond": 1,
+    "risks": 1,
+    "safe": 1,
+    "same": 1,
+    "scar": 1,
+    "season": 1,
+    "summer": 1,
+    "that": 2,
+    "the": 3,
+    "these": 1,
+    "this": 2,
+    "those": 1,
+    "threatening": 1,
+    "throughout": 1,
+    "to": 3,
+    "underestimate": 1,
+    "urge": 1,
+    "utahn": 1,
+    "utahns": 2,
+    "warnings": 1,
+    "water": 1,
+    "we": 3,
+    "wildfire": 1,
+    "with": 1,
+    "working": 1,
+    "works": 1
+   },
+   "n_sentences": 6,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox declares state of emergency for Beaver, Piute and Sevier counties following wildfires and catastrophic flooding",
+   "type": "statement",
+   "url": "https://governor.utah.gov/uncategorized/gov-cox-declares-state-of-emergency-for-beaver-piute-and-sevier-counties-following-wildfires-and-catastrophic-flooding/",
+   "words": 122
+  },
+  {
+   "counts": {
+    "across": 1,
+    "and": 2,
+    "approach": 1,
+    "areas": 1,
+    "at": 2,
+    "brought": 1,
+    "communities": 2,
+    "conditions": 2,
+    "danger": 1,
+    "decisions": 1,
+    "enough": 1,
+    "ensuring": 1,
+    "exactly": 1,
+    "happened": 1,
+    "have": 2,
+    "highest": 1,
+    "hopeful": 1,
+    "improve": 1,
+    "in": 1,
+    "lives": 1,
+    "local": 1,
+    "many": 2,
+    "meaningful": 1,
+    "more": 1,
+    "now": 1,
+    "of": 2,
+    "other": 1,
+    "our": 1,
+    "parts": 1,
+    "property": 1,
+    "protect": 1,
+    "recent": 1,
+    "recognizes": 1,
+    "relief": 1,
+    "remain": 1,
+    "remains": 1,
+    "return": 1,
+    "risk": 1,
+    "safely": 1,
+    "same": 1,
+    "serious": 1,
+    "state": 1,
+    "still": 1,
+    "storms": 1,
+    "that": 1,
+    "that's": 1,
+    "the": 4,
+    "this": 1,
+    "time": 1,
+    "to": 4,
+    "tools": 1,
+    "utah": 2,
+    "vary": 1,
+    "we": 2,
+    "were": 1,
+    "what's": 1,
+    "where": 1,
+    "while": 1,
+    "wildfire": 1,
+    "would": 1
+   },
+   "date": "2026-07-20",
+   "entries": {
+    "areas": [
+     0
+    ],
+    "brought": [
+     0
+    ],
+    "have": [
+     0
+    ],
+    "many": [
+     0
+    ],
+    "meaningful": [
+     0
+    ],
+    "of": [
+     0
+    ],
+    "recent": [
+     0
+    ],
+    "relief": [
+     0
+    ],
+    "state": [
+     0
+    ],
+    "storms": [
+     0
+    ],
+    "the": [
+     0
+    ],
+    "to": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Recent storms have brought meaningful relief to many areas of the state."
+   ],
+   "id": "2026-07-20-press-gov-cox-announces-updated-fireworks-guidance-as-wildfi",
+   "location": "Utah",
+   "msent": {
+    "across": 1,
+    "and": 2,
+    "approach": 1,
+    "areas": 1,
+    "at": 1,
+    "brought": 1,
+    "communities": 2,
+    "conditions": 2,
+    "danger": 1,
+    "decisions": 1,
+    "enough": 1,
+    "ensuring": 1,
+    "exactly": 1,
+    "happened": 1,
+    "have": 2,
+    "highest": 1,
+    "hopeful": 1,
+    "improve": 1,
+    "in": 1,
+    "lives": 1,
+    "local": 1,
+    "many": 2,
+    "meaningful": 1,
+    "more": 1,
+    "now": 1,
+    "of": 2,
+    "other": 1,
+    "our": 1,
+    "parts": 1,
+    "property": 1,
+    "protect": 1,
+    "recent": 1,
+    "recognizes": 1,
+    "relief": 1,
+    "remain": 1,
+    "remains": 1,
+    "return": 1,
+    "risk": 1,
+    "safely": 1,
+    "same": 1,
+    "serious": 1,
+    "state": 1,
+    "still": 1,
+    "storms": 1,
+    "that": 1,
+    "that's": 1,
+    "the": 3,
+    "this": 1,
+    "time": 1,
+    "to": 3,
+    "tools": 1,
+    "utah": 2,
+    "vary": 1,
+    "we": 2,
+    "were": 1,
+    "what's": 1,
+    "where": 1,
+    "while": 1,
+    "wildfire": 1,
+    "would": 1
+   },
+   "n_sentences": 4,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox announces updated fireworks guidance as wildfire conditions improve in parts of Utah",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-announces-updated-fireworks-guidance-as-wildfire-conditions-improve-in-parts-of-utah/",
+   "words": 75
+  },
+  {
+   "counts": {
+    "acres": 1,
+    "agencies": 1,
+    "allowing": 1,
+    "and": 2,
+    "been": 1,
+    "best": 1,
+    "but": 1,
+    "caring": 1,
+    "cultural": 1,
+    "deeply": 1,
+    "direct": 1,
+    "federal": 1,
+    "for": 1,
+    "has": 1,
+    "historic": 1,
+    "how": 1,
+    "landmarks": 1,
+    "limited": 1,
+    "millions": 1,
+    "nationally": 1,
+    "natural": 1,
+    "never": 1,
+    "of": 1,
+    "other": 1,
+    "protect": 2,
+    "protection": 1,
+    "question": 1,
+    "rather": 1,
+    "remain": 1,
+    "resources": 2,
+    "scientific": 1,
+    "significant": 1,
+    "sites": 1,
+    "specific": 1,
+    "surrounding": 1,
+    "than": 1,
+    "the": 2,
+    "them": 2,
+    "these": 2,
+    "to": 3,
+    "toward": 1,
+    "treasures": 1,
+    "under": 1,
+    "value": 1,
+    "we": 1,
+    "whether": 1,
+    "while": 1
+   },
+   "date": "2026-07-13",
+   "entries": {
+    "and": [
+     0
+    ],
+    "cultural": [
+     0
+    ],
+    "deeply": [
+     0
+    ],
+    "natural": [
+     0
+    ],
+    "scientific": [
+     0
+    ],
+    "these": [
+     0
+    ],
+    "treasures": [
+     0
+    ],
+    "value": [
+     0
+    ],
+    "we": [
+     0
+    ]
+   },
+   "excerpts": [
+    "We deeply value these natural, cultural, and scientific treasures,"
+   ],
+   "id": "2026-07-13-press-the-state-of-utah-applauds-national-monuments-modifica",
+   "location": "Utah",
+   "msent": {
+    "acres": 1,
+    "agencies": 1,
+    "allowing": 1,
+    "and": 2,
+    "been": 1,
+    "best": 1,
+    "but": 1,
+    "caring": 1,
+    "cultural": 1,
+    "deeply": 1,
+    "direct": 1,
+    "federal": 1,
+    "for": 1,
+    "has": 1,
+    "historic": 1,
+    "how": 1,
+    "landmarks": 1,
+    "limited": 1,
+    "millions": 1,
+    "nationally": 1,
+    "natural": 1,
+    "never": 1,
+    "of": 1,
+    "other": 1,
+    "protect": 1,
+    "protection": 1,
+    "question": 1,
+    "rather": 1,
+    "remain": 1,
+    "resources": 1,
+    "scientific": 1,
+    "significant": 1,
+    "sites": 1,
+    "specific": 1,
+    "surrounding": 1,
+    "than": 1,
+    "the": 2,
+    "them": 1,
+    "these": 2,
+    "to": 2,
+    "toward": 1,
+    "treasures": 1,
+    "under": 1,
+    "value": 1,
+    "we": 1,
+    "whether": 1,
+    "while": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "The State of Utah Applauds National Monuments Modifications",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/the-state-of-utah-applauds-national-monuments-modifications/",
+   "words": 55
+  },
+  {
+   "counts": {
+    "afford": 1,
+    "align": 1,
+    "and": 3,
+    "at": 1,
+    "better": 1,
+    "build": 1,
+    "can": 1,
+    "can't": 1,
+    "communities": 1,
+    "division": 1,
+    "dream": 1,
+    "economy": 1,
+    "families": 1,
+    "first": 1,
+    "for": 1,
+    "foundational": 1,
+    "generation": 1,
+    "help": 1,
+    "homes": 1,
+    "housing": 1,
+    "if": 1,
+    "in": 1,
+    "innovation": 1,
+    "is": 2,
+    "keep": 2,
+    "live": 1,
+    "local": 1,
+    "long": 1,
+    "more": 1,
+    "neighborhoods": 1,
+    "new": 1,
+    "next": 1,
+    "opportunity": 1,
+    "our": 3,
+    "partnerships": 1,
+    "people": 1,
+    "private": 1,
+    "prosperity": 1,
+    "reach": 1,
+    "resources": 1,
+    "responders": 1,
+    "risk": 1,
+    "running": 1,
+    "sector": 1,
+    "serve": 1,
+    "so": 1,
+    "state": 1,
+    "strengthen": 1,
+    "teachers": 1,
+    "term": 1,
+    "the": 4,
+    "they": 1,
+    "this": 1,
+    "to": 2,
+    "us": 1,
+    "utah": 1,
+    "we": 1,
+    "who": 1,
+    "will": 1,
+    "within": 1,
+    "young": 1
+   },
+   "date": "2026-07-01",
+   "entries": {
+    "foundational": [
+     0
+    ],
+    "housing": [
+     0
+    ],
+    "is": [
+     0
+    ],
+    "opportunity": [
+     0
+    ],
+    "to": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Housing is foundational to opportunity."
+   ],
+   "id": "2026-07-01-press-utah-launches-division-of-housing-and-community-develo",
+   "location": "Utah",
+   "msent": {
+    "afford": 1,
+    "align": 1,
+    "and": 2,
+    "at": 1,
+    "better": 1,
+    "build": 1,
+    "can": 1,
+    "can't": 1,
+    "communities": 1,
+    "division": 1,
+    "dream": 1,
+    "economy": 1,
+    "families": 1,
+    "first": 1,
+    "for": 1,
+    "foundational": 1,
+    "generation": 1,
+    "help": 1,
+    "homes": 1,
+    "housing": 1,
+    "if": 1,
+    "in": 1,
+    "innovation": 1,
+    "is": 2,
+    "keep": 2,
+    "live": 1,
+    "local": 1,
+    "long": 1,
+    "more": 1,
+    "neighborhoods": 1,
+    "new": 1,
+    "next": 1,
+    "opportunity": 1,
+    "our": 2,
+    "partnerships": 1,
+    "people": 1,
+    "private": 1,
+    "prosperity": 1,
+    "reach": 1,
+    "resources": 1,
+    "responders": 1,
+    "risk": 1,
+    "running": 1,
+    "sector": 1,
+    "serve": 1,
+    "so": 1,
+    "state": 1,
+    "strengthen": 1,
+    "teachers": 1,
+    "term": 1,
+    "the": 2,
+    "they": 1,
+    "this": 1,
+    "to": 2,
+    "us": 1,
+    "utah": 1,
+    "we": 1,
+    "who": 1,
+    "will": 1,
+    "within": 1,
+    "young": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Utah launches Division of Housing and Community Development to accelerate homebuilding",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/utah-launches-division-of-housing-and-community-development-to-accelerate-homebuilding/",
+   "words": 71
+  },
+  {
+   "counts": {
+    "america250": 1,
+    "and": 2,
+    "are": 1,
+    "as": 1,
+    "career": 1,
+    "cce": 1,
+    "civic": 1,
+    "cultural": 1,
+    "department": 1,
+    "during": 1,
+    "era": 1,
+    "execution": 1,
+    "for": 1,
+    "good": 1,
+    "grateful": 1,
+    "has": 2,
+    "helping": 1,
+    "her": 2,
+    "ideas": 1,
+    "institutions": 1,
+    "into": 2,
+    "it": 1,
+    "its": 1,
+    "kat": 1,
+    "knows": 2,
+    "leadership": 1,
+    "make": 1,
+    "needs": 1,
+    "nonprofit": 1,
+    "partners": 1,
+    "possible": 1,
+    "potter": 1,
+    "role": 1,
+    "she": 3,
+    "spent": 1,
+    "step": 1,
+    "story": 1,
+    "strong": 1,
+    "tells": 1,
+    "the": 3,
+    "this": 2,
+    "to": 1,
+    "turn": 1,
+    "utah": 1,
+    "we": 1,
+    "who": 1,
+    "willingness": 1,
+    "work": 1
+   },
+   "date": "2026-07-01",
+   "entries": {
+    "are": [
+     0
+    ],
+    "for": [
+     0
+    ],
+    "grateful": [
+     0
+    ],
+    "her": [
+     0
+    ],
+    "into": [
+     0
+    ],
+    "role": [
+     0
+    ],
+    "step": [
+     0
+    ],
+    "this": [
+     0
+    ],
+    "to": [
+     0
+    ],
+    "we": [
+     0
+    ],
+    "willingness": [
+     0
+    ]
+   },
+   "excerpts": [
+    "We are grateful for her willingness to step into this role."
+   ],
+   "id": "2026-07-01-press-gov-cox-names-katherine-potter-commissioner-of-the-uta",
+   "location": "Utah",
+   "msent": {
+    "america250": 1,
+    "and": 2,
+    "are": 1,
+    "as": 1,
+    "career": 1,
+    "cce": 1,
+    "civic": 1,
+    "cultural": 1,
+    "department": 1,
+    "during": 1,
+    "era": 1,
+    "execution": 1,
+    "for": 1,
+    "good": 1,
+    "grateful": 1,
+    "has": 2,
+    "helping": 1,
+    "her": 2,
+    "ideas": 1,
+    "institutions": 1,
+    "into": 2,
+    "it": 1,
+    "its": 1,
+    "kat": 1,
+    "knows": 1,
+    "leadership": 1,
+    "make": 1,
+    "needs": 1,
+    "nonprofit": 1,
+    "partners": 1,
+    "possible": 1,
+    "potter": 1,
+    "role": 1,
+    "she": 1,
+    "spent": 1,
+    "step": 1,
+    "story": 1,
+    "strong": 1,
+    "tells": 1,
+    "the": 1,
+    "this": 2,
+    "to": 1,
+    "turn": 1,
+    "utah": 1,
+    "we": 1,
+    "who": 1,
+    "willingness": 1,
+    "work": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox names Katherine Potter commissioner of the Utah Department of Cultural & Community Engagement",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-names-katherine-potter-commissioner-of-the-utah-department-of-cultural-community-engagement/",
+   "words": 58
+  },
+  {
+   "counts": {
+    "a": 1,
+    "about": 1,
+    "allowing": 1,
+    "alongside": 1,
+    "an": 1,
+    "and": 2,
+    "are": 1,
+    "areas": 1,
+    "be": 1,
+    "before": 1,
+    "behavior": 1,
+    "but": 1,
+    "can": 1,
+    "celebrating": 1,
+    "decision": 1,
+    "different": 1,
+    "do": 1,
+    "easy": 1,
+    "even": 1,
+    "experienced": 1,
+    "extraordinary": 1,
+    "family": 1,
+    "fire": 2,
+    "firefighters": 1,
+    "fireworks": 2,
+    "for": 1,
+    "fourth": 1,
+    "friends": 1,
+    "homes": 1,
+    "i": 1,
+    "identify": 1,
+    "is": 2,
+    "it": 1,
+    "july": 1,
+    "leaders": 1,
+    "lives": 1,
+    "local": 1,
+    "love": 1,
+    "measure": 1,
+    "most": 1,
+    "never": 1,
+    "nothing": 1,
+    "of": 1,
+    "officials": 1,
+    "our": 1,
+    "protects": 1,
+    "safely": 1,
+    "say": 1,
+    "seeing": 1,
+    "temporary": 1,
+    "that": 1,
+    "the": 1,
+    "their": 1,
+    "they've": 1,
+    "this": 3,
+    "to": 1,
+    "too": 1,
+    "used": 1,
+    "utahns": 1,
+    "was": 1,
+    "we": 1,
+    "where": 1,
+    "while": 1,
+    "with": 1,
+    "witnessed": 1,
+    "working": 1,
+    "year": 2
+   },
+   "date": "2026-06-25",
+   "entries": {
+    "about": [
+     0
+    ],
+    "and": [
+     1
+    ],
+    "celebrating": [
+     1
+    ],
+    "decision": [
+     0
+    ],
+    "easy": [
+     0
+    ],
+    "family": [
+     1
+    ],
+    "fireworks": [
+     1
+    ],
+    "fourth": [
+     1
+    ],
+    "friends": [
+     1
+    ],
+    "july": [
+     1
+    ],
+    "love": [
+     1
+    ],
+    "nothing": [
+     0
+    ],
+    "of": [
+     1
+    ],
+    "the": [
+     1
+    ],
+    "this": [
+     0
+    ],
+    "utahns": [
+     1
+    ],
+    "was": [
+     0
+    ],
+    "with": [
+     1
+    ]
+   },
+   "excerpts": [
+    "Nothing about this decision was easy,",
+    "Utahns love celebrating the Fourth of July with family, friends and fireworks."
+   ],
+   "id": "2026-06-25-press-gov-cox-announces-temporary-statewide-fireworks-restri",
+   "location": "Utah",
+   "msent": {
+    "a": 1,
+    "about": 1,
+    "allowing": 1,
+    "alongside": 1,
+    "an": 1,
+    "and": 2,
+    "are": 1,
+    "areas": 1,
+    "be": 1,
+    "before": 1,
+    "behavior": 1,
+    "but": 1,
+    "can": 1,
+    "celebrating": 1,
+    "decision": 1,
+    "different": 1,
+    "do": 1,
+    "easy": 1,
+    "even": 1,
+    "experienced": 1,
+    "extraordinary": 1,
+    "family": 1,
+    "fire": 2,
+    "firefighters": 1,
+    "fireworks": 2,
+    "for": 1,
+    "fourth": 1,
+    "friends": 1,
+    "homes": 1,
+    "i": 1,
+    "identify": 1,
+    "is": 2,
+    "it": 1,
+    "july": 1,
+    "leaders": 1,
+    "lives": 1,
+    "local": 1,
+    "love": 1,
+    "measure": 1,
+    "most": 1,
+    "never": 1,
+    "nothing": 1,
+    "of": 1,
+    "officials": 1,
+    "our": 1,
+    "protects": 1,
+    "safely": 1,
+    "say": 1,
+    "seeing": 1,
+    "temporary": 1,
+    "that": 1,
+    "the": 1,
+    "their": 1,
+    "they've": 1,
+    "this": 3,
+    "to": 1,
+    "too": 1,
+    "used": 1,
+    "utahns": 1,
+    "was": 1,
+    "we": 1,
+    "where": 1,
+    "while": 1,
+    "with": 1,
+    "witnessed": 1,
+    "working": 1,
+    "year": 2
+   },
+   "n_sentences": 7,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox announces temporary statewide fireworks restrictions amid historic wildfire conditions",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-announces-temporary-statewide-fireworks-restrictions-amid-historic-wildfire-conditions/",
+   "words": 74
+  },
+  {
+   "counts": {
+    "a": 1,
+    "across": 1,
+    "adjutant": 1,
+    "and": 7,
+    "are": 1,
+    "as": 2,
+    "better": 1,
+    "boyack": 1,
+    "build": 1,
+    "carry": 1,
+    "changing": 1,
+    "colonel": 1,
+    "continued": 1,
+    "country": 2,
+    "dedication": 2,
+    "deeply": 1,
+    "demands": 1,
+    "experience": 1,
+    "extraordinary": 1,
+    "for": 2,
+    "forward": 1,
+    "gen": 1,
+    "general": 1,
+    "grateful": 1,
+    "guard": 2,
+    "has": 2,
+    "he": 2,
+    "helped": 1,
+    "him": 1,
+    "his": 4,
+    "honor": 1,
+    "humility": 1,
+    "important": 1,
+    "innovation": 1,
+    "into": 1,
+    "is": 1,
+    "its": 1,
+    "kjar": 1,
+    "leader": 1,
+    "leadership": 1,
+    "leaves": 1,
+    "maj": 1,
+    "make": 1,
+    "many": 1,
+    "meet": 1,
+    "nation": 1,
+    "national": 3,
+    "next": 1,
+    "of": 1,
+    "our": 2,
+    "over": 1,
+    "prepared": 1,
+    "professionalism": 1,
+    "readiness": 1,
+    "ready": 1,
+    "recognized": 1,
+    "reputation": 1,
+    "right": 1,
+    "role": 1,
+    "sacrifice": 1,
+    "served": 1,
+    "service": 1,
+    "steps": 1,
+    "stronger": 1,
+    "that": 2,
+    "the": 5,
+    "this": 1,
+    "to": 3,
+    "utah": 4,
+    "we": 1,
+    "with": 1,
+    "work": 1,
+    "world": 1,
+    "years": 1
+   },
+   "date": "2026-06-03",
+   "entries": {
+    "and": [
+     1,
+     1
+    ],
+    "boyack": [
+     1
+    ],
+    "dedication": [
+     1
+    ],
+    "extraordinary": [
+     1
+    ],
+    "gen": [
+     1
+    ],
+    "has": [
+     1
+    ],
+    "honor": [
+     1
+    ],
+    "humility": [
+     1
+    ],
+    "maj": [
+     0
+    ],
+    "nation": [
+     1
+    ],
+    "our": [
+     1
+    ],
+    "served": [
+     1
+    ],
+    "utah": [
+     1
+    ],
+    "with": [
+     1
+    ]
+   },
+   "excerpts": [
+    "Maj.",
+    "Gen. Boyack has served Utah and our nation with honor, humility and extraordinary dedication,"
+   ],
+   "id": "2026-06-03-press-gov-cox-selects-col-michael-d-kjar-as-next-adjutant-ge",
+   "location": "Utah",
+   "msent": {
+    "a": 1,
+    "across": 1,
+    "adjutant": 1,
+    "and": 5,
+    "are": 1,
+    "as": 2,
+    "better": 1,
+    "boyack": 1,
+    "build": 1,
+    "carry": 1,
+    "changing": 1,
+    "colonel": 1,
+    "continued": 1,
+    "country": 2,
+    "dedication": 2,
+    "deeply": 1,
+    "demands": 1,
+    "experience": 1,
+    "extraordinary": 1,
+    "for": 2,
+    "forward": 1,
+    "gen": 1,
+    "general": 1,
+    "grateful": 1,
+    "guard": 2,
+    "has": 2,
+    "he": 2,
+    "helped": 1,
+    "him": 1,
+    "his": 2,
+    "honor": 1,
+    "humility": 1,
+    "important": 1,
+    "innovation": 1,
+    "into": 1,
+    "is": 1,
+    "its": 1,
+    "kjar": 1,
+    "leader": 1,
+    "leadership": 1,
+    "leaves": 1,
+    "maj": 1,
+    "make": 1,
+    "many": 1,
+    "meet": 1,
+    "nation": 1,
+    "national": 3,
+    "next": 1,
+    "of": 1,
+    "our": 2,
+    "over": 1,
+    "prepared": 1,
+    "professionalism": 1,
+    "readiness": 1,
+    "ready": 1,
+    "recognized": 1,
+    "reputation": 1,
+    "right": 1,
+    "role": 1,
+    "sacrifice": 1,
+    "served": 1,
+    "service": 1,
+    "steps": 1,
+    "stronger": 1,
+    "that": 1,
+    "the": 3,
+    "this": 1,
+    "to": 3,
+    "utah": 4,
+    "we": 1,
+    "with": 1,
+    "work": 1,
+    "world": 1,
+    "years": 1
+   },
+   "n_sentences": 6,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox selects Col. Michael D. Kjar as next Adjutant General of the Utah National Guard",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-selects-col-michael-d-kjar-as-next-adjutant-general-of-the-utah-national-guard/",
+   "words": 103
+  },
+  {
+   "counts": {
+    "a": 3,
+    "accountable": 1,
+    "agreement": 1,
+    "america": 1,
+    "and": 4,
+    "building": 1,
+    "built": 1,
+    "chains": 1,
+    "create": 1,
+    "development": 1,
+    "domestic": 1,
+    "efficient": 1,
+    "energy": 1,
+    "ensure": 1,
+    "for": 1,
+    "government": 1,
+    "has": 1,
+    "help": 1,
+    "helps": 1,
+    "in": 1,
+    "infrastructure": 1,
+    "leader": 1,
+    "more": 1,
+    "needs": 1,
+    "permitting": 1,
+    "predictable": 1,
+    "process": 1,
+    "production": 1,
+    "remains": 1,
+    "reputation": 1,
+    "resources": 1,
+    "responsible": 1,
+    "strengthens": 1,
+    "supply": 1,
+    "supports": 1,
+    "that": 1,
+    "the": 1,
+    "this": 1,
+    "transparent": 1,
+    "utah": 2,
+    "will": 1
+   },
+   "date": "2026-05-22",
+   "entries": {
+    "a": [
+     0
+    ],
+    "and": [
+     0
+    ],
+    "built": [
+     0
+    ],
+    "development": [
+     0
+    ],
+    "efficient": [
+     0
+    ],
+    "for": [
+     0
+    ],
+    "government": [
+     0
+    ],
+    "has": [
+     0
+    ],
+    "reputation": [
+     0
+    ],
+    "responsible": [
+     0
+    ],
+    "utah": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Utah has built a reputation for efficient government and responsible development,"
+   ],
+   "id": "2026-05-22-press-gov-cox-and-white-house-permitting-council-sign-agreem",
+   "location": "Utah",
+   "msent": {
+    "a": 2,
+    "accountable": 1,
+    "agreement": 1,
+    "america": 1,
+    "and": 2,
+    "building": 1,
+    "built": 1,
+    "chains": 1,
+    "create": 1,
+    "development": 1,
+    "domestic": 1,
+    "efficient": 1,
+    "energy": 1,
+    "ensure": 1,
+    "for": 1,
+    "government": 1,
+    "has": 1,
+    "help": 1,
+    "helps": 1,
+    "in": 1,
+    "infrastructure": 1,
+    "leader": 1,
+    "more": 1,
+    "needs": 1,
+    "permitting": 1,
+    "predictable": 1,
+    "process": 1,
+    "production": 1,
+    "remains": 1,
+    "reputation": 1,
+    "resources": 1,
+    "responsible": 1,
+    "strengthens": 1,
+    "supply": 1,
+    "supports": 1,
+    "that": 1,
+    "the": 1,
+    "this": 1,
+    "transparent": 1,
+    "utah": 2,
+    "will": 1
+   },
+   "n_sentences": 2,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox and White House Permitting Council sign agreement to streamline permitting in Utah",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-and-white-house-permitting-council-sign-agreement-to-streamline-permitting-in-utah/",
+   "words": 47
+  },
+  {
+   "counts": {
+    "again": 1,
+    "always": 1,
+    "and": 1,
+    "are": 2,
+    "as": 1,
+    "at": 1,
+    "being": 1,
+    "but": 2,
+    "can": 1,
+    "can't": 1,
+    "capacity": 1,
+    "careful": 1,
+    "confident": 1,
+    "control": 2,
+    "difficult": 1,
+    "down": 1,
+    "drawn": 1,
+    "during": 1,
+    "every": 1,
+    "far": 1,
+    "faster": 1,
+    "fell": 1,
+    "have": 1,
+    "heavily": 1,
+    "i": 1,
+    "i'm": 1,
+    "in": 1,
+    "is": 1,
+    "it": 1,
+    "like": 1,
+    "management": 1,
+    "needs": 1,
+    "now": 1,
+    "of": 2,
+    "on": 1,
+    "our": 1,
+    "precious": 1,
+    "provides": 1,
+    "relying": 1,
+    "remains": 1,
+    "reserves": 1,
+    "reservoir": 1,
+    "resource": 1,
+    "seasons": 1,
+    "short": 1,
+    "snowpack": 1,
+    "stepped": 1,
+    "storage": 1,
+    "supply": 2,
+    "tap": 1,
+    "than": 1,
+    "thanks": 1,
+    "that": 1,
+    "the": 3,
+    "this": 1,
+    "those": 1,
+    "to": 2,
+    "treat": 1,
+    "up": 1,
+    "urge": 1,
+    "utah": 2,
+    "utahn": 1,
+    "utahns": 1,
+    "water": 2,
+    "we": 4,
+    "we'd": 1,
+    "weather": 1,
+    "wetter": 1,
+    "what": 1,
+    "which": 1,
+    "will": 1,
+    "winter": 1,
+    "years": 1
+   },
+   "date": "2026-05-21",
+   "entries": {
+    "far": [
+     1
+    ],
+    "fell": [
+     1
+    ],
+    "needs": [
+     1
+    ],
+    "of": [
+     0,
+     1
+    ],
+    "our": [
+     0
+    ],
+    "provides": [
+     0
+    ],
+    "short": [
+     1
+    ],
+    "snowpack": [
+     0
+    ],
+    "supply": [
+     0,
+     1
+    ],
+    "that": [
+     1
+    ],
+    "this": [
+     1
+    ],
+    "utah": [
+     0,
+     1
+    ],
+    "water": [
+     0
+    ],
+    "what": [
+     1
+    ],
+    "winter": [
+     1
+    ]
+   },
+   "excerpts": [
+    "Our snowpack provides 95% of Utah’s water supply,",
+    "This winter, that supply fell far short of what Utah needs."
+   ],
+   "id": "2026-05-21-press-gov-cox-issues-drought-executive-order-record-low-snow",
+   "location": "Utah",
+   "msent": {
+    "again": 1,
+    "always": 1,
+    "and": 1,
+    "are": 2,
+    "as": 1,
+    "at": 1,
+    "being": 1,
+    "but": 2,
+    "can": 1,
+    "can't": 1,
+    "capacity": 1,
+    "careful": 1,
+    "confident": 1,
+    "control": 1,
+    "difficult": 1,
+    "down": 1,
+    "drawn": 1,
+    "during": 1,
+    "every": 1,
+    "far": 1,
+    "faster": 1,
+    "fell": 1,
+    "have": 1,
+    "heavily": 1,
+    "i": 1,
+    "i'm": 1,
+    "in": 1,
+    "is": 1,
+    "it": 1,
+    "like": 1,
+    "management": 1,
+    "needs": 1,
+    "now": 1,
+    "of": 2,
+    "on": 1,
+    "our": 1,
+    "precious": 1,
+    "provides": 1,
+    "relying": 1,
+    "remains": 1,
+    "reserves": 1,
+    "reservoir": 1,
+    "resource": 1,
+    "seasons": 1,
+    "short": 1,
+    "snowpack": 1,
+    "stepped": 1,
+    "storage": 1,
+    "supply": 2,
+    "tap": 1,
+    "than": 1,
+    "thanks": 1,
+    "that": 1,
+    "the": 2,
+    "this": 1,
+    "those": 1,
+    "to": 2,
+    "treat": 1,
+    "up": 1,
+    "urge": 1,
+    "utah": 2,
+    "utahn": 1,
+    "utahns": 1,
+    "water": 2,
+    "we": 3,
+    "we'd": 1,
+    "weather": 1,
+    "wetter": 1,
+    "what": 1,
+    "which": 1,
+    "will": 1,
+    "winter": 1,
+    "years": 1
+   },
+   "n_sentences": 7,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox Issues Drought Executive Order Record-low snowpack and record-warm winter drive statewide drought response",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-issues-drought-executive-order-record-low-snowpack-and-record-warm-winter-drive-statewide-drought-response/",
+   "words": 86
+  },
+  {
+   "counts": {
+    "a": 1,
+    "ability": 1,
+    "affected": 1,
+    "agricultural": 1,
+    "already": 1,
+    "an": 1,
+    "and": 1,
+    "april": 1,
+    "are": 1,
+    "best": 1,
+    "chance": 1,
+    "conditions": 2,
+    "crop": 1,
+    "deeply": 1,
+    "devastating": 1,
+    "difference": 1,
+    "due": 1,
+    "emergency": 1,
+    "facing": 1,
+    "farmers": 1,
+    "following": 1,
+    "freeze": 1,
+    "have": 2,
+    "here": 1,
+    "in": 4,
+    "is": 1,
+    "losses": 1,
+    "make": 1,
+    "many": 1,
+    "our": 1,
+    "producers": 1,
+    "real": 1,
+    "recover": 1,
+    "resources": 1,
+    "season": 1,
+    "survive": 1,
+    "the": 3,
+    "this": 2,
+    "time": 1,
+    "to": 3,
+    "unexpected": 1,
+    "unseasonably": 1,
+    "utah": 1,
+    "warm": 1,
+    "when": 1,
+    "year": 1
+   },
+   "date": "2026-05-15",
+   "entries": {
+    "affected": [
+     0
+    ],
+    "agricultural": [
+     0
+    ],
+    "already": [
+     0
+    ],
+    "conditions": [
+     0
+    ],
+    "deeply": [
+     0
+    ],
+    "have": [
+     0
+    ],
+    "here": [
+     0
+    ],
+    "in": [
+     0
+    ],
+    "producers": [
+     0
+    ],
+    "this": [
+     0
+    ],
+    "utah": [
+     0
+    ],
+    "year": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Conditions this year have already deeply affected agricultural producers here in Utah,"
+   ],
+   "id": "2026-05-15-press-gov-cox-declares-state-of-emergency-for-crop-losses-ca",
+   "location": "Utah",
+   "msent": {
+    "a": 1,
+    "ability": 1,
+    "affected": 1,
+    "agricultural": 1,
+    "already": 1,
+    "an": 1,
+    "and": 1,
+    "april": 1,
+    "are": 1,
+    "best": 1,
+    "chance": 1,
+    "conditions": 2,
+    "crop": 1,
+    "deeply": 1,
+    "devastating": 1,
+    "difference": 1,
+    "due": 1,
+    "emergency": 1,
+    "facing": 1,
+    "farmers": 1,
+    "following": 1,
+    "freeze": 1,
+    "have": 2,
+    "here": 1,
+    "in": 3,
+    "is": 1,
+    "losses": 1,
+    "make": 1,
+    "many": 1,
+    "our": 1,
+    "producers": 1,
+    "real": 1,
+    "recover": 1,
+    "resources": 1,
+    "season": 1,
+    "survive": 1,
+    "the": 1,
+    "this": 2,
+    "time": 1,
+    "to": 2,
+    "unexpected": 1,
+    "unseasonably": 1,
+    "utah": 1,
+    "warm": 1,
+    "when": 1,
+    "year": 1
+   },
+   "n_sentences": 3,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Cox's own words",
+   "source": "governor.utah.gov",
+   "source_type": "Statement",
+   "title": "Gov. Cox declares state of emergency for crop losses caused by freezing temperatures",
+   "type": "statement",
+   "url": "https://governor.utah.gov/press/gov-cox-declares-state-of-emergency-for-crop-losses-caused-by-freezing-temperatures/",
+   "words": 56
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full text is not included; see each document's url.",
+ "slug": "cox"
+}
