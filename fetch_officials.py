@@ -285,7 +285,8 @@ SENATORS = {"barrasso": ("John Barrasso", "Senate Majority Whip", None, "Senate"
             "schiff": ("Adam B. Schiff", "U.S. Senator", None, "Senate"),
             "booker": ("Cory A. Booker", "U.S. Senator", None, "Senate"),
             "murphy": ("Christopher Murphy", "U.S. Senator", None, "Senate"),
-            "klobuchar": ("Amy Klobuchar", "U.S. Senator", None, "Senate")}
+            "klobuchar": ("Amy Klobuchar", "U.S. Senator", None, "Senate"),
+            "hickenlooper": ("John W. Hickenlooper", "U.S. Senator", None, "Senate")}
 SENATOR_MAX = 20
 LEADERS.update(SENATORS)
 CREC_FROM, CREC_TO, CREC_MAX, CREC_MIN = dt.date(2026, 1, 3), dt.date(2026, 10, 1), 5, 250
