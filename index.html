@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm152">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm152">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm153">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm153">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm152">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm153">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm152">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm153">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm152">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm153">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1746,7 +1746,7 @@ function waveOf(i){const r=k=>{const v=Math.sin((i+1)*12.9898+k*78.233)*43758.54
     by:0.95+0.35*r(6),by2:1.7+0.5*r(7),sx:0.42+0.18*r(8),sx2:0.9+0.3*r(9),ro:0.55+0.25*r(10)}}   // rad/s: bob ~5-6.6 s, sway ~10-15 s
 let lastT=0;
 function physics(p,W,H){
-  const t=p.millis()/1000,dt=Math.min(0.05,Math.max(0.001,t-(lastT||t-1/60)));lastT=t;
+  const t=p.millis()/1000*1.35,dt=Math.min(0.05,Math.max(0.001,t-(lastT||t-1/60)));lastT=t;
   const B=BODIES,GAP=1,ease=1-Math.pow(1-0.07,dt*60),sc=Math.max(0.65,Math.min(1,W/700))*(B.length>120?0.8:1);   // smaller swing on narrow or very dense clouds
   for(const b of B){b.f+=(b.ft-b.f)*0.1;if(Math.abs(b.ft-b.f)<0.03)b.f=b.ft;boxOf(b);if(!b.w)continue;
     const v=b.wv,top=b===TOPB,sz=top?Math.min(26,12+W*0.025)/15:Math.max(0.4,Math.min(1,1.3-b.f/55))*sc,swell=b.hx*0.009+b.hy*0.004;   // big words float less; the #1 word floats more (up to ~26px sway, ~17px bob)
@@ -1756,7 +1756,7 @@ function physics(p,W,H){
     b.sx=(b.sx||0)*0.985;b.sy=(b.sy||0)*0.985;                                                // separation offset relaxes slowly
     b.tx=Math.max((b.w/2+b.mx),Math.min(W-(b.w/2+b.mx),b.hx+ox+b.sx));b.ty=Math.max((b.h/2+b.my),Math.min(H-(b.h/2+b.my),b.hy+oy+b.sy));   // soft edges: the target stays inside
     b.x+=(b.tx-b.x)*ease;b.y+=(b.ty-b.y)*ease;
-    b.rot=(1.3*Math.PI/180)*sz*Math.sin(t*v.ro-swell*0.7+v.p5)}                            // <= ~1.3 degrees
+    b.rot=0}                            // <= ~1.3 degrees
   {const G=64,grid=new Map();     // spatial hash; overlapping boxes feed a smoothed separation offset (bigger words move less)
     B.forEach((b,i)=>{if(!b.w)return;for(let gx=Math.floor((b.x-(b.w/2+b.mx))/G);gx<=Math.floor((b.x+(b.w/2+b.mx))/G);gx++)for(let gy=Math.floor((b.y-(b.h/2+b.my))/G);gy<=Math.floor((b.y+(b.h/2+b.my))/G);gy++){
       const k=gx*4096+gy;(grid.get(k)||grid.set(k,[]).get(k)).push(i)}});
