@@ -1,0 +1,61 @@
+Mr. President, I rise today to speak about the Digital Asset Market Clarity Act, also known as the CLARITY Act, and about the years of work that brought us to this moment.
+
+Now, I only have a few minutes to get started, but I am just getting wound up. I am going to talk for a little while. Then I am going to be back tomorrow, and I am going to talk about this some more because I have got a lot of pent-up things to say.
+
+First of all, this is a very good bill--good for the country, good for consumers, and good for the people we all represent on both sides of this aisle. So, after 11 months of giving nearly everything that was asked of us, I am genuinely struggling to understand what else my colleagues across the aisle think it needs before we act.
+
+When I was elected to the Senate in 2020, I knew I wanted to work on digital asset legislation because Wyoming's legislature was already years ahead of Washington. It was building a legal framework for digital asset companies before most of the country was even paying attention. I wanted to do everything I could to keep those companies in Wyoming and, more importantly, to keep them in America.
+
+The person I have been most proud to work with is Democrat Senator Kirsten Gillibrand of New York. People have raised an eyebrow for years that a Wyoming Republican and a New York Democrat have worked hand in hand on this bill, but we have become genuine friends, and I trust her.
+
+In June 2022, we introduced the Lummis-Gillibrand Responsible Financial Innovation Act together--the first real attempt at a comprehensive regulatory framework for digital assets, dividing oversight between the SEC and the CFTC and regulating stablecoins. That was a 168-page bill. We had to start by deciding whether to create a unique, new, stand-alone regulatory framework or lay digital assets over the existing framework. We chose the latter, and then we took off from there.
+
+We reintroduced Lummis-Gillibrand in 2023. That was a 274-page bill. It contained provisions that cracked down on mixers and tumblers and crypto ATMs. It required plain-language customer agreements and regulated crypto advertising. It was a very strong bill for consumers. From a consumer protection standpoint, it had improved dramatically.
+
+That partnership is now the foundation this bill stands on, and it is why I reject any suggestion that this bill is partisan. This bill is bipartisan. It has always been about keeping an industry we want here--here to stay--but regulated in the right way.
+
+In Wyoming, we used to call it “growth on our terms.” This bill is growth on our terms. It is growth on American terms--protecting consumers and protecting us from illicit finance.
+
+Today, we have a 616-page bill because I have listened to my Republican and Democrat friends, incorporated their priorities, and tried to create the best bill possible. That is how we got to a 15-to-9 bipartisan vote out of the Banking Committee in May.
+
+Now, plenty of people have told me to try to move this through on Republican votes alone and skip the headache. I have rejected that every time because the only way to get a bill through Congress that actually lasts is to build it together. We have earned support not only from every corner of the digital asset industry, but we have earned the support of major cornerstones in our financial industry, like Goldman Sachs and Fidelity.
+
+Just this past Friday, the National Fraternal Order of Police endorsed this bill--an organization that spent months telling us this legislation would tie the hands of law enforcement investigating crypto crime. We listened and worked to secure dozens of illicit finance and anti-money laundering provisions that give law enforcement the tools they need, and they can hold bad actors accountable now. When they saw that, they came around. That is what good-faith negotiations produce.
+
+Before any one of my Democratic colleagues tells me this bill doesn't do enough, I want to show each of you what 11 months of negotiations produce--provision after provision. I want the record to show precisely what was asked for and what we delivered.
+
+Title I alone reflects 33 separate Democrat-driven edits, including tightening the bill's core definitions so companies can't structure their way around Federal securities laws; building a mandatory SEC “front door” certification process; adding anti-evasion authority so the SEC can look at the totality of facts and circumstances, rather than being boxed in by a technical loophole; cutting the annual fundraising cap from $75 million to $50 million, with a hard $200 million lifetime limit; barring felons convicted of fraud or money laundering from using this framework at all; and tightening the related persons resale restrictions from a 5-percent ownership threshold down to a 3-percent so insiders can't quietly dump tokens on the public.
+
+We also built three entirely new titles at the Democrats' request. We added 23 additional sections combating illicit finance, including determining when a decentralized finance platform is really decentralized or whether it is just decentralized in name only, and when they are subject to the securities laws and Bank Secrecy Act requirements; sanctions compliance for DeFi platforms; new sanctions authority that can be used to target crypto platforms that facilitate money laundering to Russia, Iran, and North Korea; $150 million in new FinCEN funding and mandatory Treasury and GAO studies on mixers, foreign adversary activity, and financial stability risk; Federal protections for digital asset ATMs, consumer disclosures, Federal Trade Commission authority, and a joint SEC-CFTC financial literacy mandate.
+
+Democrats also got more than 30 wins in the agriculture division of this bill, the CFTC portion, including a private right of action for consumer protection violations; capturing meme coins in the CFTC's jurisdiction; a stronger “conflict of interest” rulemaking than the House-passed bill; exchange-based consumer protection disclosures; best execution rulemaking; anti-manipulation and credit rulemakings; $150 million in CFTC appropriations; a new office of the retail digital commodity advocate; and requirements for digital commodity exchanges to recruit culturally diverse boards of directors.
+
+This isn't a courtesy list. Every single one of those items was something my colleagues across the aisle insisted on and something Republicans agreed to because a partisan bill doesn't survive the next election, the next administration, or the next market turndown. We put what is best for American innovation ahead of politics. I am simply asking my Democratic colleagues to do the same.
+
+Nowhere are our concessions more apparent than on ethics. When my Democratic colleagues brought their concerns to me, I didn't ignore them. In fact, I took them straight to the President, and as a sign of good faith and commitment to American innovation, President Trump voluntarily delivered the strongest set of ethics provisions in U.S. history. I put my own relationship with President Trump on the line--so did Bernie Moreno--to get a deal on ethics, and he agreed to it. No court, regulator, or statute compelled him to accept or offer any of this. He agreed to it because he believes so strongly that America, more than any other country, should be the one leading the way on digital asset innovation.
+
+We are talking about a first-of-its-kind ban on any covered individual--the President, Vice President, every Member of Congress, every Federal judge, and their spouses issuing or sponsoring a digital asset for consideration.
+
+He is willing to put his existing digital assets in a blind trust or to divest himself of them entirely under established ethics procedures. No sitting President has ever been asked to do such a thing, but President Trump will do it.
+
+The Attorney General is directed to bring civil enforcement actions against any covered individual who knowingly and willfully violates the ban. Digital asset exchanges face civil penalties of up to $250,000 per violation per day.
+
+Violating officials must disgorge every dollar of profit and pay a penalty of up to 10 percent of what they receive or $500,000, whichever is greater.
+
+That is what my Democrat friends asked for, and that is what the President gave you. President Trump said yes to a standard no one else on Earth could have forced on him, and I still hear that it is not enough. If you give a mouse a cookie--children's literature informs us--he will ask for a glass of milk, too, but we have now given our Democrat friends the entire cookie, factory, and a tanker-load of milk.
+
+I want to be very direct with this Chamber because I am done being careful about this. I have spent my entire term working on this, and for the last 11 months, I have been stuck in windowless rooms with my friends on the other side of the aisle who have told me, over and over, that ethics would be the sticking point; that if the President put his holdings in a blind trust and if he were to accept enforcement and penalties and disclosures, that would be the signal my colleagues needed.
+
+We got it.
+
+Senator Moreno and I were elated. We were amazed that the President would accept this.
+
+But it is not yet enough.
+
+I didn't come here today to accuse anyone of acting in bad faith. I believe my friends on the other side of the aisle are acting in good faith. I came here to simply ask: What specifically is left to give that is reasonable? Tell me the section number, because you have over 100 significant wins in the base text and an ethics agreement that has more teeth than George Washington had, with no precedent in American history.
+
+My friends, at some point, continuing to say “not yet” isn't cautious; it is a deliberate decision to run out the clock and kill a bill, rather than risk a “no” vote on the record, with constituents and industry to answer to.
+
+I have more to say. I am going to say it. I am going to say it before we get a vote on this bill--just not today.
+
+I yield the floor.
