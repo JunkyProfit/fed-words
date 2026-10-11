@@ -493,6 +493,28 @@
      }
     ]
    }
+  },
+  {
+   "slug": "musk",
+   "name": "Elon Musk",
+   "org": "Tesla",
+   "ticker": "TSLA",
+   "role": "CEO, Tesla & SpaceX",
+   "eyebrow": "CEO · Tesla & SpaceX",
+   "since": "2008-10-01",
+   "indices": [
+    "Mag 7",
+    "S&P 500",
+    "Nasdaq 100"
+   ],
+   "kind": "filings",
+   "fetcher": "local_sources (congressional hearings + Tesla Master Plan essays)",
+   "source": "govinfo.gov, appropriations.senate.gov, tesla.com",
+   "filings": {
+    "cik": "0001318605",
+    "speaker": "Elon Musk",
+    "docs": []
+   }
   }
  ],
  "order": [
@@ -503,6 +525,7 @@
   "pichai",
   "jassy",
   "zuckerberg",
+  "musk",
   "abel",
   "dimon",
   "furner",
@@ -579,6 +602,7 @@
   "C": "NYSE",
   "T": "NYSE",
   "UBER": "NYSE",
-  "BA": "NYSE"
+  "BA": "NYSE",
+  "TSLA": "NASDAQ"
  }
 }
