@@ -1141,9 +1141,14 @@ html body .dshead .dsclose2:hover{border-color:#fff}
 html body .dshead .dsx{display:none!important}
 @media (max-width:640px){html body .pk.pcoll #pdisc:has(.tk){grid-template-columns:1fr auto;grid-template-areas:"n t" "n k" "s s"}html body .pk.pcoll #pdisc:has(.tk) .pdt{justify-self:start}html body .pk.pcoll #pdisc .tk{grid-area:k;justify-self:start;margin:-2px 0 0!important}}
 html body #vCloud .vfoot{padding-left:16px;padding-right:16px}
-html body .vhead{display:flex;justify-content:center;align-items:center;margin:2px 0 14px;padding:0 8px;min-height:1.4em}
-html body .vhead b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em;text-align:center}
-@media (max-width:640px){html body .vhead b{font-size:20px}}
+html body .vtop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:nowrap;margin:2px 0 12px;padding:0 4px;min-height:1.4em}
+html body .vtop .vhead{display:flex;align-items:center;margin:0;padding:0;min-width:0;flex:1 1 auto}
+html body .vtop .vhead b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html body .vtop .vstop{flex:none;display:inline-flex;align-items:center;gap:6px;margin:0;white-space:nowrap;font:600 14px/1.2 Arial,Helvetica,sans-serif;color:var(--ink);cursor:pointer}
+html body .vtop .vstop input{margin:0;flex:none}
+@media (max-width:640px){html body .vtop{gap:8px;padding:0 2px;margin-bottom:10px}
+html body .vtop .vhead b{font-size:17px;letter-spacing:-.01em}
+html body .vtop .vstop{font-size:12.5px;gap:5px}}
 html body.view-cloud #q{display:none!important}
 html body header #share{background:linear-gradient(180deg,#5a5160,#3d3542)!important;border-color:#8a7d94!important;color:#fff!important;box-shadow:none}
 html body header #share:hover{background:linear-gradient(180deg,#685e70,#4a4150)!important}
@@ -1209,18 +1214,21 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <div id="nbar" role="group" aria-label="Number of words to show"><span class="nbl">Show</span><button class="nchip" data-n="5">5</button><button class="nchip" data-n="20">20</button><button class="nchip" data-n="50">50</button><button class="nchip" data-n="100">100</button><button class="nchip" data-n="all">ALL</button><span class="nbl">words</span></div>
 <div class="controls">
 <input type="search" id="q" placeholder="Filter words (e.g. inflation, ^pro, ing$)…">
-<label><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
+</div>
+<div class="vtop">
+<div class="rwho vhead" aria-live="polite"><b></b></div>
+<label class="vstop"><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
 </div>
 <div id="vpanes" class="tab-math">
-<div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><div class="rwho vhead" aria-live="polite"><b></b></div><h3 class="secth" id="superMath">Mouth Math</h3>
+<div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Mouth Math</h3>
 <div class="tbwrap"><table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc">Frequency</th></tr></thead>
 <tbody id="tb"></tbody></table><div class="topring" id="topRing" aria-hidden="true" hidden></div></div>
 <p class="muted" id="more"></p>
 <label class="rsrow" id="rsrow" hidden><input type="checkbox" id="realSpots"> View words in actual order</label></div>
-<div class="vpane" id="vCloud" role="tabpanel" aria-labelledby="tabCloud"><div class="rwho vhead" aria-live="polite"><b></b></div><h3 class="secth" id="superCloud">Word Cloud</h3>
+<div class="vpane" id="vCloud" role="tabpanel" aria-labelledby="tabCloud"><h3 class="secth" id="superCloud">Word Cloud</h3>
 <div class="cloudwrap"><div id="cloud"></div>
 <div class="cloud-bar"><span class="muted" id="cloudNote"></span></div></div></div>
-<div class="vpane" id="vRing" role="tabpanel" aria-labelledby="tabRing"><div class="rwho vhead" aria-live="polite"><b></b></div><div class="ringwrap"><canvas id="ring" aria-label="Word Ring: each spike is a word, longer means said more"></canvas></div></div><div class="vpane" id="vRace" role="tabpanel" aria-labelledby="tabRace"><div class="rwho vhead" aria-live="polite"><b></b></div><div class="racewrap"><div class="rdate" id="rDate"></div><div class="rttl" id="rTtl"></div><svg id="race" viewBox="0 0 680 430" width="100%" role="img" aria-label="Top 10 words, added up speech by speech"></svg><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="rgPurp" x1="0" x2="1"><stop offset="0" stop-color="#8e3833"/><stop offset="1" stop-color="#6e3a86"/></linearGradient></defs></svg><div class="rfoot"><button type="button" class="rplay" id="rPlay">Replay <span class="rtri">▸</span></button><div class="rwho"><b id="rWho"></b><a href="#picker" id="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div></div></div></div>
+<div class="vpane" id="vRing" role="tabpanel" aria-labelledby="tabRing"><div class="ringwrap"><canvas id="ring" aria-label="Word Ring: each spike is a word, longer means said more"></canvas></div></div><div class="vpane" id="vRace" role="tabpanel" aria-labelledby="tabRace"><div class="racewrap"><div class="rdate" id="rDate"></div><div class="rttl" id="rTtl"></div><svg id="race" viewBox="0 0 680 430" width="100%" role="img" aria-label="Top 10 words, added up speech by speech"></svg><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="rgPurp" x1="0" x2="1"><stop offset="0" stop-color="#8e3833"/><stop offset="1" stop-color="#6e3a86"/></linearGradient></defs></svg><div class="rfoot"><button type="button" class="rplay" id="rPlay">Replay <span class="rtri">▸</span></button><div class="rwho"><b id="rWho"></b><a href="#picker" id="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div></div></div></div>
 </div>
 <!-- ad slot: between · 728x90 desktop, 320x100 phone · reserved for a relevant AdSense unit after approval (below the Mouth Math / Word Cloud views) -->
 <aside class="ad" data-slot="between" data-ad-slot-name="between" data-ad-size="728x90" data-ad-size-phone="320x100"></aside>
