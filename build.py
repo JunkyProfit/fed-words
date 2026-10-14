@@ -1657,6 +1657,21 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 @keyframes spkdot2{0%{outline:2px solid rgba(255,255,255,.95);outline-offset:0}10%{outline-color:rgba(255,255,255,.9);outline-offset:1px}75%,100%{outline:2px solid rgba(255,255,255,0);outline-offset:12px}}
 @media (max-width:640px){html body .pk.pcoll #pdisc .pdn::before{margin-top:calc(.575em - 7.5px)!important}}
 @media (prefers-reduced-motion:reduce){html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::before,html body .vtop .rwho b::before{animation:none!important}}
+/* ---- Explore cue: ribbon arrow pointing at Search speakers hint (phones) / search box (desktop) ---- */
+#exploreCue{position:fixed;z-index:45;display:flex;flex-direction:column;align-items:flex-start;gap:2px;pointer-events:none;opacity:0;transition:opacity .35s ease;max-width:min(200px,46vw)}
+#exploreCue.show{opacity:1;pointer-events:auto}
+#exploreCue[hidden]{display:none!important}
+#exploreCue .ecs{display:block;width:132px;height:86px;filter:drop-shadow(0 0 6px rgba(224,69,59,.35)) drop-shadow(0 0 10px rgba(162,75,208,.28));transform-origin:85% 15%;animation:ecNudge 1.9s ease-in-out infinite}
+#exploreCue .ecl{font:700 11px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#e8d4f0;text-shadow:0 0 8px rgba(162,75,208,.55),0 0 2px rgba(224,69,59,.4);margin:-6px 0 0 8px;white-space:nowrap}
+#exploreCue.ec-desk{align-items:flex-end;max-width:min(220px,28vw)}
+#exploreCue.ec-desk .ecs{width:148px;height:96px;transform-origin:90% 20%}
+#exploreCue.ec-desk .ecl{margin:-4px 10px 0 0}
+@keyframes ecNudge{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(5px,-7px) rotate(-2deg)}}
+#exploreCue.ec-desk .ecs{animation-name:ecNudgeDesk}
+@keyframes ecNudgeDesk{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(-6px,-5px) rotate(2deg)}}
+@media (prefers-reduced-motion:reduce){#exploreCue .ecs,#exploreCue.ec-desk .ecs{animation:none!important}}
+@media (max-width:390px){#exploreCue .ecs{width:118px;height:78px}#exploreCue .ecl{font-size:10px}}
+
 </style></head><body class="mode-fed">
 <header><div class="hact"><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -1669,6 +1684,29 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 <div class="topgrid">
 <section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div></nav>
 <button type="button" id="pdisc" aria-expanded="false" aria-controls="persons" hidden></button>
+<div id="exploreCue" hidden aria-hidden="true">
+<svg class="ecs" viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ecGrad" x1="8%" y1="92%" x2="92%" y2="8%">
+      <stop offset="0%" stop-color="#e0453b"/>
+      <stop offset="55%" stop-color="#c44a8a"/>
+      <stop offset="100%" stop-color="#a24bd0"/>
+    </linearGradient>
+    <filter id="ecGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 0.4 0 0 0  0 0 1 0 0  0 0 0 0.55 0" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- ribbon body: wide curved swoosh -->
+  <path filter="url(#ecGlow)" fill="url(#ecGrad)" d="M18,96 C34,98 52,90 64,72 C76,54 96,42 118,36 L122,28 C96,32 74,46 60,66 C48,84 30,92 18,90 Z"/>
+  <!-- broad arrowhead pointing up-right -->
+  <path filter="url(#ecGlow)" fill="url(#ecGrad)" d="M112,42 L148,22 L128,54 L122,40 Z"/>
+  <!-- soft highlight ridge along the ribbon -->
+  <path fill="rgba(255,255,255,.22)" d="M28,90 C44,88 58,78 68,64 C80,48 98,38 118,34 L116,38 C98,40 82,50 70,64 C58,80 42,88 28,90 Z"/>
+</svg>
+<span class="ecl">Tap to explore</span>
+</div>
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
 <div id="az" role="toolbar" aria-label="Filter by last name" aria-controls="persons" hidden></div>
@@ -2485,7 +2523,128 @@ fromHash();
 addEventListener('hashchange',()=>{if(!location.hash||OURS.test(location.hash)){hidePop();fromHash()}});
 </script>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
-<script>(()=>{const b=document.getElementById('pbio');if(b&&matchMedia('(max-width:640px)').matches)b.open=false})()</script><script>(()=>{const e=document.getElementById('eyebrow'),b=document.getElementById('pdisc');if(!e||!b)return;const f=()=>{let t=b.querySelector('.pdt');if(!t){t=document.createElement('span');t.className='pdt';t.setAttribute('aria-hidden','true');b.appendChild(t)}let v=e.textContent.trim();if(/^Fed Chair(man|woman)?(\s|$|·)/i.test(v)){const on=document.querySelector('#persons button.chip.on');v=on&&on.dataset.person==='yellen'?'Federal Reserve Chairwoman':'Federal Reserve Chairman'}if(t.textContent!==v)t.textContent=v;t.classList.toggle('long',v.length>17);requestAnimationFrame(()=>{t.classList.remove('wrap');const nm=b.querySelector('.pdn');if(nm&&nm.getBoundingClientRect().height>parseFloat(getComputedStyle(nm).fontSize)*1.6)t.classList.add('wrap')})};f();new MutationObserver(f).observe(e,{childList:true,characterData:true,subtree:true});new MutationObserver(f).observe(b,{childList:true})})()</script><script>(()=>{['vMath','vCloud','vRing'].forEach(id=>{const p=document.getElementById(id);if(!p||p.querySelector('.vfoot'))return;p.insertAdjacentHTML('beforeend','<div class="vfoot"><a href="#picker" class="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div>')});const f=()=>{const c=document.querySelector('#persons button.chip.on');let v='';if(c){const n=c.cloneNode(true);n.querySelectorAll('.tk').forEach(x=>x.remove());v=n.textContent.trim()}document.querySelectorAll('.vtop .rwho b').forEach(x=>{if(x.textContent!==v)x.textContent=v})};f();const P=document.getElementById('persons');if(P)new MutationObserver(f).observe(P,{subtree:true,attributes:true,attributeFilter:['class'],childList:true});document.querySelectorAll('a.rNew').forEach(n=>n.onclick=e=>{e.preventDefault();const t=document.getElementById('picker');if(t)t.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const d=document.getElementById('pdisc');if(d&&d.offsetParent&&d.getAttribute('aria-expanded')!=='true')d.click()})})()</script></body></html>
+<script>(()=>{const b=document.getElementById('pbio');if(b&&matchMedia('(max-width:640px)').matches)b.open=false})()</script><script>(()=>{
+const KEY='mm-explore-cue-v1';
+const cue=document.getElementById('exploreCue');
+if(!cue)return;
+try{if(localStorage.getItem(KEY)){cue.hidden=true;return}}catch(e){cue.hidden=true;return}
+const isPhone=()=>matchMedia('(max-width:640px)').matches;
+let placed=false, raf=0, gone=false;
+function dismiss(){
+  if(gone)return;gone=true;
+  cue.classList.remove('show');cue.hidden=true;cue.setAttribute('aria-hidden','true');
+  try{localStorage.setItem(KEY,'1')}catch(e){}
+  removeListeners();
+}
+function target(){
+  if(isPhone()){
+    const pdc=document.querySelector('#pdisc .pdc');
+    const pd=document.getElementById('pdisc');
+    if(pd&&!pd.hidden&&pd.getClientRects().length&&pdc&&pdc.getClientRects().length)return{el:pdc,mode:'phone'};
+    return null;
+  }
+  const s=document.getElementById('psearch');
+  const pf=document.getElementById('pfilter');
+  if(s&&pf&&!pf.hidden&&s.getClientRects().length&&getComputedStyle(s).visibility!=='hidden'&&getComputedStyle(pf).display!=='none')return{el:s,mode:'desk'};
+  // desktop list is always open — aim at the people list heading / first chips
+  const lbl=document.querySelector('#persons .pg .lbl, #persons > .lbl');
+  if(lbl&&lbl.getClientRects().length)return{el:lbl,mode:'desk'};
+  const chip=document.querySelector('#persons button.chip');
+  if(chip&&chip.getClientRects().length)return{el:chip,mode:'desk'};
+  return null;
+}
+function place(){
+  if(gone)return;
+  const t=target();
+  if(!t){cue.classList.remove('show');return}
+  const r=t.el.getBoundingClientRect();
+  const stats=document.getElementById('stats');
+  const sr=stats?stats.getBoundingClientRect():null;
+  const name=document.querySelector('#pdisc .pdn');
+  const nr=name&&name.getClientRects().length?name.getBoundingClientRect():null;
+  cue.hidden=false;
+  cue.classList.toggle('ec-desk',t.mode==='desk');
+  cue.querySelector('.ecl').textContent=t.mode==='desk'?'Click to explore':'Tap to explore';
+  // measure cue
+  const cw=cue.offsetWidth||140, ch=cue.offsetHeight||100;
+  let left, top;
+  if(t.mode==='phone'){
+    // sit just under the search hint, tip of ribbon toward .pdc; keep clear of name above and stats below
+    left=Math.max(8, Math.min(r.left-8, window.innerWidth-cw-8));
+    top=r.bottom+2;
+    if(sr&&top+ch>sr.top-4)top=Math.max((nr?nr.bottom+4:r.top), sr.top-ch-6);
+    // if still overlapping name, push below name
+    if(nr&&top<nr.bottom)top=nr.bottom+4;
+  }else{
+    // desktop: just under the search box, tip of ribbon aimed up-right at it
+    left=Math.max(12, Math.min(r.left+12, window.innerWidth-cw-12));
+    top=r.bottom+6;
+    if(sr&&sr.top>0&&top+ch>sr.top-4)top=Math.max(r.bottom+2, sr.top-ch-8);
+  }
+  // never cover red stats (only when we actually overlap them in 2D — desktop stats sit in another column)
+  const cueBox={left:left,top:top,right:left+cw,bottom:top+ch};
+  const hitStats=sr&&sr.width>0&&!(cueBox.right<=sr.left+4||cueBox.left>=sr.right-4||cueBox.bottom<=sr.top+4||cueBox.top>=sr.bottom-4);
+  if(hitStats){
+    if(sr.top-ch-6>40&&(t.mode==='phone'||left+cw<=sr.left))top=sr.top-ch-6;
+    else if(t.mode==='desk'&&r.bottom+6+ch<=window.innerHeight)top=r.bottom+6; // keep under the search control
+    else{cue.classList.remove('show');return}
+  }
+  cue.style.left=Math.round(left)+'px';
+  cue.style.top=Math.round(top)+'px';
+  cue.setAttribute('aria-hidden','false');
+  cue.classList.add('show');
+  placed=true;
+}
+function schedule(){if(gone)return;if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{raf=0;place()})}
+function onOpenOrPick(){dismiss()}
+function removeListeners(){
+  window.removeEventListener('scroll',schedule);
+  window.removeEventListener('resize',schedule);
+  const pd=document.getElementById('pdisc');
+  if(pd)pd.removeEventListener('click',onOpenOrPick);
+  const s=document.getElementById('psearch');
+  if(s){s.removeEventListener('focus',onOpenOrPick);s.removeEventListener('input',onOpenOrPick)}
+  const sb=document.getElementById('spkbar');
+  if(sb)sb.removeEventListener('click',onOpenOrPick);
+  if(chipObs)chipObs.disconnect();
+}
+let chipObs=null;
+function wire(){
+  const pd=document.getElementById('pdisc');
+  if(pd)pd.addEventListener('click',onOpenOrPick);
+  const s=document.getElementById('psearch');
+  if(s){s.addEventListener('focus',onOpenOrPick);s.addEventListener('input',onOpenOrPick)}
+  const sb=document.getElementById('spkbar');
+  if(sb)sb.addEventListener('click',onOpenOrPick);
+  const persons=document.getElementById('persons');
+  if(persons){
+    persons.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('button.chip'))onOpenOrPick()});
+    chipObs=new MutationObserver(()=>{ // category changes re-render chips; also catch .on changes
+      const on=persons.querySelector('button.chip.on');
+      if(on&&placed) {/* keep showing until pick/open */}
+      schedule();
+    });
+    chipObs.observe(persons,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+  }
+  window.addEventListener('scroll',schedule,{passive:true});
+  window.addEventListener('resize',schedule);
+  // tapping the cue itself opens the control
+  cue.addEventListener('click',()=>{
+    if(isPhone()){const pd=document.getElementById('pdisc');if(pd&&pd.getClientRects().length)pd.click()}
+    else{const s=document.getElementById('psearch');if(s&&s.getClientRects().length)s.focus()}
+    dismiss();
+  });
+  cue.style.cursor='pointer';
+}
+wire();
+// show after layout settles
+setTimeout(schedule,500);
+// also after person loads
+const w=window.__fedwords; // may not exist yet
+addEventListener('load',()=>setTimeout(schedule,200));
+const boot=setInterval(()=>{if(window.__fedwords&&window.__fedwords.P){clearInterval(boot);schedule()}},100);
+setTimeout(()=>clearInterval(boot),8000);
+})()</script><script>(()=>{const e=document.getElementById('eyebrow'),b=document.getElementById('pdisc');if(!e||!b)return;const f=()=>{let t=b.querySelector('.pdt');if(!t){t=document.createElement('span');t.className='pdt';t.setAttribute('aria-hidden','true');b.appendChild(t)}let v=e.textContent.trim();if(/^Fed Chair(man|woman)?(\s|$|·)/i.test(v)){const on=document.querySelector('#persons button.chip.on');v=on&&on.dataset.person==='yellen'?'Federal Reserve Chairwoman':'Federal Reserve Chairman'}if(t.textContent!==v)t.textContent=v;t.classList.toggle('long',v.length>17);requestAnimationFrame(()=>{t.classList.remove('wrap');const nm=b.querySelector('.pdn');if(nm&&nm.getBoundingClientRect().height>parseFloat(getComputedStyle(nm).fontSize)*1.6)t.classList.add('wrap')})};f();new MutationObserver(f).observe(e,{childList:true,characterData:true,subtree:true});new MutationObserver(f).observe(b,{childList:true})})()</script><script>(()=>{['vMath','vCloud','vRing'].forEach(id=>{const p=document.getElementById(id);if(!p||p.querySelector('.vfoot'))return;p.insertAdjacentHTML('beforeend','<div class="vfoot"><a href="#picker" class="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div>')});const f=()=>{const c=document.querySelector('#persons button.chip.on');let v='';if(c){const n=c.cloneNode(true);n.querySelectorAll('.tk').forEach(x=>x.remove());v=n.textContent.trim()}document.querySelectorAll('.vtop .rwho b').forEach(x=>{if(x.textContent!==v)x.textContent=v})};f();const P=document.getElementById('persons');if(P)new MutationObserver(f).observe(P,{subtree:true,attributes:true,attributeFilter:['class'],childList:true});document.querySelectorAll('a.rNew').forEach(n=>n.onclick=e=>{e.preventDefault();const t=document.getElementById('picker');if(t)t.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const d=document.getElementById('pdisc');if(d&&d.offsetParent&&d.getAttribute('aria-expanded')!=='true')d.click()})})()</script></body></html>
 """
 
 if __name__ == "__main__":
