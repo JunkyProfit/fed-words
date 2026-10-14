@@ -1,0 +1,67 @@
+Chairman Hill, Ranking Member Waters, and other Members of the Committee, thank you for the opportunity to testify on the Federal Reserve's supervisory and regulatory activities.
+
+Today, my testimony will cover three areas—current banking conditions, regulatory and supervisory reforms implemented since the Committee's last prudential regulator hearing, and our path forward as we continue to promote the safety, soundness, and stability of the U.S. financial system while supporting economic growth.
+
+Banking Conditions
+
+I will begin by providing an update on banking conditions. The banking system remains sound and resilient. Banks continue to report strong capital ratios and significant liquidity buffers, which position them well to support economic growth. The banking sector demonstrates strong health through sustained lending growth and robust profitability. While delinquencies have increased slightly in recent quarters, they remain within historical averages.
+
+However, the financial services competitive landscape continues to evolve. Non-bank financial institutions (NBFIs) are capturing a growing share of the lending market, competing with or displacing traditional banks without facing comparable regulatory standards. Part of this growth in NBFI lending represents a "shift" in traditional banking activities away from regulated banks to nonbanks. One example of this shift is the migration of mortgage loan origination and servicing to the nonbank financial sector. Additionally, though bank lending to this sector has grown rapidly in recent years, supervisory monitoring and Federal Reserve surveys show that banks have tightened lending standards for NBFIs based on concerns about underwriting and collateral quality.
+
+The financial system continues to adapt to technological advances, including the rapid evolution of artificial intelligence (AI) capabilities and the risks and benefits of its use. Recent advances in frontier AI models have dramatically accelerated the identification of cyber vulnerabilities across critical infrastructure, including the banking system. While this enhanced detection capability offers opportunities to strengthen cybersecurity defenses, it also identifies new vulnerabilities to potential cyberattacks. The Federal Reserve is committed to supporting government-wide efforts to enhance cybersecurity and working with banks as they navigate this complex threat environment. Effectively managing these emerging cyber risks will require ongoing collaboration between public and private entities, continuous monitoring of AI developments, regular stakeholder communications, and agile regulatory and supervisory frameworks that keep pace with rapid technological change.
+
+Recent Developments 
+
+Since I last appeared before the Committee, we have made substantial progress to modernize the regulatory and supervisory framework. Let me highlight a few of these initiatives.
+
+Community banking 
+
+The oversight of community banks remains a priority for the Federal Reserve. These banks serve as critical sources of credit in their communities, providing essential financial support to families, businesses, and the local economy. The Federal Reserve's supervisory and regulatory framework must be appropriately calibrated to support growth while maintaining safety and soundness.
+
+The federal banking regulators also finalized reforms to the community bank leverage ratio (CBLR) framework. A broader range of qualifying banks can now use a simple leverage ratio to measure capital adequacy instead of the complex risk-based capital framework. This rule calibrates the CBLR consistent with the statute at 8 percent and extends the grace period for banks to return to compliance from two to four quarters. These changes ensure the simplified framework is accessible to more community banks, and that it works as Congress intended.
+
+Capital framework modernization 
+
+Beyond the CBLR, in March, the federal banking agencies published proposals to modernize the U.S. regulatory capital framework. These proposals clarify requirements, align them with actual risks, reduce overlaps and duplications, and support the extension of credit to the U.S. economy while preserving strong capital levels and safety and soundness.
+
+The proposals modernize the capital framework for the largest banks as well as for smaller, less complex banks. The proposals are calibrated using a bottom-up review of each capital element, not by reverse-engineering capital requirements to reach a predetermined outcome. These changes, together with earlier updates to the enhanced supplementary leverage ratio and stress testing program, will allow capital to flow more efficiently while maintaining strong prudential standards that protect financial stability.
+
+Importantly, the proposals encourage responsible mortgage lending in the banking system by reducing disincentives for these activities. Since 2008, the share of bank-originated mortgages has declined significantly—from about 60 percent to around 35 percent in 2023. Over the same period, the share of mortgage servicing conducted by banks declined 50 percent. Because mortgage origination and servicing are a critical part of the customer relationships that underpin the community bank business model, appropriately calibrating risk weighting for these activities will encourage community banks to return to providing these foundational services.
+
+Supervision improvements 
+
+Turning to Federal Reserve supervision, we continue to advance risk-based tailoring that matches oversight to each bank's size, complexity, business model, and risk profile. This approach ensures that standards designed for the largest, most complex firms are not inappropriately forced down to community and regional banks.
+
+Our supervision focuses on material risks to a bank's financial condition and its overall strength. As part of this effort, staff conducted a comprehensive review of all outstanding matters requiring attention (MRAs). The findings revealed that many previous MRAs cited procedural or documentation deficiencies rather than threats to safety and soundness. Others applied best practices from the largest, most complex banks across institutions with very different business models and risk profiles. This approach diverted bank and examiner attention away from material financial risks and inherently discouraged innovation. The outstanding MRA review supports recalibrating our approach to prioritize what truly matters and apply appropriately tailored expectations.
+
+Under my leadership of the Federal Financial Institutions Examination Council, the federal agencies and state bank regulators proposed long-overdue revisions to the CAMELS rating framework, largely unchanged since 1979. The revisions introduce clearer, more objective metrics for each component and replace subjective management assessments with measurable factors. This approach ensures ratings reflect a bank's overall safety and soundness rather than isolated or process-driven deficiencies.
+
+Innovation
+
+Innovation is essential to meeting customer expectations, lowering costs, enhancing services, and maintaining a dynamic banking industry that adapts to the introduction of new technologies. This is especially important given the intense competition banks face from nonbank financial institutions.
+
+The Federal Reserve has prioritized open communication with banks to understand innovation challenges and improve how regulators facilitate, oversee, and support responsible innovation. Recently, the federal banking agencies updated the capital treatment for "tokenized" securities, clarifying that the capital rule is technology neutral by providing identical capital treatment to similar, non-tokenized assets. The Federal Reserve also revised our model risk management guidance to adopt a principles- and risk-based approach tailored to a bank's business model, risk profile, size and operational complexity. Importantly, it also provides greater flexibility for implementing new technologies. The Federal Reserve also replaced an overly restrictive policy statement with one that encourages appropriate adoption of innovation at Board-supervised banking organizations.
+
+It is important that, going forward, we ensure that there is a path to responsible innovation in the banking system, including in the use of AI.
+
+The Path Forward 
+
+While substantial progress has been made, additional work remains. We are currently working to ensure that thresholds throughout the regulatory and supervisory frameworks are appropriately calibrated and updated over time to reflect economic growth and inflation. A variety of thresholds are used to tailor regulatory requirements and supervisory expectations, establishing different standards based on bank size, complexity, business model, and risk profile. However, because thresholds used are not automatically adjusted for inflation or economic growth, small, low-risk banks that simply grow with the economy cross these thresholds and become subject to requirements designed for much larger, more complex banks—contrary to the original intent of the regulations.
+
+Consider Regulation O, which governs lending to bank insiders. Its thresholds have not been updated in several decades and, while reasonable at the time they were established, now discourage well-qualified local business leaders from serving on community bank boards, limiting access to valuable expertise and governance. This and other thresholds are subject to a comprehensive review to ensure our regulations remain aligned with their original intent and are appropriately calibrated going forward. Approaches are also being considered to tailor the mutual bank framework, preserving their unique ownership structure and business model to reflect their lower risk profile and community focus.
+
+Tailoring requirements meaningfully impacts banks of all sizes. For large banks, stress testing remains a regulatory cornerstone. We are reviewing comments on proposed changes to the stress test. The proposal increases transparency in how these tests are conducted, enabling stakeholders to identify model weaknesses and helping banks better plan capital needs across business lines.
+
+Addressing payments fraud is another important initiative, but one that requires coordination across the public and private sectors. No single agency or institution can tackle this challenge alone—the threat is too complex and far reaching. We are actively pursuing public–private engagement on this issue and look forward to sharing outcomes from these collaborative efforts.
+
+The federal banking agencies are also working to develop regulations for stablecoin issuers as required by the GENIUS Act. This statute presents a significant opportunity to bring financial innovation into the regulated banking system with appropriate safeguards. We are committed to a regulatory framework that protects consumers, financial stability, and payment system integrity while also enabling responsible innovation.
+
+We are strengthening liquidity regulations to support banking system stability and promote sound liquidity management. Our efforts focus on formally recognizing discount window collateral in our liquidity regulations. This ensures that banks can meet obligations under stress while maintaining the ability to provide liquidity to customers and communities.
+
+International Leadership 
+
+As Vice Chair for Supervision and Chair of the Standing Committee on Supervisory and Regulatory Cooperation (SRC) of the Financial Stability Board (FSB), I lead international efforts to modernize supervisory and regulatory frameworks as the financial system evolves. We will release a report on international modernization efforts for public comment later this year. Next week, the FSB's SRC will publish a report on sound practices for financial institution use of AI. This will guide institutions in safely adopting and effectively using AI.
+
+Conclusion 
+
+The initiatives I described today reflect a fundamental principle: appropriately calibrating regulatory and supervisory requirements strengthens both financial stability and economic growth. By tailoring requirements to actual risk, focusing supervision on what truly matters, and integrating innovation into the regulatory framework, the Federal Reserve is creating conditions for banks to thrive while maintaining the robust safeguards the American people expect and deserve. Thank you again for the opportunity to appear before you this morning. I look forward to answering your questions.

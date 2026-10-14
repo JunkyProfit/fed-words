@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Fetch Fed Chair speeches/testimony from federalreserve.gov and save clean
 body text to transcripts/<slug>/ (default: the current Chair, Kevin Warsh).
-Past Chairs use the same pipeline (same extraction, same index.json format);
-only the speaker pattern and output folder differ (see CHAIRS below).
+Past Chairs and current Board members use the same pipeline (same extraction,
+same index.json format); only the speaker pattern and output folder differ
+(see CHAIRS / BOARD / SPEAKERS below).
 
 Safe to rerun (e.g., weekly): items already listed in transcripts/index.json
 with an existing .txt file are kept as-is and not re-downloaded; only new
@@ -37,6 +38,15 @@ CHAIRS = {
     "bernanke":  {"speaker": r"^Ch(ai|ia)rman\s+Ben\s+S\.\s+Bernanke$"},
     "greenspan": {"speaker": r"^Chairman\s+Alan\s+Greenspan$", "archive": range(2006, 1995, -1)},
 }
+# Current Board members (title as shown on federalreserve.gov feeds; current role only).
+BOARD = {
+    "jefferson": {"speaker": r"^Vice\s+Chair\s+Philip\s+N\.\s+Jefferson$"},
+    "bowman":    {"speaker": r"^Vice\s+Chair\s+for\s+Supervision\s+Michelle\s+W\.\s+Bowman$"},
+    "barr":      {"speaker": r"^Governor\s+Michael\s+S\.\s+Barr$"},
+    "lisacook":  {"speaker": r"^Governor\s+Lisa\s+D\.\s+Cook$"},
+    "waller":    {"speaker": r"^Governor\s+Christopher\s+J\.\s+Waller$"},
+}
+SPEAKERS = {**CHAIRS, **BOARD}
 
 _last = [0.0]
 def get(url):
@@ -154,12 +164,12 @@ def atomic_write(path, text):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--slug", default="warsh", choices=sorted(CHAIRS), help="person slug (transcripts/<slug>/)")
+    ap.add_argument("--slug", default="warsh", choices=sorted(SPEAKERS), help="person slug (transcripts/<slug>/)")
     ap.add_argument("--speaker", help="regex matched against the feed's speaker field (default: the slug's)")
     ap.add_argument("--max", type=int, default=0, help="keep at most this many of the most recent items (0 = all)")
     ap.add_argument("--refresh", action="store_true", help="re-download items already saved")
     a = ap.parse_args()
-    cfg = CHAIRS[a.slug]
+    cfg = SPEAKERS[a.slug]
     spk = re.compile(a.speaker or cfg["speaker"])
     out = TDIR / a.slug
     index = out / "index.json"
