@@ -922,6 +922,17 @@ body #tfbar #docPick[open]>summary.dbtn{border-color:#f3eee4!important}
 #docPick .dbn{font:700 17px/1.2 Arial,Helvetica,sans-serif;color:var(--num-red)}
 #docPick .dbv{font:700 15px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;white-space:nowrap}#docPick .dbv::after{content:" \25BE";font-size:15px}#docPick[open] .dbv::after{content:" \25B4"}
 #docPick .dbl2{font:400 13px/1.3 Arial,Helvetica,sans-serif;color:#8f897f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* Recent (one-doc) mode: subtitle source link; hide Choose box; plain docs stat (no ▾) */
+#docOne.docone{display:none;font:400 13px/1.35 Arial,Helvetica,sans-serif;color:#8f897f;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;margin:2px 0 4px}
+#docOne.docone:hover{color:#f3eee4;text-decoration:underline;text-underline-offset:3px}
+#docOne.docone:focus-visible{outline:2px solid #fff;outline-offset:2px}
+body #tfbar.oneDoc #docPick{display:none!important}
+body #tfbar.oneDoc #docOne.docone{display:block}
+body #stats.oneDoc .stat:first-child{cursor:default}
+body #stats.oneDoc .stat:first-child .sl{text-decoration:none!important}
+body #stats.oneDoc .stat:first-child b::after{content:none!important}
+body #stats.oneDoc .stat:first-child .sl::after{content:none!important}
+@media (max-width:640px){body #stats.oneDoc .stat:first-child .sl::after{content:attr(data-s)!important}}
 body #stats .stat:first-child .sl::after{content:" \25BE"}@media (max-width:640px){body #stats .stat:first-child .sl::after{content:attr(data-s) " \25BE"!important}}
 body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;text-underline-offset:3px}
 #stats .stat:first-child{cursor:pointer}#stats .stat:first-child:focus-visible{outline:2px solid #fff;outline-offset:2px}
@@ -1020,6 +1031,7 @@ body #docPick .dbv::after,body #tfbar #docPick>summary::after,body #aboutToggle.
 body #stats .stat:first-child .sl::after{content:none!important}
 @media (max-width:640px){body #stats .stat:first-child .sl::after{content:attr(data-s)!important}}
 body #stats .stat:first-child b::after{content:" \25BE";color:#fff;font-size:24px;line-height:0;vertical-align:-2px}
+body #stats.oneDoc .stat:first-child b::after{content:none!important}
 body .sarr{font-size:24px!important;line-height:0;vertical-align:-3px;color:#fff}
 @media (max-width:640px){body #docSeg.long button{font-size:min(15px,3.7vw)!important;letter-spacing:-.025em!important;padding-left:6px!important;padding-right:6px!important}}   /* mm66: long labels like All Public Documents fit on phones */
 body #persons button.chip.on,body #persons button.chip.on:hover{background:linear-gradient(180deg,#e0453b,#a3271f)!important;border-color:#ff7a70!important;color:#fff!important;box-shadow:0 0 14px rgba(255,84,73,.45),inset 0 1px 0 rgba(255,255,255,.25)!important;text-shadow:0 1px 1px rgba(0,0,0,.35)}   /* mm71: the selected speaker is unmistakable */
@@ -1267,6 +1279,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 <button type="button" id="segAll" aria-pressed="false">All combined</button>
 </div>
 <div id="tfbar" role="group" aria-label="Documents">
+<a id="docOne" class="docone" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
 <details id="docPick"><summary class="dbtn" aria-label="Choose documents"><span class="dbl1"><span class="dbn" id="dbN">documents</span><span class="dbv">Choose your docs</span></span><span class="dbl2" id="dbLatest"></span><span class="muted" id="docCount"></span></summary>
 <div class="dsback" aria-hidden="true"></div>
 <div class="dsheet" role="dialog" aria-label="Choose documents"><div class="dshead"><b>Documents</b><button type="button" class="dsclose2" id="dsClose2">Close <span class="rtri" aria-hidden="true">&#9662;</span></button><button type="button" class="dsx" id="dsClose" aria-label="Close">&times;</button></div>
@@ -1480,7 +1493,7 @@ function buildTimeframe(){
  DP.querySelector('.dsback').onclick=()=>{DP.open=false};$('dsClose').onclick=()=>{DP.open=false};$('dsClose2').onclick=()=>{DP.open=false};
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&DP.open){e.preventDefault();DP.open=false}});
  const ds=$('sDocs').closest('.stat');ds.tabIndex=0;ds.setAttribute('role','button');ds.setAttribute('aria-label','Choose documents');
- ds.onclick=()=>{DP.open=true};ds.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();DP.open=true}}}
+ ds.onclick=()=>{if($('stats')&&$('stats').classList.contains('oneDoc'))return;DP.open=true};ds.onkeydown=e=>{if($('stats')&&$('stats').classList.contains('oneDoc'))return;if(e.key==='Enter'||e.key===' '){e.preventDefault();DP.open=true}}}
 $('btnAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
 $('btnNone').onclick=()=>{sel=new Set();update()};
 $('segLatest').onclick=()=>{const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;sel=new Set(latest?[latest.id]:[]);update()};
@@ -1493,17 +1506,38 @@ function docSegLabels(){   // short noun when it fits; otherwise Latest / All co
     const L=DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]),spoken=/^(speech|testimony|remarks|hearing|hearing remarks|address|floor remarks|conference)$/i;
     const k=docKind(L);return [`Recent ${k}`,DOCS.every(d=>spoken.test(d.type||''))?'All Speeches':'All Public Documents']}
   return use?[`Recent ${u.charAt(0).toUpperCase()+u.slice(1)}`,`All ${up.charAt(0).toUpperCase()+up.slice(1)}`]:['Recent','All Combined']}
-function syncDocSeg(){const box=$('docSeg');if(!box)return;
-  const show=DOCS.length>1;box.hidden=!show;if(!show)return;
-  const [lLab,aLab]=docSegLabels();$('segLatest').textContent=lLab;$('segAll').textContent=aLab;box.classList.toggle('long',Math.max(lLab.length,aLab.length)>18);
-  const latest=DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]);
-  const isLatest=!!latest&&sel.size===1&&sel.has(latest.id),isAll=sel.size===DOCS.length&&DOCS.length>0;
-  $('segLatest').setAttribute('aria-pressed',isLatest?'true':'false');
-  $('segAll').setAttribute('aria-pressed',isAll?'true':'false');
+function kindNoun(n){   // speeches / letters / opinions… (singular when n===1)
+  const u=P&&P.unit||'',up=P&&P.unit_pl||'';
+  if(u&&u!=='document')return n===1?u:(up||u+'s');
+  if(!DOCS.length)return n===1?'document':'documents';
+  const types=DOCS.map(d=>(d.type||'doc').toLowerCase()),spoken=/^(speech|testimony|remarks|hearing|hearing remarks|address|floor remarks|conference)$/;
+  if(types.every(t=>spoken.test(t)))return n===1?'speech':'speeches';
+  if(types.every(t=>t==='letter'))return n===1?'letter':'letters';
+  if(types.every(t=>/opinion/.test(t)))return n===1?'opinion':'opinions';
+  const one=types[0];if(types.every(t=>t===one)){const k=docKind(DOCS[0]).toLowerCase();return n===1?k:(k.endsWith('s')?k:k+'s')}
+  return n===1?'document':'documents';
 }
-function dbFill(){const n=DOCS.length,k=sel.size,u=unitOf(n),e=$('dbN');if(!e)return;e.textContent=k===n?`${n.toLocaleString()} ${u}`:`${k.toLocaleString()} of ${n.toLocaleString()} ${u}`;
-  const l=$('dbLatest');if(l){const d=n?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;l.textContent=d?`Latest ${docKind(d)} · ${fmtDate(d.date)} · ${d.title}`:''}
-  e.closest('summary').setAttribute('aria-label',`Choose documents: ${e.textContent} selected`)}
+function syncDocSeg(){const box=$('docSeg');if(!box)return;
+  const show=DOCS.length>1;box.hidden=!show;
+  if(show){const [lLab,aLab]=docSegLabels();$('segLatest').textContent=lLab;$('segAll').textContent=aLab;box.classList.toggle('long',Math.max(lLab.length,aLab.length)>18)}
+  const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;
+  const isLatest=!!latest&&sel.size===1&&sel.has(latest.id),isAll=sel.size===DOCS.length&&DOCS.length>0;
+  if(show){$('segLatest').setAttribute('aria-pressed',isLatest?'true':'false');$('segAll').setAttribute('aria-pressed',isAll?'true':'false')}
+  const tf=$('tfbar'),st=$('stats'),DP=$('docPick'),one=$('docOne'),ds=$('sDocs')&&$('sDocs').closest('.stat');
+  if(tf)tf.classList.toggle('oneDoc',isLatest);if(st)st.classList.toggle('oneDoc',isLatest);
+  if(isLatest&&latest){if(DP){DP.open=false}if(one){one.hidden=false;one.href=latest.url||'#';one.textContent=`${latest.title} · ${fmtDate(latest.date)}`;one.title='Open the original source'}
+    if(ds){ds.removeAttribute('role');ds.tabIndex=-1;ds.removeAttribute('aria-label');const sl=ds.querySelector('.sl');if(sl){sl.setAttribute('data-s',kindNoun(1));sl.textContent=kindNoun(1)}}}
+  else{if(one){one.hidden=true;one.removeAttribute('href');one.textContent=''}
+    if(ds){ds.setAttribute('role','button');ds.tabIndex=0;ds.setAttribute('aria-label','Choose documents');const sl=ds.querySelector('.sl');if(sl){sl.setAttribute('data-s','docs');sl.textContent='documents selected'}}}
+}
+function dbFill(){const n=DOCS.length,k=sel.size,u=kindNoun(n||k),e=$('dbN'),v=document.querySelector('#docPick .dbv');if(!e)return;
+  const latest=n?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;
+  const isLatest=!!latest&&k===1&&sel.has(latest.id),isAll=k===n&&n>0;
+  if(isLatest){e.textContent='';if(v)v.textContent='Choose';const l=$('dbLatest');if(l)l.textContent='';return}
+  if(isAll){e.textContent=`Showing all ${n.toLocaleString()} ${u}`;if(v)v.textContent='Choose'}
+  else{e.textContent=`Showing ${k.toLocaleString()} of ${n.toLocaleString()} ${u}`;if(v)v.textContent='Choose'}
+  const l=$('dbLatest');if(l)l.textContent='';
+  e.closest('summary').setAttribute('aria-label',`${e.textContent}. Choose documents`)}
 function yrsFit(){const y=$('years');if(y)y.classList.toggle('ovf',y.scrollWidth>y.clientWidth+1)}   // fade only when the years overflow
 addEventListener('resize',()=>yrsFit());
 function syncTimeframe(){
@@ -1563,7 +1597,7 @@ function render(cloudToo=true){if(VIEW==='race')setTimeout(playRace,0);if(VIEW==
     tail=(s?full.filter(x=>re?re.test(x.word):x.word.includes(s)):full).slice(0,cap).filter(x=>x.stop)}
   const list=match.slice(0,cap);   // table: always the full top N real words (hide on), then sorted as chosen; the stopwords that would rank in the top N fold into ONE '+K common words' line
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
-  $('sDocs').textContent=sel.size+' / '+DOCS.length;dbFill();
+  {const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;const isLatest=!!latest&&sel.size===1&&sel.has(latest.id);$('sDocs').textContent=isLatest?'1':(sel.size+' / '+DOCS.length);dbFill();}
   const anim=P.slug!==lastCountSlug;lastCountSlug=P.slug;
   setStat('sTotal',base.reduce((t,x)=>t+x.count,0),anim);
   setStat('sUnique',base.length,anim);
