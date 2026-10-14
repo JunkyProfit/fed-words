@@ -1290,10 +1290,16 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
   content:"\25B8";display:inline-block;box-sizing:border-box;
   width:18px;height:18px;padding:0;color:#fff;
   font-size:15px;line-height:18px;text-align:center;border-radius:50%;
-  text-shadow:0 0 3px rgba(255,255,255,.95),0 0 6px rgba(224,69,59,.85),0 0 12px rgba(162,75,208,.7),0 0 18px rgba(162,75,208,.35);
-  animation:pdcPing 2.35s ease-out infinite;
+  text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.95),0 0 12px rgba(255,255,255,.55);
+  animation:pdcPing 1.8s ease-out infinite;
 }
-@media (prefers-reduced-motion:reduce){#spkbar .sba::after{animation:none!important;box-shadow:0 0 0 2px rgba(224,69,59,.35),0 0 8px rgba(162,75,208,.45)}}
+#spkbar.show .sbc{animation:pdcTextBreath 1.8s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){
+  #spkbar .sba::after{animation:none!important;
+    text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.85);
+    box-shadow:0 0 0 2px rgba(255,255,255,.45),0 0 0 4px rgba(162,75,208,.2),0 0 8px rgba(255,255,255,.35)}
+  #spkbar.show .sbc{animation:none!important;text-shadow:0 0 4px rgba(255,255,255,.25)}
+}
 #spkbar .sbc{flex:none;font-size:12px;font-weight:700;color:#f3eee4;margin-left:-3px;letter-spacing:.01em}
 /* mm39: longer label ("Search other CEOs" / "Search other officials") stays on one line; the name shrinks/ellipsizes or wraps first */
 #spkbar .sbc,.pk.pcoll #pdisc .pdc{white-space:nowrap}
@@ -1619,33 +1625,79 @@ html body .pk.pcoll #pdisc .pdn{grid-area:n}
 html body .pk.pcoll #pdisc .pdt{grid-area:t;justify-self:end;text-align:left;font:700 12px/1.25 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d9c9c6;border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:4px 7px;max-width:11em;font-size:11px}
 html body .pk.pcoll #pdisc .pda{grid-area:s;margin-left:0!important;display:none!important}
 html body .pk.pcoll #pdisc .pdc{grid-area:s;justify-self:start;max-width:none!important;white-space:nowrap!important;font-size:12.5px!important;line-height:1.25!important;letter-spacing:.01em!important}
+html body .pk.pcoll #pdisc .pdc{
+  animation:pdcTextBreath 1.8s ease-in-out infinite;
+}
 html body .pk.pcoll #pdisc .pdc::before{
   content:"\25B8";display:inline-block;box-sizing:border-box;
   width:18px;height:18px;margin-right:6px;padding:0;vertical-align:-3px;
   font-size:15px;line-height:18px;text-align:center;color:#fff;
   border-radius:50%;
-  text-shadow:0 0 3px rgba(255,255,255,.95),0 0 6px rgba(224,69,59,.85),0 0 12px rgba(162,75,208,.7),0 0 18px rgba(162,75,208,.35);
-  box-shadow:0 0 0 0 rgba(224,69,59,.0);
-  animation:pdcPing 2.35s ease-out infinite;
+  text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.95),0 0 12px rgba(255,255,255,.55);
+  animation:pdcPing 1.8s ease-out infinite;
 }
+/* Dual white sonar rings (staggered), outer rim fades to faint purple — distinct from green speaker-dot cadence */
 @keyframes pdcPing{
-  0%{box-shadow:0 0 0 0 rgba(224,69,59,.55),0 0 0 0 rgba(162,75,208,.35),0 0 4px rgba(224,69,59,.5)}
-  12%{box-shadow:0 0 0 2px rgba(224,69,59,.4),0 0 0 1px rgba(162,75,208,.35),0 0 6px rgba(162,75,208,.45)}
-  70%{box-shadow:0 0 0 11px rgba(224,69,59,0),0 0 0 16px rgba(162,75,208,0),0 0 4px rgba(162,75,208,.15)}
-  100%{box-shadow:0 0 0 0 rgba(224,69,59,0),0 0 0 0 rgba(162,75,208,0),0 0 3px rgba(224,69,59,.35)}
+  0%{
+    box-shadow:
+      0 0 0 0 rgba(255,255,255,.7),
+      0 0 0 0 rgba(255,255,255,.0),
+      0 0 0 0 rgba(162,75,208,.0),
+      0 0 5px rgba(255,255,255,.55);
+    text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,1),0 0 14px rgba(255,255,255,.7);
+  }
+  18%{
+    box-shadow:
+      0 0 0 3px rgba(255,255,255,.55),
+      0 0 0 0 rgba(255,255,255,.45),
+      0 0 0 0 rgba(162,75,208,.0),
+      0 0 7px rgba(255,255,255,.5);
+  }
+  40%{
+    box-shadow:
+      0 0 0 8px rgba(255,255,255,.12),
+      0 0 0 4px rgba(255,255,255,.4),
+      0 0 0 9px rgba(162,75,208,.22),
+      0 0 6px rgba(255,255,255,.4);
+  }
+  65%{
+    box-shadow:
+      0 0 0 14px rgba(255,255,255,0),
+      0 0 0 9px rgba(255,255,255,.12),
+      0 0 0 15px rgba(162,75,208,.12),
+      0 0 5px rgba(255,255,255,.35);
+  }
+  100%{
+    box-shadow:
+      0 0 0 0 rgba(255,255,255,0),
+      0 0 0 14px rgba(255,255,255,0),
+      0 0 0 18px rgba(162,75,208,0),
+      0 0 4px rgba(255,255,255,.4);
+    text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.85),0 0 10px rgba(255,255,255,.4);
+  }
+}
+@keyframes pdcTextBreath{
+  0%,100%{color:#e8e2d8;text-shadow:0 0 0 transparent}
+  45%{color:#fff;text-shadow:0 0 6px rgba(255,255,255,.55),0 0 12px rgba(255,255,255,.25)}
+  55%{color:#fff;text-shadow:0 0 7px rgba(255,255,255,.6),0 0 14px rgba(255,255,255,.28)}
+}
+html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc{
+  animation:none!important;color:#f3eee4;text-shadow:none;
 }
 html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{
   content:"\25BE";animation:none!important;
-  text-shadow:0 0 2px rgba(255,255,255,.5);
+  text-shadow:0 0 2px rgba(255,255,255,.55);
   box-shadow:none;
 }
 @media (prefers-reduced-motion:reduce){
+  html body .pk.pcoll #pdisc .pdc{animation:none!important;color:#f3eee4;text-shadow:0 0 4px rgba(255,255,255,.25)}
   html body .pk.pcoll #pdisc .pdc::before{animation:none!important;
-    box-shadow:0 0 0 2px rgba(224,69,59,.35),0 0 8px rgba(162,75,208,.45)}
-  html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{box-shadow:none}
+    text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.85);
+    box-shadow:0 0 0 2px rgba(255,255,255,.45),0 0 0 4px rgba(162,75,208,.2),0 0 8px rgba(255,255,255,.35)}
+  html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc{text-shadow:none}
+  html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{box-shadow:none;text-shadow:0 0 2px rgba(255,255,255,.5)}
 }
 #pbio{margin:8px 0 2px;font:14px/1.5 Arial,Helvetica,sans-serif;color:var(--ink)}#pbio summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--muted);min-height:32px;display:flex;align-items:center;gap:6px}#pbio p{margin:4px 0 6px;max-width:68ch}#pbio a{font-size:13px;font-weight:700;color:var(--ink)}
-}
 html body .rfoot{display:flex;align-items:center;gap:18px;margin-top:10px;flex-wrap:wrap}
 html body .rfoot .rplay{margin-top:0!important;flex:none}
 html body .rfoot .rNew,html body .vfoot .rNew{font:700 14px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;text-decoration:none}
