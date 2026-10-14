@@ -1951,7 +1951,7 @@ const ringStill=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;let ri
 function stopRing(){cancelAnimationFrame(ringRAF);ringRAF=0}
 function ringData(){const pool=sel.size?DOCS.filter(d=>sel.has(d.id)):DOCS,m=new Map();
   pool.forEach(d=>d.cnt.forEach((n,wi)=>{const w=V[wi];if(hide.checked&&STOP.has(w))return;m.set(w,(m.get(w)||0)+n)}));
-  const nar=innerWidth<700,top=[...m].sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1)).slice(0,nar?40:100).map(([w,n])=>({w,n}));
+  const nar=innerWidth<700,top=[...m].sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1)).slice(0,nar?12:28).map(([w,n])=>({w,n}));
   const ord=[];top.forEach((o,i)=>ord[(i*37)%top.length]=o);return {top,ord:ord.filter(Boolean)}}
 let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function playRing(){const c=$('ring');if(!c||!P)return;stopRing();const x=c.getContext('2d');let D=Math.min(devicePixelRatio||1,2);
   const RD=ringData(),words=RD.top,order=RD.ord,max=words.length?words[0].n:1;ringHov=-1;
@@ -1963,17 +1963,42 @@ let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function playRing(){const c=$('
    if(!ringDrag&&Math.abs(ringVel)>1e-4){ringOff+=ringVel;ringVel*=.95}x.globalCompositeOperation='lighter';x.lineWidth=.7;
    for(let i=0;i<FILL;i++){const s=seed[i],a=i/FILL*6.283+t*.03+ringOff,b=Math.sin(t*.7+s[0]*6.28)*.5+.5,r0=R*(.85+s[1]*.25),len=Lmax*(.08+s[2]*.22)*(.8+.2*b);
     x.strokeStyle=col(a,t,.18+.25*b);x.beginPath();x.moveTo(cx+Math.cos(a)*r0,cy+Math.sin(a)*r0);x.lineTo(cx+Math.cos(a)*(r0+len),cy+Math.sin(a)*(r0+len));x.stroke()}
-   x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length;
-   for(let i=0;i<n;i++){const o=order[i],a=i/n*6.283+t*.042+ringOff,f=Math.sqrt(o.n/max),pulse=1,r0=R*1.05,r1=r0+Lmax*(.25+.75*f)*pulse,ca=Math.cos(a),sa=Math.sin(a),hv=i===ringHov;ringPos[i]=a;let dz=Math.abs((((a+1.5708)%6.283)+6.283)%6.283);dz=Math.min(dz,6.283-dz);const zw=6.283/n*1.05,zb=dz<zw?(1+Math.cos(dz/zw*3.1416))/2:0;
+   x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length,labs=[];
+   for(let i=0;i<n;i++){const o=order[i],a=i/n*6.283+t*.042+ringOff,f=Math.sqrt(o.n/max),pulse=1,r0=R*1.05,r1=r0+Lmax*(.25+.75*f)*pulse,ca=Math.cos(a),sa=Math.sin(a),hv=i===ringHov;ringPos[i]=a;let dz=Math.abs((((a+1.5708)%6.283)+6.283)%6.283);dz=Math.min(dz,6.283-dz);const zw=6.283/Math.max(8,n)*1.35,zb=dz<zw?(1+Math.cos(dz/zw*3.1416))/2:0;
     x.strokeStyle=hv?'#fff':col(a,t,.55+.45*f);x.lineWidth=hv?3:.8+1.6*f;x.beginPath();x.moveTo(cx+ca*r0,cy+sa*r0);x.lineTo(cx+ca*r1,cy+sa*r1);x.stroke();
     x.fillStyle=o===words[0]?'#ff5449':'#fff';x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,1.5+2*f,0,7);x.fill();
-    const fs=Math.round(((nar?9:9)+(nar?5:12)*f)*(1+(nar?.9:1.1)*zb)),fsz=fs+(hv?3:0);x.font=`${hv||f>.5||zb>.5?700:400} ${fsz}px Arial`;
-    // Upright labels (no radial rotate/flip). Fade out just after 12 o'clock (clockwise), fade in before the next pass.
-    let fromTop=(((a+1.5708)%6.283)+6.283)%6.283;const fadeOut=1.3,fadeIn0=3.6;let fade=fromTop<fadeOut?1-fromTop/fadeOut:fromTop<fadeIn0?0:(fromTop-fadeIn0)/(6.283-fadeIn0);fade=Math.max(0,Math.min(1,fade));fade=fade*fade*(3-2*fade);
-    const left=ca<0,pad=nar?7:10;let tx=cx+ca*(r1+pad),ty=cy+sa*(r1+pad);x.textAlign=left?'right':'left';x.textBaseline='middle';
-    const tw=x.measureText(o.w).width,m=nar?3:6;if(left){if(tx-tw<m)tx=m+tw;if(tx>W-m)tx=W-m}else{if(tx+tw>W-m)tx=W-m-tw;if(tx<m)tx=m}if(ty-fsz*.55<m)ty=m+fsz*.55;if(ty+fsz*.55>H-m)ty=H-m-fsz*.55;
-    const baseA=hv||zb>.6?1:Math.min(1,(ringHov>=0?.3+.3*f:.55+.45*f)+zb),al=baseA*(hv?Math.max(fade,.35):fade);
-    if(al>.02){x.fillStyle=hv||zb>.6?`rgba(255,255,255,${al})`:o===words[0]?`rgba(255,84,73,${al})`:`rgba(243,238,228,${al})`;if(zb>.2&&fade>.25){x.shadowColor=`rgba(255,84,73,${.8*fade})`;x.shadowBlur=12*zb}x.fillText(o.w,tx,ty);x.shadowBlur=0}}
+    const fs=Math.round(((nar?7:8)+(nar?3:10)*f)*(1+(nar?1.1:1.25)*zb)),fsz=fs+(hv?3:0);
+    let fromTop=(((a+1.5708)%6.283)+6.283)%6.283;const fadeOut=1.15,fadeIn0=4.0;let fade=fromTop<fadeOut?1-fromTop/fadeOut:fromTop<fadeIn0?0:(fromTop-fadeIn0)/(6.283-fadeIn0);fade=Math.max(0,Math.min(1,fade));fade=fade*fade*(3-2*fade);
+    const left=ca<0,pad=nar?8:12,lift=Math.pow(zb,.75),extra=(nar?34:58)*lift*(1+.5*f),up=(nar?22:36)*lift,bl=zb>.2?'bottom':'middle';
+    let tx=cx+ca*(r1+pad+extra),ty=cy+sa*(r1+pad+extra)-up;
+    x.font=`${hv||f>.5||zb>.5?700:400} ${fsz}px Arial`;const tw=x.measureText(o.w).width,th=fsz*1.25,m=nar?2:5;
+    if(left){if(tx-tw<m)tx=m+tw;if(tx>W-m)tx=W-m}else{if(tx+tw>W-m)tx=W-m-tw;if(tx<m)tx=m}
+    if(bl==='bottom'){if(ty-th<m)ty=m+th;if(ty>H-m)ty=H-m}else{if(ty-th*.5<m)ty=m+th*.5;if(ty+th*.5>H-m)ty=H-m-th*.5}
+    const baseA=hv||zb>.6?1:Math.min(1,(ringHov>=0?.3+.3*f:.55+.45*f)+zb);labs.push({o,i,a,f,zb,hv,fsz,left,fade,baseA,tx,ty,tw,th,ca,sa,r1,pad,extra,lift,up,bl,tyOff:0})}
+   labs.sort((A,B)=>{const z=B.zb-A.zb;if(Math.abs(z)>.08)return z>0?1:-1;return(B.o.n-A.o.n)||(A.o.w<B.o.w?-1:1)});
+   const minAng=nar?.45:.34,kept=[];
+   for(const L of labs){if(L.fade<.05&&L.zb<.45&&!L.hv){kept.push(L);continue}
+    const close=kept.some(K=>{if(K.fade<.05&&K.zb<.45)return false;let d=Math.abs(L.a-K.a)%6.283;d=Math.min(d,6.283-d);return d<minAng});
+    if(close&&L.zb<.88&&!L.hv)L.fade=0;kept.push(L)}
+   const placed=[],gap=nar?4:6,mEdge=nar?2:5;
+   const box=L=>{const y2=L.bl==='bottom'?L.ty:L.ty+L.th*.5,y1=y2-L.th;return{x1:(L.left?L.tx-L.tw:L.tx)-gap,y1:y1-gap,x2:(L.left?L.tx:L.tx+L.tw)+gap,y2:y2+gap}};
+   const hit=(A,B)=>{const a=box(A),b=box(B);return a.x1<b.x2&&a.x2>b.x1&&a.y1<b.y2&&a.y2>b.y1};
+   const clampLab=L=>{if(L.left){if(L.tx-L.tw<mEdge)L.tx=mEdge+L.tw;if(L.tx>W-mEdge)L.tx=W-mEdge}else{if(L.tx+L.tw>W-mEdge)L.tx=W-mEdge-L.tw;if(L.tx<mEdge)L.tx=mEdge}
+    if(L.bl==='bottom'){if(L.ty-L.th<mEdge)L.ty=mEdge+L.th;if(L.ty>H-mEdge)L.ty=H-mEdge}else{if(L.ty-L.th*.5<mEdge)L.ty=mEdge+L.th*.5;if(L.ty+L.th*.5>H-mEdge)L.ty=H-mEdge-L.th*.5}};
+   const place=L=>{L.tx=cx+L.ca*(L.r1+L.pad+L.extra);L.ty=cy+L.sa*(L.r1+L.pad+L.extra)-L.up+L.tyOff;clampLab(L)};
+   for(const L of labs){if(L.fade<.05&&L.zb<.45&&!L.hv){placed.push(L);continue}
+    for(let tries=0;tries<10;tries++){const P=placed.find(Q=>Q.fade>.05&&hit(L,Q));if(!P)break;
+     const Lcx=L.left?L.tx-L.tw/2:L.tx+L.tw/2,Lcy=L.bl==='bottom'?L.ty-L.th*.5:L.ty,Pcx=P.left?P.tx-P.tw/2:P.tx+P.tw/2,Pcy=P.bl==='bottom'?P.ty-P.th*.5:P.ty;
+     const nearEdge=(L.left&&L.tx-L.tw<=mEdge+1)||(!L.left&&L.tx+L.tw>=W-mEdge-1)||(P.left&&P.tx-P.tw<=mEdge+1)||(!P.left&&P.tx+P.tw>=W-mEdge-1);
+     if(nearEdge||Math.abs(Lcy-Pcy)<L.th*.9){const dy=Lcy===Pcy?(L.i>P.i?1:-1):(Lcy>Pcy?1:-1);const need=(L.th+P.th)*.55-Math.abs(Lcy-Pcy)+gap;L.tyOff+=dy*Math.max(need,nar?7:9);L.extra+=nar?4:6}
+     else{let ddx=Lcx-Pcx,ddy=Lcy-Pcy,len=Math.hypot(ddx,ddy)||1;const step=nar?6:9;L.extra+=step*.85;L.tyOff+=((ddy/len)*.55)*step-(nar?1:2)}
+     place(L)}
+    if(placed.some(Q=>Q.fade>.05&&hit(L,Q))){if(L.zb>.88||L.hv){L.extra+=nar?8:14;L.tyOff-=nar?10:16;place(L);if(placed.some(Q=>Q.fade>.05&&hit(L,Q)))L.fade*=.65}else L.fade=0}
+    placed.push(L)}
+   [...labs].sort((A,B)=>(A.zb-B.zb)||(A.o.n-B.o.n)).forEach(L=>{const al=L.baseA*(L.hv?Math.max(L.fade,.35):L.fade);if(al<=.02)return;
+    x.font=`${L.hv||L.f>.5||L.zb>.5?700:400} ${L.fsz}px Arial`;x.textAlign=L.left?'right':'left';x.textBaseline=L.bl;
+    x.fillStyle=L.hv||L.zb>.6?`rgba(255,255,255,${al})`:L.o===words[0]?`rgba(255,84,73,${al})`:`rgba(243,238,228,${al})`;
+    if(L.zb>.25&&L.fade>.3){x.shadowColor=`rgba(255,84,73,${.9*L.fade})`;x.shadowBlur=16*L.zb}x.fillText(L.o.w,L.tx,L.ty);x.shadowBlur=0});
    x.textAlign='center';let tI=-1,tD=9;ringPos.forEach((p,i)=>{let d=Math.abs((((p+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<tD){tD=d;tI=i}});const o=tI>=0?order[tI]:null;ringCur=o?o.w:'';
    if(o){const fs=Math.min(nar?30:44,W*.42/Math.max(3,o.w.length)*1.8);x.textAlign='right';x.textBaseline='top';x.font=`700 ${fs}px Arial`;x.fillStyle='#ff5449';x.shadowColor='rgba(255,84,73,.6)';x.shadowBlur=18;x.fillText(o.w,W-12,10);x.shadowBlur=0;
     x.font=`700 ${nar?14:17}px Arial`;x.fillStyle='#f3eee4';x.fillText(`${o.n.toLocaleString()} ${o.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(o)+1}`,W-12,14+fs);x.textAlign='center';x.textBaseline='middle'}
