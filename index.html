@@ -1133,6 +1133,7 @@ html body .pk.pcoll #pdisc .pdn{grid-area:n}
 html body .pk.pcoll #pdisc .pdt{grid-area:t;justify-self:end;text-align:left;font:700 12px/1.25 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d9c9c6;border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:4px 7px;max-width:11em;font-size:11px}
 html body .pk.pcoll #pdisc .pda{grid-area:s;margin-left:0!important;display:none!important}
 html body .pk.pcoll #pdisc .pdc{grid-area:s;justify-self:start;max-width:none!important;white-space:nowrap!important;font-size:12.5px!important;line-height:1.25!important;letter-spacing:.01em!important}
+}
 html body .pk.pcoll #pdisc .pdc{
   animation:pdcTextBreath 2.35s ease-in-out infinite;
 }
@@ -1201,6 +1202,31 @@ html body #race .rrow{cursor:pointer}html body #race .rrow:hover .rw{fill:#fff;t
 @media (max-width:640px){html body .pk.pcoll #pdisc{align-items:start!important}html body .pk.pcoll #pdisc .pdn{display:flex!important;align-items:flex-start;line-height:1.15!important;padding-top:4px;align-self:start}html body .pk.pcoll #pdisc .pdn::before{flex:none;margin-top:calc(.575em - 6px)!important;vertical-align:0!important}html body .pk.pcoll #pdisc .pdt{align-self:start}html body .pk.pcoll #pdisc .pdc{margin-top:4px}}
 html body #cats button.cat{border:1.5px solid rgba(255,255,255,.22)!important;box-shadow:none!important}
 html body #cats button.cat.on{border:2px solid #e0453b!important;box-shadow:0 0 12px rgba(224,69,59,.35)!important}
+/* Compact category tabs: no people-count, smaller padding/type; gray border, red when selected */
+html body #picker #cats button.cat .ct small,html body #cats button.cat .ct small{display:none!important}
+html body #picker #cats,html body #cats{gap:7px!important}
+html body #picker #cats button.cat,html body #cats button.cat{
+  padding:6px 10px!important;min-height:0!important;gap:0!important;height:auto!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  grid-template-rows:auto!important;
+}
+html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{
+  font:700 13.5px/1.2 Arial,Helvetica,sans-serif!important;
+  letter-spacing:-.01em!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;
+}
+@media (max-width:640px){
+  html body #picker #cats button.cat,html body #cats button.cat{padding:5px 8px!important}
+  html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{font-size:12.5px!important;line-height:1.15!important}
+}
+@media (max-width:480px){
+  html body #picker #cats button.cat,html body #cats button.cat{padding:5px 7px!important}
+  html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{font-size:12px!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important}
+}
+@media (max-width:360px){
+  html body #picker #cats button.cat,html body #cats button.cat{padding:4px 6px!important}
+  html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{font-size:11.5px!important}
+}
+
 @media (max-width:640px){html body .pk.pcoll #pdisc:has(.tk){grid-template-columns:auto auto!important;justify-content:start;column-gap:12px!important}html body .pk.pcoll #pdisc:has(.tk) .pdt{white-space:nowrap;max-width:none!important;letter-spacing:.03em!important;padding:3px 6px!important;font-size:10.5px!important}}
 @media (max-width:640px){html body .pk.pcoll #pdisc:has(.tk) .pdt.long{white-space:nowrap!important;max-width:none!important;font-size:9.5px!important;letter-spacing:.02em!important}}
 @media (max-width:640px){html body .pk.pcoll #pdisc:has(.tk) .pdt.long.wrap{white-space:normal!important;max-width:9.5em!important}}
@@ -1356,8 +1382,8 @@ function renderAZ(allIn,inCat){
 }
 function renderPicker(){
   if(azCat!==P.category){azCat=P.category;azSel='';idxSel='';pq='';pOpen=false;$('psearch').value=''}
-  $('cats').innerHTML=CATS.map(c=>{const n=PEOPLE.filter(p=>p.category===c).length;
-    return `<button class="cat${P.category===c?' on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}"><span class="ci" aria-hidden="true">${CAT_ICON[c]||''}</span><span class="ct"><b>${esc(CAT_LBL[c]||c)}</b><small>${n} ${n===1?'person':'people'}</small></span></button>`}).join('');
+  $('cats').innerHTML=CATS.map(c=>{
+    return `<button class="cat${P.category===c?' on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}"><span class="ci" aria-hidden="true">${CAT_ICON[c]||''}</span><span class="ct"><b>${esc(CAT_LBL[c]||c)}</b></span></button>`}).join('');
   const allIn=PEOPLE.filter(p=>p.category===P.category),useF=allIn.length>=8,hasIdx=allIn.some(p=>(p.indices||[]).length);
   $('pfilter').hidden=!useF;$('idx').hidden=!hasIdx;if(!hasIdx)idxSel='';
   if(hasIdx){$('idx').innerHTML=[''].concat(IDX).map(k=>{const n=k?allIn.filter(p=>(p.indices||[]).includes(k)).length:allIn.length;
