@@ -1706,11 +1706,14 @@ html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{
 }
 @media (max-width:640px){
   html body #picker #cats button.cat,html body #cats button.cat{padding:5px 8px!important}
-  html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{font-size:12.5px!important;line-height:1.15!important}
+  html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{
+    font-size:12.5px!important;line-height:1.15!important;
+    white-space:normal!important;overflow-wrap:break-word!important;word-break:normal!important;
+  }
 }
 @media (max-width:480px){
   html body #picker #cats button.cat,html body #cats button.cat{padding:5px 7px!important}
-  html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{font-size:12px!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important}
+  html body #picker #cats button.cat .ct b,html body #cats button.cat .ct b{font-size:12px!important}
 }
 @media (max-width:360px){
   html body #picker #cats button.cat,html body #cats button.cat{padding:4px 6px!important}
