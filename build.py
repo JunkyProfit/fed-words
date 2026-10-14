@@ -277,7 +277,7 @@ def main():
             jdocs.append(jd)
         people_out.append({k: P[k] for k in ("slug", "name", "display", "category", "role", "org", "policy",
                                              "source", "doc_noun")}
-                          | {k: P[k] for k in ("group", "mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit", "indices", "ticker", "tv") if P.get(k)}
+                          | {k: P[k] for k in ("group", "mode", "eyebrow", "doc_noun1", "unit", "unit_pl", "credit", "indices", "ticker", "tv", "bio") if P.get(k)}
                           | {"vocab": vocab, "docs": jdocs})
 
         # ---- console report (all numbers come from here) ----
@@ -310,6 +310,8 @@ def main():
         print(f"  Top {a.top} (all words): " + ", ".join(f"{w} {c}" for w, c in rows[:a.top]))
         print(f"  Top {a.top} (stopwords hidden): " + ", ".join(f"{w} {c}" for w, c in ns[:a.top]))
 
+    import content
+    content.compose_bios(people_out, STOPWORDS | S_CONTRACTIONS)
     common = {"stop": sorted(STOPWORDS), "sc": sorted(S_CONTRACTIONS), "keepNum": a.keep_numbers}
     def render(inline_people):
         data = dict(common, people=inline_people)
@@ -341,10 +343,13 @@ def main():
     write_if_changed(ROOT / "contact.html", contact_page())
     write_if_changed(ROOT / "robots.txt", "User-agent: *\nAllow: /\n\nSitemap: https://mouthmath.com/sitemap.xml\n")
     lastmod = datetime.now().strftime("%Y-%m-%d")
+    extra = content.build_all(people_out, STOPWORDS | S_CONTRACTIONS, PRIVACY, write_if_changed)
     write_if_changed(ROOT / "sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                      f'  <url><loc>https://mouthmath.com/</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
                      f'  <url><loc>https://mouthmath.com/contact.html</loc><lastmod>{lastmod}</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>\n'
-                     f'  <url><loc>https://mouthmath.com/privacy.html</loc><lastmod>{lastmod}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>\n</urlset>\n')
+                     f'  <url><loc>https://mouthmath.com/privacy.html</loc><lastmod>{lastmod}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>\n'
+                     + "".join(f'  <url><loc>https://mouthmath.com/{u}</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>{"0.3" if u == "terms.html" else "0.6"}</priority></url>\n' for u in extra)
+                     + '</urlset>\n')
     print(f"\nWrote {ROOT / 'index.html'} ({len(page.encode('utf-8')) / 1024:.0f} KB"
           f"{', per-person data in data/' if split else ', all data inline'})")
 
@@ -360,6 +365,7 @@ def contact_page():
     head = _re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Contact MouthMath: questions, corrections or ideas for speakers to add.">', head, 1)
     tail = tail.replace('<a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a>',
                         '<a href="contact.html" aria-current="page">Contact</a> · <a href="privacy.html">Privacy Policy</a>')
+    head = _re.sub(r'<script async src="https://pagead2\.googlesyndication\.com/[^"]*" crossorigin="anonymous"></script>\n?', '', head)   # adsense-content: no ads on the form-only Contact page
     body = ('<main>\n<h1>Contact</h1>\n<p>Questions, corrections or a speaker you want counted? Send a message.</p>\n'
             '<form class="mmform" id="kform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact page"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="kformN">Name <span class="opt">(optional)</span></label><input id="kformN" name="name" autocomplete="name" maxlength="100"><label for="kformE">Email</label><input id="kformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="kformM">Message</label><textarea id="kformM" name="message" required rows="5" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>\n'
             '</main>')
@@ -371,9 +377,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm163">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm163">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm163">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm164">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm164">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm164">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -381,7 +387,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm163">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm164">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -414,7 +420,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm163" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm164" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -475,7 +481,7 @@ standard request information such as your IP address; see the <a href="https://w
 <form class="mmform" id="pform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath privacy question"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="pformN">Name <span class="opt">(optional)</span></label><input id="pformN" name="name" autocomplete="name" maxlength="100"><label for="pformE">Email</label><input id="pformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="pformM">Message</label><textarea id="pformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9652;</span>Back to top</button></p>
 </main>
-<footer><a href="./">Home</a> · <a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer><a href="./">Home</a> · <a href="articles/">Articles</a> · <a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a> · <a href="terms.html">Terms of Use</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
 <script>document.getElementById('toTop').onclick=()=>{scrollTo({top:0,left:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const L=document.querySelector('header .logo');if(L)L.focus({preventScroll:true})}</script>
 <script>document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'})</script>
@@ -486,10 +492,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm163">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm163">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm164">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm164">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm163">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm164">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -502,14 +508,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm163">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm164">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm163">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm164">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1607,6 +1613,7 @@ html body .pk.pcoll #pdisc .pda{grid-area:s;margin-left:0!important;display:none
 html body .pk.pcoll #pdisc .pdc{grid-area:s;justify-self:start;max-width:none!important;white-space:normal!important;font-size:16px!important;line-height:1.3!important}
 html body .pk.pcoll #pdisc .pdc::before{content:"\25B8";font-size:24px;line-height:0;vertical-align:-3px;margin-right:8px;color:#fff}
 html body .pk.pcoll #personInfo{display:none!important}
+#pbio{margin:8px 0 2px;font:14px/1.5 Arial,Helvetica,sans-serif;color:var(--ink)}#pbio summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--muted);min-height:32px;display:flex;align-items:center;gap:6px}#pbio p{margin:4px 0 6px;max-width:68ch}#pbio a{font-size:13px;font-weight:700;color:var(--ink)}
 }
 html body .rfoot{display:flex;align-items:center;gap:18px;margin-top:10px;flex-wrap:wrap}
 html body .rfoot .rplay{margin-top:0!important;flex:none}
@@ -1704,6 +1711,7 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <div class="rwho vhead" aria-live="polite"><b></b></div>
 <label class="vstop"><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
 </div>
+<details id="pbio" open><summary>About this speaker</summary><p id="bioText"></p><a id="bioLink" href="speakers/">Full profile and top words &rarr;</a></details>
 <div id="vpanes" class="tab-math">
 <div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Mouth Math</h3>
 <div class="tbwrap"><table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc">Frequency</th></tr></thead>
@@ -1731,13 +1739,14 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <p>When a document becomes available to the public, each word is ranked according to how often it&#8217;s used in that document. This gives you the substance of a speech at a glance, with access to every instance where each word was used.</p>
 <p>MouthMath.com was created to be politically neutral, with no bias: every speaker is counted the same way. Not all speeches are publicly available.</p>
 <p>All content is available on a best-effort basis and counts are updated as new material becomes available. Nothing on MouthMath.com is financial, investment or legal advice.</p>
+<p>New here? Read <a href="articles/how-mouthmath-counts-words.html">How MouthMath counts words</a>, <a href="articles/what-the-fed-chairs-talk-about-most.html">What the Fed Chairs talk about most</a> and <a href="articles/comparing-presidential-vocabulary.html">Comparing presidential vocabulary</a>, or browse <a href="speakers/">every speaker</a>.</p>
 <h4 class="abcontact" id="contact">Contact</h4>
 <form class="mmform" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="cformN">Name <span class="opt">(optional)</span></label><input id="cformN" name="name" autocomplete="name" maxlength="100"><label for="cformE">Email</label><input id="cformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="cformM">Message</label><textarea id="cformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
-<p class="abfoot"><a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a></p>
+<p class="abfoot"><a href="articles/">Articles</a> · <a href="speakers/">Speakers</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9652;</span>Back to top</button></p>
 </section>
 </main>
-<footer class="sitefoot"><a href="./">Home</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer class="sitefoot"><a href="./">Home</a> · <a href="articles/">Articles</a> · <a href="speakers/">Speakers</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <div id="tvModal" class="tvm" hidden><div class="tvm-back" data-close></div>
 <div class="tvm-panel" role="dialog" aria-modal="true" aria-labelledby="tvmTitle"><div class="tvm-head"><h3 id="tvmTitle"></h3><span class="tvm-sub">1-year daily price</span>
 <button type="button" class="tvm-x" id="tvmX" aria-label="Close chart" data-close>&times;</button></div>
@@ -1848,6 +1857,7 @@ async function setPerson(slug,docIds){
   else if(docIds.includes('none')||!docIds.length)sel=new Set();
   else sel=new Set(docIds.filter(i=>DOCS.some(d=>d.id===i)));
   ['fed','ceo','cab','cong','scotus','gov'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
+  $('bioText').textContent=P.bio||'';$('bioLink').href='speakers/'+encodeURIComponent(P.slug)+'.html';$('pbio').hidden=!P.bio;
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('personTitle').innerHTML=`<span class="ft">From the mouth of</span> <span class="pn">${esc(P.display)}</span>`;   // mm40: no ticker here; it shows once, in the speaker row (and sticky bar)
   document.title=P.slug===DEFAULT?'MouthMath — Word Counts from Fed Chairman Speeches & CEO Earnings Calls':`MouthMath — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
@@ -2116,7 +2126,7 @@ const ADS={
     side:     {id:'',w:200,h:200},                  // desktop left column, below Who / Timeframe (hidden on phones)
     between:  {id:'',w:468,h:60, mw:320,mh:50},    // inside the results card, between the Mouth Math table and the Word Cloud
     incontent:{id:'',w:468,h:60, mw:320,mh:50}}};  // between the method note and About
-function renderAds(){let live=false;
+function renderAds(){let live=false;if(ADS.client&&!(document.querySelector('#tb tr')&&($('bioText')||{}).textContent)){setTimeout(renderAds,800);return}   // adsense-content: no ad units before the word table and bio are on screen
   document.querySelectorAll('aside.ad').forEach(el=>{const c=ADS.slots[el.dataset.slot];if(!c){el.remove();return}
     ['w','h','mw','mh'].forEach(k=>el.style.setProperty('--a'+k,(c[k]||c[k.slice(1)])+'px'));
     if(ADS.client&&c.id){live=true;el.removeAttribute('aria-hidden');el.removeAttribute('role');el.setAttribute('aria-label','Advertisement');el.innerHTML=`<span class="adl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADS.client)}" data-ad-slot="${esc(c.id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`}
@@ -2475,7 +2485,7 @@ fromHash();
 addEventListener('hashchange',()=>{if(!location.hash||OURS.test(location.hash)){hidePop();fromHash()}});
 </script>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
-<script>(()=>{const e=document.getElementById('eyebrow'),b=document.getElementById('pdisc');if(!e||!b)return;const f=()=>{let t=b.querySelector('.pdt');if(!t){t=document.createElement('span');t.className='pdt';t.setAttribute('aria-hidden','true');b.appendChild(t)}let v=e.textContent.trim();if(/^Fed Chair(man|woman)?(\s|$|·)/i.test(v)){const on=document.querySelector('#persons button.chip.on');v=on&&on.dataset.person==='yellen'?'Federal Reserve Chairwoman':'Federal Reserve Chairman'}if(t.textContent!==v)t.textContent=v;t.classList.toggle('long',v.length>17);requestAnimationFrame(()=>{t.classList.remove('wrap');const nm=b.querySelector('.pdn');if(nm&&nm.getBoundingClientRect().height>parseFloat(getComputedStyle(nm).fontSize)*1.6)t.classList.add('wrap')})};f();new MutationObserver(f).observe(e,{childList:true,characterData:true,subtree:true});new MutationObserver(f).observe(b,{childList:true})})()</script><script>(()=>{['vMath','vCloud','vRing'].forEach(id=>{const p=document.getElementById(id);if(!p||p.querySelector('.vfoot'))return;p.insertAdjacentHTML('beforeend','<div class="vfoot"><a href="#picker" class="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div>')});const f=()=>{const c=document.querySelector('#persons button.chip.on');let v='';if(c){const n=c.cloneNode(true);n.querySelectorAll('.tk').forEach(x=>x.remove());v=n.textContent.trim()}document.querySelectorAll('.vtop .rwho b').forEach(x=>{if(x.textContent!==v)x.textContent=v})};f();const P=document.getElementById('persons');if(P)new MutationObserver(f).observe(P,{subtree:true,attributes:true,attributeFilter:['class'],childList:true});document.querySelectorAll('a.rNew').forEach(n=>n.onclick=e=>{e.preventDefault();const t=document.getElementById('picker');if(t)t.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const d=document.getElementById('pdisc');if(d&&d.offsetParent&&d.getAttribute('aria-expanded')!=='true')d.click()})})()</script></body></html>
+<script>(()=>{const b=document.getElementById('pbio');if(b&&matchMedia('(max-width:640px)').matches)b.open=false})()</script><script>(()=>{const e=document.getElementById('eyebrow'),b=document.getElementById('pdisc');if(!e||!b)return;const f=()=>{let t=b.querySelector('.pdt');if(!t){t=document.createElement('span');t.className='pdt';t.setAttribute('aria-hidden','true');b.appendChild(t)}let v=e.textContent.trim();if(/^Fed Chair(man|woman)?(\s|$|·)/i.test(v)){const on=document.querySelector('#persons button.chip.on');v=on&&on.dataset.person==='yellen'?'Federal Reserve Chairwoman':'Federal Reserve Chairman'}if(t.textContent!==v)t.textContent=v;t.classList.toggle('long',v.length>17);requestAnimationFrame(()=>{t.classList.remove('wrap');const nm=b.querySelector('.pdn');if(nm&&nm.getBoundingClientRect().height>parseFloat(getComputedStyle(nm).fontSize)*1.6)t.classList.add('wrap')})};f();new MutationObserver(f).observe(e,{childList:true,characterData:true,subtree:true});new MutationObserver(f).observe(b,{childList:true})})()</script><script>(()=>{['vMath','vCloud','vRing'].forEach(id=>{const p=document.getElementById(id);if(!p||p.querySelector('.vfoot'))return;p.insertAdjacentHTML('beforeend','<div class="vfoot"><a href="#picker" class="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div>')});const f=()=>{const c=document.querySelector('#persons button.chip.on');let v='';if(c){const n=c.cloneNode(true);n.querySelectorAll('.tk').forEach(x=>x.remove());v=n.textContent.trim()}document.querySelectorAll('.vtop .rwho b').forEach(x=>{if(x.textContent!==v)x.textContent=v})};f();const P=document.getElementById('persons');if(P)new MutationObserver(f).observe(P,{subtree:true,attributes:true,attributeFilter:['class'],childList:true});document.querySelectorAll('a.rNew').forEach(n=>n.onclick=e=>{e.preventDefault();const t=document.getElementById('picker');if(t)t.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const d=document.getElementById('pdisc');if(d&&d.offsetParent&&d.getAttribute('aria-expanded')!=='true')d.click()})})()</script></body></html>
 """
 
 if __name__ == "__main__":
