@@ -1286,7 +1286,7 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
 #spkbar .tk{flex:none;font-size:11.5px;padding:2px 6px 1px;color:var(--money)}
 .tk[hidden],.tk:empty{display:none!important}   /* mm31: no empty ticker pill anywhere (e.g. the Fed Chairman in the sticky bar) */
 #spkbar .sba{display:inline-flex;align-items:center}#spkbar .sba::after{content:"\25BE";color:#fff;font-size:30px;line-height:.7}
-#spkbar .sbc{flex:none;font-size:13px;font-weight:700;color:#f3eee4;margin-left:-3px}
+#spkbar .sbc{flex:none;font-size:12px;font-weight:700;color:#f3eee4;margin-left:-3px;letter-spacing:.01em}
 /* mm39: longer label ("Search other CEOs" / "Search other officials") stays on one line; the name shrinks/ellipsizes or wraps first */
 #spkbar .sbc,.pk.pcoll #pdisc .pdc{white-space:nowrap}
 @media (max-width:360px){#spkbar{gap:6px;padding:0 10px}#spkbar .sbn{font-size:16px}#spkbar .sbc{font-size:12px}}
@@ -1557,7 +1557,7 @@ html body #vtabs button[aria-selected="true"]{--c1:#c24a42;--c2:#8a2420;--c3:#4a
 html body #vtabs button[aria-selected="false"],html body #vtabs button[aria-selected="false"]:hover{--c1:#6e625a;--c2:#4a3f39;--c3:#2a221e;filter:none!important;opacity:1!important;color:#d8cdc3!important;text-shadow:0 1px 1px rgba(0,0,0,.5)}
 html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 /* mm87: longer search hint wraps instead of squeezing the name */
-@media (max-width:640px){html body .pk.pcoll #pdisc .pdc{flex:0 1 auto;white-space:normal;max-width:8.5em;line-height:1.2}html body .pk.pcoll #pdisc .pdn{overflow-wrap:normal;word-break:normal}}
+@media (max-width:640px){html body .pk.pcoll #pdisc .pdc{flex:0 1 auto;white-space:nowrap;max-width:none;line-height:1.25}html body .pk.pcoll #pdisc .pdn{overflow-wrap:normal;word-break:normal}}
 /* mm90: Word Ring tab + 2x2 view buttons on phones */
 #vRing .ringwrap{background:#0b0b0b;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
 #ring{display:block;width:100%;height:min(78vh,640px);touch-action:manipulation}
@@ -1610,8 +1610,8 @@ html body #nbar button.nchip[data-n]{min-height:32px!important;height:32px!impor
 html body .pk.pcoll #pdisc .pdn{grid-area:n}
 html body .pk.pcoll #pdisc .pdt{grid-area:t;justify-self:end;text-align:left;font:700 12px/1.25 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d9c9c6;border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:4px 7px;max-width:11em;font-size:11px}
 html body .pk.pcoll #pdisc .pda{grid-area:s;margin-left:0!important;display:none!important}
-html body .pk.pcoll #pdisc .pdc{grid-area:s;justify-self:start;max-width:none!important;white-space:normal!important;font-size:16px!important;line-height:1.3!important}
-html body .pk.pcoll #pdisc .pdc::before{content:"\25B8";font-size:24px;line-height:0;vertical-align:-3px;margin-right:8px;color:#fff}
+html body .pk.pcoll #pdisc .pdc{grid-area:s;justify-self:start;max-width:none!important;white-space:nowrap!important;font-size:12.5px!important;line-height:1.25!important;letter-spacing:.01em!important}
+html body .pk.pcoll #pdisc .pdc::before{content:"\25B8";font-size:18px;line-height:0;vertical-align:-2px;margin-right:6px;color:#fff}
 html body .pk.pcoll #personInfo{display:none!important}
 #pbio{margin:8px 0 2px;font:14px/1.5 Arial,Helvetica,sans-serif;color:var(--ink)}#pbio summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--muted);min-height:32px;display:flex;align-items:center;gap:6px}#pbio p{margin:4px 0 6px;max-width:68ch}#pbio a{font-size:13px;font-weight:700;color:var(--ink)}
 }
@@ -2346,7 +2346,7 @@ function openSpeakers(){hidePop();if($('picker').querySelector('.pk').classList.
   if(f)f.focus({preventScroll:true});   // in the tap itself, so phones open the keyboard for the search
   scrollTo({top:0,behavior:RM.matches?'instant':'smooth'})}
 // mm39: the speaker row / sticky bar label names who else you can search (Fed Chairman: plain 'Search')
-function srchLbl(){return !P?'Search':P.category==='CEOs'?'Search CEOs':P.category==='US Government'?'Search Officials':P.category==='Federal Reserve'?'Search Federal Reserve':'Search'}
+function srchLbl(){return !P?'Search':P.category==='CEOs'?'Search Other CEOs':P.category==='US Government'?'Search Other Government Officials':P.category==='Federal Reserve'?'Search Other Federal Reserve Officials':'Search'}
 const SB=$('spkbar');let sbOn=false,sbRaf=0;
 function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;SB.querySelector('.sbc').textContent=srchLbl();const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
   SB.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected`)}
