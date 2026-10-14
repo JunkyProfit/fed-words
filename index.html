@@ -797,18 +797,16 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
 .tk[hidden],.tk:empty{display:none!important}   /* mm31: no empty ticker pill anywhere (e.g. the Fed Chairman in the sticky bar) */
 #spkbar .sba{display:inline-flex;align-items:center;position:relative}
 #spkbar .sba::after{
-  content:"\25B8";display:inline-block;box-sizing:border-box;
-  width:18px;height:18px;padding:0;color:#fff;
-  font-size:15px;line-height:18px;text-align:center;border-radius:50%;
-  text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.95),0 0 12px rgba(255,255,255,.55);
-  animation:pdcPing 1.8s ease-out infinite;
+  content:"";display:inline-block;box-sizing:border-box;
+  width:15px;height:15px;padding:0;border-radius:50%;font-size:0;line-height:0;color:transparent;
+  background:radial-gradient(circle at 50% 50%,#fff 0,#f7f6fc 30%,#ebe8f6 44%,rgba(190,180,220,.55) 52%,#fff 62%,#fff 100%);
+  box-shadow:0 0 9px rgba(255,255,255,.9),0 0 6px rgba(210,200,235,.55);
+  animation:spkdot2 2.35s ease-in-out infinite;
 }
-#spkbar.show .sbc{animation:pdcTextBreath 1.8s ease-in-out infinite}
+#spkbar.show .sbc{animation:pdcTextBreath 2.35s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){
-  #spkbar .sba::after{animation:none!important;
-    text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.85);
-    box-shadow:0 0 0 2px rgba(255,255,255,.45),0 0 0 4px rgba(162,75,208,.2),0 0 8px rgba(255,255,255,.35)}
-  #spkbar.show .sbc{animation:none!important;text-shadow:0 0 4px rgba(255,255,255,.25)}
+  #spkbar .sba::after{animation:none!important;outline:none!important}
+  #spkbar.show .sbc{animation:none!important;text-shadow:0 0 4px rgba(255,255,255,.22)}
 }
 #spkbar .sbc{flex:none;font-size:12px;font-weight:700;color:#f3eee4;margin-left:-3px;letter-spacing:.01em}
 /* mm39: longer label ("Search other CEOs" / "Search other officials") stays on one line; the name shrinks/ellipsizes or wraps first */
@@ -1017,7 +1015,7 @@ body #docPick .dsx{font-size:34px!important;position:relative;top:-10px;right:-6
 /* mm59: Word Cloud #1 word = white with a soft red glow (no red contour) */
 #cloud span.top{color:#ff5449!important;text-shadow:none!important}   /* mm60: plain red #1 word */
 /* mm63: every white triangle is the same medium size (24px glyph), between the old small (11-17px) and big (30-33px) ones */
-body .pk.pcoll #pdisc .pda::after{font-size:24px!important;line-height:1!important}body #spkbar .sba::after{font-size:15px!important;line-height:18px!important}
+body .pk.pcoll #pdisc .pda::after{font-size:24px!important;line-height:1!important}body #spkbar .sba::after{font-size:0!important;line-height:0!important;width:15px!important;height:15px!important}
 body #docPick .dbv::after,body #tfbar #docPick>summary::after,body #aboutToggle.abtog::after,body .tftog::after{font-size:24px!important;line-height:0!important;vertical-align:-3px;color:#fff}
 body #stats .stat:first-child .sl::after{content:none!important}
 @media (max-width:640px){body #stats .stat:first-child .sl::after{content:attr(data-s)!important}}
@@ -1136,77 +1134,38 @@ html body .pk.pcoll #pdisc .pdt{grid-area:t;justify-self:end;text-align:left;fon
 html body .pk.pcoll #pdisc .pda{grid-area:s;margin-left:0!important;display:none!important}
 html body .pk.pcoll #pdisc .pdc{grid-area:s;justify-self:start;max-width:none!important;white-space:nowrap!important;font-size:12.5px!important;line-height:1.25!important;letter-spacing:.01em!important}
 html body .pk.pcoll #pdisc .pdc{
-  animation:pdcTextBreath 1.8s ease-in-out infinite;
+  animation:pdcTextBreath 2.35s ease-in-out infinite;
 }
+/* White search-light: same geometry/pulse/sonar as the green speaker dot (.pdn::before / spkdot2), cool-white → pale-lavender */
 html body .pk.pcoll #pdisc .pdc::before{
-  content:"\25B8";display:inline-block;box-sizing:border-box;
-  width:18px;height:18px;margin-right:6px;padding:0;vertical-align:-3px;
-  font-size:15px;line-height:18px;text-align:center;color:#fff;
-  border-radius:50%;
-  text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.95),0 0 12px rgba(255,255,255,.55);
-  animation:pdcPing 1.8s ease-out infinite;
-}
-/* Dual white sonar rings (staggered), outer rim fades to faint purple — distinct from green speaker-dot cadence */
-@keyframes pdcPing{
-  0%{
-    box-shadow:
-      0 0 0 0 rgba(255,255,255,.7),
-      0 0 0 0 rgba(255,255,255,.0),
-      0 0 0 0 rgba(162,75,208,.0),
-      0 0 5px rgba(255,255,255,.55);
-    text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,1),0 0 14px rgba(255,255,255,.7);
-  }
-  18%{
-    box-shadow:
-      0 0 0 3px rgba(255,255,255,.55),
-      0 0 0 0 rgba(255,255,255,.45),
-      0 0 0 0 rgba(162,75,208,.0),
-      0 0 7px rgba(255,255,255,.5);
-  }
-  40%{
-    box-shadow:
-      0 0 0 8px rgba(255,255,255,.12),
-      0 0 0 4px rgba(255,255,255,.4),
-      0 0 0 9px rgba(162,75,208,.22),
-      0 0 6px rgba(255,255,255,.4);
-  }
-  65%{
-    box-shadow:
-      0 0 0 14px rgba(255,255,255,0),
-      0 0 0 9px rgba(255,255,255,.12),
-      0 0 0 15px rgba(162,75,208,.12),
-      0 0 5px rgba(255,255,255,.35);
-  }
-  100%{
-    box-shadow:
-      0 0 0 0 rgba(255,255,255,0),
-      0 0 0 14px rgba(255,255,255,0),
-      0 0 0 18px rgba(162,75,208,0),
-      0 0 4px rgba(255,255,255,.4);
-    text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.85),0 0 10px rgba(255,255,255,.4);
-  }
+  content:"";display:inline-block;box-sizing:border-box;
+  width:15px;height:15px;margin-right:11px;padding:0;vertical-align:-.12em;
+  border-radius:50%;font-size:0;line-height:0;color:transparent;
+  background:radial-gradient(circle at 50% 50%,#fff 0,#f7f6fc 30%,#ebe8f6 44%,rgba(190,180,220,.55) 52%,#fff 62%,#fff 100%);
+  box-shadow:0 0 9px rgba(255,255,255,.9),0 0 6px rgba(210,200,235,.55);
+  animation:spkdot2 2.35s ease-in-out infinite;
 }
 @keyframes pdcTextBreath{
   0%,100%{color:#e8e2d8;text-shadow:0 0 0 transparent}
-  45%{color:#fff;text-shadow:0 0 6px rgba(255,255,255,.55),0 0 12px rgba(255,255,255,.25)}
-  55%{color:#fff;text-shadow:0 0 7px rgba(255,255,255,.6),0 0 14px rgba(255,255,255,.28)}
+  45%{color:#fff;text-shadow:0 0 5px rgba(255,255,255,.4),0 0 10px rgba(255,255,255,.18)}
+  55%{color:#fff;text-shadow:0 0 6px rgba(255,255,255,.45),0 0 12px rgba(255,255,255,.2)}
 }
 html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc{
   animation:none!important;color:#f3eee4;text-shadow:none;
 }
 html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{
-  content:"\25BE";animation:none!important;
-  text-shadow:0 0 2px rgba(255,255,255,.55);
-  box-shadow:none;
+  content:"\25BE";width:auto;height:auto;margin-right:6px;padding:0;vertical-align:-2px;
+  border-radius:0;font-size:15px;line-height:1;color:#fff;
+  background:none!important;box-shadow:none!important;outline:none!important;
+  animation:none!important;text-shadow:0 0 2px rgba(255,255,255,.55);
 }
 @media (prefers-reduced-motion:reduce){
-  html body .pk.pcoll #pdisc .pdc{animation:none!important;color:#f3eee4;text-shadow:0 0 4px rgba(255,255,255,.25)}
-  html body .pk.pcoll #pdisc .pdc::before{animation:none!important;
-    text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.85);
-    box-shadow:0 0 0 2px rgba(255,255,255,.45),0 0 0 4px rgba(162,75,208,.2),0 0 8px rgba(255,255,255,.35)}
+  html body .pk.pcoll #pdisc .pdc{animation:none!important;color:#f3eee4;text-shadow:0 0 4px rgba(255,255,255,.22)}
+  html body .pk.pcoll #pdisc .pdc::before{animation:none!important;outline:none!important}
   html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc{text-shadow:none}
-  html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{box-shadow:none;text-shadow:0 0 2px rgba(255,255,255,.5)}
+  html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{box-shadow:none!important;text-shadow:0 0 2px rgba(255,255,255,.5)}
 }
+
 #pbio{margin:8px 0 2px;font:14px/1.5 Arial,Helvetica,sans-serif;color:var(--ink)}#pbio summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--muted);min-height:32px;display:flex;align-items:center;gap:6px}#pbio p{margin:4px 0 6px;max-width:68ch}#pbio a{font-size:13px;font-weight:700;color:var(--ink)}
 html body .rfoot{display:flex;align-items:center;gap:18px;margin-top:10px;flex-wrap:wrap}
 html body .rfoot .rplay{margin-top:0!important;flex:none}
