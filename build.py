@@ -1649,6 +1649,12 @@ html body .rfoot .rNew,html body .vfoot .rNew{font:700 14px/1.2 Arial,Helvetica,
 html body .rfoot .rNew .rtri,html body .vfoot .rNew .rtri{font-size:20px;line-height:0;vertical-align:-2px;margin-left:2px;color:#fff}
 html body .rfoot .rNew:hover,html body .vfoot .rNew:hover{color:#fff;text-decoration:underline}
 html body .vtop .rwho{display:flex;align-items:center;min-width:0}
+/* category buttons: soft red->purple outline glow on the selected one, faint glow on hover/tap */
+html body #picker #cats button.cat,html body #cats button.cat{transition:border-color .2s,box-shadow .25s!important}
+html body #picker #cats button.cat::before,html body #picker #cats button.cat::after,html body #cats button.cat::before,html body #cats button.cat::after{content:none!important;display:none!important}
+html body #picker #cats button.cat.on,html body #picker #cats button.cat.on:hover,html body #cats button.cat.on,html body #cats button.cat.on:hover{border-color:#c4483f!important;box-shadow:0 0 0 1px rgba(150,90,220,.28),-3px 0 10px -2px rgba(255,84,73,.42),4px 0 12px -3px rgba(150,90,220,.32),inset 0 0 8px rgba(255,84,73,.10)!important}
+@media (hover:hover){html body #picker #cats button.cat:not(.on):hover,html body #cats button.cat:not(.on):hover{border-color:#5a3532!important;box-shadow:0 0 8px -2px rgba(255,84,73,.22),3px 0 9px -4px rgba(150,90,220,.18)!important}}
+html body #picker #cats button.cat:not(.on):active,html body #cats button.cat:not(.on):active{box-shadow:0 0 7px -2px rgba(255,84,73,.25),3px 0 8px -4px rgba(150,90,220,.18)!important}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
