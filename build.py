@@ -1669,6 +1669,8 @@ html body #vtLbl{display:block;margin:6px 4px 0;font:700 11.5px/1.2 Arial,Helvet
 html body #vtLbl::after{content:"";display:block;width:26px;height:1px;margin-top:5px;background:linear-gradient(90deg,#ff5449,rgba(150,90,220,.55))}
 html body #vtLbl+#vtabs{margin-top:9px}
 @media (min-width:1100px){html body #vtLbl{display:none}}
+/* view buttons: 2x2 (like the phone) where the four don't fit in one row (~641-779px and ~900-1094px wide) */
+@media (min-width:641px) and (max-width:779px),(min-width:900px) and (max-width:1095px){html body #vtabs{display:grid!important;grid-template-columns:1fr 1fr;gap:12px}html body #vtabs button{width:auto!important;min-width:0}}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
