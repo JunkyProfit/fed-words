@@ -1664,9 +1664,6 @@ html body #picker #cats button.cat:not(.on):active,html body #cats button.cat:no
 #docPick .dbl1{justify-content:flex-start!important;column-gap:0!important}#docPick .dbl1 .dbn{padding-left:12px}#docPick .dbv::after{margin-left:5px}
 html body #docPick .dbv::after{font-size:18px!important;vertical-align:-1px!important}
 html body #stats .stat:first-child b::after{font-size:18px!important}
-#docPick .dbcue{display:block;font:700 12.5px/1.3 Arial,Helvetica,sans-serif;color:#ff7a70;letter-spacing:.01em;margin-top:1px}
-#docPick .dbcue[hidden]{display:none}
-#docPick>summary.dbtn:hover .dbcue{color:#ff9a92;text-shadow:0 0 8px rgba(150,90,220,.35)}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
@@ -1757,7 +1754,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 <section class="card" id="words">
 <h1 id="personTitle" class="sr-only">__DEFAULT_FT__ <span class="pn">__DEFAULT_TITLE__</span></h1>
 <div id="tfbar" role="group" aria-label="Documents">
-<details id="docPick"><summary class="dbtn" aria-label="Choose documents"><span class="dbl1"><span class="dbico" aria-hidden="true"><svg viewBox="0 0 34 26" width="34" height="26"><rect x="2" y="3" width="11" height="14" rx="1.5" fill="#1a1416" stroke="#8a6fc4" stroke-width="1.2"/><g class="dbfeed"><rect x="5" y="6" width="11" height="14" rx="1.5" fill="#141010" stroke="#f3eee4" stroke-width="1.3"/><path d="M7.5 10h6M7.5 13h6M7.5 16h4" stroke="#ff5449" stroke-width="1.2" stroke-linecap="round"/></g><path d="M21 13c2.5-3.2 8.5-3.2 11 0c-2.5 3.2-8.5 3.2-11 0z" fill="none" stroke="#ff5449" stroke-width="1.5"/><path d="M22 13h9" stroke="#ff5449" stroke-width="1"/></svg></span><span class="dbv" id="dbV">Speeches</span><span class="dbn" id="dbN"></span></span><span class="dbl2" id="dbLatest"></span><span class="dbcue" id="dbCue" hidden></span></summary>
+<details id="docPick"><summary class="dbtn" aria-label="Choose documents"><span class="dbl1"><span class="dbico" aria-hidden="true"><svg viewBox="0 0 34 26" width="34" height="26"><rect x="2" y="3" width="11" height="14" rx="1.5" fill="#1a1416" stroke="#8a6fc4" stroke-width="1.2"/><g class="dbfeed"><rect x="5" y="6" width="11" height="14" rx="1.5" fill="#141010" stroke="#f3eee4" stroke-width="1.3"/><path d="M7.5 10h6M7.5 13h6M7.5 16h4" stroke="#ff5449" stroke-width="1.2" stroke-linecap="round"/></g><path d="M21 13c2.5-3.2 8.5-3.2 11 0c-2.5 3.2-8.5 3.2-11 0z" fill="none" stroke="#ff5449" stroke-width="1.5"/><path d="M22 13h9" stroke="#ff5449" stroke-width="1"/></svg></span><span class="dbv" id="dbV">Add Speeches</span><span class="dbn" id="dbN"></span></span><span class="dbl2" id="dbLatest"></span></summary>
 <div class="dsback" aria-hidden="true"></div>
 <div class="dsheet" role="dialog" aria-label="Choose documents"><div class="dshead"><b>Documents</b><button type="button" class="dsclose2" id="dsClose2">Close <span class="rtri" aria-hidden="true">&#9662;</span></button><button type="button" class="dsx" id="dsClose" aria-label="Close">&times;</button></div>
 <div class="dsq"><button class="chip" id="btnAll">Select all</button><button class="chip" id="btnNone">None</button><div class="yrs" id="years" role="group" aria-label="Years"></div></div>
@@ -1982,13 +1979,12 @@ function kindNoun(n){   // speech / letter / opinion… per speaker
   if(t.length&&t.every(x=>/opinion/.test(x)))return n===1?'opinion':'opinions';
   return n===1?'document':'documents'}
 function dbFill(){const n=DOCS.length,k=sel.size,e=$('dbN'),v=$('dbV');if(!e)return;
-  const pl=kindNoun(2);if(v)v.textContent=pl.charAt(0).toUpperCase()+pl.slice(1);{const h=document.querySelector('#docPick .dshead b');if(h)h.textContent=v.textContent}
-  {const c=$('dbCue');if(c){c.hidden=n<2;c.textContent=`+ Add ${pl} to MouthMath`}}
+  const pl=kindNoun(2);const Pl=pl.charAt(0).toUpperCase()+pl.slice(1);if(v)v.textContent='Add '+Pl;{const h=document.querySelector('#docPick .dshead b');if(h)h.textContent=Pl}
   const L=n?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null,only=!!L&&k===1&&sel.has(L.id);
   e.textContent=k===n?`All ${n.toLocaleString()}`:`${k.toLocaleString()} of ${n.toLocaleString()}`;
   const l=$('dbLatest');if(l)l.textContent=only?`Latest · ${fmtDate(L.date)} · ${L.title}`:'';
   const sl=$('sDocs').closest('.stat').querySelector('.sl');if(sl){const w=kindNoun(k);sl.textContent=w;sl.setAttribute('data-s',w)}
-  e.closest('summary').setAttribute('aria-label',`${v?v.textContent:'Documents'}: ${e.textContent} selected. Choose`)}
+  e.closest('summary').setAttribute('aria-label',`${Pl}: ${e.textContent} selected. Choose`)}
 function yrsFit(){const y=$('years');if(y)y.classList.toggle('ovf',y.scrollWidth>y.clientWidth+1)}   // fade only when the years overflow
 addEventListener('resize',()=>yrsFit());
 function syncTimeframe(){
