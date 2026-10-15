@@ -1263,9 +1263,8 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
  body .pk.pcoll #pdisc{gap:8px;border-color:color-mix(in srgb,#fff 26%,transparent);box-shadow:0 0 0 4px color-mix(in srgb,#fff 6%,transparent);min-height:56px}
  body .pk.pcoll #pdisc .pda{margin-left:0;display:inline-flex;align-items:center}
  body .pk.pcoll #pdisc .pda::after{font-size:33px;line-height:.7}
- body .pk.pcoll #pdisc .pdc{flex:none;margin-left:-2px;font-size:13px;font-weight:700;color:#f3eee4;letter-spacing:.01em}
  body .pk.pcoll #pdisc:active{background:color-mix(in srgb,#fff 5%,transparent)}
- @media (max-width:360px){body .pk.pcoll #pdisc{gap:6px;padding:8px 10px}body .pk.pcoll #pdisc .pda::after{font-size:30px}body .pk.pcoll #pdisc .pdc{font-size:12px}}}
+ @media (max-width:360px){body .pk.pcoll #pdisc{gap:6px;padding:8px 10px}body .pk.pcoll #pdisc .pda::after{font-size:30px}}}
 /* sticky Change-speaker bar: slides in once the red stats scroll off the top */
 #spkbar{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:center;gap:9px;height:46px;margin:0;padding:0 16px;box-sizing:border-box;
  border:0;border-bottom:1px solid color-mix(in srgb,#fff 18%,transparent);background:rgba(11,11,11,.93);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
@@ -1289,7 +1288,7 @@ body #personInfo .eyebrow{color:#fff;font-size:11.5px;border-color:color-mix(in 
 }
 #spkbar .sbc{flex:none;font-size:12px;font-weight:700;color:#f3eee4;margin-left:-3px;letter-spacing:.01em}
 /* mm39: longer label ("Search other CEOs" / "Search other officials") stays on one line; the name shrinks/ellipsizes or wraps first */
-#spkbar .sbc,.pk.pcoll #pdisc .pdc{white-space:nowrap}
+#spkbar .sbc{white-space:nowrap}
 @media (max-width:360px){#spkbar{gap:6px;padding:0 10px}#spkbar .sbn{font-size:16px}#spkbar .sbc{font-size:12px}}
 #spkbar:focus-visible{outline:2px solid #fff;outline-offset:-4px}
 @media (prefers-reduced-motion:reduce){#spkbar,#spkbar.show{transition:none}}
@@ -1553,7 +1552,7 @@ html body #vtabs button[aria-selected="true"]{--c1:#c24a42;--c2:#8a2420;--c3:#4a
 html body #vtabs button[aria-selected="false"],html body #vtabs button[aria-selected="false"]:hover{--c1:#6e625a;--c2:#4a3f39;--c3:#2a221e;filter:none!important;opacity:1!important;color:#d8cdc3!important;text-shadow:0 1px 1px rgba(0,0,0,.5)}
 html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 /* mm87: longer search hint wraps instead of squeezing the name */
-@media (max-width:640px){html body .pk.pcoll #pdisc .pdc{flex:0 1 auto;white-space:nowrap;max-width:none;line-height:1.25}html body .pk.pcoll #pdisc .pdn{overflow-wrap:normal;word-break:normal}}
+@media (max-width:640px){html body .pk.pcoll #pdisc .pdn{overflow-wrap:normal;word-break:normal}}
 /* mm90: Word Ring tab + 2x2 view buttons on phones */
 #vRing .ringwrap{background:#0b0b0b;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
 #ring{display:block;width:100%;height:min(78vh,640px);touch-action:manipulation}
@@ -1602,44 +1601,32 @@ html body #nbar .nchip[aria-pressed="true"]{border-color:#fff!important;backgrou
 html body #nbar .nchip:hover{border-color:#fff!important}
 html body #nbar button.nchip[data-n]{min-height:32px!important;height:32px!important;min-width:40px!important;padding:0 10px!important;font-size:12px!important;line-height:30px!important}
 /* mm121: name + title on one row, Search Other dropdown underneath */
-@media (max-width:640px){html body .pk.pcoll #pdisc{display:grid!important;grid-template-columns:auto 1fr;grid-template-areas:"n t" "s s";align-items:center;column-gap:14px;row-gap:10px;text-align:left}
+@media (max-width:640px){html body .pk.pcoll #pdisc{display:grid!important;grid-template-columns:auto 1fr;grid-template-areas:"n t";align-items:center;column-gap:14px;text-align:left}
 html body .pk.pcoll #pdisc .pdn{grid-area:n}
 html body .pk.pcoll #pdisc .pdt{grid-area:t;justify-self:end;text-align:left;font:700 12px/1.25 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d9c9c6;border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:4px 7px;max-width:11em;font-size:11px}
-html body .pk.pcoll #pdisc .pda{grid-area:s;margin-left:0!important;display:none!important}
-html body .pk.pcoll #pdisc .pdc{grid-area:s;justify-self:start;max-width:none!important;white-space:nowrap!important;font-size:12.5px!important;line-height:1.25!important;letter-spacing:.01em!important}
+html body .pk.pcoll #pdisc .pda{margin-left:0!important;display:none!important}
 }
 @media (max-width:640px){html body .pk.pcoll #personInfo{display:none!important}}
-html body .pk.pcoll #pdisc .pdc{
-  animation:pdcTextBreath 2.35s ease-in-out infinite;
-}
-/* White search-light: same geometry/pulse/sonar as the green speaker dot (.pdn::before / spkdot2), cool-white → pale-lavender */
-html body .pk.pcoll #pdisc .pdc::before{
-  content:"";display:inline-block;box-sizing:border-box;
-  width:15px;height:15px;margin-right:11px;padding:0;vertical-align:-.12em;
-  border-radius:50%;font-size:0;line-height:0;color:transparent;
+/* per-category "Search Other ..." hints (phones): white pulsing light dot, one under each category button; tapping opens that category's list */
+#chints{display:none}
+@media (max-width:640px){
+#chints{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:2px 0 8px}
+html body #chints .chint{display:flex;align-items:flex-start;justify-content:flex-start;appearance:none;background:none;border:0;margin:0;padding:7px 2px 6px 4px;box-sizing:border-box;text-align:left;cursor:pointer;
+  font:700 11px/1.3 Arial,Helvetica,sans-serif;letter-spacing:.005em;color:#bdb3a8;animation:pdcTextBreath 2.35s ease-in-out infinite}
+html body #chints .chint.on{color:#f3eee4}
+html body #chints .chint:focus-visible{outline:2px solid #fff;outline-offset:1px;border-radius:4px}
+html body #chints .chint::before{content:"";flex:none;box-sizing:border-box;width:10px;height:10px;margin:2px 6px 0 0;border-radius:50%;
   background:radial-gradient(circle at 50% 50%,#fff 0,#f7f6fc 30%,#ebe8f6 44%,rgba(190,180,220,.55) 52%,#fff 62%,#fff 100%);
-  box-shadow:0 0 9px rgba(255,255,255,.9),0 0 6px rgba(210,200,235,.55);
-  animation:spkdot2 2.35s ease-in-out infinite;
+  box-shadow:0 0 7px rgba(255,255,255,.85),0 0 5px rgba(210,200,235,.5);animation:chdot 2.35s ease-in-out infinite}
+html body #chints .chint[aria-expanded="true"]{animation:none;color:#f3eee4}
+html body #chints .chint[aria-expanded="true"]::before{content:"\25BE";width:auto;height:auto;margin:0 4px 0 0;border-radius:0;font-size:13px;line-height:1.2;color:#fff;background:none;box-shadow:none;animation:none}
+@keyframes chdot{0%{outline:1.5px solid rgba(255,255,255,.95);outline-offset:0}10%{outline-color:rgba(255,255,255,.9);outline-offset:1px}75%,100%{outline:1.5px solid rgba(255,255,255,0);outline-offset:8px}}
+@media (prefers-reduced-motion:reduce){html body #chints .chint{animation:none;color:#f3eee4}html body #chints .chint::before{animation:none}}
 }
 @keyframes pdcTextBreath{
   0%,100%{color:#e8e2d8;text-shadow:0 0 0 transparent}
   45%{color:#fff;text-shadow:0 0 5px rgba(255,255,255,.4),0 0 10px rgba(255,255,255,.18)}
   55%{color:#fff;text-shadow:0 0 6px rgba(255,255,255,.45),0 0 12px rgba(255,255,255,.2)}
-}
-html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc{
-  animation:none!important;color:#f3eee4;text-shadow:none;
-}
-html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{
-  content:"\25BE";width:auto;height:auto;margin-right:6px;padding:0;vertical-align:-2px;
-  border-radius:0;font-size:15px;line-height:1;color:#fff;
-  background:none!important;box-shadow:none!important;outline:none!important;
-  animation:none!important;text-shadow:0 0 2px rgba(255,255,255,.55);
-}
-@media (prefers-reduced-motion:reduce){
-  html body .pk.pcoll #pdisc .pdc{animation:none!important;color:#f3eee4;text-shadow:0 0 4px rgba(255,255,255,.22)}
-  html body .pk.pcoll #pdisc .pdc::before{animation:none!important;outline:none!important}
-  html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc{text-shadow:none}
-  html body .pk.pcoll #pdisc[aria-expanded="true"] .pdc::before{box-shadow:none!important;text-shadow:0 0 2px rgba(255,255,255,.5)}
 }
 
 #pbio{margin:8px 0 2px;font:14px/1.5 Arial,Helvetica,sans-serif;color:var(--ink)}#pbio summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--muted);min-height:32px;display:flex;align-items:center;gap:6px}#pbio p{margin:4px 0 6px;max-width:68ch}#pbio a{font-size:13px;font-weight:700;color:var(--ink)}
@@ -1683,7 +1670,7 @@ html body .dshead{display:flex!important;align-items:center}html body .dshead{po
 html body .dshead .dsclose2 .rtri{font-size:20px;line-height:0;vertical-align:-2px;margin-left:2px}
 html body .dshead .dsclose2:hover{border-color:#fff}
 html body .dshead .dsx{display:none!important}
-@media (max-width:640px){html body .pk.pcoll #pdisc:has(.tk){grid-template-columns:1fr auto;grid-template-areas:"n t" "n k" "s s"}html body .pk.pcoll #pdisc:has(.tk) .pdt{justify-self:start}html body .pk.pcoll #pdisc .tk{grid-area:k;justify-self:start;margin:-2px 0 0!important}}
+@media (max-width:640px){html body .pk.pcoll #pdisc:has(.tk){grid-template-columns:1fr auto;grid-template-areas:"n t" "n k"}html body .pk.pcoll #pdisc:has(.tk) .pdt{justify-self:start}html body .pk.pcoll #pdisc .tk{grid-area:k;justify-self:start;margin:-2px 0 0!important}}
 html body #vCloud .vfoot{padding-left:16px;padding-right:16px}
 html body .vtop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:nowrap;margin:2px 0 12px;padding:0 4px;min-height:1.4em}
 html body .vtop .vhead{display:flex;align-items:center;margin:0;padding:0;min-width:0;flex:1 1 auto}
@@ -1747,7 +1734,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 <button type="button" id="spkbar" aria-hidden="true" tabindex="-1"><span class="sbn"></span><span class="tk sbt"></span><span class="sba" aria-hidden="true"></span><span class="sbc">Search</span></button>
 <main>
 <div class="topgrid">
-<section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div></nav>
+<section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div><div id="chints" role="group" aria-label="Search other speakers"></div></nav>
 <button type="button" id="pdisc" aria-expanded="false" aria-controls="persons" hidden></button>
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
@@ -1901,9 +1888,12 @@ function renderPicker(){
   pk.classList.toggle('pcoll',coll);pk.classList.toggle('psolo',!coll);pk.classList.toggle('pgrp',coll&&grp);
   if(!coll){const on=$('persons').querySelector('.chip.on');if(on)on.dataset.glabel=P.group||P.category.replace(/s$/,'')}   // phones: single-person category (Fed Chairman) shows its name like the collapse row
   pk.classList.toggle('popen',coll&&pOpen);pd.hidden=!coll;pd.setAttribute('aria-expanded',coll&&pOpen?'true':'false');
-  if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?(P.tv?`<span class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart">${esc(P.ticker)}</span>`:`<span class="tk">${esc(P.ticker)}</span>`):''}<span class="pda" aria-hidden="true"></span><span class="pdc" aria-hidden="true">${pOpen?'Close':srchLbl()}</span>`;
+  if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?(P.tv?`<span class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart">${esc(P.ticker)}</span>`:`<span class="tk">${esc(P.ticker)}</span>`):''}<span class="pda" aria-hidden="true"></span>`;
     pd.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
     pd.onclick=()=>{pOpen=!pOpen;renderPicker();const s=$('psearch');if(pOpen&&s&&s.getClientRects().length)s.focus({preventScroll:true});else $('pdisc').focus()}}   // open = search box focused (phones show the keyboard)
+  $('chints').innerHTML=CATS.map(c=>{const on=P.category===c,op=on&&pOpen;return `<button type="button" class="chint${on?' on':''}" data-cat="${esc(c)}" aria-expanded="${op}" aria-label="${esc(srchLbl(c))}">${op?'Close':esc(srchLbl(c))}</button>`}).join('');   // a "Search Other ..." hint under every category button
+  document.querySelectorAll('#chints .chint').forEach(b=>b.onclick=()=>{const c=b.dataset.cat,foc=()=>{const s=$('psearch');if(pOpen&&s&&s.getClientRects().length)s.focus({preventScroll:true})};
+    if(c===P.category){pOpen=!pOpen;renderPicker();foc()}else setPerson(PEOPLE.find(p=>p.category===c).slug).then(()=>{pOpen=true;renderPicker();foc()})});
   const cf=$('clearF');if(cf)cf.onclick=()=>{pq='';idxSel='';azSel='';$('psearch').value='';renderPicker();$('psearch').focus()};
   // mm40: the gray role description after the boxed label is gone (it repeated the label)
   document.querySelectorAll('#cats button').forEach(b=>b.onclick=()=>{if(b.dataset.cat!==P.category)setPerson(PEOPLE.find(p=>p.category===b.dataset.cat).slug)});
@@ -2417,9 +2407,9 @@ function openSpeakers(){hidePop();if($('picker').querySelector('.pk').classList.
   if(f)f.focus({preventScroll:true});   // in the tap itself, so phones open the keyboard for the search
   scrollTo({top:0,behavior:RM.matches?'instant':'smooth'})}
 // mm39: the speaker row / sticky bar label names who else you can search (Fed Chairman: plain 'Search')
-function srchLbl(){return !P?'Search':P.category==='CEOs'?'Search Other CEOs':P.category==='US Government'?'Search Other Government Officials':P.category==='Federal Reserve'?'Search Other Federal Reserve Officials':'Search'}
+function srchLbl(c){return c==='CEOs'?'Search Other CEOs':c==='US Government'?'Search Other Government Officials':c==='Federal Reserve'?'Search Other Federal Reserve Officials':'Search'}
 const SB=$('spkbar');let sbOn=false,sbRaf=0;
-function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;SB.querySelector('.sbc').textContent=srchLbl();const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
+function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;SB.querySelector('.sbc').textContent=srchLbl(P.category);const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
   SB.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected`)}
 function sbCheck(){sbRaf=0;const on=!!P&&$('stats').getBoundingClientRect().bottom<0;if(on===sbOn)return;sbOn=on;if(on)sbFill();
   SB.classList.toggle('show',on);SB.setAttribute('aria-hidden',on?'false':'true');SB.tabIndex=on?0:-1;document.body.classList.toggle('sbar',on)}
