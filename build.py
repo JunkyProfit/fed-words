@@ -1664,6 +1664,11 @@ html body #picker #cats button.cat:not(.on):active,html body #cats button.cat:no
 #docPick .dbl1{justify-content:flex-start!important;column-gap:0!important}#docPick .dbl1 .dbn{padding-left:12px}#docPick .dbv::after{margin-left:5px}
 html body #docPick .dbv::after{font-size:18px!important;vertical-align:-1px!important}
 html body #stats .stat:first-child b::after{font-size:18px!important}
+/* "Choose a view" label above the four view buttons */
+html body #vtLbl{display:block;margin:6px 4px 0;font:700 11.5px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#a8807a}
+html body #vtLbl::after{content:"";display:block;width:26px;height:1px;margin-top:5px;background:linear-gradient(90deg,#ff5449,rgba(150,90,220,.55))}
+html body #vtLbl+#vtabs{margin-top:9px}
+@media (min-width:1100px){html body #vtLbl{display:none}}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
@@ -1766,6 +1771,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 <div class="stat"><b id="sUnique">–</b><span class="sl" data-s="unique">unique words</span></div>
 <div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
 </div>
+<div id="vtLbl" class="vtlbl" aria-hidden="true">Choose a view</div>
 <div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><button type="button" role="tab" id="tabRace" data-view="race" aria-selected="false" aria-controls="vRace" tabindex="-1">Word Race</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button><button type="button" role="tab" id="tabRing" data-view="ring" aria-selected="false" aria-controls="vRing" tabindex="-1">Word Ring</button></div><script>(()=>{const I={
 math:'<svg class="vic vm" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="24" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="8" width="17" height="4" rx="1.5" fill="currentColor" opacity=".8"/><rect x="1" y="14" width="11" height="4" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
 race:'<svg class="vic vr" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="20" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="9" width="14" height="4" rx="1.5" fill="currentColor" opacity=".75"/><rect x="1" y="16" width="9" height="3" rx="1.5" fill="currentColor" opacity=".55"/></svg>',
