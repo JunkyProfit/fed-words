@@ -1660,14 +1660,14 @@ html body #vtLbl+#vtabs{margin-top:9px}
 @media (max-width:1099px){
 html body #vtabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%}
 html body #vtabs button{width:auto!important;min-width:0;padding:0 6px!important;gap:6px;flex-direction:column}
-html body #vtabs button[data-view="math"]{grid-column:1/-1;flex-direction:row;height:68px!important;min-height:68px!important;font-size:20px!important;gap:12px;padding:0 14px!important}
-html body #vtabs button[data-view="math"] .vic{width:44px;height:32px}
-html body #vtabs button:not([data-view="math"]){height:58px!important;min-height:58px!important;font-size:12.5px!important;letter-spacing:0}
-html body #vtabs button:not([data-view="math"]) .vic{width:26px;height:20px}
+html body #vtabs button[data-view="math"]{grid-column:1/-1;flex-direction:row;height:88px!important;min-height:88px!important;font-size:25px!important;gap:16px;padding:0 14px!important}
+html body #vtabs button[data-view="math"] .vic{width:60px;height:44px}
+html body #vtabs button:not([data-view="math"]){height:44px!important;min-height:44px!important;font-size:12px!important;letter-spacing:0;gap:2px;border-radius:11px!important}
+html body #vtabs button:not([data-view="math"]) .vic{width:20px;height:15px}
 html body #vtabs .valt{grid-column:1/-1;margin:5px 2px -2px;font:700 10px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f857c}
 }
-@media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:50px!important;min-height:50px!important;font-size:15px!important;gap:8px}html body #vtabs button:not([data-view="math"]) .vic{width:30px;height:22px}}
-@media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:18px!important}}
+@media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:42px!important;min-height:42px!important;font-size:13px!important;gap:7px}html body #vtabs button:not([data-view="math"]) .vic{width:22px;height:16px}html body #vtabs button[data-view="math"]{height:96px!important;min-height:96px!important;font-size:28px!important}html body #vtabs button[data-view="math"] .vic{width:68px;height:50px}}
+@media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:21px!important}html body #vtabs button[data-view="math"] .vic{width:48px;height:36px}}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
