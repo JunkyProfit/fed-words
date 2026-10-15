@@ -277,7 +277,7 @@ h2{font-weight:700;letter-spacing:-.01em}
 @media (max-width:640px){#about h3.ablead{font-size:20px;margin:4px 0 8px}}
 .stat{font-size:12.5px;line-height:1.3;color:var(--muted)}
 .stat b{font-size:28px;font-weight:700;letter-spacing:-.035em;line-height:1.1;font-variant-numeric:tabular-nums;margin-bottom:2px}
-td.cnt,td.num,.dl1 .dw,#sDocs,#sTotal,#sUnique,#sShown,#docCount,.date{font-variant-numeric:tabular-nums}
+td.cnt,td.num,.dl1 .dw,#sDocs,#sTotal,#sUnique,#sShown,.date{font-variant-numeric:tabular-nums}
 td.cnt{font-weight:700;letter-spacing:-.01em}
 table{font-size:14px}th{font-size:12px;font-weight:700;letter-spacing:0}
 button.chip,label.chip,#cats button,.seg button{letter-spacing:0}
@@ -582,7 +582,7 @@ header .hview .vcard:focus-visible{outline:2px solid #fff;outline-offset:2px}
  #tfbar .chip,#tfbar label.chip,#tfbar #docPick>summary{min-height:36px;padding:6px 11px}
  #tfbar .yrs{flex:1 1 0;min-width:60px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:10px}
  #tfbar{flex-wrap:nowrap}#tfbar:has(#docPick[open]){flex-wrap:wrap}
- #tfbar #docPick{margin-left:0;flex:none}#tfbar #docPick>summary{white-space:nowrap}#tfbar #docPick>summary #docCount{display:none}
+ #tfbar #docPick{margin-left:0;flex:none}#tfbar #docPick>summary{white-space:nowrap}
  #tfbar #docPick>summary::before{display:none}#tfbar #docPick>summary::after{content:" \25BE";font-size:11px}#tfbar #docPick[open]>summary::after{content:" \25B4"}
  #tfbar .chip{flex:none}#tfbar #years label.chip{position:relative}
  #tfbar #years input{position:absolute;opacity:0;width:1px;height:1px;margin:0}   /* chip fill shows on/off; still focusable */
@@ -732,18 +732,7 @@ aside.ad[data-slot="between"]{margin:26px auto 4px}
 @media (prefers-reduced-motion:reduce){body header .hview .vcard{transition:none}}
 /* ---- Logo v3: inline SVG (profile -> waves -> = ± -> animated red number -> MouthMath), no layout jump (fixed-width number) ---- */
 /* ---- mm45: Latest / All combined segmented toggle (right above the red stats) ---- */
-.docseg{display:flex;gap:0;margin:0 0 10px;width:100%;max-width:100%;box-sizing:border-box;border-radius:8px;overflow:hidden}
-.docseg[hidden]{display:none!important}
-.docseg button{flex:1 1 0;min-width:0;min-height:40px;padding:8px 10px;margin:0;border:1.5px solid var(--rule);background:transparent;color:var(--ink);
  font:600 14px/1.2 Arial,Helvetica,sans-serif;letter-spacing:-.01em;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-sizing:border-box}
-.docseg button+button{border-left-width:0}
-.docseg button:first-child{border-radius:8px 0 0 8px}.docseg button:last-child{border-radius:0 8px 8px 0}
-.docseg button[aria-pressed="true"]{background:#a8807a;border-color:#a8807a;color:#fff;font-weight:700}
-.docseg button[aria-pressed="false"]:hover{background:color-mix(in srgb,#fff 6%,transparent)}
-.docseg button:focus-visible{outline:2px solid #fff;outline-offset:2px;z-index:1;position:relative}
-@media (max-width:640px){.docseg{margin:0 0 8px}.docseg button{min-height:44px;padding:10px 8px;font-size:13.5px}}
-@media (max-width:360px){.docseg button{padding:10px 6px;font-size:12.5px}}
-@media (max-width:320px){.docseg button{padding:9px 4px;font-size:12px}}
 /* ---- mm45: desktop people list scrolls inside itself so the selected chip stays in view ---- */
 @media (min-width:900px){
  #persons{max-height:min(58vh,560px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;padding-right:2px;margin-bottom:6px;scroll-behavior:auto}
@@ -894,7 +883,6 @@ body #docPick .dsx{font-size:30px!important;line-height:1!important;padding:0!im
 body #tfbar #docPick>summary::before{display:none!important}
 body #tfbar #docPick>summary::after{content:"\25BE"!important;color:#fff!important;font-size:17px!important;line-height:1!important;margin-left:6px}
 body #tfbar #docPick[open]>summary::after{content:"\25B4"!important}
-body #tfbar #docPick>summary #docCount{display:none!important}
 body #tfbar #docPick>summary .dpc{color:#fff!important;margin-right:5px}
 body #tfbar #docPick>summary:hover{text-decoration:underline;text-underline-offset:3px;background:none!important}
 body #tfbar #docPick>summary:focus-visible{outline:2px solid #fff;outline-offset:2px}
@@ -917,22 +905,11 @@ body #tfbar #docPick>summary.dbtn{display:flex!important;flex-direction:column;a
 body #tfbar #docPick>summary.dbtn::after,body #tfbar #docPick>summary.dbtn::before{display:none!important;content:none!important}
 body #tfbar #docPick>summary.dbtn:hover{border-color:#f3eee4!important;background:#151515!important}
 body #tfbar #docPick[open]>summary.dbtn{border-color:#f3eee4!important}
-#docPick .dbl1{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px}   /* mm36: "Choose your docs" drops under the count when both don't fit */
-#docPick .dbl1 .dbv{margin-left:auto}
+#docPick .dbl1{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px}
+
 #docPick .dbn{font:700 17px/1.2 Arial,Helvetica,sans-serif;color:var(--num-red)}
 #docPick .dbv{font:700 15px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;white-space:nowrap}#docPick .dbv::after{content:" \25BE";font-size:15px}#docPick[open] .dbv::after{content:" \25B4"}
 #docPick .dbl2{font:400 13px/1.3 Arial,Helvetica,sans-serif;color:#8f897f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/* Recent (one-doc) mode: subtitle source link; hide Choose box; plain docs stat (no ▾) */
-#docOne.docone{display:none;font:400 13px/1.35 Arial,Helvetica,sans-serif;color:#8f897f;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;margin:2px 0 4px}
-#docOne.docone:hover{color:#f3eee4;text-decoration:underline;text-underline-offset:3px}
-#docOne.docone:focus-visible{outline:2px solid #fff;outline-offset:2px}
-body #tfbar.oneDoc #docPick{display:none!important}
-body #tfbar.oneDoc #docOne.docone{display:block}
-body #stats.oneDoc .stat:first-child{cursor:default}
-body #stats.oneDoc .stat:first-child .sl{text-decoration:none!important}
-body #stats.oneDoc .stat:first-child b::after{content:none!important}
-body #stats.oneDoc .stat:first-child .sl::after{content:none!important}
-@media (max-width:640px){body #stats.oneDoc .stat:first-child .sl::after{content:attr(data-s)!important}}
 body #stats .stat:first-child .sl::after{content:" \25BE"}@media (max-width:640px){body #stats .stat:first-child .sl::after{content:attr(data-s) " \25BE"!important}}
 body #stats .stat:first-child .sl{text-decoration:underline dotted #ff544988;text-underline-offset:3px}
 #stats .stat:first-child{cursor:pointer}#stats .stat:first-child:focus-visible{outline:2px solid #fff;outline-offset:2px}
@@ -981,21 +958,18 @@ body #picker #cats .ct b{font-size:17.4px!important}body #picker #cats .ct small
  background:var(--ctr) center/100% 100% no-repeat}
 #cloud:not(.live) span.top:hover::before,#cloud:not(.live) span.top.active::before{background-color:transparent}
 /* mm50: high-tech red-and-black buttons (option B "red glow"): dark beveled black, selected = red border + red text + soft red glow; no pink */
-body #cats button.cat,body #vtabs button,body .docseg button{background:linear-gradient(180deg,#1a1a1a,#0c0c0c);border:1px solid #2a2a2a;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 4px 12px rgba(0,0,0,.7);transition:border-color .15s,box-shadow .15s,color .15s}
+body #cats button.cat,body #vtabs button{background:linear-gradient(180deg,#1a1a1a,#0c0c0c);border:1px solid #2a2a2a;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 4px 12px rgba(0,0,0,.7);transition:border-color .15s,box-shadow .15s,color .15s}
 body #cats button.cat{color:#d9d3ca}body #cats button.cat .ct small{color:#8d8380}
-body #cats button.cat:hover,body #vtabs button:hover,body .docseg button:hover{border-color:#5a3532;background:linear-gradient(180deg,#1d1515,#0e0a0a)}
-body #cats button.cat.on,body #cats button.cat.on:hover,body #vtabs button[aria-selected="true"],body #vtabs button[aria-selected="true"]:hover,body .docseg button[aria-pressed="true"],body .docseg button[aria-pressed="true"]:hover{background:radial-gradient(120% 140% at 50% 0%,#2a0d0b 0%,#120606 60%,#0a0505 100%);border-color:#ff5449;color:#ff5449;box-shadow:inset 0 0 18px rgba(255,84,73,.28),0 0 0 1px rgba(255,84,73,.35),0 0 22px rgba(255,84,73,.35)}
+body #cats button.cat:hover,body #vtabs button:hover{border-color:#5a3532;background:linear-gradient(180deg,#1d1515,#0e0a0a)}
+body #cats button.cat.on,body #cats button.cat.on:hover,body #vtabs button[aria-selected="true"],body #vtabs button[aria-selected="true"]:hover{background:radial-gradient(120% 140% at 50% 0%,#2a0d0b 0%,#120606 60%,#0a0505 100%);border-color:#ff5449;color:#ff5449;box-shadow:inset 0 0 18px rgba(255,84,73,.28),0 0 0 1px rgba(255,84,73,.35),0 0 22px rgba(255,84,73,.35)}
 body #cats button.cat.on .ct small{color:#e9a29c}
-body .docseg{gap:8px}body .docseg button:first-child,body .docseg button:last-child{border-radius:12px}body .docseg button[aria-pressed="false"]{color:#d9d3ca}
 /* mm51: Latest/All and Mouth Math/Word Cloud share the same dimensions: two equal full-width buttons, same height, gap and font */
-body .docseg,body #vtabs{display:flex;gap:10px;width:100%;margin-left:0;margin-right:0}
-body .docseg button,body #vtabs button{flex:1 1 0;width:auto;min-width:0;height:48px;min-height:48px;padding:0 10px;font:700 16px/1 Arial,Helvetica,sans-serif;letter-spacing:-.01em;display:flex;align-items:center;justify-content:center;box-sizing:border-box;white-space:nowrap}
-@media (min-width:641px){body .docseg button,body #vtabs button{height:44px;min-height:44px;font-size:15px}}
-@media (max-width:389px){body .docseg button,body #vtabs button{font-size:14.5px;padding:0 6px}}
-@media (max-width:349px){body .docseg button,body #vtabs button{font-size:12.5px;padding:0 4px}}
+@media (min-width:641px){body #vtabs button{height:44px;min-height:44px;font-size:15px}}
+@media (max-width:389px){body #vtabs button{font-size:14.5px;padding:0 6px}}
+@media (max-width:349px){body #vtabs button{font-size:12.5px;padding:0 4px}}
 body #vtabs{scroll-margin-top:62px}   /* mm52: clears the sticky speaker bar when tabs scroll to the top */
 /* mm55: toned-down red: bright red only on logo, speaker name, stats and #1 word */
-body #cats button.cat.on,body #cats button.cat.on:hover,body #vtabs button[aria-selected="true"],body #vtabs button[aria-selected="true"]:hover,body .docseg button[aria-pressed="true"],body .docseg button[aria-pressed="true"]:hover{border-color:#9c3f39!important;color:#f3eee4!important;background:linear-gradient(180deg,#221515,#120b0b)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 0 0 1px rgba(156,63,57,.3),0 0 14px rgba(255,84,73,.16)!important}
+body #cats button.cat.on,body #cats button.cat.on:hover,body #vtabs button[aria-selected="true"],body #vtabs button[aria-selected="true"]:hover{border-color:#9c3f39!important;color:#f3eee4!important;background:linear-gradient(180deg,#221515,#120b0b)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 0 0 1px rgba(156,63,57,.3),0 0 14px rgba(255,84,73,.16)!important}
 body #cats button.cat.on b{color:#f3eee4!important}body #cats button.cat.on .ct small{color:#c9a9a4!important}
 body #vtabs button{color:#d9d3ca!important}body #vtabs button[aria-selected="true"]{color:#f3eee4!important}
 body #persons button.chip.on,body .sbn{color:#f3eee4!important}
@@ -1031,9 +1005,7 @@ body #docPick .dbv::after,body #tfbar #docPick>summary::after,body #aboutToggle.
 body #stats .stat:first-child .sl::after{content:none!important}
 @media (max-width:640px){body #stats .stat:first-child .sl::after{content:attr(data-s)!important}}
 body #stats .stat:first-child b::after{content:" \25BE";color:#fff;font-size:24px;line-height:0;vertical-align:-2px}
-body #stats.oneDoc .stat:first-child b::after{content:none!important}
 body .sarr{font-size:24px!important;line-height:0;vertical-align:-3px;color:#fff}
-@media (max-width:640px){body #docSeg.long button{font-size:min(15px,3.7vw)!important;letter-spacing:-.025em!important;padding-left:6px!important;padding-right:6px!important}}   /* mm66: long labels like All Public Documents fit on phones */
 body #persons button.chip.on,body #persons button.chip.on:hover{background:linear-gradient(180deg,#e0453b,#a3271f)!important;border-color:#ff7a70!important;color:#fff!important;box-shadow:0 0 14px rgba(255,84,73,.45),inset 0 1px 0 rgba(255,255,255,.25)!important;text-shadow:0 1px 1px rgba(0,0,0,.35)}   /* mm71: the selected speaker is unmistakable */
 /* mm71: Word Race tab */
 #vpanes.tab-math>#vRace,#vpanes.tab-cloud>#vRace,#vpanes.tab-ring>#vRace{display:none!important}#vpanes:not(.tab-ring)>#vRing{display:none!important}#vpanes.tab-ring>#vMath,#vpanes.tab-ring>#vCloud{display:none!important}@media (min-width:1100px){#vpanes.tab-ring{display:block!important}}
@@ -1187,6 +1159,8 @@ html body .rfoot .rNew,html body .vfoot .rNew{font:700 14px/1.2 Arial,Helvetica,
 html body .rfoot .rNew .rtri,html body .vfoot .rNew .rtri{font-size:20px;line-height:0;vertical-align:-2px;margin-left:2px;color:#fff}
 html body .rfoot .rNew:hover,html body .vfoot .rNew:hover{color:#fff;text-decoration:underline}
 html body .vtop .rwho{display:flex;align-items:center;min-width:0}
+html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
+#docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
 html body .vtop .rwho b::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;background:#fff;margin-right:9px;vertical-align:.08em;box-shadow:0 0 7px rgba(255,255,255,.85);animation:spkdot 2.35s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){html body .vtop .rwho b::before{animation:none}}
@@ -1274,16 +1248,11 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 </div>
 <section class="card" id="words">
 <h1 id="personTitle" class="sr-only"><span class="ft">From the mouth of</span> <span class="pn">Chairman Kevin Warsh</span></h1>
-<div id="docSeg" class="docseg" role="group" aria-label="Document range" hidden>
-<button type="button" id="segLatest" aria-pressed="true">Recent</button>
-<button type="button" id="segAll" aria-pressed="false">All combined</button>
-</div>
 <div id="tfbar" role="group" aria-label="Documents">
-<a id="docOne" class="docone" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
-<details id="docPick"><summary class="dbtn" aria-label="Choose documents"><span class="dbl1"><span class="dbn" id="dbN">documents</span><span class="dbv">Choose your docs</span></span><span class="dbl2" id="dbLatest"></span><span class="muted" id="docCount"></span></summary>
+<details id="docPick"><summary class="dbtn" aria-label="Choose documents"><span class="dbl1"><span class="dbv" id="dbV">Speeches</span><span class="dbn" id="dbN"></span></span><span class="dbl2" id="dbLatest"></span></summary>
 <div class="dsback" aria-hidden="true"></div>
 <div class="dsheet" role="dialog" aria-label="Choose documents"><div class="dshead"><b>Documents</b><button type="button" class="dsclose2" id="dsClose2">Close <span class="rtri" aria-hidden="true">&#9662;</span></button><button type="button" class="dsx" id="dsClose" aria-label="Close">&times;</button></div>
-<div class="dsq"><button class="chip" id="btnAll">All</button><button class="chip" id="btnNone">None</button><div class="yrs" id="years" role="group" aria-label="Years"></div></div>
+<div class="dsq"><button class="chip" id="btnAll">Select all</button><button class="chip" id="btnNone">None</button><div class="yrs" id="years" role="group" aria-label="Years"></div></div>
 <ul class="speeches" id="docList"></ul></div></details>
 <div id="selSummary" class="sr-only"></div></div>
 <div class="stats" id="stats" aria-label="Word counts for the selection">
@@ -1478,7 +1447,6 @@ function buildTimeframe(){
  <div><label for="cb_${d.id}" class="dl1"><span class="date">${fmtDate(d.date)}</span><span class="dt">${esc(d.title)}</span><span class="dw">${d.words.toLocaleString()} words</span></label>
  <div class="dl2 muted" id="dm_${d.id}">${d.stype?`<span class="stype"><span class="sr">Source type: </span>${esc(d.stype)}</span>`:`<span>${esc(d.type[0].toUpperCase()+d.type.slice(1))}</span>`}${[d.location,d.note].filter(x=>x&&x!==host(d.url)).map(x=>`<span>${esc(x)}</span>`).join('')}<a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer" title="Open the original">${esc(host(d.url))}&nbsp;↗</a></div></div>
  <button type="button" class="only" data-only="${d.id}" aria-label="Select only ${esc(d.title)}">only</button></li>`).join('');
-  $('docCount').textContent=`(${DOCS.length} ${unitOf(DOCS.length)})`;
   $('years').innerHTML=YEARS.map(y=>{const n=DOCS.filter(d=>d.year===y).length;
     return `<label class="chip" id="yc_${y}"><input type="checkbox" data-year="${y}"> ${y} <span class="muted">(${n})</span></label>`}).join('');
   document.querySelectorAll('#docList input').forEach(cb=>cb.onchange=()=>{cb.checked?sel.add(cb.dataset.id):sel.delete(cb.dataset.id);update()});
@@ -1493,51 +1461,25 @@ function buildTimeframe(){
  DP.querySelector('.dsback').onclick=()=>{DP.open=false};$('dsClose').onclick=()=>{DP.open=false};$('dsClose2').onclick=()=>{DP.open=false};
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&DP.open){e.preventDefault();DP.open=false}});
  const ds=$('sDocs').closest('.stat');ds.tabIndex=0;ds.setAttribute('role','button');ds.setAttribute('aria-label','Choose documents');
- ds.onclick=()=>{if($('stats')&&$('stats').classList.contains('oneDoc'))return;DP.open=true};ds.onkeydown=e=>{if($('stats')&&$('stats').classList.contains('oneDoc'))return;if(e.key==='Enter'||e.key===' '){e.preventDefault();DP.open=true}}}
+ ds.onclick=()=>{DP.open=true};ds.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();DP.open=true}}}
 $('btnAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
 $('btnNone').onclick=()=>{sel=new Set();update()};
-$('segLatest').onclick=()=>{const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;sel=new Set(latest?[latest.id]:[]);update()};
-$('segAll').onclick=()=>{sel=new Set(DOCS.map(d=>d.id));update()};
 function docKind(d){const t=(d&&d.type||'doc').replace(/^hearing remarks$/i,'remarks').replace(/^opinion of the Court$/i,'opinion');return t.replace(/\b\w/g,c=>c.toUpperCase())}
-function docSegLabels(){   // short noun when it fits; otherwise Latest / All combined
-  const u=P&&P.unit||'',up=P&&P.unit_pl||'';
-  const use=u&&!/\s/.test(u)&&u.length<=10&&up&&!/\s/.test(up)&&up.length<=12;
-  if(u==='document'&&DOCS.length){   // mm66: name the kind of doc (speech, testimony, quote...)
-    const L=DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]),spoken=/^(speech|testimony|remarks|hearing|hearing remarks|address|floor remarks|conference)$/i;
-    const k=docKind(L);return [`Recent ${k}`,DOCS.every(d=>spoken.test(d.type||''))?'All Speeches':'All Public Documents']}
-  return use?[`Recent ${u.charAt(0).toUpperCase()+u.slice(1)}`,`All ${up.charAt(0).toUpperCase()+up.slice(1)}`]:['Recent','All Combined']}
-function kindNoun(n){   // speeches / letters / opinions… (singular when n===1)
+function kindNoun(n){   // speech / letter / opinion… per speaker
   const u=P&&P.unit||'',up=P&&P.unit_pl||'';
   if(u&&u!=='document')return n===1?u:(up||u+'s');
-  if(!DOCS.length)return n===1?'document':'documents';
-  const types=DOCS.map(d=>(d.type||'doc').toLowerCase()),spoken=/^(speech|testimony|remarks|hearing|hearing remarks|address|floor remarks|conference)$/;
-  if(types.every(t=>spoken.test(t)))return n===1?'speech':'speeches';
-  if(types.every(t=>t==='letter'))return n===1?'letter':'letters';
-  if(types.every(t=>/opinion/.test(t)))return n===1?'opinion':'opinions';
-  const one=types[0];if(types.every(t=>t===one)){const k=docKind(DOCS[0]).toLowerCase();return n===1?k:(k.endsWith('s')?k:k+'s')}
-  return n===1?'document':'documents';
-}
-function syncDocSeg(){const box=$('docSeg');if(!box)return;
-  const show=DOCS.length>1;box.hidden=!show;
-  if(show){const [lLab,aLab]=docSegLabels();$('segLatest').textContent=lLab;$('segAll').textContent=aLab;box.classList.toggle('long',Math.max(lLab.length,aLab.length)>18)}
-  const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;
-  const isLatest=!!latest&&sel.size===1&&sel.has(latest.id),isAll=sel.size===DOCS.length&&DOCS.length>0;
-  if(show){$('segLatest').setAttribute('aria-pressed',isLatest?'true':'false');$('segAll').setAttribute('aria-pressed',isAll?'true':'false')}
-  const tf=$('tfbar'),st=$('stats'),DP=$('docPick'),one=$('docOne'),ds=$('sDocs')&&$('sDocs').closest('.stat');
-  if(tf)tf.classList.toggle('oneDoc',isLatest);if(st)st.classList.toggle('oneDoc',isLatest);
-  if(isLatest&&latest){if(DP){DP.open=false}if(one){one.hidden=false;one.href=latest.url||'#';one.textContent=`${latest.title} · ${fmtDate(latest.date)}`;one.title='Open the original source'}
-    if(ds){ds.removeAttribute('role');ds.tabIndex=-1;ds.removeAttribute('aria-label');const sl=ds.querySelector('.sl');if(sl){sl.setAttribute('data-s',kindNoun(1));sl.textContent=kindNoun(1)}}}
-  else{if(one){one.hidden=true;one.removeAttribute('href');one.textContent=''}
-    if(ds){ds.setAttribute('role','button');ds.tabIndex=0;ds.setAttribute('aria-label','Choose documents');const sl=ds.querySelector('.sl');if(sl){sl.setAttribute('data-s','docs');sl.textContent='documents selected'}}}
-}
-function dbFill(){const n=DOCS.length,k=sel.size,u=kindNoun(n||k),e=$('dbN'),v=document.querySelector('#docPick .dbv');if(!e)return;
-  const latest=n?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;
-  const isLatest=!!latest&&k===1&&sel.has(latest.id),isAll=k===n&&n>0;
-  if(isLatest){e.textContent='';if(v)v.textContent='Choose';const l=$('dbLatest');if(l)l.textContent='';return}
-  if(isAll){e.textContent=`Showing all ${n.toLocaleString()} ${u}`;if(v)v.textContent='Choose'}
-  else{e.textContent=`Showing ${k.toLocaleString()} of ${n.toLocaleString()} ${u}`;if(v)v.textContent='Choose'}
-  const l=$('dbLatest');if(l)l.textContent='';
-  e.closest('summary').setAttribute('aria-label',`${e.textContent}. Choose documents`)}
+  const t=DOCS.map(d=>(d.type||'').toLowerCase()),sp=/^(speech|testimony|remarks|hearing|hearing remarks|address|floor remarks|conference)$/;
+  if(t.length&&t.every(x=>sp.test(x)))return n===1?'speech':'speeches';
+  if(t.length&&t.every(x=>x==='letter'))return n===1?'letter':'letters';
+  if(t.length&&t.every(x=>/opinion/.test(x)))return n===1?'opinion':'opinions';
+  return n===1?'document':'documents'}
+function dbFill(){const n=DOCS.length,k=sel.size,e=$('dbN'),v=$('dbV');if(!e)return;
+  const pl=kindNoun(2);if(v)v.textContent=pl.charAt(0).toUpperCase()+pl.slice(1);{const h=document.querySelector('#docPick .dshead b');if(h)h.textContent=v.textContent}
+  const L=n?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null,only=!!L&&k===1&&sel.has(L.id);
+  e.textContent=k===n?`All ${n.toLocaleString()}`:`${k.toLocaleString()} of ${n.toLocaleString()}`;
+  const l=$('dbLatest');if(l)l.textContent=only?`Latest · ${fmtDate(L.date)} · ${L.title}`:'';
+  const sl=$('sDocs').closest('.stat').querySelector('.sl');if(sl){const w=kindNoun(k);sl.textContent=w;sl.setAttribute('data-s',w)}
+  e.closest('summary').setAttribute('aria-label',`${v?v.textContent:'Documents'}: ${e.textContent} selected. Choose`)}
 function yrsFit(){const y=$('years');if(y)y.classList.toggle('ovf',y.scrollWidth>y.clientWidth+1)}   // fade only when the years overflow
 addEventListener('resize',()=>yrsFit());
 function syncTimeframe(){
@@ -1545,7 +1487,7 @@ function syncTimeframe(){
   YEARS.forEach(y=>{const ids=DOCS.filter(d=>d.year===y).map(d=>d.id),k=ids.filter(i=>sel.has(i)).length;
     const cb=document.querySelector(`#years input[data-year="${y}"]`);cb.checked=k===ids.length;cb.indeterminate=k>0&&k<ids.length;
     $('yc_'+y).classList.toggle('on',k===ids.length)});
-  const all=sel.size===DOCS.length;$('btnAll').classList.toggle('on',all);$('btnNone').classList.toggle('on',sel.size===0);yrsFit();syncDocSeg();
+  const all=sel.size===DOCS.length;$('btnAll').classList.toggle('on',all);$('btnNone').classList.toggle('on',sel.size===0);yrsFit();
   const ds=DOCS.filter(d=>sel.has(d.id));
   $('selSummary').innerHTML=!ds.length?`<b>No ${unitOf(2)} selected.</b>`:
     `Showing <b>${all?'all '+ds.length:ds.length+' of '+DOCS.length}</b> ${unitOf(all?ds.length:DOCS.length)}`+
@@ -1597,7 +1539,7 @@ function render(cloudToo=true){if(VIEW==='race')setTimeout(playRace,0);if(VIEW==
     tail=(s?full.filter(x=>re?re.test(x.word):x.word.includes(s)):full).slice(0,cap).filter(x=>x.stop)}
   const list=match.slice(0,cap);   // table: always the full top N real words (hide on), then sorted as chosen; the stopwords that would rank in the top N fold into ONE '+K common words' line
   list.sort((a,b)=>{const va=a[sortK],vb=b[sortK];const c=typeof va==='string'?(va<vb?-1:va>vb?1:0):va-vb;return c*sortDir||a.rank-b.rank});
-  {const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;const isLatest=!!latest&&sel.size===1&&sel.has(latest.id);$('sDocs').textContent=isLatest?'1':(sel.size+' / '+DOCS.length);dbFill();}
+  $('sDocs').textContent=sel.size===DOCS.length||sel.size===1?sel.size.toLocaleString():sel.size+' / '+DOCS.length;dbFill();
   const anim=P.slug!==lastCountSlug;lastCountSlug=P.slug;
   setStat('sTotal',base.reduce((t,x)=>t+x.count,0),anim);
   setStat('sUnique',base.length,anim);
