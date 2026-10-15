@@ -1561,9 +1561,15 @@ html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 html body #vtabs button{display:flex!important;align-items:center;justify-content:center;gap:8px}
 #vtabs .vic{flex:none;width:34px;height:26px;overflow:visible}
 #vtabs .vic *{transform-box:fill-box}
-#vtabs .vm rect{transform-origin:left center;animation:vmBar 2.4s ease-in-out infinite}
-#vtabs .vm rect:nth-child(2){animation-delay:.25s}#vtabs .vm rect:nth-child(3){animation-delay:.5s}
-@keyframes vmBar{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.45)}}
+/* Mouth Math icon: two animated "M" glyphs side by side (MM) */
+html body #vtabs .vmm{display:inline-flex;align-items:center;gap:7px;width:auto!important;height:auto!important}
+#vtabs .vmm svg{display:block;overflow:visible}
+#vtabs .vmm .mo{transform-origin:50% 100%;animation:vmmO 2.4s ease-in-out infinite}
+#vtabs .vmm .mo+.mi+.mo{animation-delay:.2s}
+#vtabs .vmm .mi{transform-origin:50% 0;animation:vmmI 2.4s ease-in-out infinite;animation-delay:.1s}
+#vtabs .vmm svg:last-child *{animation-delay:.7s}#vtabs .vmm svg:last-child .mo+.mi+.mo{animation-delay:.9s}#vtabs .vmm svg:last-child .mi{animation-delay:.8s}
+@keyframes vmmO{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.78)}}
+@keyframes vmmI{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.5)}}
 #vtabs .vr rect{animation:vrA 3s ease-in-out infinite}#vtabs .vr rect:nth-child(2){animation-name:vrB}#vtabs .vr rect:nth-child(3){animation-name:vrC}
 @keyframes vrA{0%,30%{transform:translateY(0)}45%,80%{transform:translateY(7px)}95%,100%{transform:translateY(0)}}
 @keyframes vrB{0%,30%{transform:translateY(0)}45%,80%{transform:translateY(-7px)}95%,100%{transform:translateY(0)}}
@@ -1661,13 +1667,13 @@ html body #vtLbl+#vtabs{margin-top:9px}
 html body #vtabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%}
 html body #vtabs button{width:auto!important;min-width:0;padding:0 6px!important;gap:6px;flex-direction:column}
 html body #vtabs button[data-view="math"]{grid-column:1/-1;flex-direction:row;height:80px!important;min-height:80px!important;font-size:23px!important;gap:15px;padding:0 14px!important}
-html body #vtabs button[data-view="math"] .vic{width:54px;height:40px}
+html body #vtabs button[data-view="math"] .vmm svg{width:20px;height:24px}
 html body #vtabs button:not([data-view="math"]){height:44px!important;min-height:44px!important;font-size:12px!important;letter-spacing:0;gap:2px;border-radius:11px!important}
 html body #vtabs button:not([data-view="math"]) .vic{width:20px;height:15px}
 html body #vtabs .valt{grid-column:1/-1;margin:5px 2px -2px;font:700 10px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f857c}
 }
-@media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:42px!important;min-height:42px!important;font-size:13px!important;gap:7px}html body #vtabs button:not([data-view="math"]) .vic{width:22px;height:16px}html body #vtabs button[data-view="math"]{height:88px!important;min-height:88px!important;font-size:26px!important}html body #vtabs button[data-view="math"] .vic{width:62px;height:46px}}
-@media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:19.5px!important}html body #vtabs button[data-view="math"] .vic{width:44px;height:33px}}
+@media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:42px!important;min-height:42px!important;font-size:13px!important;gap:7px}html body #vtabs button:not([data-view="math"]) .vic{width:22px;height:16px}html body #vtabs button[data-view="math"]{height:88px!important;min-height:88px!important;font-size:26px!important}html body #vtabs button[data-view="math"] .vmm svg{width:23px;height:28px}}
+@media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:19.5px!important}html body #vtabs button[data-view="math"] .vic{display:inline-flex}html body #vtabs button[data-view="math"] .vmm svg{width:17px;height:21px}}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
@@ -1772,7 +1778,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 </div>
 <div id="vtLbl" class="vtlbl" aria-hidden="true">Choose a view</div>
 <div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><span class="valt" aria-hidden="true">Alternative views</span><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button><button type="button" role="tab" id="tabRace" data-view="race" aria-selected="false" aria-controls="vRace" tabindex="-1">Word Race</button><button type="button" role="tab" id="tabRing" data-view="ring" aria-selected="false" aria-controls="vRing" tabindex="-1">Word Ring</button></div><script>(()=>{const I={
-math:'<svg class="vic vm" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="24" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="8" width="17" height="4" rx="1.5" fill="currentColor" opacity=".8"/><rect x="1" y="14" width="11" height="4" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
+math:'<span class="vic vmm" aria-hidden="true"><svg viewBox="0 0 22 26"><rect class="mo" x="0" y="1" width="6" height="24" rx="1.5" fill="currentColor"/><rect class="mi" x="8" y="1" width="6" height="15" rx="1.5" fill="#ffa59c"/><rect class="mo" x="16" y="1" width="6" height="24" rx="1.5" fill="currentColor" opacity=".8"/></svg><svg viewBox="0 0 22 26"><rect class="mo" x="0" y="1" width="6" height="24" rx="1.5" fill="currentColor"/><rect class="mi" x="8" y="1" width="6" height="15" rx="1.5" fill="#b184f0"/><rect class="mo" x="16" y="1" width="6" height="24" rx="1.5" fill="currentColor" opacity=".8"/></svg></span>',
 race:'<svg class="vic vr" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="20" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="9" width="14" height="4" rx="1.5" fill="currentColor" opacity=".75"/><rect x="1" y="16" width="9" height="3" rx="1.5" fill="currentColor" opacity=".55"/></svg>',
 cloud:'<svg class="vic vc" viewBox="0 0 26 20" aria-hidden="true"><rect x="2" y="3" width="9" height="3" rx="1.5" fill="currentColor" opacity=".7"/><rect x="13" y="2" width="11" height="4" rx="2" fill="currentColor"/><rect x="4" y="9" width="17" height="5" rx="2.5" fill="currentColor"/><rect x="7" y="16" width="12" height="3" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
 ring:'<svg class="vic" viewBox="0 0 26 20" aria-hidden="true"><g class="vg" stroke="currentColor" stroke-linecap="round">'+[...Array(16)].map((_,i)=>{const a=i/16*6.283,r0=4,r1=r0+(i%4===0?5.5:i%2?3:4),c=Math.cos(a),s=Math.sin(a);return `<line x1="${13+c*r0}" y1="${10+s*r0}" x2="${13+c*r1}" y2="${10+s*r1}" stroke-width="${i%4===0?1.6:1}"/>`}).join('')+'</g></svg>'};
