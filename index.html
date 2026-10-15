@@ -1066,7 +1066,7 @@ html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 /* mm90: Word Ring tab + 2x2 view buttons on phones */
 #vRing .ringwrap{background:#0b0b0b;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
 #ring{display:block;width:100%;height:min(78vh,640px);touch-action:manipulation}
-@media (max-width:640px){#ring{height:min(62vh,440px)}html body #vtabs{display:grid!important;grid-template-columns:1fr 1fr;gap:12px}}
+@media (max-width:640px){#ring{height:min(62vh,440px)}}
 /* mm96: tiny animated previews inside the view buttons */
 html body #vtabs button{display:flex!important;align-items:center;justify-content:center;gap:8px}
 #vtabs .vic{flex:none;width:34px;height:26px;overflow:visible}
@@ -1166,8 +1166,18 @@ html body #vtLbl{display:block;margin:6px 4px 0;font:700 11.5px/1.2 Arial,Helvet
 html body #vtLbl::after{content:"";display:block;width:26px;height:1px;margin-top:5px;background:linear-gradient(90deg,#ff5449,rgba(150,90,220,.55))}
 html body #vtLbl+#vtabs{margin-top:9px}
 @media (min-width:1100px){html body #vtLbl{display:none}}
-/* view buttons: 2x2 (like the phone) where the four don't fit in one row (~641-779px and ~900-1094px wide) */
-@media (min-width:641px) and (max-width:779px),(min-width:900px) and (max-width:1095px){html body #vtabs{display:grid!important;grid-template-columns:1fr 1fr;gap:12px}html body #vtabs button{width:auto!important;min-width:0}}
+/* view buttons: Mouth Math is the large main button; Word Race / Word Cloud / Word Ring sit in a compact row under "Alternative views" (below 1100px; hidden above) */
+@media (max-width:1099px){
+html body #vtabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%}
+html body #vtabs button{width:auto!important;min-width:0;padding:0 6px!important;gap:6px;flex-direction:column}
+html body #vtabs button[data-view="math"]{grid-column:1/-1;flex-direction:row;height:68px!important;min-height:68px!important;font-size:20px!important;gap:12px;padding:0 14px!important}
+html body #vtabs button[data-view="math"] .vic{width:44px;height:32px}
+html body #vtabs button:not([data-view="math"]){height:58px!important;min-height:58px!important;font-size:12.5px!important;letter-spacing:0}
+html body #vtabs button:not([data-view="math"]) .vic{width:26px;height:20px}
+html body #vtabs .valt{grid-column:1/-1;margin:5px 2px -2px;font:700 10px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f857c}
+}
+@media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:50px!important;min-height:50px!important;font-size:15px!important;gap:8px}html body #vtabs button:not([data-view="math"]) .vic{width:30px;height:22px}}
+@media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:18px!important}}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
@@ -1271,7 +1281,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 <div class="stat"><b id="sShown">–</b><span class="sl" data-s="shown">words shown</span></div>
 </div>
 <div id="vtLbl" class="vtlbl" aria-hidden="true">Choose a view</div>
-<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><button type="button" role="tab" id="tabRace" data-view="race" aria-selected="false" aria-controls="vRace" tabindex="-1">Word Race</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button><button type="button" role="tab" id="tabRing" data-view="ring" aria-selected="false" aria-controls="vRing" tabindex="-1">Word Ring</button></div><script>(()=>{const I={
+<div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><span class="valt" aria-hidden="true">Alternative views</span><button type="button" role="tab" id="tabRace" data-view="race" aria-selected="false" aria-controls="vRace" tabindex="-1">Word Race</button><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button><button type="button" role="tab" id="tabRing" data-view="ring" aria-selected="false" aria-controls="vRing" tabindex="-1">Word Ring</button></div><script>(()=>{const I={
 math:'<svg class="vic vm" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="24" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="8" width="17" height="4" rx="1.5" fill="currentColor" opacity=".8"/><rect x="1" y="14" width="11" height="4" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
 race:'<svg class="vic vr" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="20" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="9" width="14" height="4" rx="1.5" fill="currentColor" opacity=".75"/><rect x="1" y="16" width="9" height="3" rx="1.5" fill="currentColor" opacity=".55"/></svg>',
 cloud:'<svg class="vic vc" viewBox="0 0 26 20" aria-hidden="true"><rect x="2" y="3" width="9" height="3" rx="1.5" fill="currentColor" opacity=".7"/><rect x="13" y="2" width="11" height="4" rx="2" fill="currentColor"/><rect x="4" y="9" width="17" height="5" rx="2.5" fill="currentColor"/><rect x="7" y="16" width="12" height="3" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
