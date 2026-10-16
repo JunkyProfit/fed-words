@@ -1178,6 +1178,10 @@ html body #vtabs .valt{grid-column:1/-1;margin:5px 2px -2px;font:700 10px/1.2 Ar
 }
 @media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:42px!important;min-height:42px!important;font-size:13px!important;gap:7px}html body #vtabs button:not([data-view="math"]) .vic{width:22px;height:16px}html body #vtabs button[data-view="math"]{height:80px!important;min-height:80px!important;font-size:24px!important}html body #vtabs button[data-view="math"] .vic{width:56px;height:42px}}
 @media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:18px!important}html body #vtabs button[data-view="math"] .vic{width:40px;height:30px}}
+/* category buttons: label centered horizontally and vertically (each line when it wraps) */
+html body #picker #cats button.cat{display:flex!important;align-items:center;justify-content:center;text-align:center}
+html body #picker #cats button.cat .ct{flex:1 1 auto;align-items:center;justify-content:center;text-align:center}
+html body #picker #cats button.cat .ct b{grid-column:auto;text-align:center}
 html body .vtop .rwho b{padding:3px 0 3px 10px!important}   /* green dot + its pulse ring fully visible */
 #docPick .dbl1 .dbn{margin-left:auto;font-size:14px;color:var(--num-red)}#docPick .dbv{color:#f3eee4}
 html body .vtop .rwho b{font:700 22px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;letter-spacing:-.015em}
