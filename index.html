@@ -1729,42 +1729,56 @@ let cloudW=0,cloudInfo={placed:0,skipped:0,ms:0};
 const PAL=['#b77ee0','#a66ad8','#c79bec'];   // cream/greys on the black cloud panel (all >= 7:1)
 const hcode=s=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
 const mctx=document.createElement('canvas').getContext('2d');
+// The cloud silhouette (unit coordinates: x 0..1 across, y 0..0.72 down): a flat-ish pill base with three overlapping bumps on top.
+// Words are only placed where their whole box falls inside it, so the shape comes from the word placement itself (nothing is drawn).
+const CS_ASPECT=0.72,CS_BUMPS=[[0.23,0.42,0.16],[0.52,0.34,0.22],[0.79,0.44,0.16]];
+function inCloud(u,v){   // u: 0..1 across, v: 0..CS_ASPECT down
+  if(u>=0.14&&u<=0.86&&v>=0.40&&v<=0.60)return true;   // body
+  if(u>=0.04&&u<=0.96&&v>=0.48&&v<=0.72){const px=Math.max(0.16,Math.min(0.84,u)),dx=u-px,dy=v-0.60;if(dx*dx+dy*dy<=0.12*0.12)return true}
+  for(const [cu,cv,r] of CS_BUMPS){const dx=u-cu,dy=v-cv;if(dx*dx+dy*dy<=r*r)return true}
+  return false}
+const CS_FILL=(()=>{let n=0,t=0;for(let i=0;i<50;i++)for(let j=0;j<36;j++){t++;if(inCloud((i+.5)/50,(j+.5)/50))n++}return n/t})();   // share of the 1 x CS_ASPECT frame the silhouette covers
 function cloudLayout(words,W){
-  const fam=getComputedStyle(cloud).fontFamily,maxF=Math.max(28,Math.min(72,W*0.11)),minF=12,GAP=2;
-  const sq=Math.sqrt,hi=sq(words[0].count),lo=sq(words[words.length-1].count);
-  const boxes=words.map((x,n)=>{ // sqrt scaling between the least and most frequent shown word
-    const mx=n?0:RING_MX,my=n?0:RING_MY;   // #1 word: room for its two pill rings
-    let f=hi===lo?Math.min(36,maxF):minF+(maxF-minF)*(sq(x.count)-lo)/(hi-lo),wt,w,pad;
+  const fam=getComputedStyle(cloud).fontFamily,minF=W<500?11:12,GAP=2,RATIO=2.7,sq=Math.sqrt,Wc=W,stretch=(W<340?1.55:W<500?1.3:1)*Math.max(1,sq(words.length/50)),Hf=CS_ASPECT*Wc*stretch,ox=0;
+  // Words are set in lines that follow the cloud outline: line height peaks around the middle (biggest words, #1 first) and shrinks toward the top and the
+  // bottom, so the rim is made of small bits. Words fill the lines in rank order (the line with the biggest type first), then the type is scaled up as far as all words still fit.
+  const box=(x,n,f)=>{const mx=n?0:RING_MX,my=n?0:RING_MY;let wt,w,pad;f=Math.max(minF,f);   // #1 word: room for its two pill rings
     for(let k=0;k<4;k++){wt=f>=18?700:400;mctx.font=`${wt} ${f}px ${fam}`;pad=Math.round(f*.08)+1;
-      w=Math.ceil(mctx.measureText(x.word).width)+2*pad;if(w+2*mx<=W-4||f<=minF)break;f=Math.max(minF,f*(W-4-2*mx)/w)}
-    return {x,f:Math.round(f*10)/10,wt,pad,mx,my,w:w+GAP+2*mx,h:Math.ceil(f*1.12)+GAP+2*my}});
-  const area=boxes.reduce((t,b)=>t+b.w*b.h,0),H=Math.max(220,area/(W*0.5));
-  // exact collisions: spatial hash of placed boxes; fast reject: 4px bitmap of cells fully covered by a placed box
-  const G=40,grid=new Map(),K=(i,j)=>i*65536+j+32768,placed=[],cx=W/2,cy=H/2,E=W/H*1.25; // ellipse a bit wider than the box so the cloud fills it
-  const sx=Math.max(1,E),sy=Math.max(1,1/E),sm=Math.max(sx,sy); // spiral pitch runs along the shorter axis
-  const C=4,OY=1.5*H,CW=Math.ceil(W/C)+1,CH=Math.ceil(4*H/C)+1,occ=new Uint8Array(CW*CH);
-  const busy=(x,y)=>{const i=x/C|0,j=(y+OY)/C|0;return j>=0&&j<CH&&occ[j*CW+i]===1};
-  const cells=(r,fn)=>{for(let i=Math.floor(r.x/G);i<=Math.floor((r.x+r.w)/G);i++)for(let j=Math.floor(r.y/G);j<=Math.floor((r.y+r.h)/G);j++)if(fn(K(i,j)))return true;return false};
-  const hit=c=>cells(c,k=>{const a=grid.get(k);return a&&a.some(o=>c.x<o.x+o.w&&c.x+c.w>o.x&&c.y<o.y+o.h&&c.y+c.h>o.y)});
-  const add=c=>{cells(c,k=>{(grid.get(k)||grid.set(k,[]).get(k)).push(c)});placed.push(c);
-    for(let j=Math.max(0,Math.ceil((c.y+OY)/C));j<Math.min(CH,Math.floor((c.y+c.h+OY)/C));j++)
-      for(let i=Math.ceil(c.x/C);i<Math.floor((c.x+c.w)/C);i++)occ[j*CW+i]=1};
-  let steps=0,todo=boxes.map((b,n)=>[b,n]),y0=0,y1=H,phase=0,rPrev=0,rFloor=0;
-  for(;todo.length&&phase<6;phase++){ // words that don't fit are retried in a taller band (cloud grows up and down)
-    const miss=[],rMax=Math.max(W/2/sx,(y1-y0)/2/sy)*1.5;
-    for(const [b,n] of todo){const th0=n*2.39996,pitch=Math.max(4,b.h*.35);let ok=false;
-      // the middle is already packed: start each spiral at 55% of the previous word's radius
-      let r=Math.max(rFloor,rPrev*0.55),t=r*2*Math.PI/pitch;
-      for(;r<rMax;){steps++;
-        const x=cx+r*Math.cos(t+th0)*sx-b.w/2,y=cy+r*Math.sin(t+th0)*sy-b.h/2;
-        t+=Math.min(0.35,3/Math.max(1,r*sm));r=pitch*t/(2*Math.PI);
-        if(x<0||y<y0||x+b.w>W||y+b.h>y1)continue;
-        if(busy(x+b.w/2,y+b.h/2)||busy(x+1,y+1)||busy(x+b.w-1,y+1)||busy(x+1,y+b.h-1)||busy(x+b.w-1,y+b.h-1))continue;
-        const c={x,y,w:b.w,h:b.h,b};if(!hit(c)){add(c);rPrev=r;ok=true;break}}
-      if(!ok)miss.push([b,n])}
-    todo=miss;rFloor=(y1-y0)/2/sy*0.92;rPrev=0;y0=Math.max(y0-H*0.2,-OY);y1=Math.min(y1+H*0.2,2.5*H)}
-  const out={placed,miss:todo.length,tries:phase,steps};
-  return out;
+      w=Math.ceil(mctx.measureText(x.word).width)+2*pad;if(w+2*mx<=Wc*.5||f<=minF)break;f=Math.max(minF,f*(Wc*.5-2*mx)/w)}
+    return {x,f:Math.round(f*10)/10,wt,pad,mx,my,w:w+GAP+2*mx,h:Math.ceil(f*1.12)+GAP+2*my}};
+  const runsAt=(y,h,m)=>{const v0=(y+h*.3)/Hf*CS_ASPECT,v1=(y+h*.65)/Hf*CS_ASPECT,v2=(y+h)/Hf*CS_ASPECT,runs=[];let st=-1;
+    for(let i=0;i<=400;i++){const u=i/400,ok=i<400&&inCloud(u,v0)&&inCloud(u,v1)&&inCloud(u,v2);
+      if(ok&&st<0)st=u;if(!ok&&st>=0){const x0=st*Wc+m,x1=(i-1)/400*Wc-m;if(x1>x0)runs.push([x0,x1]);st=-1}}
+    return runs};
+  const cache=new Map(),runsC=(y,h)=>{const k=Math.round(y)*4096+h;let r=cache.get(k);if(!r){r=runsAt(y,h,2);cache.set(k,r)}return r};
+  const tryPlace=(g,nW)=>{
+    const fl=Math.max(minF,minF*g),fh=fl*(1+(RATIO-1)*Math.min(1,g)),sq0=sq(words[0].count),lo=sq(words[nW-1].count),MG=5,CAP=26,yc=Hf*0.5;
+    const pool=words.slice(0,nW).map((x,n)=>box(x,n,sq0===lo?(fl+fh)/2:fl+(fh-fl)*Math.pow((sq(x.count)-lo)/(sq0-lo),1.1)));
+    const prof=ym=>fl+(fh-fl)*Math.pow(Math.max(0,1-Math.pow((ym-yc)/(Hf*0.6),2)),1.6);
+    const pack=(list,h,y0)=>{const runs=runsC(y0,h),rows=runs.map(()=>[]),used=runs.map(()=>0);
+      for(const b of list){let r=-1,rm=-1;runs.forEach((run,i)=>{const rest=run[1]-run[0]-used[i]-(rows[i].length?MG:0)-b.w;if(rest>=0&&rest>rm){rm=rest;r=i}});   // run with the most room left
+        if(r<0)return null;used[r]+=b.w+(rows[r].length?MG:0);rows[r].push(b)}
+      return {runs,rows}};
+    const placed=[];let y=0,left=pool.slice();
+    while(left.length&&y<Hf){
+      const fd=prof(y+fl*0.7),cand=left.slice().sort((p,q)=>Math.abs(p.f-fd)-Math.abs(q.f-fd)||q.x.count-p.x.count);
+      let list=[],h=0,pk=null;
+      for(const c of cand){const nl=list.concat(c),nh=Math.max(h,c.h),np=pack(nl,nh,y);if(np){list=nl;h=nh;pk=np}}
+      if(!list.length){y+=3;continue}
+      if(y+h>Hf)break;
+      pk.runs.forEach((run,r)=>{const row=pk.rows[r];if(!row.length)return;
+        const seq=[];row.forEach((b,n)=>{if(!n)seq.push(b);else if(n%2)seq.unshift(b);else seq.push(b)});   // the line's biggest word sits mid-line
+        const sw=seq.reduce((t,b)=>t+b.w,0),gp=seq.length>1?Math.min(CAP,(run[1]-run[0]-sw)/(seq.length-1)):0;
+        let x=seq.length>1?run[0]+(run[1]-run[0]-sw-gp*(seq.length-1))/2:(run[0]+run[1]-seq[0].w)/2;
+        seq.forEach(b=>{placed.push({x,y:y+(h-b.h)/2,w:b.w,h:b.h,b});x+=b.w+gp})});
+      left=left.filter(b=>!list.includes(b));y+=h}
+    return {placed,miss:nW-placed.length,steps:0}};
+  let best=null,tries=0,sl=0.5,sh=5;
+  for(let k=0;k<9;k++){const g=(sl+sh)/2;tries++;const r=tryPlace(g,words.length);if(!r.miss){best=r;sl=g}else sh=g}
+  if(!best){let nl=1,nh=words.length;for(let k=0;k<9&&nl<nh;k++){const n=Math.ceil((nl+nh)/2);tries++;const r=tryPlace(0.5,n);if(!r.miss){best=r;best.miss=words.length-n;nl=n}else nh=n-1}   // too many words for the panel: keep the highest-ranked ones that fit
+    if(!best){best=tryPlace(0.5,1);best.miss=words.length-1}}
+  best.placed.forEach(c=>{c.x+=ox});
+  return {placed:best.placed,miss:best.miss,tries,steps:best.steps,frame:{Wc,Hf,ox}};
 }
 function drawCloud(list){
   stopSketch();
@@ -1772,14 +1786,14 @@ function drawCloud(list){
   const N=Math.min(NPICK?nCap():50,CLOUD_MAX),words=list.slice().sort((a,b)=>b.count-a.count||(a.word<b.word?-1:1)).slice(0,N);
   if(!words.length){cloud.style.height='';cloud.innerHTML=`<div class="empty">${sel.size?'No matching words.':'Select at least one document above.'}</div>`;
     $('cloudNote').textContent='';cloudInfo={placed:0,skipped:0,ms:0,mode:'static'};BODIES=[];return 0}
-  const {placed,miss,tries,steps}=cloudLayout(words,W);
+  const {placed,miss,tries,steps,frame}=cloudLayout(words,W);
   const py0=Math.min(...placed.map(c=>c.y)),y1=Math.max(...placed.map(c=>c.y+c.h)),ph=y1-py0+4;
   const minH=placed.length<=25?(W<600?200:230):0,y0=py0-Math.max(0,minH-ph)/2;   // short clouds (10/25 words) get room to float, words centered
   cloud.style.height=Math.ceil(Math.max(ph,minH))+'px';
   cloud.innerHTML=placed.map(c=>{const b=c.b,x=b.x;return `<span data-w="${esc(x.word)}" data-c="${x.count}" role="button" tabindex="0" aria-label="${x.word===words[0].word?'#1 word, ':''}${esc(x.word)}: ${x.count}${x.word===words[0].word?' — show excerpts':''}" `+
     `style="left:${(c.x+1+b.mx).toFixed(1)}px;top:${(c.y-y0+1+b.my).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2-2*b.my}px;height:${c.h-2-2*b.my}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word||x.stop?` class="${[x.word===words[0].word?'top':'',x.stop?'stop':''].join(' ').trim()}"`:''}>${esc(x.word)}</span>`}).join('');
   TOPW=words[0].word;
-  cloudInfo={placed:placed.length,skipped:miss,tries,steps,ms:Math.round(performance.now()-t0),mode:'static'};
+  cloudInfo={placed:placed.length,skipped:miss,tries,steps,frame,ms:Math.round(performance.now()-t0),mode:'static'};
   buildBodies(placed,y0,W);markTop();ctrStatic();
   if(motion.checked&&BODIES.length)armSketch();
   $('cloudNote').textContent=`Top ${placed.length.toLocaleString()} of ${list.length.toLocaleString()} words${hide.checked?' (stopwords hidden)':''}`+
