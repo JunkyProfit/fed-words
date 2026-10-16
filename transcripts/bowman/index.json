@@ -1,5 +1,15 @@
 [
   {
+    "file": "bowman20261014a.txt",
+    "date": "2026-10-14",
+    "type": "speech",
+    "title": "Supervisory Modernization After Silicon Valley Bank",
+    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
+    "location": "At the Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand",
+    "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261014a.htm",
+    "fetched": "2026-10-15T18:27:16"
+  },
+  {
     "file": "bowman20261006a.txt",
     "date": "2026-10-06",
     "type": "speech",
@@ -188,15 +198,5 @@
     "location": "At the Federal Reserve Bank of Atlanta 2026 Banking Outlook Conference: The Next Horizon in Banking, Atlanta, Georgia (via pre-recorded video)",
     "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260219a.htm",
     "fetched": "2026-10-13T20:11:25"
-  },
-  {
-    "file": "bowman20260216a.txt",
-    "date": "2026-02-16",
-    "type": "speech",
-    "title": "Revitalizing Bank Mortgage Lending, One Step with Basel",
-    "speaker": "Vice Chair for Supervision Michelle W. Bowman",
-    "location": "At The American Bankers Association 2026 Conference for Community Bankers, Orlando, Florida",
-    "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260216a.htm",
-    "fetched": "2026-10-13T20:11:26"
   }
 ]
