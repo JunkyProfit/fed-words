@@ -1994,6 +1994,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
   const RD=ringData(),words=RD.top,order=RD.ord,max=words.length?words[0].n:1;ringHov=-1;
   const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,FILL=innerWidth<700?800:1300,seed=[...Array(FILL)].map(()=>[Math.random(),Math.random(),Math.random()]);
   const col=(a,t,al)=>{const h=Math.sin(a*2+t*.3)*.5+.5;return `rgba(${Math.round(225-50*h)},${Math.round(50+25*h)},${Math.round(80+150*h)},${al})`};
+  const mkGlow=(r,g,b)=>{const S=48,k=document.createElement('canvas');k.width=k.height=S;const q=k.getContext('2d'),gr=q.createRadialGradient(S/2,S/2,0,S/2,S/2,S/2);gr.addColorStop(0,`rgba(${r},${g},${b},.9)`);gr.addColorStop(.3,`rgba(${r},${g},${b},.45)`);gr.addColorStop(.65,`rgba(${r},${g},${b},.12)`);gr.addColorStop(1,`rgba(${r},${g},${b},0)`);q.fillStyle=gr;q.fillRect(0,0,S,S);return k},GLOW=mkGlow(255,255,255),GLOWR=mkGlow(255,236,232);   // mm187 preview: one cached soft white halo sprite per dot (no shadowBlur per frame)
   function frame(now){const t=RM?0:now/1000,W=c.clientWidth,H=c.clientHeight;if(c.width!==W*D){c.width=W*D;c.height=H*D}x.setTransform(D,0,0,D,0,0);x.clearRect(0,0,W,H);
    if(!words.length){x.fillStyle='#a49e93';x.font='16px Arial';x.textAlign='center';x.fillText('No documents selected',W/2,H/2);return}
    const nar=W<560,cx=W/2,cy=H/2+(nar?14:22),R=Math.min(W,H)*(nar?.15:.17),Lmax=Math.min(W,H)*(nar?.14:.25),sq=1;
@@ -2003,8 +2004,9 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
     x.strokeStyle=col(a,t,.18+.25*b);x.beginPath();x.moveTo(cx+Math.cos(a)*r0,cy+Math.sin(a)*r0);x.lineTo(cx+Math.cos(a)*(r0+len),cy+Math.sin(a)*(r0+len));x.stroke()}
    x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length,labs=[];
    for(let i=0;i<n;i++){const o=order[i],a=i/n*6.283+t*.042+ringOff,f=Math.sqrt(o.n/max),pulse=1,r0=R*1.05,r1=r0+Lmax*(.25+.75*f)*pulse,ca=Math.cos(a),sa=Math.sin(a),hv=i===ringHov;ringPos[i]=a;let dz=Math.abs((((a+1.5708)%6.283)+6.283)%6.283);dz=Math.min(dz,6.283-dz);const zw=6.283/Math.max(8,n)*1.35,zb=dz<zw?(1+Math.cos(dz/zw*3.1416))/2:0;
-    x.strokeStyle=hv?'#fff':col(a,t,.55+.45*f);x.lineWidth=hv?3:.8+1.6*f;x.beginPath();x.moveTo(cx+ca*r0,cy+sa*r0);x.lineTo(cx+ca*r1,cy+sa*r1);x.stroke();
-    {const dr=(1.5+2*f)*1.3,dc=o===words[0]?'#ff5449':'#fff';x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187 preview: the spike-end dots are small hollow circles, ~30% bigger than the old solid dots
+    {const X0=cx+ca*r0,Y0=cy+sa*r0,X1=cx+ca*r1,Y1=cy+sa*r1;if(hv)x.strokeStyle='#fff';else{const g=x.createLinearGradient(X0,Y0,X1,Y1);g.addColorStop(0,col(a,t,.55+.45*f));g.addColorStop(1,`rgba(255,255,255,${.7+.3*f})`);x.strokeStyle=g}   // mm187 preview: each spike blends from its red/purple into white at the tip
+    x.lineWidth=hv?3:.8+1.6*f;x.beginPath();x.moveTo(X0,Y0);x.lineTo(X1,Y1);x.stroke()}
+    {const dr=(1.5+2*f)*1.3,dc=o===words[0]?'#ff5449':'#fff',gr=dr*3.4,gs=o===words[0]?GLOWR:GLOW;x.globalAlpha=hv?1:.55+.35*f;x.drawImage(gs,cx+ca*r1-gr,cy+sa*r1-gr,gr*2,gr*2);x.globalAlpha=1;x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187 preview: the spike-end dots are small hollow circles, ~30% bigger than the old solid dots
     const fs=Math.round(((nar?7:8)+(nar?3:10)*f)*(1+(nar?1.1:1.25)*zb)),fsz=fs+(hv?3:0);
     let fromTop=(((a+1.5708)%6.283)+6.283)%6.283;const fadeOut=1.15,fadeIn0=4.0;let fade=fromTop<fadeOut?1-fromTop/fadeOut:fromTop<fadeIn0?0:(fromTop-fadeIn0)/(6.283-fadeIn0);fade=Math.max(0,Math.min(1,fade));fade=fade*fade*(3-2*fade);
     const left=ca<0,pad=nar?8:12,lift=Math.pow(zb,.75),extra=(nar?34:58)*lift*(1+.5*f),up=(nar?22:36)*lift,bl=zb>.2?'bottom':'middle';
