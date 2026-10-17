@@ -1561,9 +1561,6 @@ html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 html body #vtabs button{display:flex!important;align-items:center;justify-content:center;gap:8px}
 #vtabs .vic{flex:none;width:34px;height:26px;overflow:visible}
 #vtabs .vic *{transform-box:fill-box}
-#vtabs .vm rect{transform-origin:left center;animation:vmBar 2.4s ease-in-out infinite}
-#vtabs .vm rect:nth-child(2){animation-delay:.25s}#vtabs .vm rect:nth-child(3){animation-delay:.5s}
-@keyframes vmBar{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.45)}}
 #vtabs .vr rect{animation:vrA 3s ease-in-out infinite}#vtabs .vr rect:nth-child(2){animation-name:vrB}#vtabs .vr rect:nth-child(3){animation-name:vrC}
 @keyframes vrA{0%,30%{transform:translateY(0)}45%,80%{transform:translateY(7px)}95%,100%{transform:translateY(0)}}
 @keyframes vrB{0%,30%{transform:translateY(0)}45%,80%{transform:translateY(-7px)}95%,100%{transform:translateY(0)}}
@@ -1660,18 +1657,16 @@ html body #vtLbl+#vtabs{margin-top:9px}
 @media (max-width:1099px){
 html body #vtabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%}
 html body #vtabs button{width:auto!important;min-width:0;padding:0 6px!important;gap:6px;flex-direction:column}
-html body #vtabs button[data-view="math"]{grid-column:1/-1;flex-direction:row;height:64px!important;min-height:64px!important;font-size:19px!important;gap:13px;padding:0 14px!important}
-html body #vtabs button[data-view="math"] .vic{width:43px;height:32px}
+html body #vtabs button[data-view="math"]{grid-column:1/-1;height:44px!important;min-height:44px!important;font-size:14px!important;padding:0 14px!important;border-radius:11px!important}
 html body #vtabs button:not([data-view="math"]){height:44px!important;min-height:44px!important;font-size:12px!important;letter-spacing:0;gap:2px;border-radius:11px!important}
 html body #vtabs button:not([data-view="math"]) .vic{width:20px;height:15px}
 html body #vtabs .valt{grid-column:1/-1;margin:5px 2px -2px;font:700 10px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f857c;text-align:center}
 /* the main button is narrower (about 55% of the group) and centered above the three alternatives; the labels are centered over the group */
-html body #vtabs button[data-view="math"]{justify-self:center;width:55%!important;min-width:196px}
+html body #vtabs button[data-view="math"]{justify-self:center;width:55%!important;min-width:150px}
 html body #vtLbl{text-align:center}html body #vtLbl::after{margin-left:auto;margin-right:auto}
 }
-@media (max-width:359px){html body #vtabs button[data-view="math"]{min-width:150px}}
-@media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:42px!important;min-height:42px!important;font-size:13px!important;gap:7px}html body #vtabs button:not([data-view="math"]) .vic{width:22px;height:16px}html body #vtabs button[data-view="math"]{height:72px!important;min-height:72px!important;font-size:22px!important}html body #vtabs button[data-view="math"] .vic{width:50px;height:38px}}
-@media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:17px!important}html body #vtabs button[data-view="math"] .vic{width:38px;height:28px}}
+@media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:42px!important;min-height:42px!important;font-size:13px!important;gap:7px}html body #vtabs button:not([data-view="math"]) .vic{width:22px;height:16px}html body #vtabs button[data-view="math"]{height:42px!important;min-height:42px!important}}
+@media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}}
 /* category buttons: label centered horizontally and vertically (each line when it wraps) */
 html body #picker #cats button.cat{display:flex!important;align-items:center;justify-content:center;text-align:center}
 html body #picker #cats button.cat .ct{flex:1 1 auto;align-items:center;justify-content:center;text-align:center}
@@ -1780,7 +1775,6 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 </div>
 <div id="vtLbl" class="vtlbl" aria-hidden="true">Choose a view</div>
 <div id="vtabs" role="tablist" aria-label="View"><button type="button" role="tab" id="tabMath" data-view="math" aria-selected="true" aria-controls="vMath">Mouth Math</button><span class="valt" aria-hidden="true">Alternative views</span><button type="button" role="tab" id="tabCloud" data-view="cloud" aria-selected="false" aria-controls="vCloud" tabindex="-1">Word Cloud</button><button type="button" role="tab" id="tabRace" data-view="race" aria-selected="false" aria-controls="vRace" tabindex="-1">Word Race</button><button type="button" role="tab" id="tabRing" data-view="ring" aria-selected="false" aria-controls="vRing" tabindex="-1">Word Ring</button></div><script>(()=>{const I={
-math:'<svg class="vic vm" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="24" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="8" width="17" height="4" rx="1.5" fill="currentColor" opacity=".8"/><rect x="1" y="14" width="11" height="4" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
 race:'<svg class="vic vr" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="20" height="4" rx="1.5" fill="currentColor"/><rect x="1" y="9" width="14" height="4" rx="1.5" fill="currentColor" opacity=".75"/><rect x="1" y="16" width="9" height="3" rx="1.5" fill="currentColor" opacity=".55"/></svg>',
 cloud:'<svg class="vic vc" viewBox="0 0 26 20" aria-hidden="true"><rect x="2" y="3" width="9" height="3" rx="1.5" fill="currentColor" opacity=".7"/><rect x="13" y="2" width="11" height="4" rx="2" fill="currentColor"/><rect x="4" y="9" width="17" height="5" rx="2.5" fill="currentColor"/><rect x="7" y="16" width="12" height="3" rx="1.5" fill="currentColor" opacity=".6"/></svg>',
 ring:'<svg class="vic" viewBox="0 0 26 20" aria-hidden="true"><g class="vg" stroke="currentColor" stroke-linecap="round">'+[...Array(16)].map((_,i)=>{const a=i/16*6.283,r0=4,r1=r0+(i%4===0?5.5:i%2?3:4),c=Math.cos(a),s=Math.sin(a);return `<line x1="${13+c*r0}" y1="${10+s*r0}" x2="${13+c*r1}" y2="${10+s*r1}" stroke-width="${i%4===0?1.6:1}"/>`}).join('')+'</g></svg>'};
