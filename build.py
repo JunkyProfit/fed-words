@@ -1664,8 +1664,12 @@ html body #vtabs button[data-view="math"]{grid-column:1/-1;flex-direction:row;he
 html body #vtabs button[data-view="math"] .vic{width:43px;height:32px}
 html body #vtabs button:not([data-view="math"]){height:44px!important;min-height:44px!important;font-size:12px!important;letter-spacing:0;gap:2px;border-radius:11px!important}
 html body #vtabs button:not([data-view="math"]) .vic{width:20px;height:15px}
-html body #vtabs .valt{grid-column:1/-1;margin:5px 2px -2px;font:700 10px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f857c}
+html body #vtabs .valt{grid-column:1/-1;margin:5px 2px -2px;font:700 10px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f857c;text-align:center}
+/* the main button is narrower (about 55% of the group) and centered above the three alternatives; the labels are centered over the group */
+html body #vtabs button[data-view="math"]{justify-self:center;width:55%!important;min-width:196px}
+html body #vtLbl{text-align:center}html body #vtLbl::after{margin-left:auto;margin-right:auto}
 }
+@media (max-width:359px){html body #vtabs button[data-view="math"]{min-width:150px}}
 @media (min-width:641px) and (max-width:1099px){html body #vtabs button:not([data-view="math"]){flex-direction:row;height:42px!important;min-height:42px!important;font-size:13px!important;gap:7px}html body #vtabs button:not([data-view="math"]) .vic{width:22px;height:16px}html body #vtabs button[data-view="math"]{height:72px!important;min-height:72px!important;font-size:22px!important}html body #vtabs button[data-view="math"] .vic{width:50px;height:38px}}
 @media (max-width:359px){html body #vtabs button:not([data-view="math"]){font-size:11.5px!important;padding:0 3px!important}html body #vtabs button[data-view="math"]{font-size:17px!important}html body #vtabs button[data-view="math"] .vic{width:38px;height:28px}}
 /* category buttons: label centered horizontally and vertically (each line when it wraps) */
