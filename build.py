@@ -1835,9 +1835,9 @@ const CATS=[...new Set(PEOPLE.map(p=>p.category))].sort((a,b)=>(a==='CEOs')-(b==
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10,CLOUD_MAX=300;
+let P=null,V=[],VI=new Map(),DOCS=[],YEARS=[],sel=new Set(),sortK='count',sortDir=-1;const LIMIT=2000,FIRST=10,CLOUD_MAX=150;
 const NOPTS=['5','20','50','100','all'],NDEF='20';let NSHOW=NDEF,NPICK=false;const nDef=()=>VIEW==='cloud'?'50':NDEF;   // mm79: the cloud opens at 50, other views at 20, until a Show button is tapped
-   // words shown in both views: 5, 50 (default on every device, mm35), 100 or all (the cloud caps at CLOUD_MAX)
+   // words shown in both views: 5, 50 (default on every device, mm35), 100 or all (the cloud caps at CLOUD_MAX = 150: past that the words get too small to read)
 const nCap=()=>NSHOW==='all'?Infinity:+NSHOW;
 const unitOf=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
 const q=$('q'),hide=$('hideStop'),tb=$('tb');
@@ -2214,7 +2214,8 @@ document.addEventListener('click',e=>{if(!pop.hidden&&pinned&&!pop.contains(e.ta
 
 // ---- Word Cloud (below the Mouth Math table): word cloud (vanilla JS; spiral placement + measureText box collisions) ----
 let cloudW=0,cloudInfo={placed:0,skipped:0,ms:0};
-const PAL=['#b77ee0','#a66ad8','#c79bec'];   // cream/greys on the black cloud panel (all >= 7:1)
+const PAL=['#b77ee0','#a66ad8','#c79bec'],PALRGB=PAL.map(h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)));
+const tint=(w,al)=>{const c=PALRGB[hcode(w)%PAL.length];return al>=1?PAL[hcode(w)%PAL.length]:`rgba(${c[0]},${c[1]},${c[2]},${al})`};   // depth: farther words are dimmer (alpha floor .66)
 const hcode=s=>{let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
 const mctx=document.createElement('canvas').getContext('2d');
 // The cloud silhouette (unit coordinates: x 0..1 across, y 0..0.72 down): a flat-ish pill base with three overlapping bumps on top.
@@ -2226,8 +2227,8 @@ function inCloud(u,v){   // u: 0..1 across, v: 0..CS_ASPECT down
   for(const [cu,cv,r] of CS_BUMPS){const dx=u-cu,dy=v-cv;if(dx*dx+dy*dy<=r*r)return true}
   return false}
 const CS_FILL=(()=>{let n=0,t=0;for(let i=0;i<50;i++)for(let j=0;j<36;j++){t++;if(inCloud((i+.5)/50,(j+.5)/50))n++}return n/t})();   // share of the 1 x CS_ASPECT frame the silhouette covers
-function cloudLayout(words,W){
-  const fam=getComputedStyle(cloud).fontFamily,minF=W<500?11:12,GAP=2,RATIO=2.7,sq=Math.sqrt,Wc=W,stretch=(W<340?1.55:W<500?1.3:1)*Math.max(1,sq(words.length/50)),Hf=CS_ASPECT*Wc*stretch,ox=0;
+function cloudLayoutAt(words,W,minF,mul,strict){
+  const fam=getComputedStyle(cloud).fontFamily,GAP=2,RATIO=2.7,sq=Math.sqrt,Wc=W,stretch=(W<340?1.55:W<500?1.3:1)*Math.max(1,sq(words.length/50))*mul,Hf=CS_ASPECT*Wc*stretch,ox=0;
   // Words are set in lines that follow the cloud outline: line height peaks around the middle (biggest words, #1 first) and shrinks toward the top and the
   // bottom, so the rim is made of small bits. Words fill the lines in rank order (the line with the biggest type first), then the type is scaled up as far as all words still fit.
   const box=(x,n,f)=>{const mx=n?0:RING_MX,my=n?0:RING_MY;let wt,w,pad;f=Math.max(minF,f);   // #1 word: room for its two pill rings
@@ -2241,7 +2242,8 @@ function cloudLayout(words,W){
   const cache=new Map(),runsC=(y,h)=>{const k=Math.round(y)*4096+h;let r=cache.get(k);if(!r){r=runsAt(y,h,2);cache.set(k,r)}return r};
   const tryPlace=(g,nW)=>{
     const fl=Math.max(minF,minF*g),fh=fl*(1+(RATIO-1)*Math.min(1,g)),sq0=sq(words[0].count),lo=sq(words[nW-1].count),MG=5,CAP=26,yc=Hf*0.5;
-    const pool=words.slice(0,nW).map((x,n)=>box(x,n,sq0===lo?(fl+fh)/2:fl+(fh-fl)*Math.pow((sq(x.count)-lo)/(sq0-lo),1.1)));
+    const pool=words.slice(0,nW).map((x,n)=>{const b=box(x,n,sq0===lo?(fl+fh)/2:fl+(fh-fl)*Math.pow((sq(x.count)-lo)/(sq0-lo),1.1));
+      b.d=Math.max(0,Math.min(1,(b.f-fl)/Math.max(1,fh-fl)));b.al=n?Math.round((0.66+0.34*sq(b.d))*100)/100:1;return b});   // depth: nearer (more frequent) = bigger and brighter, farther = smaller and dimmer
     const prof=ym=>fl+(fh-fl)*Math.pow(Math.max(0,1-Math.pow((ym-yc)/(Hf*0.6),2)),1.6);
     const pack=(list,h,y0)=>{const runs=runsC(y0,h),rows=runs.map(()=>[]),used=runs.map(()=>0);
       for(const b of list){let r=-1,rm=-1;runs.forEach((run,i)=>{const rest=run[1]-run[0]-used[i]-(rows[i].length?MG:0)-b.w;if(rest>=0&&rest>rm){rm=rest;r=i}});   // run with the most room left
@@ -2261,12 +2263,22 @@ function cloudLayout(words,W){
         seq.forEach(b=>{placed.push({x,y:y+(h-b.h)/2,w:b.w,h:b.h,b});x+=b.w+gp})});
       left=left.filter(b=>!list.includes(b));y+=h}
     return {placed,miss:nW-placed.length,steps:0}};
-  let best=null,tries=0,sl=0.5,sh=5;
+  let best=null,tries=1,sl=0.6,sh=5;
+  if(tryPlace(sl,words.length).miss&&strict)return null;   // the most compact setting cannot hold every word: the caller tries smaller far words or a taller cloud
   for(let k=0;k<9;k++){const g=(sl+sh)/2;tries++;const r=tryPlace(g,words.length);if(!r.miss){best=r;sl=g}else sh=g}
-  if(!best){let nl=1,nh=words.length;for(let k=0;k<9&&nl<nh;k++){const n=Math.ceil((nl+nh)/2);tries++;const r=tryPlace(0.5,n);if(!r.miss){best=r;best.miss=words.length-n;nl=n}else nh=n-1}   // too many words for the panel: keep the highest-ranked ones that fit
-    if(!best){best=tryPlace(0.5,1);best.miss=words.length-1}}
+  if(!best)best=tryPlace(sl,words.length);
+  if(best.miss&&!strict){let nl=1,nh=words.length;best=null;for(let k=0;k<9&&nl<nh;k++){const n=Math.ceil((nl+nh)/2);tries++;const r=tryPlace(sl,n);if(!r.miss){best=r;best.miss=words.length-n;nl=n}else nh=n-1}   // last resort: keep the highest-ranked words that fit
+    if(!best){best=tryPlace(sl,1);best.miss=words.length-1}}
   best.placed.forEach(c=>{c.x+=ox});
-  return {placed:best.placed,miss:best.miss,tries,steps:best.steps,frame:{Wc,Hf,ox}};
+  return {placed:best.placed,miss:best.miss,tries,steps:best.steps,frame:{Wc,Hf,ox,minF,mul}};
+}
+// Every selected word is shown: try the normal sizes first; if they don't fit, let the farthest (smallest, dimmest) words go a little smaller, then make the cloud taller.
+function cloudLayout(words,W){
+  const mins=W<500?[11,10.5,10,9.5]:[12,11,10.5,10],muls=[1.15,1.3,1.5,1.75,2,2.4,3],last=mins[mins.length-1];let r=null,t=0;
+  for(const m of mins){r=cloudLayoutAt(words,W,m,1,true);t++;if(r)break}
+  if(!r)for(const mu of muls){r=cloudLayoutAt(words,W,last,mu,true);t++;if(r)break}
+  if(!r)r=cloudLayoutAt(words,W,last,muls[muls.length-1],false);
+  r.tries+=t;return r;
 }
 function drawCloud(list){
   stopSketch();
@@ -2279,13 +2291,13 @@ function drawCloud(list){
   const minH=placed.length<=25?(W<600?200:230):0,y0=py0-Math.max(0,minH-ph)/2;   // short clouds (10/25 words) get room to float, words centered
   cloud.style.height=Math.ceil(Math.max(ph,minH))+'px';
   cloud.innerHTML=placed.map(c=>{const b=c.b,x=b.x;return `<span data-w="${esc(x.word)}" data-c="${x.count}" role="button" tabindex="0" aria-label="${x.word===words[0].word?'#1 word, ':''}${esc(x.word)}: ${x.count}${x.word===words[0].word?' — show excerpts':''}" `+
-    `style="left:${(c.x+1+b.mx).toFixed(1)}px;top:${(c.y-y0+1+b.my).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2-2*b.my}px;height:${c.h-2-2*b.my}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':PAL[hcode(x.word)%PAL.length]}"${x.word===words[0].word||x.stop?` class="${[x.word===words[0].word?'top':'',x.stop?'stop':''].join(' ').trim()}"`:''}>${esc(x.word)}</span>`}).join('');
+    `style="left:${(c.x+1+b.mx).toFixed(1)}px;top:${(c.y-y0+1+b.my).toFixed(1)}px;font-size:${b.f}px;font-weight:${b.wt};line-height:${c.h-2-2*b.my}px;height:${c.h-2-2*b.my}px;padding:0 ${b.pad}px;color:${x.word===words[0].word?'var(--num-red)':tint(x.word,b.al)}"${x.word===words[0].word||x.stop?` class="${[x.word===words[0].word?'top':'',x.stop?'stop':''].join(' ').trim()}"`:''}>${esc(x.word)}</span>`}).join('');
   TOPW=words[0].word;
   cloudInfo={placed:placed.length,skipped:miss,tries,steps,frame,ms:Math.round(performance.now()-t0),mode:'static'};
   buildBodies(placed,y0,W);markTop();ctrStatic();
   if(motion.checked&&BODIES.length)armSketch();
   $('cloudNote').textContent=`Top ${placed.length.toLocaleString()} of ${list.length.toLocaleString()} words${hide.checked?' (stopwords hidden)':''}`+
-    `${miss?` · ${miss} didn't fit`:''}`;
+    `${list.length>placed.length+miss&&N===CLOUD_MAX?` · capped at ${CLOUD_MAX} to stay readable`:''}${miss?` · ${miss} didn't fit`:''}`;
   return placed.length;
 }
 
@@ -2313,7 +2325,7 @@ function buildBodies(placed,y0,W){
   const fam=getComputedStyle(cloud).fontFamily,spans=[...cloud.querySelectorAll('span[data-w]')];
   BODIES=placed.slice(0,MAX_BODIES).map((c,i)=>{const b=c.b,x=b.x;mctx.font=`${b.wt} 100px ${fam}`;
     const w0=b.w-2-2*b.mx,h0=c.h-2-2*b.my,hx=c.x+1+b.mx+w0/2,hy=c.y-y0+1+b.my+h0/2;
-    return {word:x.word,count:x.count,el:spans[i],wt:b.wt,col:PAL[hcode(x.word)%PAL.length],fam,rw:mctx.measureText(x.word).width/100,
+    return {word:x.word,count:x.count,el:spans[i],wt:b.wt,col:tint(x.word,b.al),fam,rw:mctx.measureText(x.word).width/100,
       hx,hy,x:hx,y:hy,vx:0,vy:0,sx:0,sy:0,mx:b.mx,my:b.my,f:b.f,ft:b.f,w:w0,h:h0,seed:i*7.31+1,rot:0,wv:waveOf(i)}});
   BODIES.forEach(boxOf);
 }
