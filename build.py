@@ -2458,9 +2458,10 @@ const ringStill=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;let ri
 function stopRing(){cancelAnimationFrame(ringRAF);ringRAF=0}
 function ringData(){const pool=sel.size?DOCS.filter(d=>sel.has(d.id)):DOCS,m=new Map();
   pool.forEach(d=>d.cnt.forEach((n,wi)=>{const w=V[wi];if(hide.checked&&STOP.has(w))return;m.set(w,(m.get(w)||0)+n)}));
-  const nar=innerWidth<700,top=[...m].sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1)).slice(0,nar?12:28).map(([w,n])=>({w,n}));
-  const ord=[];top.forEach((o,i)=>ord[(i*37)%top.length]=o);return {top,ord:ord.filter(Boolean)}}
-let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function playRing(){const c=$('ring');if(!c||!P)return;stopRing();const x=c.getContext('2d');let D=Math.min(devicePixelRatio||1,2);
+  const top=[...m].sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1)).slice(0,Math.min(nCap(),RING_MAX)).map(([w,n])=>({w,n}));   // the Show buttons (5/20/50/100/All) set how many spikes the ring has
+  const gcd=(a,b)=>b?gcd(b,a%b):a;let st=37;while(top.length>1&&gcd(st,top.length)!==1)st++;   // scatter stride that always covers every word
+  const ord=[];top.forEach((o,i)=>ord[(i*st)%top.length]=o);return {top,ord:ord.filter(Boolean)}}
+const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function playRing(){const c=$('ring');if(!c||!P)return;stopRing();const x=c.getContext('2d');let D=Math.min(devicePixelRatio||1,2);
   const RD=ringData(),words=RD.top,order=RD.ord,max=words.length?words[0].n:1;ringHov=-1;
   const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,FILL=innerWidth<700?800:1300,seed=[...Array(FILL)].map(()=>[Math.random(),Math.random(),Math.random()]);
   const col=(a,t,al)=>{const h=Math.sin(a*2+t*.3)*.5+.5;return `rgba(${Math.round(225-50*h)},${Math.round(50+25*h)},${Math.round(80+150*h)},${al})`};
