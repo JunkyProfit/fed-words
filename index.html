@@ -2004,7 +2004,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length,labs=[];
    for(let i=0;i<n;i++){const o=order[i],a=i/n*6.283+t*.042+ringOff,f=Math.sqrt(o.n/max),pulse=1,r0=R*1.05,r1=r0+Lmax*(.25+.75*f)*pulse,ca=Math.cos(a),sa=Math.sin(a),hv=i===ringHov;ringPos[i]=a;let dz=Math.abs((((a+1.5708)%6.283)+6.283)%6.283);dz=Math.min(dz,6.283-dz);const zw=6.283/Math.max(8,n)*1.35,zb=dz<zw?(1+Math.cos(dz/zw*3.1416))/2:0;
     x.strokeStyle=hv?'#fff':col(a,t,.55+.45*f);x.lineWidth=hv?3:.8+1.6*f;x.beginPath();x.moveTo(cx+ca*r0,cy+sa*r0);x.lineTo(cx+ca*r1,cy+sa*r1);x.stroke();
-    x.fillStyle=o===words[0]?'#ff5449':'#fff';x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,1.5+2*f,0,7);x.fill();
+    {const dr=(1.5+2*f)*1.3,dc=o===words[0]?'#ff5449':'#fff';x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187 preview: the spike-end dots are small hollow circles, ~30% bigger than the old solid dots
     const fs=Math.round(((nar?7:8)+(nar?3:10)*f)*(1+(nar?1.1:1.25)*zb)),fsz=fs+(hv?3:0);
     let fromTop=(((a+1.5708)%6.283)+6.283)%6.283;const fadeOut=1.15,fadeIn0=4.0;let fade=fromTop<fadeOut?1-fromTop/fadeOut:fromTop<fadeIn0?0:(fromTop-fadeIn0)/(6.283-fadeIn0);fade=Math.max(0,Math.min(1,fade));fade=fade*fade*(3-2*fade);
     const left=ca<0,pad=nar?8:12,lift=Math.pow(zb,.75),extra=(nar?34:58)*lift*(1+.5*f),up=(nar?22:36)*lift,bl=zb>.2?'bottom':'middle';
