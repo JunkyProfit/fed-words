@@ -1696,10 +1696,9 @@ html body .vtop .vstop{font-size:12.5px;gap:5px}}
 html body.view-cloud #q{display:none!important}
 html body header #share{background:linear-gradient(180deg,#5a5160,#3d3542)!important;border-color:#8a7d94!important;color:#fff!important;box-shadow:none}
 html body header #share:hover{background:linear-gradient(180deg,#685e70,#4a4150)!important}
-/* mm184 preview: thin red-to-purple circle hint (replaces the thumbprint) in the Word Ring's center: spins with the wheel (JS sets size, position and rotation), fades after the first spin */
+/* mm184 preview: thin red-to-purple circle hint (replaces the thumbprint) in the Word Ring's center: spins with the wheel (JS sets size, position and rotation), always visible */
 #vRing .ringwrap{position:relative}
-.thumbhint{position:absolute;left:50%;top:50%;width:80px;height:80px;transform:translate(-50%,-50%);pointer-events:none;z-index:2;opacity:1;transition:opacity .6s ease}
-.thumbhint.gone{opacity:0;visibility:hidden;transition:opacity .6s ease,visibility 0s .6s}
+.thumbhint{position:absolute;left:50%;top:50%;width:80px;height:80px;transform:translate(-50%,-50%);pointer-events:none;z-index:2;opacity:1}
 .thumbhint *{pointer-events:none}
 .thumbhint svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;will-change:transform;filter:drop-shadow(0 0 2px rgba(255,84,73,.4)) drop-shadow(0 0 6px rgba(142,91,214,.25))}
 .thumbhint .thc{fill:none;stroke:url(#thGrad);stroke-width:1.5}
@@ -2481,7 +2480,7 @@ function ringData(){const pool=sel.size?DOCS.filter(d=>sel.has(d.id)):DOCS,m=new
   const top=[...m].sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1)).slice(0,Math.min(nCap(),RING_MAX)).map(([w,n])=>({w,n}));   // the Show buttons (5/20/50/100/Max) set how many spikes the ring has
   const gcd=(a,b)=>b?gcd(b,a%b):a;let st=37;while(top.length>1&&gcd(st,top.length)!==1)st++;   // scatter stride that always covers every word
   const ord=[];top.forEach((o,i)=>ord[(i*st)%top.length]=o);return {top,ord:ord.filter(Boolean)}}
-const RING_MAX=150;let thumbSpun=false,ringOff=0,ringVel=0,ringDrag=null,ringCur='';function playRing(){const c=$('ring');if(!c||!P)return;stopRing();const x=c.getContext('2d');let D=Math.min(devicePixelRatio||1,2);
+const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function playRing(){const c=$('ring');if(!c||!P)return;stopRing();const x=c.getContext('2d');let D=Math.min(devicePixelRatio||1,2);
   const RD=ringData(),words=RD.top,order=RD.ord,max=words.length?words[0].n:1;ringHov=-1;
   const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,FILL=innerWidth<700?800:1300,seed=[...Array(FILL)].map(()=>[Math.random(),Math.random(),Math.random()]);
   const col=(a,t,al)=>{const h=Math.sin(a*2+t*.3)*.5+.5;return `rgba(${Math.round(225-50*h)},${Math.round(50+25*h)},${Math.round(80+150*h)},${al})`};
@@ -2539,7 +2538,7 @@ const RING_MAX=150;let thumbSpun=false,ringOff=0,ringVel=0,ringDrag=null,ringCur
   ringRAF=requestAnimationFrame(frame);
   if(!c.dataset.wh){c.dataset.wh=1;const ang=e=>{const r=c.getBoundingClientRect(),W=r.width,H=r.height,nar=W<560;return Math.atan2(e.clientY-(r.top+H/2+(nar?14:22)),e.clientX-(r.left+W/2))};
    c.addEventListener('pointerdown',e=>{ringDrag={a:ang(e),t:performance.now(),x:e.clientX,y:e.clientY,mv:0};ringVel=0;try{c.setPointerCapture(e.pointerId)}catch(_){}});
-   c.addEventListener('pointermove',e=>{if(!ringDrag)return;const a=ang(e);let d=a-ringDrag.a;if(d>Math.PI)d-=6.283;if(d<-Math.PI)d+=6.283;const now=performance.now(),dt=Math.max(8,now-ringDrag.t);ringOff+=d;ringVel=d/dt*16;ringDrag={a,t:now,x:ringDrag.x,y:ringDrag.y,mv:Math.max(ringDrag.mv,Math.hypot(e.clientX-ringDrag.x,e.clientY-ringDrag.y))};if(!thumbSpun&&Math.abs(ringOff)>.12){thumbSpun=true;const h=$('thumbHint');if(h)h.classList.add('gone')}if(ringStill())playRing()});
+   c.addEventListener('pointermove',e=>{if(!ringDrag)return;const a=ang(e);let d=a-ringDrag.a;if(d>Math.PI)d-=6.283;if(d<-Math.PI)d+=6.283;const now=performance.now(),dt=Math.max(8,now-ringDrag.t);ringOff+=d;ringVel=d/dt*16;ringDrag={a,t:now,x:ringDrag.x,y:ringDrag.y,mv:Math.max(ringDrag.mv,Math.hypot(e.clientX-ringDrag.x,e.clientY-ringDrag.y))};if(ringStill())playRing()});
    const end=e=>{if(ringDrag&&ringDrag.mv<8&&e&&e.type==='pointerup'&&ringCur){ringVel=0;c.dataset.w=ringCur;showPop(c,true);setTimeout(()=>{const p=document.getElementById('pop');if(p&&!p.hidden)p.scrollIntoView({block:'nearest',behavior:'smooth'})},60)}ringDrag=null;ringVel=Math.max(-.25,Math.min(.25,ringVel))};c.addEventListener('pointerup',end);c.addEventListener('pointercancel',end)}
   if(false){c.dataset.on=1;c.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){ringTap=false;ringPX=e.clientX;ringPY=e.clientY;if(ringStill())playRing()}});
    c.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){ringPX=-1;ringHov=-1}});
