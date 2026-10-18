@@ -2009,7 +2009,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
     {const dr=(1.5+2*f)*1.3,dc=o===words[0]?'#ff5449':'#fff',gr=dr*3.4,gs=o===words[0]?GLOWR:GLOW;x.globalAlpha=hv?1:.55+.35*f;x.drawImage(gs,cx+ca*r1-gr,cy+sa*r1-gr,gr*2,gr*2);x.globalAlpha=1;x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187 preview: the spike-end dots are small hollow circles, ~30% bigger than the old solid dots
     const fs=Math.round(((nar?7:8)+(nar?3:10)*f)*(1+(nar?1.1:1.25)*zb)),fsz=fs+(hv?3:0);
     let fromTop=(((a+1.5708)%6.283)+6.283)%6.283;const fadeOut=1.15,fadeIn0=4.0;let fade=fromTop<fadeOut?1-fromTop/fadeOut:fromTop<fadeIn0?0:(fromTop-fadeIn0)/(6.283-fadeIn0);fade=Math.max(0,Math.min(1,fade));fade=fade*fade*(3-2*fade);
-    const left=ca<0,pad=nar?8:12,lift=Math.pow(zb,.75),extra=(nar?34:58)*lift*(1+.5*f),up=(nar?22:36)*lift,bl=zb>.2?'bottom':'middle';
+    const left=ca<0,pad=nar?8:12,lift=Math.pow(zb,.75),extra=(nar?21:24)*lift*(1+.5*f),up=(nar?12:14)*lift,bl=zb>.2?'bottom':'middle';
     let tx=cx+ca*(r1+pad+extra),ty=cy+sa*(r1+pad+extra)-up;
     x.font=`${hv||f>.5||zb>.5?700:400} ${fsz}px Arial`;const tw=x.measureText(o.w).width,th=fsz*1.25,m=nar?2:5;
     if(left){if(tx-tw<m)tx=m+tw;if(tx>W-m)tx=W-m}else{if(tx+tw>W-m)tx=W-m-tw;if(tx<m)tx=m}
