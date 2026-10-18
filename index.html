@@ -1999,14 +1999,10 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    if(!words.length){x.fillStyle='#a49e93';x.font='16px Arial';x.textAlign='center';x.fillText('No documents selected',W/2,H/2);return}
    const nar=W<560,cx=W/2,cy=H/2+(nar?14:22),R=Math.min(W,H)*(nar?.15:.17),Lmax=Math.min(W,H)*(nar?.14:.25),sq=1;
    const th=$('thumbHint');if(th){const S=Math.round(Math.min(86,R*1.7));th.style.cssText='left:'+cx+'px;top:'+cy+'px;width:'+S+'px;height:'+S+'px';th.firstElementChild.nextElementSibling.style.transform=RM?'none':'rotate('+(t*.042+ringOff)+'rad)'}   // mm184: the circle turns with the words (same angle as the labels), clockwise; still under reduced motion
-   if(!ringDrag&&Math.abs(ringVel)>1e-4){ringOff+=ringVel;ringVel*=.95}x.globalCompositeOperation='lighter';x.lineWidth=.7;
-   for(let i=0;i<FILL;i++){const s=seed[i],a=i/FILL*6.283+t*.03+ringOff,b=Math.sin(t*.7+s[0]*6.28)*.5+.5,r0=R*(.85+s[1]*.25),len=Lmax*(.08+s[2]*.22)*(.8+.2*b);
-    x.strokeStyle=col(a,t,.18+.25*b);x.beginPath();x.moveTo(cx+Math.cos(a)*r0,cy+Math.sin(a)*r0);x.lineTo(cx+Math.cos(a)*(r0+len),cy+Math.sin(a)*(r0+len));x.stroke()}
-   x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length,labs=[];
+   if(!ringDrag&&Math.abs(ringVel)>1e-4){ringOff+=ringVel;ringVel*=.95}
+   x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length,labs=[],spk=[];
    for(let i=0;i<n;i++){const o=order[i],a=i/n*6.283+t*.042+ringOff,f=Math.sqrt(o.n/max),pulse=1,r0=R*1.05,r1=r0+Lmax*(.25+.75*f)*pulse,ca=Math.cos(a),sa=Math.sin(a),hv=i===ringHov;ringPos[i]=a;let dz=Math.abs((((a+1.5708)%6.283)+6.283)%6.283);dz=Math.min(dz,6.283-dz);const zw=6.283/Math.max(8,n)*1.35,zb=dz<zw?(1+Math.cos(dz/zw*3.1416))/2:0;
-    {const X0=cx+ca*r0,Y0=cy+sa*r0,X1=cx+ca*r1,Y1=cy+sa*r1;if(hv)x.strokeStyle='#fff';else{const g=x.createLinearGradient(X0,Y0,X1,Y1);g.addColorStop(0,col(a,t,.55+.45*f));g.addColorStop(1,`rgba(255,255,255,${.7+.3*f})`);x.strokeStyle=g}   // mm187 preview: each spike blends from its red/purple into white at the tip
-    x.lineWidth=hv?3:.8+1.6*f;x.beginPath();x.moveTo(X0,Y0);x.lineTo(X1,Y1);x.stroke()}
-    {const dr=(1.5+2*f)*1.3,dc=o===words[0]?'#ff5449':'#fff',gr=dr*3.4,gs=o===words[0]?GLOWR:GLOW;x.globalAlpha=hv?1:.55+.35*f;x.drawImage(gs,cx+ca*r1-gr,cy+sa*r1-gr,gr*2,gr*2);x.globalAlpha=1;x.beginPath();x.arc(cx+ca*r1,cy+sa*r1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187 preview: the spike-end dots are small hollow circles, ~30% bigger than the old solid dots
+    spk.push({i,X0:cx+ca*r0,Y0:cy+sa*r0,X1:cx+ca*r1,Y1:cy+sa*r1,hv,f,top:o===words[0],c0:col(a,t,.55+.45*f),lw:hv?3:.8+1.6*f});   // mm188 preview: spikes + tip circles are collected here and drawn after the labels are placed, so they can step aside for the enlarged word
     const fs=Math.round(((nar?7:8)+(nar?3:10)*f)*(1+(nar?1.1:1.25)*zb)),fsz=fs+(hv?3:0);
     let fromTop=(((a+1.5708)%6.283)+6.283)%6.283;const fadeOut=1.15,fadeIn0=4.0;let fade=fromTop<fadeOut?1-fromTop/fadeOut:fromTop<fadeIn0?0:(fromTop-fadeIn0)/(6.283-fadeIn0);fade=Math.max(0,Math.min(1,fade));fade=fade*fade*(3-2*fade);
     const left=ca<0,pad=nar?8:12,lift=Math.pow(zb,.75),extra=(nar?21:24)*lift*(1+.5*f),up=(nar?12:14)*lift,bl=zb>.2?'bottom':'middle';
@@ -2025,7 +2021,17 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    const hit=(A,B)=>{const a=box(A),b=box(B);return a.x1<b.x2&&a.x2>b.x1&&a.y1<b.y2&&a.y2>b.y1};
    const clampLab=L=>{if(L.left){if(L.tx-L.tw<mEdge)L.tx=mEdge+L.tw;if(L.tx>W-mEdge)L.tx=W-mEdge}else{if(L.tx+L.tw>W-mEdge)L.tx=W-mEdge-L.tw;if(L.tx<mEdge)L.tx=mEdge}
     if(L.bl==='bottom'){if(L.ty-L.th<mEdge)L.ty=mEdge+L.th;if(L.ty>H-mEdge)L.ty=H-mEdge}else{if(L.ty-L.th*.5<mEdge)L.ty=mEdge+L.th*.5;if(L.ty+L.th*.5>H-mEdge)L.ty=H-mEdge-L.th*.5}};
-   const place=L=>{L.tx=cx+L.ca*(L.r1+L.pad+L.extra);L.ty=cy+L.sa*(L.r1+L.pad+L.extra)-L.up+L.tyOff;clampLab(L)};
+   let RO=[];{let bi=-1,bd=9;labs.forEach(L=>{let d=Math.abs((((L.a+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<bd){bd=d;bi=L.i}});const ro=bi>=0?order[bi]:null;   // mm188 preview: where the big word readout (top right) sits, so the enlarged 12 o'clock word never runs into it
+    if(ro){const fs=Math.min(nar?30:44,W*.42/Math.max(3,ro.w.length)*1.8);x.font=`700 ${fs}px Arial`;const w1=x.measureText(ro.w).width;x.font=`700 ${nar?14:17}px Arial`;const w2=x.measureText(`${ro.n.toLocaleString()} ${ro.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(ro)+1}`).width;
+     RO=[{x1:W-12-w1-10,x2:W,y1:0,y2:10+fs*1.15+6},{x1:W-12-w2-10,x2:W,y1:14+fs-4,y2:14+fs+(nar?14:17)*1.25+6}]}}
+   const avoidOwn=L=>{if(L.zb<=.2)return;const tX=cx+L.ca*L.r1,tY=cy+L.sa*L.r1,q=(1.5+2*L.f)*1.3+8,bx1=L.left?L.tx-L.tw:L.tx,by1=L.ty-L.fsz*1.05-3,by2=L.ty+L.fsz*.25+3;   // when the canvas top pushes the word down onto its own tip circle, slide it sideways off the circle
+    if(tX+q>bx1&&tX-q<bx1+L.tw&&tY+q>by1&&tY-q<by2){if(L.left)L.tx=tX-q;else L.tx=tX+q;clampLab(L)}};
+   const avoidRO=L=>{if(L.zb>.2&&L.left)for(const r of RO){const yb=L.ty,yt=yb-L.fsz*1.05-8,yd=yb+L.fsz*.25+4;if(L.tx+12>r.x1&&L.tx-L.tw-4<r.x2&&yt<r.y2&&yd>r.y1)L.tx=Math.max(L.tw+mEdge,r.x1-14)}
+    if(L.zb>.2&&!L.left)for(const r of RO){const yb=L.ty,yt=yb-L.fsz*1.05-8,yd=yb+L.fsz*.25+4;if(L.tx-4<r.x2&&L.tx+L.tw+12>r.x1&&yt<r.y2&&yd>r.y1){const nx=Math.max(mEdge,r.x1-L.tw-14),tX=cx+L.ca*L.r1,tY=cy+L.sa*L.r1,q=(1.5+2*L.f)*1.3+8;
+     if(tX+q>nx&&tX-q<nx+L.tw&&tY+q>yt+5&&tY-q<yd-1){L.left=true;L.tx=Math.max(L.tw+mEdge,tX-q)}   // no room between the word's own tip circle and the readout: let the word extend to the left of the tip instead
+     else L.tx=nx}}};
+   const place=L=>{L.tx=cx+L.ca*(L.r1+L.pad+L.extra);L.ty=cy+L.sa*(L.r1+L.pad+L.extra)-L.up+L.tyOff;clampLab(L);avoidOwn(L);avoidRO(L)};
+   labs.forEach(L=>{if(L.zb>.2){clampLab(L);avoidOwn(L);avoidRO(L)}});
    for(const L of labs){if(L.fade<.05&&L.zb<.45&&!L.hv){placed.push(L);continue}
     for(let tries=0;tries<10;tries++){const P=placed.find(Q=>Q.fade>.05&&hit(L,Q));if(!P)break;
      const Lcx=L.left?L.tx-L.tw/2:L.tx+L.tw/2,Lcy=L.bl==='bottom'?L.ty-L.th*.5:L.ty,Pcx=P.left?P.tx-P.tw/2:P.tx+P.tw/2,Pcy=P.bl==='bottom'?P.ty-P.th*.5:P.ty;
@@ -2035,6 +2041,28 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
      place(L)}
     if(placed.some(Q=>Q.fade>.05&&hit(L,Q))){if(L.zb>.88||L.hv){L.extra+=nar?8:14;L.tyOff-=nar?10:16;place(L);if(placed.some(Q=>Q.fade>.05&&hit(L,Q)))L.fade*=.65}else L.fade=0}
     placed.push(L)}
+   // mm188 preview: the enlarged word (with its glow) gets a clear zone: neighbour spikes are not drawn through it and tip circles near it fade out, so nothing touches the word
+   const holes=[];labs.forEach(L=>{if(L.zb>.2&&L.baseA*(L.hv?Math.max(L.fade,.35):L.fade)>.02){const mg=3+5*L.zb,yb=L.ty;holes.push({i:L.i,x1:(L.left?L.tx-L.tw:L.tx)-mg,x2:(L.left?L.tx:L.tx+L.tw)+mg,y1:yb-L.fsz*1.05-mg,y2:yb+L.fsz*.25+mg})}});
+   // spikes fade out just before the clear zone and fade back in after it (the enlarged word's own spike, right under it, is left alone)
+   const segHit=(s,h0)=>{const e=s.lw/2+1,h={x1:h0.x1-e,x2:h0.x2+e,y1:h0.y1-e,y2:h0.y2+e};let t0=0,t1=1;const dx=s.X1-s.X0,dy=s.Y1-s.Y0,cl=(p,q)=>{if(p===0)return q>=0;const r=q/p;if(p<0){if(r>t1)return false;if(r>t0)t0=r}else{if(r<t0)return false;if(r<t1)t1=r}return true};return cl(-dx,s.X0-h.x1)&&cl(dx,h.x2-s.X0)&&cl(-dy,s.Y0-h.y1)&&cl(dy,h.y2-s.Y0)&&t0<t1?[t0,t1]:null};
+   const part=(s,a,b,al)=>{if(b-a<1e-4)return;x.globalAlpha=al;x.beginPath();x.moveTo(s.X0+(s.X1-s.X0)*a,s.Y0+(s.Y1-s.Y0)*a);x.lineTo(s.X0+(s.X1-s.X0)*b,s.Y0+(s.Y1-s.Y0)*b);x.stroke()};
+   const drawSpike=s=>{if(s.hv)x.strokeStyle='#fff';else{const g=x.createLinearGradient(s.X0,s.Y0,s.X1,s.Y1);g.addColorStop(0,s.c0);g.addColorStop(1,`rgba(255,255,255,${.7+.3*s.f})`);x.strokeStyle=g}   // each spike blends from its red/purple into white at the tip
+    x.lineWidth=s.lw;const hs=[];for(const h of holes){if(h.i===s.i)continue;const r=segHit(s,h);if(r)hs.push(r)}
+    if(!hs.length){part(s,0,1,1)}
+    else if(hs.length>1){const oh=holes.filter(h=>h.i!==s.i);x.save();x.beginPath();x.rect(0,0,W,H);oh.forEach(h=>x.rect(h.x1,h.y1,h.x2-h.x1,h.y2-h.y1));x.clip('evenodd');part(s,0,1,1);x.restore()}
+    else{const[te,tx]=hs[0],F=Math.min(.45,24/(Math.hypot(s.X1-s.X0,s.Y1-s.Y0)||1)),N=16;
+     part(s,0,Math.max(0,te-F),1);for(let k=0;k<N;k++)part(s,Math.max(0,te-F+F*k/N),Math.max(0,te-F+F*(k+1)/N),1-(k+.5)/N);
+     if(tx<1){for(let k=0;k<N;k++)part(s,Math.min(1,tx+F*k/N),Math.min(1,tx+F*(k+1)/N),(k+.5)/N);part(s,Math.min(1,tx+F),1,1)}}
+    x.globalAlpha=1};
+   x.save();if(holes.length){x.beginPath();x.rect(0,0,W,H);holes.forEach(h=>x.rect(h.x1,h.y1,h.x2-h.x1,h.y2-h.y1));x.clip('evenodd')}
+   x.globalCompositeOperation='lighter';x.lineWidth=.7;   // the fine background strands are drawn here (same look, same order) so they too keep out of the clear zone
+   for(let i=0;i<FILL;i++){const s=seed[i],a=i/FILL*6.283+t*.03+ringOff,b=Math.sin(t*.7+s[0]*6.28)*.5+.5,r0=R*(.85+s[1]*.25),len=Lmax*(.08+s[2]*.22)*(.8+.2*b);
+    x.strokeStyle=col(a,t,.18+.25*b);x.beginPath();x.moveTo(cx+Math.cos(a)*r0,cy+Math.sin(a)*r0);x.lineTo(cx+Math.cos(a)*(r0+len),cy+Math.sin(a)*(r0+len));x.stroke()}
+   x.restore();x.globalCompositeOperation='source-over';
+   for(const s of spk)drawSpike(s);
+   for(const s of spk){const f=s.f,dr=(1.5+2*f)*1.3,dc=s.top?'#ff5449':'#fff',gr=dr*3.4,gs=s.top?GLOWR:GLOW;let k=1;
+    for(const h of holes){if(h.i===s.i)continue;const dx=Math.max(h.x1-s.X1,0,s.X1-h.x2),dy=Math.max(h.y1-s.Y1,0,s.Y1-h.y2),d=Math.hypot(dx,dy),u=Math.max(0,Math.min(1,(d-gr)/(gr*.7)));k=Math.min(k,u*u*(3-2*u))}
+    if(k<=.01)continue;x.globalAlpha=k*(s.hv?1:.55+.35*f);x.drawImage(gs,s.X1-gr,s.Y1-gr,gr*2,gr*2);x.globalAlpha=k;x.beginPath();x.arc(s.X1,s.Y1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke();x.globalAlpha=1}   // mm187: hollow circles with a soft white glow
    [...labs].sort((A,B)=>(A.zb-B.zb)||(A.o.n-B.o.n)).forEach(L=>{const al=L.baseA*(L.hv?Math.max(L.fade,.35):L.fade);if(al<=.02)return;
     x.font=`${L.hv||L.f>.5||L.zb>.5?700:400} ${L.fsz}px Arial`;x.textAlign=L.left?'right':'left';x.textBaseline=L.bl;
     x.fillStyle=L.hv||L.zb>.6?`rgba(255,255,255,${al})`:L.o===words[0]?`rgba(255,84,73,${al})`:`rgba(243,238,228,${al})`;
