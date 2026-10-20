@@ -1753,6 +1753,36 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 @keyframes spkdot2{0%{outline:2px solid rgba(255,255,255,.95);outline-offset:0}10%{outline-color:rgba(255,255,255,.9);outline-offset:1px}75%,100%{outline:2px solid rgba(255,255,255,0);outline-offset:12px}}
 @media (max-width:640px){html body .pk.pcoll #pdisc .pdn::before{margin-top:calc(.575em - 7.5px)!important}}
 @media (prefers-reduced-motion:reduce){html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::before,html body .vtop .rwho b::before{animation:none!important}}
+
+/* ---- Compare (preview): two speakers' top words side by side, Mouth Math view only ---- */
+.cmpbar{display:flex;justify-content:center;gap:8px;margin:6px 0 8px}
+.cmpbtn{font:700 13px/1 Arial,Helvetica,sans-serif;color:#f3eee4;background:linear-gradient(180deg,#2a1d20,#1a1416);border:1px solid #ff5449;border-radius:999px;padding:8px 16px;cursor:pointer;box-shadow:0 0 10px rgba(255,84,73,.28),0 0 16px rgba(138,111,196,.18);letter-spacing:.02em}
+.cmpbtn .ctri{font-size:15px;color:#ff5449;margin-left:4px;vertical-align:-1px}
+.cmpbtn:hover,.cmpbtn[aria-expanded="true"]{box-shadow:0 0 14px rgba(255,84,73,.45),0 0 22px rgba(138,111,196,.3)}
+.cmpx{font:700 13px/1 Arial,Helvetica,sans-serif;color:#cfc8bd;background:#1a1416;border:1px solid #6c5a5e;border-radius:999px;padding:8px 14px;cursor:pointer}
+.cmpx:hover{border-color:#ff5449;color:#fff}
+.cmppick{background:#151112;border:1px solid #3a2a2e;border-radius:10px;padding:10px;margin:0 0 10px;box-shadow:0 0 14px rgba(138,111,196,.15)}
+.cmppick input{width:100%;box-sizing:border-box;font:14px Arial,Helvetica,sans-serif;padding:9px 11px;border-radius:8px;border:1px solid #4a3a3e;background:#0f0c0d;color:#f3eee4}
+.cmppick .cmpcat{font:700 11px Arial,sans-serif;color:#8a6fc4;text-transform:uppercase;letter-spacing:.08em;margin:10px 2px 4px}
+.cmppick .cmpl{display:flex;flex-wrap:wrap;gap:6px;max-height:260px;overflow:auto}
+.cmppick .cmpl button{font:13px Arial,sans-serif;color:#f3eee4;background:#1f1719;border:1px solid #4a3a3e;border-radius:999px;padding:6px 11px;cursor:pointer}
+.cmppick .cmpl button:hover{border-color:#ff5449}
+.cmpgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmpcol{min-width:0}
+.cmph{display:flex;align-items:center;gap:7px;font:700 15px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;margin:2px 0 2px;min-width:0}
+.cmph .cnm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmph::before{content:"";flex:0 0 9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 6px rgba(61,220,132,.8)}
+.cmpsub{font:11px Arial,sans-serif;color:#8d867b;margin:0 0 6px 16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmprow{display:grid;grid-template-columns:22px minmax(0,1fr) auto;column-gap:6px;align-items:center;font:13px/1.25 Arial,sans-serif;color:#e8e2d8;padding:3px 4px;border-radius:5px;border:1px solid transparent}
+.cmprow .r{color:#7d776d;text-align:right;font-size:11px}
+.cmprow .w{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmprow .c{color:#cfc8bd;font-size:12px;text-align:right}
+.cmprow .b{grid-column:2/4;height:5px;margin-top:2px;border-radius:0;background:linear-gradient(90deg,rgba(150,28,28,.95),rgba(138,111,196,.75))}
+.cmprow.both{border-color:rgba(138,111,196,.55);background:rgba(138,111,196,.09);box-shadow:0 0 6px rgba(138,111,196,.18)}
+.cmpkey{text-align:center;font:11px Arial,sans-serif;color:#8d867b;margin:10px 0 0}
+.cmpkey i{display:inline-block;width:10px;height:10px;border:1px solid rgba(138,111,196,.7);background:rgba(138,111,196,.15);border-radius:3px;vertical-align:-1px;margin-right:4px}
+#vMath.cmpon .tbwrap,#vMath.cmpon #more,#vMath.cmpon #rsrow{display:none!important}
+@media (max-width:400px){.cmpgrid{gap:6px}.cmprow{grid-template-columns:18px minmax(0,1fr) auto;column-gap:4px;font-size:12px;padding:3px 2px}.cmph{font-size:13px}.cmpsub{margin-left:14px}}
 </style></head><body class="mode-fed">
 <header><div class="hact"><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -1806,6 +1836,9 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <details id="pbio" open><summary>About this speaker</summary><p id="bioText"></p><a id="bioLink" href="speakers/">Full profile and top words &rarr;</a></details>
 <div id="vpanes" class="tab-math">
 <div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Mouth Math</h3>
+<div class="cmpbar"><button type="button" class="cmpbtn" id="cmpBtn" aria-expanded="false" aria-controls="cmpPick">Compare <span class="ctri" aria-hidden="true">&#9662;</span></button><button type="button" class="cmpx" id="cmpX" hidden>&#10005; Exit compare</button></div>
+<div class="cmppick" id="cmpPick" hidden><input type="search" id="cmpQ" placeholder="Compare with… (search any speaker)" aria-label="Search a speaker to compare"><div id="cmpList"></div></div>
+<div id="cmpOut" hidden></div>
 <div class="tbwrap"><table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc">Frequency</th></tr></thead>
 <tbody id="tb"></tbody></table><div class="topring" id="topRing" aria-hidden="true" hidden></div></div>
 <p class="muted" id="more"></p>
@@ -2027,7 +2060,7 @@ function syncTimeframe(){
   syncHash();
 }
 // URL state: #person=<slug>&docs=<all|none|id,...>&n=<5|100|all>; default (Warsh, latest doc only, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Word Cloud; mode=standard is ignored. Leaves #about etc. alone.
-const OURS=/^#(person|docs|mode|n|view)=/;
+const OURS=/^#(person|docs|mode|n|view|vs)=/;
 function syncHash(){
   if(!P)return;const all=sel.size===DOCS.length&&DOCS.length>0,none=!sel.size;
   const latest=DOCS.length?DOCS.reduce((a,b)=>b.date>a.date?b:a,DOCS[0]):null;
@@ -2037,6 +2070,7 @@ function syncHash(){
   else if(all)parts.push('docs=all');
   else if(none)parts.push('docs=none');
   else parts.push('docs='+[...sel].join(','));
+  if(CMP)parts.push('vs='+CMP.slug);
   if(NSHOW!==nDef())parts.push('n='+NSHOW);   // 50 words is the default (clean URL)
   if(VIEW==='cloud'&&!SIDE.matches)parts.push('view=cloud');if(VIEW==='race')parts.push('view=race');if(VIEW==='ring')parts.push('view=ring');   // the Word Cloud tab (side by side on wide screens: nothing to keep)
   const h=location.hash,ours=!h||OURS.test(h),want=parts.length?'#'+parts.join('&'):'';
@@ -2086,7 +2120,7 @@ function render(cloudToo=true){if(VIEW==='race')setTimeout(playRace,0);if(VIEW==
   $('more').textContent=match.length>list.length?`Showing the top ${list.length.toLocaleString()} of ${match.length.toLocaleString()} words${match.length>LIMIT&&NSHOW==='all'?' (table limit; use the filter to find others)':' · choose Max above to list every word'}.`:'';
   $('more').classList.toggle('lim',match.length>LIMIT&&NSHOW==='all');   // the line only shows when the table limit is hit
   document.querySelectorAll('th[data-k]').forEach(th=>{const l=th.dataset.l||(th.dataset.l=th.textContent.replace(/ [▲▼▴▾]$/,''));th.innerHTML=esc(l)+(th.dataset.k===sortK?`<span class="sarr" aria-hidden="true">${sortDir<0?' ▾':' ▴'}</span>`:'')});
-  placeTopRing();
+  placeTopRing();cmpRender();
   if(cloudToo)drawCloud(match);
 }
 function placeTopRing(){const ring=$('topRing'),t=tb.querySelector('tr.top');if(!ring)return;if(!t){ring.hidden=true;return}
@@ -2630,6 +2664,32 @@ window.__fedwords={occurrences,highlight,fragUrl,stats,setPerson,jumpTo,get view
   const its=occurrences(w);its.forEach(it=>{if(highlight(it.doc.s[it.si],w).n!==it.n)bad.push(['hl',w,it.doc.id,it.si])});
   const st=stats(w),o=its.reduce((t,i)=>t+i.n,0);
   if(P.policy==='full'?o!==st.n:(o>st.n||new Set(its.map(i=>i.doc.id+':'+i.si)).size>FIRST*st.docs.length))bad.push(['cnt',w,o,st.n])});return bad}};
+
+// ---- Compare (preview): second speaker, latest document, same Show count + stopword setting ----
+let CMP=null;
+function cmpTop(p,ids){const cnt=new Map();p.docs.forEach(d=>{if(!ids.has(d.id))return;d.cnt.forEach((n,wi)=>cnt.set(wi,(cnt.get(wi)||0)+n))});
+  let a=[...cnt].map(([i,n])=>({word:p.vocab[i],count:n})).filter(x=>!(hide.checked&&STOP.has(x.word)));
+  a.sort((x,y)=>y.count-x.count||(x.word<y.word?-1:1));let r=0,pv=null;a.forEach((x,i)=>{if(x.count!==pv){r=i+1;pv=x.count}x.rank=r});return a.slice(0,Math.min(nCap(),LIMIT))}
+function cmpDocs(p,ids){const ds=p.docs.filter(d=>ids.has(d.id)).map(d=>d.date).sort();if(!ds.length)return 'No documents selected';
+  return ds.length===1?fmtDate(ds[0]):`${ds.length} ${p.unit_pl||'documents'}, ${fmtDate(ds[0])} – ${fmtDate(ds[ds.length-1])}`}
+function cmpRender(){const out=$('cmpOut'),on=!!CMP&&!!P;$('vMath').classList.toggle('cmpon',on);out.hidden=!on;$('cmpX').hidden=!on;
+  $('cmpBtn').innerHTML=(on?'Change':'Compare')+' <span class="ctri" aria-hidden="true">&#9662;</span>';if(!on){out.innerHTML='';return}
+  const lat=CMP.docs.length?CMP.docs.reduce((a,b)=>b.date>a.date?b:a,CMP.docs[0]):null;
+  const A=cmpTop(P,sel),B=cmpTop(CMP,new Set(lat?[lat.id]:[]));const sa=new Set(A.map(x=>x.word)),sb=new Set(B.map(x=>x.word));
+  const col=(p,L,other,docs)=>{const mx=L.length?L[0].count:1;return `<div class="cmpcol"><div class="cmph"><span class="cnm">${esc(p.name)}</span></div><div class="cmpsub">${esc(docs)}</div>`+
+    (L.length?L.map(x=>`<div class="cmprow${other.has(x.word)?' both':''}" title="${esc(x.word)}: ${x.count.toLocaleString()}"><span class="r">${x.rank}</span><span class="w">${esc(x.word)}</span><span class="c">${x.count.toLocaleString()}</span><div class="b" style="width:${(100*x.count/mx).toFixed(1)}%"></div></div>`).join(''):'<p class="muted">No words.</p>')+'</div>'};
+  const both=A.filter(x=>sb.has(x.word)).length;
+  out.innerHTML=`<div class="cmpgrid">${col(P,A,sb,cmpDocs(P,sel))}${col(CMP,B,sa,cmpDocs(CMP,new Set(lat?[lat.id]:[])))}</div><p class="cmpkey"><i></i>Outlined: in both top ${A.length===B.length?A.length:'lists'} (${both} shared word${both===1?'':'s'})</p>`}
+function cmpList(){const qq=$('cmpQ').value.trim().toLowerCase();let h='';
+  CATS.forEach(c=>{const ps=PEOPLE.filter(p=>p.category===c&&(!P||p.slug!==P.slug)&&(!qq||[p.name,p.org,p.ticker,p.role,p.group].filter(Boolean).join(' ').toLowerCase().includes(qq)));
+    if(ps.length)h+=`<div class="cmpcat">${esc(CAT_LBL[c]||c)}</div><div class="cmpl">${ps.map(p=>`<button type="button" data-s="${p.slug}">${esc(p.name)}</button>`).join('')}</div>`});
+  $('cmpList').innerHTML=h||'<p class="muted">No matching speakers.</p>'}
+function cmpOpen(o){$('cmpPick').hidden=!o;$('cmpBtn').setAttribute('aria-expanded',o);if(o){$('cmpQ').value='';cmpList();if(!PHONE.matches)$('cmpQ').focus()}}
+async function setCmp(slug,sync=true){if(!slug||!BY.has(slug)||(P&&slug===P.slug)){CMP=null}else{try{CMP=await loadPerson(BY.get(slug))}catch(e){CMP=null;console.error(e)}}
+  cmpOpen(false);cmpRender();if(sync)syncHash()}
+$('cmpBtn').onclick=()=>cmpOpen($('cmpPick').hidden);$('cmpQ').oninput=cmpList;
+$('cmpList').onclick=e=>{const b=e.target.closest('button[data-s]');if(b)setCmp(b.dataset.s)};
+$('cmpX').onclick=()=>{CMP=null;cmpOpen(false);cmpRender();syncHash()};
 // initial state from URL: #person=<slug>&docs=<all|none|ids>; absent docs = latest only (old links: #docs=<ids> = default person)
 function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').replace(/^[^=]*$/,''));
   {const n=hp.get('n');if(n)NPICK=true;if(n==='300')setN('all',false);else if(n==='150')setN('100',false);else if(n==='10')setN('5',false);else if(n==='25')setN('20',false);else if(NOPTS.includes(n))setN(n,false)}   // old links: 300 -> Max, 150 -> 100, 10 -> 5, 20/25 -> 50
@@ -2638,7 +2698,7 @@ function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').
   {const raw=hp.get('docs');let docIds;   // null = latest; none/empty = []; all = ['all']; else listed ids
     if(raw===null)docIds=undefined;else if(raw===''||raw==='none')docIds=[];else if(raw==='all')docIds=['all'];else docIds=raw.split(',').filter(Boolean);
     return setPerson(hp.get('person')||DEFAULT,docIds).then(()=>{
-    if(toCloud)setView('cloud');if(toRace)setView('race');if(toRing)setView('ring')}).catch(e=>{
+    if(toCloud)setView('cloud');if(toRace)setView('race');if(toRing)setView('ring');const vs=hp.get('vs');if(vs||CMP)return setCmp(vs)}).catch(e=>{
     tb.innerHTML=`<tr><td colspan="4" class="empty">Could not load data: ${esc(e.message)}</td></tr>`;console.error(e)})}}
 fromHash();
 // pasted/edited #person= links and back/forward on an open page (in-page anchors like #about are ignored)
