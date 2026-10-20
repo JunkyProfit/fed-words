@@ -1284,6 +1284,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 .cmph::before{content:"";flex:0 0 9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 6px rgba(61,220,132,.8)}
 .cmpsub{font:11px Arial,sans-serif;color:#8d867b;margin:0 0 6px 16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cmprow{display:grid;grid-template-columns:22px minmax(0,1fr) auto;column-gap:6px;align-items:center;font:13px/1.25 Arial,sans-serif;color:#e8e2d8;padding:3px 4px;border-radius:5px;border:1px solid transparent}
+.cmprow[data-w]{cursor:pointer}.cmprow[data-w]:hover,.cmprow.active{background:rgba(200,40,60,.12)}
 .cmprow .r{color:#7d776d;text-align:right;font-size:11px}
 .cmprow .w{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cmprow .c{color:#cfc8bd;font-size:12px;text-align:right}
@@ -1680,7 +1681,11 @@ function occurrences(word){ // [{doc, si, n}] embedded sentences for selected do
 }
 const pop=document.createElement('div');pop.id='pop';pop.hidden=true;pop.setAttribute('role','dialog');document.body.appendChild(pop);
 let pinned=false,curWord=null,curRow=null,showAll=false,hoverT=null,hideT=null;
-function popHTML(word){
+function popHTML(word){ // Compare columns: render against that column's speaker + documents
+  const c=curRow&&curRow.dataset.cmp;if(c==='b'&&CMP){const lat=CMP.docs.length?CMP.docs.reduce((a,b)=>b.date>a.date?b:a,CMP.docs[0]):null;
+    const sv=[P,VI,DOCS,sel];P=CMP;VI=CMP.VI;DOCS=CMP.docs;sel=new Set(lat?[lat.id]:[]);try{return popHTML0(word)}finally{[P,VI,DOCS,sel]=sv}}
+  return popHTML0(word)}
+function popHTML0(word){
   const st=stats(word),items=occurrences(word),excerpt=P.policy==='excerpt';
   const shown=(showAll&&!excerpt)?items:items.slice(0,FIRST),unit=n=>n===1?(P.unit||'document'):(P.unit_pl||(P.unit||'document')+'s');
   let h=`<div class="ph"><div><b>${esc(word)}</b>
@@ -1726,7 +1731,7 @@ function popToTop(){requestAnimationFrame(()=>{if(pop.hidden)return;const r=pop.
   scrollTo({top:t,behavior:RM.matches?'instant':'smooth'})})}
 function hidePop(){pop.hidden=true;pinned=false;showAll=false;curWord=null;if(curRow)curRow.classList.remove('active');curRow=null}
 const cloud=$('cloud');
-[tb,cloud].forEach(box=>{
+[tb,cloud,$('cmpOut')].forEach(box=>{
 box.addEventListener('mouseover',e=>{const tr=e.target.closest('[data-w]');if(!tr||pinned)return;clearTimeout(hideT);
   if(tr===curRow)return;clearTimeout(hoverT);hoverT=setTimeout(()=>showPop(tr,false),120)});
 box.addEventListener('mouseleave',()=>{clearTimeout(hoverT);if(!pinned)hideT=setTimeout(hidePop,300)});
@@ -2182,14 +2187,14 @@ function cmpTop(p,ids){const cnt=new Map();p.docs.forEach(d=>{if(!ids.has(d.id))
   a.sort((x,y)=>y.count-x.count||(x.word<y.word?-1:1));let r=0,pv=null;a.forEach((x,i)=>{if(x.count!==pv){r=i+1;pv=x.count}x.rank=r});return a.slice(0,Math.min(nCap(),LIMIT))}
 function cmpDocs(p,ids){const ds=p.docs.filter(d=>ids.has(d.id)).map(d=>d.date).sort();if(!ds.length)return 'No documents selected';
   return ds.length===1?fmtDate(ds[0]):`${ds.length} ${p.unit_pl||'documents'}, ${fmtDate(ds[0])} – ${fmtDate(ds[ds.length-1])}`}
-function cmpRender(){const out=$('cmpOut'),on=!!CMP&&!!P;$('vMath').classList.toggle('cmpon',on);out.hidden=!on;$('cmpX').hidden=!on;
+function cmpRender(){const out=$('cmpOut'),on=!!CMP&&!!P;if(curRow&&curRow.dataset.cmp)hidePop();$('vMath').classList.toggle('cmpon',on);out.hidden=!on;$('cmpX').hidden=!on;
   $('cmpBtn').innerHTML=(on?'Change':'Compare')+' <span class="ctri" aria-hidden="true">&#9662;</span>';if(!on){out.innerHTML='';return}
   const lat=CMP.docs.length?CMP.docs.reduce((a,b)=>b.date>a.date?b:a,CMP.docs[0]):null;
   const A=cmpTop(P,sel),B=cmpTop(CMP,new Set(lat?[lat.id]:[]));const sa=new Set(A.map(x=>x.word)),sb=new Set(B.map(x=>x.word));
-  const col=(p,L,other,docs)=>{const mx=L.length?L[0].count:1;return `<div class="cmpcol"><div class="cmph"><span class="cnm">${esc(p.name)}</span></div><div class="cmpsub">${esc(docs)}</div>`+
-    (L.length?L.map(x=>`<div class="cmprow${other.has(x.word)?' both':''}" title="${esc(x.word)}: ${x.count.toLocaleString()}"><span class="r">${x.rank}</span><span class="w">${esc(x.word)}</span><span class="c">${x.count.toLocaleString()}</span><div class="b" style="width:${(100*x.count/mx).toFixed(1)}%"></div></div>`).join(''):'<p class="muted">No words.</p>')+'</div>'};
+  const col=(p,L,other,docs,side)=>{const mx=L.length?L[0].count:1;return `<div class="cmpcol"><div class="cmph"><span class="cnm">${esc(p.name)}</span></div><div class="cmpsub">${esc(docs)}</div>`+
+    (L.length?L.map(x=>`<div class="cmprow${other.has(x.word)?' both':''}" data-w="${esc(x.word)}" data-cmp="${side}" role="button" tabindex="0" title="${esc(x.word)}: ${x.count.toLocaleString()}"><span class="r">${x.rank}</span><span class="w">${esc(x.word)}</span><span class="c">${x.count.toLocaleString()}</span><div class="b" style="width:${(100*x.count/mx).toFixed(1)}%"></div></div>`).join(''):'<p class="muted">No words.</p>')+'</div>'};
   const both=A.filter(x=>sb.has(x.word)).length;
-  out.innerHTML=`<div class="cmpgrid">${col(P,A,sb,cmpDocs(P,sel))}${col(CMP,B,sa,cmpDocs(CMP,new Set(lat?[lat.id]:[])))}</div><p class="cmpkey"><i></i>Outlined: in both top ${A.length===B.length?A.length:'lists'} (${both} shared word${both===1?'':'s'})</p>`}
+  out.innerHTML=`<div class="cmpgrid">${col(P,A,sb,cmpDocs(P,sel),'a')}${col(CMP,B,sa,cmpDocs(CMP,new Set(lat?[lat.id]:[])),'b')}</div><p class="cmpkey"><i></i>Outlined: in both top ${A.length===B.length?A.length:'lists'} (${both} shared word${both===1?'':'s'})</p>`}
 function cmpList(){const qq=$('cmpQ').value.trim().toLowerCase();let h='';
   CATS.forEach(c=>{const ps=PEOPLE.filter(p=>p.category===c&&(!P||p.slug!==P.slug)&&(!qq||[p.name,p.org,p.ticker,p.role,p.group].filter(Boolean).join(' ').toLowerCase().includes(qq)));
     if(ps.length)h+=`<div class="cmpcat">${esc(CAT_LBL[c]||c)}</div><div class="cmpl">${ps.map(p=>`<button type="button" data-s="${p.slug}">${esc(p.name)}</button>`).join('')}</div>`});
