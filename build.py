@@ -1554,7 +1554,7 @@ html body #vtabs button[aria-selected="false"]:hover{--c1:#7c6e64;--c2:#56483f}
 /* mm87: longer search hint wraps instead of squeezing the name */
 @media (max-width:640px){html body .pk.pcoll #pdisc .pdn{overflow-wrap:normal;word-break:normal}}
 /* mm90: Word Ring tab + 2x2 view buttons on phones */
-#vRing .ringwrap{background:#0b0b0b;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+#ringWord{text-align:right;font:700 30px/1.08 Arial,Helvetica,sans-serif;color:#ff5449;text-shadow:0 0 18px rgba(255,84,73,.6);padding:0 12px 5px;min-height:1.08em;cursor:pointer;user-select:none}@media (max-width:559px){#ringWord{font-size:28px;padding:0 10px 4px}}#vRing .ringwrap{background:#0b0b0b;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
 #ring{display:block;width:100%;height:min(78vh,640px);touch-action:manipulation}
 @media (max-width:640px){#ring{height:min(62vh,440px)}}
 /* mm96: tiny animated previews inside the view buttons */
@@ -1976,7 +1976,7 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <p class="selhint">Select a word for more info</p>
 <div class="cloudwrap"><div id="cloud"></div>
 <div class="cloud-bar"><span class="muted" id="cloudNote"></span></div></div></div>
-<div class="vpane" id="vRing" role="tabpanel" aria-labelledby="tabRing"><div class="ringwrap"><canvas id="ring" aria-label="Word Ring: each spike is a word, longer means said more"></canvas><div class="thumbhint" id="thumbHint" aria-hidden="true"><i class="thglow"></i><svg viewBox="-42 -42 84 84" focusable="false"><defs><linearGradient id="thGrad" gradientUnits="userSpaceOnUse" x1="-32" y1="-26" x2="32" y2="26"><stop offset="0" stop-color="#ff5449"/><stop offset=".5" stop-color="#d04a6a"/><stop offset="1" stop-color="#8e5bd6"/></linearGradient></defs><g class="thspin"><circle class="thc" cx="0" cy="0" r="32.5"/></g></svg></div></div></div><div class="vpane" id="vRace" role="tabpanel" aria-labelledby="tabRace"><div class="racewrap"><div class="rdate" id="rDate"></div><div class="rttl" id="rTtl"></div><svg id="race" viewBox="0 0 680 430" width="100%" role="img" aria-label="Top 10 words, added up speech by speech"></svg><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="rgPurp" x1="0" x2="1"><stop offset="0" stop-color="#8e3833"/><stop offset="1" stop-color="#6e3a86"/></linearGradient></defs></svg><div class="rfoot"><button type="button" class="rplay" id="rPlay">Replay <span class="rtri">▸</span></button><a href="#picker" id="rNew" class="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div></div></div>
+<div class="vpane" id="vRing" role="tabpanel" aria-labelledby="tabRing"><div class="ringword" id="ringWord" title="Tap for word context"></div><div class="ringwrap"><canvas id="ring" aria-label="Word Ring: each spike is a word, longer means said more"></canvas><div class="thumbhint" id="thumbHint" aria-hidden="true"><i class="thglow"></i><svg viewBox="-42 -42 84 84" focusable="false"><defs><linearGradient id="thGrad" gradientUnits="userSpaceOnUse" x1="-32" y1="-26" x2="32" y2="26"><stop offset="0" stop-color="#ff5449"/><stop offset=".5" stop-color="#d04a6a"/><stop offset="1" stop-color="#8e5bd6"/></linearGradient></defs><g class="thspin"><circle class="thc" cx="0" cy="0" r="32.5"/></g></svg></div></div></div><div class="vpane" id="vRace" role="tabpanel" aria-labelledby="tabRace"><div class="racewrap"><div class="rdate" id="rDate"></div><div class="rttl" id="rTtl"></div><svg id="race" viewBox="0 0 680 430" width="100%" role="img" aria-label="Top 10 words, added up speech by speech"></svg><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="rgPurp" x1="0" x2="1"><stop offset="0" stop-color="#8e3833"/><stop offset="1" stop-color="#6e3a86"/></linearGradient></defs></svg><div class="rfoot"><button type="button" class="rplay" id="rPlay">Replay <span class="rtri">▸</span></button><a href="#picker" id="rNew" class="rNew">Select a new speaker <span class="rtri">&#9652;</span></a></div></div></div>
 </div>
 <!-- ad slot: between · 728x90 desktop, 320x100 phone · reserved for a relevant AdSense unit after approval (below the Mouth Math / Word Cloud views) -->
 <aside class="ad" data-slot="between" data-ad-slot-name="between" data-ad-size="728x90" data-ad-size-phone="320x100"></aside>
@@ -2673,8 +2673,8 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
   const mkGlow=(r,g,b)=>{const S=48,k=document.createElement('canvas');k.width=k.height=S;const q=k.getContext('2d'),gr=q.createRadialGradient(S/2,S/2,0,S/2,S/2,S/2);gr.addColorStop(0,`rgba(${r},${g},${b},.9)`);gr.addColorStop(.3,`rgba(${r},${g},${b},.45)`);gr.addColorStop(.65,`rgba(${r},${g},${b},.12)`);gr.addColorStop(1,`rgba(${r},${g},${b},0)`);q.fillStyle=gr;q.fillRect(0,0,S,S);return k},GLOW=mkGlow(255,255,255),GLOWR=mkGlow(255,236,232);   // mm187 preview: one cached soft white halo sprite per dot (no shadowBlur per frame)
   function frame(now){const t=RM?0:now/1000,W=c.clientWidth,H=c.clientHeight;if(c.width!==W*D){c.width=W*D;c.height=H*D}x.setTransform(D,0,0,D,0,0);x.clearRect(0,0,W,H);
    if(!words.length){x.fillStyle='#a49e93';x.font='16px Arial';x.textAlign='center';x.fillText('No documents selected',W/2,H/2);return}
-   const nar=W<560,cx=W/2,cy=H/2+(nar?14:22),R=Math.min(W,H)*(nar?.15:.17),Lmax=Math.min(W,H)*(nar?.14:.25),sq=1;
-   const th=$('thumbHint');if(th){const S=Math.round(Math.min(86,R*1.7));th.style.cssText='left:'+cx+'px;top:'+cy+'px;width:'+S+'px;height:'+S+'px';th.firstElementChild.nextElementSibling.style.transform=RM?'none':'rotate('+(t*.042+ringOff)+'rad)'}   // mm184: the circle turns with the words (same angle as the labels), clockwise; still under reduced motion
+   const nar=W<560,cx=W/2,cy=H/2+(nar?4:8),R=Math.min(W,H)*(nar?.195:.21),Lmax=Math.min(W,H)*(nar?.185:.29),sq=1;
+   const th=$('thumbHint');if(th){const S=Math.round(Math.min(114,R*1.7));th.style.cssText='left:'+cx+'px;top:'+cy+'px;width:'+S+'px;height:'+S+'px';th.firstElementChild.nextElementSibling.style.transform=RM?'none':'rotate('+(t*.042+ringOff)+'rad)'}   // mm184: the circle turns with the words (same angle as the labels), clockwise; still under reduced motion
    if(!ringDrag&&Math.abs(ringVel)>1e-4){ringOff+=ringVel;ringVel*=.95}
    x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length,labs=[],spk=[];
    ringPos.length=n;   // forget the angles of words that are no longer on the ring (after choosing fewer words or another speaker), so the readout always shows a real word
@@ -2700,8 +2700,8 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    const clampLab=L=>{if(L.left){if(L.tx-L.tw<mEdge)L.tx=mEdge+L.tw;if(L.tx>W-mEdge)L.tx=W-mEdge}else{if(L.tx+L.tw>W-mEdge)L.tx=W-mEdge-L.tw;if(L.tx<mEdge)L.tx=mEdge}
     if(L.bl==='bottom'){if(L.ty-L.th<mEdge)L.ty=mEdge+L.th;if(L.ty>H-mEdge)L.ty=H-mEdge}else{if(L.ty-L.th*.5<mEdge)L.ty=mEdge+L.th*.5;if(L.ty+L.th*.5>H-mEdge)L.ty=H-mEdge-L.th*.5}};
    let RO=[];{let bi=-1,bd=9;labs.forEach(L=>{let d=Math.abs((((L.a+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<bd){bd=d;bi=L.i}});const ro=bi>=0?order[bi]:null;   // mm189 preview: the top-right readout (the word at 12 o'clock) is an obstacle, so ring labels never run into it
-    if(ro){const fs=Math.min(nar?30:44,W*.42/Math.max(3,ro.w.length)*1.8);x.font=`700 ${fs}px Arial`;const w1=x.measureText(ro.w).width;x.font=`700 ${nar?14:17}px Arial`;const w2=x.measureText(`${ro.n.toLocaleString()} ${ro.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(ro)+1}`).width;
-     RO=[{x1:W-12-w1-4,x2:W,y1:6,y2:10+fs*1.1+2},{x1:W-12-w2-4,x2:W,y1:14+fs-2,y2:14+fs+(nar?14:17)*1.2+2}]}
+    if(ro){x.font=`700 ${nar?14:17}px Arial`;const w2=x.measureText(`${ro.n.toLocaleString()} ${ro.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(ro)+1}`).width;
+     RO=[{x1:W-12-w2-6,x2:W,y1:6,y2:10+(nar?14:17)*1.3+4}]}
     RO.forEach(r=>placed.push({left:false,tx:r.x1,tw:r.x2-r.x1,ty:r.y2,th:r.y2-r.y1,bl:'bottom',fade:1,ro:1,zb:0,hv:false,fsz:0}))}
    const place=L=>{L.tx=cx+L.ca*(L.r1+L.pad+L.extra);L.ty=cy+L.sa*(L.r1+L.pad+L.extra)-L.up+L.tyOff;clampLab(L)};
    for(const L of labs){if(L.fade<.05&&!L.hv){placed.push(L);continue}
@@ -2721,7 +2721,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
     x.lineWidth=s.lw+(s.t12?.8:0);x.beginPath();x.moveTo(s.X0,s.Y0);x.lineTo(s.X1,s.Y1);x.stroke()}
    for(const s of spk){const f=s.f,dr=(1.5+2*f)*1.3,dc=s.top?'#ff5449':'#fff',gr=dr*3.4*(s.t12?1.35:1),gs=s.top?GLOWR:GLOW;
     x.globalAlpha=s.hv||s.t12?1:.55+.35*f;x.drawImage(gs,s.X1-gr,s.Y1-gr,gr*2,gr*2);x.globalAlpha=1;x.beginPath();x.arc(s.X1,s.Y1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187: hollow circles with a soft white glow
-   {const thS=Math.round(Math.min(86,R*1.7)),thR=thS*(32.5/84),fpR=nar?14:16,fpA=-2.25+(RM?0:t*.042+ringOff),fx=cx+Math.cos(fpA)*thR,fy=cy+Math.sin(fpA)*thR;
+   {const thS=Math.round(Math.min(114,R*1.7)),thR=thS*(32.5/84),fpR=nar?14:16,fpA=-2.25+(RM?0:t*.042+ringOff),fx=cx+Math.cos(fpA)*thR,fy=cy+Math.sin(fpA)*thR;
     x.save();x.globalCompositeOperation='lighter';x.globalAlpha=.95;x.drawImage(GLOWR,fx-fpR*2.3,fy-fpR*2.3,fpR*4.6,fpR*4.6);x.restore();
     x.save();x.beginPath();x.arc(fx,fy,fpR+1.2,0,6.283);x.fillStyle='#0b0b0b';x.fill();
     const fg=x.createLinearGradient(fx-fpR,fy-fpR,fx+fpR,fy+fpR);fg.addColorStop(0,'rgba(255,105,95,.98)');fg.addColorStop(.55,'rgba(224,69,59,.94)');fg.addColorStop(1,'rgba(168,95,228,.94)');
@@ -2734,15 +2734,15 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
     x.fillStyle=L.hv?`rgba(255,255,255,${al})`:L.o===words[0]?`rgba(255,84,73,${al})`:`rgba(243,238,228,${al})`;
     x.fillText(L.o.w,L.tx,L.ty)});
    x.textAlign='center';let tI=-1,tD=9;ringPos.forEach((p,i)=>{let d=Math.abs((((p+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<tD){tD=d;tI=i}});const o=tI>=0?order[tI]:null;ringCur=o?o.w:'';
-   if(o){const fs=Math.min(nar?30:44,W*.42/Math.max(3,o.w.length)*1.8);x.textAlign='right';x.textBaseline='top';x.font=`700 ${fs}px Arial`;x.fillStyle='#ff5449';x.shadowColor='rgba(255,84,73,.6)';x.shadowBlur=18;x.fillText(o.w,W-12,10);x.shadowBlur=0;
-    x.font=`700 ${nar?14:17}px Arial`;x.fillStyle='#f3eee4';x.fillText(`${o.n.toLocaleString()} ${o.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(o)+1}`,W-12,14+fs);x.textAlign='center';x.textBaseline='middle'}
-   else{x.font=`400 ${Math.max(12,R*.13)}px Arial`;x.fillStyle='rgba(243,238,228,.6)';x.fillText(matchMedia('(hover:hover)').matches?'Hover a word':'Tap a word',cx,cy)}
+   const rw=$('ringWord');if(o){if(rw&&rw.textContent!==o.w)rw.textContent=o.w;x.textAlign='right';x.textBaseline='top';
+    x.font=`700 ${nar?14:17}px Arial`;x.fillStyle='#f3eee4';x.fillText(`${o.n.toLocaleString()} ${o.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(o)+1}`,W-12,10);x.textAlign='center';x.textBaseline='middle'}
+   else{if(rw)rw.textContent='';x.font=`400 ${Math.max(12,R*.13)}px Arial`;x.fillStyle='rgba(243,238,228,.6)';x.fillText(matchMedia('(hover:hover)').matches?'Hover a word':'Tap a word',cx,cy)}
    if(ringPX>=0){const r=c.getBoundingClientRect(),px=ringPX-r.left,py=ringPY-r.top,ang=Math.atan2(py-cy,px-cx),dist=Math.hypot(px-cx,py-cy);
     if(dist>R*.9){let best=-1,bd=1e9;ringPos.forEach((p,i)=>{let d=Math.abs(((p%6.283)+6.283)%6.283-((ang+6.283)%6.283));d=Math.min(d,6.283-d);if(d<bd){bd=d;best=i}});ringHov=bd<(nar?.09:.06)?best:-1}
     else if(!ringTap)ringHov=-1}
    if(!RM&&VIEW==='ring'&&!document.hidden)ringRAF=requestAnimationFrame(frame)}
   ringRAF=requestAnimationFrame(frame);
-  if(!c.dataset.wh){c.dataset.wh=1;const ang=e=>{const r=c.getBoundingClientRect(),W=r.width,H=r.height,nar=W<560;return Math.atan2(e.clientY-(r.top+H/2+(nar?14:22)),e.clientX-(r.left+W/2))};
+  if(!c.dataset.wh){c.dataset.wh=1;const rw=$('ringWord');if(rw)rw.onclick=e=>{if(!ringCur)return;e.stopPropagation();rw.dataset.w=ringCur;showPop(rw,true)};const ang=e=>{const r=c.getBoundingClientRect(),W=r.width,H=r.height,nar=W<560;return Math.atan2(e.clientY-(r.top+H/2+(nar?4:8)),e.clientX-(r.left+W/2))};
    c.addEventListener('pointerdown',e=>{ringDrag={a:ang(e),t:performance.now(),x:e.clientX,y:e.clientY,mv:0};ringVel=0;try{c.setPointerCapture(e.pointerId)}catch(_){}});
    c.addEventListener('pointermove',e=>{if(!ringDrag)return;const a=ang(e);let d=a-ringDrag.a;if(d>Math.PI)d-=6.283;if(d<-Math.PI)d+=6.283;const now=performance.now(),dt=Math.max(8,now-ringDrag.t);ringOff+=d;ringVel=d/dt*16;ringDrag={a,t:now,x:ringDrag.x,y:ringDrag.y,mv:Math.max(ringDrag.mv,Math.hypot(e.clientX-ringDrag.x,e.clientY-ringDrag.y))};if(ringStill())playRing()});
    const end=e=>{if(ringDrag&&ringDrag.mv<8&&e&&e.type==='pointerup'&&ringCur){ringVel=0;c.dataset.w=ringCur;showPop(c,true);setTimeout(()=>{const p=document.getElementById('pop');if(p&&!p.hidden)p.scrollIntoView({block:'nearest',behavior:'smooth'})},60)}ringDrag=null;ringVel=Math.max(-.25,Math.min(.25,ringVel))};c.addEventListener('pointerup',end);c.addEventListener('pointercancel',end);c.addEventListener('touchmove',e=>{if(ringDrag)e.preventDefault()},{passive:false})}
