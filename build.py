@@ -1899,8 +1899,8 @@ header .hact a.findings-link .fcnt,.cmpbtn.findings-pill .fcnt{display:inline-bl
     box-sizing:border-box!important;border:1.5px solid rgba(255,255,255,.24)!important;border-radius:8px!important;
     background:linear-gradient(180deg,#171413,#100e0e)!important;cursor:pointer!important;
   }
-  html body .pk.pcoll #pdisc .pdn{grid-area:n!important;display:flex!important;align-items:center!important;font-size:18px!important;line-height:1.12!important;color:var(--num-red)!important;font-weight:700!important}
-  html body .pk.pcoll #pdisc .pdt{grid-area:t!important;justify-self:end!important;text-align:left!important;font:700 10.5px/1.15 Arial,Helvetica,sans-serif!important;letter-spacing:.05em!important;text-transform:uppercase!important;color:#e0d4d1!important;border:1px solid rgba(255,255,255,.32)!important;border-radius:4px!important;padding:2px 6px!important}
+  html body .pk.pcoll #pdisc .pdn{grid-area:n!important;display:flex!important;align-items:center!important;align-self:center!important;padding-top:0!important;font-size:18px!important;line-height:1.12!important;color:var(--num-red)!important;font-weight:700!important}
+  html body .pk.pcoll #pdisc .pdt{grid-area:t!important;justify-self:end!important;align-self:center!important;text-align:center!important;max-width:13em!important;font:700 10.5px/1.18 Arial,Helvetica,sans-serif!important;letter-spacing:.05em!important;text-transform:uppercase!important;color:#e0d4d1!important;border:1px solid rgba(255,255,255,.32)!important;border-radius:4px!important;padding:3px 7px!important}
   html body .pk.pcoll #pdisc .pdg,html body .pk.pcoll #pdisc .pda,html body .pk.pcoll #personInfo{display:none!important}
   html body .pk.pcoll:not(.popen) #pfilter,html body .pk.pcoll:not(.popen) #az,html body .pk.pcoll:not(.popen) #persons{display:none!important}
 }
