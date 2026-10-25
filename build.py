@@ -1909,7 +1909,7 @@ header .hact a.findings-link .fcnt,.cmpbtn.findings-pill .fcnt{display:inline-bl
   html body #picker .catbar{column-gap:6px!important}
   html body #picker #cats button.cat{padding:5px 4px 4px!important;min-height:26px!important}
   html body #picker #cats button.cat .ct b{font-size:11px!important;line-height:1.12!important}
-  html body #picker #chints .chint{padding:5px 4px 6px!important;font-size:10.3px!important;line-height:1.16!important;gap:4px!important;justify-content:space-between!important;align-items:center!important;text-align:center!important}
+  html body #picker #chints .chint{padding:4px 4px 5px!important;font-size:11.5px!important;line-height:1.15!important;gap:4px!important;justify-content:center!important;align-items:center!important;text-align:center!important}
   html body #picker #chints .chint::before{width:7px!important;height:7px!important;margin:1px auto 0!important;align-self:center!important}
 }
 </style></head><body class="mode-fed">
@@ -2093,7 +2093,7 @@ function renderPicker(){
   if(coll){pd.innerHTML=`<span class="pdg">${esc(P.group||P.category.replace(/s$/,''))}</span><span class="pdn">${esc(P.name)}</span>${P.ticker?(P.tv?`<span class="tk tkc" data-tv="${esc(P.tv)}" data-tk="${esc(P.ticker)}" data-org="${esc(P.org||'')}" title="Show the 1-year ${esc(P.ticker)} price chart">${esc(P.ticker)}</span>`:`<span class="tk">${esc(P.ticker)}</span>`):''}<span class="pda" aria-hidden="true"></span>`;
     pd.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected. ${pOpen?'Hide':'Show'} all ${allIn.length} people in ${P.category}`);
     pd.onclick=()=>{pOpen=!pOpen;renderPicker();const s=$('psearch');if(pOpen&&s&&s.getClientRects().length)s.focus({preventScroll:true});else $('pdisc').focus()}}   // open = search box focused (phones show the keyboard)
-  $('chints').innerHTML=CATS.map(c=>{const on=P.category===c,op=on&&pOpen;return `<button type="button" class="chint${on?' on':''}" data-cat="${esc(c)}" aria-expanded="${op}" aria-label="${esc(srchLbl(c))}">${op?'Close':esc(srchLbl(c))}</button>`}).join('');   // a "Search Other ..." hint under every category button
+  $('chints').innerHTML=CATS.map(c=>{const on=P.category===c,op=on&&pOpen;return `<button type="button" class="chint${on?' on':''}" data-cat="${esc(c)}" aria-expanded="${op}" aria-label="Search ${esc(CAT_LBL[c]||c)}">${op?'Close':esc(srchLbl(c))}</button>`}).join('');   // a "Search Other ..." hint under every category button
   document.querySelectorAll('#chints .chint').forEach(b=>b.onclick=()=>{const c=b.dataset.cat,foc=()=>{const s=$('psearch');if(pOpen&&s&&s.getClientRects().length)s.focus({preventScroll:true})};
     if(c===P.category){pOpen=!pOpen;renderPicker();foc()}else setPerson(PEOPLE.find(p=>p.category===c).slug).then(()=>{pOpen=true;renderPicker();foc()})});
   const cf=$('clearF');if(cf)cf.onclick=()=>{pq='';idxSel='';azSel='';$('psearch').value='';renderPicker();$('psearch').focus()};
@@ -2640,7 +2640,7 @@ function openSpeakers(){hidePop();if($('picker').querySelector('.pk').classList.
   if(f)f.focus({preventScroll:true});   // in the tap itself, so phones open the keyboard for the search
   scrollTo({top:0,behavior:RM.matches?'instant':'smooth'})}
 // mm39: the speaker row / sticky bar label names who else you can search (Fed Chairman: plain 'Search')
-function srchLbl(c){return c==='CEOs'?'Search Other CEOs':c==='US Government'?'Search Other Government Officials':c==='Federal Reserve'?'Search Other Federal Reserve Officials':'Search'}
+function srchLbl(c){return 'Search'}
 const SB=$('spkbar');let sbOn=false,sbRaf=0;
 function sbFill(){if(!P)return;SB.querySelector('.sbn').textContent=P.name;SB.querySelector('.sbc').textContent=srchLbl(P.category);const t=SB.querySelector('.sbt');t.textContent=P.ticker||'';t.hidden=!P.ticker;
   SB.setAttribute('aria-label',`Search speakers: ${P.name}${P.ticker?' ('+P.ticker+')':''} selected`)}
