@@ -1787,7 +1787,7 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 </style></head><body class="mode-fed">
 <header><div class="hact"><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
-<p class="tagline">Words that matter, counted.</p>
+<p class="tagline">Spoken words, counted.</p>
 
 </div>
 </header>
