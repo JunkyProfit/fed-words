@@ -1705,14 +1705,14 @@ html body header #share{background:linear-gradient(180deg,#5a5160,#3d3542)!impor
 html body header #share:hover{background:linear-gradient(180deg,#685e70,#4a4150)!important}
 /* mm184 preview: thin red-to-purple circle hint (replaces the thumbprint) in the Word Ring's center: spins with the wheel (JS sets size, position and rotation), always visible */
 #vRing .ringwrap{position:relative}
-.thumbhint{position:absolute;left:50%;top:50%;width:80px;height:80px;transform:translate(-50%,-50%);pointer-events:none;z-index:2;opacity:1}
+.thumbhint{position:absolute;left:50%;top:50%;width:80px;height:80px;transform:translate(-50%,-50%);pointer-events:none;z-index:1;opacity:1}
 .thumbhint *{pointer-events:none}
 .thumbhint svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;will-change:transform;filter:drop-shadow(0 0 2px rgba(255,84,73,.4)) drop-shadow(0 0 6px rgba(142,91,214,.25))}
 .thumbhint .thc{fill:none;stroke:url(#thGrad);stroke-width:1.5}
 .thglow{position:absolute;left:14%;top:14%;right:14%;bottom:14%;border-radius:50%;background:radial-gradient(circle,rgba(255,84,73,.16),rgba(142,91,214,.08) 55%,rgba(142,91,214,0) 72%);animation:thpulse 2.6s ease-in-out infinite}
 @keyframes thpulse{0%,100%{opacity:.5;transform:scale(.92)}50%{opacity:1;transform:scale(1.08)}}
 @media (prefers-reduced-motion:reduce){.thglow{animation:none;opacity:.7}}
-html body #ring{touch-action:pan-y;cursor:grab}html body #ring:active{cursor:grabbing}
+html body #ring{position:relative;z-index:2;touch-action:none!important;cursor:grab}html body #ring:active{cursor:grabbing}html body #vRing .ringwrap{touch-action:none!important}
 html body #race .rrow{cursor:pointer}html body #race .rrow:hover .rw{fill:#fff;text-decoration:underline}html body #ring{cursor:pointer}
 @media (max-width:640px){html body .pk.pcoll #pdisc{align-items:start!important}html body .pk.pcoll #pdisc .pdn{display:flex!important;align-items:flex-start;line-height:1.15!important;padding-top:4px;align-self:start}html body .pk.pcoll #pdisc .pdn::before{flex:none;margin-top:calc(.575em - 6px)!important;vertical-align:0!important}html body .pk.pcoll #pdisc .pdt{align-self:start}html body .pk.pcoll #pdisc .pdc{margin-top:4px}}
 html body #cats button.cat{border:1.5px solid rgba(255,255,255,.22)!important;box-shadow:none!important}
@@ -2680,10 +2680,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
     if(bl==='bottom'){if(ty-th<m)ty=m+th;if(ty>H-m)ty=H-m}else{if(ty-th*.5<m)ty=m+th*.5;if(ty+th*.5>H-m)ty=H-m-th*.5}
     const baseA=hv?1:Math.min(1,ringHov>=0?.3+.3*f:.55+.45*f);labs.push({o,i,a,f,zb,hv,fsz,left,fade,baseA,tx,ty,tw,th,ca,sa,r1,pad,extra,lift,up,bl,tyOff:0})}
    {let bi=-1,bd=9;labs.forEach((L,k)=>{let d=Math.abs((((L.a+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<bd){bd=d;bi=k}});if(bi>=0){spk[bi].t12=true}}   // mm189 preview: the word at 12 o'clock is the one in the readout, so its spike is a touch brighter
-   const fpIdx=Math.min(n-1,Math.max(0,Math.round(n*0.58))),fpPrev=(fpIdx-1+n)%n,fpNext=(fpIdx+1+n)%n,fpR=nar?16:20;
-   for(const L of labs){if(L.i===fpIdx)L.fade=0}
-   const fpPri=L=>(L.i===fpPrev||L.i===fpNext)?1:0;
-   labs.sort((A,B)=>(fpPri(B)-fpPri(A))||(B.o.n-A.o.n)||(A.o.w<B.o.w?-1:1));
+   labs.sort((A,B)=>(B.o.n-A.o.n)||(A.o.w<B.o.w?-1:1));
    const minAng=nar?.45:.34,kept=[];
    for(const L of labs){if(L.fade<.05&&!L.hv){kept.push(L);continue}
     const close=kept.some(K=>{if(K.fade<.05)return false;let d=Math.abs(L.a-K.a)%6.283;d=Math.min(d,6.283-d);return d<minAng});
@@ -2696,7 +2693,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    let RO=[];{let bi=-1,bd=9;labs.forEach(L=>{let d=Math.abs((((L.a+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<bd){bd=d;bi=L.i}});const ro=bi>=0?order[bi]:null;   // mm189 preview: the top-right readout (the word at 12 o'clock) is an obstacle, so ring labels never run into it
     if(ro){const fs=Math.min(nar?30:44,W*.42/Math.max(3,ro.w.length)*1.8);x.font=`700 ${fs}px Arial`;const w1=x.measureText(ro.w).width;x.font=`700 ${nar?14:17}px Arial`;const w2=x.measureText(`${ro.n.toLocaleString()} ${ro.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(ro)+1}`).width;
      RO=[{x1:W-12-w1-4,x2:W,y1:6,y2:10+fs*1.1+2},{x1:W-12-w2-4,x2:W,y1:14+fs-2,y2:14+fs+(nar?14:17)*1.2+2}]}
-    RO.forEach(r=>placed.push({left:false,tx:r.x1,tw:r.x2-r.x1,ty:r.y2,th:r.y2-r.y1,bl:'bottom',fade:1,ro:1,zb:0,hv:false,fsz:0}));if(spk[fpIdx]){const fs0=spk[fpIdx];placed.push({left:false,tx:fs0.X1-fpR-4,tw:(fpR+4)*2,ty:fs0.Y1+fpR+4,th:(fpR+4)*2,bl:'bottom',fade:1,ro:1,zb:0,hv:false,fsz:0})}}
+    RO.forEach(r=>placed.push({left:false,tx:r.x1,tw:r.x2-r.x1,ty:r.y2,th:r.y2-r.y1,bl:'bottom',fade:1,ro:1,zb:0,hv:false,fsz:0}))}
    const place=L=>{L.tx=cx+L.ca*(L.r1+L.pad+L.extra);L.ty=cy+L.sa*(L.r1+L.pad+L.extra)-L.up+L.tyOff;clampLab(L)};
    for(const L of labs){if(L.fade<.05&&!L.hv){placed.push(L);continue}
     for(let tries=0;tries<10;tries++){const P=placed.find(Q=>Q.fade>.05&&hit(L,Q));if(!P)break;
@@ -2713,14 +2710,14 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    x.globalCompositeOperation='source-over';
    for(const s of spk){if(s.hv)x.strokeStyle='#fff';else{const g=x.createLinearGradient(s.X0,s.Y0,s.X1,s.Y1);g.addColorStop(0,s.t12?s.c0.replace(/[\d.]+\)$/,'1)'):s.c0);g.addColorStop(1,s.t12?'#fff':`rgba(255,255,255,${.7+.3*s.f})`);x.strokeStyle=g}   // each spike blends from its red/purple into white at the tip (the spike at 12 o'clock is a touch brighter and thicker)
     x.lineWidth=s.lw+(s.t12?.8:0);x.beginPath();x.moveTo(s.X0,s.Y0);x.lineTo(s.X1,s.Y1);x.stroke()}
-   for(const s of spk){if(s.i===fpIdx)continue;const f=s.f,dr=(1.5+2*f)*1.3,dc=s.top?'#ff5449':'#fff',gr=dr*3.4*(s.t12?1.35:1),gs=s.top?GLOWR:GLOW;
+   for(const s of spk){const f=s.f,dr=(1.5+2*f)*1.3,dc=s.top?'#ff5449':'#fff',gr=dr*3.4*(s.t12?1.35:1),gs=s.top?GLOWR:GLOW;
     x.globalAlpha=s.hv||s.t12?1:.55+.35*f;x.drawImage(gs,s.X1-gr,s.Y1-gr,gr*2,gr*2);x.globalAlpha=1;x.beginPath();x.arc(s.X1,s.Y1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187: hollow circles with a soft white glow
-   if(spk[fpIdx]){const fs0=spk[fpIdx],fx=fs0.X1,fy=fs0.Y1;
-    x.save();x.globalCompositeOperation='lighter';x.globalAlpha=.95;x.drawImage(GLOWR,fx-fpR*2.4,fy-fpR*2.4,fpR*4.8,fpR*4.8);x.restore();
+   {const thS=Math.round(Math.min(86,R*1.7)),thR=thS*(32.5/84),fpR=nar?14:16,fpA=-2.25+(RM?0:t*.042+ringOff),fx=cx+Math.cos(fpA)*thR,fy=cy+Math.sin(fpA)*thR;
+    x.save();x.globalCompositeOperation='lighter';x.globalAlpha=.95;x.drawImage(GLOWR,fx-fpR*2.3,fy-fpR*2.3,fpR*4.6,fpR*4.6);x.restore();
     x.save();x.beginPath();x.arc(fx,fy,fpR+1.2,0,6.283);x.fillStyle='#0b0b0b';x.fill();
-    const fg=x.createLinearGradient(fx-fpR,fy-fpR,fx+fpR,fy+fpR);fg.addColorStop(0,'rgba(255,105,95,.95)');fg.addColorStop(.55,'rgba(224,69,59,.88)');fg.addColorStop(1,'rgba(168,95,228,.9)');
-    x.lineWidth=1.45;x.strokeStyle=fg;x.stroke();
-    x.beginPath();x.arc(fx,fy,fpR-1.2,0,6.283);x.clip();x.translate(fx,fy);x.rotate(fs0.a+1.5708);x.lineCap='round';x.lineWidth=nar?1.35:1.5;
+    const fg=x.createLinearGradient(fx-fpR,fy-fpR,fx+fpR,fy+fpR);fg.addColorStop(0,'rgba(255,105,95,.98)');fg.addColorStop(.55,'rgba(224,69,59,.92)');fg.addColorStop(1,'rgba(168,95,228,.92)');
+    x.lineWidth=1.5;x.strokeStyle=fg;x.stroke();
+    x.beginPath();x.arc(fx,fy,fpR-1.1,0,6.283);x.clip();x.translate(fx,fy);x.rotate(fpA+1.5708);x.lineCap='round';x.lineWidth=nar?1.3:1.45;
     const ridges=[
      {r:.20,dy:.08,a0:-1.25,a1:1.25,c:'rgba(255,250,244,.98)'},{r:.20,dy:.08,a0:1.65,a1:4.63,c:'rgba(255,250,244,.94)'},
      {r:.37,dy:.06,a0:-2.35,a1:.55,c:'rgba(255,235,228,.96)'},{r:.37,dy:.06,a0:.92,a1:2.55,c:'rgba(255,115,105,.96)'},{r:.37,dy:.06,a0:2.88,a1:3.62,c:'rgba(255,235,228,.94)'},
@@ -2746,7 +2743,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
   if(!c.dataset.wh){c.dataset.wh=1;const ang=e=>{const r=c.getBoundingClientRect(),W=r.width,H=r.height,nar=W<560;return Math.atan2(e.clientY-(r.top+H/2+(nar?14:22)),e.clientX-(r.left+W/2))};
    c.addEventListener('pointerdown',e=>{ringDrag={a:ang(e),t:performance.now(),x:e.clientX,y:e.clientY,mv:0};ringVel=0;try{c.setPointerCapture(e.pointerId)}catch(_){}});
    c.addEventListener('pointermove',e=>{if(!ringDrag)return;const a=ang(e);let d=a-ringDrag.a;if(d>Math.PI)d-=6.283;if(d<-Math.PI)d+=6.283;const now=performance.now(),dt=Math.max(8,now-ringDrag.t);ringOff+=d;ringVel=d/dt*16;ringDrag={a,t:now,x:ringDrag.x,y:ringDrag.y,mv:Math.max(ringDrag.mv,Math.hypot(e.clientX-ringDrag.x,e.clientY-ringDrag.y))};if(ringStill())playRing()});
-   const end=e=>{if(ringDrag&&ringDrag.mv<8&&e&&e.type==='pointerup'&&ringCur){ringVel=0;c.dataset.w=ringCur;showPop(c,true);setTimeout(()=>{const p=document.getElementById('pop');if(p&&!p.hidden)p.scrollIntoView({block:'nearest',behavior:'smooth'})},60)}ringDrag=null;ringVel=Math.max(-.25,Math.min(.25,ringVel))};c.addEventListener('pointerup',end);c.addEventListener('pointercancel',end)}
+   const end=e=>{if(ringDrag&&ringDrag.mv<8&&e&&e.type==='pointerup'&&ringCur){ringVel=0;c.dataset.w=ringCur;showPop(c,true);setTimeout(()=>{const p=document.getElementById('pop');if(p&&!p.hidden)p.scrollIntoView({block:'nearest',behavior:'smooth'})},60)}ringDrag=null;ringVel=Math.max(-.25,Math.min(.25,ringVel))};c.addEventListener('pointerup',end);c.addEventListener('pointercancel',end);c.addEventListener('touchmove',e=>{if(ringDrag)e.preventDefault()},{passive:false})}
   if(false){c.dataset.on=1;c.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){ringTap=false;ringPX=e.clientX;ringPY=e.clientY;if(ringStill())playRing()}});
    c.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){ringPX=-1;ringHov=-1}});
    c.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'){ringTap=true;ringPX=e.clientX;ringPY=e.clientY;if(ringStill())playRing()}})}
