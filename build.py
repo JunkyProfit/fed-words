@@ -377,9 +377,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm197">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm197">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm197">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm198">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm198">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm198">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -387,7 +387,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm197">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm198">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -420,7 +420,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm197" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm198" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -492,10 +492,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm197">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm197">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm198">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm198">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm197">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm198">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -508,14 +508,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm197">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm198">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm197">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm198">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1813,6 +1813,96 @@ header .hact a.findings-link .fcnt,.cmpbtn.findings-pill .fcnt{display:inline-bl
 .ft-item .ft-d{font:400 12.5px/1.4 Arial,Helvetica,sans-serif;color:#a9a297;margin:0}
 .ft-item .ft-d b{color:#ff5449}
 @media (max-width:640px){.ft-grid{grid-template-columns:1fr;gap:8px}#findingsCard h2{font-size:18px}}
+/* Unified Category + Search Section (tightened up with glowing red border encompassing active category + search section below) */
+@media (max-width:1099px){
+  html body main{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:8px!important}
+  html body main .topgrid{display:contents!important}
+  html body main aside.ad[data-slot="side"]{display:none!important}
+  html body main #words{order:4!important;width:100%!important;box-sizing:border-box!important}
+  html body #picker{
+    order:0!important;width:100%!important;box-sizing:border-box!important;
+    position:static!important;padding:8px 9px!important;margin:0!important;
+    border:1.5px solid rgba(255,255,255,.18)!important;border-radius:11px!important;
+  }
+  html body #picker .pk{display:flex!important;flex-direction:column!important;gap:6px!important}
+  html body #picker .catbar{
+    display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    column-gap:7px!important;row-gap:0!important;align-items:stretch!important;margin:0!important;padding:0!important;
+    border:0!important;background:none!important;box-shadow:none!important;
+  }
+  html body #picker #cats,html body #picker #chints{display:contents!important}
+  html body #picker #cats button.cat:nth-child(1),html body #picker #chints .chint:nth-child(1){grid-column:1!important}
+  html body #picker #cats button.cat:nth-child(2),html body #picker #chints .chint:nth-child(2){grid-column:2!important}
+  html body #picker #cats button.cat:nth-child(3),html body #picker #chints .chint:nth-child(3){grid-column:3!important}
+  html body #picker #cats button.cat{
+    grid-row:1!important;margin:0!important;min-width:0!important;
+    border-radius:9px 9px 0 0!important;
+    border:1.5px solid rgba(255,255,255,.22)!important;
+    border-bottom:1px solid rgba(255,255,255,.10)!important;
+    background:linear-gradient(180deg,#1d1917,#131110)!important;
+    padding:6px 8px 5px!important;min-height:30px!important;
+    box-shadow:none!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;
+  }
+  html body #picker #cats button.cat .ct{display:block!important;min-width:0!important;width:100%!important;text-align:center!important}
+  html body #picker #cats button.cat .ct b{display:block!important;font-size:13px!important;line-height:1.15!important;white-space:normal!important;overflow-wrap:break-word!important}
+  html body #picker #chints .chint{
+    grid-row:2!important;margin:0!important;min-width:0!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;
+    border-radius:0 0 9px 9px!important;
+    border:1.5px solid rgba(255,255,255,.22)!important;
+    border-top:0!important;
+    background:linear-gradient(180deg,#131110,#0b0a0a)!important;
+    padding:5px 7px 6px!important;
+    font:700 11.5px/1.18 Arial,Helvetica,sans-serif!important;
+    color:#d0c7bc!important;text-align:center!important;
+  }
+  html body #picker #chints .chint::before{
+    content:""!important;flex:0 0 auto!important;width:7px!important;height:7px!important;margin:0!important;
+    border-radius:50%!important;border:1.5px solid rgba(243,238,228,.75)!important;
+    background:radial-gradient(circle,#7a746c 0 42%,transparent 48%)!important;
+  }
+  html body #picker #cats button.cat.on,html body #picker #cats button.cat.on:hover{
+    border:2px solid #e0453b!important;
+    border-bottom:1px solid rgba(224,69,59,.42)!important;
+    background:linear-gradient(180deg,rgba(224,69,59,.38),rgba(36,16,16,.96))!important;
+    color:#fff!important;
+    box-shadow:0 -3px 12px rgba(224,69,59,.36),inset 0 1px 0 rgba(255,255,255,.20)!important;
+    position:relative!important;z-index:2!important;
+  }
+  html body #picker #chints .chint.on{
+    border:2px solid #e0453b!important;
+    border-top:0!important;
+    background:linear-gradient(180deg,rgba(36,16,16,.96),rgba(18,10,10,.98))!important;
+    color:#fff!important;
+    box-shadow:0 5px 14px rgba(224,69,59,.36),inset 0 -1px 0 rgba(224,69,59,.24)!important;
+    position:relative!important;z-index:2!important;
+  }
+  html body #picker #chints .chint.on::before{
+    border-color:#ff6b61!important;
+    background:radial-gradient(circle,#ff5449 0 45%,transparent 52%)!important;
+    box-shadow:0 0 6px rgba(255,84,73,.6)!important;
+  }
+  html body .pk.pcoll #pdisc{
+    display:grid!important;grid-template-columns:auto 1fr!important;grid-template-areas:"n t"!important;
+    align-items:center!important;column-gap:10px!important;text-align:left!important;
+    width:100%!important;min-height:38px!important;margin:0!important;padding:5px 10px!important;
+    box-sizing:border-box!important;border:1.5px solid rgba(255,255,255,.24)!important;border-radius:8px!important;
+    background:linear-gradient(180deg,#171413,#100e0e)!important;cursor:pointer!important;
+  }
+  html body .pk.pcoll #pdisc .pdn{grid-area:n!important;display:flex!important;align-items:center!important;font-size:18px!important;line-height:1.12!important;color:var(--num-red)!important;font-weight:700!important}
+  html body .pk.pcoll #pdisc .pdt{grid-area:t!important;justify-self:end!important;text-align:left!important;font:700 10.5px/1.15 Arial,Helvetica,sans-serif!important;letter-spacing:.05em!important;text-transform:uppercase!important;color:#e0d4d1!important;border:1px solid rgba(255,255,255,.32)!important;border-radius:4px!important;padding:2px 6px!important}
+  html body .pk.pcoll #pdisc .pdg,html body .pk.pcoll #pdisc .pda,html body .pk.pcoll #personInfo{display:none!important}
+  html body .pk.pcoll:not(.popen) #pfilter,html body .pk.pcoll:not(.popen) #az,html body .pk.pcoll:not(.popen) #persons{display:none!important}
+}
+@media (max-width:480px){
+  html body #picker{padding:7px 8px!important}
+  html body #picker .catbar{column-gap:6px!important}
+  html body #picker #cats button.cat{padding:5px 4px 4px!important;min-height:26px!important}
+  html body #picker #cats button.cat .ct b{font-size:11px!important;line-height:1.12!important}
+  html body #picker #chints .chint{padding:4px 4px 5px!important;font-size:9.8px!important;line-height:1.14!important;gap:3.5px!important;justify-content:flex-start!important;text-align:left!important}
+  html body #picker #chints .chint::before{width:6px!important;height:6px!important;margin-top:1px!important;align-self:flex-start!important}
+}
 </style></head><body class="mode-fed">
 <header><div class="hact"><a class="findings-link" href="findings.html" title="15 word-count findings from the transcripts"><span class="fdot" aria-hidden="true"></span>Findings <span class="fcnt">15</span></a><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -2580,7 +2670,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    x.globalCompositeOperation='source-over';x.textBaseline='middle';const n=order.length,labs=[],spk=[];
    ringPos.length=n;   // forget the angles of words that are no longer on the ring (after choosing fewer words or another speaker), so the readout always shows a real word
    for(let i=0;i<n;i++){const o=order[i],a=i/n*6.283+t*.042+ringOff,f=Math.sqrt(o.n/max),pulse=1,r0=R*1.05,r1=r0+Lmax*(.25+.75*f)*pulse,ca=Math.cos(a),sa=Math.sin(a),hv=i===ringHov;ringPos[i]=a;let dz=Math.abs((((a+1.5708)%6.283)+6.283)%6.283);dz=Math.min(dz,6.283-dz);const zw=6.283/Math.max(8,n)*1.35,zb=dz<zw?(1+Math.cos(dz/zw*3.1416))/2:0;
-    spk.push({i,X0:cx+ca*r0,Y0:cy+sa*r0,X1:cx+ca*r1,Y1:cy+sa*r1,hv,f,top:o===words[0],c0:col(a,t,.55+.45*f),lw:hv?3:.8+1.6*f});   // mm188 preview: spikes + tip circles are collected here and drawn after the labels are placed, so they can step aside for the enlarged word
+    spk.push({i,a,X0:cx+ca*r0,Y0:cy+sa*r0,X1:cx+ca*r1,Y1:cy+sa*r1,hv,f,top:o===words[0],c0:col(a,t,.55+.45*f),lw:hv?3:.8+1.6*f});   // mm188 preview: spikes + tip circles are collected here and drawn after the labels are placed, so they can step aside for the enlarged word
     const fs=Math.round((nar?7:8)+(nar?3:10)*f),fsz=fs+(hv?3:0);   // mm189 preview: words keep their small size all the way round, including at 12 o'clock (no zoom, no lift); the word at 12 is shown in the top-right readout
     let fromTop=(((a+1.5708)%6.283)+6.283)%6.283;const fadeOut=1.15,fadeIn0=4.0;let fade=fromTop<fadeOut?1-fromTop/fadeOut:fromTop<fadeIn0?0:(fromTop-fadeIn0)/(6.283-fadeIn0);fade=Math.max(0,Math.min(1,fade));fade=fade*fade*(3-2*fade);{const u=Math.max(0,Math.min(1,(dz-.03)/.13));fade*=u*u*(3-2*u)}   // mm189 preview: a word's label melts away as it reaches 12 o'clock, where the readout takes over
     const left=ca<0,pad=nar?8:12,lift=0,extra=0,up=0,bl='middle';
@@ -2590,7 +2680,10 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
     if(bl==='bottom'){if(ty-th<m)ty=m+th;if(ty>H-m)ty=H-m}else{if(ty-th*.5<m)ty=m+th*.5;if(ty+th*.5>H-m)ty=H-m-th*.5}
     const baseA=hv?1:Math.min(1,ringHov>=0?.3+.3*f:.55+.45*f);labs.push({o,i,a,f,zb,hv,fsz,left,fade,baseA,tx,ty,tw,th,ca,sa,r1,pad,extra,lift,up,bl,tyOff:0})}
    {let bi=-1,bd=9;labs.forEach((L,k)=>{let d=Math.abs((((L.a+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<bd){bd=d;bi=k}});if(bi>=0){spk[bi].t12=true}}   // mm189 preview: the word at 12 o'clock is the one in the readout, so its spike is a touch brighter
-   labs.sort((A,B)=>(B.o.n-A.o.n)||(A.o.w<B.o.w?-1:1));
+   const fpIdx=Math.min(n-1,Math.max(0,Math.round(n*0.58))),fpPrev=(fpIdx-1+n)%n,fpNext=(fpIdx+1+n)%n,fpR=nar?16:20;
+   for(const L of labs){if(L.i===fpIdx)L.fade=0}
+   const fpPri=L=>(L.i===fpPrev||L.i===fpNext)?1:0;
+   labs.sort((A,B)=>(fpPri(B)-fpPri(A))||(B.o.n-A.o.n)||(A.o.w<B.o.w?-1:1));
    const minAng=nar?.45:.34,kept=[];
    for(const L of labs){if(L.fade<.05&&!L.hv){kept.push(L);continue}
     const close=kept.some(K=>{if(K.fade<.05)return false;let d=Math.abs(L.a-K.a)%6.283;d=Math.min(d,6.283-d);return d<minAng});
@@ -2603,7 +2696,7 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    let RO=[];{let bi=-1,bd=9;labs.forEach(L=>{let d=Math.abs((((L.a+1.5708)%6.283)+6.283)%6.283);d=Math.min(d,6.283-d);if(d<bd){bd=d;bi=L.i}});const ro=bi>=0?order[bi]:null;   // mm189 preview: the top-right readout (the word at 12 o'clock) is an obstacle, so ring labels never run into it
     if(ro){const fs=Math.min(nar?30:44,W*.42/Math.max(3,ro.w.length)*1.8);x.font=`700 ${fs}px Arial`;const w1=x.measureText(ro.w).width;x.font=`700 ${nar?14:17}px Arial`;const w2=x.measureText(`${ro.n.toLocaleString()} ${ro.n===1?'mention':'mentions'} \u00b7 #${words.indexOf(ro)+1}`).width;
      RO=[{x1:W-12-w1-4,x2:W,y1:6,y2:10+fs*1.1+2},{x1:W-12-w2-4,x2:W,y1:14+fs-2,y2:14+fs+(nar?14:17)*1.2+2}]}
-    RO.forEach(r=>placed.push({left:false,tx:r.x1,tw:r.x2-r.x1,ty:r.y2,th:r.y2-r.y1,bl:'bottom',fade:1,ro:1,zb:0,hv:false,fsz:0}))}
+    RO.forEach(r=>placed.push({left:false,tx:r.x1,tw:r.x2-r.x1,ty:r.y2,th:r.y2-r.y1,bl:'bottom',fade:1,ro:1,zb:0,hv:false,fsz:0}));if(spk[fpIdx]){const fs0=spk[fpIdx];placed.push({left:false,tx:fs0.X1-fpR-4,tw:(fpR+4)*2,ty:fs0.Y1+fpR+4,th:(fpR+4)*2,bl:'bottom',fade:1,ro:1,zb:0,hv:false,fsz:0})}}
    const place=L=>{L.tx=cx+L.ca*(L.r1+L.pad+L.extra);L.ty=cy+L.sa*(L.r1+L.pad+L.extra)-L.up+L.tyOff;clampLab(L)};
    for(const L of labs){if(L.fade<.05&&!L.hv){placed.push(L);continue}
     for(let tries=0;tries<10;tries++){const P=placed.find(Q=>Q.fade>.05&&hit(L,Q));if(!P)break;
@@ -2620,8 +2713,23 @@ const RING_MAX=150;let ringOff=0,ringVel=0,ringDrag=null,ringCur='';function pla
    x.globalCompositeOperation='source-over';
    for(const s of spk){if(s.hv)x.strokeStyle='#fff';else{const g=x.createLinearGradient(s.X0,s.Y0,s.X1,s.Y1);g.addColorStop(0,s.t12?s.c0.replace(/[\d.]+\)$/,'1)'):s.c0);g.addColorStop(1,s.t12?'#fff':`rgba(255,255,255,${.7+.3*s.f})`);x.strokeStyle=g}   // each spike blends from its red/purple into white at the tip (the spike at 12 o'clock is a touch brighter and thicker)
     x.lineWidth=s.lw+(s.t12?.8:0);x.beginPath();x.moveTo(s.X0,s.Y0);x.lineTo(s.X1,s.Y1);x.stroke()}
-   for(const s of spk){const f=s.f,dr=(1.5+2*f)*1.3,dc=s.top?'#ff5449':'#fff',gr=dr*3.4*(s.t12?1.35:1),gs=s.top?GLOWR:GLOW;
+   for(const s of spk){if(s.i===fpIdx)continue;const f=s.f,dr=(1.5+2*f)*1.3,dc=s.top?'#ff5449':'#fff',gr=dr*3.4*(s.t12?1.35:1),gs=s.top?GLOWR:GLOW;
     x.globalAlpha=s.hv||s.t12?1:.55+.35*f;x.drawImage(gs,s.X1-gr,s.Y1-gr,gr*2,gr*2);x.globalAlpha=1;x.beginPath();x.arc(s.X1,s.Y1,dr-.55,0,7);x.fillStyle='#0b0b0b';x.fill();x.strokeStyle=dc;x.lineWidth=1.1;x.stroke()}   // mm187: hollow circles with a soft white glow
+   if(spk[fpIdx]){const fs0=spk[fpIdx],fx=fs0.X1,fy=fs0.Y1;
+    x.save();x.globalCompositeOperation='lighter';x.globalAlpha=.95;x.drawImage(GLOWR,fx-fpR*2.4,fy-fpR*2.4,fpR*4.8,fpR*4.8);x.restore();
+    x.save();x.beginPath();x.arc(fx,fy,fpR+1.2,0,6.283);x.fillStyle='#0b0b0b';x.fill();
+    const fg=x.createLinearGradient(fx-fpR,fy-fpR,fx+fpR,fy+fpR);fg.addColorStop(0,'rgba(255,105,95,.95)');fg.addColorStop(.55,'rgba(224,69,59,.88)');fg.addColorStop(1,'rgba(168,95,228,.9)');
+    x.lineWidth=1.45;x.strokeStyle=fg;x.stroke();
+    x.beginPath();x.arc(fx,fy,fpR-1.2,0,6.283);x.clip();x.translate(fx,fy);x.rotate(fs0.a+1.5708);x.lineCap='round';x.lineWidth=nar?1.35:1.5;
+    const ridges=[
+     {r:.20,dy:.08,a0:-1.25,a1:1.25,c:'rgba(255,250,244,.98)'},{r:.20,dy:.08,a0:1.65,a1:4.63,c:'rgba(255,250,244,.94)'},
+     {r:.37,dy:.06,a0:-2.35,a1:.55,c:'rgba(255,235,228,.96)'},{r:.37,dy:.06,a0:.92,a1:2.55,c:'rgba(255,115,105,.96)'},{r:.37,dy:.06,a0:2.88,a1:3.62,c:'rgba(255,235,228,.94)'},
+     {r:.54,dy:.04,a0:-2.65,a1:-.25,c:'rgba(255,92,82,.96)'},{r:.54,dy:.04,a0:.12,a1:2.28,c:'rgba(255,92,82,.94)'},{r:.54,dy:.04,a0:2.62,a1:3.38,c:'rgba(218,92,158,.94)'},
+     {r:.71,dy:.02,a0:-2.82,a1:1.15,c:'rgba(224,69,59,.94)'},{r:.71,dy:.02,a0:1.48,a1:3.18,c:'rgba(182,92,218,.94)'},
+     {r:.88,dy:0,a0:-2.55,a1:-.45,c:'rgba(170,90,224,.9)'},{r:.88,dy:0,a0:-.08,a1:2.35,c:'rgba(224,69,59,.88)'}];
+    for(const rg of ridges){x.strokeStyle=rg.c;x.beginPath();x.ellipse(0,rg.dy*fpR,rg.r*fpR*.86,rg.r*fpR*1.08,0,rg.a0,rg.a1);x.stroke()}
+    x.strokeStyle='rgba(255,252,248,.98)';x.beginPath();x.moveTo(0,-fpR*.08);x.lineTo(0,fpR*.16);x.stroke();
+    x.restore()}
    [...labs].sort((A,B)=>(A.zb-B.zb)||(A.o.n-B.o.n)).forEach(L=>{const al=L.baseA*(L.hv?Math.max(L.fade,.35):L.fade);if(al<=.02)return;
     x.font=`${L.hv||L.f>.5?700:400} ${L.fsz}px Arial`;x.textAlign=L.left?'right':'left';x.textBaseline=L.bl;
     x.fillStyle=L.hv?`rgba(255,255,255,${al})`:L.o===words[0]?`rgba(255,84,73,${al})`:`rgba(243,238,228,${al})`;
