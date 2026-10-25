@@ -481,7 +481,7 @@ standard request information such as your IP address; see the <a href="https://w
 <form class="mmform" id="pform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath privacy question"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="pformN">Name <span class="opt">(optional)</span></label><input id="pformN" name="name" autocomplete="name" maxlength="100"><label for="pformE">Email</label><input id="pformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="pformM">Message</label><textarea id="pformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9652;</span>Back to top</button></p>
 </main>
-<footer><a href="./">Home</a> · <a href="articles/">Articles</a> · <a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a> · <a href="terms.html">Terms of Use</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer><a href="./">Home</a> · <a href="findings.html">Findings</a> · <a href="articles/">Articles</a> · <a href="contact.html">Contact</a> · <a href="privacy.html" aria-current="page">Privacy Policy</a> · <a href="terms.html">Terms of Use</a><div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <script>document.querySelectorAll('form.mmform').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();const m=f.querySelector('.fmsg'),b=f.querySelector('button');if(f.botcheck.checked)return;if(!f.reportValidity())return;b.disabled=true;m.className='fmsg';m.textContent='Sending…';try{const r=await fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});const j=await r.json().catch(()=>({}));if(r.ok&&j.success){f.reset();m.className='fmsg ok';m.textContent='Thanks! Your message was sent.'}else{m.className='fmsg err';m.textContent='Sorry, the message could not be sent'+(j.message?': '+j.message:'')+'. Please try again later.'}}catch(err){m.className='fmsg err';m.textContent='Sorry, the message could not be sent (network error). Please try again later.'}finally{b.disabled=false}}))</script>
 <script>document.getElementById('toTop').onclick=()=>{scrollTo({top:0,left:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const L=document.querySelector('header .logo');if(L)L.focus({preventScroll:true})}</script>
 <script>document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'})</script>
@@ -1784,8 +1784,37 @@ html body .pk.pcoll #pdisc .pdn::before,html body #persons button.chip.on::befor
 .cmpkey i{display:inline-block;width:10px;height:10px;border:1px solid rgba(138,111,196,.7);background:rgba(138,111,196,.15);border-radius:3px;vertical-align:-1px;margin-right:4px}
 #vMath.cmpon .tbwrap,#vMath.cmpon #more,#vMath.cmpon #rsrow{display:none!important}
 @media (max-width:400px){.cmpgrid{gap:6px}.cmprow{grid-template-columns:18px minmax(0,1fr) auto;column-gap:4px;font-size:12px;padding:3px 2px}.cmph{font-size:13px}.cmpsub{margin-left:14px}}
+
+header .hact a.findings-link{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border:1px solid #4d2f3b;border-radius:999px;background:linear-gradient(180deg,#25161b,#140c10);color:#f3eee4;text-decoration:none;font:700 12.5px/1.2 Arial,Helvetica,sans-serif;box-shadow:0 0 12px rgba(255,84,73,.22),0 0 18px rgba(138,111,196,.16)}
+header .hact a.findings-link:hover{border-color:#ff5449;color:#fff;box-shadow:0 0 14px rgba(255,84,73,.42),0 0 22px rgba(138,111,196,.28)}
+header .hact a.findings-link .fdot{width:6px;height:6px;border-radius:50%;background:#ff5449;box-shadow:0 0 7px #ff5449;flex:none}
+header .hact a.findings-link .fcnt,.cmpbtn.findings-pill .fcnt{display:inline-block;padding:1px 5px;border-radius:999px;background:rgba(255,84,73,.2);border:1px solid rgba(255,84,73,.55);color:#ff7a70;font:700 10.5px/1.1 Arial,Helvetica,sans-serif}
+@media (max-width:640px){
+  header .hact{flex-wrap:wrap;justify-content:flex-end;max-width:136px;row-gap:4px;top:8px!important;transform:none!important}
+  header .hact a.findings-link{order:3;padding:3px 9px;font-size:11.5px}
+  header .hact a.findings-link .fcnt{font-size:10px;padding:1px 4px}
+}
+.cmpbtn.findings-pill{text-decoration:none;border-color:#4d2f3b;background:linear-gradient(180deg,#25161b,#130c10);box-shadow:0 0 12px rgba(255,84,73,.18),0 0 16px rgba(138,111,196,.16)}
+.cmpbtn.findings-pill:hover{border-color:#ff5449;color:#fff;box-shadow:0 0 14px rgba(255,84,73,.38),0 0 22px rgba(138,111,196,.28)}
+#vMath.cmpon .findings-pill{display:none}
+#findingsCard.fteaser{border-color:#3a2831;background:radial-gradient(120% 140% at 100% 0%,rgba(138,111,196,.12) 0%,rgba(255,84,73,.08) 42%,#0b0b0b 80%);box-shadow:0 0 22px rgba(255,84,73,.08),0 0 28px rgba(138,111,196,.08)}
+.ft-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 6px}
+.ft-eyebrow{display:inline-flex;align-items:center;gap:6px;font:700 11px/1 Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#ff7a70}
+.ft-eyebrow i{width:7px;height:7px;border-radius:50%;background:#ff5449;box-shadow:0 0 7px #ff5449;display:inline-block}
+.ft-all{font:700 13px/1.2 Arial,Helvetica,sans-serif;color:#ff5449;text-decoration:none;border:1px solid rgba(255,84,73,.5);border-radius:999px;padding:5px 12px;background:rgba(255,84,73,.1);box-shadow:0 0 10px rgba(255,84,73,.18)}
+.ft-all:hover{background:rgba(255,84,73,.2);color:#fff;border-color:#ff5449}
+#findingsCard h2{margin:0 0 6px;font-size:20px;letter-spacing:-.02em;color:#f3eee4}
+.ft-sub{margin:0 0 12px;font-size:14px;color:#b8b1a6;line-height:1.45}
+.ft-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 12px}
+.ft-item{display:block;text-decoration:none;border:1px solid #2e2429;border-radius:9px;padding:10px 12px;background:#110d10;transition:border-color .15s,box-shadow .15s}
+.ft-item:hover{border-color:#ff5449;box-shadow:0 0 14px rgba(255,84,73,.18)}
+.ft-item .ft-k{font:700 10.5px/1.2 Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#b77ee0;margin:0 0 4px}
+.ft-item .ft-t{font:700 14px/1.28 Arial,Helvetica,sans-serif;color:#f3eee4;margin:0 0 4px}
+.ft-item .ft-d{font:400 12.5px/1.4 Arial,Helvetica,sans-serif;color:#a9a297;margin:0}
+.ft-item .ft-d b{color:#ff5449}
+@media (max-width:640px){.ft-grid{grid-template-columns:1fr;gap:8px}#findingsCard h2{font-size:18px}}
 </style></head><body class="mode-fed">
-<header><div class="hact"><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
+<header><div class="hact"><a class="findings-link" href="findings.html" title="15 word-count findings from the transcripts"><span class="fdot" aria-hidden="true"></span>Findings <span class="fcnt">15</span></a><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
 <p class="tagline">Every word counts.</p>
 
@@ -1837,7 +1866,7 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <details id="pbio" open><summary>About this speaker</summary><p id="bioText"></p><a id="bioLink" href="speakers/">Full profile and top words &rarr;</a></details>
 <div id="vpanes" class="tab-math">
 <div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Mouth Math</h3>
-<div class="cmpbar"><button type="button" class="cmpbtn" id="cmpBtn" aria-expanded="false" aria-controls="cmpPick">Compare <span class="ctri" aria-hidden="true">&#9662;</span></button><button type="button" class="cmpx" id="cmpX" hidden>&#10005; Exit compare</button></div>
+<div class="cmpbar"><button type="button" class="cmpbtn" id="cmpBtn" aria-expanded="false" aria-controls="cmpPick">Compare <span class="ctri" aria-hidden="true">&#9662;</span></button><a class="cmpbtn findings-pill" href="findings.html" title="Read 15 word-count findings across Fed Chairs, Presidents &amp; CEOs">Findings <span class="fcnt">15</span> &rarr;</a><button type="button" class="cmpx" id="cmpX" hidden>&#10005; Exit compare</button></div>
 <div class="cmppick" id="cmpPick" hidden><input type="search" id="cmpQ" placeholder="Compare with… (search any speaker)" aria-label="Search a speaker to compare"><div id="cmpList"></div></div>
 <div id="cmpOut" hidden></div>
 <div class="tbwrap"><table class="only-standard"><thead><tr><th class="num" data-k="rank">Rank</th><th data-k="word">Word</th><th class="num" data-k="count">Count</th><th class="barc">Frequency</th></tr></thead>
@@ -1860,20 +1889,31 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <div id="toast" role="status" aria-live="polite"></div>
 <!-- ad slot: incontent · 300x250 desktop and phone · reserved for an AdSense unit after approval -->
 <aside class="ad" data-slot="incontent" data-ad-slot-name="incontent" data-ad-size="300x250" data-ad-size-phone="300x250"></aside>
+<section class="card fteaser" id="findingsCard" aria-labelledby="ftTitle">
+<div class="ft-head"><span class="ft-eyebrow"><i aria-hidden="true"></i>Transcript Research</span><a class="ft-all" href="findings.html">Read all 15 findings &rarr;</a></div>
+<h2 id="ftTitle">15 Key Findings from the Transcripts</h2>
+<p class="ft-sub">Concrete word-count patterns across 40 years of Federal Reserve Chairs, eight US Presidents, and S&amp;P 500 CEOs&mdash;normalized per 1,000 words.</p>
+<div class="ft-grid">
+<a class="ft-item" href="findings.html#f3"><div class="ft-k">Finding #03 &middot; Fed Chairs</div><div class="ft-t">Every Fed Chair said &ldquo;inflation&rdquo; more than the one before</div><p class="ft-d">From Volcker (<b>0.96/1k</b>) and Greenspan (<b>1.37</b>) to Bernanke (<b>2.71</b>), Yellen (<b>5.84</b>), and Powell (<b>11.53/1k</b>).</p></a>
+<a class="ft-item" href="findings.html#f5"><div class="ft-k">Finding #05 &middot; Federal Reserve</div><div class="ft-t">AI dominates Fed governors&rsquo; speeches, not the Chair&rsquo;s</div><p class="ft-d">Barr (<b>6.84/1k</b>, 300 uses) and Lisa Cook (<b>6.42/1k</b>, 280 uses) lead on &ldquo;ai&rdquo;; Powell is at <b>0.00</b>.</p></a>
+<a class="ft-item" href="findings.html#f8"><div class="ft-k">Finding #08 &middot; US Presidents</div><div class="ft-t">Every President from Carter to Biden has a signature word</div><p class="ft-d">Carter &ldquo;energy&rdquo; (<b>3.82/1k</b>), Reagan &ldquo;tax&rdquo; (<b>3.52</b>), Clinton &ldquo;people&rdquo; (<b>5.78</b>), Obama &ldquo;jobs&rdquo; (<b>2.57</b>), Trump &ldquo;great&rdquo; (<b>3.08</b>), Biden &ldquo;democracy&rdquo; (<b>1.35</b>).</p></a>
+<a class="ft-item" href="findings.html#f11"><div class="ft-k">Finding #11 &middot; S&amp;P 500 CEOs</div><div class="ft-t">Tech CEOs top 12&ndash;14 &ldquo;AI&rdquo; mentions per 1,000 words</div><p class="ft-d">Robbins (<b>14.19/1k</b>), Amon (<b>13.88</b>), Pichai (<b>13.40</b>), and Su (<b>12.03</b>) vs. <b>0.00</b> for Abel (Berkshire) and Ortberg (Boeing).</p></a>
+</div>
+</section>
 <section class="card" id="about"><h2><button type="button" class="abtog" id="aboutToggle" aria-expanded="true">About MouthMath</button></h2>
 <h3 class="ablead">From Mouth to Math</h3>
 <p class="absub">Word counts from official speeches, testimony, letters and court opinions by Federal Reserve officials, Chief Executive Officers and United States Government Officials.</p>
 <p>When a document becomes available to the public, each word is ranked according to how often it&#8217;s used in that document. This provides the ability to derive the substance of a speech at a glance, as well as access to every instance where each word was used in the actual document or speech. MouthMath makes mundane words not so mundane.</p>
 <p>MouthMath.com was created to be politically neutral, with no bias: every speaker is counted the same way. Not all speeches are publicly available.</p>
 <p>All content is available on a best-effort basis and counts are updated as new material becomes available. Nothing on MouthMath.com is financial, investment or legal advice.</p>
-<p>New here? Read <a href="articles/how-mouthmath-counts-words.html">How MouthMath counts words</a>, <a href="articles/what-the-fed-chairs-talk-about-most.html">What the Fed Chairs talk about most</a> and <a href="articles/comparing-presidential-vocabulary.html">Comparing presidential vocabulary</a>, or browse <a href="speakers/">every speaker</a>.</p>
+<p>New here? Explore <a href="findings.html">15 Key Findings from the Transcripts</a>, read <a href="articles/how-mouthmath-counts-words.html">How MouthMath counts words</a>, <a href="articles/what-the-fed-chairs-talk-about-most.html">What the Fed Chairs talk about most</a> and <a href="articles/comparing-presidential-vocabulary.html">Comparing presidential vocabulary</a>, or browse <a href="speakers/">every speaker</a>.</p>
 <h4 class="abcontact" id="contact">Contact</h4>
 <form class="mmform" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="cformN">Name <span class="opt">(optional)</span></label><input id="cformN" name="name" autocomplete="name" maxlength="100"><label for="cformE">Email</label><input id="cformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="cformM">Message</label><textarea id="cformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
-<p class="abfoot"><a href="articles/">Articles</a> · <a href="speakers/">Speakers</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+<p class="abfoot"><a href="findings.html">Findings</a> · <a href="articles/">Articles</a> · <a href="speakers/">Speakers</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
 <p class="abtop"><button type="button" class="totop" id="toTop"><span class="tri" aria-hidden="true">&#9652;</span>Back to top</button></p>
 </section>
 </main>
-<footer class="sitefoot"><a href="./">Home</a> · <a href="articles/">Articles</a> · <a href="speakers/">Speakers</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
+<footer class="sitefoot"><a href="./">Home</a> · <a href="findings.html">Findings</a> · <a href="articles/">Articles</a> · <a href="speakers/">Speakers</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · Not financial advice · Not affiliated with anyone listed<div class="mmcopy">&copy; 2026 MouthMath</div></footer>
 <div id="tvModal" class="tvm" hidden><div class="tvm-back" data-close></div>
 <div class="tvm-panel" role="dialog" aria-modal="true" aria-labelledby="tvmTitle"><div class="tvm-head"><h3 id="tvmTitle"></h3><span class="tvm-sub">1-year daily price</span>
 <button type="button" class="tvm-x" id="tvmX" aria-label="Close chart" data-close>&times;</button></div>
