@@ -86,6 +86,20 @@ PRESIDENTS = {
         "1977–1981",
         "D",
     ),
+    "kennedy": (
+        "John F. Kennedy",
+        [200291],
+        [("01-20-1961", "11-22-1963")],
+        "1961–1963",
+        "D",
+    ),
+    "eisenhower": (
+        "Dwight D. Eisenhower",
+        [200290],
+        [("01-20-1953", "01-20-1961")],
+        "1953–1961",
+        "R",
+    ),
 }
 
 # APP category tids
@@ -95,19 +109,25 @@ CAT_INAUGURAL = 46
 CAT_FAREWELL = 52
 
 KEEP_TITLE = re.compile(
-    r"(?i)^((?:Videotaped )?Inaugural Address|Farewell Address|"
-    r"Address (?:to the Nation|Before (?:a )?Joint Session|to (?:the )?Congress|"
+    r"(?i)^((?:Videotaped |Second )?Inaugural Address|Farewell (?:Radio and Television )?Address|"
+    r"Annual Message to the Congress on the State of the Union|"
+    r"Special Message to the Congress on Urgent National Needs|"
+    r"Address (?:to the Nation|Before |to (?:the )?Congress|"
     r"Before the United Nations|to the United Nations|Before the UN|"
-    r"on |at the |to the People)|"
+    r"on |at |in |\"The )|"
+    r"Commencement Address at |"
+    r"Radio and Television (?:Address|Report) to the (?:American People|Nation)|"
     r"Radio Address to the Nation|"
     r"Televised Address|"
+    r"Remarks in the Rudolph Wilde Platz, Berlin|"
     r"(?:Videotaped )?Remarks (?:to the Nation|Addressing the Nation|"
     r"(?:to|at|before) the United Nations))"
 )
 SKIP_TITLE = re.compile(
     r"(?i)weekly address|saturday radio|event timeline|press briefing|digest of|"
     r"press release|statement from the press|photo opportunity|exchange with reporters|"
-    r"toast |telephone |nomination acceptance|message to (?:the )?congress|"
+    r"toast |telephone |nomination acceptance|fundraising dinner|jefferson-jackson|republican|"
+    r"(?<!annual )message to (?:the )?congress(?! on urgent national needs)|"
     r"proclamation|executive order|memorandum|letter to|statement on the death|"
     r"remarks prior to|remarks following a meeting|swearing-in ceremony|"
     r"remarks on arrival|remarks on departure|bill signing|briefing following|commencement exercises|"
@@ -219,9 +239,9 @@ def classify_type(title):
         return "farewell"
     if "state of the union" in t:
         return "state of the union"
-    if "joint session" in t:
+    if "joint session" in t or "urgent national needs" in t:
         return "address to congress"
-    if "address to the nation" in t:
+    if "address to the nation" in t or "to the american people" in t or "report to the nation" in t:
         return "address to the nation"
     if "united nations" in t or re.search(r"\bun\b", t):
         return "address"
@@ -232,24 +252,26 @@ def classify_type(title):
 
 def priority(title):
     t = title.lower()
-    if re.match(r"(?i)^(?:videotaped )?inaugural address\b", title):
+    if re.match(r"(?i)^(?:videotaped |second )?inaugural address\b", title):
         return 0
-    if "farewell" in t and "fact sheet" not in t:
+    if "farewell" in t and "fact sheet" not in t and "remarks" not in t:
         return 1
     # Full televised SOTU before short radio SOTU
     if "state of the union" in t and "radio" not in t:
         return 2
     if "state of the union" in t:
         return 7
-    if "joint session of the congress" in t or "joint session of congress" in t:
+    if ("joint session of the congress" in t or "joint session of congress" in t) and "brazil" not in t and "uruguay" not in t or "urgent national needs" in t:
+        return 3
+    if any(k in t for k in ["rudolph wilde platz", "rice university in houston", "american university in washington", "chance for peace", "peaceful uses of atomic energy", "situation in little rock", "signing of the korean armistice", "science in national security", "situation in the middle east"]):
         return 3
     if "joint session" in t:  # state legislatures etc.
         return 8
-    if "address to the nation" in t and "radio" not in t:
+    if ("address to the nation" in t and "radio" not in t) or "radio and television report to the american people" in t or "radio and television report to the nation" in t or "radio and television address to the american people" in t:
         return 4
-    if "united nations general assembly" in t:
+    if "general assembly of the united nations" in t or "united nations general assembly" in t:
         return 5
-    if t.startswith("address") and "radio" not in t:
+    if (t.startswith("address") or t.startswith("commencement address")) and "radio" not in t:
         return 6
     if "radio address" in t:
         return 8
@@ -297,7 +319,21 @@ def collect_candidates(pids, ranges, refresh=False):
         ([], "Address Before a Joint Session"),
         ([], '"Address to the Nation"'),
         ([], "Farewell Address to the Nation"),
+        ([], "Farewell Radio and Television Address"),
         ([], "United Nations General Assembly"),
+        ([], "General Assembly of the United Nations"),
+        ([], "Annual Message to the Congress on the State of the Union"),
+        ([], "Radio and Television Report to the American People"),
+        ([], "Radio and Television Address to the American People"),
+        ([], "Rice University"),
+        ([], "Rudolph Wilde Platz"),
+        ([], "Commencement Address at American University"),
+        ([], "Commencement Address at Yale University"),
+        ([], "Urgent National Needs"),
+        ([], "American Newspaper Publishers Association"),
+        ([], "American Society of Newspaper Editors"),
+        ([], "University of Mississippi"),
+        ([], "Nuclear Test Ban Treaty"),
     ]
     for pid in pids:
         for dfrom, dto in ranges:

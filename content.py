@@ -278,7 +278,7 @@ def article_fill(by, stop):
         p = by[s]; tw = top_words(p, stop, 5)
         rows.append([f'<a href="../speakers/{s}.html">{esc(p["name"])}</a>', str(len(p["docs"])), ", ".join(w for w, _ in tw)])
     f["FED_TABLE"] = table(rows, ["Chair", "Documents", "Top 5 words"])
-    pres = [s for s in ("carter", "reagan", "bush41", "clinton", "bush43", "obama", "trump", "biden") if s in by]
+    pres = [s for s in ("eisenhower", "kennedy", "carter", "reagan", "bush41", "clinton", "bush43", "obama", "trump", "biden") if s in by]
     rows = []
     for s in pres:
         p = by[s]; c = counts(p); tot = sum(c.values()); n = len(p["docs"])
@@ -302,7 +302,7 @@ def findings_page(privacy):
 <p class="flead">What Federal Reserve Chairs, US Presidents, and S&amp;P 500 CEOs emphasize most&mdash;and what they rarely say&mdash;measured by exact word counts and normalized per 1,000 words across MouthMath&rsquo;s public-transcript corpus.</p>
 <div class="fkpis">
 <div class="fkpi"><b>15</b><span>Transcript findings</span></div>
-<div class="fkpi"><b>87</b><span>Speakers counted</span></div>
+<div class="fkpi"><b>89</b><span>Speakers counted</span></div>
 <div class="fkpi"><b>40 yrs</b><span>Fed Chair span</span></div>
 <div class="fkpi"><b>Per 1k</b><span>Normalized rates</span></div>
 </div>
