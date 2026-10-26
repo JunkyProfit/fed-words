@@ -1323,6 +1323,32 @@ header .hact a.findings-link .fcnt,.cmpbtn.findings-pill .fcnt{display:inline-bl
 .ft-item .ft-d{font:400 12.5px/1.4 Arial,Helvetica,sans-serif;color:#a9a297;margin:0}
 .ft-item .ft-d b{color:#ff5449}
 @media (max-width:640px){.ft-grid{grid-template-columns:1fr;gap:8px}#findingsCard h2{font-size:18px}}
+/* "Choose" showman/Monty-Python banner + 3 branching arrows pointing to the 3 category columns */
+html body #catCue{order:-2!important;display:flex;flex-direction:column;align-items:center;margin:0 0 -3px!important;padding:0;user-select:none}
+html body #catCue .cc-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:2px 11px 2px;
+  border:1.5px solid rgba(255,84,73,.72);
+  border-radius:999px;
+  background:linear-gradient(180deg,#261215,#12090b);
+  box-shadow:0 0 12px rgba(255,84,73,.28),0 0 18px rgba(138,111,196,.18),inset 0 1px 0 rgba(255,255,255,.14);
+  font:800 11px/1.15 Arial,Helvetica,sans-serif;
+  letter-spacing:.18em;text-transform:uppercase;color:#f7f1e6;
+}
+html body #catCue .cc-star{color:#ff6b61;font-size:9.5px;line-height:1;text-shadow:0 0 6px rgba(255,84,73,.8)}
+html body #catCue .cc-txt{color:#fff;text-shadow:0 0 10px rgba(255,84,73,.55)}
+html body #catCue .cc-svg{display:block;width:100%;height:22px;margin:-1px 0 -2px;overflow:visible;filter:drop-shadow(0 0 5px rgba(255,84,73,.38))}
+html body #catCue .cc-line{fill:none;stroke:url(#ccGrad);stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+html body #catCue .cc-tip{fill:#ff5449;animation:ccBob 1.85s ease-in-out infinite}
+html body #catCue .cc-tip.t2{animation-delay:.18s}
+html body #catCue .cc-tip.t3{animation-delay:.36s}
+@keyframes ccBob{0%,100%{transform:translateY(0)}50%{transform:translateY(2.2px)}}
+@media (prefers-reduced-motion:reduce){html body #catCue .cc-tip{animation:none}}
+@media (max-width:480px){
+  html body #catCue{margin:0 0 -3px!important}
+  html body #catCue .cc-badge{font-size:10.5px;padding:2px 10px;letter-spacing:.16em}
+  html body #catCue .cc-svg{height:20px}
+}
 /* Unified Category + Search Section (tightened up with glowing red border encompassing active category + search section below) */
 @media (max-width:1099px){
   html body main{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:8px!important}
@@ -1436,7 +1462,7 @@ header .hact a.findings-link .fcnt,.cmpbtn.findings-pill .fcnt{display:inline-bl
 <button type="button" id="spkbar" aria-hidden="true" tabindex="-1"><span class="sbn"></span><span class="tk sbt"></span><span class="sba" aria-hidden="true"></span><span class="sbc">Search</span></button>
 <main>
 <div class="topgrid">
-<section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div><div id="chints" role="group" aria-label="Search other speakers"></div></nav>
+<section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><div id="catCue" class="cat-cue" aria-hidden="true"><span class="cc-badge"><span class="cc-star">&#9733;</span><span class="cc-txt">CHOOSE</span><span class="cc-star">&#9733;</span></span><svg class="cc-svg" viewBox="0 0 300 24" preserveAspectRatio="none"><defs><linearGradient id="ccGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ff5449"/><stop offset="50%" stop-color="#ff7a70"/><stop offset="100%" stop-color="#b77ee0"/></linearGradient></defs><path class="cc-line" d="M134 2 C 95 4, 52 7, 48 17"/><path class="cc-line" d="M150 2 L 150 17"/><path class="cc-line" d="M166 2 C 205 4, 248 7, 252 17"/><polygon class="cc-tip t1" points="48,23 41,14 48,16.5 55,14"/><polygon class="cc-tip t2" points="150,23 143,14 150,16.5 157,14"/><polygon class="cc-tip t3" points="252,23 245,14 252,16.5 259,14"/></svg></div><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div><div id="chints" role="group" aria-label="Search other speakers"></div></nav>
 <button type="button" id="pdisc" aria-expanded="false" aria-controls="persons" hidden></button>
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
