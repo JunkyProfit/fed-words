@@ -39,7 +39,7 @@ SLUG_NOTE = {
     "jobs": "The documents are his own public words filed with the Securities and Exchange Commission.",
     "musk": "The documents are his two Tesla Master Plan essays and his testimony to Congress about SpaceX.",
 }
-FED_NOTE = "The documents are speeches and testimony to Congress given as Chair, from the Federal Reserve's official website."
+FED_NOTE = "The documents are speeches, FOMC press conferences and testimony to Congress given as Chair, from the Federal Reserve's official website."
 CEO_NOTE = "The documents are the CEO's own words to shareholders, such as yearly letters or the prepared remarks that open quarterly earnings calls."
 
 def doc_note(p):

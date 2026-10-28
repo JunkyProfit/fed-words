@@ -16,7 +16,7 @@ Usage:
   python3 fetch.py --slug powell --max 20   # a past Chair: the 20 most recent items as Chair
   python3 fetch.py --slug greenspan --max 20  # pre-2006: read from the yearly archive pages
 """
-import argparse, html, json, os, re, sys, tempfile, time, urllib.request
+import argparse, html, json, os, re, subprocess, sys, tempfile, time, urllib.request
 from datetime import datetime
 from pathlib import Path
 
@@ -150,6 +150,125 @@ def archive_items(spk, years):
                                    "lo": " ".join(html.unescape(lo.group(1)).split()) if lo else ""}))
     return items
 
+FOMC_CAL_URL = "/monetarypolicy/fomccalendars.htm"
+WARSH_PRESCONF_START = datetime(2026, 6, 1)
+TURN_RE = re.compile(r"^([A-Z][A-Z\.\-'\u2019]+(?:\s+[A-Z][A-Z\.\-'\u2019]+)+)\.\s+(.*)$")
+
+def get_bytes(url):
+    wait = _last[0] + DELAY - time.time()
+    if wait > 0:
+        time.sleep(wait)
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
+            return r.read()
+    finally:
+        _last[0] = time.time()
+
+def fomc_presconf_items(slug):
+    """Discover FOMC press conference PDFs for Warsh from /monetarypolicy/fomccalendars.htm."""
+    if slug != "warsh":
+        return []
+    today = datetime.now()
+    dates = {datetime(2026, 6, 17), datetime(2026, 7, 29), datetime(2026, 9, 16), datetime(2026, 10, 28)}
+    try:
+        cal = get(BASE + FOMC_CAL_URL)
+        for m in re.finditer(r"(\d{4})\s+FOMC Meetings.*?<div class=\"panel-footer\">", cal, re.S):
+            yr = int(m.group(1))
+            if yr < 2026:
+                continue
+            block = m.group(0)
+            for row in re.findall(r'<div class="[^"]*fomc-meeting"[^>]*>(.*?)</div>\s*</div>', block, re.S):
+                mo = re.search(r'fomc-meeting__month[^>]*>\s*<strong>([A-Za-z/\s]+)</strong>', row)
+                da = re.search(r'fomc-meeting__date[^>]*>\s*([^<]+)', row)
+                if mo and da:
+                    months = [x.strip() for x in mo.group(1).split("/") if x.strip()]
+                    nums = re.findall(r"\d+", da.group(1))
+                    if months and nums:
+                        try:
+                            dates.add(datetime.strptime(f"{months[-1]} {nums[-1]} {yr}", "%B %d %Y"))
+                        except ValueError:
+                            pass
+            for d8 in re.findall(r"fomcpres+conf(\d{8})\.(?:htm|pdf)", block, re.I):
+                try:
+                    dates.add(datetime.strptime(d8, "%Y%m%d"))
+                except ValueError:
+                    pass
+    except Exception as e:
+        print(f"  WARN could not read {FOMC_CAL_URL}: {e}")
+    items = []
+    for d in sorted(d for d in dates if WARSH_PRESCONF_START <= d <= today):
+        d8 = d.strftime("%Y%m%d")
+        items.append((d, "press conference", {
+            "l": f"/mediacenter/files/FOMCpresconf{d8}.pdf",
+            "t": "FOMC Press Conference",
+            "s": "Chairman Kevin Warsh",
+            "lo": "Washington, D.C.",
+        }))
+    return items
+
+def fomc_presconf_text(pdf_bytes, speaker_re=r"^CHAIR(?:MAN)?\s+(?:KEVIN\s+(?:M\.\s+)?)?WARSH$"):
+    """Extract only the Chair's spoken turns from an FOMC press conference transcript PDF."""
+    if not pdf_bytes.startswith(b"%PDF"):
+        raise ValueError("not a PDF")
+    txt = subprocess.check_output(["pdftotext", "-", "-"], input=pdf_bytes).decode("utf-8", "replace")
+    pages = [p for p in txt.split("\x0c") if p.strip()]
+    body_lines = []
+    for p in pages:
+        lines = [l.strip() for l in p.splitlines()]
+        while lines and not lines[0]:
+            lines.pop(0)
+        while lines and not lines[-1]:
+            lines.pop()
+        if lines and re.match(r"^Page\s+\d+\s+of\s+\d+$", lines[-1], re.I):
+            lines.pop()
+            while lines and not lines[-1]:
+                lines.pop()
+        idx = 0
+        while idx < min(len(lines), 10):
+            l = lines[idx]
+            if not l:
+                idx += 1
+                continue
+            if (re.match(r"^(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}$", l)
+                or re.match(r"^(?:Transcript of\s+)?Chair(?:man)?\s+.*Press Conference$", l, re.I)
+                or re.match(r"^(?:FINAL|PRELIMINARY)$", l, re.I)):
+                idx += 1
+                continue
+            break
+        body_lines.extend(lines[idx:])
+    spk_re = re.compile(speaker_re, re.I)
+    turns, cur_spk, cur_lines = [], None, []
+    for l in body_lines:
+        if not l:
+            if cur_lines and cur_lines[-1] != "":
+                cur_lines.append("")
+            continue
+        m = TURN_RE.match(l)
+        if m:
+            if cur_spk and spk_re.match(cur_spk):
+                turns.append(cur_lines)
+            cur_spk = " ".join(m.group(1).split())
+            cur_lines = [m.group(2).strip()]
+        elif cur_spk is not None:
+            cur_lines.append(l)
+    if cur_spk and spk_re.match(cur_spk):
+        turns.append(cur_lines)
+    paras = []
+    for tlines in turns:
+        text = ""
+        for l in tlines:
+            if not l:
+                continue
+            if text.endswith("-") and not text.endswith("--") and l and l[0].islower():
+                text = text[:-1] + l
+            else:
+                text = (text + " " + l).strip() if text else l
+        text = re.sub(r"\[(?:laughter|applause|inaudible|crosstalk)[^\]]*\]\s*", "", text, flags=re.I)
+        text = " ".join(text.split())
+        if text:
+            paras.append(text)
+    return "\n\n".join(paras)
+
 def file_slug(link, slug, date):
     """transcripts file name: the page's own name (warsh20260828a.htm -> warsh20260828a); archive
     pages are all called default.htm, so use <slug><yyyymmdd><a|b|...> like the newer pages."""
@@ -188,6 +307,7 @@ def main():
             if spk.search(x.get("s", "").strip()):
                 d = datetime.strptime(x["d"].split()[0], "%m/%d/%Y")
                 items.append((d, kind, x))
+    items += fomc_presconf_items(a.slug)
     if cfg.get("archive"):
         need = a.max or 10**9
         for y in cfg["archive"]:                       # newest year first; stop once we have enough
@@ -215,8 +335,11 @@ def main():
                 n += 1
         txt = out / f"{slug}.txt"
         try:
-            page = get(url)
-            text = body_text(page) if 'id="article"' in page else archive_body_text(page, d)
+            if url.lower().endswith(".pdf"):
+                text = fomc_presconf_text(get_bytes(url))
+            else:
+                page = get(url)
+                text = body_text(page) if 'id="article"' in page else archive_body_text(page, d)
             if len(text.split()) < MIN_WORDS:
                 raise ValueError(f"only {len(text.split())} words extracted")
         except Exception as e:

@@ -1,5 +1,15 @@
 [
   {
+    "file": "FOMCpresconf20260916.txt",
+    "date": "2026-09-16",
+    "type": "press conference",
+    "title": "FOMC Press Conference",
+    "speaker": "Chairman Kevin Warsh",
+    "location": "Washington, D.C.",
+    "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf",
+    "fetched": "2026-10-28T09:07:30"
+  },
+  {
     "file": "warsh20260828a.txt",
     "date": "2026-08-28",
     "type": "speech",
@@ -10,6 +20,16 @@
     "fetched": "2026-10-01T15:13:28"
   },
   {
+    "file": "FOMCpresconf20260729.txt",
+    "date": "2026-07-29",
+    "type": "press conference",
+    "title": "FOMC Press Conference",
+    "speaker": "Chairman Kevin Warsh",
+    "location": "Washington, D.C.",
+    "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260729.pdf",
+    "fetched": "2026-10-28T09:07:31"
+  },
+  {
     "file": "warsh20260714a.txt",
     "date": "2026-07-14",
     "type": "testimony",
@@ -18,5 +38,15 @@
     "location": "Before the Committee on Financial Services, U.S. House of Representatives",
     "url": "https://www.federalreserve.gov/newsevents/testimony/warsh20260714a.htm",
     "fetched": "2026-10-01T15:13:28"
+  },
+  {
+    "file": "FOMCpresconf20260617.txt",
+    "date": "2026-06-17",
+    "type": "press conference",
+    "title": "FOMC Press Conference",
+    "speaker": "Chairman Kevin Warsh",
+    "location": "Washington, D.C.",
+    "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260617.pdf",
+    "fetched": "2026-10-28T09:07:33"
   }
 ]
