@@ -1,5 +1,15 @@
 [
   {
+    "file": "FOMCpresconf20261028.txt",
+    "date": "2026-10-28",
+    "type": "press conference",
+    "title": "FOMC Press Conference",
+    "speaker": "Chairman Kevin Warsh",
+    "location": "Washington, D.C.",
+    "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf",
+    "fetched": "2026-10-28T16:07:08"
+  },
+  {
     "file": "FOMCpresconf20260916.txt",
     "date": "2026-09-16",
     "type": "press conference",
