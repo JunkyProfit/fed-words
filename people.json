@@ -211,13 +211,13 @@
     "role": "President & CEO, Amazon",
     "org": "Amazon",
     "policy": "excerpt",
-    "source": "aboutamazon.com",
-    "doc_noun": "shareholder letters",
+    "source": "aboutamazon.com, fool.com",
+    "doc_noun": "shareholder letters and earnings call remarks",
     "mode": "ceo",
     "eyebrow": "CEO · Amazon",
-    "doc_noun1": "shareholder letter",
-    "unit": "letter",
-    "unit_pl": "letters"
+    "doc_noun1": "document",
+    "unit": "document",
+    "unit_pl": "documents"
   },
   {
     "slug": "abel",
