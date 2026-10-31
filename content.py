@@ -73,6 +73,76 @@ def compose_bios(people, stop):
         if p["slug"] in bios:
             parts = [bios[p["slug"]], ROLE_NOTE.get(p.get("group"), ""), doc_note(p), count_note(p), words_note(p, stop)]
             p["bio"] = " ".join(x for x in parts if x)
+    compose_writeups(people, stop)
+
+# ---- "What the numbers show": a short write-up per speaker, built only from the counts (adsense-content) ----
+def peer_key(p): return p.get("group") or p.get("mode") or p["category"]
+
+def q(w): return f"“{w}”"
+
+def per_k(k, n): return f"{1000 * k / n:.1f}"
+
+def compose_writeups(people, stop):
+    ok = lambda w: w not in stop and not w.isdigit() and len(w) > 1
+    C = {p["slug"]: counts(p) for p in people}
+    pool = {}
+    for p in people: pool.setdefault(peer_key(p), []).append(p["slug"])
+    for p in people:
+        c, ds = C[p["slug"]], p["docs"]
+        if not ds: continue
+        tot = sum(c.values()); n = len(ds)
+        tw = [(w, k) for w, k in sorted(c.items(), key=lambda kv: (-kv[1], kv[0])) if ok(w)]
+        if len(tw) < 3: continue
+        noun = p.get("doc_noun") or "documents"
+        y0, y1 = min(d["date"] for d in ds)[:4], max(d["date"] for d in ds)[:4]
+        span = y0 if y0 == y1 else f"{y0} to {y1}"
+        (w1, k1), (w2, k2), (w3, k3) = tw[:3]
+        out = [f"MouthMath counts {tot:,} words across {n} {'document' if n == 1 else 'documents'} from {span}, using {len(c):,} different words."]
+        if k1 == k2:
+            out.append(f"Leaving out common words, {q(w1)} and {q(w2)} are tied for first at {k1:,} uses each ({per_k(k1, tot)} per 1,000 words), followed by {q(w3)} at {k3:,}.")
+        else:
+            out.append(f"Leaving out common words, {q(w1)} leads with {k1:,} uses ({per_k(k1, tot)} per 1,000 words), ahead of {q(w2)} ({k2:,}) and {q(w3)} ({k3:,}).")
+        top10 = ", ".join(q(w) for w, _ in tw[3:8])
+        out.append(f"The rest of the top eight: {top10}.")
+        if n >= 2:
+            last = max(ds, key=lambda d: d["date"]); rest = [d for d in ds if d is not last]
+            cl, cr = counts(p, [last]), counts(p, rest)
+            nl, nr = sum(cl.values()) or 1, sum(cr.values()) or 1
+            lt = [w for w, _ in sorted(cl.items(), key=lambda kv: (-kv[1], kv[0])) if ok(w)][:1]
+            rise = sorted((w for w, k in cl.items() if ok(w) and k >= 5), key=lambda w: -(cl[w] / nl - cr.get(w, 0) / nr))[:1]
+            if lt:
+                t = f"In the newest document, from {fdate(last['date'])}, the top word is {q(lt[0])} ({cl[lt[0]]})"
+                if rise and rise[0] != lt[0]:
+                    w = rise[0]
+                    t += f", and {q(w)} rose the most compared with earlier documents ({per_k(cl[w], nl)} vs. {per_k(cr.get(w, 0), nr)} per 1,000 words)"
+                out.append(t + ".")
+        peers = [s for s in pool[peer_key(p)] if s != p["slug"]]
+        if peers:
+            pc = Counter()
+            for s2 in peers: pc.update(C[s2])
+            pt = sum(pc.values()) or 1
+            cand = [(w, k) for w, k in tw[:25] if k >= 10 and pc.get(w, 0) > 0]
+            if cand:
+                w, k = max(cand, key=lambda wk: wk[1] / tot - pc[wk[0]] / pt)
+                out.append(f"Compared with the other {len(peers)} {esc_group(peer_key(p))} on MouthMath, {q(w)} stands out: {per_k(k, tot)} uses per 1,000 words here vs. {per_k(pc[w], pt)} for the rest of the group.")
+            gt = [w for w, _ in sorted(pc.items(), key=lambda kv: (-kv[1], kv[0])) if ok(w)][:15]
+            low = min(gt, key=lambda w: c.get(w, 0) / tot - pc[w] / pt) if gt else None
+            if low and c.get(low, 0) / tot < 0.5 * pc[low] / pt:
+                out.append(f"The opposite is {q(low)}, one of the group's most used words, at {per_k(c.get(low, 0), tot)} per 1,000 words here vs. {per_k(pc[low], pt)} for the others.")
+        out.append("Counts leave out words like “the” and “and”, and they change as new documents are added.")
+        p["wu"] = " ".join(out)
+
+def esc_group(g):
+    return {"fed": "Fed Chairs", "Fed Chairs": "Fed Chairs", "ceo": "CEOs", "Presidents": "presidents", "Supreme Court": "justices", "Senate": "senators",
+            "House": "House members", "Governors": "governors", "Board of Governors": "Fed governors", "Cabinet": "Cabinet members"}.get(g, "speakers in this group")
+
+# ---- home page: recently added documents ----
+LAST_UPDATED = "October 31, 2026"
+def recent_html(people, n=6):
+    ds = sorted(((d["date"], p, d) for p in people for d in p["docs"]), key=lambda t: t[0], reverse=True)[:n]
+    li = "".join(f'<li><a href="speakers/{esc(p["slug"])}.html">{esc(p["name"])}</a>: {esc(d["title"])} <span class="dt">· {fdate(d["date"])}</span></li>' for _, p, d in ds)
+    return (f'<h4 class="abcontact" id="recent">Recently added</h4>\n<p class="upd">Last updated: {LAST_UPDATED}</p>\n'
+            f'<ul class="abrecent"><li><a href="articles/warsh-oct-2026-fomc.html"><b>New analysis:</b> What Warsh&#8217;s October 28 press conference words show</a> <span class="dt">· October 31, 2026</span></li>{li}</ul>')
 
 # ---- word counts from the packed doc arrays ----
 def counts(p, docs=None):
@@ -200,6 +270,7 @@ def speaker_page(p, stop, privacy):
     total = sum(d["words"] for d in p["docs"])
     body = (f'<p class="eyb">{esc(p.get("eyebrow") or p["role"])}</p>\n<h1>{esc(p["name"])}</h1>\n'
             f'<p class="upd">{esc(p["role"])}</p>\n<p>{esc(p.get("bio", ""))}</p>\n'
+            + (f'<h2>What the numbers show</h2>\n<p>{esc(p["wu"])}</p>\n' if p.get("wu") else "") +
             f'<p><a class="cta" href="../#person={esc(p["slug"])}">See every word in MouthMath &rarr;</a></p>\n'
             f'<h2>Top 25 words</h2>\n<p>The most used words across all {len(docs)} {"document" if len(docs)==1 else "documents"} '
             f'({total:,} words in all), leaving out common words such as “the”, “and” and “of”.</p>\n'
@@ -249,7 +320,8 @@ def terms_page(privacy):
 # ---- articles (text in content/articles/*.html, tables filled from the data) ----
 ARTICLES = [("how-mouthmath-counts-words", "How MouthMath counts words"),
             ("what-the-fed-chairs-talk-about-most", "What the Fed Chairs talk about most"),
-            ("comparing-presidential-vocabulary", "Comparing presidential vocabulary")]
+            ("comparing-presidential-vocabulary", "Comparing presidential vocabulary"),
+            ("warsh-oct-2026-fomc", "What Kevin Warsh’s October 28 press conference words show")]
 
 def article_page(slug, title, privacy, fill):
     body = (CONTENT / "articles" / f"{slug}.html").read_text(encoding="utf-8")
@@ -284,6 +356,17 @@ def article_fill(by, stop):
         p = by[s]; c = counts(p); tot = sum(c.values()); n = len(p["docs"])
         rows.append([f'<a href="../speakers/{s}.html">{esc(p["name"])}</a>', str(n), f"{tot // n:,}", f"{len(c):,}",
                      ", ".join(w for w, _ in top_words(p, stop, 5))])
+    if "warsh" in by:
+        p = by["warsh"]; rows = []
+        pcs = sorted((d for d in p["docs"] if d["type"] == "press conference"), key=lambda d: d["date"])
+        for d in pcs:
+            c = counts(p, [d]); tw = [w for w, _ in sorted(c.items(), key=lambda kv: (-kv[1], kv[0])) if w not in stop and not w.isdigit()][:5]
+            rows.append([fdate(d["date"]), f'{d["words"]:,}', str(c.get("inflation", 0)), str(c.get("policy", 0)), ", ".join(tw)])
+        f["WARSH_PC_TABLE"] = table(rows, ["Press conference", "Words", "“inflation”", "“policy”", "Top 5 words"])
+        rows = []
+        for w in ("data", "prices", "financial", "colleagues", "productivity", "question", "markets"):
+            rows.append([w] + [f'{1000 * counts(p, [d]).get(w, 0) / d["words"]:.1f}' for d in pcs])
+        f["WARSH_RATE_TABLE"] = table(rows, ["Word"] + [fdate(d["date"]).rsplit(",", 1)[0] for d in pcs])
     f["PRES_TABLE"] = table(rows, ["President", "Speeches", "Words per speech", "Different words", "Top 5 words"])
     return f
 

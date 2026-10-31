@@ -317,7 +317,7 @@ def main():
         data = dict(common, people=inline_people)
         return TEMPLATE.replace("__DEFAULT_FT__", '<span class="ft">From the mouth of</span>').replace("__LOGO__", (ROOT / "assets" / "logo-inline.svg").read_text(encoding="utf-8").strip()).replace("__DEFAULT_TITLE__", html.escape(people_out[0]["display"])).replace(
             "__NUMNOTE__", "included" if a.keep_numbers else "excluded").replace(
-            "__DATA__", json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"))
+            "__RECENT__", content.recent_html(people_out)).replace("__DATA__", json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"))
     page = render(people_out)
     split = a.split or len(page.encode("utf-8")) > SPLIT_BYTES
     if split:   # keep the first (default) person inline; load the others on demand
@@ -377,9 +377,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm211">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm211">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm211">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm212">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm212">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm212">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -387,7 +387,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm211">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm212">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -420,7 +420,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm211" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm212" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -492,12 +492,12 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm211">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm211">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm212">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm212">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm211">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm212">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
-<meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead: inflation, interest rates, banks.">
+<meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead. Built for investors, traders, prediction-market players, journalists and researchers.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
 <link rel="canonical" href="https://mouthmath.com/">
 <meta name="robots" content="index, follow">
@@ -508,14 +508,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm211">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm212">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm211">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm212">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1633,7 +1633,7 @@ html body #chints .chint[aria-expanded="true"]::before{content:"\25BE";width:aut
   55%{color:#fff;text-shadow:0 0 6px rgba(255,255,255,.45),0 0 12px rgba(255,255,255,.2)}
 }
 
-#pbio{margin:8px 0 2px;font:14px/1.5 Arial,Helvetica,sans-serif;color:var(--ink)}#pbio summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--muted);min-height:32px;display:flex;align-items:center;gap:6px}#pbio p{margin:4px 0 6px;max-width:68ch}#pbio a{font-size:13px;font-weight:700;color:var(--ink)}
+#pbio{margin:8px 0 2px;font:14px/1.5 Arial,Helvetica,sans-serif;color:var(--ink)}#pbio summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--muted);min-height:32px;display:flex;align-items:center;gap:6px}#pbio p{margin:4px 0 6px;max-width:68ch}.abwho{margin:6px 0 10px;padding-left:20px}.abwho li{margin:5px 0}.abrecent{list-style:none;padding:0;margin:6px 0 4px}.abrecent li{margin:5px 0}.abrecent .dt{color:var(--muted);font-size:13px}#pbio h4{margin:10px 0 2px;font-size:13px;color:var(--muted)}#pbio a{font-size:13px;font-weight:700;color:var(--ink)}
 html body .rfoot{display:flex;align-items:center;gap:18px;margin-top:10px;flex-wrap:wrap}
 html body .rfoot .rplay{margin-top:0!important;flex:none}
 html body .rfoot .rNew,html body .vfoot .rNew{font:700 14px/1.2 Arial,Helvetica,sans-serif;color:#f3eee4;text-decoration:none}
@@ -2006,7 +2006,7 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <div class="rwho vhead" aria-live="polite"><b></b></div>
 <label class="vstop"><input type="checkbox" id="hideStop" checked> Hide common stopwords</label>
 </div>
-<details id="pbio" open><summary>About this speaker</summary><p id="bioText"></p><a id="bioLink" href="speakers/">Full profile and top words &rarr;</a></details>
+<details id="pbio" open><summary>About this speaker</summary><p id="bioText"></p><h4 id="wuHead">What the numbers show</h4><p id="wuText"></p><a id="bioLink" href="speakers/">Full profile and top words &rarr;</a></details>
 <div id="vpanes" class="tab-math">
 <div class="vpane" id="vMath" role="tabpanel" aria-labelledby="tabMath"><h3 class="secth" id="superMath">Mouth Math</h3>
 <div class="cmpbar"><button type="button" class="cmpbtn" id="cmpBtn" aria-expanded="false" aria-controls="cmpPick">Compare <span class="ctri" aria-hidden="true">&#9662;</span></button><a class="cmpbtn findings-pill" href="findings.html" title="Read 15 word-count findings across Fed Chairs, Presidents &amp; CEOs">Findings <span class="fcnt">15</span> &rarr;</a><button type="button" class="cmpx" id="cmpX" hidden>&#10005; Exit compare</button></div>
@@ -2049,7 +2049,10 @@ document.querySelectorAll('#vtabs [data-view]').forEach(b=>{const v=I[b.dataset.
 <p>When a document becomes available to the public, each word is ranked according to how often it&#8217;s used in that document. This provides the ability to derive the substance of a speech at a glance, as well as access to every instance where each word was used in the actual document or speech. MouthMath makes mundane words not so mundane.</p>
 <p>MouthMath.com was created to be politically neutral, with no bias: every speaker is counted the same way. Not all speeches are publicly available.</p>
 <p>All content is available on a best-effort basis and counts are updated as new material becomes available. Nothing on MouthMath.com is financial, investment or legal advice.</p>
-<p>New here? Explore <a href="findings.html">15 Key Findings from the Transcripts</a>, read <a href="articles/how-mouthmath-counts-words.html">How MouthMath counts words</a>, <a href="articles/what-the-fed-chairs-talk-about-most.html">What the Fed Chairs talk about most</a> and <a href="articles/comparing-presidential-vocabulary.html">Comparing presidential vocabulary</a>, or browse <a href="speakers/">every speaker</a>.</p>
+<h4 class="abcontact" id="who">Who it&#8217;s for</h4>
+<ul class="abwho"><li><b>Investors, traders and analysts</b> watching how Fed officials and CEOs talk about inflation, rates, AI and demand.</li><li><b>Prediction-market traders</b> on &#8220;mention&#8221; markets (such as Polymarket or Kalshi) who want to know how often a speaker actually says a word.</li><li><b>Journalists</b> checking what a speaker emphasized, with every instance one tap away.</li><li><b>Researchers and students</b> of language, economics and politics comparing vocabulary across people and years.</li></ul>
+__RECENT__
+<p>New here? Explore <a href="findings.html">15 Key Findings from the Transcripts</a>, read <a href="articles/warsh-oct-2026-fomc.html">What Warsh&#8217;s October press conference words show</a>, <a href="articles/how-mouthmath-counts-words.html">How MouthMath counts words</a>, <a href="articles/what-the-fed-chairs-talk-about-most.html">What the Fed Chairs talk about most</a> and <a href="articles/comparing-presidential-vocabulary.html">Comparing presidential vocabulary</a>, or browse <a href="speakers/">every speaker</a>.</p>
 <h4 class="abcontact" id="contact">Contact</h4>
 <form class="mmform" id="cform" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a7f0f3e1-21eb-42b6-af4b-7d083c91c1b4"><input type="hidden" name="subject" value="MouthMath contact"><input type="hidden" name="from_name" value="MouthMath website"><input type="checkbox" name="botcheck" class="mmhp" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="cformN">Name <span class="opt">(optional)</span></label><input id="cformN" name="name" autocomplete="name" maxlength="100"><label for="cformE">Email</label><input id="cformE" type="email" name="email" required autocomplete="email" maxlength="200" inputmode="email"><label for="cformM">Message</label><textarea id="cformM" name="message" required rows="4" maxlength="5000"></textarea><button type="submit">Send</button><p class="fmsg" role="status" aria-live="polite"></p></form>
 <p class="abfoot"><a href="findings.html">Findings</a> · <a href="articles/">Articles</a> · <a href="speakers/">Speakers</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
@@ -2170,7 +2173,7 @@ async function setPerson(slug,docIds){
   else if(docIds.includes('none')||!docIds.length)sel=new Set();
   else sel=new Set(docIds.filter(i=>DOCS.some(d=>d.id===i)));
   ['fed','ceo','cab','cong','scotus','gov'].forEach(m=>document.body.classList.toggle('mode-'+m,(P.mode||(P.category===PEOPLE[0].category?'fed':'ceo'))===m));
-  $('bioText').textContent=P.bio||'';$('bioLink').href='speakers/'+encodeURIComponent(P.slug)+'.html';$('pbio').hidden=!P.bio;
+  $('bioText').textContent=P.bio||'';$('wuText').textContent=P.wu||'';$('wuHead').hidden=$('wuText').hidden=!P.wu;$('bioLink').href='speakers/'+encodeURIComponent(P.slug)+'.html';$('pbio').hidden=!P.bio;
   $('eyebrow').textContent=P.eyebrow||`${P.category.replace(/s$/,'')} · ${P.org}`;
   $('personTitle').innerHTML=`<span class="ft">From the mouth of</span> <span class="pn">${esc(P.display)}</span>`;   // mm40: no ticker here; it shows once, in the speaker row (and sticky bar)
   document.title=P.slug===DEFAULT?'MouthMath — Word Counts from Fed Chairman Speeches & CEO Earnings Calls':`MouthMath — From the mouth of ${P.display}${P.ticker?` (${P.ticker})`:''}`;
