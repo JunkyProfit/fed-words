@@ -2,6 +2,1827 @@
  "docs": [
   {
    "counts": {
+    "a": 23,
+    "absolutely": 2,
+    "according": 1,
+    "accounts": 1,
+    "across": 3,
+    "act": 1,
+    "administrations": 1,
+    "adoption": 1,
+    "advance": 1,
+    "advantage": 1,
+    "after": 1,
+    "agent": 1,
+    "agents": 1,
+    "ago": 5,
+    "ahead": 1,
+    "ai": 1,
+    "aims": 1,
+    "akin": 1,
+    "aligning": 2,
+    "alignment": 2,
+    "alive": 1,
+    "all": 1,
+    "allies": 1,
+    "alpha": 1,
+    "although": 1,
+    "always": 1,
+    "america": 2,
+    "american": 2,
+    "among": 1,
+    "amount": 1,
+    "an": 10,
+    "and": 51,
+    "annual": 1,
+    "another": 2,
+    "antiwar": 1,
+    "any": 1,
+    "anyone": 1,
+    "anything": 1,
+    "architecture": 1,
+    "are": 6,
+    "around": 1,
+    "arrived": 1,
+    "as": 12,
+    "aside": 1,
+    "ask": 2,
+    "astonishing": 1,
+    "at": 8,
+    "awakened": 1,
+    "bain": 1,
+    "bankers": 1,
+    "banks": 1,
+    "barren": 1,
+    "bcg": 1,
+    "be": 9,
+    "because": 1,
+    "become": 1,
+    "been": 9,
+    "before": 4,
+    "began": 1,
+    "belief": 1,
+    "believe": 1,
+    "believed": 1,
+    "best": 3,
+    "between": 2,
+    "billion": 2,
+    "binary": 1,
+    "blast": 1,
+    "both": 1,
+    "bottom": 1,
+    "brightest": 1,
+    "briskly": 1,
+    "broad": 1,
+    "build": 1,
+    "building": 3,
+    "built": 1,
+    "business": 7,
+    "but": 1,
+    "by": 2,
+    "can": 2,
+    "cannot": 2,
+    "capabilities": 2,
+    "case": 2,
+    "cases": 1,
+    "challenge": 1,
+    "chance": 1,
+    "chaos": 1,
+    "come": 4,
+    "comes": 1,
+    "coming": 1,
+    "commercial": 4,
+    "commitment": 1,
+    "company": 2,
+    "compelling": 1,
+    "concentration": 1,
+    "condensed": 1,
+    "confront": 1,
+    "connecting": 1,
+    "consequences": 1,
+    "consequential": 1,
+    "consistently": 1,
+    "constructing": 1,
+    "consummation": 1,
+    "continue": 1,
+    "contract": 1,
+    "conventional": 1,
+    "corporations": 1,
+    "could": 1,
+    "coy": 1,
+    "craft": 1,
+    "creations": 1,
+    "creative": 1,
+    "critical": 1,
+    "crowded": 1,
+    "cultivating": 1,
+    "culture": 1,
+    "curious": 1,
+    "customers": 2,
+    "cycle": 1,
+    "dance": 1,
+    "datasets": 1,
+    "days": 1,
+    "decades": 4,
+    "decision": 1,
+    "defense": 1,
+    "define": 1,
+    "definitive": 1,
+    "degree": 1,
+    "delay": 1,
+    "delivered": 1,
+    "demand": 2,
+    "described": 1,
+    "destructive": 1,
+    "disappointed": 1,
+    "distaste": 1,
+    "diversion": 1,
+    "do": 2,
+    "doing": 1,
+    "doubled": 1,
+    "driver": 1,
+    "dwarfs": 1,
+    "earned": 1,
+    "earnest": 1,
+    "ears": 1,
+    "economic": 1,
+    "edge": 1,
+    "effectively": 1,
+    "either": 1,
+    "elected": 1,
+    "enough": 1,
+    "enterprise": 2,
+    "enterprises": 1,
+    "enthral": 1,
+    "entire": 2,
+    "envelope": 1,
+    "essentially": 1,
+    "even": 3,
+    "ever": 2,
+    "every": 1,
+    "expanded": 1,
+    "expansion": 1,
+    "extraordinary": 1,
+    "factory": 1,
+    "failed": 1,
+    "far": 2,
+    "fate": 1,
+    "ferocity": 1,
+    "filled": 1,
+    "financial": 1,
+    "find": 1,
+    "firm": 2,
+    "firms": 1,
+    "first": 3,
+    "five": 1,
+    "flirtation": 1,
+    "foolish": 1,
+    "for": 7,
+    "force": 1,
+    "foundational": 1,
+    "founded": 1,
+    "founder": 1,
+    "from": 7,
+    "fundamental": 1,
+    "fundamentally": 1,
+    "future": 1,
+    "gaddis": 1,
+    "gambled": 1,
+    "generate": 1,
+    "generated": 3,
+    "genre": 1,
+    "genuine": 1,
+    "get": 1,
+    "google": 1,
+    "government": 2,
+    "grave": 1,
+    "greater": 1,
+    "grounding": 1,
+    "growing": 1,
+    "grown": 1,
+    "growth": 5,
+    "had": 1,
+    "happening": 1,
+    "happens": 1,
+    "harvard": 1,
+    "has": 13,
+    "have": 15,
+    "hear": 1,
+    "heard": 1,
+    "heed": 1,
+    "hired": 1,
+    "history": 2,
+    "home": 1,
+    "hospitals": 1,
+    "human": 1,
+    "idiosyncratic": 1,
+    "if": 1,
+    "in": 25,
+    "inaction": 1,
+    "inclined": 1,
+    "increase": 1,
+    "increasingly": 1,
+    "indeed": 3,
+    "industry": 2,
+    "inexorably": 1,
+    "infinity": 1,
+    "inquiring": 1,
+    "insight": 1,
+    "institutions": 2,
+    "insurers": 1,
+    "intensity": 1,
+    "intent": 1,
+    "interest": 2,
+    "interests": 3,
+    "interfacing": 1,
+    "invest": 1,
+    "irrelevance": 1,
+    "is": 20,
+    "it": 12,
+    "its": 3,
+    "itself": 2,
+    "jarring": 1,
+    "jobs": 1,
+    "john": 1,
+    "join": 1,
+    "just": 1,
+    "labyrinth": 1,
+    "lacking": 1,
+    "language": 3,
+    "large": 2,
+    "last": 1,
+    "law": 1,
+    "leaders": 4,
+    "leadership": 1,
+    "learned": 1,
+    "learning": 1,
+    "leeches": 1,
+    "legacy": 1,
+    "level": 2,
+    "lewis": 1,
+    "liability": 1,
+    "life": 1,
+    "lifespan": 1,
+    "likely": 2,
+    "limited": 1,
+    "listen": 1,
+    "listeners": 1,
+    "little": 2,
+    "living": 1,
+    "llm": 1,
+    "lonely": 1,
+    "long": 6,
+    "longer": 1,
+    "losers": 1,
+    "lost": 1,
+    "make": 1,
+    "making": 1,
+    "many": 3,
+    "marching": 1,
+    "market": 2,
+    "markets": 1,
+    "marshalling": 1,
+    "math": 1,
+    "may": 1,
+    "mckinsey": 1,
+    "means": 3,
+    "measured": 1,
+    "mere": 1,
+    "merely": 1,
+    "middle": 1,
+    "might": 1,
+    "migrating": 1,
+    "military": 2,
+    "million": 1,
+    "misadventure": 1,
+    "mit": 1,
+    "model": 1,
+    "models": 4,
+    "modern": 1,
+    "moment": 2,
+    "momentum": 1,
+    "months": 1,
+    "more": 7,
+    "most": 1,
+    "movement": 1,
+    "must": 1,
+    "nation": 1,
+    "naval": 1,
+    "nearly": 1,
+    "need": 1,
+    "no": 3,
+    "noble": 1,
+    "none": 1,
+    "not": 10,
+    "nothing": 1,
+    "now": 8,
+    "number": 1,
+    "occupied": 1,
+    "of": 32,
+    "on": 2,
+    "once": 5,
+    "one": 6,
+    "only": 2,
+    "operating": 1,
+    "or": 2,
+    "organizational": 1,
+    "others": 1,
+    "ought": 1,
+    "our": 30,
+    "ours": 1,
+    "ourselves": 1,
+    "out": 1,
+    "outcome": 1,
+    "outcomes": 1,
+    "outperformance": 1,
+    "over": 2,
+    "own": 3,
+    "pace": 1,
+    "paid": 1,
+    "partners": 2,
+    "past": 2,
+    "peace": 1,
+    "people": 1,
+    "perhaps": 1,
+    "peril": 1,
+    "period": 2,
+    "pioneered": 1,
+    "pioneers": 1,
+    "players": 1,
+    "point": 1,
+    "possessing": 1,
+    "postwar": 1,
+    "potential": 1,
+    "presciently": 1,
+    "price": 1,
+    "pride": 1,
+    "primary": 1,
+    "problem": 2,
+    "professor": 1,
+    "profit": 2,
+    "profound": 1,
+    "promise": 1,
+    "public": 3,
+    "quarter": 6,
+    "quarterly": 1,
+    "quarters": 1,
+    "questions": 1,
+    "quickly": 2,
+    "radical": 1,
+    "radius": 1,
+    "rate": 3,
+    "rather": 1,
+    "ravenous": 1,
+    "raw": 1,
+    "real": 1,
+    "recent": 2,
+    "reckon": 1,
+    "record": 1,
+    "reflection": 1,
+    "reliably": 1,
+    "remade": 1,
+    "remains": 2,
+    "remarkable": 1,
+    "represented": 1,
+    "representing": 1,
+    "represents": 1,
+    "result": 1,
+    "results": 3,
+    "revenue": 4,
+    "revolution": 1,
+    "right": 1,
+    "risk": 1,
+    "rounds": 1,
+    "safeguards": 1,
+    "sales": 1,
+    "same": 3,
+    "sated": 1,
+    "say": 1,
+    "scale": 2,
+    "scattered": 1,
+    "scene": 1,
+    "sealed": 1,
+    "searching": 1,
+    "see": 1,
+    "seeking": 1,
+    "seeks": 1,
+    "seemed": 1,
+    "seems": 2,
+    "seen": 1,
+    "seldom": 1,
+    "sensitive": 1,
+    "sequential": 1,
+    "serve": 1,
+    "served": 1,
+    "set": 1,
+    "shifts": 1,
+    "significance": 1,
+    "simple": 1,
+    "simply": 3,
+    "since": 1,
+    "slow": 1,
+    "so": 1,
+    "society": 1,
+    "software": 3,
+    "sold": 1,
+    "solutions": 1,
+    "some": 2,
+    "someone": 1,
+    "sovereign": 1,
+    "speed": 1,
+    "stanford": 1,
+    "stated": 1,
+    "states": 1,
+    "storied": 1,
+    "story": 1,
+    "striking": 1,
+    "structural": 1,
+    "stunned": 1,
+    "subtext": 1,
+    "success": 1,
+    "such": 1,
+    "sure": 1,
+    "surpassed": 1,
+    "surprise": 1,
+    "surrounding": 1,
+    "sustained": 2,
+    "swath": 1,
+    "systems": 1,
+    "take": 2,
+    "taken": 1,
+    "talent": 2,
+    "tally": 1,
+    "technical": 1,
+    "technological": 1,
+    "technologies": 1,
+    "technology": 1,
+    "tends": 1,
+    "terms": 1,
+    "than": 4,
+    "that": 22,
+    "the": 73,
+    "theatrical": 1,
+    "their": 6,
+    "them": 3,
+    "there": 4,
+    "these": 2,
+    "they": 8,
+    "thing": 1,
+    "things": 2,
+    "think": 1,
+    "third": 1,
+    "this": 11,
+    "those": 4,
+    "through": 2,
+    "time": 3,
+    "to": 27,
+    "tone": 1,
+    "too": 1,
+    "totally": 1,
+    "toward": 1,
+    "towards": 2,
+    "town": 1,
+    "transformed": 1,
+    "turn": 1,
+    "two": 2,
+    "u.s.": 6,
+    "ultimate": 1,
+    "unbounded": 1,
+    "uncertain": 1,
+    "underlying": 1,
+    "understand": 1,
+    "understatement": 1,
+    "understood": 1,
+    "united": 1,
+    "units": 1,
+    "unlike": 1,
+    "unlimited": 1,
+    "unmatched": 1,
+    "unopened": 1,
+    "unproductive": 1,
+    "unruly": 1,
+    "unsatisfying": 1,
+    "unwavering": 2,
+    "us": 4,
+    "use": 1,
+    "utilize": 1,
+    "valuable": 1,
+    "value": 2,
+    "venture": 1,
+    "verdict": 1,
+    "viable": 1,
+    "virtually": 1,
+    "was": 2,
+    "wasteland": 1,
+    "way": 1,
+    "we": 19,
+    "weeks": 1,
+    "well": 2,
+    "were": 3,
+    "what": 7,
+    "when": 1,
+    "whether": 1,
+    "while": 1,
+    "who": 5,
+    "whoever": 1,
+    "whole": 1,
+    "wild": 1,
+    "will": 6,
+    "winners": 1,
+    "with": 10,
+    "without": 2,
+    "word": 1,
+    "world": 3,
+    "worst": 1,
+    "would": 5,
+    "yale": 1,
+    "year": 4,
+    "years": 3,
+    "yet": 3
+   },
+   "date": "2026-11-02",
+   "entries": {
+    "a": [
+     5,
+     7,
+     7,
+     7,
+     7,
+     8,
+     11,
+     11
+    ],
+    "according": [
+     12
+    ],
+    "across": [
+     7
+    ],
+    "adoption": [
+     5
+    ],
+    "after": [
+     2
+    ],
+    "agent": [
+     7
+    ],
+    "agents": [
+     6
+    ],
+    "ago": [
+     9,
+     13
+    ],
+    "ahead": [
+     12
+    ],
+    "all": [
+     13
+    ],
+    "america": [
+     0
+    ],
+    "among": [
+     12
+    ],
+    "amount": [
+     9
+    ],
+    "an": [
+     0,
+     8,
+     9
+    ],
+    "and": [
+     5,
+     5,
+     7,
+     7,
+     8,
+     10,
+     11,
+     11,
+     12,
+     13
+    ],
+    "annual": [
+     0
+    ],
+    "another": [
+     9
+    ],
+    "any": [
+     0
+    ],
+    "anything": [
+     5
+    ],
+    "architecture": [
+     8
+    ],
+    "are": [
+     12,
+     13
+    ],
+    "as": [
+     11,
+     11,
+     13
+    ],
+    "astonishing": [
+     0
+    ],
+    "at": [
+     8,
+     8,
+     11,
+     13
+    ],
+    "bain": [
+     12
+    ],
+    "bcg": [
+     12
+    ],
+    "be": [
+     0
+    ],
+    "become": [
+     6
+    ],
+    "before": [
+     5
+    ],
+    "best": [
+     8
+    ],
+    "billion": [
+     9
+    ],
+    "blast": [
+     7
+    ],
+    "both": [
+     5
+    ],
+    "building": [
+     8
+    ],
+    "business": [
+     7
+    ],
+    "case": [
+     2
+    ],
+    "cases": [
+     7
+    ],
+    "chaos": [
+     6
+    ],
+    "come": [
+     5
+    ],
+    "commercial": [
+     0
+    ],
+    "company": [
+     0
+    ],
+    "confront": [
+     5
+    ],
+    "consistently": [
+     2
+    ],
+    "consummation": [
+     4
+    ],
+    "conventional": [
+     11
+    ],
+    "critical": [
+     7
+    ],
+    "cultivating": [
+     11
+    ],
+    "culture": [
+     11
+    ],
+    "datasets": [
+     7
+    ],
+    "decades": [
+     13
+    ],
+    "decision": [
+     8
+    ],
+    "delivered": [
+     9
+    ],
+    "described": [
+     13
+    ],
+    "destructive": [
+     7
+    ],
+    "distaste": [
+     11
+    ],
+    "diversion": [
+     8
+    ],
+    "dwarfs": [
+     9
+    ],
+    "ears": [
+     3
+    ],
+    "enterprise": [
+     7
+    ],
+    "entire": [
+     10
+    ],
+    "even": [
+     1
+    ],
+    "factory": [
+     12
+    ],
+    "far": [
+     6
+    ],
+    "financial": [
+     1
+    ],
+    "firm": [
+     10
+    ],
+    "foolish": [
+     8
+    ],
+    "for": [
+     8,
+     11
+    ],
+    "force": [
+     5
+    ],
+    "foundational": [
+     8
+    ],
+    "founder": [
+     12
+    ],
+    "gaddis": [
+     13
+    ],
+    "generated": [
+     9
+    ],
+    "google": [
+     12
+    ],
+    "grounding": [
+     7
+    ],
+    "growth": [
+     0,
+     0
+    ],
+    "happens": [
+     4
+    ],
+    "harvard": [
+     12
+    ],
+    "has": [
+     3,
+     5
+    ],
+    "have": [
+     2
+    ],
+    "hear": [
+     3
+    ],
+    "history": [
+     13
+    ],
+    "human": [
+     11
+    ],
+    "idiosyncratic": [
+     8
+    ],
+    "in": [
+     0,
+     0,
+     6,
+     7,
+     8,
+     9,
+     12,
+     13
+    ],
+    "indeed": [
+     0
+    ],
+    "infinity": [
+     7
+    ],
+    "intent": [
+     10
+    ],
+    "interfacing": [
+     7
+    ],
+    "invest": [
+     8
+    ],
+    "is": [
+     1,
+     5,
+     7,
+     10,
+     11
+    ],
+    "it": [
+     10,
+     12
+    ],
+    "its": [
+     5
+    ],
+    "jarring": [
+     1
+    ],
+    "john": [
+     13
+    ],
+    "labyrinth": [
+     7
+    ],
+    "lacking": [
+     7
+    ],
+    "language": [
+     5
+    ],
+    "large": [
+     5
+    ],
+    "leaders": [
+     5
+    ],
+    "level": [
+     11
+    ],
+    "lewis": [
+     13
+    ],
+    "liability": [
+     7
+    ],
+    "likely": [
+     6
+    ],
+    "living": [
+     13
+    ],
+    "llm": [
+     7
+    ],
+    "long": [
+     9,
+     13
+    ],
+    "making": [
+     12
+    ],
+    "many": [
+     12
+    ],
+    "market": [
+     10
+    ],
+    "marshalling": [
+     11
+    ],
+    "math": [
+     1
+    ],
+    "mckinsey": [
+     12
+    ],
+    "means": [
+     7,
+     11
+    ],
+    "military": [
+     13
+    ],
+    "misadventure": [
+     8
+    ],
+    "mit": [
+     12
+    ],
+    "models": [
+     5
+    ],
+    "modern": [
+     7
+    ],
+    "more": [
+     6,
+     11
+    ],
+    "naval": [
+     13
+    ],
+    "nearly": [
+     7
+    ],
+    "no": [
+     13
+    ],
+    "noble": [
+     8
+    ],
+    "not": [
+     9
+    ],
+    "number": [
+     12
+    ],
+    "of": [
+     0,
+     0,
+     1,
+     5,
+     6,
+     7,
+     7,
+     11,
+     11,
+     12,
+     13
+    ],
+    "one": [
+     12,
+     12
+    ],
+    "organizational": [
+     11
+    ],
+    "others": [
+     12
+    ],
+    "ought": [
+     3
+    ],
+    "our": [
+     0,
+     1,
+     2,
+     8,
+     10,
+     11,
+     11
+    ],
+    "outcome": [
+     6
+    ],
+    "outperformance": [
+     11
+    ],
+    "peace": [
+     13
+    ],
+    "people": [
+     7
+    ],
+    "perhaps": [
+     8
+    ],
+    "peril": [
+     5
+    ],
+    "possessing": [
+     7
+    ],
+    "potential": [
+     7
+    ],
+    "presciently": [
+     13
+    ],
+    "professor": [
+     13
+    ],
+    "profit": [
+     9
+    ],
+    "promise": [
+     5
+    ],
+    "public": [
+     0
+    ],
+    "quarter": [
+     2,
+     2
+    ],
+    "quarterly": [
+     9
+    ],
+    "questions": [
+     5
+    ],
+    "quickly": [
+     4
+    ],
+    "radical": [
+     11
+    ],
+    "radius": [
+     7
+    ],
+    "rate": [
+     0
+    ],
+    "recent": [
+     12
+    ],
+    "record": [
+     9
+    ],
+    "represented": [
+     8
+    ],
+    "result": [
+     11
+    ],
+    "results": [
+     1
+    ],
+    "revenue": [
+     9
+    ],
+    "rounds": [
+     12
+    ],
+    "safeguards": [
+     7
+    ],
+    "scattered": [
+     7
+    ],
+    "seems": [
+     12
+    ],
+    "sequential": [
+     0
+    ],
+    "simple": [
+     1
+    ],
+    "software": [
+     0
+    ],
+    "stanford": [
+     12
+    ],
+    "stated": [
+     2
+    ],
+    "structural": [
+     11
+    ],
+    "subtext": [
+     8
+    ],
+    "surrounding": [
+     5
+    ],
+    "take": [
+     10
+    ],
+    "talent": [
+     11
+    ],
+    "tally": [
+     12
+    ],
+    "tends": [
+     7
+    ],
+    "terms": [
+     13
+    ],
+    "that": [
+     5,
+     5,
+     7,
+     8,
+     9
+    ],
+    "the": [
+     1,
+     5,
+     5,
+     5,
+     6,
+     7,
+     7,
+     7,
+     7,
+     8,
+     10,
+     10,
+     11,
+     11,
+     12,
+     12,
+     12,
+     13,
+     13
+    ],
+    "they": [
+     6
+    ],
+    "thing": [
+     10
+    ],
+    "through": [
+     13
+    ],
+    "to": [
+     3,
+     5,
+     8,
+     10,
+     12
+    ],
+    "totally": [
+     5
+    ],
+    "towards": [
+     7
+    ],
+    "u.s.": [
+     0
+    ],
+    "unbounded": [
+     7
+    ],
+    "uncertain": [
+     13
+    ],
+    "underlying": [
+     1
+    ],
+    "units": [
+     7
+    ],
+    "unlike": [
+     5
+    ],
+    "unlimited": [
+     7
+    ],
+    "unruly": [
+     11
+    ],
+    "unwavering": [
+     10
+    ],
+    "use": [
+     7
+    ],
+    "virtually": [
+     7
+    ],
+    "was": [
+     8
+    ],
+    "we": [
+     2,
+     9,
+     9,
+     12,
+     13
+    ],
+    "well": [
+     11
+    ],
+    "what": [
+     9,
+     13
+    ],
+    "while": [
+     8
+    ],
+    "whoever": [
+     3
+    ],
+    "whole": [
+     10
+    ],
+    "wild": [
+     11
+    ],
+    "with": [
+     7
+    ],
+    "world": [
+     5,
+     12
+    ],
+    "worst": [
+     8
+    ],
+    "would": [
+     0
+    ],
+    "yale": [
+     13
+    ],
+    "years": [
+     8
+    ]
+   },
+   "excerpts": [
+    "Indeed, our sequential growth in U.S. commercial of 29% would be an astonishing annual growth rate of any public software company in America.",
+    "The underlying math of our financial results is simple, even jarring.",
+    "We have stated our case consistently, quarter after quarter.",
+    "Whoever has ears ought to hear.",
+    "Consummation happens quickly.",
+    "The questions surrounding the adoption of large language models force the world and its leaders to confront both a promise and peril that is totally unlike anything that has come before.",
+    "In the far more likely outcome, they become agents of chaos.",
+    "Lacking a grounding in the means of interfacing with the labyrinth of datasets, people, business units, use cases, and critical safeguards scattered across the modern enterprise, the LLM agent is a virtually unlimited liability, possessing a nearly unbounded destructive potential and a blast radius that tends towards infinity.",
+    "The subtext was that our decision to invest for years in building a foundational architecture, while noble perhaps, represented an idiosyncratic diversion at best and foolish misadventure at worst.",
+    "We generated another record quarterly profit—$1.13 billion—an amount that dwarfs what we delivered in revenue not long ago.",
+    "It is our firm and unwavering intent to take the entire market, the whole thing.",
+    "Our outperformance is, at a more structural level, the result of our wild and unruly organizational culture, as well as a radical distaste for the conventional means of marshalling and cultivating human talent.",
+    "We are, it seems, the number one founder factory in the world, ahead of Stanford, MIT, McKinsey, Google, Harvard, Bain, and BCG, among many others, according to one recent tally making the rounds.",
+    "We are all, in no uncertain terms, living through what John Lewis Gaddis, the professor of naval and military history at Yale, presciently described decades ago as the long peace."
+   ],
+   "id": "pltr-q3-2026",
+   "msent": {
+    "a": 15,
+    "absolutely": 2,
+    "according": 1,
+    "accounts": 1,
+    "across": 3,
+    "act": 1,
+    "administrations": 1,
+    "adoption": 1,
+    "advance": 1,
+    "advantage": 1,
+    "after": 1,
+    "agent": 1,
+    "agents": 1,
+    "ago": 5,
+    "ahead": 1,
+    "ai": 1,
+    "aims": 1,
+    "akin": 1,
+    "aligning": 2,
+    "alignment": 2,
+    "alive": 1,
+    "all": 1,
+    "allies": 1,
+    "alpha": 1,
+    "although": 1,
+    "always": 1,
+    "america": 2,
+    "american": 2,
+    "among": 1,
+    "amount": 1,
+    "an": 9,
+    "and": 35,
+    "annual": 1,
+    "another": 2,
+    "antiwar": 1,
+    "any": 1,
+    "anyone": 1,
+    "anything": 1,
+    "architecture": 1,
+    "are": 4,
+    "around": 1,
+    "arrived": 1,
+    "as": 8,
+    "aside": 1,
+    "ask": 2,
+    "astonishing": 1,
+    "at": 5,
+    "awakened": 1,
+    "bain": 1,
+    "bankers": 1,
+    "banks": 1,
+    "barren": 1,
+    "bcg": 1,
+    "be": 9,
+    "because": 1,
+    "become": 1,
+    "been": 8,
+    "before": 4,
+    "began": 1,
+    "belief": 1,
+    "believe": 1,
+    "believed": 1,
+    "best": 3,
+    "between": 2,
+    "billion": 2,
+    "binary": 1,
+    "blast": 1,
+    "both": 1,
+    "bottom": 1,
+    "brightest": 1,
+    "briskly": 1,
+    "broad": 1,
+    "build": 1,
+    "building": 3,
+    "built": 1,
+    "business": 7,
+    "but": 1,
+    "by": 2,
+    "can": 2,
+    "cannot": 2,
+    "capabilities": 2,
+    "case": 2,
+    "cases": 1,
+    "challenge": 1,
+    "chance": 1,
+    "chaos": 1,
+    "come": 4,
+    "comes": 1,
+    "coming": 1,
+    "commercial": 4,
+    "commitment": 1,
+    "company": 2,
+    "compelling": 1,
+    "concentration": 1,
+    "condensed": 1,
+    "confront": 1,
+    "connecting": 1,
+    "consequences": 1,
+    "consequential": 1,
+    "consistently": 1,
+    "constructing": 1,
+    "consummation": 1,
+    "continue": 1,
+    "contract": 1,
+    "conventional": 1,
+    "corporations": 1,
+    "could": 1,
+    "coy": 1,
+    "craft": 1,
+    "creations": 1,
+    "creative": 1,
+    "critical": 1,
+    "crowded": 1,
+    "cultivating": 1,
+    "culture": 1,
+    "curious": 1,
+    "customers": 2,
+    "cycle": 1,
+    "dance": 1,
+    "datasets": 1,
+    "days": 1,
+    "decades": 4,
+    "decision": 1,
+    "defense": 1,
+    "define": 1,
+    "definitive": 1,
+    "degree": 1,
+    "delay": 1,
+    "delivered": 1,
+    "demand": 2,
+    "described": 1,
+    "destructive": 1,
+    "disappointed": 1,
+    "distaste": 1,
+    "diversion": 1,
+    "do": 2,
+    "doing": 1,
+    "doubled": 1,
+    "driver": 1,
+    "dwarfs": 1,
+    "earned": 1,
+    "earnest": 1,
+    "ears": 1,
+    "economic": 1,
+    "edge": 1,
+    "effectively": 1,
+    "either": 1,
+    "elected": 1,
+    "enough": 1,
+    "enterprise": 2,
+    "enterprises": 1,
+    "enthral": 1,
+    "entire": 2,
+    "envelope": 1,
+    "essentially": 1,
+    "even": 3,
+    "ever": 2,
+    "every": 1,
+    "expanded": 1,
+    "expansion": 1,
+    "extraordinary": 1,
+    "factory": 1,
+    "failed": 1,
+    "far": 2,
+    "fate": 1,
+    "ferocity": 1,
+    "filled": 1,
+    "financial": 1,
+    "find": 1,
+    "firm": 2,
+    "firms": 1,
+    "first": 2,
+    "five": 1,
+    "flirtation": 1,
+    "foolish": 1,
+    "for": 7,
+    "force": 1,
+    "foundational": 1,
+    "founded": 1,
+    "founder": 1,
+    "from": 6,
+    "fundamental": 1,
+    "fundamentally": 1,
+    "future": 1,
+    "gaddis": 1,
+    "gambled": 1,
+    "generate": 1,
+    "generated": 3,
+    "genre": 1,
+    "genuine": 1,
+    "get": 1,
+    "google": 1,
+    "government": 2,
+    "grave": 1,
+    "greater": 1,
+    "grounding": 1,
+    "growing": 1,
+    "grown": 1,
+    "growth": 4,
+    "had": 1,
+    "happening": 1,
+    "happens": 1,
+    "harvard": 1,
+    "has": 12,
+    "have": 12,
+    "hear": 1,
+    "heard": 1,
+    "heed": 1,
+    "hired": 1,
+    "history": 2,
+    "home": 1,
+    "hospitals": 1,
+    "human": 1,
+    "idiosyncratic": 1,
+    "if": 1,
+    "in": 22,
+    "inaction": 1,
+    "inclined": 1,
+    "increase": 1,
+    "increasingly": 1,
+    "indeed": 3,
+    "industry": 2,
+    "inexorably": 1,
+    "infinity": 1,
+    "inquiring": 1,
+    "insight": 1,
+    "institutions": 2,
+    "insurers": 1,
+    "intensity": 1,
+    "intent": 1,
+    "interest": 2,
+    "interests": 3,
+    "interfacing": 1,
+    "invest": 1,
+    "irrelevance": 1,
+    "is": 18,
+    "it": 12,
+    "its": 3,
+    "itself": 2,
+    "jarring": 1,
+    "jobs": 1,
+    "john": 1,
+    "join": 1,
+    "just": 1,
+    "labyrinth": 1,
+    "lacking": 1,
+    "language": 3,
+    "large": 2,
+    "last": 1,
+    "law": 1,
+    "leaders": 4,
+    "leadership": 1,
+    "learned": 1,
+    "learning": 1,
+    "leeches": 1,
+    "legacy": 1,
+    "level": 2,
+    "lewis": 1,
+    "liability": 1,
+    "life": 1,
+    "lifespan": 1,
+    "likely": 2,
+    "limited": 1,
+    "listen": 1,
+    "listeners": 1,
+    "little": 2,
+    "living": 1,
+    "llm": 1,
+    "lonely": 1,
+    "long": 6,
+    "longer": 1,
+    "losers": 1,
+    "lost": 1,
+    "make": 1,
+    "making": 1,
+    "many": 3,
+    "marching": 1,
+    "market": 2,
+    "markets": 1,
+    "marshalling": 1,
+    "math": 1,
+    "may": 1,
+    "mckinsey": 1,
+    "means": 3,
+    "measured": 1,
+    "mere": 1,
+    "merely": 1,
+    "middle": 1,
+    "might": 1,
+    "migrating": 1,
+    "military": 2,
+    "million": 1,
+    "misadventure": 1,
+    "mit": 1,
+    "model": 1,
+    "models": 4,
+    "modern": 1,
+    "moment": 2,
+    "momentum": 1,
+    "months": 1,
+    "more": 7,
+    "most": 1,
+    "movement": 1,
+    "must": 1,
+    "nation": 1,
+    "naval": 1,
+    "nearly": 1,
+    "need": 1,
+    "no": 3,
+    "noble": 1,
+    "none": 1,
+    "not": 10,
+    "nothing": 1,
+    "now": 8,
+    "number": 1,
+    "occupied": 1,
+    "of": 23,
+    "on": 2,
+    "once": 5,
+    "one": 5,
+    "only": 2,
+    "operating": 1,
+    "or": 2,
+    "organizational": 1,
+    "others": 1,
+    "ought": 1,
+    "our": 23,
+    "ours": 1,
+    "ourselves": 1,
+    "out": 1,
+    "outcome": 1,
+    "outcomes": 1,
+    "outperformance": 1,
+    "over": 2,
+    "own": 3,
+    "pace": 1,
+    "paid": 1,
+    "partners": 2,
+    "past": 2,
+    "peace": 1,
+    "people": 1,
+    "perhaps": 1,
+    "peril": 1,
+    "period": 2,
+    "pioneered": 1,
+    "pioneers": 1,
+    "players": 1,
+    "point": 1,
+    "possessing": 1,
+    "postwar": 1,
+    "potential": 1,
+    "presciently": 1,
+    "price": 1,
+    "pride": 1,
+    "primary": 1,
+    "problem": 2,
+    "professor": 1,
+    "profit": 2,
+    "profound": 1,
+    "promise": 1,
+    "public": 3,
+    "quarter": 5,
+    "quarterly": 1,
+    "quarters": 1,
+    "questions": 1,
+    "quickly": 2,
+    "radical": 1,
+    "radius": 1,
+    "rate": 3,
+    "rather": 1,
+    "ravenous": 1,
+    "raw": 1,
+    "real": 1,
+    "recent": 2,
+    "reckon": 1,
+    "record": 1,
+    "reflection": 1,
+    "reliably": 1,
+    "remade": 1,
+    "remains": 2,
+    "remarkable": 1,
+    "represented": 1,
+    "representing": 1,
+    "represents": 1,
+    "result": 1,
+    "results": 3,
+    "revenue": 3,
+    "revolution": 1,
+    "right": 1,
+    "risk": 1,
+    "rounds": 1,
+    "safeguards": 1,
+    "sales": 1,
+    "same": 3,
+    "sated": 1,
+    "say": 1,
+    "scale": 2,
+    "scattered": 1,
+    "scene": 1,
+    "sealed": 1,
+    "searching": 1,
+    "see": 1,
+    "seeking": 1,
+    "seeks": 1,
+    "seemed": 1,
+    "seems": 2,
+    "seen": 1,
+    "seldom": 1,
+    "sensitive": 1,
+    "sequential": 1,
+    "serve": 1,
+    "served": 1,
+    "set": 1,
+    "shifts": 1,
+    "significance": 1,
+    "simple": 1,
+    "simply": 3,
+    "since": 1,
+    "slow": 1,
+    "so": 1,
+    "society": 1,
+    "software": 3,
+    "sold": 1,
+    "solutions": 1,
+    "some": 2,
+    "someone": 1,
+    "sovereign": 1,
+    "speed": 1,
+    "stanford": 1,
+    "stated": 1,
+    "states": 1,
+    "storied": 1,
+    "story": 1,
+    "striking": 1,
+    "structural": 1,
+    "stunned": 1,
+    "subtext": 1,
+    "success": 1,
+    "such": 1,
+    "sure": 1,
+    "surpassed": 1,
+    "surprise": 1,
+    "surrounding": 1,
+    "sustained": 2,
+    "swath": 1,
+    "systems": 1,
+    "take": 2,
+    "taken": 1,
+    "talent": 2,
+    "tally": 1,
+    "technical": 1,
+    "technological": 1,
+    "technologies": 1,
+    "technology": 1,
+    "tends": 1,
+    "terms": 1,
+    "than": 4,
+    "that": 18,
+    "the": 40,
+    "theatrical": 1,
+    "their": 4,
+    "them": 3,
+    "there": 4,
+    "these": 2,
+    "they": 6,
+    "thing": 1,
+    "things": 1,
+    "think": 1,
+    "third": 1,
+    "this": 8,
+    "those": 4,
+    "through": 2,
+    "time": 3,
+    "to": 22,
+    "tone": 1,
+    "too": 1,
+    "totally": 1,
+    "toward": 1,
+    "towards": 2,
+    "town": 1,
+    "transformed": 1,
+    "turn": 1,
+    "two": 2,
+    "u.s.": 5,
+    "ultimate": 1,
+    "unbounded": 1,
+    "uncertain": 1,
+    "underlying": 1,
+    "understand": 1,
+    "understatement": 1,
+    "understood": 1,
+    "united": 1,
+    "units": 1,
+    "unlike": 1,
+    "unlimited": 1,
+    "unmatched": 1,
+    "unopened": 1,
+    "unproductive": 1,
+    "unruly": 1,
+    "unsatisfying": 1,
+    "unwavering": 2,
+    "us": 4,
+    "use": 1,
+    "utilize": 1,
+    "valuable": 1,
+    "value": 2,
+    "venture": 1,
+    "verdict": 1,
+    "viable": 1,
+    "virtually": 1,
+    "was": 2,
+    "wasteland": 1,
+    "way": 1,
+    "we": 17,
+    "weeks": 1,
+    "well": 2,
+    "were": 3,
+    "what": 7,
+    "when": 1,
+    "whether": 1,
+    "while": 1,
+    "who": 4,
+    "whoever": 1,
+    "whole": 1,
+    "wild": 1,
+    "will": 6,
+    "winners": 1,
+    "with": 10,
+    "without": 2,
+    "word": 1,
+    "world": 3,
+    "worst": 1,
+    "would": 4,
+    "yale": 1,
+    "year": 3,
+    "years": 3,
+    "yet": 3
+   },
+   "n_sentences": 58,
+   "source": "palantir.com",
+   "source_type": "Shareholder letter",
+   "title": "Q3 2026 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://www.palantir.com/q3-2026-letter/en/",
+   "words": 1208
+  },
+  {
+   "counts": {
     "a": 16,
     "acceleration": 1,
     "accompanied": 1,
