@@ -2,6 +2,194 @@
  "docs": [
   {
    "counts": {
+    "accurate": 1,
+    "all": 1,
+    "almost": 1,
+    "and": 6,
+    "are": 1,
+    "ballot": 1,
+    "because": 1,
+    "by": 2,
+    "can": 1,
+    "casting": 1,
+    "coloradan": 1,
+    "coloradans": 2,
+    "colorado": 1,
+    "country": 1,
+    "day": 1,
+    "democracy": 1,
+    "determine": 1,
+    "early": 1,
+    "election": 2,
+    "elections": 1,
+    "encourage": 2,
+    "ensure": 1,
+    "every": 1,
+    "everyone": 1,
+    "future": 1,
+    "get": 3,
+    "gold": 1,
+    "has": 1,
+    "heard": 1,
+    "i": 2,
+    "is": 3,
+    "it": 1,
+    "of": 2,
+    "our": 3,
+    "out": 2,
+    "participates": 1,
+    "pm": 1,
+    "remember": 1,
+    "safe": 1,
+    "secure": 1,
+    "standard": 1,
+    "state": 1,
+    "strongest": 1,
+    "systems": 1,
+    "that": 1,
+    "the": 2,
+    "to": 5,
+    "tomorrow": 1,
+    "trust": 1,
+    "voice": 1,
+    "vote": 3,
+    "when": 1,
+    "you": 1,
+    "your": 2
+   },
+   "date": "2026-11-02",
+   "entries": {
+    "accurate": [
+     0
+    ],
+    "and": [
+     0,
+     0
+    ],
+    "are": [
+     0
+    ],
+    "can": [
+     0
+    ],
+    "coloradans": [
+     0
+    ],
+    "colorado": [
+     0
+    ],
+    "election": [
+     0
+    ],
+    "elections": [
+     0
+    ],
+    "gold": [
+     0
+    ],
+    "has": [
+     0
+    ],
+    "of": [
+     0
+    ],
+    "our": [
+     0
+    ],
+    "safe": [
+     0
+    ],
+    "secure": [
+     0
+    ],
+    "standard": [
+     0
+    ],
+    "systems": [
+     0
+    ],
+    "that": [
+     0
+    ],
+    "the": [
+     0
+    ],
+    "trust": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Colorado has the gold standard of election systems and Coloradans can trust that our elections are safe, secure, and accurate."
+   ],
+   "id": "2026-11-02-governor-news-its-almost-election-day-governor-polis-encoura",
+   "location": "Colorado",
+   "msent": {
+    "accurate": 1,
+    "all": 1,
+    "almost": 1,
+    "and": 4,
+    "are": 1,
+    "ballot": 1,
+    "because": 1,
+    "by": 2,
+    "can": 1,
+    "casting": 1,
+    "coloradan": 1,
+    "coloradans": 2,
+    "colorado": 1,
+    "country": 1,
+    "day": 1,
+    "democracy": 1,
+    "determine": 1,
+    "early": 1,
+    "election": 2,
+    "elections": 1,
+    "encourage": 2,
+    "ensure": 1,
+    "every": 1,
+    "everyone": 1,
+    "future": 1,
+    "get": 3,
+    "gold": 1,
+    "has": 1,
+    "heard": 1,
+    "i": 2,
+    "is": 3,
+    "it": 1,
+    "of": 2,
+    "our": 3,
+    "out": 2,
+    "participates": 1,
+    "pm": 1,
+    "remember": 1,
+    "safe": 1,
+    "secure": 1,
+    "standard": 1,
+    "state": 1,
+    "strongest": 1,
+    "systems": 1,
+    "that": 1,
+    "the": 2,
+    "to": 4,
+    "tomorrow": 1,
+    "trust": 1,
+    "voice": 1,
+    "vote": 3,
+    "when": 1,
+    "you": 1,
+    "your": 2
+   },
+   "n_sentences": 5,
+   "note": "Press release, Office of the Governor; only the passages quoted as Governor Polis's own words",
+   "source": "colorado.gov",
+   "source_type": "Statement",
+   "title": "It’s Almost Election Day! Governor Polis Encourages All Coloradans to Get Out and Vote",
+   "type": "statement",
+   "url": "https://www.colorado.gov/governor/news/its-almost-election-day-governor-polis-encourages-all-coloradans-get-out-and-vote",
+   "words": 80
+  },
+  {
+   "counts": {
     "a": 1,
     "across": 1,
     "and": 2,
@@ -3760,105 +3948,6 @@
    "type": "statement",
    "url": "https://www.colorado.gov/governor/news/governor-polis-applauds-colorado-concern-naming-lisa-kaufmann-next-ceo-and-president-thanks-0",
    "words": 118
-  },
-  {
-   "counts": {
-    "air": 1,
-    "and": 2,
-    "are": 1,
-    "breathe": 1,
-    "carbon": 1,
-    "cleaner": 1,
-    "come": 1,
-    "data": 1,
-    "detection": 1,
-    "driven": 1,
-    "emissions": 1,
-    "encouraging": 1,
-    "environment": 1,
-    "for": 1,
-    "gas": 1,
-    "generations": 1,
-    "greenhouse": 1,
-    "in": 1,
-    "investing": 1,
-    "like": 1,
-    "make": 1,
-    "management": 1,
-    "means": 1,
-    "methane": 1,
-    "new": 1,
-    "of": 1,
-    "our": 2,
-    "pollution": 1,
-    "protect": 1,
-    "protecting": 1,
-    "reduce": 2,
-    "state": 1,
-    "strategies": 1,
-    "technologies": 1,
-    "that": 1,
-    "the": 2,
-    "to": 3,
-    "use": 1,
-    "we": 2,
-    "will": 1
-   },
-   "date": "2026-10-21",
-   "entries": {},
-   "excerpts": [],
-   "id": "2026-10-21-governor-news-polis-administration-awards-139-million-indust",
-   "location": "Colorado",
-   "msent": {
-    "air": 1,
-    "and": 1,
-    "are": 1,
-    "breathe": 1,
-    "carbon": 1,
-    "cleaner": 1,
-    "come": 1,
-    "data": 1,
-    "detection": 1,
-    "driven": 1,
-    "emissions": 1,
-    "encouraging": 1,
-    "environment": 1,
-    "for": 1,
-    "gas": 1,
-    "generations": 1,
-    "greenhouse": 1,
-    "in": 1,
-    "investing": 1,
-    "like": 1,
-    "make": 1,
-    "management": 1,
-    "means": 1,
-    "methane": 1,
-    "new": 1,
-    "of": 1,
-    "our": 2,
-    "pollution": 1,
-    "protect": 1,
-    "protecting": 1,
-    "reduce": 2,
-    "state": 1,
-    "strategies": 1,
-    "technologies": 1,
-    "that": 1,
-    "the": 1,
-    "to": 2,
-    "use": 1,
-    "we": 1,
-    "will": 1
-   },
-   "n_sentences": 2,
-   "note": "Press release, Office of the Governor; only the passages quoted as Governor Polis's own words",
-   "source": "colorado.gov",
-   "source_type": "Statement",
-   "title": "Polis Administration Awards $13.9 Million for Industrial Pollution Reduction Efforts",
-   "type": "statement",
-   "url": "https://www.colorado.gov/governor/news/polis-administration-awards-139-million-industrial-pollution-reduction-efforts",
-   "words": 47
   },
   {
    "counts": {
