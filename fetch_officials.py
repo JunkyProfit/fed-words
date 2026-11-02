@@ -52,8 +52,14 @@ def drop_parens(s):   # stage directions like (Laughter.) (Applause.) [Inaudible
     s = re.sub(r"\[[^\]]*\]", "", s)
     return " ".join(s.split())
 
+def old_fetched(index_path):
+    """{doc id: fetched} from an existing index.json, so rechecks with nothing new leave the file unchanged."""
+    try: return {d["id"]: d.get("fetched") for d in json.loads(Path(index_path).read_text(encoding="utf-8"))}
+    except Exception: return {}
+
 def write_person(slug, person, docs):
     out = TDIR / slug; out.mkdir(parents=True, exist_ok=True)
+    prev = old_fetched(out / "index.json")
     keep = set()
     for d in docs:
         (out / f"{d['id']}.txt").write_text("\n\n".join(d.pop("paras")) + "\n", encoding="utf-8"); keep.add(f"{d['id']}.txt")
@@ -61,7 +67,7 @@ def write_person(slug, person, docs):
         if f.name not in keep: f.unlink()
     idx = [{"id": d["id"], "file": f"{d['id']}.txt", "person": person, "url": d["url"], "type": d["type"], "title": d["title"],
             "date": d["date"], "location": d.get("location", ""), "source": d["source"], "note": d.get("note", ""),
-            "fetched": dt.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")} for d in sorted(docs, key=lambda d: d["date"], reverse=True)]
+            "fetched": prev.get(d["id"]) or dt.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")} for d in sorted(docs, key=lambda d: d["date"], reverse=True)]
     (out / "index.json").write_text(json.dumps(idx, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     for d in idx:
         n = len((out / d["file"]).read_text().split())
@@ -287,11 +293,16 @@ SENATORS = {"barrasso": ("John Barrasso", "Senate Majority Whip", None, "Senate"
             "murphy": ("Christopher Murphy", "U.S. Senator", None, "Senate"),
             "klobuchar": ("Amy Klobuchar", "U.S. Senator", None, "Senate"),
             "hickenlooper": ("John W. Hickenlooper", "U.S. Senator", None, "Senate"),
-            "lummis": ("Cynthia M. Lummis", "U.S. Senator", None, "Senate")}
+            "lummis": ("Cynthia M. Lummis", "U.S. Senator", None, "Senate"),
+            "bennet": ("Michael F. Bennet", "U.S. Senator", None, "Senate")}
+# Rechecked on every run (weekly refresh), not only when missing: new Congressional Record days are downloaded,
+# cached days are reused, so nothing is re-downloaded. Bennet + Hickenlooper (Colorado) and Gov. Polis.
+RECHECK = {"bennet", "hickenlooper", "polis"}
 SENATOR_MAX = 20
 LEADERS.update(SENATORS)
 CREC_FROM, CREC_TO, CREC_MAX, CREC_MIN = dt.date(2026, 1, 3), dt.date(2026, 10, 1), 5, 250
-SKIP_TITLE = re.compile(r"(?i)^(tribute|recogniz|remember|congratulat|commemorat|honoring|celebrat|additional statements|introductory statement|statements on|submitted resolutions|resolutions submitted|amendments submitted|executive calendar|orders? for|unanimous consent|measures|.*authority$|morning business|legislative session|executive session|cloture|adjournment|waiving|privileges of the floor|appointment|executive reports|nominations|messages|petitions|quorum|recess|schedule|calendar|prayer|pledge of allegiance|reservation of leader time|recognition of the|conclusion of|house of representatives|senate$|daily digest|program)")
+CREC_TO_RECHECK = dt.date.today()   # RECHECK senators: 2026 to today
+SKIP_TITLE = re.compile(r"(?i)^(vote explanation|tribute|recogniz|remember|congratulat|commemorat|honoring|celebrat|additional statements|introductory statement|statements on|submitted resolutions|resolutions submitted|amendments submitted|executive calendar|orders? for|unanimous consent|measures|.*authority$|morning business|legislative session|executive session|cloture|adjournment|waiving|privileges of the floor|appointment|executive reports|nominations|messages|petitions|quorum|recess|schedule|calendar|prayer|pledge of allegiance|reservation of leader time|recognition of the|conclusion of|house of representatives|senate$|daily digest|program)")
 LABEL_C = re.compile(r"^  ((?:Mr|Ms|Mrs|Miss|Dr)\. [A-Z][A-Z'\-]+(?: [A-Z][A-Z'\-]+)*(?: of [A-Z][a-z]+(?: [A-Z][a-z]+)*)?|The (?:ACTING |VICE )?(?:PRESIDENT|PRESIDING OFFICER|SPEAKER|CHAIR|CHAIRMAN|CLERK)(?: pro tempore)?)\.\s")
 CLERKISH = re.compile(r"^(There (being|was) no objection|The (legislative|assistant|senior|bill|motion|resolution|amendment|question|yeas|clerk|Clerk|nomination|preamble|concurrent|joint|result|vote)|Thereupon|Accordingly|Pursuant to|Without objection|\(|\[)")
 
@@ -323,7 +334,10 @@ def crec_mods(day):
     f = RAW / "crec" / f"CREC-{day}.mods.xml"; miss = f.with_suffix(".none")
     if miss.exists(): return None
     try: return get(f"https://www.govinfo.gov/metadata/pkg/CREC-{day}/mods.xml", f).decode("utf-8")
-    except Exception: miss.parent.mkdir(parents=True, exist_ok=True); miss.write_text("none"); return None
+    except Exception:
+        if day < dt.date.today() - dt.timedelta(days=21):     # recent days may still be published later: retry next run
+            miss.parent.mkdir(parents=True, exist_ok=True); miss.write_text("none")
+        return None
 
 def smart_title(t):
     t = html.unescape(t)
@@ -335,12 +349,12 @@ def smart_title(t):
     return re.sub(r" -- (\w)", lambda m: ": " + m.group(1).upper(), out)
 
 def fetch_congress(args):
-    todo = [k for k in LEADERS if (args.only in (None, "congress", k) or (args.only == "senators" and k in SENATORS)) and (args.refresh or not (TDIR / k / "index.json").exists())]
+    todo = [k for k in LEADERS if (args.only in (None, "congress", k) or (args.only == "senators" and k in SENATORS)) and (args.refresh or k in RECHECK or not (TDIR / k / "index.json").exists())]
     if not todo:
         if args.only in (None, "congress") or args.only in LEADERS: print("  congress: up to date")
         return
     days = []
-    d = CREC_TO
+    d = CREC_TO_RECHECK if any(k in RECHECK for k in todo) else CREC_TO
     while d >= CREC_FROM:
         days.append(d); d -= dt.timedelta(days=1)
     mods = {}
@@ -350,8 +364,9 @@ def fetch_congress(args):
     for slug, (name, role, label, chamber) in LEADERS.items():
         if slug not in todo: continue
         docs, cmax = [], SENATOR_MAX if slug in SENATORS else CREC_MAX
+        to = CREC_TO_RECHECK if slug in RECHECK else CREC_TO
         for day in days:
-            if day not in mods: continue
+            if day not in mods or day > to: continue
             for r in re.split(r'(?=<relatedItem type="constituent")', mods[day])[1:]:
                 title = re.search(r"<title>(.*?)</title>", r, re.S).group(1)
                 part = (re.search(r"<partName>(.*?)</partName>", r) or [None, ""])[1]
@@ -525,6 +540,9 @@ def fetch_scotus(args):
 # the gitignored local_sources/<slug>/ and only word counts + a limited excerpt set are committed (derived/<slug>.json).
 LOCAL = ROOT / "local_sources"
 GOV_N, GOV_MIN, GOV_SCAN = 20, 40, 240
+# Speeches always kept (beyond the 20 latest items): release pages whose "full text ... as prepared" file is the speech.
+GOV_PINNED = {"polis": ["https://www.colorado.gov/governor/news/governor-polis-delivers-2026-and-final-state-state-address-state-our-state-strong-resilient"]}
+FULLTEXT_LINK = re.compile(r'(?is)<a\b[^>]*href="(https://drive\.google\.com/file/d/[\w\-]+[^"]*|[^"]+\.pdf)"[^>]*>[^<]*(?:full text|full remarks|as prepared)[^<]*</a>')
 GOVERNORS = {   # slug: (name, surname, state, newsroom page URL template, article-link regex, first page)
     "abbott": ("Greg Abbott", "Abbott", "Texas", "https://gov.texas.gov/news/P{o8}", r"https://gov\.texas\.gov/news/post/[a-z0-9\-]+", 0),
     "desantis": ("Ron DeSantis", "DeSantis", "Florida", "https://www.flgov.com/eog/news/press?page={n}", r"/eog/news/press/20\d\d/[a-z0-9\-]+", 0),
@@ -537,8 +555,9 @@ GOVERNORS = {   # slug: (name, surname, state, newsroom page URL template, artic
     "moore": ("Wes Moore", "Moore", "Maryland", "https://governor.maryland.gov/news/press-releases?page={n}", r"/news/press-releases/[a-z0-9\-]+", 0),
     "ferguson": ("Bob Ferguson", "Ferguson", "Washington", "https://www.governor.wa.gov/news/news-releases?page={n}", r"/news/20\d\d/[a-z0-9\-]+", 0),
     "hobbs": ("Katie Hobbs", "Hobbs", "Arizona", "https://azgovernor.gov/news-releases?page={n}", r"https://azgovernor\.gov/office-arizona-governor/news/20\d\d/\d\d/[a-z0-9\-]+", 0),
-    # mm90: governor.colorado.gov (Polis) refuses connections from this machine (TLS reset; colorado.gov answers 403), so
-    # Hawaii's governor was added as the sixth Democrat instead.
+    # mm90: governor.colorado.gov refuses connections from this machine (TLS reset), so Hawaii's governor was added as the
+    # sixth Democrat. Nov 2026: the office now posts at www.colorado.gov/governor/news, which answers, so Polis was added too.
+    "polis": ("Jared Polis", "Polis", "Colorado", "https://www.colorado.gov/governor/news?page={n}", r"/governor/news/[a-z0-9\-]+", 0),
     "green": ("Josh Green", "Green", "Hawaii", "https://governor.hawaii.gov/category/newsroom/page/{n1}/", r"https://governor\.hawaii\.gov/(?!category/|contact-us/|about/|wp-)[a-z0-9\-]+/[^\"'/#?]{12,}/", 0),
 }
 SPANISH = re.compile(r"(?i)gobernador|anuncia|\bdel\b.*\bde la\b|-la-|-el-|-los-|-las-")
@@ -680,6 +699,18 @@ def gov_doc(slug, url, refresh):
     title, date = gov_title(raw), gov_date(raw, url)
     paras = gov_paras(raw)
     tr = gov_transcript(paras, sur)
+    fl = FULLTEXT_LINK.search(raw)
+    if fl:      # the office's own "full text of the speech as prepared for delivery" file (PDF / Google Drive)
+        u = html.unescape(fl.group(1)); m = re.search(r"/file/d/([\w\-]+)", u)
+        dl = f"https://drive.google.com/uc?export=download&id={m.group(1)}" if m else (u if u.startswith("http") else re.match(r"https://[^/]+", url).group(0) + u)
+        try:
+            pdf = RAW / "gov" / slug / f"{key}.pdf"; get(dl, pdf)
+            sp = statement_paras(pdf_text(pdf)) if pdf.read_bytes()[:4] == b"%PDF" else []
+        except Exception as e: print(f"  {slug} full text {dl}: {e}"); sp = []
+        if sum(len(p.split()) for p in sp) >= 300:
+            did = re.sub(r"[^a-z0-9]+", "-", key.split("/")[-1])[:60].strip("-")
+            return dict(id=f"{date}-{did}"[:72], url=u, type="remarks", title=title, date=date, location=state, source="colorado.gov" if "colorado.gov" in url else re.match(r"https://(?:www\.)?([^/]+)", url).group(1),
+                        paras=sp, note=f"Full text as prepared for delivery, posted by the Office of the Governor (linked from {url})")
     if tr and sum(len(p.split()) for p in tr) >= GOV_MIN:
         typ, words, note = "remarks", tr, f"Transcript posted by the Office of the Governor; only Governor {sur}'s own words"
     else:
@@ -691,9 +722,10 @@ def gov_doc(slug, url, refresh):
 def fetch_governors(args):
     for slug, (name, sur, state, *_ ) in GOVERNORS.items():
         if args.only not in (None, "governors", slug): continue
-        if (LOCAL / slug / "index.json").exists() and not args.refresh: print(f"  {slug}: up to date"); continue
+        if (LOCAL / slug / "index.json").exists() and not args.refresh and slug not in RECHECK: print(f"  {slug}: up to date"); continue
+        prev = old_fetched(LOCAL / slug / "index.json")
         docs, seen = [], []
-        for url in gov_list(slug, args.refresh):
+        for url in GOV_PINNED.get(slug, []) + gov_list(slug, args.refresh):
             slugpart = url.rstrip("/").rsplit("/", 1)[-1]
             if SPANISH.search(slugpart) or ADVISORY.search(slugpart): continue
             try: d = gov_doc(slug, url, args.refresh)
@@ -703,7 +735,7 @@ def fetch_governors(args):
             ss = {s_.strip().lower() for p in d["paras"] for s_ in re.split(r"(?<=[.!?])\s+", p) if len(s_.split()) >= 6}
             if any(ss and len(ss & t) / len(ss) >= 0.85 for t in seen): continue          # same quote/speech posted twice
             seen.append(ss); docs.append(d)
-            if len(docs) >= GOV_N: break
+            if len(docs) >= GOV_N + len(GOV_PINNED.get(slug, [])): break
         if not docs: print(f"  SKIP {slug}: nothing usable"); continue
         out = LOCAL / slug; out.mkdir(parents=True, exist_ok=True)
         for f in out.glob("*.txt"): f.unlink()
@@ -713,7 +745,7 @@ def fetch_governors(args):
             idx.append({"id": d["id"], "file": f"{d['id']}.txt", "person": name, "category": "US Government", "url": d["url"], "type": d["type"],
                         "source": d["source"], "title": d["title"], "date": d["date"], "location": d["location"], "note": d["note"],
                         "source_type": "Remarks" if d["type"] == "remarks" else "Statement",
-                        "fetched": dt.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")})
+                        "fetched": prev.get(d["id"]) or dt.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")})
             print(f"  {slug:9s} {d['date']} {d['type']:9s} {sum(len(p.split()) for p in d['paras']):6d} words | {d['title'][:80]}")
         (out / "index.json").write_text(json.dumps(idx, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 

@@ -46,6 +46,8 @@ letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End m
 | US Government › Cabinet | **Howard Lutnick** (Commerce) | 3 prepared testimony statements, 2025–2026 | appropriations.senate.gov |
 | US Government › Cabinet | **Pete Hegseth** (War/Defense) | 2 written statements + his spoken turns in the Apr 30, 2026 SASC hearing | armed-services.senate.gov, appropriations.senate.gov |
 | US Government › Congress | **Mike Johnson** (Speaker), **Hakeem Jeffries** (House Democratic Leader), **John Thune** (Senate Majority Leader), **Charles E. Schumer** (Senate Democratic Leader) | up to 5 most recent floor speeches each in 2026 (his own remarks only) | Congressional Record via govinfo.gov |
+| US Government › Senate | **Michael F. Bennet**, **John W. Hickenlooper** (Colorado) | up to 20 most recent floor speeches each, Jan 3, 2026 to the day of the run (his own spoken remarks only; vote explanations and procedural items excluded); rechecked every run | Congressional Record via govinfo.gov |
+| US Government › Governors | **Jared Polis** (Colorado) | his 2026 State of the State address (full text as prepared, the PDF the Governor's Office links from its release) + the 20 latest newsroom items with at least 40 of his own words (transcripts, or only the passages quoted as his); rechecked every run | colorado.gov/governor |
 | US Government › Supreme Court | **all nine Justices** | up to 3 most recent signed opinions each, October Term 2025 (opinion of the Court, concurrence or dissent) | supremecourt.gov |
 
 All federal texts are U.S. government works, not subject to copyright (17 U.S.C. §105), so they
@@ -372,6 +374,15 @@ per-sentence counts always add up to the transcript totals. `build.py` checks th
 and stops with an error if they don't.
 
 ## Refresh with new speeches
+**Weekly (Colorado speakers, Nov 2026):** `python3 fetch_officials.py --only bennet && python3 fetch_officials.py --only hickenlooper && python3 fetch_officials.py --only polis && python3 build.py`.
+These three slugs are in `RECHECK` in `fetch_officials.py`, so they are re-checked every run instead of being skipped once saved:
+the senators scan Congressional Record days from Jan 3, 2026 to today (each day's `mods.xml` and each speech page is cached in
+`raw/officials/`, so only new days are downloaded; a day with no Record is retried for 21 days before being marked empty), and Polis
+re-reads the first newsroom pages at www.colorado.gov/governor/news (articles cached). `fetched` timestamps of unchanged documents are
+kept, so a run with nothing new leaves `transcripts/` and `local_sources/` unchanged. (The old host governor.colorado.gov still
+refuses this machine; the www.colorado.gov/governor path works.) Polis's text is state work, so it uses the excerpt policy like the
+other governors (`local_sources/polis/` gitignored, `derived/polis.json` committed).
+
 Run `python3 fetch.py && python3 build.py`, then redeploy `index.html`. You can safely
 run this every week:
 - `fetch.py` only downloads items not already in `transcripts/index.json`. Saved

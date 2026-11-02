@@ -772,6 +772,24 @@
     "credit": "Congressional Record, daily edition (U.S. Government Publishing Office); U.S. government work, public domain (17 U.S.C. §105)"
   },
   {
+    "slug": "bennet",
+    "name": "Michael F. Bennet",
+    "display": "Senator Michael F. Bennet",
+    "category": "US Government",
+    "group": "Senate",
+    "role": "U.S. Senator (D-CO)",
+    "org": "U.S. Senate",
+    "policy": "full",
+    "source": "govinfo.gov",
+    "doc_noun": "floor speeches",
+    "doc_noun1": "floor speech",
+    "mode": "cong",
+    "eyebrow": "Senator · Colorado",
+    "unit": "speech",
+    "unit_pl": "speeches",
+    "credit": "Congressional Record, daily edition (U.S. Government Publishing Office); U.S. government work, public domain (17 U.S.C. §105)"
+  },
+  {
     "slug": "johnson",
     "name": "Mike Johnson",
     "display": "Speaker Mike Johnson",
@@ -1022,6 +1040,24 @@
     "unit": "statement",
     "unit_pl": "statements",
     "credit": "Remarks and quoted statements from the Office of the Governor newsroom (governor.hawaii.gov); only the governor's own words, shown as word counts and short excerpts with links to the originals"
+  },
+  {
+    "slug": "polis",
+    "name": "Jared Polis",
+    "display": "Governor Jared Polis",
+    "category": "US Government",
+    "group": "Governors",
+    "role": "Governor of Colorado (D-CO)",
+    "org": "State of Colorado",
+    "policy": "excerpt",
+    "source": "colorado.gov",
+    "doc_noun": "public statements",
+    "doc_noun1": "public statement",
+    "mode": "gov",
+    "eyebrow": "Governor · Colorado",
+    "unit": "statement",
+    "unit_pl": "statements",
+    "credit": "The 2026 State of the State address (full text as prepared, posted by the Office of the Governor) plus remarks and quoted statements from the governor's newsroom (colorado.gov/governor); only the governor's own words, shown as word counts and short excerpts with links to the originals"
   },
   {
     "slug": "roberts",
