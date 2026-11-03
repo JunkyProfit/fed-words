@@ -195,13 +195,13 @@
     "role": "Co-Founder & CEO, Palantir Technologies",
     "org": "Palantir",
     "policy": "excerpt",
-    "source": "palantir.com",
-    "doc_noun": "shareholder letters",
+    "source": "palantir.com, investing.com",
+    "doc_noun": "shareholder letters and earnings call remarks",
     "mode": "ceo",
     "eyebrow": "CEO · Palantir",
-    "doc_noun1": "shareholder letter",
-    "unit": "letter",
-    "unit_pl": "letters"
+    "doc_noun1": "document",
+    "unit": "document",
+    "unit_pl": "documents"
   },
   {
     "slug": "jassy",
