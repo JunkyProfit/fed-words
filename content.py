@@ -332,7 +332,7 @@ def article_page(slug, title, privacy, fill):
                  body=f"<h1>{esc(title)}</h1>\n" + body + '\n<p><a href="./">More articles</a> · <a href="../speakers/">All speakers</a></p>', prefix="../")
 
 def articles_index(privacy):
-    li = '<li><strong><a href="../findings.html">15 Key Findings from the Transcripts</a></strong> &mdash; concrete word-count patterns across Fed Chairs, US Presidents, and S&amp;P 500 CEOs.</li>' + "".join(f'<li><a href="{s}.html">{esc(t)}</a></li>' for s, t in ARTICLES)
+    li = '<li><strong><a href="../findings.html">18 Key Findings from the Transcripts</a></strong> &mdash; concrete word-count patterns across Fed Chairs, US Presidents, and S&amp;P 500 CEOs.</li>' + "".join(f'<li><a href="{s}.html">{esc(t)}</a></li>' for s, t in ARTICLES)
     return shell(privacy, title="Articles", desc="Short articles and data findings about how MouthMath counts words and what the numbers show.",
                  path="articles/", body=f'<h1>Articles &amp; Findings</h1>\n<p class="upd">Short reads on how MouthMath works and what the counts show.</p>\n<ul class="plain">{li}</ul>\n<p><a href="../speakers/">Browse all speakers</a></p>',
                  current="articles/", prefix="../")
@@ -380,11 +380,11 @@ def stats(by, stop):   # printed by build.py so the article text can be checked 
 
 def findings_page(privacy):
     body = """<section class="fhero" aria-label="Overview">
-<div class="feyebrow"><i aria-hidden="true"></i>MouthMath Research &middot; 15 Findings</div>
-<h1>15 Key Findings from the Transcripts</h1>
+<div class="feyebrow"><i aria-hidden="true"></i>MouthMath Research &middot; 18 Findings</div>
+<h1>18 Key Findings from the Transcripts</h1>
 <p class="flead">What Federal Reserve Chairs, US Presidents, and S&amp;P 500 CEOs emphasize most&mdash;and what they rarely say&mdash;measured by exact word counts and normalized per 1,000 words across MouthMath&rsquo;s public-transcript corpus.</p>
 <div class="fkpis">
-<div class="fkpi"><b>15</b><span>Transcript findings</span></div>
+<div class="fkpi"><b>18</b><span>Transcript findings</span></div>
 <div class="fkpi"><b>89</b><span>Speakers counted</span></div>
 <div class="fkpi"><b>40 yrs</b><span>Fed Chair span</span></div>
 <div class="fkpi"><b>Per 1k</b><span>Normalized rates</span></div>
@@ -393,6 +393,7 @@ def findings_page(privacy):
 <a href="#fed">Federal Reserve <em>01&ndash;07</em></a>
 <a href="#presidents">US Presidents <em>08&ndash;10</em></a>
 <a href="#ceos">CEOs <em>11&ndash;15</em></a>
+<a href="#warsh">New Fed Chair <em>16&ndash;18</em></a>
 <a href="#method">Method</a>
 </nav>
 </section>
@@ -429,18 +430,20 @@ def findings_page(privacy):
 
 <article class="fcard" id="f3">
 <div class="ftop"><span class="fnum">#03</span><span class="ftag">Federal Reserve Chairs &middot; Five-Chair Historical Comparison</span></div>
-<h3>Over 40 years, each Fed Chair said &ldquo;inflation&rdquo; more often than the one before</h3>
+<h3>From Volcker to Powell, each Fed Chair in our sample said &ldquo;inflation&rdquo; more often than the one before&mdash;then Warsh broke the streak</h3>
 <div class="fviz">
-<div class="fviz-ttl">&ldquo;inflation&rdquo; mentions per 1,000 total words across five Fed Chairs</div>
+<div class="fviz-ttl">&ldquo;inflation&rdquo; mentions per 1,000 total words across six Fed Chairs</div>
+<div class="fbrow"><span class="flbl">Warsh <small>2026</small></span><div class="fbtrack"><div class="fbfill alt" style="width:44%"></div></div><span class="fbval"><em>5.11</em>/1k <small>(119 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Powell <small>2024&ndash;26</small></span><div class="fbtrack"><div class="fbfill" style="width:100%"></div></div><span class="fbval"><em>11.53</em>/1k <small>(260 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Yellen <small>2016&ndash;17</small></span><div class="fbtrack"><div class="fbfill" style="width:51%"></div></div><span class="fbval"><em>5.84</em>/1k <small>(282 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Bernanke <small>2013&ndash;14</small></span><div class="fbtrack"><div class="fbfill alt" style="width:24%"></div></div><span class="fbval">2.71/1k <small>(131 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Greenspan <small>2005</small></span><div class="fbtrack"><div class="fbfill alt" style="width:12%"></div></div><span class="fbval">1.37/1k <small>(60 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Volcker <small>1986&ndash;87</small></span><div class="fbtrack"><div class="fbfill alt" style="width:8%"></div></div><span class="fbval">0.96/1k <small>(70 uses)</small></span></div>
 </div>
-<p>Measured per 1,000 total words, <strong>&ldquo;inflation&rdquo;</strong> rises in every consecutive Chair&rsquo;s corpus: <strong>Paul Volcker</strong> at <span class="pnum">0.96</span> (<span class="pnum">70 uses</span> in 1986&ndash;87), <strong>Alan Greenspan</strong> at <span class="pnum">1.37</span> (<span class="pnum">60 uses</span> in 2005), <strong>Ben Bernanke</strong> at <span class="pnum">2.71</span> (<span class="pnum">131 uses</span> in 2013&ndash;14), <strong>Janet Yellen</strong> at <span class="num">5.84</span> (<span class="num">282 uses</span> in 2016&ndash;17), and <strong>Jerome Powell</strong> at <span class="num">11.53</span> (<span class="num">260 uses</span> in 2024&ndash;26).</p>
-<p>While each Chair&rsquo;s 20-speech sample captures the economic backdrop near the end of their tenure, the steady four-decade climb also aligns with the institutional shift toward explicit inflation targeting and modern &ldquo;forward guidance,&rdquo; where public communication is itself part of monetary policy.</p>
+<p>Measured per 1,000 total words, <strong>&ldquo;inflation&rdquo;</strong> rises in every consecutive Chair&rsquo;s corpus: <strong>Paul Volcker</strong> at <span class="pnum">0.96</span> (<span class="pnum">70 uses</span> in 1986&ndash;87), <strong>Alan Greenspan</strong> at <span class="pnum">1.37</span> (<span class="pnum">60 uses</span> in 2005), <strong>Ben Bernanke</strong> at <span class="pnum">2.71</span> (<span class="pnum">131 uses</span> in 2013&ndash;14), <strong>Janet Yellen</strong> at <span class="num">5.84</span> (<span class="num">282 uses</span> in 2016&ndash;17), and <strong>Jerome Powell</strong> at <span class="num">11.53</span> (<span class="num">260 uses</span> in 2024&ndash;26). <strong>Kevin Warsh</strong> breaks that run at <span class="num">5.11</span> (<span class="num">119 uses</span> in 23,297 words, June&ndash;October 2026)&mdash;see <a href="#f16">Finding #16</a>.</p>
+<p>While each Chair&rsquo;s 20-speech sample captures the economic backdrop near the end of their tenure, the steady climb from Volcker through Powell also aligns with the institutional shift toward explicit inflation targeting and modern &ldquo;forward guidance,&rdquo; where public communication is itself part of monetary policy. These are sample-level word counts, not a full record of each Chair&rsquo;s remarks, and Warsh&rsquo;s sample so far is only six documents, mostly press conferences.</p>
 <div class="flinks">
+<a href="./#person=warsh&amp;docs=all">Warsh &rarr;</a>
 <a href="./#person=powell&amp;docs=all">Powell &rarr;</a>
 <a href="./#person=yellen&amp;docs=all">Yellen &rarr;</a>
 <a href="./#person=bernanke&amp;docs=all">Bernanke &rarr;</a>
@@ -465,7 +468,7 @@ def findings_page(privacy):
 
 <article class="fcard" id="f5">
 <div class="ftop"><span class="fnum">#05</span><span class="ftag">Federal Reserve Board &middot; Governors vs. Chairs</span></div>
-<h3>AI has taken over Fed governors&rsquo; speeches, but not the Chair&rsquo;s</h3>
+<h3>AI has taken over Fed governors&rsquo; speeches&mdash;and Warsh is the first Chair in our sample to say it</h3>
 <div class="fviz">
 <div class="fviz-ttl">&ldquo;ai&rdquo; mentions per 1,000 words across Federal Reserve officials</div>
 <div class="fbrow"><span class="flbl">Michael Barr</span><div class="fbtrack"><div class="fbfill" style="width:100%"></div></div><span class="fbval"><em>6.84</em>/1k <small>(300 uses)</small></span></div>
@@ -473,16 +476,18 @@ def findings_page(privacy):
 <div class="fbrow"><span class="flbl">Christopher Waller</span><div class="fbtrack"><div class="fbfill alt" style="width:57%"></div></div><span class="fbval">3.92/1k <small>(167 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Philip Jefferson</span><div class="fbtrack"><div class="fbfill alt" style="width:43%"></div></div><span class="fbval">2.95/1k <small>(128 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Michelle Bowman</span><div class="fbtrack"><div class="fbfill alt" style="width:37%"></div></div><span class="fbval">2.54/1k <small>(87 uses)</small></span></div>
+<div class="fbrow"><span class="flbl">Kevin Warsh</span><div class="fbtrack"><div class="fbfill alt" style="width:15%"></div></div><span class="fbval">1.03/1k <small>(24 uses)</small></span></div>
 <div class="fbrow"><span class="flbl">Jerome Powell</span><div class="fbtrack"><div class="fbfill alt" style="width:1%"></div></div><span class="fbval">0.00/1k <small>(0 uses)</small></span></div>
 </div>
 <p>Artificial intelligence has become a central research and policy theme for Federal Reserve governors: <strong>Michael Barr</strong> leads at <span class="num">6.84 mentions of &ldquo;ai&rdquo; per 1,000 words</span> (<span class="num">300 total uses</span>, including single-speech peaks of <span class="num">99</span> on February 17, 2026 and <span class="num">85</span> on July 14, 2026), followed by <strong>Lisa Cook</strong> at <span class="num">6.42 per 1,000</span> (<span class="num">280 uses</span>, with peaks of <span class="num">66</span> on July 17, 2025 and <span class="num">71</span> on May 27, 2026), <strong>Christopher Waller</strong> (<span class="pnum">3.92</span>, 167 uses), <strong>Philip Jefferson</strong> (<span class="pnum">2.95</span>, 128 uses), and <strong>Michelle Bowman</strong> (<span class="pnum">2.54</span>, 87 uses).</p>
-<p>Across Jerome Powell&rsquo;s 20 indexed documents, <strong>&ldquo;ai&rdquo;</strong> appears <span class="num">0.00 times per 1,000 words</span>&mdash;and every past Fed Chair in the sample is also at <span class="num">0</span>.</p>
+<p>Across Jerome Powell&rsquo;s 20 indexed documents, <strong>&ldquo;ai&rdquo;</strong> appears <span class="num">0.00 times per 1,000 words</span>, as it does for Yellen, Bernanke, Greenspan, and Volcker. <strong>Kevin Warsh</strong> changes that: <span class="num">24 uses</span> across his first six documents (<span class="pnum">1.03 per 1,000</span>)&mdash;still well below the governors&rsquo; rates (see <a href="#f17">Finding #17</a>).</p>
 <div class="flinks">
 <a href="./#person=barr&amp;docs=all">Barr &rarr;</a>
 <a href="./#person=lisacook&amp;docs=all">Cook &rarr;</a>
 <a href="./#person=waller&amp;docs=all">Waller &rarr;</a>
 <a href="./#person=jefferson&amp;docs=all">Jefferson &rarr;</a>
 <a href="./#person=bowman&amp;docs=all">Bowman &rarr;</a>
+<a href="./#person=warsh&amp;docs=all">Warsh &rarr;</a>
 </div>
 </article>
 
@@ -658,6 +663,50 @@ def findings_page(privacy):
 <div class="flinks"><a href="./#person=musk&amp;docs=all">Explore Elon Musk &rarr;</a></div>
 </article>
 
+<div class="fsec-hd" id="warsh"><h2>IV. New Fed Chair</h2><span>Findings 16 &ndash; 18 &middot; Kevin Warsh (Jun &ndash; Oct 2026)</span></div>
+
+<article class="fcard" id="f16">
+<div class="ftop"><span class="fnum">#16</span><span class="ftag">Federal Reserve Chair &middot; Kevin Warsh (Jun &ndash; Oct 2026)</span></div>
+<h3>Warsh breaks the Chair-by-Chair climb in &ldquo;inflation&rdquo; talk</h3>
+<div class="fgrid">
+<div class="fstat"><div class="fsw">Warsh &ldquo;inflation&rdquo;</div><div class="fsv">5.11 / 1k</div><div class="fss">119 uses in 23,297 words</div></div>
+<div class="fstat"><div class="fsw">Powell &ldquo;inflation&rdquo;</div><div class="fsv">11.53 / 1k</div><div class="fss">260 uses, 2024&ndash;26</div></div>
+<div class="fstat"><div class="fsw">Warsh prepared texts</div><div class="fsv">6.98 / 1k</div><div class="fss">34 uses in 4,871 words</div></div>
+<div class="fstat"><div class="fsw">Warsh press conferences</div><div class="fsv">4.61 / 1k</div><div class="fss">85 uses in 18,426 words</div></div>
+</div>
+<p>Across <strong>Kevin Warsh&rsquo;s</strong> six indexed documents (June 17 to October 28, 2026: four FOMC press conferences, one Congressional testimony, and one speech), <strong>&ldquo;inflation&rdquo;</strong> appears <span class="num">119 times</span> in <span class="num">23,297 words</span>, or <span class="num">5.11 per 1,000</span>&mdash;tied with <strong>&ldquo;policy&rdquo;</strong> (also 119) as his most-used content word, and less than half of Powell&rsquo;s <span class="pnum">11.53</span>. That ends the run in <a href="#f3">Finding #03</a>, where each Chair from Volcker through Powell came in higher than the one before.</p>
+<p><strong>Caveat:</strong> Powell&rsquo;s sample is speeches and testimony, while most of Warsh&rsquo;s words come from press-conference answers. Counting only Warsh&rsquo;s prepared testimony and speech, his rate is <span class="pnum">6.98 per 1,000</span>&mdash;still below Powell, but closer. This is a word-count pattern in a small, early sample, not evidence of a change in policy.</p>
+<div class="flinks"><a href="./#person=warsh&amp;docs=all">Explore Kevin Warsh &rarr;</a><a href="articles/warsh-oct-2026-fomc.html">Warsh&rsquo;s October press conference &rarr;</a></div>
+</article>
+
+<article class="fcard" id="f17">
+<div class="ftop"><span class="fnum">#17</span><span class="ftag">Federal Reserve Chairs &middot; Artificial Intelligence</span></div>
+<h3>Warsh is the first Fed Chair in our sample to say &ldquo;AI&rdquo;</h3>
+<div class="fgrid">
+<div class="fstat"><div class="fsw">Warsh &ldquo;ai&rdquo;</div><div class="fsv">24 uses</div><div class="fss">1.03 / 1k across 6 documents</div></div>
+<div class="fstat"><div class="fsw">Five earlier Chairs</div><div class="fsv">0</div><div class="fss">Volcker through Powell samples</div></div>
+<div class="fstat"><div class="fsw">Warsh Aug 28 speech</div><div class="fsv">8 uses</div><div class="fss">in 3,563 words</div></div>
+<div class="fstat"><div class="fsw">Michael Barr</div><div class="fsv">6.84 / 1k</div><div class="fss">Governors still lead</div></div>
+</div>
+<p><strong>&ldquo;ai&rdquo;</strong> appears <span class="num">0 times</span> in MouthMath&rsquo;s samples for Powell, Yellen, Bernanke, Greenspan, and Volcker. <strong>Kevin Warsh</strong> says it <span class="num">24 times</span> (<span class="pnum">1.03 per 1,000 words</span>), and it shows up in every one of his six documents: <span class="pnum">12</span> across four FOMC press conferences, <span class="pnum">4</span> in his July 14 testimony, and <span class="pnum">8</span> in his August 28 speech.</p>
+<p>The governors are still far ahead&mdash;<strong>Michael Barr</strong> at <span class="pnum">6.84 per 1,000</span> and <strong>Lisa Cook</strong> at <span class="pnum">6.42</span> (<a href="#f5">Finding #05</a>). The earlier Chairs&rsquo; samples are from before AI was a common topic, so the zero partly reflects when they spoke.</p>
+<div class="flinks"><a href="./#person=warsh&amp;docs=all">Explore Kevin Warsh &rarr;</a><a href="./#person=barr&amp;docs=all">Barr &rarr;</a></div>
+</article>
+
+<article class="fcard" id="f18">
+<div class="ftop"><span class="fnum">#18</span><span class="ftag">Federal Reserve Chairs &middot; Speaking Style</span></div>
+<h3>Warsh&rsquo;s signature word is &ldquo;think&rdquo;&mdash;mostly in live Q&amp;A</h3>
+<div class="fgrid">
+<div class="fstat"><div class="fsw">Warsh &ldquo;think&rdquo;</div><div class="fsv">3.86 / 1k</div><div class="fss">90 uses in 23,297 words</div></div>
+<div class="fstat"><div class="fsw">Five earlier Chairs</div><div class="fsv">0.28 / 1k</div><div class="fss">65 uses in 235,199 words</div></div>
+<div class="fstat"><div class="fsw">Warsh press conferences</div><div class="fsv">4.67 / 1k</div><div class="fss">86 uses in 18,426 words</div></div>
+<div class="fstat"><div class="fsw">Warsh prepared texts</div><div class="fsv">0.82 / 1k</div><div class="fss">4 uses in 4,871 words</div></div>
+</div>
+<p><strong>Kevin Warsh</strong> says <strong>&ldquo;think&rdquo;</strong> <span class="num">90 times</span> (<span class="num">3.86 per 1,000 words</span>), versus <span class="pnum">0.28 per 1,000</span> for Volcker, Greenspan, Bernanke, Yellen, and Powell combined. Nearly all of it comes from his FOMC press conferences: <span class="pnum">29</span> on June 17, <span class="pnum">26</span> on July 29, <span class="pnum">12</span> on September 16, and <span class="pnum">19</span> on October 28, compared with just <span class="pnum">2</span> each in his July 14 testimony and August 28 speech.</p>
+<p><strong>Caveat:</strong> this contrast likely reflects format as much as personal style. About 79% of Warsh&rsquo;s counted words are press-conference answers, while the earlier Chairs&rsquo; samples are mainly prepared speeches and testimony, where &ldquo;I think&rdquo; is rare. On prepared texts alone, Warsh&rsquo;s rate (<span class="pnum">0.82</span>) is much closer to the others.</p>
+<div class="flinks"><a href="./#person=warsh&amp;docs=all">Explore Kevin Warsh &rarr;</a></div>
+</article>
+
 <section class="fmethod" id="method" aria-labelledby="methodH">
 <h2 id="methodH">Methodology &amp; How Words Are Counted</h2>
 <p><strong>Tokenization:</strong> MouthMath lowercases all text, converts curly apostrophes to straight apostrophes, strips trailing possessive <code>&rsquo;s</code> (so <code>Fed&rsquo;s</code> is counted with <code>fed</code>, while contractions like <code>it&rsquo;s</code> stay intact), preserves <code>u.s.</code> as a single token, and excludes standalone numbers by default.</p>
@@ -666,8 +715,8 @@ def findings_page(privacy):
 </section>"""
     return shell(
         privacy,
-        title="15 Key Findings from the Transcripts",
-        desc="15 data-driven word-frequency findings across Federal Reserve Chairs, US Presidents, and S&P 500 CEOs, measured per 1,000 words from official transcripts.",
+        title="18 Key Findings from the Transcripts",
+        desc="18 data-driven word-frequency findings across Federal Reserve Chairs, US Presidents, and S&P 500 CEOs, measured per 1,000 words from official transcripts.",
         path="findings.html",
         body=body,
         current="findings.html",
