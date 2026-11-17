@@ -1,5 +1,5 @@
 {
- "_doc": "Data-driven CEO sources for fetch_ceo.py. Only texts the company itself publishes on its own site. discover.type: q4 = Q4 IR feed (host + document-title regex); links = scrape hrefs matching a regex on an IR page; pattern = URL template over recent quarters; urls = explicit list. kind: transcript (keep only the CEO's prepared section, label regex 'ceo') or letter (signed letter, 'signer'). 'since' = first day as CEO (earlier documents are ignored). indices: S&P 500, Nasdaq 100, Mag 7, Dow 30. kind filings + fetcher fetch_ceo_filings.py: a past CEO whose words come only from SEC filings (press-release quotes, filed letters/transcripts) and official congressional hearing records (filings.docs lists the non-quote documents; since/until bound the tenure); fetch_ceo.py skips these.",
+ "_doc": "Data-driven CEO sources for fetch_ceo.py. Only texts the company itself publishes on its own site. discover.type: q4 = Q4 IR feed (host + document-title regex); links = scrape hrefs matching a regex on an IR page; pattern = URL template over recent quarters; urls = explicit list. kind: transcript (keep only the CEO's prepared section, label regex 'ceo') or letter (signed letter, 'signer'). 'since' = first day as CEO (earlier documents are ignored). indices: S&P 500, Nasdaq 100, Mag 7, Dow 30. kind filings + fetcher fetch_ceo_filings.py: a past CEO whose words come only from SEC filings (press-release quotes, filed letters/transcripts) and official congressional hearing records (filings.docs lists the non-quote documents; since/until bound the tenure); fetch_ceo.py skips these. kind turns: ALL of the person's own turns in a FactSet-style call transcript (prepared remarks and Q&A answers; ceo_extract.speaker_turns), for people who speak mostly in the Q&A (NVIDIA). max = how many calls to keep; rolling = when a newer call appears, add it and drop the oldest beyond max (otherwise fetching stops once max are saved). docs_since: earliest document date when it differs from 'since' (Kress: her calls as CFO); until: last day as CEO (later calls ignored); note_before_since: note shown on documents dated before 'since'.",
  "companies": [
   {
    "slug": "nadella",
@@ -515,9 +515,65 @@
     "speaker": "Elon Musk",
     "docs": []
    }
+  },
+  {
+   "slug": "kress",
+   "name": "Colette Kress",
+   "role": "Interim CEO (since Nov 11, 2026) and EVP & CFO, NVIDIA",
+   "eyebrow": "Interim CEO · NVIDIA",
+   "since": "2026-11-11",
+   "docs_since": "2013-09-16",
+   "ceo": "\\bKress\\b",
+   "rolling": true,
+   "note_before_since": "Spoken as EVP & CFO (before she became interim CEO on Nov 11, 2026)",
+   "org": "NVIDIA",
+   "ticker": "NVDA",
+   "indices": [
+    "Mag 7",
+    "S&P 500",
+    "Nasdaq 100",
+    "Dow 30"
+   ],
+   "kind": "turns",
+   "discover": {
+    "type": "q4",
+    "host": "investor.nvidia.com",
+    "title": "^Transcript$"
+   },
+   "source": "investor.nvidia.com",
+   "fiscal": true,
+   "max": 6
+  },
+  {
+   "slug": "huang",
+   "name": "Jensen Huang",
+   "role": "NVIDIA co-founder; CEO Apr 1993–Nov 2026 (resigned Nov 11, 2026)",
+   "eyebrow": "Former CEO · NVIDIA",
+   "since": "1993-04-05",
+   "until": "2026-11-11",
+   "ceo": "\\bHuang\\b",
+   "org": "NVIDIA",
+   "ticker": "NVDA",
+   "indices": [
+    "Mag 7",
+    "S&P 500",
+    "Nasdaq 100",
+    "Dow 30"
+   ],
+   "kind": "turns",
+   "discover": {
+    "type": "q4",
+    "host": "investor.nvidia.com",
+    "title": "^Transcript$"
+   },
+   "source": "investor.nvidia.com",
+   "fiscal": true,
+   "max": 6
   }
  ],
  "order": [
+  "kress",
+  "huang",
   "nadella",
   "ternus",
   "cook",
@@ -603,6 +659,7 @@
   "T": "NYSE",
   "UBER": "NYSE",
   "BA": "NYSE",
-  "TSLA": "NASDAQ"
+  "TSLA": "NASDAQ",
+  "NVDA": "NASDAQ"
  }
 }

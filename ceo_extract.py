@@ -122,3 +122,51 @@ def letter_body(text, signer, start=r"^Dear\b"):
         if out and not re.search(r"[.!?:;\u201d\"')]$", out[-1]) and p[:1].islower(): out[-1] += " " + p
         else: out.append(p)
     return out
+
+def speaker_turns(text, who):
+    """All of one person's own turns in a FactSet/CallStreet-style call transcript (prepared remarks AND Q&A
+    answers): blocks are separated by dotted rules; each block opens with the speaker's name and role line
+    (then an optional Q/A marker). Operator, IR, analysts and other executives are discarded, as are the
+    repeated page headers/footers. who: regex matching the name as printed, e.g. r"\\bHuang\\b"."""
+    who_re = re.compile(who)
+    lines = [l.strip() for l in text.replace("\f", "\n").split("\n")]
+    rep = Counter(re.sub(r"\d+", "#", l) for l in lines if l)
+    def junk(s):   # page header/footer lines: company + ticker, "Q2 2027 Earnings Call", date, page number, vendor footer
+        return (re.fullmatch(r"\d{1,3}", s) or re.search(r"(?i)callstreet|factset|copyright ©|^corrected transcript$|^total pages", s)
+                or (rep[re.sub(r"\d+", "#", s)] >= 3 and (re.search(r"\([A-Z.]{1,6}\)$|Earnings Call$", s)
+                                                         or re.fullmatch(r"\d{1,2}-[A-Z][a-z]{2}-20\d\d", s))))
+    blocks, cur = [], []
+    for s in lines:
+        if re.fullmatch(r"\.{10,}", s): blocks.append(cur); cur = []; continue
+        if s and not junk(s): cur.append(s)
+        elif not s and cur and cur[-1] != "": cur.append("")
+    blocks.append(cur)
+    lens = sorted(len(l) for l in lines if len(l) > 40)
+    width = lens[int(len(lens) * 0.9)] if lens else 110                      # typical full line width
+    paras = []
+    for b in blocks:
+        b = [x for x in b]
+        while b and not b[0]: b.pop(0)
+        if len(b) < 3 or not who_re.search(b[0]) or len(b[0].split()) > 5: continue
+        body, role = b[1:], False                 # header: role line and Q/A marker, in either order, blank lines between
+        while body and (not body[0] or re.fullmatch(r"[QA]", body[0]) or (not role and len(body[0]) < 130
+                        and re.search(r"(?i)officer|president|director|chair|vice|\bceo\b|\bcfo\b|founder|corp", body[0]) and (not re.search(r"[.!?]$", body[0]) or re.search(r"(?:Corp|Inc|Co|Ltd|LLC|N\.V|S\.A|plc)\.?$", body[0])))):
+            if body[0] and not re.fullmatch(r"[QA]", body[0]): role = True
+            body = body[1:]
+        if not role: continue
+        cur = []; paras.append(None)                          # turn boundary (never merged across turns)
+        for s in body + [""]:
+            if QA.match(s) or re.match(r"^(?:Operator|OPERATOR)\s*:", s) or END_SECTIONS.match(s): s = None   # Q&A heading / operator: turn is over
+            if s is None or not s or re.fullmatch(r"[QA]", s):
+                if cur:
+                    if paras and paras[-1] is not None and not re.search(r"[.!?:\u201d\")\]]$", paras[-1]): paras[-1] += " " + " ".join(cur)   # page break mid-paragraph
+                    else: paras.append(" ".join(cur))
+                    cur = []
+                if s is None: break
+                continue
+            if cur and cur[-1].endswith("-") and not cur[-1].endswith(" -"): cur[-1] = cur[-1] + s   # hyphenated line break
+            else: cur.append(s)
+            if re.search(r"[.!?\u201d\"]$", s) and len(s) < 0.75 * width:      # short line ending a sentence: end of paragraph
+                paras.append(" ".join(cur)) if not (paras and paras[-1] is not None and not re.search(r"[.!?:\u201d\")\]]$", paras[-1])) else paras.__setitem__(-1, paras[-1] + " " + " ".join(cur)); cur = []
+    # FactSet wraps lines within a paragraph; a paragraph ends where a line ends a sentence and is short
+    return [re.sub(r"\s+", " ", p).strip() for p in paras if p and len(p.split()) >= 3]

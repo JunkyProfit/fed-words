@@ -44,7 +44,8 @@ PEOPLE = {
                "role": "CEO, Apple", "org": "Apple", "since": "2026-09-01",
                "type": "remarks", "source_type": "Earnings call prepared remarks"},
 }
-SOURCE_TYPE = {"letter": "Shareholder letter", "remarks": "Earnings call prepared remarks"}
+SOURCE_TYPE = {"letter": "Shareholder letter", "remarks": "Earnings call prepared remarks",
+               "turns": "Earnings call remarks and Q&A answers"}
 
 _last = [0.0]
 def get(url, binary=False):
@@ -244,14 +245,14 @@ def ternus_extract(raw):
 
 # ---------------- Data-driven companies (ceos.json) -------------------------------------------
 import zipfile, io
-from ceo_extract import transcript_section, letter_body
+from ceo_extract import transcript_section, letter_body, speaker_turns
 CONFIG = json.loads((ROOT / "ceos.json").read_text(encoding="utf-8"))["companies"]
 CONFIG = [_c for _c in CONFIG if not _c.get("fetcher")]       # e.g. past CEOs built by fetch_ceo_filings.py
 for _c in CONFIG:
     PEOPLE.setdefault(_c["slug"], {"name": _c["name"], "display": _c["name"], "category": "CEOs", "role": _c["role"],
                                    "org": _c["org"], "max": _c.get("max", 4), "cfg": _c,
                                    "type": "letter" if _c["kind"] == "letter" else "remarks",
-                                   "source_type": SOURCE_TYPE["letter" if _c["kind"] == "letter" else "remarks"]})
+                                   "source_type": SOURCE_TYPE[_c["kind"] if _c["kind"] in SOURCE_TYPE else "remarks"]})
 MON = "January|February|March|April|May|June|July|August|September|October|November|December"
 MON3 = "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 
@@ -384,14 +385,15 @@ def generic_fetch(slug, c, d):
     if cfg["kind"] == "letter" and raw[:4] == b"%PDF" and date and date[5:] == "12-31":   # fiscal year-end, not the letter's date
         date = pdf_date(raw) or date
     if not date: raise ValueError("no date found")
-    if date < cfg["since"]: raise ValueError(f"{date} is before {cfg['name']} became CEO ({cfg['since']})")
+    if date < cfg.get("docs_since", cfg["since"]): raise ValueError(f"{date} is before {cfg['name']} became CEO ({cfg['since']})")
+    if cfg.get("until") and date > cfg["until"]: raise ValueError(f"{date} is after {cfg['name']} left as CEO ({cfg['until']})")
     if cfg["kind"] == "letter":
         paras = letter_body(text, cfg["signer"])
         if not re.search(re.escape(cfg["signer"].split()[-1]), text): raise ValueError("not signed by " + cfg["signer"])
         ym = re.search(r"(20\d\d)", urllib.parse.unquote(c["url"]).rsplit("/", 1)[-1])
         title = f"{int(ym.group(1)) if ym else int(date[:4]) - 1} Letter to Shareholders"
     else:
-        paras = transcript_section(text, cfg["ceo"])
+        paras = speaker_turns(text, cfg["ceo"]) if cfg["kind"] == "turns" else transcript_section(text, cfg["ceo"])
         per = c.get("period") or ""
         k = order_key(c)
         if not per and k[1] and not k[2]:
@@ -406,9 +408,10 @@ def generic_fetch(slug, c, d):
         if not per and not cfg.get("fiscal") and cfg["discover"].get("fiscal_end_month", 12) == 12:   # calendar-year reporter: call date -> prior quarter
             cm, cy = int(date[5:7]), int(date[:4]); qn = (cm - 1) // 3
             per = f"Q{qn} {cy}" if qn else f"Q4 {cy - 1}"
-        title = (f"{per} Earnings Call" if per else f"Earnings Call, {datetime.strptime(date, '%Y-%m-%d'):%b %-d, %Y}") + ": CEO Prepared Remarks"
+        title = (f"{per} Earnings Call" if per else f"Earnings Call, {datetime.strptime(date, '%Y-%m-%d'):%b %-d, %Y}") + (": Remarks and Q&A Answers" if cfg["kind"] == "turns" else ": CEO Prepared Remarks")
     atomic_write(d / "raw" / (c["id"] + ext), raw)
-    return {"title": title, "date": date} | ({"date_basis": "transcript file date (call date not printed)"} if c.get("date_basis") else {}), paras
+    note = {"note": cfg["note_before_since"]} if cfg.get("note_before_since") and date < cfg["since"] else {}
+    return {"title": title, "date": date} | note | ({"date_basis": "transcript file date (call date not printed)"} if c.get("date_basis") else {}), paras
 
 # ---------------------------------------------------------------------------------------------
 def main():
@@ -454,7 +457,9 @@ def main():
                     title, date, paras = jassy_extract(raw)
                     meta.update(title=title.replace("Amazon CEO Andy Jassy’s ", "").replace("Amazon CEO Andy Jassy's ", ""), date=date)
                 elif "cfg" in P:
-                    if len([m for m in have.values()]) >= P["max"]: break
+                    if len([m for m in have.values()]) >= P["max"] and not P["cfg"].get("rolling"): break
+                    if P["cfg"].get("rolling") and len(have) >= P["max"] and order_key(c) < min(order_key({"url": m["url"], "hint": m["date"]}) for m in have.values()):
+                        break                                  # rolling: only calls newer than the oldest kept one
                     upd, paras = generic_fetch(slug, c, d); meta.update(upd)
                     meta["ticker"] = P["cfg"]["ticker"]
                 elif slug == "pichai":
@@ -485,6 +490,9 @@ def main():
             except Exception as e:
                 print(f"[{slug}] WARN skipping {c['url']}: {e}")
         meta_all = sorted(have.values(), key=lambda m: m["date"], reverse=True)
+        if "cfg" in P and P["cfg"].get("rolling") and len(meta_all) > P["max"]:
+            for m in meta_all[P["max"]:]: print(f"[{slug}] rolling off {m['date']} {m['title']} (keeping the newest {P['max']})")
+            meta_all = meta_all[:P["max"]]
         atomic_write(idx_path, json.dumps(meta_all, indent=2, ensure_ascii=False) + "\n")
         print(f"[{slug}] {len(meta_all)} document(s) in {idx_path.relative_to(ROOT)}")
 

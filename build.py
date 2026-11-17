@@ -227,10 +227,11 @@ def load_people():
     for c in cfg["companies"]:
         if c["slug"] in have: continue
         letter, filings = c["kind"] == "letter", c["kind"] == "filings"   # filings: past CEOs (fetch_ceo_filings.py), mixed doc types
+        turns = c["kind"] == "turns"                                          # turns: all of the person's call remarks + Q&A answers
         people.append({"slug": c["slug"], "name": c["name"], "display": c["name"], "category": "CEOs", "role": c["role"],
                        "org": c["org"], "policy": "excerpt", "source": c["source"], "mode": "ceo", "eyebrow": c.get("eyebrow") or "CEO · " + c["org"],
-                       "doc_noun": "documents" if filings else "shareholder letters" if letter else "earnings call prepared remarks",
-                       "doc_noun1": "document" if filings else "shareholder letter" if letter else "earnings call prepared remarks",
+                       "doc_noun": "documents" if filings else "shareholder letters" if letter else "earnings call remarks and Q&A answers" if turns else "earnings call prepared remarks",
+                       "doc_noun1": "document" if filings else "shareholder letter" if letter else "earnings call remarks and Q&A answers" if turns else "earnings call prepared remarks",
                        "unit": "document" if filings else "letter" if letter else "call",
                        "unit_pl": "documents" if filings else "letters" if letter else "calls",
                        "indices": c.get("indices", []), "ticker": c.get("ticker")})

@@ -38,6 +38,8 @@ SLUG_NOTE = {
     "cook": "The documents are his own public words, such as letters filed with the Securities and Exchange Commission and congressional testimony.",
     "jobs": "The documents are his own public words filed with the Securities and Exchange Commission.",
     "musk": "The documents are his two Tesla Master Plan essays and his testimony to Congress about SpaceX.",
+    "kress": "The documents are her own words on NVIDIA's quarterly earnings calls, both her prepared remarks and her answers to analysts, from the call transcripts NVIDIA posts on its investor relations site. Calls before November 11, 2026 were spoken as CFO.",
+    "huang": "The documents are his own words on NVIDIA's quarterly earnings calls, mostly his answers to analysts' questions, from the call transcripts NVIDIA posts on its investor relations site.",
 }
 FED_NOTE = "The documents are speeches, FOMC press conferences and testimony to Congress given as Chair, from the Federal Reserve's official website."
 CEO_NOTE = "The documents are the CEO's own words to shareholders, such as yearly letters or the prepared remarks that open quarterly earnings calls."

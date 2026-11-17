@@ -21,6 +21,8 @@ letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End m
 | CEOs | **Andy Jassy** (Amazon) | 2025 and 2024 annual shareholder letters | aboutamazon.com |
 | CEOs | **Greg Abel** (Berkshire Hathaway) | his 2025 letter (his first as CEO) | berkshirehathaway.com |
 | CEOs | **Sundar Pichai** (Alphabet/Google) | his prepared remarks from the 8 most recent earnings calls (Q3 2024 to Q2 2026) | abc.xyz (Alphabet's own transcripts) |
+| CEOs | **Colette Kress** (NVIDIA, NVDA; interim CEO since Nov 11, 2026, still EVP & CFO; Mag 7, S&P 500, Nasdaq 100, Dow 30) | all her own turns (prepared remarks + Q&A answers) on the 6 most recent earnings calls NVIDIA posts transcripts for (Q1 FY2026 to Q2 FY2027; calls before Nov 11, 2026 are labelled as spoken as CFO). Rolling: each new call is added and the oldest drops off | investor.nvidia.com (NVIDIA's own transcript PDFs) |
+| CEOs (former) | **Jensen Huang** (NVIDIA, NVDA; co-founder, CEO Apr 1993 to Nov 11, 2026, resigned) | all his own turns (mostly Q&A answers) on the 6 earnings calls NVIDIA posts transcripts for (Q1 FY2026 to Q2 FY2027); calls after Nov 11, 2026 are ignored | investor.nvidia.com (NVIDIA's own transcript PDFs) |
 | CEOs | **Satya Nadella** (Microsoft, MSFT; Mag 7, S&P 500, Nasdaq 100, Dow 30) | his prepared section of the 4 most recent earnings calls (Q2 FY2025 to Q4 FY2026) | microsoft.com |
 | CEOs | **Mark Zuckerberg** (Meta, META; Mag 7, S&P 500, Nasdaq 100) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investor.atmeta.com |
 | CEOs | **Jamie Dimon** (JPMorgan Chase, JPM; S&P 500, Dow 30) | 2 signed annual shareholder letters (2025, 2024) | jpmorganchase.com |
@@ -67,11 +69,22 @@ for those the PDF's own file date is used (it can be a few days after the call).
 The CEO picker has a **search box** (name, company or ticker), **index chips** (All, Mag 7, S&P 500, Nasdaq 100,
 Dow 30, with counts) and the A–Z index; all three combine.
 
-Skipped in this wave: **Jensen Huang** (Nvidia's own call materials have no prepared remarks by him: the CFO gives
-the prepared commentary and Huang speaks only in the Q&A; its annual report has no CEO letter), **Elon Musk** (Tesla
+Skipped in this wave: **Elon Musk** (Tesla
 blocks the build machine), **John Ternus** (Apple posts no call text, see below). Not yet checked: other large caps such
 as Broadcom, Eli Lilly, Mastercard, Oracle, Exxon Mobil, Costco and Netflix (next wave). Home Depot's 2Q26 transcript
 is skipped because no text could be extracted from the PDF.
+
+**NVIDIA (Colette Kress, Jensen Huang):** on NVIDIA's calls the CFO gives the prepared remarks and the CEO speaks mostly in
+the Q&A, so the usual "CEO prepared section" cut would miss most of what they say. `ceos.json` uses `kind: "turns"` for both:
+`ceo_extract.speaker_turns()` keeps ALL of that person's own turns in the FactSet/CallStreet transcript PDFs NVIDIA posts on
+investor.nvidia.com (Q4 feed, document title `Transcript`): prepared remarks and answers, with the operator, IR, analysts'
+questions, the other executive and the page headers/footers removed. Source type label: `Earnings call remarks and Q&A answers`.
+Kress became interim CEO on Nov 11, 2026 when Huang resigned (NVIDIA 8-K filed Nov 12, 2026; NVIDIA Newsroom, "NVIDIA Announces
+CEO Transition"); `docs_since` lets her calls as CFO count, each labelled "Spoken as EVP & CFO". Kress is `rolling` (max 6: a
+newer call is added and the oldest rolls off); Huang has `until: 2026-11-11`, so his set is closed. NVIDIA posts the transcript
+PDF some days after each call (the written CFO Commentary appears at results time but is not used, as it largely repeats her
+prepared remarks); `python3 fetch_ceo.py --only kress,huang` picks it up once it is in the feed. Not used for Huang: GTC and other
+keynotes (NVIDIA posts video, not a full official text) and third-party transcripts.
 
 **CEO source types:** every CEO document carries a small **Source type** label in the document list
 (`Shareholder letter` or `Earnings call prepared remarks`, the `source_type` field written by `fetch_ceo.py`).
@@ -374,6 +387,9 @@ per-sentence counts always add up to the transcript totals. `build.py` checks th
 and stops with an error if they don't.
 
 ## Refresh with new speeches
+**Weekly (NVIDIA, Nov 2026):** `python3 fetch_ceo.py --only kress,huang && python3 build.py`. Kress gains each new call's
+transcript once NVIDIA posts it (the oldest of her 6 rolls off); Huang's set is closed (he resigned Nov 11, 2026), so his
+check only confirms nothing changed.
 **Weekly (Colorado speakers, Nov 2026):** `python3 fetch_officials.py --only bennet && python3 fetch_officials.py --only hickenlooper && python3 fetch_officials.py --only polis && python3 build.py`.
 These three slugs are in `RECHECK` in `fetch_officials.py`, so they are re-checked every run instead of being skipped once saved:
 the senators scan Congressional Record days from Jan 3, 2026 to today (each day's `mods.xml` and each speech page is cached in
