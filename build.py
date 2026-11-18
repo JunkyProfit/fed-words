@@ -378,9 +378,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm217">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm217">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm217">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm218">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm218">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm218">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -388,7 +388,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm217">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm218">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -421,7 +421,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm217" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm218" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -493,10 +493,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm217">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm217">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm218">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm218">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm217">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm218">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead. Built for investors, traders, prediction-market players, journalists and researchers.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -509,14 +509,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm217">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm218">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word, counted: Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm217">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm218">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1957,6 +1957,28 @@ html body #catCue .cc-tip.t3{animation-delay:.36s}
   html body #picker #chints .chint.on{padding:8px 4px 9px!important}
   html body #picker #chints .chint::before{width:7px!important;height:7px!important;margin:1px auto 0!important;align-self:center!important}
 }
+
+/* mm218: global "Find a speaker" search (all categories) + plain category cue (arrows removed) */
+html body #catCue{margin:2px 0 6px!important}
+html body #catCue .cc-plain{display:block;text-align:center;color:#c9c2b6;font-size:13px;letter-spacing:.02em}
+#gsearch{position:relative;width:100%;box-sizing:border-box;margin:0 0 12px;padding:10px 10px 11px;border:1px solid #3a3733;border-radius:8px;background:#151413}
+#gsearch .gs-lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f3eee4;margin:0 0 7px}
+#gsearch .gs-box{display:flex;align-items:stretch;gap:0;min-height:46px;border:1.5px solid #6b655c;border-radius:7px;background:#0b0b0b;overflow:hidden;transition:border-color .15s,box-shadow .15s}
+#gsearch .gs-box:hover{border-color:#a49e93}
+#gsearch .gs-box:focus-within{border-color:#ff5449;box-shadow:0 0 0 3px rgba(255,84,73,.22)}
+#gsearch .gs-ic{flex:none;width:20px;height:20px;align-self:center;margin:0 2px 0 10px;fill:none;stroke:#f3eee4;stroke-width:2.2;stroke-linecap:round}
+html body #gsearch input#gq{flex:1 1 auto;min-width:0;width:auto;border:0!important;box-shadow:none!important;background:transparent!important;color:#f3eee4;font-size:16px;padding:10px 8px;outline:none;border-radius:0}
+html body #gsearch input#gq::placeholder{color:#a49e93;opacity:1}
+#gsearch #gbtn{flex:none;min-width:72px;border:0;border-left:1px solid #3a3733;background:#ff5449;color:#0b0b0b;font-weight:700;font-size:15px;padding:0 12px;cursor:pointer}
+#gsearch #gbtn:hover{background:#ff6b61}#gsearch #gbtn:focus-visible{outline:2px solid #f3eee4;outline-offset:-4px}
+#gres{position:absolute;left:10px;right:10px;top:calc(100% - 6px);z-index:60;max-height:min(360px,60vh);overflow:auto;background:#121110;border:1px solid #6b655c;border-radius:7px;box-shadow:0 12px 28px rgba(0,0,0,.6);padding:4px}
+#gres[hidden]{display:none!important}
+#gres .gr{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:46px;box-sizing:border-box;padding:7px 10px;border:0;border-radius:5px;background:transparent;color:#f3eee4;text-align:left;cursor:pointer;font-size:15px}
+#gres .gr .gn{font-weight:600}#gres .gr .gm{display:block;color:#a49e93;font-size:12.5px;font-weight:400;margin-top:1px}
+#gres .gr .gc{flex:none;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#c9c2b6;border:1px solid #3a3733;border-radius:4px;padding:2px 6px}
+#gres .gr[aria-selected="true"],#gres .gr:hover{background:#2a1513}
+#gres .gnone{padding:12px 10px;color:#a49e93;font-size:14px}
+@media (max-width:640px){#gsearch{margin:0 0 8px;padding:8px 8px 9px}#gsearch #gbtn{min-width:72px;padding:0 12px}html body #gsearch input#gq{font-size:16px}#gres{left:8px;right:8px}}
 </style></head><body class="mode-fed">
 <header><div class="hact"><a class="findings-link" href="findings.html" title="18 word-count findings from the transcripts"><span class="fdot" aria-hidden="true"></span>Findings <span class="fcnt">18</span></a><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
@@ -1967,7 +1989,7 @@ html body #catCue .cc-tip.t3{animation-delay:.36s}
 <button type="button" id="spkbar" aria-hidden="true" tabindex="-1"><span class="sbn"></span><span class="tk sbt"></span><span class="sba" aria-hidden="true"></span><span class="sbc">Search</span></button>
 <main>
 <div class="topgrid">
-<section class="card" id="picker"><div class="pk"><h2 class="sr-only">Who</h2><div id="catCue" class="cat-cue" aria-hidden="true"><span class="cc-badge"><span class="cc-star">&#9733;</span><span class="cc-txt">CHOOSE CATEGORY</span><span class="cc-star">&#9733;</span></span><svg class="cc-svg" viewBox="0 0 300 24" preserveAspectRatio="none"><defs><linearGradient id="ccGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ff5449"/><stop offset="50%" stop-color="#ff7a70"/><stop offset="100%" stop-color="#b77ee0"/></linearGradient></defs><path class="cc-line" d="M116 2 C 78 4, 51 7, 48.2 17"/><path class="cc-line" d="M150 2 L 150 17"/><path class="cc-line" d="M184 2 C 222 4, 249 7, 251.8 17"/><polygon class="cc-tip t1" points="48.2,23 41.2,14 48.2,16.5 55.2,14"/><polygon class="cc-tip t2" points="150,23 143,14 150,16.5 157,14"/><polygon class="cc-tip t3" points="251.8,23 244.8,14 251.8,16.5 258.8,14"/></svg></div><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div><div id="chints" role="group" aria-label="Search other speakers"></div></nav>
+<section class="card" id="picker"><div id="gsearch" role="search"><label for="gq" class="gs-lbl" id="gqlbl">Find a speaker</label><div class="gs-box"><svg class="gs-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input type="search" id="gq" placeholder="Name, company or ticker" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="gres" aria-autocomplete="list"><button type="button" id="gbtn">Search</button></div><div id="gres" role="listbox" aria-label="Matching speakers" hidden></div></div><div class="pk"><h2 class="sr-only">Who</h2><div id="catCue" class="cat-cue"><span class="cc-plain">Search a category below</span></div><nav class="catbar" aria-label="Category"><div class="seg" id="cats" role="tablist" aria-label="Category"></div><div id="chints" role="group" aria-label="Search other speakers"></div></nav>
 <button type="button" id="pdisc" aria-expanded="false" aria-controls="persons" hidden></button>
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
@@ -2164,6 +2186,29 @@ function scrollSelChip(){   // mm45: keep the selected speaker chip visible insi
 $('psearch').addEventListener('input',e=>{pq=e.target.value.trim();renderPicker()});
 $('psearch').addEventListener('keydown',e=>{if(e.key==='Enter'){const b=$('persons').querySelector('button.chip');if(b){e.preventDefault();setPerson(b.dataset.person)}}
   else if(e.key==='Escape'&&e.target.value){e.target.value='';pq='';renderPicker();e.stopPropagation()}});
+// mm218: global speaker search across every category
+(()=>{const q=$('gq'),res=$('gres'),btn=$('gbtn');if(!q)return;let hits=[],act=-1;
+  $('gqlbl').textContent=`Search all ${PEOPLE.length} speakers`;
+  const catL=c=>c==='CEOs'?'CEO':c==='Federal Reserve'?'Fed':'Gov';
+  const find=t=>{const ts=t.toLowerCase().split(/\s+/).filter(Boolean);if(!ts.length)return[];
+    return PEOPLE.map(p=>{const n=p.name.toLowerCase(),h=[p.name,p.org,p.ticker,p.role,p.group,p.category].filter(Boolean).join(' ').toLowerCase();
+      if(!ts.every(x=>h.includes(x)))return null;const sc=(n.startsWith(ts[0])?0:n.split(' ').some(w=>w.startsWith(ts[0]))?1:(p.ticker||'').toLowerCase()===ts[0]?1:2);return[sc,p]}).filter(Boolean).sort((a,b)=>a[0]-b[0]).map(x=>x[1])};
+  const close=()=>{res.hidden=true;q.setAttribute('aria-expanded','false');act=-1;q.removeAttribute('aria-activedescendant')};
+  const mark=()=>{res.querySelectorAll('.gr').forEach((b,i)=>b.setAttribute('aria-selected',i===act?'true':'false'));const a=res.querySelector('.gr[aria-selected="true"]');if(a){q.setAttribute('aria-activedescendant',a.id);a.scrollIntoView({block:'nearest'})}};
+  const pick=p=>{if(!p)return;close();q.value='';q.blur();(p.slug!==P.slug?setPerson(p.slug):Promise.resolve()).then(()=>{pOpen=false;renderPicker();toStats()})};
+  const show=()=>{const t=q.value.trim();if(!t){close();return}hits=find(t);act=hits.length?0:-1;
+    res.innerHTML=hits.length?hits.slice(0,12).map((p,i)=>`<button type="button" class="gr" role="option" id="gr${i}" data-i="${i}"><span><span class="gn">${esc(p.name)}${p.ticker?' <span class="tk">'+esc(p.ticker)+'</span>':''}</span><span class="gm">${esc(p.role||p.org||'')}</span></span><span class="gc">${catL(p.category)}</span></button>`).join(''):`<div class="gnone">No speaker matches “${esc(t)}”. Try a last name, company or ticker.</div>`;
+    res.hidden=false;q.setAttribute('aria-expanded','true');mark();
+    res.querySelectorAll('.gr').forEach(b=>{b.onmousedown=e=>e.preventDefault();b.onclick=()=>pick(hits[+b.dataset.i])})};
+  q.addEventListener('input',show);q.addEventListener('focus',()=>{if(q.value.trim())show()});
+  q.addEventListener('blur',()=>setTimeout(close,120));
+  q.addEventListener('keydown',e=>{const n=Math.min(hits.length,12);
+    if(e.key==='ArrowDown'&&n){e.preventDefault();if(res.hidden)show();act=(act+1)%n;mark()}
+    else if(e.key==='ArrowUp'&&n){e.preventDefault();act=(act-1+n)%n;mark()}
+    else if(e.key==='Enter'){e.preventDefault();if(res.hidden)show();pick(hits[act<0?0:act])}
+    else if(e.key==='Escape'){if(!res.hidden||q.value){e.preventDefault();e.stopPropagation();q.value='';close()}}});
+  btn.onclick=()=>{if(q.value.trim()){show();if(hits.length===1)pick(hits[0])}else q.focus()};
+})();
 async function setPerson(slug,docIds){
   {const dp=$('docPick');if(dp&&dp.open)dp.open=false}   // mm26: a new speaker closes the documents sheet/popover
   hidePop();
