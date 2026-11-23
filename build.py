@@ -384,9 +384,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm230">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm230">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm230">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm231">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm231">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm231">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -394,7 +394,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm230">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm231">
 <meta property="og:description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -402,7 +402,7 @@ PRIVACY = r"""<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy Policy — MouthMath">
 <meta name="twitter:description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm230">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm231">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -435,7 +435,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm230" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm231" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -507,10 +507,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm230">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm230">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm231">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm231">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm230">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm231">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead. Built for investors, traders, prediction-market players, journalists and researchers.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -523,14 +523,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm230">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm231">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm230">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm231">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1864,6 +1864,7 @@ html body #catCue .cc-tip.t3{animation-delay:.36s}
 /* Unified Category + Search Section (tightened up with glowing red border encompassing active category + search section below) */
 @media (max-width:1099px){
   html body main{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:8px!important}
+  html body main>*{order:5!important}
   html body main .topgrid{display:contents!important}
   html body main aside.ad[data-slot="side"]{display:none!important}
   html body main #words{order:4!important;width:100%!important;box-sizing:border-box!important}
@@ -2073,7 +2074,22 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
 }
 @media (min-width:641px) and (max-width:1366px), (min-width:641px) and (pointer:coarse){
   html body .pk:not(.psolo) #persons button.chip,html body .pk.pcoll.popen #persons .chip{
-    font-size:14px!important;padding:5px 13px!important;min-height:36px!important;line-height:1.25}
+    font-size:14px!important;padding:5px 13px!important;min-height:32px!important;line-height:1.25}
+  html body .pk.pcoll.popen:not(.pgrp) #persons,html body .pk.pcoll.popen.pgrp #persons,
+  html body .pk.pcoll.popen #persons.grouped,html body .pk:not(.psolo) #persons,
+  html body .pk.pcoll.popen #persons .pg,html body .pk:not(.psolo) #persons .pg{
+    gap:4px!important;column-gap:4px!important;row-gap:4px!important}
+}
+/* mm231: tighter chip gaps on phones too; keep ~32px tap targets */
+@media (max-width:640px){
+  html body .pk:not(.psolo) #persons button.chip,html body .pk.pcoll.popen #persons .chip{
+    min-height:32px!important;padding:4px 8px!important}
+  html body .pk.pcoll.popen:not(.pgrp) #persons,html body .pk.pcoll.popen.pgrp #persons,
+  html body .pk.pcoll.popen #persons.grouped,html body .pk:not(.psolo) #persons,
+  html body .pk.pcoll.popen #persons .pg,html body .pk:not(.psolo) #persons .pg{
+    gap:3px!important;column-gap:3px!important;row-gap:3px!important}
+  html body .pk.pcoll.popen:not(.pgrp) #persons,html body .pk.pcoll.popen.pgrp #persons,html body .pk.pcoll.popen #persons.grouped{
+    max-height:68px}
 }
 </style></head><body class="mode-ceo">
 
