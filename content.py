@@ -264,7 +264,8 @@ def esc(s): return html.escape(s, quote=True)
 # ---- speaker pages ----
 def speaker_page(p, stop, privacy):
     tw = top_words(p, stop)
-    rows = "\n".join(f'<tr><td class="n">{i}</td><td>{esc(w)}</td><td class="n">{k:,}</td></tr>' for i, (w, k) in enumerate(tw, 1))
+    ceo = p.get("category") == "CEOs" or p.get("mode") == "ceo"
+    rows = "\n".join(f'<tr><td class="n">{i}</td><td>{esc(w)}</td><td class="n">{"(" if ceo else ""}{k:,}{")" if ceo else ""}</td></tr>' for i, (w, k) in enumerate(tw, 1))
     docs = sorted(p["docs"], key=lambda d: d["date"], reverse=True)
     li = []
     for d in docs:
