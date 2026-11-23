@@ -314,21 +314,25 @@ def main():
     import content
     content.compose_bios(people_out, STOPWORDS | S_CONTRACTIONS)
     common = {"stop": sorted(STOPWORDS), "sc": sorted(S_CONTRACTIONS), "keepNum": a.keep_numbers}
+    default = next((p for p in people_out if p["category"] == "CEOs"), people_out[0])   # homepage default: first/featured CEO
     def render(inline_people):
         data = dict(common, people=inline_people)
-        return TEMPLATE.replace("__DEFAULT_FT__", '<span class="ft">From the mouth of</span>').replace("__LOGO__", (ROOT / "assets" / "logo-inline.svg").read_text(encoding="utf-8").strip()).replace("__DEFAULT_TITLE__", html.escape(people_out[0]["display"])).replace(
+        return TEMPLATE.replace("__DEFAULT_FT__", '<span class="ft">From the mouth of</span>').replace("__LOGO__", (ROOT / "assets" / "logo-inline.svg").read_text(encoding="utf-8").strip()).replace("__DEFAULT_TITLE__", html.escape(default["display"])).replace(
             "__NUMNOTE__", "included" if a.keep_numbers else "excluded").replace(
             "__RECENT__", content.recent_html(people_out)).replace("__DATA__", json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/"))
     page = render(people_out)
     split = a.split or len(page.encode("utf-8")) > SPLIT_BYTES
-    if split:   # keep the first (default) person inline; load the others on demand
-        inline = [people_out[0]]
-        for p in people_out[1:]:
-            write_if_changed(DATA_DIR / f"{p['slug']}.json", json.dumps(p, separators=(",", ":"), ensure_ascii=False) + "\n")
-            inline.append({k: p[k] for k in p if k not in ("vocab", "docs")} | {"external": f"data/{p['slug']}.json",
-                                                                               "ndocs": len(p["docs"])})
+    if split:   # keep the default person (first CEO) inline; load the others on demand
+        inline = []
+        for p in people_out:
+            if p["slug"] == default["slug"]:
+                inline.append(p)
+            else:
+                write_if_changed(DATA_DIR / f"{p['slug']}.json", json.dumps(p, separators=(",", ":"), ensure_ascii=False) + "\n")
+                inline.append({k: p[k] for k in p if k not in ("vocab", "docs")} | {"external": f"data/{p['slug']}.json",
+                                                                                   "ndocs": len(p["docs"])})
         page = render(inline)
-        keep = {f"{p['slug']}.json" for p in people_out[1:]}
+        keep = {f"{p['slug']}.json" for p in people_out if p["slug"] != default["slug"]}
         for f in DATA_DIR.glob("*.json"):       # people no longer listed in people.json
             if f.name not in keep:
                 f.unlink()
@@ -378,9 +382,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm222">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm222">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm222">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm223">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm223">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm223">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -388,7 +392,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm222">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm223">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -421,7 +425,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm222" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm223" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -493,10 +497,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm222">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm222">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm223">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm223">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm222">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm223">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead. Built for investors, traders, prediction-market players, journalists and researchers.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -509,14 +513,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm222">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm223">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm222">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm223">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -1979,7 +1983,7 @@ html body #gsearch input#gq::placeholder{color:#a49e93;opacity:1}
 #gres .gr[aria-selected="true"],#gres .gr:hover{background:#2a1513}
 #gres .gnone{padding:12px 10px;color:#a49e93;font-size:14px}
 @media (max-width:640px){#gsearch{margin:0 0 8px;padding:8px 8px 9px}#gsearch #gbtn{min-width:72px;padding:0 12px}html body #gsearch input#gq{font-size:16px}#gres{left:8px;right:8px}}
-</style></head><body class="mode-fed">
+</style></head><body class="mode-ceo">
 <header><div class="hact"><a class="findings-link" href="findings.html" title="18 word-count findings from the transcripts"><span class="fdot" aria-hidden="true"></span>Findings <span class="fcnt">18</span></a><a class="about-link" href="#about">About</a><button type="button" class="hbtn" id="share" title="Copy a link to this exact view">Share</button></div>
 <div class="brand"><a class="logo" href="./" title="MouthMath home" aria-label="MouthMath home">__LOGO__</a>
 <p class="tagline">Every word counts.</p>
@@ -2091,7 +2095,7 @@ __RECENT__
 <script>
 const D=JSON.parse(document.getElementById('data').textContent);
 const STOP=new Set(D.stop),SC=new Set(D.sc),PEOPLE=D.people,BY=new Map(PEOPLE.map(p=>[p.slug,p]));
-const CATS=[...new Set(PEOPLE.map(p=>p.category))].sort((a,b)=>(a==='CEOs')-(b==='CEOs')),CAT_LBL={'CEOs':'Chief Executive Officers'},DEFAULT=PEOPLE[0].slug;
+const CATS=[...new Set(PEOPLE.map(p=>p.category))].sort((a,b)=>(a==='CEOs'?0:a==='Federal Reserve'?1:2)-(b==='CEOs'?0:b==='Federal Reserve'?1:2)),CAT_LBL={'CEOs':'Chief Executive Officers'},DEFAULT=(PEOPLE.find(p=>p.category==='CEOs')||PEOPLE[0]).slug;   // CEOs first, then Federal Reserve; homepage default is the first/featured CEO
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtDate=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
@@ -2113,7 +2117,7 @@ async function loadPerson(p){
 }
 
 // ---- category / person picker ----
-let azCat='',azSel='',idxSel='',pq='',pOpen=false;
+let azCat='',azSel='',idxSel='',pq='',pOpen=false,keepOpen=false;   // keepOpen: open the people search on a clean homepage load
 const IDX=['Mag 7','S&P 500','Nasdaq 100','Dow 30'];
 const CAT_ICON={   // hairline line-art icons for the category tiles
  'Federal Reserve':'<svg viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9.7 10v8M14.3 10v8M19 10v8M3 20.5h18"/></svg>',
@@ -2139,7 +2143,7 @@ function renderAZ(allIn,inCat){
     if(j>=0){e.preventDefault();btns[i].tabIndex=-1;btns[j].tabIndex=0;btns[j].focus()}};
 }
 function renderPicker(){
-  if(azCat!==P.category){azCat=P.category;azSel='';idxSel='';pq='';pOpen=false;$('psearch').value=''}
+  if(azCat!==P.category){azCat=P.category;azSel='';idxSel='';pq='';pOpen=keepOpen;keepOpen=false;$('psearch').value=''}
   $('cats').innerHTML=CATS.map(c=>{
     return `<button class="cat${P.category===c?' on':''}" role="tab" aria-selected="${P.category===c}" data-cat="${esc(c)}"><span class="ci" aria-hidden="true">${CAT_ICON[c]||''}</span><span class="ct"><b>${esc(CAT_LBL[c]||c)}</b></span></button>`}).join('');
   const allIn=PEOPLE.filter(p=>p.category===P.category),useF=allIn.length>=8,hasIdx=allIn.some(p=>(p.indices||[]).length);
@@ -2292,7 +2296,7 @@ function syncTimeframe(){
     ` (${fmtDate(ds[ds.length-1].date)}${ds.length>1?' – '+fmtDate(ds[0].date):''})`;
   syncHash();
 }
-// URL state: #person=<slug>&docs=<all|none|id,...>&n=<5|100|all>; default (Warsh, latest doc only, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Word Cloud; mode=standard is ignored. Leaves #about etc. alone.
+// URL state: #person=<slug>&docs=<all|none|id,...>&n=<5|100|all>; default (first CEO, latest doc only, 50 words) = clean URL. Old mode=cloud / mode=visual links (and #cloud) scroll to the Word Cloud; mode=standard is ignored. Leaves #about etc. alone. #person= deep links still work; localStorage is not used.
 const OURS=/^#(person|docs|mode|n|view|vs)=/;
 function syncHash(){
   if(!P)return;const all=sel.size===DOCS.length&&DOCS.length>0,none=!sel.size;
@@ -2942,7 +2946,9 @@ function fromHash(){const hp=new URLSearchParams(location.hash.replace(/^#/,'').
   const toRace=hp.get('view')==='race',toRing=hp.get('view')==='ring';setView(toCloud?'cloud':'math');
   {const raw=hp.get('docs');let docIds;   // null = latest; none/empty = []; all = ['all']; else listed ids
     if(raw===null)docIds=undefined;else if(raw===''||raw==='none')docIds=[];else if(raw==='all')docIds=['all'];else docIds=raw.split(',').filter(Boolean);
+    const home=!hp.get('person');keepOpen=home;   // open the CEO search box on a clean homepage load; deep links with person= stay closed
     return setPerson(hp.get('person')||DEFAULT,docIds).then(()=>{
+    if(home&&!pOpen){pOpen=true;renderPicker()}
     if(toCloud)setView('cloud');if(toRace)setView('race');if(toRing)setView('ring');const vs=hp.get('vs');if(vs||CMP)return setCmp(vs)}).catch(e=>{
     tb.innerHTML=`<tr><td colspan="4" class="empty">Could not load data: ${esc(e.message)}</td></tr>`;console.error(e)})}}
 fromHash();
