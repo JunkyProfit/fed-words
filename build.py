@@ -748,6 +748,10 @@ tr[data-w]:hover td{background:#f6efe0}tr.active td{background:var(--hl)}
 #az button:hover:not(:disabled){border-color:var(--rule)}
 #az button[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
 #az button:disabled{color:#b9b09d;cursor:default;font-weight:400}
+#azAll{font:inherit;font-size:12px;font-weight:700;height:20px;line-height:1;padding:0 8px;border:1px solid var(--rule);border-radius:4px;background:transparent;color:var(--ink);cursor:pointer;letter-spacing:.04em}
+#azAll:hover{border-color:var(--rule)}
+#azAll[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+#azAll[hidden]{display:none!important}
 #az[hidden]{display:none!important}
 @container (max-width:285px){
  .pk.has-az{display:block}
@@ -943,8 +947,8 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 #idx .chip[aria-pressed="true"]{background:var(--ink);color:#0b0b0b;border-color:var(--ink)}#idx .chip[aria-pressed="true"] .n{color:#5a554d}
 #idx .chip:disabled{opacity:.4;cursor:default}
 .nomatch{font-size:13px}.linkbtn{font:inherit;background:none;border:0;color:var(--ink);text-decoration:underline;cursor:pointer;padding:0}
-#az button{color:var(--ink)}#az button:disabled{color:#4d4943}#az{border-left-color:var(--line)}
-#az button[aria-pressed="true"]{background:var(--ink);color:#0b0b0b;border-color:var(--ink)}#az button.all{border-color:var(--rule)}
+#az button,#azAll{color:var(--ink)}#az button:disabled{color:#4d4943}#az{border-left-color:var(--line)}
+#az button[aria-pressed="true"],#azAll[aria-pressed="true"]{background:var(--ink);color:#0b0b0b;border-color:var(--ink)}#az button.all,#azAll{border-color:var(--rule)}
 /* Ad placeholders: faint mock units, kept clear of the stats and controls */
 aside.ad{display:block;margin:28px auto;width:min(100%,var(--aw));position:relative;clear:both}
 aside.ad .adl{display:block;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#77726a;margin:0 0 4px}
@@ -2018,7 +2022,10 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
   html body .pk.has-az #az[hidden]{display:none!important}
   html body .pk.has-az #az button{flex:none!important;width:28px!important;min-width:28px!important;height:32px!important;min-height:32px!important;font-size:12px!important;border-radius:5px;padding:0!important}
   html body .pk.has-az #az button::before{inset:1px;border-radius:4px}
-  html body .pk.has-az #az button.all{width:auto!important;min-width:32px!important;padding:0 8px!important;font-size:11px!important;letter-spacing:.02em}
+  html body .pk.has-az #az button.all,html body .pk.has-az #azAll{width:auto!important;min-width:32px!important;height:32px!important;min-height:32px!important;padding:0 8px!important;font-size:11px!important;letter-spacing:.02em;border-radius:5px;position:relative;isolation:isolate;flex:none}
+  html body .pk.has-az #azAll::before{content:"";position:absolute;inset:1px;z-index:-1;border:1px solid var(--rule);border-radius:4px}
+  html body .pk.has-az #azAll[aria-pressed="true"]{color:#0b0b0b;background:transparent!important}
+  html body .pk.has-az #azAll[aria-pressed="true"]::before{background:var(--ink);border-color:var(--ink)}
   html body .pk.has-az #az button:disabled{display:none!important}
   html body .pk.has-az #porder{flex:none;flex-direction:column;align-items:flex-end;justify-content:center;width:auto;max-width:42%;margin:0!important;gap:2px!important}
   html body .pk.has-az #porder .porder-lbl{font-size:9.5px;line-height:1.15;text-align:right;order:2}
@@ -2042,14 +2049,18 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
   #pMore[hidden]{display:none!important}
   #pMoreBtn{appearance:none;width:100%;min-height:32px;padding:6px 10px;border-radius:8px;border:1px solid var(--rule);background:transparent;color:var(--ink);font:700 12px/1.2 Arial,Helvetica,sans-serif;cursor:pointer}
   #pMoreBtn:focus-visible{outline:2px solid #fff;outline-offset:2px}
-  /* mm233: All N <category> sits on the A–Z / sort-toggle row, not under the list */
-  html body .pk.popen #azwrap{display:flex!important;align-items:center;gap:6px;width:100%;min-width:0;margin:0 0 4px;box-sizing:border-box}
-  html body .pk.popen #aztools{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex:0 0 auto;flex-shrink:0;gap:2px;max-width:none;width:auto}
-  html body .pk.popen #aztools:not(:has(#porder:not([hidden]),#pMore:not([hidden]))){display:none}
+  /* mm234: All N <category> sits under the All chip on the left; sort toggle stays on the right */
+  html body .pk.popen #azwrap{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:auto auto;align-items:center;column-gap:0;row-gap:2px;width:100%;min-width:0;margin:0 0 4px;box-sizing:border-box}
+  html body .pk.popen #azbar{display:contents}
+  html body .pk.popen #azAll{grid-column:1;grid-row:1;margin:0}
+  html body .pk.popen #az{grid-column:2;grid-row:1;min-width:0}
+  html body .pk.popen #aztools{display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-start;grid-column:3;grid-row:1/-1;align-self:start;flex:0 0 auto;flex-shrink:0;gap:2px;max-width:none;width:auto;margin:0 0 0 6px}
+  html body .pk.popen #aztools:not(:has(#porder:not([hidden]))){display:none}
   html body .pk.popen #porder{max-width:none!important;width:auto!important;margin:0!important}
   html body .pk.popen #porderBtn{white-space:nowrap;width:auto}
   html body .pk.popen #porderLbl{white-space:nowrap}
-  html body .pk.popen #pMore{margin:0!important;width:auto;order:3}
+  html body .pk.popen #pMore{grid-column:1/3;grid-row:2;justify-self:start;margin:0!important;width:auto}
+  html body .pk.popen #pMore[hidden]{display:none!important}
   html body .pk.popen #pMoreBtn{width:auto;min-height:28px;padding:4px 8px;font-size:10.5px;white-space:nowrap;border-radius:999px}
   /* further first-screen savings on phones when the people list is open */
   #picker:has(.pk.popen) #gsearch{margin:0 0 4px;padding:4px 6px 5px}
@@ -2073,12 +2084,15 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
   html body .pk.has-az{display:block}
   html body .pk.has-az #azwrap{display:flex;align-items:center;gap:8px;width:100%;min-width:0;margin:0 0 6px;box-sizing:border-box}
   html body .pk.has-az #azwrap:not(:has(#az:not([hidden]))){display:none}
-  html body .pk.has-az #az{display:flex!important;flex:1 1 auto;flex-wrap:nowrap!important;align-items:center;gap:1px!important;min-width:0;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;padding:0!important;margin:0!important;border-left:0!important;-webkit-overflow-scrolling:touch;grid-template-columns:none!important;grid-column:auto;grid-row:auto}
-  html body .pk.has-az #az::-webkit-scrollbar{display:none}
+  html body .pk.has-az #azbar{display:flex!important;flex:1 1 auto;flex-wrap:nowrap!important;align-items:center;gap:1px!important;min-width:0;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;padding:0!important;margin:0!important;border-left:0!important;-webkit-overflow-scrolling:touch}
+  html body .pk.has-az #azbar::-webkit-scrollbar{display:none}
+  html body .pk.has-az #azbar:has(#az[hidden]){display:none!important}
+  html body .pk.has-az #az{display:flex!important;flex:0 0 auto;flex-wrap:nowrap!important;align-items:center;gap:1px!important;min-width:0;overflow:visible!important;padding:0!important;margin:0!important;border-left:0!important;grid-template-columns:none!important;grid-column:auto;grid-row:auto}
   html body .pk.has-az #az[hidden]{display:none!important}
-  html body .pk.has-az #az button{flex:none!important;width:32px!important;min-width:32px!important;height:34px!important;min-height:34px!important;font-size:13px!important;border-radius:6px;padding:0!important}
+  html body .pk.has-az #az button,html body .pk.has-az #azAll{flex:none!important;width:32px!important;min-width:32px!important;height:34px!important;min-height:34px!important;font-size:13px!important;border-radius:6px;padding:0!important}
   html body .pk.has-az #az button::before{inset:1px;border-radius:5px}
-  html body .pk.has-az #az button.all{width:auto!important;min-width:36px!important;padding:0 10px!important;font-size:12px!important;letter-spacing:.02em}
+  html body .pk.has-az #az button.all,html body .pk.has-az #azAll{width:auto!important;min-width:36px!important;padding:0 10px!important;font-size:12px!important;letter-spacing:.02em}
+  html body .pk.has-az #azAll[aria-pressed="true"]{background:var(--ink);color:#0b0b0b;border-color:var(--ink)}
   html body .pk.has-az #az button:disabled{display:none!important}
   html body .pk.has-az #porder{display:flex;flex:none;flex-direction:column;align-items:flex-end;justify-content:center;width:auto;max-width:42%;margin:0!important;gap:2px!important;grid-column:auto;grid-row:auto}
   html body .pk.has-az #porder .porder-lbl{font-size:10px;line-height:1.15;text-align:right;order:2}
@@ -2118,9 +2132,10 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
 <button type="button" id="pdisc" aria-expanded="false" aria-controls="persons" hidden></button>
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
-<div id="azwrap"><div id="az" role="toolbar" aria-label="Filter by last name" aria-controls="persons" hidden></div>
-<div id="aztools"><div id="porder" hidden><span class="porder-lbl" id="porderLbl">Ordered by company size (market value)</span><button type="button" id="porderBtn" aria-label="Sort CEOs alphabetically by last name">ALPHABETICAL</button></div>
-<div id="pMore" hidden><button type="button" id="pMoreBtn" aria-expanded="false">Show all</button></div></div></div>
+<div id="azwrap"><div id="azbar" role="toolbar" aria-label="Filter by last name" aria-controls="persons"><button type="button" class="all" id="azAll" data-l="" aria-pressed="true" hidden title="Show everyone">All</button>
+<div id="az" hidden></div></div>
+<div id="aztools"><div id="porder" hidden><span class="porder-lbl" id="porderLbl">Ordered by company size (market value)</span><button type="button" id="porderBtn" aria-label="Sort CEOs alphabetically by last name">ALPHABETICAL</button></div></div>
+<div id="pMore" hidden><button type="button" id="pMoreBtn" aria-expanded="false">Show all</button></div></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
 <div id="personInfo"><span class="eyebrow" id="eyebrow"></span></div>
 </div></section>
@@ -2250,19 +2265,20 @@ const matchQ=p=>{if(!pq)return true;const h=[p.name,p.org,p.ticker,p.role,p.grou
   return pq.toLowerCase().split(/\s+/).filter(Boolean).every(t=>h.includes(t))};
 const lastName=p=>(p.sort_name||p.name.replace(/,?\s+(Jr|Sr)\.?$|,?\s+(II|III|IV)$/,'').trim().split(' ').pop()).toUpperCase();
 function renderAZ(allIn,inCat){
-  const az=$('az'),use=allIn.length>=8;     // only for the bigger categories (CEOs, US Government), not the five Fed Chairmen
-  az.hidden=!use;(az.closest('.pk')||az.parentElement).classList.toggle('has-az',use);if(!use){azSel='';return}
+  const az=$('az'),allBtn=$('azAll'),bar=$('azbar'),use=allIn.length>=8;     // only for the bigger categories (CEOs, US Government), not the five Fed Chairmen
+  az.hidden=!use;if(allBtn)allBtn.hidden=!use;(az.closest('.pk')||az.parentElement).classList.toggle('has-az',use);if(!use){azSel='';return}
   const have=new Set(inCat.map(p=>lastName(p)[0]));
   if(azSel&&!have.has(azSel))azSel='';
   const L='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  az.innerHTML=`<button type="button" class="all" data-l="" aria-pressed="${!azSel}" title="Show everyone in ${esc(P.category)}">All</button>`+
-    L.map(l=>`<button type="button" data-l="${l}" aria-pressed="${azSel===l}"${have.has(l)?` aria-label="Last names starting with ${l}"`:' disabled aria-label="No last names starting with '+l+'"'}>${l}</button>`).join('');
-  const btns=[...az.querySelectorAll('button:not(:disabled)')],cur=btns.find(b=>b.getAttribute('aria-pressed')==='true')||btns[0];
+  if(allBtn){allBtn.setAttribute('aria-pressed',String(!azSel));allBtn.title=`Show everyone in ${esc(P.category)}`}
+  az.innerHTML=L.map(l=>`<button type="button" data-l="${l}" aria-pressed="${azSel===l}"${have.has(l)?` aria-label="Last names starting with ${l}"`:' disabled aria-label="No last names starting with '+l+'"'}>${l}</button>`).join('');
+  const btns=[allBtn,...az.querySelectorAll('button:not(:disabled)')].filter(Boolean),cur=btns.find(b=>b.getAttribute('aria-pressed')==='true')||btns[0];
   az.querySelectorAll('button:disabled').forEach(b=>b.tabIndex=-1);
-  btns.forEach(b=>{b.tabIndex=b===cur?0:-1;b.onclick=()=>{azSel=b.dataset.l;renderPicker();const n=$('az').querySelector(`button[data-l="${azSel}"]`);n&&n.focus()}});
-  az.onkeydown=e=>{const i=btns.indexOf(document.activeElement);if(i<0)return;let j=-1;
+  btns.forEach(b=>{b.tabIndex=b===cur?0:-1;b.onclick=()=>{azSel=b.dataset.l||'';renderPicker();const n=azSel?az.querySelector(`button[data-l="${azSel}"]`):allBtn;n&&n.focus()}});
+  const host=bar||az;
+  host.onkeydown=e=>{const i=btns.indexOf(document.activeElement);if(i<0)return;let j=-1;
     if(e.key==='ArrowRight'||e.key==='ArrowDown')j=(i+1)%btns.length;else if(e.key==='ArrowLeft'||e.key==='ArrowUp')j=(i-1+btns.length)%btns.length;
-    else if(e.key==='Home')j=0;else if(e.key==='End')j=btns.length-1;else if(e.key==='Escape'&&azSel){azSel='';renderPicker();$('az').querySelector('button.all').focus();e.preventDefault();return}
+    else if(e.key==='Home')j=0;else if(e.key==='End')j=btns.length-1;else if(e.key==='Escape'&&azSel){azSel='';renderPicker();allBtn&&allBtn.focus();e.preventDefault();return}
     if(j>=0){e.preventDefault();btns[i].tabIndex=-1;btns[j].tabIndex=0;btns[j].focus()}};
 }
 function renderPicker(){
@@ -2313,7 +2329,7 @@ function renderPicker(){
 }
 function catNoun(c){return c==='CEOs'?'CEOs':c==='Federal Reserve'?'Fed Chairs':c==='US Government'?'Officials':(CAT_LBL[c]||c)}
 function allPeopleLbl(n){return 'All '+n+' '+catNoun(P&&P.category)}
-function syncPMore(){   // mm227/mm233: phones only — cap the open people list; All N <category> sits on the A–Z row
+function syncPMore(){   // mm227/mm234: phones only — cap the open people list; All N <category> sits under the All chip
   const more=$('pMore'),btn=$('pMoreBtn'),host=$('persons'),pk=document.querySelector('#picker .pk');
   if(!more||!btn||!host||!pk)return;
   if(typeof PHONE==='undefined'||!PHONE.matches||!pk.classList.contains('popen')){pk.classList.remove('pall');more.hidden=true;return}
