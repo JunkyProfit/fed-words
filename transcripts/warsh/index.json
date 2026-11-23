@@ -1,5 +1,15 @@
 [
   {
+    "file": "warsh20261116a.txt",
+    "date": "2026-11-16",
+    "type": "speech",
+    "title": "Opening Remarks",
+    "speaker": "Chairman Kevin Warsh",
+    "location": "At the Productivity and Jobs Task Force Conference, hosted by the Federal Reserve Board and the Federal Reserve Bank of San Francisco, San Francisco, California",
+    "url": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm",
+    "fetched": "2026-11-23T08:12:47"
+  },
+  {
     "file": "FOMCpresconf20261028.txt",
     "date": "2026-10-28",
     "type": "press conference",
