@@ -18,4 +18,6 @@ env/
 # ...but keep site images
 !assets/
 !assets/*.png
+!assets/race/
+!assets/race/*.png
 local_sources/

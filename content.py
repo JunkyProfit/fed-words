@@ -238,9 +238,19 @@ ol.docs{padding-left:22px}ol.docs li{margin:6px 0}ol.docs .dt{color:var(--muted)
 .cta{display:inline-block;margin:6px 0 4px;font-weight:700}
 ul.plain{list-style:none;padding:0}ul.plain li{margin:6px 0}
 .grp{margin-top:22px}
+/* mm227: static Word Race share pages */
+.rhero{margin:0 0 18px}
+.rhero .eyb{color:#ff7a70}
+.rhero h1{font-size:32px;line-height:1.15;letter-spacing:-.025em;margin:0 0 6px}
+.rlead{color:#c8c1b6;margin:0 0 14px;font-size:15px;line-height:1.45}
+a.rwatch{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:12px;border:1px solid #9c3f39;background:linear-gradient(180deg,#c44a42,#7a1f1c);color:#fff;font:700 17px/1 Arial,Helvetica,sans-serif;text-decoration:none;box-shadow:0 0 16px rgba(255,84,73,.28);margin:0 0 16px}
+a.rwatch:hover{border-color:#ff5449;color:#fff;box-shadow:0 0 20px rgba(255,84,73,.45)}
+.rcard{margin:0 0 18px;background:#121010;border:1px solid #3a2c2a;border-radius:12px;overflow:hidden}
+.rcard img{display:block;width:100%;height:auto}
+@media (max-width:440px){.rhero h1{font-size:24px}a.rwatch{width:100%;min-height:46px;font-size:16px}}
 """
 
-def shell(privacy, *, title, desc, path, body, current="", prefix=""):
+def shell(privacy, *, title, desc, path, body, current="", prefix="", og_image="", og_alt=""):
     head, rest = privacy.split("<main>", 1)
     tail = rest.split("</main>", 1)[1]
     url = SITE + path
@@ -250,6 +260,11 @@ def shell(privacy, *, title, desc, path, body, current="", prefix=""):
     head = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{html.escape(desc)}">', head, 1)
     head = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{html.escape(desc)}">', head, 1)
     head = re.sub(r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{html.escape(desc)}">', head, 1)
+    if og_image:
+        head = re.sub(r'(<meta property="og:image" content=")[^"]*(">)', r"\1" + og_image + r"\2", head, 1)
+        head = re.sub(r'(<meta name="twitter:image" content=")[^"]*(">)', r"\1" + og_image + r"\2", head, 1)
+    if og_alt:
+        head = re.sub(r'(<meta property="og:image:alt" content=")[^"]*(">)', r"\1" + html.escape(og_alt, quote=True) + r"\2", head, 1)
     head = head.replace("</style>", EXTRA_CSS + "</style>", 1)
     tail = re.sub(r"<footer>.*?</footer>", lambda m: footer(current), tail, 1, flags=re.S)
     tail = tail.replace("document.getElementById('toTop').onclick", "(document.getElementById('toTop')||{}).onclick")
@@ -728,10 +743,99 @@ def findings_page(privacy):
         prefix="",
     )
 
+
+# ---- mm227: per-speaker Word Race landing pages and Open Graph cards ----
+def _ver(privacy):
+    m = re.search(r'og-image\.png\?v=([^"]+)', privacy)
+    return m.group(1) if m else "mm227"
+
+def poss(name):
+    return f"{name}'s"
+
+def fmt_race_count(p, k):
+    ceo = p.get("category") == "CEOs" or p.get("mode") == "ceo"
+    s = f"{k:,}"
+    return f"({s})" if ceo else s
+
+def _font(size, bold=True):
+    name = "LiberationSans-Bold.ttf" if bold else "LiberationSans-Regular.ttf"
+    path = Path("/usr/share/fonts/truetype/liberation") / name
+    from PIL import ImageFont
+    return ImageFont.truetype(str(path), size)
+
+def render_race_og(p, top, dest):
+    """1200x630 final-frame card of the all-documents top 10. Derived counts only."""
+    from PIL import Image, ImageDraw
+    W, H = 1200, 630
+    bg, ink, muted, bar, topc, red = "#121010", "#f3eee4", "#a49e93", "#7a2a25", "#ff5449", "#ff5449"
+    im = Image.new("RGB", (W, H), bg)
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle((18, 18, W - 19, H - 19), 18, outline="#3a2c2a", width=2)
+    name, role = p["name"], p.get("role") or p.get("org") or ""
+    d.text((64, 40), name, font=_font(52, True), fill=ink)
+    d.text((64, 102), "Word Race", font=_font(28, True), fill=red)
+    if role:
+        # measure Word Race
+        wr = d.textbbox((64, 102), "Word Race", font=_font(28, True))
+        d.text((wr[2] + 16, 110), role, font=_font(20, False), fill=muted)
+    d.text((W - 64, 48), "MouthMath", font=_font(22, True), fill=ink, anchor="ra")
+    rows_top, rows_bot = 154, 560
+    rh = (rows_bot - rows_top) / max(1, len(top) or 1)
+    lx, bx, bw_max = 64, 340, 640
+    mx = top[0][1] if top else 1
+    for i, (w, k) in enumerate(top):
+        y = rows_top + i * rh
+        cy = y + rh / 2
+        fill = topc if i == 0 else bar
+        d.text((lx, cy), w, font=_font(24, True), fill=ink, anchor="lm")
+        bw = max(8, int(k / mx * bw_max))
+        by0, by1 = int(cy - 14), int(cy + 14)
+        d.rounded_rectangle((bx, by0, bx + bw, by1), 4, fill=fill)
+        d.text((bx + bw + 14, cy), fmt_race_count(p, k), font=_font(24, True), fill=red, anchor="lm")
+    d.text((W / 2, 592), "mouthmath.com", font=_font(22, False), fill=muted, anchor="mt")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    im.save(dest, "PNG", optimize=True)
+
+def race_page(p, stop, privacy):
+    top = top_words(p, stop, n=10)
+    slug = p["slug"]
+    ver = _ver(privacy)
+    img_rel = f"assets/race/{slug}.png"
+    render_race_og(p, top, ROOT / img_rel)
+    img_abs = f"https://mouthmath.com/{img_rel}?v={ver}"
+    ceo = p.get("category") == "CEOs" or p.get("mode") == "ceo"
+    rows = "\n".join(
+        f'<tr><td class="n">{i}</td><td>{esc(w)}</td><td class="n">{esc(fmt_race_count(p, k))}</td></tr>'
+        for i, (w, k) in enumerate(top, 1)
+    )
+    n = len(p["docs"])
+    unit = "document" if n == 1 else "documents"
+    title = f"{poss(p['name'])} Word Race"
+    desc = (f"{poss(p['name'])} Word Race on MouthMath: the top 10 words across all {n} public {unit}, "
+            f"added up speech by speech.")
+    alt = f"{poss(p['name'])} Word Race: top 10 words on MouthMath"
+    body = (
+        f'<div class="rhero">\n<p class="eyb">Word Race</p>\n'
+        f'<h1>{esc(p["name"])}</h1>\n<p class="upd">{esc(p.get("role") or p.get("org") or "")}</p>\n'
+        f'<p class="rlead">The top 10 words {esc(p["name"])} said across all {n} {unit} MouthMath counts, '
+        f'added up speech by speech. Common words such as “the”, “and” and “of” are left out.</p>\n'
+        f'<p><a class="rwatch" href="index.html#person={esc(slug)}&amp;docs=all&amp;view=race">Watch the Word Race</a></p>\n'
+        f'</div>\n'
+        f'<div class="rcard"><img src="{esc(img_rel)}?v={esc(ver)}" width="1200" height="630" alt="{esc(alt)}"></div>\n'
+        f'<h2>Top 10 words</h2>\n'
+        f'<table class="wt"><thead><tr><th class="n">Rank</th><th>Word</th><th class="n">Times said</th></tr></thead>\n'
+        f'<tbody>\n{rows}\n</tbody></table>\n'
+        f'<p><a class="cta" href="index.html#person={esc(slug)}&amp;docs=all&amp;view=race">Watch the Word Race &rarr;</a> · '
+        f'<a href="speakers/{esc(slug)}.html">Full profile</a></p>\n'
+    )
+    return shell(privacy, title=title, desc=desc, path=f"race/{slug}.html", body=body,
+                 prefix="../", og_image=img_abs, og_alt=alt)
+
 def build_all(people, stop, privacy, write):
     by = {p["slug"]: p for p in people}
     urls = []
     (ROOT / "speakers").mkdir(exist_ok=True); (ROOT / "articles").mkdir(exist_ok=True)
+    (ROOT / "race").mkdir(exist_ok=True); (ROOT / "assets" / "race").mkdir(exist_ok=True)
     keep = set()
     for p in people:
         write(ROOT / "speakers" / f'{p["slug"]}.html', speaker_page(p, stop, privacy)); keep.add(f'{p["slug"]}.html')
@@ -739,6 +843,14 @@ def build_all(people, stop, privacy, write):
     for f in (ROOT / "speakers").glob("*.html"):
         if f.name not in keep and f.name != "index.html": f.unlink()
     write(ROOT / "speakers" / "index.html", speakers_index(people, privacy)); urls.insert(0, "speakers/")
+    rkeep = set()
+    for p in people:
+        write(ROOT / "race" / f'{p["slug"]}.html', race_page(p, stop, privacy)); rkeep.add(f'{p["slug"]}.html')
+        urls.append(f'race/{p["slug"]}.html')
+    for f in (ROOT / "race").glob("*.html"):
+        if f.name not in rkeep and f.name != "index.html": f.unlink()
+    for f in (ROOT / "assets" / "race").glob("*.png"):
+        if f.stem + ".html" not in rkeep: f.unlink()
     fill = article_fill(by, stop)
     for s, t in ARTICLES:
         write(ROOT / "articles" / f"{s}.html", article_page(s, t, privacy, fill)); urls.insert(0, f"articles/{s}.html")
