@@ -384,9 +384,9 @@ PRIVACY = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm232">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm232">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm232">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm233">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm233">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm233">
 <title>Privacy Policy — MouthMath</title>
 <meta name="description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <link rel="canonical" href="https://mouthmath.com/privacy.html">
@@ -394,7 +394,7 @@ PRIVACY = r"""<!doctype html>
 <meta property="og:site_name" content="MouthMath">
 <meta property="og:title" content="Privacy Policy — MouthMath">
 <meta property="og:url" content="https://mouthmath.com/privacy.html">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm232">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm233">
 <meta property="og:description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -402,7 +402,7 @@ PRIVACY = r"""<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy Policy — MouthMath">
 <meta name="twitter:description" content="MouthMath privacy policy: no accounts or logins, no personal data collected by the site itself; Google AdSense cookies and personalized ads; TradingView chart embed.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm232">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm233">
 <style>
 :root{--ink:#f3eee4;--muted:#a49e93;--rule:#2c2a27;--red:#ff5449;color-scheme:dark}
 *{box-sizing:border-box}
@@ -435,7 +435,7 @@ footer a{color:var(--muted)}
 html body p.abtop{text-align:right!important;display:flex!important;justify-content:flex-end!important}
 </style></head>
 <body>
-<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm232" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
+<header><div class="in"><a class="logo" href="./" aria-label="MouthMath home"><img src="assets/logo.svg?v=mm233" alt="MouthMath"></a><a class="back" href="./">&larr; Back to MouthMath</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
 <p class="upd">Last updated: October 4, 2026</p>
@@ -507,10 +507,10 @@ TEMPLATE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm232">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm232">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm233">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm233">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm232">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm233">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead. Built for investors, traders, prediction-market players, journalists and researchers.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -523,14 +523,14 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm232">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm233">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm232">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm233">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -2042,6 +2042,15 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
   #pMore[hidden]{display:none!important}
   #pMoreBtn{appearance:none;width:100%;min-height:32px;padding:6px 10px;border-radius:8px;border:1px solid var(--rule);background:transparent;color:var(--ink);font:700 12px/1.2 Arial,Helvetica,sans-serif;cursor:pointer}
   #pMoreBtn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  /* mm233: All N <category> sits on the A–Z / sort-toggle row, not under the list */
+  html body .pk.popen #azwrap{display:flex!important;align-items:center;gap:6px;width:100%;min-width:0;margin:0 0 4px;box-sizing:border-box}
+  html body .pk.popen #aztools{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex:0 0 auto;flex-shrink:0;gap:2px;max-width:none;width:auto}
+  html body .pk.popen #aztools:not(:has(#porder:not([hidden]),#pMore:not([hidden]))){display:none}
+  html body .pk.popen #porder{max-width:none!important;width:auto!important;margin:0!important}
+  html body .pk.popen #porderBtn{white-space:nowrap;width:auto}
+  html body .pk.popen #porderLbl{white-space:nowrap}
+  html body .pk.popen #pMore{margin:0!important;width:auto;order:3}
+  html body .pk.popen #pMoreBtn{width:auto;min-height:28px;padding:4px 8px;font-size:10.5px;white-space:nowrap;border-radius:999px}
   /* further first-screen savings on phones when the people list is open */
   #picker:has(.pk.popen) #gsearch{margin:0 0 4px;padding:4px 6px 5px}
   #picker:has(.pk.popen) #gsearch .gs-lbl,#picker:has(.pk.popen) #gqlbl{font-size:10px;letter-spacing:.06em;margin:0 0 2px}
@@ -2058,7 +2067,7 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
   #picker:has(.pk.popen){padding-top:8px;padding-bottom:8px}
   html body #picker .pk{gap:4px!important}
 }
-@media (min-width:641px){#pMore{display:none!important}}
+@media (min-width:641px){#pMore{display:none!important}html body .pk.has-az #aztools{display:contents}}
 /* mm230: horizontal A–Z above the name list at tablet and desktop (phones keep the tighter mm229 strip). Empty letters hidden; sort toggle (CEOs only) sits on the same row. Name chips slightly smaller on tablet/touch, all categories. */
 @media (min-width:641px){
   html body .pk.has-az{display:block}
@@ -2110,9 +2119,9 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
 <div id="azwrap"><div id="az" role="toolbar" aria-label="Filter by last name" aria-controls="persons" hidden></div>
-<div id="porder" hidden><span class="porder-lbl" id="porderLbl">Ordered by company size (market value)</span><button type="button" id="porderBtn" aria-label="Sort CEOs alphabetically by last name">ALPHABETICAL</button></div></div>
+<div id="aztools"><div id="porder" hidden><span class="porder-lbl" id="porderLbl">Ordered by company size (market value)</span><button type="button" id="porderBtn" aria-label="Sort CEOs alphabetically by last name">ALPHABETICAL</button></div>
+<div id="pMore" hidden><button type="button" id="pMoreBtn" aria-expanded="false">Show all</button></div></div></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
-<div id="pMore" hidden><button type="button" id="pMoreBtn" aria-expanded="false">Show all</button></div>
 <div id="personInfo"><span class="eyebrow" id="eyebrow"></span></div>
 </div></section>
 <!-- ad slot: side · 300x250 desktop (hidden on phones) · reserved for an AdSense unit after approval -->
@@ -2302,14 +2311,16 @@ function renderPicker(){
   scrollSelChip();
   syncPMore();
 }
-function syncPMore(){   // mm227: phones only — cap the open people list, offer Show all / Show less
+function catNoun(c){return c==='CEOs'?'CEOs':c==='Federal Reserve'?'Fed Chairs':c==='US Government'?'Officials':(CAT_LBL[c]||c)}
+function allPeopleLbl(n){return 'All '+n+' '+catNoun(P&&P.category)}
+function syncPMore(){   // mm227/mm233: phones only — cap the open people list; All N <category> sits on the A–Z row
   const more=$('pMore'),btn=$('pMoreBtn'),host=$('persons'),pk=document.querySelector('#picker .pk');
   if(!more||!btn||!host||!pk)return;
   if(typeof PHONE==='undefined'||!PHONE.matches||!pk.classList.contains('popen')){pk.classList.remove('pall');more.hidden=true;return}
-  if(pk.classList.contains('pall')){more.hidden=false;const n=host.querySelectorAll('button.chip').length;btn.textContent='Show less';btn.setAttribute('aria-expanded','true');return}
+  if(pk.classList.contains('pall')){more.hidden=false;const n=host.querySelectorAll('button.chip').length;btn.textContent='Show less';btn.setAttribute('aria-expanded','true');btn.setAttribute('aria-label','Show less');return}
   more.hidden=false;   // measure overflow with the cap applied
-  requestAnimationFrame(()=>{const over=host.scrollHeight>host.clientHeight+4,n=host.querySelectorAll('button.chip').length;
-    more.hidden=!over;btn.textContent=over?('Show all '+n):'Show all';btn.setAttribute('aria-expanded','false');scrollSelChip()});
+  requestAnimationFrame(()=>{const over=host.scrollHeight>host.clientHeight+4,n=host.querySelectorAll('button.chip').length,lbl=allPeopleLbl(n);
+    more.hidden=!over;btn.textContent=over?lbl:'Show all';btn.setAttribute('aria-expanded','false');if(over)btn.setAttribute('aria-label',lbl);scrollSelChip()});
 }
 function scrollSelChip(){   // mm45: keep the selected speaker chip visible inside #persons without scrolling the page
   const b=document.querySelector('#persons button.chip.on'),host=$('persons');if(!b||!host)return;
