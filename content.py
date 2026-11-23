@@ -38,7 +38,7 @@ SLUG_NOTE = {
     "cook": "The documents are his own public words, such as letters filed with the Securities and Exchange Commission and congressional testimony.",
     "jobs": "The documents are his own public words filed with the Securities and Exchange Commission.",
     "musk": "The documents are his two Tesla Master Plan essays and his testimony to Congress about SpaceX.",
-    "kress": "The documents are her own words on NVIDIA's quarterly earnings calls, both her prepared remarks and her answers to analysts, from the call transcripts NVIDIA posts on its investor relations site. Calls before November 11, 2026 were spoken as CFO.",
+    "kress": "The documents are her own words on NVIDIA's quarterly earnings calls, both her prepared remarks and her answers to analysts, from the call transcripts NVIDIA posts on its investor relations site.",
     "huang": "The documents are his own words on NVIDIA's quarterly earnings calls, mostly his answers to analysts' questions, from the call transcripts NVIDIA posts on its investor relations site.",
     "amodei": "The documents are his essays and short posts on darioamodei.com, his July 2023 written testimony to a Senate Judiciary subcommittee, and Anthropic's IPO Founders' Letter, a joint letter signed by all seven co-founders.",
     "ternus": "The documents are his own words on Apple's quarterly earnings calls, including prepared remarks and answers to analysts, from transcripts published by Six Colors. Apple itself posts a press release and an audio webcast, not a transcript. The April 30, 2026 remarks were spoken as incoming CEO, before he took the role on September 1, 2026.",

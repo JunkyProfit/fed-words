@@ -21,8 +21,8 @@ letters with nobody are disabled, "All" clears the filter, arrow keys/Home/End m
 | CEOs | **Andy Jassy** (Amazon) | 2025 and 2024 annual shareholder letters | aboutamazon.com |
 | CEOs | **Greg Abel** (Berkshire Hathaway) | his 2025 letter (his first as CEO) | berkshirehathaway.com |
 | CEOs | **Sundar Pichai** (Alphabet/Google) | his prepared remarks from the 8 most recent earnings calls (Q3 2024 to Q2 2026) | abc.xyz (Alphabet's own transcripts) |
-| CEOs | **Colette Kress** (NVIDIA, NVDA; interim CEO since Nov 11, 2026, still EVP & CFO; Mag 7, S&P 500, Nasdaq 100, Dow 30) | all her own turns (prepared remarks + Q&A answers) on the 6 most recent earnings calls NVIDIA posts transcripts for (Q1 FY2026 to Q2 FY2027; calls before Nov 11, 2026 are labelled as spoken as CFO). Rolling: each new call is added and the oldest drops off | investor.nvidia.com (NVIDIA's own transcript PDFs) |
-| CEOs (former) | **Jensen Huang** (NVIDIA, NVDA; co-founder, CEO Apr 1993 to Nov 11, 2026, resigned) | all his own turns (mostly Q&A answers) on the 6 earnings calls NVIDIA posts transcripts for (Q1 FY2026 to Q2 FY2027); calls after Nov 11, 2026 are ignored | investor.nvidia.com (NVIDIA's own transcript PDFs) |
+| CEOs | **Jensen Huang** (NVIDIA, NVDA; co-founder, President & CEO; Mag 7, S&P 500, Nasdaq 100, Dow 30) | all his own turns (mostly Q&A answers) on the 6 most recent earnings calls NVIDIA posts transcripts for (Q1 FY2026 to Q2 FY2027). Rolling: each new call is added and the oldest drops off | investor.nvidia.com (NVIDIA's own transcript PDFs) |
+| CEOs | **Colette Kress** (NVIDIA, NVDA; EVP & CFO; Mag 7, S&P 500, Nasdaq 100, Dow 30) | all her own turns (prepared remarks + Q&A answers) on the 6 most recent earnings calls NVIDIA posts transcripts for (Q1 FY2026 to Q2 FY2027). Rolling: each new call is added and the oldest drops off | investor.nvidia.com (NVIDIA's own transcript PDFs) |
 | CEOs | **Satya Nadella** (Microsoft, MSFT; Mag 7, S&P 500, Nasdaq 100, Dow 30) | his prepared section of the 4 most recent earnings calls (Q2 FY2025 to Q4 FY2026) | microsoft.com |
 | CEOs | **Mark Zuckerberg** (Meta, META; Mag 7, S&P 500, Nasdaq 100) | his prepared section of the 4 most recent earnings calls (Q3 2025 to Q2 2026) | investor.atmeta.com |
 | CEOs | **Jamie Dimon** (JPMorgan Chase, JPM; S&P 500, Dow 30) | 2 signed annual shareholder letters (2025, 2024) | jpmorganchase.com |
@@ -79,9 +79,8 @@ the Q&A, so the usual "CEO prepared section" cut would miss most of what they sa
 `ceo_extract.speaker_turns()` keeps ALL of that person's own turns in the FactSet/CallStreet transcript PDFs NVIDIA posts on
 investor.nvidia.com (Q4 feed, document title `Transcript`): prepared remarks and answers, with the operator, IR, analysts'
 questions, the other executive and the page headers/footers removed. Source type label: `Earnings call remarks and Q&A answers`.
-Kress became interim CEO on Nov 11, 2026 when Huang resigned (NVIDIA 8-K filed Nov 12, 2026; NVIDIA Newsroom, "NVIDIA Announces
-CEO Transition"); `docs_since` lets her calls as CFO count, each labelled "Spoken as EVP & CFO". Kress is `rolling` (max 6: a
-newer call is added and the oldest rolls off); Huang has `until: 2026-11-11`, so his set is closed. NVIDIA posts the transcript
+Huang resigned on Nov 11, 2026; NVIDIA's board reinstated him as President, CEO and board director on Nov 23, 2026 (NVIDIA Newsroom, "NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director"), and Kress returned to the CFO role after serving as interim CEO in that interval. Both are `rolling` (max 6: a
+newer call is added and the oldest rolls off). NVIDIA posts the transcript
 PDF some days after each call (the written CFO Commentary appears at results time but is not used, as it largely repeats her
 prepared remarks); `python3 fetch_ceo.py --only kress,huang` picks it up once it is in the feed. Not used for Huang: GTC and other
 keynotes (NVIDIA posts video, not a full official text) and third-party transcripts.
