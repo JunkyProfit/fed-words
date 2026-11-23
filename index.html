@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930727143587260" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm227">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm227">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=mm228">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=mm228">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm227">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=mm228">
 <title>MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls</title>
 <meta name="description" content="Word counts from Fed Chairman Kevin Warsh&#39;s speeches and testimony, CEO earnings calls and shareholder letters (JPMorgan&#39;s Jamie Dimon and more) and US government officials. See which words lead. Built for investors, traders, prediction-market players, journalists and researchers.">
 <meta name="keywords" content="Federal Reserve, Fed Chairman, Kevin Warsh, Jerome Powell, Janet Yellen, Ben Bernanke, Alan Greenspan, FOMC, interest rates, inflation, monetary policy, banks, banking, CEO earnings calls, shareholder letters, JPMorgan, Jamie Dimon, US Treasury, Scott Bessent, Congress, Senate, Senators, Governors, Supreme Court, word frequency, word count, speech analysis, text analysis">
@@ -18,14 +18,14 @@
 <meta property="og:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta property="og:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
 <meta property="og:url" content="https://mouthmath.com/">
-<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm227">
+<meta property="og:image" content="https://mouthmath.com/assets/og-image.png?v=mm228">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MouthMath logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MouthMath — Word Counts from Fed Chairman Speeches &amp; CEO Earnings Calls">
 <meta name="twitter:description" content="Every word counts. Fed Chairman speeches, CEO earnings calls and shareholder letters, and US government remarks, ranked by word frequency in Word Cloud and the sortable Mouth Math table.">
-<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm227">
+<meta name="twitter:image" content="https://mouthmath.com/assets/og-image.png?v=mm228">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mouthmath.com/#website","name":"MouthMath","url":"https://mouthmath.com/","inLanguage":"en","description":"Word counts from official Federal Reserve Chair speeches, CEO earnings calls and shareholder letters, and US government remarks."},{"@type":"WebApplication","@id":"https://mouthmath.com/#app","name":"MouthMath","url":"https://mouthmath.com/","applicationCategory":"ReferenceApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free word-frequency and speech analysis tool: pick a speaker and documents, then see every word counted and ranked in Word Cloud (words sized by count) or Mouth Math (a sortable ranked table), with the sentences behind each count.","isPartOf":{"@id":"https://mouthmath.com/#website"}},{"@type":"Dataset","@id":"https://mouthmath.com/#dataset","name":"MouthMath word counts","description":"Word frequency counts computed from official, publicly available texts: Federal Reserve Chair speeches and congressional testimony (federalreserve.gov), CEO earnings call prepared remarks and shareholder letters from company investor-relations sites, and remarks, testimony and opinions by US Cabinet secretaries, US senators, House leaders, state governors and Supreme Court Justices.","url":"https://mouthmath.com/","isAccessibleForFree":true,"keywords":["Federal Reserve","Fed Chairman","monetary policy","inflation","interest rates","banks","CEO earnings calls","shareholder letters","US government","word frequency","speech analysis"],"variableMeasured":"Word frequency (count of each word per selected speaker and documents)","creator":{"@type":"Organization","name":"MouthMath","url":"https://mouthmath.com/"}}]}</script>
 <style>
 :root{--num-red:#9e1b24;--bg:#f5f0e6;--card:#fffdf8;--ink:#2b2a26;--muted:#6e6658;--accent:#3f6250;--line:#e6dccb;--header:#4f6656;--green:#7fa98b;--sage:#9cc7ad;--green-soft:#edf5f0;--chip-on:#dcebdf;--chip-ink:#2f4f3b}
@@ -2107,7 +2107,8 @@ function inCloud(u,v){   // u: 0..1 across, v: 0..CS_ASPECT down
   return false}
 const CS_FILL=(()=>{let n=0,t=0;for(let i=0;i<50;i++)for(let j=0;j<36;j++){t++;if(inCloud((i+.5)/50,(j+.5)/50))n++}return n/t})();   // share of the 1 x CS_ASPECT frame the silhouette covers
 function cloudLayoutAt(words,W,minF,mul,strict){
-  const fam=getComputedStyle(cloud).fontFamily,GAP=2,RATIO=2.7,sq=Math.sqrt,Wc=W,stretch=(W<340?1.55:W<500?1.3:1)*Math.max(1,sq(words.length/50))*mul,Hf=CS_ASPECT*Wc*stretch,ox=0;
+  const fam=getComputedStyle(cloud).fontFamily,GAP=2,RATIO=3.3,sq=Math.sqrt,Wc=W,stretch=(W<340?1.55:W<500?1.3:1)*Math.max(1,sq(words.length/50))*mul,Hf=CS_ASPECT*Wc*stretch,ox=0;
+  // mm228: RATIO was 2.7 and the count-to-size exponent was 1.1; 3.3 and 1.25 make big words a little bigger and small words a little smaller.
   // Words are set in lines that follow the cloud outline: line height peaks around the middle (biggest words, #1 first) and shrinks toward the top and the
   // bottom, so the rim is made of small bits. Words fill the lines in rank order (the line with the biggest type first), then the type is scaled up as far as all words still fit.
   const box=(x,n,f)=>{const mx=n?0:RING_MX,my=n?0:RING_MY;let wt,w,pad;f=Math.max(minF,f);   // #1 word: room for its two pill rings
@@ -2121,7 +2122,7 @@ function cloudLayoutAt(words,W,minF,mul,strict){
   const cache=new Map(),runsC=(y,h)=>{const k=Math.round(y)*4096+h;let r=cache.get(k);if(!r){r=runsAt(y,h,2);cache.set(k,r)}return r};
   const tryPlace=(g,nW)=>{
     const fl=Math.max(minF,minF*g),fh=fl*(1+(RATIO-1)*Math.min(1,g)),sq0=sq(words[0].count),lo=sq(words[nW-1].count),MG=5,CAP=26,yc=Hf*0.5;
-    const pool=words.slice(0,nW).map((x,n)=>{const b=box(x,n,sq0===lo?(fl+fh)/2:fl+(fh-fl)*Math.pow((sq(x.count)-lo)/(sq0-lo),1.1));
+    const pool=words.slice(0,nW).map((x,n)=>{const b=box(x,n,sq0===lo?(fl+fh)/2:fl+(fh-fl)*Math.pow((sq(x.count)-lo)/(sq0-lo),1.25));
       b.d=Math.max(0,Math.min(1,(b.f-fl)/Math.max(1,fh-fl)));b.al=n?Math.round((0.66+0.34*sq(b.d))*100)/100:1;return b});   // depth: nearer (more frequent) = bigger and brighter, farther = smaller and dimmer
     const prof=ym=>fl+(fh-fl)*Math.pow(Math.max(0,1-Math.pow((ym-yc)/(Hf*0.6),2)),1.6);
     const pack=(list,h,y0)=>{const runs=runsC(y0,h),rows=runs.map(()=>[]),used=runs.map(()=>0);
@@ -2153,7 +2154,7 @@ function cloudLayoutAt(words,W,minF,mul,strict){
 }
 // Every selected word is shown: try the normal sizes first; if they don't fit, let the farthest (smallest, dimmest) words go a little smaller, then make the cloud taller.
 function cloudLayout(words,W){
-  const mins=W<500?[11,10.5,10,9.5]:[12,11,10.5,10],muls=[1.15,1.3,1.5,1.75,2,2.4,3],last=mins[mins.length-1];let r=null,t=0;
+  const mins=W<500?[11,10.5,10]:[12,11,10.5,10],muls=[1.15,1.3,1.5,1.75,2,2.4,3],last=mins[mins.length-1];let r=null,t=0;   // mm228: phone floor is 10px (no 9.5)
   for(const m of mins){r=cloudLayoutAt(words,W,m,1,true);t++;if(r)break}
   if(!r)for(const mu of muls){r=cloudLayoutAt(words,W,last,mu,true);t++;if(r)break}
   if(!r)r=cloudLayoutAt(words,W,last,muls[muls.length-1],false);
