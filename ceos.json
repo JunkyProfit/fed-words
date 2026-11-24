@@ -567,6 +567,95 @@
    "source": "investor.nvidia.com",
    "fiscal": true,
    "max": 6
+  },
+  {
+   "slug": "giancarlo",
+   "name": "Charles Giancarlo",
+   "org": "Everpure",
+   "ticker": "P",
+   "role": "Chairman & CEO, Everpure",
+   "since": "2017-08-24",
+   "indices": [
+    "S&P 500"
+   ],
+   "kind": "transcript",
+   "ceo": "Giancarlo",
+   "all_sections": true,
+   "max": 4,
+   "fiscal": true,
+   "discover": {
+    "type": "urls",
+    "urls": [
+     {
+      "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2027/q3/Everpure-Q3FY27-Prepared-Remarks.pdf",
+      "date": "2026-11-18",
+      "period": "Q3 FY2027",
+      "title": "Q3 FY2027 Earnings Call: CEO Prepared Remarks"
+     },
+     {
+      "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2027/q2/Q2FY27-Prepared-Remarks.pdf",
+      "date": "2026-08-26",
+      "period": "Q2 FY2027",
+      "title": "Q2 FY2027 Earnings Call: CEO Prepared Remarks"
+     },
+     {
+      "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2027/q1/Everpure-Q1FY27-Prepared-Remarks.pdf",
+      "date": "2026-05-27",
+      "period": "Q1 FY2027",
+      "title": "Q1 FY2027 Earnings Call: CEO Prepared Remarks"
+     },
+     {
+      "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2026/q4/Q4FY26-Everpure-Prepared-Remarks.pdf",
+      "date": "2026-02-25",
+      "period": "Q4 FY2026",
+      "title": "Q4 FY2026 Earnings Call: CEO Prepared Remarks"
+     }
+    ]
+   },
+   "source": "investor.everpuredata.com"
+  },
+  {
+   "slug": "volozh",
+   "name": "Arkady Volozh",
+   "org": "Nebius Group",
+   "ticker": "NBIS",
+   "role": "Founder & CEO, Nebius Group",
+   "since": "2024-08-15",
+   "indices": [],
+   "kind": "letter",
+   "signer": "Arkady Volozh",
+   "extract": "volozh_letter",
+   "max": 4,
+   "discover": {
+    "type": "urls",
+    "urls": [
+     {
+      "url": "https://assets.nebius.com/assets/24c6bfb3-c90e-4076-9fe9-c2ab736b51ec/Nebius-SHL-2026-Q3.pdf",
+      "date": "2026-11-12",
+      "period": "Q3 2026",
+      "title": "Q3 2026 Letter to Shareholders"
+     },
+     {
+      "url": "https://assets.nebius.com/assets/4462517b-ce83-41f2-96ed-f2ac1bc06a05/SHLQ226%20%281%29.pdf",
+      "date": "2026-08-12",
+      "period": "Q2 2026",
+      "title": "Q2 2026 Letter to Shareholders"
+     },
+     {
+      "url": "https://assets.nebius.com/assets/aa1bc2e6-df83-40cd-a6a2-95e7cda3d16c/Nebius%20SHL_Q1%202026.pdf",
+      "date": "2026-05-13",
+      "period": "Q1 2026",
+      "title": "Q1 2026 Letter to Shareholders"
+     },
+     {
+      "url": "https://assets.nebius.com/assets/85571bd2-050b-468c-954c-42e9d24e4cd2/Letter%20to%20Shareholders%20Q4%202025.pdf",
+      "date": "2026-02-12",
+      "period": "Q4 2025",
+      "title": "Q4 2025 Letter to Shareholders"
+     }
+    ]
+   },
+   "source": "nebius.com"
   }
  ],
  "order": [
@@ -598,7 +687,9 @@
   "stankey",
   "khosrowshahi",
   "ortberg",
-  "niccol"
+  "niccol",
+  "giancarlo",
+  "volozh"
  ],
  "existing_indices": {
   "karp": [
@@ -661,6 +752,8 @@
   "BA": "NYSE",
   "TSLA": "NASDAQ",
   "NVDA": "NASDAQ",
-  "ANT": "NASDAQ"
+  "ANT": "NASDAQ",
+  "P": "NYSE",
+  "NBIS": "NASDAQ"
  }
 }

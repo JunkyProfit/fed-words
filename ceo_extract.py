@@ -170,3 +170,224 @@ def speaker_turns(text, who):
                 paras.append(" ".join(cur)) if not (paras and paras[-1] is not None and not re.search(r"[.!?:\u201d\")\]]$", paras[-1])) else paras.__setitem__(-1, paras[-1] + " " + " ".join(cur)); cur = []
     # FactSet wraps lines within a paragraph; a paragraph ends where a line ends a sentence and is short
     return [re.sub(r"\s+", " ", p).strip() for p in paras if p and len(p.split()) >= 3]
+
+def transcript_sections(text, ceo):
+    """All of the CEO's prepared sections in a remarks document, skipping other executives,
+    the operator, and any leading correction notice or IR introduction."""
+    ceo_re = re.compile(ceo, re.I)
+    lines = _clean_lines(text)
+    skip_line = re.compile(r"(?i)^(everpure|pure storage)?\s*prepared remarks\s*\d*$|^correction to\b")
+    head = " ".join(lines[:120])
+    known = {n for n in re.findall(NAME, head) if not NOT_NAME.search(n)}
+    paras, on, cur = [], False, []
+    def flush():
+        nonlocal cur
+        if cur:
+            paras.append(" ".join(cur)); cur = []
+    for s in lines:
+        if not s:
+            if on: flush()
+            continue
+        if skip_line.match(s):
+            continue
+        if on and (QA.match(s) or END_SECTIONS.match(s)):
+            flush(); on = False
+            continue
+        lab = _label(s, ceo_re, known)
+        if lab:
+            name, rest = lab
+            flush()
+            on = bool(ceo_re.search(name))
+            if on and rest: cur.append(rest)
+            continue
+        if on:
+            if cur and cur[-1].endswith("-") and s[:1].islower() and "-" not in s.split()[0]:
+                cur[-1] = cur[-1][:-1] + s
+            else:
+                cur.append(s)
+    flush()
+    out = []
+    for p in paras:
+        p = re.sub(r"\s+", " ", p).strip()
+        if not p: continue
+        if out and not re.search(r"[.!?:;\u201d\"')]$", out[-1]): out[-1] += " " + p
+        else: out.append(p)
+    return out
+
+# ---- Nebius shareholder letters (two-column / three-column InDesign PDFs) ----
+import subprocess, tempfile, os
+from pathlib import Path as _Path
+
+WORD_RE = re.compile(r'<word xMin="([^"]+)" yMin="([^"]+)" xMax="([^"]+)" yMax="([^"]+)">([^<]*)</word>')
+PAGE_RE = re.compile(r'<page width="([^"]+)" height="([^"]+)">(.*?)</page>', re.S)
+
+def bbox_pages(pdf_path):
+    with tempfile.NamedTemporaryFile(suffix=".html", delete=False) as f:
+        tmp = f.name
+    try:
+        subprocess.run(["pdftotext", "-bbox", str(pdf_path), tmp], check=True, capture_output=True)
+        html = _Path(tmp).read_text("utf-8", "replace")
+    finally:
+        os.unlink(tmp)
+    pages = []
+    for m in PAGE_RE.finditer(html):
+        words = [(float(a), float(b), float(c), float(d), t)
+                 for a, b, c, d, t in WORD_RE.findall(m.group(3))]
+        pages.append((float(m.group(1)), float(m.group(2)), words))
+    if not pages:
+        raise ValueError("no pages in PDF text")
+    return pages
+
+def line_groups(words, tol):
+    words = sorted(words, key=lambda w: (w[1], w[0]))
+    out, cur, y0 = [], [], None
+    for w in words:
+        if y0 is None or abs(w[1] - y0) <= tol:
+            cur.append(w)
+            if y0 is None:
+                y0 = w[1]
+        else:
+            out.append(sorted(cur, key=lambda x: x[0]))
+            cur, y0 = [w], w[1]
+    if cur:
+        out.append(sorted(cur, key=lambda x: x[0]))
+    return out
+
+def join_hyphen(text):
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"(\w)-\s+(\w)", r"\1\2", text)
+    text = text.replace("New ersey", "New Jersey")
+    return text
+
+def gutter(width, words):
+    xs = sorted(set(round(w[0], 1) for w in words))
+    best, gap = width * 0.5, 0
+    for a, b in zip(xs, xs[1:]):
+        mid = (a + b) / 2
+        if 0.35 * width < mid < 0.7 * width and b - a > gap:
+            gap, best = b - a, mid
+    return best, gap
+
+def find_salute(pages):
+    for pi, (W, H, words) in enumerate(pages):
+        for w in words:
+            if w[4] in ("Dear", "Fellow") and w[0] < W * 0.55:
+                return pi, w, W
+    raise ValueError("salutation not found")
+
+def is_multi_column_body(width, words_below):
+    """True when the letter itself is set in 2+ equal body columns (Q3 2026), not a left letter + right sidebar."""
+    g, gap = gutter(width, words_below)
+    if gap < 15:
+        return True  # no sharp mid-page sidebar gutter
+    right = [w for w in words_below if w[0] >= g]
+    if not right:
+        return False
+    head = " ".join(w[4] for w in sorted(right, key=lambda w: (w[1], w[0]))[:20])
+    if re.search(r"Arkady Volozh|Founder and CEO|[“\"]We ", head):
+        return False  # classic sidebar
+    # if a typical line spans most of the page when merged, it's multi-col body
+    return True
+
+def _is_sincerely(w):
+    return re.fullmatch(r"Sincerely,?", w[4]) is not None
+
+def _is_volozh_name(pages, pi, wi):
+    """True if words[wi] starts the printed name Arkady Volozh (possibly letter-spaced)."""
+    toks = pages[pi][2]
+    w = toks[wi]
+    if re.fullmatch(r"Volozh,?", w[4]):
+        return True
+    if w[4] != "Arkady":
+        return False
+    nxt = re.sub(r"\s+", "", " ".join(t[4] for t in toks[wi:wi+8]))
+    return bool(re.search(r"ArkadyV(?:olozh|olozh,|olozh)", nxt) or re.search(r"ArkadyVolozh", nxt))
+
+def find_signature(pages, start_pi, salute, gutter_x, multi):
+    """The last 'Arkady Volozh' / 'Sincerely' after the salutation (skip the opening byline)."""
+    cands = []
+    for pi in range(start_pi, len(pages)):
+        toks = pages[pi][2]
+        for wi, w in enumerate(toks):
+            if w[1] < salute[1] and pi == start_pi:
+                continue
+            hit = _is_sincerely(w) or _is_volozh_name(pages, pi, wi)
+            if not hit:
+                continue
+            if not multi and not _is_sincerely(w) and w[0] < gutter_x - 2:
+                continue
+            cands.append((pi, w))
+    return cands[-1] if cands else None
+
+def volozh_letter_from_pdf(pdf_path):
+    pages = bbox_pages(pdf_path)
+    sp, salute, W0 = find_salute(pages)
+    below = [w for w in pages[sp][2] if w[1] >= salute[1] - 1]
+    g, gap = gutter(W0, below)
+    multi = is_multi_column_body(W0, below)
+    sig = find_signature(pages, sp, salute, g, multi)
+    lines_out = []
+    last_pi = sig[0] if sig else sp
+    for pi in range(sp, last_pi + 1):
+        W, H, words = pages[pi]
+        if not multi:
+            words = [w for w in words if w[0] < g - 2]
+        if pi == sp:
+            words = [w for w in words if w[1] >= salute[1] - 1]
+        if sig and pi == sig[0]:
+            words = [w for w in words if w[1] < sig[1][1] - 1]
+        tol = 5 if W < 800 else 12
+        for line in line_groups(words, tol=tol):
+            txt = join_hyphen(" ".join(w[4] for w in line))
+            if not txt:
+                continue
+            if re.search(r"CEO.?s letter", txt, re.I) and re.search(r"Customers|Capacity|Financial", txt, re.I):
+                continue
+            if re.fullmatch(r"CEO.?s letter\s*", txt, re.I):
+                continue
+            if re.fullmatch(r"\d{1,3}", txt):
+                continue
+            if re.match(r"^\(\d+\)\s+Annualized run-rate", txt):
+                continue
+            if re.match(r"^(Dear|Fellow)\b", txt, re.I) or re.fullmatch(r"shareholders?,?", txt, re.I):
+                continue
+            if re.fullmatch(r"Arkady Volozh,?", txt) or re.fullmatch(r"Founder and CEO", txt):
+                continue
+            lines_out.append(txt)
+    paras, cur = [], []
+    for t in lines_out:
+        # isolated single letter from a column glitch (e.g. "J" in New Jersey)
+        if re.fullmatch(r"[A-Z]", t) and cur:
+            cur[-1] = cur[-1].rstrip(",") + t + ("," if cur[-1].endswith(",") else "")
+            # fix "New Jersey" if we created "New erseyJ" — handle below
+            continue
+        if t.startswith("•") or re.match(r"^[-–]\s", t):
+            if cur:
+                paras.append(" ".join(cur)); cur = []
+            cur = [t]
+            continue
+        if cur and re.search(r"[.!?:]\s*$", cur[-1]) and len(cur[-1].split()) <= 16:
+            paras.append(" ".join(cur)); cur = [t]
+            continue
+        if cur and cur[-1].endswith("-") and t[:1].islower():
+            cur[-1] = cur[-1][:-1] + t
+        else:
+            cur.append(t)
+    if cur:
+        paras.append(" ".join(cur))
+    out = []
+    for p in paras:
+        p = join_hyphen(p)
+        p = re.sub(r"New JerseyJ|New erseyJ|New Jers ey", "New Jersey", p)
+        if len(p.split()) <= 2 and not re.search(r"[.!?]$", p):
+            continue
+        out.append(p)
+    while out and re.search(r"^(Arkady\b|Founder and CEO\b|V z\b)", out[-1]):
+        out.pop()
+    if out:
+        out[-1] = re.sub(r"\s+V\s+z\s*,?\s*$", "", out[-1]).rstrip()
+        out[-1] = re.sub(r"\s+Arkady(?:\s+V\s*olo\s*z\s*h)?\s*,?\s*$", "", out[-1]).rstrip()
+    if len(" ".join(out).split()) < 300:
+        raise ValueError(f"only {len(' '.join(out).split())} words extracted")
+    return out
+

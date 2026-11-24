@@ -1,0 +1,3623 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "17x": 1,
+    "a": 14,
+    "ability": 1,
+    "able": 1,
+    "about": 1,
+    "above": 1,
+    "across": 2,
+    "additional": 1,
+    "adjusted": 1,
+    "again": 1,
+    "against": 1,
+    "agentic": 1,
+    "agreements": 4,
+    "ahead": 2,
+    "ai": 5,
+    "also": 1,
+    "an": 1,
+    "and": 37,
+    "anticipate": 1,
+    "approach": 2,
+    "approaching": 1,
+    "are": 11,
+    "around": 1,
+    "arr": 1,
+    "arrive": 1,
+    "as": 5,
+    "asked": 1,
+    "associated": 1,
+    "assuming": 1,
+    "at": 2,
+    "auctions": 1,
+    "available": 1,
+    "average": 1,
+    "b": 1,
+    "back": 1,
+    "balance": 2,
+    "base": 1,
+    "be": 1,
+    "been": 3,
+    "before": 1,
+    "beginning": 1,
+    "behind": 1,
+    "benefits": 1,
+    "better": 2,
+    "billion": 3,
+    "both": 2,
+    "breakeven": 1,
+    "bring": 2,
+    "broader": 1,
+    "build": 6,
+    "building": 4,
+    "business": 4,
+    "by": 3,
+    "ca": 1,
+    "capacity": 7,
+    "capex": 4,
+    "capital": 1,
+    "capture": 2,
+    "cash": 1,
+    "cells": 1,
+    "center": 1,
+    "centers": 1,
+    "changed": 1,
+    "cloud": 2,
+    "combined": 1,
+    "command": 1,
+    "committed": 1,
+    "comparable": 1,
+    "compute": 3,
+    "confidence": 1,
+    "conservative": 1,
+    "construction": 1,
+    "continue": 2,
+    "continued": 1,
+    "contract": 1,
+    "contracted": 1,
+    "contracts": 1,
+    "control": 1,
+    "cost": 1,
+    "costeffective": 1,
+    "costs": 1,
+    "cover": 1,
+    "covered": 1,
+    "covers": 1,
+    "customer": 1,
+    "customers": 4,
+    "data": 3,
+    "date": 1,
+    "deal": 1,
+    "deals": 1,
+    "debt": 1,
+    "december": 1,
+    "delays": 1,
+    "delivered": 1,
+    "demand": 2,
+    "demonstrated": 1,
+    "depreciation": 1,
+    "design": 1,
+    "designing": 1,
+    "directly": 1,
+    "disciplined": 1,
+    "discussed": 1,
+    "diverse": 1,
+    "diversified": 1,
+    "do": 3,
+    "does": 1,
+    "driven": 1,
+    "each": 1,
+    "earnings": 1,
+    "ebitda": 1,
+    "economics": 1,
+    "end": 2,
+    "energy": 1,
+    "engineered": 1,
+    "enterprise": 1,
+    "equity": 1,
+    "ersey": 1,
+    "even": 1,
+    "ever": 1,
+    "every": 1,
+    "exceptionally": 1,
+    "execution": 2,
+    "existing": 1,
+    "expanding": 1,
+    "expect": 7,
+    "external": 1,
+    "factory": 1,
+    "far": 1,
+    "february": 1,
+    "finance": 1,
+    "financed": 1,
+    "financing": 1,
+    "first": 2,
+    "five": 1,
+    "flexible": 1,
+    "focus": 2,
+    "footprint": 1,
+    "for": 6,
+    "from": 4,
+    "front": 2,
+    "fuel": 1,
+    "full": 1,
+    "fundamentals": 1,
+    "funding": 2,
+    "future": 1,
+    "g": 1,
+    "generation": 1,
+    "get": 1,
+    "gigawatts": 1,
+    "give": 1,
+    "gives": 3,
+    "global": 1,
+    "going": 1,
+    "grade": 1,
+    "greater": 1,
+    "growing": 1,
+    "growth": 1,
+    "guidance": 2,
+    "guided": 1,
+    "has": 4,
+    "have": 4,
+    "healthy": 3,
+    "higher": 3,
+    "how": 2,
+    "hundred": 1,
+    "hyperscaler": 1,
+    "improved": 1,
+    "in": 18,
+    "includes": 2,
+    "including": 2,
+    "industry": 1,
+    "inference": 3,
+    "infrastructure": 3,
+    "initial": 2,
+    "insights": 1,
+    "installed": 1,
+    "intensive": 1,
+    "into": 3,
+    "invest": 1,
+    "investment": 1,
+    "is": 10,
+    "it": 6,
+    "its": 1,
+    "j": 1,
+    "jersey": 1,
+    "just": 1,
+    "keep": 1,
+    "large": 1,
+    "leading": 1,
+    "lets": 1,
+    "like": 2,
+    "live": 1,
+    "long": 1,
+    "longer": 1,
+    "loom": 1,
+    "low": 2,
+    "lower": 1,
+    "make": 1,
+    "managed": 2,
+    "margin": 1,
+    "margins": 1,
+    "market": 3,
+    "matures": 1,
+    "mechanisms": 2,
+    "metrics": 1,
+    "milliondollar": 1,
+    "mix": 1,
+    "model": 2,
+    "months": 2,
+    "more": 4,
+    "most": 1,
+    "moving": 2,
+    "multi": 1,
+    "natives": 1,
+    "nebius": 2,
+    "neoclouds": 1,
+    "networking": 1,
+    "new": 4,
+    "next": 1,
+    "nor": 1,
+    "not": 2,
+    "now": 3,
+    "of": 25,
+    "off": 1,
+    "on": 12,
+    "once": 1,
+    "one": 2,
+    "online": 1,
+    "only": 2,
+    "operate": 1,
+    "opex": 1,
+    "opportunistic": 1,
+    "opportunity": 1,
+    "options": 1,
+    "or": 1,
+    "other": 1,
+    "our": 19,
+    "ourselves": 1,
+    "out": 3,
+    "outlook": 1,
+    "over": 1,
+    "own": 1,
+    "pace": 1,
+    "part": 1,
+    "parties": 1,
+    "partners": 2,
+    "payback": 1,
+    "paying": 1,
+    "performance": 1,
+    "place": 1,
+    "platform": 2,
+    "platforms": 1,
+    "portion": 1,
+    "post": 1,
+    "power": 2,
+    "pre": 2,
+    "prefer": 1,
+    "premium": 1,
+    "prepayments": 3,
+    "prices": 4,
+    "pricing": 1,
+    "products": 1,
+    "profitable": 1,
+    "provide": 2,
+    "providers": 1,
+    "prudent": 1,
+    "q2": 2,
+    "q3": 2,
+    "q4": 1,
+    "quarter": 4,
+    "questions": 1,
+    "raising": 1,
+    "ramps": 1,
+    "range": 2,
+    "rate": 1,
+    "reach": 2,
+    "reaching": 1,
+    "real": 1,
+    "recent": 1,
+    "reflect": 1,
+    "reflecting": 1,
+    "rely": 1,
+    "remain": 1,
+    "remains": 2,
+    "rented": 1,
+    "reserve": 1,
+    "result": 1,
+    "results": 1,
+    "revenue": 4,
+    "right": 1,
+    "rising": 1,
+    "run": 3,
+    "scaling": 1,
+    "schedule": 1,
+    "search": 1,
+    "sell": 1,
+    "services": 2,
+    "sharing": 1,
+    "sheet": 2,
+    "signed": 2,
+    "sites": 3,
+    "sits": 1,
+    "so": 2,
+    "software": 1,
+    "source": 1,
+    "spot": 1,
+    "stakes": 1,
+    "started": 1,
+    "strategic": 1,
+    "strength": 1,
+    "strong": 1,
+    "strongest": 1,
+    "structural": 1,
+    "sustainable": 1,
+    "system": 1,
+    "takes": 1,
+    "tax": 2,
+    "team": 1,
+    "telling": 1,
+    "term": 2,
+    "terms": 2,
+    "than": 2,
+    "that": 5,
+    "the": 33,
+    "them": 1,
+    "there": 1,
+    "these": 1,
+    "they": 1,
+    "third": 3,
+    "this": 11,
+    "three": 1,
+    "through": 2,
+    "time": 2,
+    "to": 24,
+    "today": 1,
+    "token": 1,
+    "top": 1,
+    "training": 2,
+    "transitioning": 1,
+    "translated": 1,
+    "turn": 1,
+    "underlying": 1,
+    "underpinned": 1,
+    "up": 4,
+    "updating": 1,
+    "us": 9,
+    "value": 1,
+    "very": 1,
+    "w": 1,
+    "was": 1,
+    "way": 1,
+    "ways": 1,
+    "we": 32,
+    "weeks": 1,
+    "what": 3,
+    "when": 1,
+    "where": 2,
+    "which": 3,
+    "who": 1,
+    "wide": 1,
+    "will": 6,
+    "with": 11,
+    "workload": 1,
+    "worth": 1,
+    "year": 7
+   },
+   "date": "2026-11-12",
+   "entries": {
+    "17x": [
+     2
+    ],
+    "a": [
+     2,
+     4,
+     7,
+     8,
+     8,
+     10
+    ],
+    "across": [
+     4
+    ],
+    "additional": [
+     9
+    ],
+    "agreements": [
+     0
+    ],
+    "and": [
+     1,
+     1,
+     3,
+     4,
+     4,
+     8,
+     8,
+     10,
+     11
+    ],
+    "anticipate": [
+     10
+    ],
+    "approaching": [
+     2
+    ],
+    "are": [
+     6
+    ],
+    "around": [
+     9
+    ],
+    "average": [
+     1
+    ],
+    "b": [
+     6
+    ],
+    "balance": [
+     8
+    ],
+    "been": [
+     5
+    ],
+    "behind": [
+     8
+    ],
+    "billion": [
+     10
+    ],
+    "building": [
+     7
+    ],
+    "business": [
+     7
+    ],
+    "by": [
+     1,
+     4
+    ],
+    "capacity": [
+     4
+    ],
+    "capex": [
+     10
+    ],
+    "capital": [
+     9
+    ],
+    "cash": [
+     8
+    ],
+    "cells": [
+     6
+    ],
+    "continued": [
+     0
+    ],
+    "contract": [
+     2
+    ],
+    "contracted": [
+     1
+    ],
+    "cost": [
+     8
+    ],
+    "costeffective": [
+     9
+    ],
+    "customers": [
+     3
+    ],
+    "debt": [
+     8
+    ],
+    "delays": [
+     5
+    ],
+    "delivered": [
+     4
+    ],
+    "demand": [
+     3
+    ],
+    "disciplined": [
+     10
+    ],
+    "diverse": [
+     4
+    ],
+    "diversified": [
+     10
+    ],
+    "do": [
+     9
+    ],
+    "driven": [
+     1
+    ],
+    "earnings": [
+     11
+    ],
+    "energy": [
+     6
+    ],
+    "equity": [
+     8
+    ],
+    "ersey": [
+     6
+    ],
+    "external": [
+     9
+    ],
+    "factory": [
+     2
+    ],
+    "far": [
+     0
+    ],
+    "flexible": [
+     4
+    ],
+    "focus": [
+     7
+    ],
+    "footprint": [
+     4
+    ],
+    "for": [
+     7,
+     11
+    ],
+    "from": [
+     1,
+     11
+    ],
+    "fuel": [
+     6
+    ],
+    "funding": [
+     10
+    ],
+    "get": [
+     3
+    ],
+    "gives": [
+     3,
+     3
+    ],
+    "global": [
+     4
+    ],
+    "going": [
+     12
+    ],
+    "growing": [
+     2
+    ],
+    "guidance": [
+     11
+    ],
+    "has": [
+     0
+    ],
+    "have": [
+     5
+    ],
+    "healthy": [
+     7,
+     8
+    ],
+    "higher": [
+     1
+    ],
+    "hundred": [
+     2
+    ],
+    "improved": [
+     1
+    ],
+    "in": [
+     0,
+     1,
+     2,
+     6
+    ],
+    "includes": [
+     6,
+     8
+    ],
+    "inference": [
+     2
+    ],
+    "insights": [
+     3
+    ],
+    "into": [
+     3
+    ],
+    "is": [
+     2,
+     4,
+     9
+    ],
+    "it": [
+     9
+    ],
+    "j": [
+     6
+    ],
+    "keep": [
+     12
+    ],
+    "long": [
+     7
+    ],
+    "loom": [
+     6
+    ],
+    "low": [
+     8
+    ],
+    "managed": [
+     2
+    ],
+    "milliondollar": [
+     2
+    ],
+    "mix": [
+     10
+    ],
+    "model": [
+     4
+    ],
+    "months": [
+     1,
+     1
+    ],
+    "more": [
+     3
+    ],
+    "multi": [
+     2
+    ],
+    "nebius": [
+     3
+    ],
+    "new": [
+     6
+    ],
+    "of": [
+     4,
+     8,
+     10
+    ],
+    "on": [
+     0,
+     2,
+     3,
+     5,
+     7
+    ],
+    "opportunistic": [
+     9
+    ],
+    "our": [
+     2,
+     4,
+     7,
+     8
+    ],
+    "parties": [
+     5
+    ],
+    "partners": [
+     4
+    ],
+    "payback": [
+     1
+    ],
+    "platform": [
+     2
+    ],
+    "power": [
+     4,
+     6
+    ],
+    "pre": [
+     11
+    ],
+    "prices": [
+     1
+    ],
+    "profitable": [
+     7
+    ],
+    "provide": [
+     11
+    ],
+    "q2": [
+     1
+    ],
+    "q3": [
+     2
+    ],
+    "q4": [
+     0
+    ],
+    "quarter": [
+     2,
+     2
+    ],
+    "raising": [
+     9
+    ],
+    "rate": [
+     2
+    ],
+    "real": [
+     3
+    ],
+    "rely": [
+     5
+    ],
+    "remain": [
+     9
+    ],
+    "remains": [
+     7
+    ],
+    "revenue": [
+     11
+    ],
+    "rising": [
+     0
+    ],
+    "run": [
+     2
+    ],
+    "sheet": [
+     8
+    ],
+    "signed": [
+     0
+    ],
+    "sites": [
+     4
+    ],
+    "sits": [
+     8
+    ],
+    "so": [
+     0,
+     9
+    ],
+    "source": [
+     6
+    ],
+    "stakes": [
+     8
+    ],
+    "started": [
+     3
+    ],
+    "strategic": [
+     8
+    ],
+    "sustainable": [
+     6
+    ],
+    "tax": [
+     11
+    ],
+    "term": [
+     1,
+     7
+    ],
+    "that": [
+     8
+    ],
+    "the": [
+     1,
+     6,
+     7
+    ],
+    "there": [
+     5
+    ],
+    "third": [
+     5
+    ],
+    "this": [
+     0,
+     3,
+     6
+    ],
+    "time": [
+     3
+    ],
+    "to": [
+     1,
+     3,
+     6,
+     9
+    ],
+    "token": [
+     2
+    ],
+    "transitioning": [
+     6
+    ],
+    "underpinned": [
+     4
+    ],
+    "us": [
+     3
+    ],
+    "value": [
+     2
+    ],
+    "ways": [
+     3
+    ],
+    "we": [
+     5,
+     6,
+     9,
+     10,
+     11,
+     12
+    ],
+    "when": [
+     9
+    ],
+    "where": [
+     5,
+     6
+    ],
+    "which": [
+     8
+    ],
+    "will": [
+     9,
+     11,
+     12
+    ],
+    "with": [
+     2,
+     10
+    ],
+    "year": [
+     1,
+     1
+    ]
+   },
+   "excerpts": [
+    "This has continued rising on agreements signed so far in Q4.",
+    "• The average payback term improved to 1 year and 7 months, from 1 year and 10 months in Q2, driven by higher contracted prices.",
+    "• Token Factory, our managed inference platform, is approaching a multi-hundred-milliondollar run rate, with contract value growing 17x quarter-on-quarter in Q3.",
+    "This gives customers more ways to get started on Nebius, and gives us real-time insights into demand.",
+    "Our model is underpinned by capacity, delivered across a flexible and diverse global footprint of sites, partners and power.",
+    "• Where we rely on third parties, there have been delays.",
+    "This includes in New J ersey, where we are transitioning the power source to B loom Energy’s sustainable fuel cells.",
+    "Our focus remains on building a healthy, profitable business for the long term.",
+    "• Behind that sits a low cost of debt and a healthy balance sheet, which includes cash and our strategic equity stakes.",
+    "• We will remain opportunistic around raising additional external capital when it is costeffective to do so.",
+    "• We anticipate capex of $40-45 billion, with a disciplined and diversified funding mix.",
+    "From 2027, we will provide guidance for revenue and pre-tax earnings.",
+    "We will keep going."
+   ],
+   "id": "nbis-nebius-shl-2026-q3",
+   "msent": {
+    "17x": 1,
+    "a": 12,
+    "ability": 1,
+    "able": 1,
+    "about": 1,
+    "above": 1,
+    "across": 2,
+    "additional": 1,
+    "adjusted": 1,
+    "again": 1,
+    "against": 1,
+    "agentic": 1,
+    "agreements": 4,
+    "ahead": 2,
+    "ai": 4,
+    "also": 1,
+    "an": 1,
+    "and": 25,
+    "anticipate": 1,
+    "approach": 2,
+    "approaching": 1,
+    "are": 11,
+    "around": 1,
+    "arr": 1,
+    "arrive": 1,
+    "as": 4,
+    "asked": 1,
+    "associated": 1,
+    "assuming": 1,
+    "at": 2,
+    "auctions": 1,
+    "available": 1,
+    "average": 1,
+    "b": 1,
+    "back": 1,
+    "balance": 2,
+    "base": 1,
+    "be": 1,
+    "been": 3,
+    "before": 1,
+    "beginning": 1,
+    "behind": 1,
+    "benefits": 1,
+    "better": 2,
+    "billion": 3,
+    "both": 2,
+    "breakeven": 1,
+    "bring": 2,
+    "broader": 1,
+    "build": 6,
+    "building": 4,
+    "business": 4,
+    "by": 3,
+    "ca": 1,
+    "capacity": 6,
+    "capex": 4,
+    "capital": 1,
+    "capture": 2,
+    "cash": 1,
+    "cells": 1,
+    "center": 1,
+    "centers": 1,
+    "changed": 1,
+    "cloud": 2,
+    "combined": 1,
+    "command": 1,
+    "committed": 1,
+    "comparable": 1,
+    "compute": 3,
+    "confidence": 1,
+    "conservative": 1,
+    "construction": 1,
+    "continue": 2,
+    "continued": 1,
+    "contract": 1,
+    "contracted": 1,
+    "contracts": 1,
+    "control": 1,
+    "cost": 1,
+    "costeffective": 1,
+    "costs": 1,
+    "cover": 1,
+    "covered": 1,
+    "covers": 1,
+    "customer": 1,
+    "customers": 4,
+    "data": 3,
+    "date": 1,
+    "deal": 1,
+    "deals": 1,
+    "debt": 1,
+    "december": 1,
+    "delays": 1,
+    "delivered": 1,
+    "demand": 2,
+    "demonstrated": 1,
+    "depreciation": 1,
+    "design": 1,
+    "designing": 1,
+    "directly": 1,
+    "disciplined": 1,
+    "discussed": 1,
+    "diverse": 1,
+    "diversified": 1,
+    "do": 3,
+    "does": 1,
+    "driven": 1,
+    "each": 1,
+    "earnings": 1,
+    "ebitda": 1,
+    "economics": 1,
+    "end": 2,
+    "energy": 1,
+    "engineered": 1,
+    "enterprise": 1,
+    "equity": 1,
+    "ersey": 1,
+    "even": 1,
+    "ever": 1,
+    "every": 1,
+    "exceptionally": 1,
+    "execution": 2,
+    "existing": 1,
+    "expanding": 1,
+    "expect": 7,
+    "external": 1,
+    "factory": 1,
+    "far": 1,
+    "february": 1,
+    "finance": 1,
+    "financed": 1,
+    "financing": 1,
+    "first": 2,
+    "five": 1,
+    "flexible": 1,
+    "focus": 2,
+    "footprint": 1,
+    "for": 6,
+    "from": 4,
+    "front": 2,
+    "fuel": 1,
+    "full": 1,
+    "fundamentals": 1,
+    "funding": 2,
+    "future": 1,
+    "g": 1,
+    "generation": 1,
+    "get": 1,
+    "gigawatts": 1,
+    "give": 1,
+    "gives": 2,
+    "global": 1,
+    "going": 1,
+    "grade": 1,
+    "greater": 1,
+    "growing": 1,
+    "growth": 1,
+    "guidance": 2,
+    "guided": 1,
+    "has": 3,
+    "have": 4,
+    "healthy": 3,
+    "higher": 3,
+    "how": 2,
+    "hundred": 1,
+    "hyperscaler": 1,
+    "improved": 1,
+    "in": 15,
+    "includes": 2,
+    "including": 2,
+    "industry": 1,
+    "inference": 3,
+    "infrastructure": 3,
+    "initial": 2,
+    "insights": 1,
+    "installed": 1,
+    "intensive": 1,
+    "into": 3,
+    "invest": 1,
+    "investment": 1,
+    "is": 9,
+    "it": 6,
+    "its": 1,
+    "j": 1,
+    "jersey": 1,
+    "just": 1,
+    "keep": 1,
+    "large": 1,
+    "leading": 1,
+    "lets": 1,
+    "like": 2,
+    "live": 1,
+    "long": 1,
+    "longer": 1,
+    "loom": 1,
+    "low": 2,
+    "lower": 1,
+    "make": 1,
+    "managed": 2,
+    "margin": 1,
+    "margins": 1,
+    "market": 3,
+    "matures": 1,
+    "mechanisms": 2,
+    "metrics": 1,
+    "milliondollar": 1,
+    "mix": 1,
+    "model": 2,
+    "months": 1,
+    "more": 4,
+    "most": 1,
+    "moving": 2,
+    "multi": 1,
+    "natives": 1,
+    "nebius": 2,
+    "neoclouds": 1,
+    "networking": 1,
+    "new": 4,
+    "next": 1,
+    "nor": 1,
+    "not": 2,
+    "now": 3,
+    "of": 16,
+    "off": 1,
+    "on": 12,
+    "once": 1,
+    "one": 2,
+    "online": 1,
+    "only": 2,
+    "operate": 1,
+    "opex": 1,
+    "opportunistic": 1,
+    "opportunity": 1,
+    "options": 1,
+    "or": 1,
+    "other": 1,
+    "our": 18,
+    "ourselves": 1,
+    "out": 3,
+    "outlook": 1,
+    "over": 1,
+    "own": 1,
+    "pace": 1,
+    "part": 1,
+    "parties": 1,
+    "partners": 2,
+    "payback": 1,
+    "paying": 1,
+    "performance": 1,
+    "place": 1,
+    "platform": 2,
+    "platforms": 1,
+    "portion": 1,
+    "post": 1,
+    "power": 2,
+    "pre": 2,
+    "prefer": 1,
+    "premium": 1,
+    "prepayments": 3,
+    "prices": 4,
+    "pricing": 1,
+    "products": 1,
+    "profitable": 1,
+    "provide": 2,
+    "providers": 1,
+    "prudent": 1,
+    "q2": 2,
+    "q3": 2,
+    "q4": 1,
+    "quarter": 3,
+    "questions": 1,
+    "raising": 1,
+    "ramps": 1,
+    "range": 2,
+    "rate": 1,
+    "reach": 2,
+    "reaching": 1,
+    "real": 1,
+    "recent": 1,
+    "reflect": 1,
+    "reflecting": 1,
+    "rely": 1,
+    "remain": 1,
+    "remains": 2,
+    "rented": 1,
+    "reserve": 1,
+    "result": 1,
+    "results": 1,
+    "revenue": 3,
+    "right": 1,
+    "rising": 1,
+    "run": 2,
+    "scaling": 1,
+    "schedule": 1,
+    "search": 1,
+    "sell": 1,
+    "services": 2,
+    "sharing": 1,
+    "sheet": 2,
+    "signed": 2,
+    "sites": 3,
+    "sits": 1,
+    "so": 2,
+    "software": 1,
+    "source": 1,
+    "spot": 1,
+    "stakes": 1,
+    "started": 1,
+    "strategic": 1,
+    "strength": 1,
+    "strong": 1,
+    "strongest": 1,
+    "structural": 1,
+    "sustainable": 1,
+    "system": 1,
+    "takes": 1,
+    "tax": 2,
+    "team": 1,
+    "telling": 1,
+    "term": 2,
+    "terms": 2,
+    "than": 2,
+    "that": 5,
+    "the": 22,
+    "them": 1,
+    "there": 1,
+    "these": 1,
+    "they": 1,
+    "third": 3,
+    "this": 11,
+    "three": 1,
+    "through": 2,
+    "time": 2,
+    "to": 20,
+    "today": 1,
+    "token": 1,
+    "top": 1,
+    "training": 1,
+    "transitioning": 1,
+    "translated": 1,
+    "turn": 1,
+    "underlying": 1,
+    "underpinned": 1,
+    "up": 4,
+    "updating": 1,
+    "us": 8,
+    "value": 1,
+    "very": 1,
+    "w": 1,
+    "was": 1,
+    "way": 1,
+    "ways": 1,
+    "we": 30,
+    "weeks": 1,
+    "what": 3,
+    "when": 1,
+    "where": 2,
+    "which": 3,
+    "who": 1,
+    "wide": 1,
+    "will": 6,
+    "with": 8,
+    "workload": 1,
+    "worth": 1,
+    "year": 4
+   },
+   "n_sentences": 47,
+   "source": "assets.nebius.com",
+   "source_type": "Shareholder letter",
+   "title": "Q3 2026 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://assets.nebius.com/assets/24c6bfb3-c90e-4076-9fe9-c2ab736b51ec/Nebius-SHL-2026-Q3.pdf",
+   "words": 807
+  },
+  {
+   "counts": {
+    "4x": 1,
+    "9x": 1,
+    "a": 7,
+    "acute": 1,
+    "address": 1,
+    "agreements": 1,
+    "ai": 3,
+    "ambitious": 1,
+    "an": 4,
+    "and": 10,
+    "are": 3,
+    "as": 1,
+    "associated": 2,
+    "at": 1,
+    "auction": 1,
+    "average": 3,
+    "back": 1,
+    "because": 1,
+    "been": 1,
+    "between": 1,
+    "bil": 1,
+    "billion": 1,
+    "both": 1,
+    "buildout": 1,
+    "built": 1,
+    "business": 3,
+    "can": 2,
+    "capacity": 4,
+    "capex": 2,
+    "capture": 3,
+    "closed": 1,
+    "cloud": 1,
+    "commercial": 1,
+    "companies": 1,
+    "continues": 1,
+    "contract": 3,
+    "contracted": 1,
+    "contracts": 5,
+    "converting": 1,
+    "core": 1,
+    "costs": 1,
+    "could": 1,
+    "covering": 1,
+    "customer": 2,
+    "customers": 3,
+    "deal": 2,
+    "deals": 6,
+    "deliberately": 1,
+    "demand": 2,
+    "different": 1,
+    "doing": 1,
+    "down": 1,
+    "duration": 3,
+    "each": 2,
+    "early": 1,
+    "economics": 1,
+    "efficiently": 1,
+    "effort": 1,
+    "ends": 1,
+    "entire": 1,
+    "ever": 1,
+    "expected": 1,
+    "exponentially": 1,
+    "facility": 1,
+    "faster": 1,
+    "finance": 1,
+    "first": 2,
+    "for": 7,
+    "four": 1,
+    "from": 2,
+    "future": 1,
+    "grade": 1,
+    "grew": 1,
+    "grow": 1,
+    "growing": 1,
+    "growth": 1,
+    "has": 2,
+    "help": 1,
+    "higher": 2,
+    "immediate": 1,
+    "in": 7,
+    "including": 1,
+    "initiatives": 1,
+    "into": 1,
+    "investment": 1,
+    "is": 2,
+    "july": 1,
+    "landmark": 1,
+    "lock": 1,
+    "long": 1,
+    "longer": 1,
+    "market": 3,
+    "megawatt": 2,
+    "mid": 1,
+    "million": 4,
+    "mix": 2,
+    "months": 2,
+    "more": 4,
+    "most": 1,
+    "mw": 1,
+    "near": 1,
+    "nearly": 1,
+    "need": 1,
+    "needs": 2,
+    "new": 3,
+    "not": 1,
+    "now": 1,
+    "of": 10,
+    "on": 3,
+    "one": 4,
+    "operating": 1,
+    "opportunity": 1,
+    "our": 11,
+    "over": 1,
+    "overall": 1,
+    "payback": 2,
+    "per": 3,
+    "period": 2,
+    "premium": 1,
+    "prepayments": 1,
+    "previously": 1,
+    "price": 1,
+    "priced": 2,
+    "pricing": 2,
+    "profitable": 1,
+    "promise": 1,
+    "q2": 3,
+    "q3": 2,
+    "quarter": 4,
+    "raised": 1,
+    "range": 1,
+    "related": 1,
+    "retaining": 1,
+    "revenue": 1,
+    "rising": 2,
+    "role": 1,
+    "saw": 1,
+    "secured": 1,
+    "see": 2,
+    "sell": 1,
+    "short": 1,
+    "shorter": 2,
+    "showing": 1,
+    "signed": 2,
+    "significant": 1,
+    "six": 1,
+    "so": 1,
+    "some": 1,
+    "strategy": 1,
+    "strengthened": 1,
+    "strongest": 1,
+    "such": 2,
+    "tcv": 3,
+    "term": 4,
+    "terms": 1,
+    "than": 3,
+    "that": 1,
+    "the": 9,
+    "these": 2,
+    "this": 3,
+    "three": 4,
+    "timebound": 1,
+    "to": 4,
+    "today": 1,
+    "together": 1,
+    "total": 1,
+    "two": 1,
+    "types": 1,
+    "typically": 1,
+    "upside": 1,
+    "us": 1,
+    "validated": 1,
+    "value": 2,
+    "was": 3,
+    "we": 9,
+    "week": 1,
+    "which": 1,
+    "while": 1,
+    "wins": 1,
+    "with": 8,
+    "world": 1,
+    "year": 2,
+    "years": 1,
+    "yet": 1,
+    "yield": 2
+   },
+   "date": "2026-08-12",
+   "entries": {
+    "4x": [
+     1
+    ],
+    "9x": [
+     1
+    ],
+    "a": [
+     3,
+     3
+    ],
+    "address": [
+     3
+    ],
+    "ai": [
+     0
+    ],
+    "and": [
+     0
+    ],
+    "are": [
+     0
+    ],
+    "associated": [
+     2
+    ],
+    "built": [
+     3
+    ],
+    "can": [
+     4
+    ],
+    "capacity": [
+     0
+    ],
+    "capex": [
+     2
+    ],
+    "capture": [
+     3,
+     4
+    ],
+    "continues": [
+     0
+    ],
+    "contract": [
+     3
+    ],
+    "contracted": [
+     0
+    ],
+    "contracts": [
+     4,
+     4
+    ],
+    "converting": [
+     0
+    ],
+    "covering": [
+     2
+    ],
+    "customer": [
+     3
+    ],
+    "customers": [
+     1
+    ],
+    "deal": [
+     2
+    ],
+    "deals": [
+     2,
+     3
+    ],
+    "demand": [
+     0,
+     0
+    ],
+    "economics": [
+     2
+    ],
+    "exponentially": [
+     0
+    ],
+    "for": [
+     0
+    ],
+    "from": [
+     1
+    ],
+    "future": [
+     4
+    ],
+    "grew": [
+     1
+    ],
+    "grow": [
+     0
+    ],
+    "growing": [
+     1
+    ],
+    "growth": [
+     0
+    ],
+    "higher": [
+     4
+    ],
+    "in": [
+     4
+    ],
+    "including": [
+     2
+    ],
+    "into": [
+     0
+    ],
+    "lock": [
+     4
+    ],
+    "longer": [
+     4
+    ],
+    "market": [
+     3
+    ],
+    "mix": [
+     3
+    ],
+    "more": [
+     1
+    ],
+    "near": [
+     4
+    ],
+    "nearly": [
+     1
+    ],
+    "needs": [
+     3
+    ],
+    "new": [
+     1
+    ],
+    "of": [
+     1,
+     2,
+     2,
+     3
+    ],
+    "over": [
+     1
+    ],
+    "overall": [
+     2
+    ],
+    "prepayments": [
+     2
+    ],
+    "priced": [
+     4
+    ],
+    "profitable": [
+     0
+    ],
+    "q2": [
+     1
+    ],
+    "quarter": [
+     1,
+     1
+    ],
+    "revenue": [
+     4
+    ],
+    "rising": [
+     3
+    ],
+    "shorter": [
+     4
+    ],
+    "strengthened": [
+     2
+    ],
+    "tcv": [
+     1,
+     1
+    ],
+    "term": [
+     4
+    ],
+    "than": [
+     1
+    ],
+    "that": [
+     0
+    ],
+    "the": [
+     2
+    ],
+    "three": [
+     3
+    ],
+    "to": [
+     0,
+     3
+    ],
+    "types": [
+     3
+    ],
+    "upside": [
+     4
+    ],
+    "we": [
+     0,
+     3
+    ],
+    "while": [
+     4
+    ],
+    "wins": [
+     1
+    ],
+    "with": [
+     1,
+     2,
+     3
+    ]
+   },
+   "excerpts": [
+    "Demand for AI capacity continues to grow exponentially, and we are converting that demand into contracted, profitable growth.",
+    "• TCV of Q2 wins grew nearly 4x quarter-over-quarter, with TCV from new customers growing more than 9x.",
+    "• Overall deal economics strengthened, with 70% of deals including prepayments, covering 50-60% of the associated capex.",
+    "A contract mix built to capture a rising market We address customer needs with three types of deals.",
+    "longer, higher-priced contracts lock in future revenue, while shorter contracts can capture near-term upside."
+   ],
+   "id": "nbis-shlq226-1",
+   "msent": {
+    "4x": 1,
+    "9x": 1,
+    "a": 5,
+    "acute": 1,
+    "address": 1,
+    "agreements": 1,
+    "ai": 3,
+    "ambitious": 1,
+    "an": 4,
+    "and": 9,
+    "are": 3,
+    "as": 1,
+    "associated": 2,
+    "at": 1,
+    "auction": 1,
+    "average": 3,
+    "back": 1,
+    "because": 1,
+    "been": 1,
+    "between": 1,
+    "bil": 1,
+    "billion": 1,
+    "both": 1,
+    "buildout": 1,
+    "built": 1,
+    "business": 3,
+    "can": 2,
+    "capacity": 4,
+    "capex": 2,
+    "capture": 3,
+    "closed": 1,
+    "cloud": 1,
+    "commercial": 1,
+    "companies": 1,
+    "continues": 1,
+    "contract": 3,
+    "contracted": 1,
+    "contracts": 4,
+    "converting": 1,
+    "core": 1,
+    "costs": 1,
+    "could": 1,
+    "covering": 1,
+    "customer": 2,
+    "customers": 3,
+    "deal": 2,
+    "deals": 6,
+    "deliberately": 1,
+    "demand": 1,
+    "different": 1,
+    "doing": 1,
+    "down": 1,
+    "duration": 3,
+    "each": 2,
+    "early": 1,
+    "economics": 1,
+    "efficiently": 1,
+    "effort": 1,
+    "ends": 1,
+    "entire": 1,
+    "ever": 1,
+    "expected": 1,
+    "exponentially": 1,
+    "facility": 1,
+    "faster": 1,
+    "finance": 1,
+    "first": 2,
+    "for": 5,
+    "four": 1,
+    "from": 2,
+    "future": 1,
+    "grade": 1,
+    "grew": 1,
+    "grow": 1,
+    "growing": 1,
+    "growth": 1,
+    "has": 2,
+    "help": 1,
+    "higher": 2,
+    "immediate": 1,
+    "in": 7,
+    "including": 1,
+    "initiatives": 1,
+    "into": 1,
+    "investment": 1,
+    "is": 2,
+    "july": 1,
+    "landmark": 1,
+    "lock": 1,
+    "long": 1,
+    "longer": 1,
+    "market": 3,
+    "megawatt": 2,
+    "mid": 1,
+    "million": 4,
+    "mix": 2,
+    "months": 2,
+    "more": 4,
+    "most": 1,
+    "mw": 1,
+    "near": 1,
+    "nearly": 1,
+    "need": 1,
+    "needs": 2,
+    "new": 3,
+    "not": 1,
+    "now": 1,
+    "of": 7,
+    "on": 3,
+    "one": 4,
+    "operating": 1,
+    "opportunity": 1,
+    "our": 11,
+    "over": 1,
+    "overall": 1,
+    "payback": 1,
+    "per": 3,
+    "period": 1,
+    "premium": 1,
+    "prepayments": 1,
+    "previously": 1,
+    "price": 1,
+    "priced": 2,
+    "pricing": 2,
+    "profitable": 1,
+    "promise": 1,
+    "q2": 3,
+    "q3": 2,
+    "quarter": 3,
+    "raised": 1,
+    "range": 1,
+    "related": 1,
+    "retaining": 1,
+    "revenue": 1,
+    "rising": 2,
+    "role": 1,
+    "saw": 1,
+    "secured": 1,
+    "see": 2,
+    "sell": 1,
+    "short": 1,
+    "shorter": 2,
+    "showing": 1,
+    "signed": 2,
+    "significant": 1,
+    "six": 1,
+    "so": 1,
+    "some": 1,
+    "strategy": 1,
+    "strengthened": 1,
+    "strongest": 1,
+    "such": 2,
+    "tcv": 2,
+    "term": 4,
+    "terms": 1,
+    "than": 3,
+    "that": 1,
+    "the": 6,
+    "these": 2,
+    "this": 3,
+    "three": 4,
+    "timebound": 1,
+    "to": 4,
+    "today": 1,
+    "together": 1,
+    "total": 1,
+    "two": 1,
+    "types": 1,
+    "typically": 1,
+    "upside": 1,
+    "us": 1,
+    "validated": 1,
+    "value": 2,
+    "was": 3,
+    "we": 7,
+    "week": 1,
+    "which": 1,
+    "while": 1,
+    "wins": 1,
+    "with": 7,
+    "world": 1,
+    "year": 1,
+    "years": 1,
+    "yet": 1,
+    "yield": 2
+   },
+   "n_sentences": 21,
+   "source": "assets.nebius.com",
+   "source_type": "Shareholder letter",
+   "title": "Q2 2026 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://assets.nebius.com/assets/4462517b-ce83-41f2-96ed-f2ac1bc06a05/SHLQ226%20%281%29.pdf",
+   "words": 354
+  },
+  {
+   "counts": {
+    "a": 8,
+    "ability": 1,
+    "accelerate": 1,
+    "accelerated": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "acquire": 1,
+    "acquisition": 2,
+    "acquisitions": 3,
+    "across": 5,
+    "added": 1,
+    "additional": 1,
+    "adjusted": 1,
+    "advance": 1,
+    "aether": 1,
+    "agentic": 4,
+    "agreement": 2,
+    "ai": 10,
+    "also": 4,
+    "among": 1,
+    "an": 2,
+    "and": 24,
+    "announced": 4,
+    "applications": 1,
+    "are": 7,
+    "area": 1,
+    "around": 1,
+    "arr": 1,
+    "as": 6,
+    "at": 2,
+    "attractive": 1,
+    "barriers": 1,
+    "bay": 1,
+    "be": 1,
+    "believe": 1,
+    "bestin": 1,
+    "between": 1,
+    "beyond": 2,
+    "billion": 2,
+    "both": 2,
+    "bringing": 1,
+    "brings": 1,
+    "build": 1,
+    "building": 1,
+    "built": 1,
+    "business": 4,
+    "by": 1,
+    "capabilities": 3,
+    "capacity": 3,
+    "capital": 1,
+    "capturing": 1,
+    "clarifai": 1,
+    "class": 1,
+    "cloud": 9,
+    "collaboration": 1,
+    "companies": 1,
+    "company": 3,
+    "competitive": 1,
+    "compute": 4,
+    "confidence": 1,
+    "consistent": 1,
+    "continue": 2,
+    "continued": 1,
+    "contracted": 1,
+    "core": 1,
+    "customer": 1,
+    "customers": 1,
+    "deep": 1,
+    "deepen": 1,
+    "deepened": 1,
+    "deepening": 1,
+    "demand": 3,
+    "demonstrated": 1,
+    "depth": 1,
+    "design": 1,
+    "designation": 1,
+    "destination": 1,
+    "differentiation": 1,
+    "doubled": 1,
+    "drives": 1,
+    "earlier": 1,
+    "ebit": 1,
+    "ebitda": 1,
+    "efficient": 1,
+    "eigen": 1,
+    "embrace": 1,
+    "engineering": 3,
+    "engineers": 1,
+    "establish": 1,
+    "every": 1,
+    "exceeding": 1,
+    "execution": 1,
+    "exemplar": 1,
+    "expand": 2,
+    "expanded": 1,
+    "expanding": 1,
+    "expect": 1,
+    "experience": 1,
+    "experimentation": 1,
+    "expertise": 2,
+    "factory": 3,
+    "february": 1,
+    "financial": 1,
+    "financing": 1,
+    "first": 3,
+    "focused": 1,
+    "footprint": 1,
+    "for": 5,
+    "frictionless": 1,
+    "from": 1,
+    "frontier": 1,
+    "full": 2,
+    "gb300": 1,
+    "generations": 1,
+    "giving": 1,
+    "globally": 1,
+    "gpu": 1,
+    "grade": 1,
+    "grew": 1,
+    "group": 1,
+    "growth": 2,
+    "hand": 1,
+    "hardware": 1,
+    "have": 2,
+    "hold": 1,
+    "hyperscale": 1,
+    "ideas": 1,
+    "in": 9,
+    "including": 1,
+    "industries": 1,
+    "industry": 3,
+    "inference": 5,
+    "infrastructure": 3,
+    "inherent": 1,
+    "integration": 1,
+    "into": 1,
+    "investment": 1,
+    "is": 4,
+    "it": 3,
+    "its": 1,
+    "key": 1,
+    "knowledge": 1,
+    "landed": 1,
+    "large": 1,
+    "laser": 1,
+    "layer": 2,
+    "leading": 3,
+    "leverage": 1,
+    "lifecycle": 1,
+    "made": 2,
+    "managed": 1,
+    "march": 1,
+    "margin": 1,
+    "margins": 1,
+    "market": 3,
+    "meta": 1,
+    "month": 1,
+    "more": 2,
+    "move": 1,
+    "multi": 1,
+    "multiple": 1,
+    "native": 1,
+    "nearly": 1,
+    "nebius": 7,
+    "needs": 1,
+    "new": 3,
+    "not": 1,
+    "nvidia": 3,
+    "nvl72": 1,
+    "of": 10,
+    "on": 7,
+    "one": 1,
+    "online": 1,
+    "operating": 1,
+    "orchestration": 1,
+    "our": 16,
+    "out": 1,
+    "over": 1,
+    "partnership": 1,
+    "partnerships": 1,
+    "path": 1,
+    "platform": 3,
+    "platforms": 1,
+    "position": 1,
+    "potential": 1,
+    "powerful": 1,
+    "presence": 1,
+    "proprietary": 1,
+    "providers": 1,
+    "providing": 1,
+    "pursue": 1,
+    "q3": 1,
+    "quarter": 5,
+    "rates": 1,
+    "real": 2,
+    "reflecting": 1,
+    "relationships": 1,
+    "release": 1,
+    "remain": 1,
+    "removing": 1,
+    "research": 1,
+    "responding": 1,
+    "results": 2,
+    "revenue": 1,
+    "right": 1,
+    "scale": 1,
+    "search": 1,
+    "second": 1,
+    "see": 1,
+    "seeing": 1,
+    "segments": 1,
+    "serve": 2,
+    "services": 1,
+    "set": 1,
+    "show": 1,
+    "significant": 1,
+    "significantly": 1,
+    "simply": 1,
+    "small": 1,
+    "software": 1,
+    "solutions": 2,
+    "stack": 5,
+    "stands": 1,
+    "status": 1,
+    "strategic": 1,
+    "strengthen": 2,
+    "strengthening": 1,
+    "strong": 1,
+    "substantial": 1,
+    "substantially": 1,
+    "support": 2,
+    "talent": 2,
+    "tavily": 1,
+    "tech": 1,
+    "technology": 2,
+    "tenant": 1,
+    "testament": 1,
+    "that": 2,
+    "the": 22,
+    "their": 1,
+    "these": 1,
+    "they": 1,
+    "this": 4,
+    "three": 1,
+    "through": 1,
+    "to": 18,
+    "today": 1,
+    "token": 2,
+    "tomorrow": 1,
+    "tools": 1,
+    "top": 1,
+    "toward": 1,
+    "training": 1,
+    "trajectory": 1,
+    "unique": 2,
+    "unprecedented": 1,
+    "up": 1,
+    "us": 1,
+    "vastly": 1,
+    "we": 17,
+    "well": 2,
+    "what": 1,
+    "where": 2,
+    "while": 1,
+    "wide": 1,
+    "will": 1,
+    "with": 4,
+    "workload": 1,
+    "workloads": 1,
+    "world": 2,
+    "worldclass": 1,
+    "year": 4,
+    "yesterday": 1
+   },
+   "date": "2026-05-13",
+   "entries": {
+    "a": [
+     2,
+     4,
+     6
+    ],
+    "accelerate": [
+     6
+    ],
+    "achieved": [
+     7
+    ],
+    "across": [
+     0
+    ],
+    "additional": [
+     6
+    ],
+    "agentic": [
+     3
+    ],
+    "agreement": [
+     6
+    ],
+    "ai": [
+     1,
+     6
+    ],
+    "also": [
+     4
+    ],
+    "and": [
+     1,
+     1,
+     3,
+     3,
+     4,
+     6
+    ],
+    "applications": [
+     1
+    ],
+    "are": [
+     1,
+     2
+    ],
+    "area": [
+     4
+    ],
+    "as": [
+     1
+    ],
+    "at": [
+     2,
+     6
+    ],
+    "attractive": [
+     6
+    ],
+    "bay": [
+     4
+    ],
+    "beyond": [
+     1
+    ],
+    "billion": [
+     6
+    ],
+    "bringing": [
+     5
+    ],
+    "business": [
+     6
+    ],
+    "capacity": [
+     1,
+     5
+    ],
+    "capital": [
+     6
+    ],
+    "cloud": [
+     1,
+     3,
+     6,
+     7
+    ],
+    "companies": [
+     1
+    ],
+    "company": [
+     2,
+     4
+    ],
+    "compute": [
+     1
+    ],
+    "continue": [
+     0,
+     6
+    ],
+    "contracted": [
+     5
+    ],
+    "core": [
+     2
+    ],
+    "demand": [
+     0
+    ],
+    "destination": [
+     4
+    ],
+    "embrace": [
+     1
+    ],
+    "engineering": [
+     4
+    ],
+    "establish": [
+     4
+    ],
+    "exceeding": [
+     1
+    ],
+    "exemplar": [
+     7
+    ],
+    "experimentation": [
+     1
+    ],
+    "financing": [
+     6
+    ],
+    "focused": [
+     5
+    ],
+    "for": [
+     4,
+     6,
+     7
+    ],
+    "from": [
+     3
+    ],
+    "gb300": [
+     7
+    ],
+    "giving": [
+     6
+    ],
+    "growth": [
+     6,
+     6
+    ],
+    "in": [
+     4
+    ],
+    "industries": [
+     1
+    ],
+    "industry": [
+     4
+    ],
+    "inference": [
+     3
+    ],
+    "infrastructure": [
+     3
+    ],
+    "is": [
+     4
+    ],
+    "key": [
+     6
+    ],
+    "landed": [
+     6
+    ],
+    "large": [
+     6
+    ],
+    "laser": [
+     5
+    ],
+    "leading": [
+     4
+    ],
+    "market": [
+     0
+    ],
+    "meta": [
+     6
+    ],
+    "more": [
+     1
+    ],
+    "move": [
+     1
+    ],
+    "multi": [
+     3
+    ],
+    "nebius": [
+     4
+    ],
+    "needs": [
+     1
+    ],
+    "new": [
+     6
+    ],
+    "nvidia": [
+     7
+    ],
+    "nvl72": [
+     7
+    ],
+    "of": [
+     6
+    ],
+    "on": [
+     5,
+     7
+    ],
+    "online": [
+     5
+    ],
+    "our": [
+     2,
+     6
+    ],
+    "partnerships": [
+     6
+    ],
+    "platforms": [
+     3
+    ],
+    "potential": [
+     6
+    ],
+    "presence": [
+     4
+    ],
+    "pursue": [
+     6
+    ],
+    "rates": [
+     6
+    ],
+    "real": [
+     1
+    ],
+    "remain": [
+     5
+    ],
+    "second": [
+     6
+    ],
+    "see": [
+     0
+    ],
+    "show": [
+     4
+    ],
+    "solutions": [
+     3
+    ],
+    "status": [
+     7
+    ],
+    "substantial": [
+     6
+    ],
+    "support": [
+     6
+    ],
+    "talent": [
+     4
+    ],
+    "technology": [
+     2
+    ],
+    "tenant": [
+     3
+    ],
+    "the": [
+     0,
+     4,
+     4,
+     6
+    ],
+    "they": [
+     4
+    ],
+    "this": [
+     5
+    ],
+    "through": [
+     3
+    ],
+    "to": [
+     0,
+     1,
+     6,
+     6,
+     6
+    ],
+    "top": [
+     4
+    ],
+    "training": [
+     7
+    ],
+    "unprecedented": [
+     0
+    ],
+    "up": [
+     6
+    ],
+    "us": [
+     6
+    ],
+    "vastly": [
+     1
+    ],
+    "we": [
+     0,
+     2,
+     5,
+     6,
+     7
+    ],
+    "with": [
+     6
+    ],
+    "world": [
+     1
+    ]
+   },
+   "excerpts": [
+    "We continue to see unprecedented demand across the market.",
+    "Compute and cloud needs are vastly exceeding capacity as more industries embrace AI and companies move beyond experimentation to real-world applications.",
+    "We are a technology company at our core.",
+    "From infrastructure and multi-tenant cloud through inference solutions and agentic platforms.",
+    "They also show Nebius is a top destination for industry-leading talent, and establish the company’s engineering presence in the Bay Area.",
+    "We remain laser-focused on bringing this contracted capacity online.",
+    "• Key partnerships continue to support growth We landed a second large agreement with Meta for up to $27 billion, giving us substantial new capital to accelerate the growth of our AI cloud business and pursue potential additional financing at attractive rates.",
+    "We achieved NVIDIA Exemplar Cloud status on GB300 NVL72 for training."
+   ],
+   "id": "nbis-nebius-shl-q1-2026",
+   "msent": {
+    "a": 8,
+    "ability": 1,
+    "accelerate": 1,
+    "accelerated": 1,
+    "achieve": 1,
+    "achieved": 1,
+    "acquire": 1,
+    "acquisition": 1,
+    "acquisitions": 2,
+    "across": 5,
+    "added": 1,
+    "additional": 1,
+    "adjusted": 1,
+    "advance": 1,
+    "aether": 1,
+    "agentic": 4,
+    "agreement": 2,
+    "ai": 9,
+    "also": 4,
+    "among": 1,
+    "an": 2,
+    "and": 15,
+    "announced": 2,
+    "applications": 1,
+    "are": 6,
+    "area": 1,
+    "around": 1,
+    "arr": 1,
+    "as": 3,
+    "at": 2,
+    "attractive": 1,
+    "barriers": 1,
+    "bay": 1,
+    "be": 1,
+    "believe": 1,
+    "bestin": 1,
+    "between": 1,
+    "beyond": 2,
+    "billion": 2,
+    "both": 2,
+    "bringing": 1,
+    "brings": 1,
+    "build": 1,
+    "building": 1,
+    "built": 1,
+    "business": 4,
+    "by": 1,
+    "capabilities": 3,
+    "capacity": 3,
+    "capital": 1,
+    "capturing": 1,
+    "clarifai": 1,
+    "class": 1,
+    "cloud": 9,
+    "collaboration": 1,
+    "companies": 1,
+    "company": 3,
+    "competitive": 1,
+    "compute": 4,
+    "confidence": 1,
+    "consistent": 1,
+    "continue": 2,
+    "continued": 1,
+    "contracted": 1,
+    "core": 1,
+    "customer": 1,
+    "customers": 1,
+    "deep": 1,
+    "deepen": 1,
+    "deepened": 1,
+    "deepening": 1,
+    "demand": 3,
+    "demonstrated": 1,
+    "depth": 1,
+    "design": 1,
+    "designation": 1,
+    "destination": 1,
+    "differentiation": 1,
+    "doubled": 1,
+    "drives": 1,
+    "earlier": 1,
+    "ebit": 1,
+    "ebitda": 1,
+    "efficient": 1,
+    "eigen": 1,
+    "embrace": 1,
+    "engineering": 3,
+    "engineers": 1,
+    "establish": 1,
+    "every": 1,
+    "exceeding": 1,
+    "execution": 1,
+    "exemplar": 1,
+    "expand": 2,
+    "expanded": 1,
+    "expanding": 1,
+    "expect": 1,
+    "experience": 1,
+    "experimentation": 1,
+    "expertise": 2,
+    "factory": 2,
+    "february": 1,
+    "financial": 1,
+    "financing": 1,
+    "first": 3,
+    "focused": 1,
+    "footprint": 1,
+    "for": 5,
+    "frictionless": 1,
+    "from": 1,
+    "frontier": 1,
+    "full": 2,
+    "gb300": 1,
+    "generations": 1,
+    "giving": 1,
+    "globally": 1,
+    "gpu": 1,
+    "grade": 1,
+    "grew": 1,
+    "group": 1,
+    "growth": 1,
+    "hand": 1,
+    "hardware": 1,
+    "have": 2,
+    "hold": 1,
+    "hyperscale": 1,
+    "ideas": 1,
+    "in": 7,
+    "including": 1,
+    "industries": 1,
+    "industry": 3,
+    "inference": 4,
+    "infrastructure": 3,
+    "inherent": 1,
+    "integration": 1,
+    "into": 1,
+    "investment": 1,
+    "is": 4,
+    "it": 3,
+    "its": 1,
+    "key": 1,
+    "knowledge": 1,
+    "landed": 1,
+    "large": 1,
+    "laser": 1,
+    "layer": 2,
+    "leading": 2,
+    "leverage": 1,
+    "lifecycle": 1,
+    "made": 2,
+    "managed": 1,
+    "march": 1,
+    "margin": 1,
+    "margins": 1,
+    "market": 3,
+    "meta": 1,
+    "month": 1,
+    "more": 2,
+    "move": 1,
+    "multi": 1,
+    "multiple": 1,
+    "native": 1,
+    "nearly": 1,
+    "nebius": 7,
+    "needs": 1,
+    "new": 3,
+    "not": 1,
+    "nvidia": 3,
+    "nvl72": 1,
+    "of": 9,
+    "on": 6,
+    "one": 1,
+    "online": 1,
+    "operating": 1,
+    "orchestration": 1,
+    "our": 13,
+    "out": 1,
+    "over": 1,
+    "partnership": 1,
+    "partnerships": 1,
+    "path": 1,
+    "platform": 2,
+    "platforms": 1,
+    "position": 1,
+    "potential": 1,
+    "powerful": 1,
+    "presence": 1,
+    "proprietary": 1,
+    "providers": 1,
+    "providing": 1,
+    "pursue": 1,
+    "q3": 1,
+    "quarter": 3,
+    "rates": 1,
+    "real": 2,
+    "reflecting": 1,
+    "relationships": 1,
+    "release": 1,
+    "remain": 1,
+    "removing": 1,
+    "research": 1,
+    "responding": 1,
+    "results": 2,
+    "revenue": 1,
+    "right": 1,
+    "scale": 1,
+    "search": 1,
+    "second": 1,
+    "see": 1,
+    "seeing": 1,
+    "segments": 1,
+    "serve": 2,
+    "services": 1,
+    "set": 1,
+    "show": 1,
+    "significant": 1,
+    "significantly": 1,
+    "simply": 1,
+    "small": 1,
+    "software": 1,
+    "solutions": 2,
+    "stack": 5,
+    "stands": 1,
+    "status": 1,
+    "strategic": 1,
+    "strengthen": 2,
+    "strengthening": 1,
+    "strong": 1,
+    "substantial": 1,
+    "substantially": 1,
+    "support": 2,
+    "talent": 2,
+    "tavily": 1,
+    "tech": 1,
+    "technology": 2,
+    "tenant": 1,
+    "testament": 1,
+    "that": 2,
+    "the": 13,
+    "their": 1,
+    "these": 1,
+    "they": 1,
+    "this": 4,
+    "three": 1,
+    "through": 1,
+    "to": 11,
+    "today": 1,
+    "token": 2,
+    "tomorrow": 1,
+    "tools": 1,
+    "top": 1,
+    "toward": 1,
+    "training": 1,
+    "trajectory": 1,
+    "unique": 2,
+    "unprecedented": 1,
+    "up": 1,
+    "us": 1,
+    "vastly": 1,
+    "we": 13,
+    "well": 2,
+    "what": 1,
+    "where": 1,
+    "while": 1,
+    "wide": 1,
+    "will": 1,
+    "with": 4,
+    "workload": 1,
+    "workloads": 1,
+    "world": 2,
+    "worldclass": 1,
+    "year": 1,
+    "yesterday": 1
+   },
+   "n_sentences": 24,
+   "source": "assets.nebius.com",
+   "source_type": "Shareholder letter",
+   "title": "Q1 2026 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://assets.nebius.com/assets/aa1bc2e6-df83-40cd-a6a2-95e7cda3d16c/Nebius%20SHL_Q1%202026.pdf",
+   "words": 538
+  },
+  {
+   "counts": {
+    "a": 5,
+    "accelerate": 1,
+    "achieve": 1,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 1,
+    "active": 1,
+    "adding": 1,
+    "addressable": 1,
+    "adjusted": 1,
+    "advance": 1,
+    "advancing": 2,
+    "aether": 2,
+    "ahead": 2,
+    "ai": 8,
+    "alabama": 1,
+    "allowing": 1,
+    "and": 22,
+    "announced": 1,
+    "another": 1,
+    "are": 5,
+    "areas": 1,
+    "arr": 2,
+    "as": 2,
+    "beyond": 1,
+    "billion": 4,
+    "both": 2,
+    "bringing": 1,
+    "broadening": 1,
+    "build": 1,
+    "built": 1,
+    "business": 1,
+    "by": 3,
+    "can": 1,
+    "capabilities": 2,
+    "capacity": 8,
+    "capital": 1,
+    "cloud": 6,
+    "commitments": 1,
+    "competitive": 1,
+    "confidence": 1,
+    "constraint": 1,
+    "continue": 2,
+    "continued": 1,
+    "continues": 1,
+    "contracted": 1,
+    "cost": 1,
+    "coverage": 1,
+    "customer": 2,
+    "customers": 2,
+    "dedicated": 1,
+    "deliver": 1,
+    "delivered": 4,
+    "delivery": 1,
+    "demand": 1,
+    "demanding": 1,
+    "deployed": 1,
+    "development": 1,
+    "differentiated": 1,
+    "differentiator": 1,
+    "discipline": 3,
+    "diversification": 1,
+    "diversified": 1,
+    "dramatically": 1,
+    "driving": 1,
+    "during": 1,
+    "earlier": 1,
+    "ebitda": 1,
+    "emea": 1,
+    "enablement": 1,
+    "enabler": 1,
+    "end": 2,
+    "ended": 1,
+    "enhance": 1,
+    "enter": 1,
+    "enterprise": 3,
+    "enterprises": 1,
+    "example": 1,
+    "exceptional": 1,
+    "executing": 1,
+    "execution": 3,
+    "expanded": 3,
+    "expanding": 2,
+    "expansion": 1,
+    "extends": 1,
+    "extremely": 1,
+    "factory": 1,
+    "financial": 2,
+    "first": 2,
+    "five": 1,
+    "flexibility": 1,
+    "focus": 2,
+    "focused": 1,
+    "footprint": 3,
+    "for": 4,
+    "four": 1,
+    "france": 1,
+    "from": 2,
+    "full": 1,
+    "fully": 1,
+    "fundamental": 1,
+    "further": 1,
+    "future": 1,
+    "generating": 1,
+    "geographical": 1,
+    "global": 3,
+    "globally": 1,
+    "go": 1,
+    "group": 1,
+    "growth": 2,
+    "guidance": 1,
+    "has": 1,
+    "have": 1,
+    "high": 1,
+    "improved": 1,
+    "in": 10,
+    "industry": 2,
+    "inference": 1,
+    "infrastructure": 2,
+    "interest": 1,
+    "into": 1,
+    "invest": 1,
+    "investing": 1,
+    "is": 4,
+    "israel": 1,
+    "just": 1,
+    "key": 2,
+    "large": 1,
+    "launch": 1,
+    "layer": 1,
+    "leverage": 1,
+    "locations": 2,
+    "logos": 1,
+    "loud": 1,
+    "managed": 1,
+    "market": 2,
+    "meta": 1,
+    "microsoft": 1,
+    "million": 1,
+    "minnesota": 1,
+    "missouri": 1,
+    "momentum": 1,
+    "most": 3,
+    "motion": 1,
+    "mw": 2,
+    "native": 1,
+    "nebius": 3,
+    "new": 4,
+    "nine": 2,
+    "november": 1,
+    "now": 1,
+    "number": 1,
+    "of": 18,
+    "offering": 1,
+    "oklahoma": 1,
+    "on": 9,
+    "one": 1,
+    "opening": 1,
+    "operating": 1,
+    "operational": 1,
+    "operations": 1,
+    "opportunities": 1,
+    "organically": 1,
+    "our": 26,
+    "out": 1,
+    "outpace": 1,
+    "outstanding": 1,
+    "paving": 1,
+    "persistent": 1,
+    "plan": 1,
+    "platform": 8,
+    "portfolio": 1,
+    "positive": 1,
+    "power": 1,
+    "proposition": 1,
+    "q4": 1,
+    "raising": 1,
+    "rapid": 1,
+    "real": 1,
+    "recent": 1,
+    "reflecting": 1,
+    "release": 1,
+    "reliability": 1,
+    "remaining": 1,
+    "remains": 1,
+    "resources": 1,
+    "result": 1,
+    "results": 2,
+    "sales": 1,
+    "scalable": 1,
+    "scale": 1,
+    "scaled": 1,
+    "scaling": 3,
+    "schedule": 1,
+    "secured": 1,
+    "security": 1,
+    "sell": 1,
+    "servicing": 1,
+    "seven": 1,
+    "several": 1,
+    "significant": 2,
+    "significantly": 1,
+    "sites": 2,
+    "speed": 1,
+    "stack": 1,
+    "stage": 1,
+    "startup": 1,
+    "strategic": 1,
+    "strategically": 1,
+    "strategy": 1,
+    "strong": 4,
+    "supply": 1,
+    "target": 1,
+    "targeted": 1,
+    "tavily": 2,
+    "team": 2,
+    "tech": 1,
+    "thanks": 1,
+    "that": 1,
+    "the": 19,
+    "this": 2,
+    "through": 1,
+    "throughout": 1,
+    "time": 3,
+    "to": 15,
+    "token": 1,
+    "total": 2,
+    "track": 2,
+    "tranche": 1,
+    "tranches": 1,
+    "turned": 1,
+    "uk": 1,
+    "unrelenting": 1,
+    "up": 2,
+    "us": 2,
+    "value": 1,
+    "verticals": 1,
+    "very": 1,
+    "vs": 1,
+    "was": 2,
+    "way": 1,
+    "we": 12,
+    "week": 1,
+    "well": 2,
+    "will": 2,
+    "with": 9,
+    "workloads": 1,
+    "world": 1,
+    "year": 7
+   },
+   "date": "2026-02-12",
+   "entries": {
+    "adding": [
+     0
+    ],
+    "adjusted": [
+     1
+    ],
+    "advance": [
+     4
+    ],
+    "advancing": [
+     5
+    ],
+    "ai": [
+     0,
+     4,
+     5
+    ],
+    "allowing": [
+     4
+    ],
+    "and": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "another": [
+     2
+    ],
+    "by": [
+     0,
+     2
+    ],
+    "capabilities": [
+     6
+    ],
+    "capacity": [
+     4
+    ],
+    "cloud": [
+     0,
+     6
+    ],
+    "continues": [
+     4
+    ],
+    "cost": [
+     1
+    ],
+    "customer": [
+     0
+    ],
+    "customers": [
+     4
+    ],
+    "demand": [
+     4
+    ],
+    "deployed": [
+     2
+    ],
+    "discipline": [
+     1
+    ],
+    "diversified": [
+     0
+    ],
+    "during": [
+     0
+    ],
+    "ebitda": [
+     1
+    ],
+    "enablement": [
+     6
+    ],
+    "enterprise": [
+     0
+    ],
+    "enterprises": [
+     4
+    ],
+    "execution": [
+     2
+    ],
+    "expanded": [
+     3
+    ],
+    "expansion": [
+     2
+    ],
+    "extends": [
+     6
+    ],
+    "factory": [
+     3
+    ],
+    "five": [
+     2
+    ],
+    "footprint": [
+     2
+    ],
+    "from": [
+     1,
+     4
+    ],
+    "future": [
+     4
+    ],
+    "generating": [
+     3
+    ],
+    "globally": [
+     2
+    ],
+    "group": [
+     1
+    ],
+    "have": [
+     2
+    ],
+    "in": [
+     1,
+     4
+    ],
+    "inference": [
+     3
+    ],
+    "infrastructure": [
+     2,
+     2
+    ],
+    "interest": [
+     3
+    ],
+    "into": [
+     6
+    ],
+    "is": [
+     3
+    ],
+    "large": [
+     0
+    ],
+    "launch": [
+     3
+    ],
+    "layer": [
+     6
+    ],
+    "leverage": [
+     1
+    ],
+    "locations": [
+     2
+    ],
+    "logos": [
+     0
+    ],
+    "loud": [
+     5
+    ],
+    "managed": [
+     3
+    ],
+    "native": [
+     4
+    ],
+    "nebius": [
+     3,
+     6
+    ],
+    "new": [
+     2
+    ],
+    "nine": [
+     2
+    ],
+    "of": [
+     2,
+     3,
+     6
+    ],
+    "operating": [
+     1
+    ],
+    "our": [
+     0,
+     2,
+     2,
+     3,
+     3,
+     5
+    ],
+    "outpace": [
+     4
+    ],
+    "outstanding": [
+     2
+    ],
+    "platform": [
+     3,
+     5,
+     6
+    ],
+    "portfolio": [
+     0
+    ],
+    "positive": [
+     1
+    ],
+    "proposition": [
+     3
+    ],
+    "q4": [
+     1
+    ],
+    "rapid": [
+     2
+    ],
+    "real": [
+     6
+    ],
+    "reflecting": [
+     1
+    ],
+    "scale": [
+     1
+    ],
+    "secured": [
+     2
+    ],
+    "sell": [
+     4
+    ],
+    "several": [
+     0
+    ],
+    "significantly": [
+     0
+    ],
+    "stack": [
+     6
+    ],
+    "startup": [
+     0
+    ],
+    "strong": [
+     3
+    ],
+    "supply": [
+     4
+    ],
+    "tavily": [
+     6
+    ],
+    "team": [
+     2
+    ],
+    "tech": [
+     6
+    ],
+    "thanks": [
+     2
+    ],
+    "the": [
+     1,
+     3,
+     6,
+     6
+    ],
+    "throughout": [
+     1
+    ],
+    "time": [
+     6
+    ],
+    "to": [
+     2,
+     4,
+     4
+    ],
+    "token": [
+     3
+    ],
+    "turned": [
+     1
+    ],
+    "us": [
+     4
+    ],
+    "value": [
+     3
+    ],
+    "we": [
+     0,
+     2
+    ],
+    "well": [
+     4
+    ],
+    "with": [
+     6
+    ],
+    "year": [
+     1
+    ]
+   },
+   "excerpts": [
+    "During 2025 we significantly diversified our AI cloud customer portfolio by adding several large startup and enterprise logos.",
+    "Group Adjusted EBITDA turned positive in Q4, reflecting operating leverage from scale and cost discipline throughout the year.",
+    "• Rapid expansion of our infrastructure footprint We deployed five new locations globally and have secured another nine, thanks to outstanding execution by our infrastructure team.",
+    "The launch of our managed inference platform, Nebius Token Factory, expanded our value proposition and is generating strong interest.",
+    "• Demand from enterprises and AI native customers continues to outpace supply, allowing us to sell future capacity well in advance.",
+    "Advancing our AI сloud platform",
+    "Tavily extends Nebius’s cloud platform capabilities into the enablement layer of the tech stack with real-time"
+   ],
+   "id": "nbis-letter-to-shareholders-q4-2025",
+   "msent": {
+    "a": 4,
+    "accelerate": 1,
+    "achieve": 1,
+    "acquisition": 1,
+    "acquisitions": 1,
+    "across": 1,
+    "active": 1,
+    "adding": 1,
+    "addressable": 1,
+    "adjusted": 1,
+    "advance": 1,
+    "advancing": 2,
+    "aether": 2,
+    "ahead": 2,
+    "ai": 7,
+    "alabama": 1,
+    "allowing": 1,
+    "and": 17,
+    "announced": 1,
+    "another": 1,
+    "are": 5,
+    "areas": 1,
+    "arr": 2,
+    "as": 2,
+    "beyond": 1,
+    "billion": 2,
+    "both": 2,
+    "bringing": 1,
+    "broadening": 1,
+    "build": 1,
+    "built": 1,
+    "business": 1,
+    "by": 3,
+    "can": 1,
+    "capabilities": 2,
+    "capacity": 7,
+    "capital": 1,
+    "cloud": 5,
+    "commitments": 1,
+    "competitive": 1,
+    "confidence": 1,
+    "constraint": 1,
+    "continue": 2,
+    "continued": 1,
+    "continues": 1,
+    "contracted": 1,
+    "cost": 1,
+    "coverage": 1,
+    "customer": 2,
+    "customers": 2,
+    "dedicated": 1,
+    "deliver": 1,
+    "delivered": 4,
+    "delivery": 1,
+    "demand": 1,
+    "demanding": 1,
+    "deployed": 1,
+    "development": 1,
+    "differentiated": 1,
+    "differentiator": 1,
+    "discipline": 3,
+    "diversification": 1,
+    "diversified": 1,
+    "dramatically": 1,
+    "driving": 1,
+    "during": 1,
+    "earlier": 1,
+    "ebitda": 1,
+    "emea": 1,
+    "enablement": 1,
+    "enabler": 1,
+    "end": 2,
+    "ended": 1,
+    "enhance": 1,
+    "enter": 1,
+    "enterprise": 3,
+    "enterprises": 1,
+    "example": 1,
+    "exceptional": 1,
+    "executing": 1,
+    "execution": 3,
+    "expanded": 3,
+    "expanding": 2,
+    "expansion": 1,
+    "extends": 1,
+    "extremely": 1,
+    "factory": 1,
+    "financial": 2,
+    "first": 2,
+    "five": 1,
+    "flexibility": 1,
+    "focus": 2,
+    "focused": 1,
+    "footprint": 3,
+    "for": 3,
+    "four": 1,
+    "france": 1,
+    "from": 2,
+    "full": 1,
+    "fully": 1,
+    "fundamental": 1,
+    "further": 1,
+    "future": 1,
+    "generating": 1,
+    "geographical": 1,
+    "global": 2,
+    "globally": 1,
+    "go": 1,
+    "group": 1,
+    "growth": 2,
+    "guidance": 1,
+    "has": 1,
+    "have": 1,
+    "high": 1,
+    "improved": 1,
+    "in": 10,
+    "industry": 2,
+    "inference": 1,
+    "infrastructure": 1,
+    "interest": 1,
+    "into": 1,
+    "invest": 1,
+    "investing": 1,
+    "is": 3,
+    "israel": 1,
+    "just": 1,
+    "key": 2,
+    "large": 1,
+    "launch": 1,
+    "layer": 1,
+    "leverage": 1,
+    "locations": 2,
+    "logos": 1,
+    "loud": 1,
+    "managed": 1,
+    "market": 2,
+    "meta": 1,
+    "microsoft": 1,
+    "million": 1,
+    "minnesota": 1,
+    "missouri": 1,
+    "momentum": 1,
+    "most": 3,
+    "motion": 1,
+    "mw": 1,
+    "native": 1,
+    "nebius": 3,
+    "new": 4,
+    "nine": 2,
+    "november": 1,
+    "now": 1,
+    "number": 1,
+    "of": 13,
+    "offering": 1,
+    "oklahoma": 1,
+    "on": 6,
+    "one": 1,
+    "opening": 1,
+    "operating": 1,
+    "operational": 1,
+    "operations": 1,
+    "opportunities": 1,
+    "organically": 1,
+    "our": 17,
+    "out": 1,
+    "outpace": 1,
+    "outstanding": 1,
+    "paving": 1,
+    "persistent": 1,
+    "plan": 1,
+    "platform": 8,
+    "portfolio": 1,
+    "positive": 1,
+    "power": 1,
+    "proposition": 1,
+    "q4": 1,
+    "raising": 1,
+    "rapid": 1,
+    "real": 1,
+    "recent": 1,
+    "reflecting": 1,
+    "release": 1,
+    "reliability": 1,
+    "remaining": 1,
+    "remains": 1,
+    "resources": 1,
+    "result": 1,
+    "results": 2,
+    "sales": 1,
+    "scalable": 1,
+    "scale": 1,
+    "scaled": 1,
+    "scaling": 3,
+    "schedule": 1,
+    "secured": 1,
+    "security": 1,
+    "sell": 1,
+    "servicing": 1,
+    "seven": 1,
+    "several": 1,
+    "significant": 2,
+    "significantly": 1,
+    "sites": 1,
+    "speed": 1,
+    "stack": 1,
+    "stage": 1,
+    "startup": 1,
+    "strategic": 1,
+    "strategically": 1,
+    "strategy": 1,
+    "strong": 4,
+    "supply": 1,
+    "target": 1,
+    "targeted": 1,
+    "tavily": 2,
+    "team": 2,
+    "tech": 1,
+    "thanks": 1,
+    "that": 1,
+    "the": 15,
+    "this": 2,
+    "through": 1,
+    "throughout": 1,
+    "time": 3,
+    "to": 11,
+    "token": 1,
+    "total": 2,
+    "track": 2,
+    "tranche": 1,
+    "tranches": 1,
+    "turned": 1,
+    "uk": 1,
+    "unrelenting": 1,
+    "up": 2,
+    "us": 2,
+    "value": 1,
+    "verticals": 1,
+    "very": 1,
+    "vs": 1,
+    "was": 2,
+    "way": 1,
+    "we": 12,
+    "week": 1,
+    "well": 2,
+    "will": 2,
+    "with": 9,
+    "workloads": 1,
+    "world": 1,
+    "year": 6
+   },
+   "n_sentences": 26,
+   "source": "assets.nebius.com",
+   "source_type": "Shareholder letter",
+   "title": "Q4 2025 Letter to Shareholders",
+   "type": "letter",
+   "url": "https://assets.nebius.com/assets/85571bd2-050b-468c-954c-42e9d24e4cd2/Letter%20to%20Shareholders%20Q4%202025.pdf",
+   "words": 497
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full text is not included; see each document's url.",
+ "slug": "volozh"
+}

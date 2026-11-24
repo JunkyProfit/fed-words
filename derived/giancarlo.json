@@ -1,0 +1,8768 @@
+{
+ "docs": [
+  {
+   "counts": {
+    "20x": 1,
+    "a": 25,
+    "able": 2,
+    "accelerated": 1,
+    "accelerating": 1,
+    "accelerator": 1,
+    "access": 2,
+    "accurate": 2,
+    "achievement": 1,
+    "achieving": 1,
+    "across": 3,
+    "activate": 1,
+    "adding": 1,
+    "additional": 1,
+    "adoption": 1,
+    "advance": 1,
+    "advancing": 1,
+    "advantage": 1,
+    "advantages": 1,
+    "affect": 1,
+    "after": 1,
+    "afternoon": 1,
+    "agents": 1,
+    "aggregate": 1,
+    "agility": 1,
+    "ago": 1,
+    "ai": 16,
+    "albeit": 1,
+    "all": 2,
+    "allowing": 1,
+    "also": 3,
+    "an": 3,
+    "analyst": 1,
+    "and": 66,
+    "announce": 1,
+    "announced": 1,
+    "another": 1,
+    "answers": 1,
+    "any": 1,
+    "application": 4,
+    "applications": 3,
+    "approaches": 1,
+    "architectural": 3,
+    "architecture": 1,
+    "are": 8,
+    "areas": 2,
+    "around": 1,
+    "as": 14,
+    "at": 5,
+    "automaker": 1,
+    "automatically": 1,
+    "average": 3,
+    "away": 1,
+    "azure": 2,
+    "backdrop": 1,
+    "base": 1,
+    "based": 3,
+    "be": 2,
+    "because": 1,
+    "before": 2,
+    "beginning": 5,
+    "benchmark": 1,
+    "best": 1,
+    "better": 2,
+    "bid": 1,
+    "both": 3,
+    "bottom": 1,
+    "broader": 1,
+    "broken": 1,
+    "buildout": 1,
+    "buildouts": 2,
+    "builds": 1,
+    "business": 6,
+    "businesses": 1,
+    "but": 1,
+    "buyers": 1,
+    "by": 7,
+    "cache": 1,
+    "call": 4,
+    "came": 1,
+    "can": 2,
+    "catalog": 1,
+    "category": 1,
+    "celebrates": 1,
+    "center": 1,
+    "centers": 1,
+    "centric": 1,
+    "chain": 1,
+    "change": 1,
+    "checkpointing": 1,
+    "choice": 2,
+    "choosing": 1,
+    "chose": 3,
+    "clear": 1,
+    "close": 3,
+    "cloud": 9,
+    "clouds": 1,
+    "combining": 2,
+    "commitment": 1,
+    "companies": 1,
+    "company": 2,
+    "competing": 1,
+    "competitor": 1,
+    "complete": 1,
+    "completing": 1,
+    "compliance": 1,
+    "compliment": 1,
+    "component": 5,
+    "concerns": 2,
+    "connected": 1,
+    "considering": 1,
+    "consistent": 1,
+    "console": 1,
+    "consumption": 2,
+    "container": 3,
+    "containerized": 1,
+    "containers": 1,
+    "context": 4,
+    "contextual": 1,
+    "continue": 8,
+    "continued": 6,
+    "continues": 5,
+    "continuous": 1,
+    "core": 8,
+    "cost": 1,
+    "costs": 6,
+    "critical": 1,
+    "customer": 5,
+    "customers": 10,
+    "data": 31,
+    "databento": 2,
+    "days": 1,
+    "deals": 1,
+    "decade": 1,
+    "deliver": 2,
+    "delivered": 1,
+    "delivering": 2,
+    "delivers": 2,
+    "demand": 4,
+    "dense": 1,
+    "deployed": 2,
+    "deploying": 1,
+    "deployments": 2,
+    "designed": 1,
+    "details": 1,
+    "deterministic": 1,
+    "developed": 1,
+    "developing": 1,
+    "developments": 1,
+    "digit": 1,
+    "directflash": 1,
+    "directly": 4,
+    "disaster": 1,
+    "discussions": 1,
+    "distinct": 1,
+    "distributes": 1,
+    "do": 2,
+    "dollar": 1,
+    "double": 1,
+    "downstream": 1,
+    "drive": 2,
+    "driven": 1,
+    "during": 3,
+    "each": 1,
+    "earn": 1,
+    "earning": 1,
+    "earnings": 3,
+    "ease": 1,
+    "edition": 1,
+    "efficiency": 2,
+    "eg1": 1,
+    "employees": 1,
+    "enables": 1,
+    "encourage": 1,
+    "end": 4,
+    "engineering": 1,
+    "enhances": 1,
+    "enter": 1,
+    "enterprise": 6,
+    "enterprises": 4,
+    "entire": 1,
+    "environments": 4,
+    "especially": 2,
+    "establish": 1,
+    "establishing": 1,
+    "estate": 1,
+    "estates": 1,
+    "even": 1,
+    "ever": 1,
+    "evergreen": 7,
+    "everpure": 16,
+    "every": 3,
+    "everyone": 2,
+    "exa": 3,
+    "exceed": 1,
+    "exceeded": 1,
+    "excellence": 1,
+    "excluding": 1,
+    "execution": 1,
+    "existing": 1,
+    "expand": 1,
+    "expanded": 1,
+    "expanding": 1,
+    "expansion": 2,
+    "expect": 1,
+    "expectations": 1,
+    "expected": 2,
+    "explained": 1,
+    "extend": 1,
+    "factory": 1,
+    "faster": 4,
+    "file": 2,
+    "finance": 1,
+    "financial": 4,
+    "first": 5,
+    "fiscal": 2,
+    "flash": 1,
+    "flashblade": 5,
+    "fleet": 1,
+    "flexibility": 1,
+    "for": 19,
+    "foundation": 2,
+    "fragment": 1,
+    "freedom": 1,
+    "frees": 1,
+    "freight": 1,
+    "from": 10,
+    "fully": 1,
+    "functionality": 1,
+    "fundamental": 1,
+    "further": 2,
+    "furthest": 1,
+    "future": 1,
+    "gain": 1,
+    "gartner": 1,
+    "geographies": 1,
+    "get": 1,
+    "getting": 1,
+    "gives": 2,
+    "global": 2,
+    "go": 1,
+    "goal": 1,
+    "going": 1,
+    "good": 1,
+    "govern": 1,
+    "governed": 1,
+    "gpu": 5,
+    "graph": 1,
+    "greater": 2,
+    "grew": 1,
+    "gross": 1,
+    "growth": 11,
+    "guidance": 1,
+    "had": 1,
+    "half": 1,
+    "hardware": 1,
+    "has": 3,
+    "hat": 1,
+    "have": 4,
+    "having": 1,
+    "help": 1,
+    "high": 3,
+    "higher": 5,
+    "highest": 1,
+    "highlight": 1,
+    "highlighted": 1,
+    "highlights": 1,
+    "him": 1,
+    "holiday": 1,
+    "hotter": 1,
+    "how": 1,
+    "hybrid": 1,
+    "hyperscale": 8,
+    "hyperscalers": 2,
+    "i": 4,
+    "i'd": 1,
+    "i'll": 1,
+    "idc": 1,
+    "important": 1,
+    "improved": 1,
+    "improvements": 1,
+    "improves": 1,
+    "in": 41,
+    "includes": 1,
+    "including": 2,
+    "inclusive": 1,
+    "increase": 2,
+    "increasing": 1,
+    "industry": 3,
+    "inefficient": 1,
+    "inference": 1,
+    "infrastructure": 6,
+    "initiated": 1,
+    "initiatives": 1,
+    "innovations": 1,
+    "installed": 1,
+    "institution": 1,
+    "insurance": 1,
+    "insurer": 1,
+    "integrated": 1,
+    "integration": 2,
+    "intelligence": 6,
+    "interest": 1,
+    "interoperability": 1,
+    "into": 6,
+    "introduced": 1,
+    "intuitively": 1,
+    "investment": 1,
+    "investors": 1,
+    "is": 10,
+    "it": 7,
+    "its": 11,
+    "joint": 1,
+    "journey": 1,
+    "just": 1,
+    "key": 2,
+    "kubernetes": 3,
+    "kv": 1,
+    "landscape": 1,
+    "language": 2,
+    "large": 2,
+    "largest": 1,
+    "last": 2,
+    "latency": 1,
+    "later": 1,
+    "leader": 2,
+    "leadership": 2,
+    "leading": 3,
+    "led": 1,
+    "legacy": 4,
+    "less": 1,
+    "level": 1,
+    "levels": 1,
+    "leverage": 1,
+    "like": 2,
+    "linear": 1,
+    "lines": 1,
+    "lives": 1,
+    "lock": 1,
+    "lower": 3,
+    "lowering": 1,
+    "machines": 1,
+    "macro": 2,
+    "made": 1,
+    "magic": 1,
+    "maintain": 1,
+    "majority": 1,
+    "make": 1,
+    "making": 2,
+    "manage": 1,
+    "management": 4,
+    "manages": 1,
+    "manual": 1,
+    "many": 2,
+    "margin": 2,
+    "market": 7,
+    "marketscape": 1,
+    "maximizing": 1,
+    "mcp": 1,
+    "mean": 1,
+    "meaning": 1,
+    "media": 1,
+    "meeting": 1,
+    "memory": 1,
+    "metadata": 1,
+    "metric": 1,
+    "microsecond": 1,
+    "migration": 1,
+    "million": 1,
+    "mlperf": 1,
+    "model": 1,
+    "models": 3,
+    "modern": 4,
+    "modernization": 1,
+    "modernize": 1,
+    "momentum": 1,
+    "month": 1,
+    "more": 3,
+    "most": 6,
+    "move": 1,
+    "multi": 1,
+    "multiple": 2,
+    "named": 1,
+    "native": 1,
+    "natural": 1,
+    "necessity": 2,
+    "need": 2,
+    "neo": 1,
+    "neoclouds": 1,
+    "new": 7,
+    "next": 5,
+    "not": 1,
+    "now": 6,
+    "number": 2,
+    "nutanix": 1,
+    "of": 41,
+    "offering": 1,
+    "offerings": 1,
+    "on": 16,
+    "one": 10,
+    "only": 2,
+    "onprem": 1,
+    "open": 1,
+    "openshift": 1,
+    "operate": 1,
+    "operating": 2,
+    "operational": 3,
+    "or": 3,
+    "organize": 1,
+    "os": 1,
+    "our": 44,
+    "outlined": 1,
+    "outlook": 1,
+    "over": 5,
+    "overall": 3,
+    "pace": 4,
+    "package": 1,
+    "part": 1,
+    "partner": 1,
+    "partners": 1,
+    "partnership": 1,
+    "paul": 1,
+    "per": 1,
+    "percentage": 1,
+    "perfect": 1,
+    "performance": 9,
+    "performant": 1,
+    "pick": 1,
+    "pipeline": 1,
+    "place": 1,
+    "plan": 1,
+    "platform": 2,
+    "plug": 1,
+    "portworx": 6,
+    "position": 1,
+    "positioning": 1,
+    "possible": 1,
+    "power": 2,
+    "pre": 1,
+    "precision": 1,
+    "prem": 1,
+    "prerequisite": 1,
+    "previously": 1,
+    "price": 1,
+    "prices": 4,
+    "pricing": 1,
+    "primacy": 4,
+    "process": 2,
+    "processes": 1,
+    "procurement": 1,
+    "product": 5,
+    "production": 2,
+    "products": 3,
+    "profit": 1,
+    "program": 1,
+    "progress": 2,
+    "proprietary": 1,
+    "protect": 1,
+    "protecting": 1,
+    "protocol": 1,
+    "proven": 1,
+    "provide": 1,
+    "provider": 2,
+    "providers": 1,
+    "proving": 1,
+    "provision": 1,
+    "pundits": 1,
+    "purchases": 1,
+    "purekva": 1,
+    "purity": 1,
+    "pursuits": 1,
+    "q2": 2,
+    "q3": 10,
+    "q4": 1,
+    "qlc": 1,
+    "quadrant": 1,
+    "qualified": 1,
+    "qualifying": 1,
+    "quality": 1,
+    "quantitative": 1,
+    "quarter": 12,
+    "quarters": 2,
+    "quickly": 1,
+    "ramped": 1,
+    "range": 2,
+    "ranked": 1,
+    "rapidly": 1,
+    "rather": 1,
+    "reach": 1,
+    "reaching": 1,
+    "ready": 1,
+    "real": 1,
+    "recently": 1,
+    "recognition": 1,
+    "record": 2,
+    "recovery": 1,
+    "red": 1,
+    "reduce": 1,
+    "reduction": 1,
+    "reflect": 1,
+    "reflecting": 1,
+    "regardless": 2,
+    "relationship": 1,
+    "relevant": 1,
+    "reliability": 5,
+    "rely": 1,
+    "remain": 1,
+    "remained": 1,
+    "remarkable": 1,
+    "replace": 1,
+    "replaces": 1,
+    "replacing": 1,
+    "report": 1,
+    "representing": 2,
+    "resilient": 1,
+    "responding": 1,
+    "resulting": 1,
+    "results": 1,
+    "revenue": 7,
+    "rich": 1,
+    "risen": 1,
+    "role": 1,
+    "row": 1,
+    "s": 2,
+    "sales": 11,
+    "same": 1,
+    "saw": 1,
+    "scalable": 1,
+    "scale": 3,
+    "scales": 1,
+    "scaling": 1,
+    "scrutinize": 1,
+    "second": 1,
+    "secure": 2,
+    "security": 1,
+    "see": 2,
+    "seeing": 2,
+    "seen": 2,
+    "segments": 2,
+    "selecting": 1,
+    "semiconductor": 1,
+    "sensitive": 1,
+    "service": 2,
+    "services": 1,
+    "several": 1,
+    "shape": 1,
+    "share": 3,
+    "shift": 2,
+    "shifting": 1,
+    "shifts": 1,
+    "showing": 1,
+    "side": 1,
+    "significant": 1,
+    "silo": 1,
+    "single": 2,
+    "slower": 1,
+    "so": 2,
+    "software": 5,
+    "softwaredriven": 1,
+    "solid": 4,
+    "solidified": 1,
+    "solution": 3,
+    "solutions": 5,
+    "some": 1,
+    "source": 1,
+    "sources": 1,
+    "space": 1,
+    "specialized": 1,
+    "stabilize": 1,
+    "stages": 1,
+    "standard": 3,
+    "standardize": 1,
+    "standout": 1,
+    "stated": 1,
+    "step": 2,
+    "storage": 12,
+    "storing": 1,
+    "straight": 1,
+    "streams": 1,
+    "strength": 1,
+    "strong": 7,
+    "stronger": 1,
+    "strongly": 1,
+    "submitted": 1,
+    "subscription": 2,
+    "substantially": 1,
+    "success": 1,
+    "such": 1,
+    "superior": 1,
+    "supplier": 1,
+    "suppliers": 2,
+    "supply": 2,
+    "support": 1,
+    "supports": 3,
+    "surged": 1,
+    "surpassed": 1,
+    "system": 3,
+    "systems": 3,
+    "take": 1,
+    "tarek": 3,
+    "tb": 1,
+    "tcv": 1,
+    "team": 1,
+    "teams": 1,
+    "tech": 2,
+    "technology": 3,
+    "tens": 1,
+    "than": 3,
+    "thank": 3,
+    "thanksgiving": 1,
+    "that": 8,
+    "the": 59,
+    "their": 8,
+    "these": 5,
+    "this": 10,
+    "thousands": 1,
+    "three": 2,
+    "through": 6,
+    "time": 2,
+    "timing": 1,
+    "titan": 1,
+    "titans": 1,
+    "to": 64,
+    "token": 1,
+    "top": 1,
+    "toward": 2,
+    "towards": 4,
+    "track": 1,
+    "traction": 1,
+    "trading": 1,
+    "traditional": 2,
+    "trajectory": 1,
+    "trend": 1,
+    "trust": 1,
+    "trusted": 1,
+    "truth": 1,
+    "turn": 2,
+    "turning": 1,
+    "two": 1,
+    "u.s.": 1,
+    "underscore": 1,
+    "understand": 3,
+    "unified": 1,
+    "unlock": 1,
+    "up": 2,
+    "upgrade": 1,
+    "upon": 1,
+    "upturn": 1,
+    "us": 1,
+    "use": 1,
+    "v3": 1,
+    "validation": 1,
+    "value": 4,
+    "vast": 1,
+    "very": 1,
+    "view": 1,
+    "virtual": 1,
+    "virtualization": 2,
+    "visibility": 1,
+    "vision": 1,
+    "vm": 1,
+    "vms": 1,
+    "vmware": 1,
+    "volume": 1,
+    "walk": 1,
+    "want": 1,
+    "was": 4,
+    "ways": 1,
+    "we": 26,
+    "welcome": 1,
+    "well": 2,
+    "were": 1,
+    "when": 1,
+    "wherever": 1,
+    "which": 3,
+    "while": 2,
+    "who": 1,
+    "will": 5,
+    "win": 1,
+    "wish": 1,
+    "with": 17,
+    "wonderful": 1,
+    "workflows": 1,
+    "workhorse": 1,
+    "working": 1,
+    "workloads": 2,
+    "world": 1,
+    "worldwide": 1,
+    "would": 1,
+    "year": 12,
+    "years": 2,
+    "you": 2,
+    "your": 1,
+    "yoy": 1,
+    "zero": 1
+   },
+   "date": "2026-11-18",
+   "entries": {
+    "a": [
+     3,
+     6,
+     7,
+     7,
+     13,
+     14,
+     17,
+     17,
+     20
+    ],
+    "access": [
+     16
+    ],
+    "across": [
+     4
+    ],
+    "activate": [
+     15
+    ],
+    "adding": [
+     6
+    ],
+    "adoption": [
+     19
+    ],
+    "afternoon": [
+     1
+    ],
+    "agents": [
+     16
+    ],
+    "ago": [
+     20
+    ],
+    "ai": [
+     8,
+     12,
+     13,
+     14,
+     16
+    ],
+    "also": [
+     15
+    ],
+    "an": [
+     8,
+     12
+    ],
+    "and": [
+     1,
+     2,
+     4,
+     4,
+     5,
+     8,
+     10,
+     11,
+     12,
+     14,
+     17,
+     17
+    ],
+    "any": [
+     13
+    ],
+    "applications": [
+     18
+    ],
+    "architectural": [
+     18
+    ],
+    "architecture": [
+     10
+    ],
+    "are": [
+     6,
+     11,
+     14,
+     17
+    ],
+    "as": [
+     17,
+     18
+    ],
+    "automaker": [
+     17
+    ],
+    "automatically": [
+     15
+    ],
+    "away": [
+     17
+    ],
+    "base": [
+     14
+    ],
+    "based": [
+     17
+    ],
+    "because": [
+     14
+    ],
+    "beginning": [
+     6
+    ],
+    "benchmark": [
+     12
+    ],
+    "better": [
+     14
+    ],
+    "both": [
+     2
+    ],
+    "bottom": [
+     2
+    ],
+    "buyers": [
+     14
+    ],
+    "by": [
+     11,
+     17,
+     23
+    ],
+    "cache": [
+     12
+    ],
+    "call": [
+     1
+    ],
+    "checkpointing": [
+     12
+    ],
+    "chose": [
+     7
+    ],
+    "close": [
+     22
+    ],
+    "cloud": [
+     18
+    ],
+    "commitment": [
+     23
+    ],
+    "completing": [
+     17
+    ],
+    "compliance": [
+     14
+    ],
+    "component": [
+     20
+    ],
+    "considering": [
+     20
+    ],
+    "console": [
+     15
+    ],
+    "containerized": [
+     18
+    ],
+    "context": [
+     15,
+     16
+    ],
+    "continued": [
+     23
+    ],
+    "continues": [
+     9
+    ],
+    "continuous": [
+     22
+    ],
+    "costs": [
+     20
+    ],
+    "customer": [
+     4,
+     17,
+     19
+    ],
+    "customers": [
+     18
+    ],
+    "data": [
+     7,
+     8,
+     14,
+     15,
+     16
+    ],
+    "databento": [
+     7,
+     8
+    ],
+    "decade": [
+     20
+    ],
+    "delivering": [
+     10
+    ],
+    "delivers": [
+     18
+    ],
+    "demand": [
+     20
+    ],
+    "dense": [
+     10
+    ],
+    "deployed": [
+     15
+    ],
+    "deploying": [
+     13
+    ],
+    "deployments": [
+     19
+    ],
+    "developed": [
+     22
+    ],
+    "developing": [
+     13
+    ],
+    "directflash": [
+     10
+    ],
+    "distributes": [
+     8
+    ],
+    "during": [
+     12
+    ],
+    "earn": [
+     9
+    ],
+    "earnings": [
+     1
+    ],
+    "enterprise": [
+     8,
+     13,
+     16
+    ],
+    "enterprises": [
+     6,
+     17
+    ],
+    "environments": [
+     6
+    ],
+    "especially": [
+     20
+    ],
+    "establishing": [
+     8
+    ],
+    "estates": [
+     18
+    ],
+    "ever": [
+     11
+    ],
+    "evergreen": [
+     9
+    ],
+    "everpure": [
+     1
+    ],
+    "every": [
+     12
+    ],
+    "everyone": [
+     1
+    ],
+    "exa": [
+     12
+    ],
+    "exceeded": [
+     2
+    ],
+    "faster": [
+     11
+    ],
+    "financial": [
+     7
+    ],
+    "first": [
+     12,
+     14
+    ],
+    "fiscal": [
+     1
+    ],
+    "flash": [
+     10
+    ],
+    "flashblade": [
+     7
+    ],
+    "for": [
+     5,
+     8,
+     13,
+     18,
+     21
+    ],
+    "foundation": [
+     8
+    ],
+    "freedom": [
+     18
+    ],
+    "frees": [
+     18
+    ],
+    "freight": [
+     17
+    ],
+    "from": [
+     17,
+     17,
+     18
+    ],
+    "future": [
+     8
+    ],
+    "geographies": [
+     4
+    ],
+    "get": [
+     16
+    ],
+    "global": [
+     17,
+     17
+    ],
+    "goal": [
+     22
+    ],
+    "good": [
+     1
+    ],
+    "governed": [
+     16
+    ],
+    "gpu": [
+     6
+    ],
+    "greater": [
+     10
+    ],
+    "growth": [
+     4
+    ],
+    "guidance": [
+     2
+    ],
+    "had": [
+     4
+    ],
+    "hardware": [
+     18
+    ],
+    "has": [
+     19
+    ],
+    "have": [
+     19,
+     20,
+     22
+    ],
+    "high": [
+     8
+    ],
+    "highlighted": [
+     17
+    ],
+    "hyperscale": [
+     5
+    ],
+    "hyperscalers": [
+     5
+    ],
+    "in": [
+     3,
+     6,
+     18,
+     20
+    ],
+    "inclusive": [
+     5
+    ],
+    "industry": [
+     9,
+     12
+    ],
+    "inefficient": [
+     10
+    ],
+    "infrastructure": [
+     7
+    ],
+    "innovations": [
+     22
+    ],
+    "installed": [
+     14
+    ],
+    "integration": [
+     15,
+     16
+    ],
+    "intelligence": [
+     15
+    ],
+    "introduced": [
+     15
+    ],
+    "is": [
+     8,
+     13,
+     21,
+     23
+    ],
+    "it": [
+     14
+    ],
+    "its": [
+     7,
+     17
+    ],
+    "joint": [
+     19
+    ],
+    "journey": [
+     14
+    ],
+    "just": [
+     18
+    ],
+    "kubernetes": [
+     17
+    ],
+    "kv": [
+     12
+    ],
+    "language": [
+     15
+    ],
+    "last": [
+     20
+    ],
+    "latency": [
+     11
+    ],
+    "leading": [
+     17,
+     22
+    ],
+    "legacy": [
+     10,
+     17
+    ],
+    "less": [
+     10
+    ],
+    "levels": [
+     20
+    ],
+    "linear": [
+     12
+    ],
+    "lines": [
+     2
+    ],
+    "lock": [
+     18
+    ],
+    "lower": [
+     11
+    ],
+    "machines": [
+     17
+    ],
+    "made": [
+     23
+    ],
+    "management": [
+     15
+    ],
+    "manual": [
+     16
+    ],
+    "margin": [
+     3
+    ],
+    "market": [
+     7,
+     8
+    ],
+    "mcp": [
+     15
+    ],
+    "mean": [
+     11
+    ],
+    "metric": [
+     12
+    ],
+    "microsecond": [
+     8
+    ],
+    "migration": [
+     17
+    ],
+    "million": [
+     3
+    ],
+    "mlperf": [
+     12
+    ],
+    "model": [
+     15
+    ],
+    "modern": [
+     18
+    ],
+    "modernize": [
+     17
+    ],
+    "momentum": [
+     4
+    ],
+    "move": [
+     17
+    ],
+    "native": [
+     15
+    ],
+    "natural": [
+     15
+    ],
+    "next": [
+     21
+    ],
+    "now": [
+     6,
+     19
+    ],
+    "number": [
+     6
+    ],
+    "nutanix": [
+     18
+    ],
+    "of": [
+     5,
+     6,
+     10,
+     13,
+     17,
+     17,
+     17,
+     22
+    ],
+    "on": [
+     2,
+     3,
+     12,
+     14
+    ],
+    "one": [
+     9
+    ],
+    "onprem": [
+     6
+    ],
+    "open": [
+     7
+    ],
+    "operating": [
+     3,
+     3
+    ],
+    "operational": [
+     13
+    ],
+    "or": [
+     15
+    ],
+    "our": [
+     2,
+     5,
+     10,
+     15,
+     18,
+     21,
+     23
+    ],
+    "overall": [
+     20
+    ],
+    "partnership": [
+     18
+    ],
+    "paul": [
+     0
+    ],
+    "per": [
+     20
+    ],
+    "performance": [
+     10,
+     12
+    ],
+    "pipeline": [
+     21
+    ],
+    "portworx": [
+     17,
+     17,
+     18
+    ],
+    "possible": [
+     23
+    ],
+    "power": [
+     10
+    ],
+    "precision": [
+     8
+    ],
+    "prerequisite": [
+     13
+    ],
+    "primacy": [
+     14
+    ],
+    "process": [
+     22
+    ],
+    "production": [
+     19
+    ],
+    "products": [
+     4
+    ],
+    "profit": [
+     3
+    ],
+    "protecting": [
+     16
+    ],
+    "protocol": [
+     15
+    ],
+    "provider": [
+     7
+    ],
+    "provision": [
+     17
+    ],
+    "purchases": [
+     11
+    ],
+    "q3": [
+     1,
+     20
+    ],
+    "qlc": [
+     10
+    ],
+    "qualifying": [
+     5
+    ],
+    "quarter": [
+     7,
+     12
+    ],
+    "quarters": [
+     21
+    ],
+    "quickly": [
+     19
+    ],
+    "ramped": [
+     19
+    ],
+    "range": [
+     2
+    ],
+    "ranked": [
+     12
+    ],
+    "ready": [
+     14
+    ],
+    "real": [
+     16
+    ],
+    "recently": [
+     17
+    ],
+    "record": [
+     3
+    ],
+    "reliability": [
+     10
+    ],
+    "remained": [
+     20
+    ],
+    "replace": [
+     7
+    ],
+    "replaces": [
+     10
+    ],
+    "responding": [
+     14
+    ],
+    "resulting": [
+     3
+    ],
+    "revenue": [
+     4
+    ],
+    "risen": [
+     20
+    ],
+    "s": [
+     7
+    ],
+    "sales": [
+     4
+    ],
+    "same": [
+     18
+    ],
+    "scaling": [
+     12
+    ],
+    "secure": [
+     16
+    ],
+    "security": [
+     14
+    ],
+    "see": [
+     6
+    ],
+    "seeing": [
+     17
+    ],
+    "seen": [
+     20
+    ],
+    "segments": [
+     4
+    ],
+    "selecting": [
+     17
+    ],
+    "sensitive": [
+     16
+    ],
+    "shifting": [
+     11
+    ],
+    "significant": [
+     6
+    ],
+    "single": [
+     13
+    ],
+    "softwaredriven": [
+     10
+    ],
+    "solid": [
+     4,
+     20,
+     21
+    ],
+    "solutions": [
+     5,
+     5
+    ],
+    "source": [
+     7
+    ],
+    "sources": [
+     13
+    ],
+    "specialized": [
+     5
+    ],
+    "standard": [
+     12
+    ],
+    "standout": [
+     7
+    ],
+    "step": [
+     14
+    ],
+    "storage": [
+     10,
+     11,
+     11,
+     12,
+     12
+    ],
+    "strong": [
+     17
+    ],
+    "stronger": [
+     14
+    ],
+    "strongly": [
+     14
+    ],
+    "submitted": [
+     12
+    ],
+    "success": [
+     23
+    ],
+    "supplier": [
+     17
+    ],
+    "supports": [
+     14
+    ],
+    "surged": [
+     3
+    ],
+    "surpassed": [
+     19
+    ],
+    "system": [
+     22
+    ],
+    "systems": [
+     11
+    ],
+    "tb": [
+     20
+    ],
+    "team": [
+     22
+    ],
+    "tech": [
+     5
+    ],
+    "technology": [
+     10
+    ],
+    "tens": [
+     17
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     7,
+     11,
+     20
+    ],
+    "the": [
+     2,
+     6,
+     10,
+     12,
+     14,
+     18,
+     21,
+     22,
+     22
+    ],
+    "their": [
+     17
+    ],
+    "this": [
+     7,
+     11
+    ],
+    "thousands": [
+     17
+    ],
+    "through": [
+     15,
+     15
+    ],
+    "time": [
+     16
+    ],
+    "titans": [
+     5
+    ],
+    "to": [
+     1,
+     3,
+     6,
+     7,
+     9,
+     12,
+     15,
+     16,
+     17,
+     17,
+     20
+    ],
+    "top": [
+     2
+    ],
+    "toward": [
+     11
+    ],
+    "towards": [
+     14,
+     22
+    ],
+    "traction": [
+     17
+    ],
+    "traditional": [
+     18
+    ],
+    "trust": [
+     23
+    ],
+    "truth": [
+     13
+    ],
+    "two": [
+     21
+    ],
+    "upturn": [
+     6
+    ],
+    "v3": [
+     12
+    ],
+    "validation": [
+     9
+    ],
+    "virtual": [
+     17
+    ],
+    "virtualization": [
+     17,
+     17
+    ],
+    "visibility": [
+     21
+    ],
+    "vm": [
+     18
+    ],
+    "vms": [
+     17
+    ],
+    "vmware": [
+     17
+    ],
+    "volume": [
+     8
+    ],
+    "was": [
+     7
+    ],
+    "we": [
+     2,
+     4,
+     6,
+     11,
+     15,
+     17,
+     19
+    ],
+    "welcome": [
+     1
+    ],
+    "when": [
+     20
+    ],
+    "win": [
+     7
+    ],
+    "with": [
+     8,
+     10,
+     10,
+     12,
+     16,
+     17,
+     18
+    ],
+    "workloads": [
+     8
+    ],
+    "year": [
+     3,
+     3
+    ],
+    "you": [
+     0
+    ],
+    "your": [
+     23
+    ],
+    "zero": [
+     16
+    ]
+   },
+   "excerpts": [
+    "Thank you Paul.",
+    "Good afternoon everyone and welcome to Everpure’s Q3 fiscal 2027 earnings call.",
+    "We exceeded our guidance range on both the top and bottom lines.",
+    "Operating profit surged 76% year on year to $345 million, resulting in a record 24% Operating Margin.",
+    "We had solid revenue growth and sales momentum across geographies, products and customer segments.",
+    "2) Hyperscale Solutions, inclusive of our specialized solutions for hyperscalers and qualifying Tech Titans.",
+    "We are beginning to see a significant upturn in the number of enterprises now adding GPU environments onprem.",
+    "A standout win this quarter was Databento, a financial market data provider that chose FlashBlade//S to replace its open-source infrastructure.",
+    "Databento distributes high-volume market data with microsecond precision and is establishing an enterprise foundation for future AI workloads.",
+    "Evergreen//One continues to earn industry validation.",
+    "The softwaredriven architecture of our DirectFlash technology replaces inefficient legacy storage with dense QLC flash, delivering greater performance and reliability, with less power.",
+    "By this we mean that storage purchases are shifting toward ever faster and lower latency storage systems.",
+    "During the quarter, //EXA ranked first on every checkpointing and KV-cache metric submitted to MLPerf Storage v3.0, an industry-standard AI storage benchmark, with linear performance scaling.",
+    "For any enterprise deploying operational AI, developing single sources of truth is a prerequisite.",
+    "Installed-base buyers are responding strongly because it supports better security, stronger compliance, and a first step on the AI-ready journey towards Data Primacy.",
+    "To activate data intelligence through natural language, we also introduced native Model Context Protocol, or MCP, integration, deployed automatically through our management console.",
+    "AI agents get secure, real-time access to governed enterprise context, protecting sensitive data with zero manual integration.",
+    "We are seeing strong customer traction as enterprises move away from legacy virtualization, highlighted by a leading global freight supplier, selecting Portworx to modernize and provision their VMs, and a Global 100 automaker recently completing its migration of tens of thousands of virtual machines from VMware to Kubernetes-based virtualization with Portworx.",
+    "Just as Portworx frees modern containerized applications from cloud and hardware lock-in, our partnership with Nutanix delivers the same architectural freedom for customers’ traditional VM estates.",
+    "Customer adoption has ramped quickly, and we have now surpassed 100 joint production deployments.",
+    "Demand in Q3 remained solid overall especially when considering that component costs per TB have risen to levels last seen a decade ago.",
+    "Our pipeline visibility for the next two quarters is solid.",
+    "The team have developed system and process innovations leading towards the goal of “continuous close”.",
+    "Our continued success is made possible by your trust and commitment."
+   ],
+   "id": "p-everpure-q3fy27-prepared-remarks",
+   "msent": {
+    "20x": 1,
+    "a": 19,
+    "able": 2,
+    "accelerated": 1,
+    "accelerating": 1,
+    "accelerator": 1,
+    "access": 2,
+    "accurate": 2,
+    "achievement": 1,
+    "achieving": 1,
+    "across": 3,
+    "activate": 1,
+    "adding": 1,
+    "additional": 1,
+    "adoption": 1,
+    "advance": 1,
+    "advancing": 1,
+    "advantage": 1,
+    "advantages": 1,
+    "affect": 1,
+    "after": 1,
+    "afternoon": 1,
+    "agents": 1,
+    "aggregate": 1,
+    "agility": 1,
+    "ago": 1,
+    "ai": 15,
+    "albeit": 1,
+    "all": 2,
+    "allowing": 1,
+    "also": 3,
+    "an": 3,
+    "analyst": 1,
+    "and": 50,
+    "announce": 1,
+    "announced": 1,
+    "another": 1,
+    "answers": 1,
+    "any": 1,
+    "application": 3,
+    "applications": 2,
+    "approaches": 1,
+    "architectural": 3,
+    "architecture": 1,
+    "are": 8,
+    "areas": 2,
+    "around": 1,
+    "as": 11,
+    "at": 4,
+    "automaker": 1,
+    "automatically": 1,
+    "average": 3,
+    "away": 1,
+    "azure": 1,
+    "backdrop": 1,
+    "base": 1,
+    "based": 3,
+    "be": 2,
+    "because": 1,
+    "before": 2,
+    "beginning": 4,
+    "benchmark": 1,
+    "best": 1,
+    "better": 2,
+    "bid": 1,
+    "both": 3,
+    "bottom": 1,
+    "broader": 1,
+    "broken": 1,
+    "buildout": 1,
+    "buildouts": 2,
+    "builds": 1,
+    "business": 5,
+    "businesses": 1,
+    "but": 1,
+    "buyers": 1,
+    "by": 7,
+    "cache": 1,
+    "call": 4,
+    "came": 1,
+    "can": 2,
+    "catalog": 1,
+    "category": 1,
+    "celebrates": 1,
+    "center": 1,
+    "centers": 1,
+    "centric": 1,
+    "chain": 1,
+    "change": 1,
+    "checkpointing": 1,
+    "choice": 2,
+    "choosing": 1,
+    "chose": 3,
+    "clear": 1,
+    "close": 3,
+    "cloud": 6,
+    "clouds": 1,
+    "combining": 2,
+    "commitment": 1,
+    "companies": 1,
+    "company": 2,
+    "competing": 1,
+    "competitor": 1,
+    "complete": 1,
+    "completing": 1,
+    "compliance": 1,
+    "compliment": 1,
+    "component": 5,
+    "concerns": 2,
+    "connected": 1,
+    "considering": 1,
+    "consistent": 1,
+    "console": 1,
+    "consumption": 2,
+    "container": 3,
+    "containerized": 1,
+    "containers": 1,
+    "context": 4,
+    "contextual": 1,
+    "continue": 6,
+    "continued": 6,
+    "continues": 5,
+    "continuous": 1,
+    "core": 6,
+    "cost": 1,
+    "costs": 6,
+    "critical": 1,
+    "customer": 5,
+    "customers": 10,
+    "data": 23,
+    "databento": 2,
+    "days": 1,
+    "deals": 1,
+    "decade": 1,
+    "deliver": 2,
+    "delivered": 1,
+    "delivering": 2,
+    "delivers": 2,
+    "demand": 4,
+    "dense": 1,
+    "deployed": 2,
+    "deploying": 1,
+    "deployments": 2,
+    "designed": 1,
+    "details": 1,
+    "deterministic": 1,
+    "developed": 1,
+    "developing": 1,
+    "developments": 1,
+    "digit": 1,
+    "directflash": 1,
+    "directly": 4,
+    "disaster": 1,
+    "discussions": 1,
+    "distinct": 1,
+    "distributes": 1,
+    "do": 2,
+    "dollar": 1,
+    "double": 1,
+    "downstream": 1,
+    "drive": 2,
+    "driven": 1,
+    "during": 3,
+    "each": 1,
+    "earn": 1,
+    "earning": 1,
+    "earnings": 3,
+    "ease": 1,
+    "edition": 1,
+    "efficiency": 2,
+    "eg1": 1,
+    "employees": 1,
+    "enables": 1,
+    "encourage": 1,
+    "end": 4,
+    "engineering": 1,
+    "enhances": 1,
+    "enter": 1,
+    "enterprise": 6,
+    "enterprises": 4,
+    "entire": 1,
+    "environments": 4,
+    "especially": 2,
+    "establish": 1,
+    "establishing": 1,
+    "estate": 1,
+    "estates": 1,
+    "even": 1,
+    "ever": 1,
+    "evergreen": 7,
+    "everpure": 15,
+    "every": 3,
+    "everyone": 2,
+    "exa": 3,
+    "exceed": 1,
+    "exceeded": 1,
+    "excellence": 1,
+    "excluding": 1,
+    "execution": 1,
+    "existing": 1,
+    "expand": 1,
+    "expanded": 1,
+    "expanding": 1,
+    "expansion": 2,
+    "expect": 1,
+    "expectations": 1,
+    "expected": 2,
+    "explained": 1,
+    "extend": 1,
+    "factory": 1,
+    "faster": 4,
+    "file": 1,
+    "finance": 1,
+    "financial": 4,
+    "first": 5,
+    "fiscal": 2,
+    "flash": 1,
+    "flashblade": 5,
+    "fleet": 1,
+    "flexibility": 1,
+    "for": 17,
+    "foundation": 2,
+    "fragment": 1,
+    "freedom": 1,
+    "frees": 1,
+    "freight": 1,
+    "from": 8,
+    "fully": 1,
+    "functionality": 1,
+    "fundamental": 1,
+    "further": 2,
+    "furthest": 1,
+    "future": 1,
+    "gain": 1,
+    "gartner": 1,
+    "geographies": 1,
+    "get": 1,
+    "getting": 1,
+    "gives": 2,
+    "global": 1,
+    "go": 1,
+    "goal": 1,
+    "going": 1,
+    "good": 1,
+    "govern": 1,
+    "governed": 1,
+    "gpu": 5,
+    "graph": 1,
+    "greater": 2,
+    "grew": 1,
+    "gross": 1,
+    "growth": 9,
+    "guidance": 1,
+    "had": 1,
+    "half": 1,
+    "hardware": 1,
+    "has": 3,
+    "hat": 1,
+    "have": 4,
+    "having": 1,
+    "help": 1,
+    "high": 3,
+    "higher": 4,
+    "highest": 1,
+    "highlight": 1,
+    "highlighted": 1,
+    "highlights": 1,
+    "him": 1,
+    "holiday": 1,
+    "hotter": 1,
+    "how": 1,
+    "hybrid": 1,
+    "hyperscale": 8,
+    "hyperscalers": 2,
+    "i": 4,
+    "i'd": 1,
+    "i'll": 1,
+    "idc": 1,
+    "important": 1,
+    "improved": 1,
+    "improvements": 1,
+    "improves": 1,
+    "in": 29,
+    "includes": 1,
+    "including": 2,
+    "inclusive": 1,
+    "increase": 2,
+    "increasing": 1,
+    "industry": 3,
+    "inefficient": 1,
+    "inference": 1,
+    "infrastructure": 6,
+    "initiated": 1,
+    "initiatives": 1,
+    "innovations": 1,
+    "installed": 1,
+    "institution": 1,
+    "insurance": 1,
+    "insurer": 1,
+    "integrated": 1,
+    "integration": 2,
+    "intelligence": 5,
+    "interest": 1,
+    "interoperability": 1,
+    "into": 6,
+    "introduced": 1,
+    "intuitively": 1,
+    "investment": 1,
+    "investors": 1,
+    "is": 9,
+    "it": 6,
+    "its": 9,
+    "joint": 1,
+    "journey": 1,
+    "just": 1,
+    "key": 2,
+    "kubernetes": 3,
+    "kv": 1,
+    "landscape": 1,
+    "language": 2,
+    "large": 2,
+    "largest": 1,
+    "last": 2,
+    "latency": 1,
+    "later": 1,
+    "leader": 2,
+    "leadership": 2,
+    "leading": 3,
+    "led": 1,
+    "legacy": 4,
+    "less": 1,
+    "level": 1,
+    "levels": 1,
+    "leverage": 1,
+    "like": 2,
+    "linear": 1,
+    "lines": 1,
+    "lives": 1,
+    "lock": 1,
+    "lower": 3,
+    "lowering": 1,
+    "machines": 1,
+    "macro": 2,
+    "made": 1,
+    "magic": 1,
+    "maintain": 1,
+    "majority": 1,
+    "make": 1,
+    "making": 2,
+    "manage": 1,
+    "management": 3,
+    "manages": 1,
+    "manual": 1,
+    "many": 2,
+    "margin": 2,
+    "market": 7,
+    "marketscape": 1,
+    "maximizing": 1,
+    "mcp": 1,
+    "mean": 1,
+    "meaning": 1,
+    "media": 1,
+    "meeting": 1,
+    "memory": 1,
+    "metadata": 1,
+    "metric": 1,
+    "microsecond": 1,
+    "migration": 1,
+    "million": 1,
+    "mlperf": 1,
+    "model": 1,
+    "models": 3,
+    "modern": 4,
+    "modernization": 1,
+    "modernize": 1,
+    "momentum": 1,
+    "month": 1,
+    "more": 3,
+    "most": 5,
+    "move": 1,
+    "multi": 1,
+    "multiple": 2,
+    "named": 1,
+    "native": 1,
+    "natural": 1,
+    "necessity": 2,
+    "need": 2,
+    "neo": 1,
+    "neoclouds": 1,
+    "new": 7,
+    "next": 4,
+    "not": 1,
+    "now": 6,
+    "number": 2,
+    "nutanix": 1,
+    "of": 30,
+    "offering": 1,
+    "offerings": 1,
+    "on": 14,
+    "one": 9,
+    "only": 2,
+    "onprem": 1,
+    "open": 1,
+    "openshift": 1,
+    "operate": 1,
+    "operating": 1,
+    "operational": 3,
+    "or": 2,
+    "organize": 1,
+    "os": 1,
+    "our": 32,
+    "outlined": 1,
+    "outlook": 1,
+    "over": 5,
+    "overall": 3,
+    "pace": 4,
+    "package": 1,
+    "part": 1,
+    "partner": 1,
+    "partners": 1,
+    "partnership": 1,
+    "paul": 1,
+    "per": 1,
+    "percentage": 1,
+    "perfect": 1,
+    "performance": 9,
+    "performant": 1,
+    "pick": 1,
+    "pipeline": 1,
+    "place": 1,
+    "plan": 1,
+    "platform": 2,
+    "plug": 1,
+    "portworx": 5,
+    "position": 1,
+    "positioning": 1,
+    "possible": 1,
+    "power": 2,
+    "pre": 1,
+    "precision": 1,
+    "prem": 1,
+    "prerequisite": 1,
+    "previously": 1,
+    "price": 1,
+    "prices": 4,
+    "pricing": 1,
+    "primacy": 4,
+    "process": 2,
+    "processes": 1,
+    "procurement": 1,
+    "product": 4,
+    "production": 2,
+    "products": 3,
+    "profit": 1,
+    "program": 1,
+    "progress": 2,
+    "proprietary": 1,
+    "protect": 1,
+    "protecting": 1,
+    "protocol": 1,
+    "proven": 1,
+    "provide": 1,
+    "provider": 2,
+    "providers": 1,
+    "proving": 1,
+    "provision": 1,
+    "pundits": 1,
+    "purchases": 1,
+    "purekva": 1,
+    "purity": 1,
+    "pursuits": 1,
+    "q2": 2,
+    "q3": 10,
+    "q4": 1,
+    "qlc": 1,
+    "quadrant": 1,
+    "qualified": 1,
+    "qualifying": 1,
+    "quality": 1,
+    "quantitative": 1,
+    "quarter": 11,
+    "quarters": 2,
+    "quickly": 1,
+    "ramped": 1,
+    "range": 2,
+    "ranked": 1,
+    "rapidly": 1,
+    "rather": 1,
+    "reach": 1,
+    "reaching": 1,
+    "ready": 1,
+    "real": 1,
+    "recently": 1,
+    "recognition": 1,
+    "record": 2,
+    "recovery": 1,
+    "red": 1,
+    "reduce": 1,
+    "reduction": 1,
+    "reflect": 1,
+    "reflecting": 1,
+    "regardless": 2,
+    "relationship": 1,
+    "relevant": 1,
+    "reliability": 5,
+    "rely": 1,
+    "remain": 1,
+    "remained": 1,
+    "remarkable": 1,
+    "replace": 1,
+    "replaces": 1,
+    "replacing": 1,
+    "report": 1,
+    "representing": 2,
+    "resilient": 1,
+    "responding": 1,
+    "resulting": 1,
+    "results": 1,
+    "revenue": 5,
+    "rich": 1,
+    "risen": 1,
+    "role": 1,
+    "row": 1,
+    "s": 2,
+    "sales": 8,
+    "same": 1,
+    "saw": 1,
+    "scalable": 1,
+    "scale": 3,
+    "scales": 1,
+    "scaling": 1,
+    "scrutinize": 1,
+    "second": 1,
+    "secure": 2,
+    "security": 1,
+    "see": 2,
+    "seeing": 2,
+    "seen": 2,
+    "segments": 2,
+    "selecting": 1,
+    "semiconductor": 1,
+    "sensitive": 1,
+    "service": 2,
+    "services": 1,
+    "several": 1,
+    "shape": 1,
+    "share": 3,
+    "shift": 2,
+    "shifting": 1,
+    "shifts": 1,
+    "showing": 1,
+    "side": 1,
+    "significant": 1,
+    "silo": 1,
+    "single": 2,
+    "slower": 1,
+    "so": 2,
+    "software": 4,
+    "softwaredriven": 1,
+    "solid": 4,
+    "solidified": 1,
+    "solution": 3,
+    "solutions": 4,
+    "some": 1,
+    "source": 1,
+    "sources": 1,
+    "space": 1,
+    "specialized": 1,
+    "stabilize": 1,
+    "stages": 1,
+    "standard": 3,
+    "standardize": 1,
+    "standout": 1,
+    "stated": 1,
+    "step": 2,
+    "storage": 9,
+    "storing": 1,
+    "straight": 1,
+    "streams": 1,
+    "strength": 1,
+    "strong": 6,
+    "stronger": 1,
+    "strongly": 1,
+    "submitted": 1,
+    "subscription": 2,
+    "substantially": 1,
+    "success": 1,
+    "such": 1,
+    "superior": 1,
+    "supplier": 1,
+    "suppliers": 2,
+    "supply": 2,
+    "support": 1,
+    "supports": 3,
+    "surged": 1,
+    "surpassed": 1,
+    "system": 3,
+    "systems": 3,
+    "take": 1,
+    "tarek": 3,
+    "tb": 1,
+    "tcv": 1,
+    "team": 1,
+    "teams": 1,
+    "tech": 2,
+    "technology": 3,
+    "tens": 1,
+    "than": 3,
+    "thank": 3,
+    "thanksgiving": 1,
+    "that": 8,
+    "the": 40,
+    "their": 8,
+    "these": 5,
+    "this": 10,
+    "thousands": 1,
+    "three": 2,
+    "through": 4,
+    "time": 2,
+    "timing": 1,
+    "titan": 1,
+    "titans": 1,
+    "to": 45,
+    "token": 1,
+    "top": 1,
+    "toward": 2,
+    "towards": 4,
+    "track": 1,
+    "traction": 1,
+    "trading": 1,
+    "traditional": 2,
+    "trajectory": 1,
+    "trend": 1,
+    "trust": 1,
+    "trusted": 1,
+    "truth": 1,
+    "turn": 2,
+    "turning": 1,
+    "two": 1,
+    "u.s.": 1,
+    "underscore": 1,
+    "understand": 2,
+    "unified": 1,
+    "unlock": 1,
+    "up": 2,
+    "upgrade": 1,
+    "upon": 1,
+    "upturn": 1,
+    "us": 1,
+    "use": 1,
+    "v3": 1,
+    "validation": 1,
+    "value": 4,
+    "vast": 1,
+    "very": 1,
+    "view": 1,
+    "virtual": 1,
+    "virtualization": 1,
+    "visibility": 1,
+    "vision": 1,
+    "vm": 1,
+    "vms": 1,
+    "vmware": 1,
+    "volume": 1,
+    "walk": 1,
+    "want": 1,
+    "was": 4,
+    "ways": 1,
+    "we": 25,
+    "welcome": 1,
+    "well": 2,
+    "were": 1,
+    "when": 1,
+    "wherever": 1,
+    "which": 3,
+    "while": 2,
+    "who": 1,
+    "will": 5,
+    "win": 1,
+    "wish": 1,
+    "with": 14,
+    "wonderful": 1,
+    "workflows": 1,
+    "workhorse": 1,
+    "working": 1,
+    "workloads": 2,
+    "world": 1,
+    "worldwide": 1,
+    "would": 1,
+    "year": 9,
+    "years": 2,
+    "you": 2,
+    "your": 1,
+    "yoy": 1,
+    "zero": 1
+   },
+   "n_sentences": 80,
+   "source": "s21.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q3 FY2027 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2027/q3/Everpure-Q3FY27-Prepared-Remarks.pdf",
+   "words": 1757
+  },
+  {
+   "counts": {
+    "100m": 1,
+    "1touch": 2,
+    "a": 30,
+    "ability": 3,
+    "about": 1,
+    "above": 1,
+    "accelerate": 3,
+    "accelerated": 3,
+    "acceleration": 3,
+    "access": 2,
+    "accuracy": 2,
+    "accurate": 2,
+    "achieved": 1,
+    "acquisition": 2,
+    "across": 5,
+    "additionally": 1,
+    "address": 1,
+    "adjusting": 1,
+    "adopting": 1,
+    "adoption": 1,
+    "advance": 1,
+    "advanced": 3,
+    "advancements": 1,
+    "advantages": 3,
+    "affect": 1,
+    "afternoon": 1,
+    "again": 1,
+    "agent": 1,
+    "agreement": 2,
+    "ahead": 1,
+    "ai": 23,
+    "all": 4,
+    "allow": 1,
+    "allows": 3,
+    "alone": 1,
+    "alongside": 1,
+    "also": 1,
+    "alternative": 1,
+    "am": 1,
+    "amid": 1,
+    "an": 5,
+    "analysis": 1,
+    "analyst": 1,
+    "analysts": 1,
+    "and": 98,
+    "announced": 1,
+    "another": 2,
+    "answer": 1,
+    "any": 1,
+    "appreciate": 1,
+    "apps": 1,
+    "architecture": 1,
+    "architectures": 1,
+    "are": 6,
+    "area": 2,
+    "areas": 3,
+    "as": 20,
+    "at": 5,
+    "attachments": 1,
+    "attributed": 1,
+    "august": 1,
+    "australia": 1,
+    "automate": 1,
+    "automatically": 1,
+    "availability": 1,
+    "available": 1,
+    "avenues": 1,
+    "backed": 1,
+    "backup": 1,
+    "bank": 1,
+    "base": 1,
+    "based": 3,
+    "be": 6,
+    "because": 2,
+    "become": 1,
+    "been": 1,
+    "before": 1,
+    "begin": 1,
+    "believe": 3,
+    "benefit": 1,
+    "between": 3,
+    "beyond": 4,
+    "billion": 2,
+    "black": 1,
+    "block": 1,
+    "both": 6,
+    "box": 1,
+    "brand": 1,
+    "breakout": 1,
+    "broad": 1,
+    "brought": 1,
+    "build": 2,
+    "building": 1,
+    "built": 1,
+    "burden": 1,
+    "business": 4,
+    "businesses": 1,
+    "by": 2,
+    "calendar": 1,
+    "call": 2,
+    "can": 4,
+    "capabilities": 3,
+    "capability": 2,
+    "capacity": 3,
+    "carried": 1,
+    "cause": 1,
+    "change": 1,
+    "changes": 1,
+    "channel": 1,
+    "charts": 1,
+    "chose": 2,
+    "chosen": 1,
+    "clara": 1,
+    "close": 1,
+    "cloud": 5,
+    "co": 1,
+    "combination": 2,
+    "commitment": 1,
+    "commitments": 2,
+    "committed": 1,
+    "company": 3,
+    "competitor": 1,
+    "competitors": 2,
+    "complex": 1,
+    "complexity": 1,
+    "comply": 1,
+    "component": 1,
+    "computing": 1,
+    "concept": 1,
+    "conference": 1,
+    "conferences": 1,
+    "confidence": 2,
+    "confident": 1,
+    "configured": 1,
+    "confirms": 1,
+    "consider": 1,
+    "considered": 1,
+    "consistent": 1,
+    "consistently": 1,
+    "consolidated": 1,
+    "consumption": 1,
+    "context": 4,
+    "contextualize": 1,
+    "continue": 5,
+    "continued": 3,
+    "continues": 4,
+    "contract": 1,
+    "control": 3,
+    "cooling": 1,
+    "core": 5,
+    "cost": 3,
+    "costs": 3,
+    "court": 3,
+    "current": 3,
+    "customer": 7,
+    "customers": 18,
+    "data": 34,
+    "decade": 2,
+    "decades": 1,
+    "decision": 1,
+    "defined": 1,
+    "deliver": 1,
+    "delivering": 2,
+    "demand": 6,
+    "demands": 1,
+    "density": 1,
+    "depends": 1,
+    "deploy": 1,
+    "deployment": 1,
+    "design": 1,
+    "designed": 1,
+    "details": 2,
+    "developed": 1,
+    "development": 1,
+    "diagnose": 1,
+    "different": 1,
+    "dilutes": 1,
+    "directflash": 5,
+    "directly": 1,
+    "discover": 1,
+    "discrepancies": 1,
+    "discussed": 1,
+    "disruptive": 2,
+    "distributed": 1,
+    "dollar": 1,
+    "dollars": 1,
+    "drives": 1,
+    "driving": 1,
+    "during": 1,
+    "dynamic": 1,
+    "earnings": 1,
+    "easier": 1,
+    "eb": 1,
+    "economics": 1,
+    "ecosystem": 1,
+    "effect": 1,
+    "efficient": 1,
+    "efficiently": 1,
+    "electronics": 1,
+    "elements": 1,
+    "embraced": 1,
+    "employees": 1,
+    "enable": 1,
+    "enabled": 1,
+    "enables": 1,
+    "enabling": 2,
+    "end": 1,
+    "endure": 1,
+    "engine": 1,
+    "enjoying": 1,
+    "enjoys": 1,
+    "entered": 1,
+    "enterprise": 9,
+    "enterprises": 2,
+    "environment": 5,
+    "environments": 4,
+    "era": 1,
+    "error": 1,
+    "escalate": 1,
+    "estates": 1,
+    "estimates": 1,
+    "europe": 1,
+    "even": 2,
+    "ever": 1,
+    "evergreen": 8,
+    "everpure": 17,
+    "every": 4,
+    "everyone": 1,
+    "everything": 1,
+    "evolve": 2,
+    "exa": 5,
+    "exabytes": 1,
+    "example": 2,
+    "exceeded": 1,
+    "exceeding": 1,
+    "excess": 1,
+    "exciting": 1,
+    "execution": 1,
+    "executive": 1,
+    "existing": 1,
+    "expand": 2,
+    "expanded": 3,
+    "expanding": 2,
+    "expansion": 1,
+    "expect": 2,
+    "expectations": 2,
+    "explicitly": 1,
+    "extend": 1,
+    "facing": 1,
+    "factors": 1,
+    "far": 3,
+    "fast": 1,
+    "faster": 1,
+    "feel": 1,
+    "file": 1,
+    "financial": 2,
+    "find": 2,
+    "first": 5,
+    "fiscal": 2,
+    "flash": 3,
+    "flasharray": 1,
+    "flashblade": 7,
+    "fleet": 2,
+    "flexibility": 1,
+    "flexible": 1,
+    "focusing": 1,
+    "footprint": 2,
+    "for": 28,
+    "forever": 1,
+    "forward": 1,
+    "foundation": 2,
+    "four": 1,
+    "fourth": 1,
+    "fragmented": 2,
+    "from": 8,
+    "full": 2,
+    "fully": 2,
+    "furthest": 1,
+    "fusion": 1,
+    "future": 3,
+    "fy27": 1,
+    "fy28": 2,
+    "gain": 1,
+    "gains": 1,
+    "gartner": 1,
+    "general": 1,
+    "generate": 1,
+    "geographies": 1,
+    "gives": 4,
+    "global": 5,
+    "globally": 1,
+    "go": 1,
+    "going": 1,
+    "good": 1,
+    "governed": 1,
+    "government": 1,
+    "gpu": 2,
+    "great": 1,
+    "greater": 2,
+    "gross": 1,
+    "groundbreaking": 1,
+    "grow": 3,
+    "growing": 6,
+    "grown": 2,
+    "growth": 20,
+    "guidance": 3,
+    "hardware": 2,
+    "has": 8,
+    "have": 10,
+    "hdds": 1,
+    "help": 1,
+    "here": 1,
+    "high": 3,
+    "higher": 2,
+    "highest": 4,
+    "honor": 1,
+    "hours": 1,
+    "how": 2,
+    "hundreds": 1,
+    "hyperscale": 4,
+    "hyperscaler": 3,
+    "hyperscalers": 2,
+    "i": 3,
+    "identifies": 1,
+    "immediately": 1,
+    "implies": 1,
+    "importantly": 1,
+    "in": 43,
+    "includes": 1,
+    "including": 1,
+    "inconsistent": 1,
+    "incorporated": 1,
+    "incorrect": 1,
+    "increase": 2,
+    "increases": 2,
+    "increasing": 1,
+    "increasingly": 1,
+    "indicates": 1,
+    "individual": 1,
+    "industry": 4,
+    "infrastructure": 2,
+    "initiatives": 1,
+    "innovation": 2,
+    "insight": 1,
+    "intelligence": 3,
+    "interest": 1,
+    "internal": 2,
+    "international": 2,
+    "into": 8,
+    "introduced": 1,
+    "invested": 1,
+    "investment": 1,
+    "investors": 1,
+    "invoice": 1,
+    "is": 15,
+    "issue": 1,
+    "issues": 1,
+    "it": 12,
+    "its": 7,
+    "june": 1,
+    "just": 1,
+    "key": 1,
+    "knowledge": 1,
+    "labor": 2,
+    "large": 4,
+    "largest": 3,
+    "last": 4,
+    "leader": 1,
+    "leadership": 1,
+    "leading": 1,
+    "leads": 1,
+    "legacy": 1,
+    "less": 2,
+    "let's": 2,
+    "lets": 3,
+    "lifecycle": 1,
+    "lifetime": 1,
+    "line": 1,
+    "long": 2,
+    "look": 2,
+    "lots": 1,
+    "lower": 2,
+    "lowering": 1,
+    "macro": 1,
+    "made": 2,
+    "magic": 1,
+    "maintaining": 1,
+    "major": 2,
+    "make": 3,
+    "making": 1,
+    "manage": 2,
+    "managed": 2,
+    "management": 4,
+    "managing": 2,
+    "manual": 1,
+    "many": 1,
+    "margin": 1,
+    "market": 11,
+    "markets": 1,
+    "massive": 1,
+    "media": 1,
+    "meet": 2,
+    "meeting": 2,
+    "metrics": 1,
+    "mid": 1,
+    "million": 1,
+    "model": 2,
+    "modern": 2,
+    "momentum": 3,
+    "monitor": 1,
+    "more": 6,
+    "most": 1,
+    "moving": 1,
+    "multiple": 2,
+    "named": 1,
+    "namely": 1,
+    "near": 1,
+    "need": 1,
+    "needs": 4,
+    "neoclouds": 2,
+    "never": 1,
+    "new": 4,
+    "newly": 1,
+    "next": 2,
+    "non": 2,
+    "now": 7,
+    "numbers": 1,
+    "nutanix": 2,
+    "nvidia": 1,
+    "object": 1,
+    "of": 44,
+    "off": 1,
+    "offered": 2,
+    "offering": 1,
+    "offerings": 1,
+    "old": 1,
+    "on": 13,
+    "once": 1,
+    "one": 9,
+    "only": 1,
+    "opening": 1,
+    "openshift": 1,
+    "operate": 3,
+    "operating": 1,
+    "operational": 1,
+    "operations": 3,
+    "operators": 1,
+    "opportunity": 3,
+    "optimize": 2,
+    "or": 1,
+    "order": 2,
+    "organization": 1,
+    "organizations": 1,
+    "other": 1,
+    "others": 1,
+    "our": 73,
+    "out": 2,
+    "outsized": 1,
+    "outstanding": 1,
+    "over": 7,
+    "own": 5,
+    "ownership": 1,
+    "paired": 1,
+    "particularly": 1,
+    "parties": 1,
+    "partner": 1,
+    "partners": 3,
+    "past": 1,
+    "paul": 1,
+    "paying": 1,
+    "per": 1,
+    "performance": 8,
+    "petabytes": 1,
+    "pilot": 1,
+    "platform": 1,
+    "platforms": 1,
+    "pleased": 1,
+    "point": 1,
+    "policies": 1,
+    "policy": 1,
+    "portfolio": 1,
+    "portworx": 1,
+    "position": 1,
+    "positioning": 1,
+    "posits": 1,
+    "possible": 1,
+    "power": 1,
+    "powering": 1,
+    "predictable": 1,
+    "predicted": 1,
+    "previous": 1,
+    "price": 2,
+    "prices": 1,
+    "pricing": 2,
+    "primacy": 4,
+    "privacy": 1,
+    "product": 7,
+    "products": 6,
+    "profit": 1,
+    "progress": 2,
+    "promises": 1,
+    "prompt": 1,
+    "proposition": 1,
+    "prospect": 1,
+    "prospects": 1,
+    "provide": 2,
+    "provider": 3,
+    "providers": 1,
+    "provides": 1,
+    "providing": 3,
+    "pure1": 1,
+    "purity": 2,
+    "puts": 1,
+    "q1": 1,
+    "q2": 2,
+    "q3": 1,
+    "q4": 2,
+    "quadrant": 1,
+    "qualify": 1,
+    "quality": 1,
+    "quarter": 6,
+    "quarters": 2,
+    "range": 3,
+    "rapid": 1,
+    "rate": 5,
+    "rates": 1,
+    "rather": 2,
+    "rationalize": 1,
+    "re": 1,
+    "ready": 3,
+    "reasons": 1,
+    "recognized": 1,
+    "reconciliation": 1,
+    "record": 1,
+    "records": 1,
+    "redhat": 2,
+    "refer": 1,
+    "referring": 1,
+    "refreshes": 1,
+    "relationships": 1,
+    "released": 1,
+    "reliability": 1,
+    "reliable": 2,
+    "reliably": 1,
+    "remainder": 1,
+    "remarkable": 1,
+    "reported": 1,
+    "reporting": 1,
+    "representing": 1,
+    "reputation": 1,
+    "require": 1,
+    "requirements": 1,
+    "research": 1,
+    "resiliency": 1,
+    "resilient": 1,
+    "result": 1,
+    "results": 1,
+    "revenue": 7,
+    "revised": 1,
+    "rise": 1,
+    "run": 3,
+    "s": 3,
+    "sales": 7,
+    "samsung": 1,
+    "santa": 1,
+    "saving": 1,
+    "saw": 2,
+    "scalability": 1,
+    "scale": 5,
+    "scaled": 1,
+    "scales": 1,
+    "scaling": 1,
+    "scheduled": 1,
+    "search": 1,
+    "second": 3,
+    "secure": 1,
+    "see": 3,
+    "seen": 2,
+    "segment": 1,
+    "segments": 1,
+    "selected": 3,
+    "selective": 1,
+    "semantics": 1,
+    "semiconductor": 1,
+    "senior": 1,
+    "september": 2,
+    "serve": 1,
+    "service": 7,
+    "services": 3,
+    "set": 1,
+    "sets": 1,
+    "share": 5,
+    "shared": 1,
+    "signals": 1,
+    "signed": 3,
+    "significant": 1,
+    "significantly": 2,
+    "similarities": 1,
+    "simplifying": 1,
+    "since": 2,
+    "single": 1,
+    "sla": 1,
+    "smallest": 1,
+    "software": 3,
+    "solidified": 1,
+    "solution": 1,
+    "solutions": 4,
+    "some": 3,
+    "sources": 2,
+    "sovereignty": 1,
+    "speak": 1,
+    "specialized": 1,
+    "specific": 1,
+    "spectrum": 1,
+    "spend": 1,
+    "spent": 1,
+    "ssds": 1,
+    "standardize": 1,
+    "standing": 1,
+    "starting": 1,
+    "stated": 1,
+    "steadily": 1,
+    "steady": 2,
+    "step": 1,
+    "stn": 2,
+    "storage": 11,
+    "strategically": 1,
+    "strategy": 3,
+    "stream": 2,
+    "streamline": 2,
+    "streamlined": 1,
+    "strength": 2,
+    "strict": 1,
+    "strong": 2,
+    "structure": 1,
+    "substantial": 1,
+    "substantially": 1,
+    "success": 1,
+    "such": 2,
+    "supplier": 1,
+    "suppliers": 1,
+    "supply": 3,
+    "support": 2,
+    "supporting": 1,
+    "surged": 1,
+    "sustainable": 1,
+    "systems": 4,
+    "take": 1,
+    "tarek": 1,
+    "tcv": 2,
+    "teams": 1,
+    "technology": 4,
+    "telecom": 1,
+    "terabytes": 1,
+    "term": 2,
+    "terms": 1,
+    "territory": 1,
+    "than": 4,
+    "thank": 3,
+    "that": 15,
+    "that's": 1,
+    "the": 56,
+    "their": 29,
+    "them": 2,
+    "themselves": 1,
+    "these": 2,
+    "they": 2,
+    "they've": 1,
+    "third": 2,
+    "this": 18,
+    "through": 1,
+    "throughout": 1,
+    "tier": 1,
+    "tight": 1,
+    "time": 4,
+    "timeframes": 1,
+    "to": 66,
+    "today": 1,
+    "too": 1,
+    "top": 3,
+    "total": 3,
+    "traction": 1,
+    "training": 1,
+    "transacting": 1,
+    "transforming": 1,
+    "trial": 1,
+    "trust": 1,
+    "trusting": 1,
+    "truth": 1,
+    "turn": 1,
+    "unacceptable": 1,
+    "unambiguous": 1,
+    "underlying": 1,
+    "underpin": 1,
+    "unified": 1,
+    "unifies": 1,
+    "unique": 1,
+    "uniquely": 1,
+    "university": 1,
+    "unstructured": 1,
+    "up": 1,
+    "upcoming": 1,
+    "upgrades": 1,
+    "us": 7,
+    "use": 1,
+    "useful": 1,
+    "user": 1,
+    "validated": 1,
+    "value": 3,
+    "vcf": 1,
+    "very": 2,
+    "virtualization": 4,
+    "vision": 1,
+    "vm": 1,
+    "vmware": 3,
+    "volume": 1,
+    "want": 1,
+    "was": 3,
+    "ways": 1,
+    "we": 29,
+    "we're": 1,
+    "week": 1,
+    "welcome": 1,
+    "well": 3,
+    "western": 1,
+    "what's": 1,
+    "where": 2,
+    "which": 4,
+    "while": 8,
+    "whole": 1,
+    "why": 3,
+    "wide": 1,
+    "will": 10,
+    "win": 3,
+    "with": 20,
+    "without": 2,
+    "workloads": 1,
+    "world": 1,
+    "year": 14,
+    "years": 1,
+    "yet": 1,
+    "you": 4,
+    "your": 1
+   },
+   "date": "2026-08-26",
+   "entries": {
+    "a": [
+     8,
+     11,
+     15,
+     15,
+     15,
+     19,
+     19
+    ],
+    "accelerated": [
+     20
+    ],
+    "accuracy": [
+     16
+    ],
+    "accurate": [
+     15,
+     15
+    ],
+    "across": [
+     3,
+     11
+    ],
+    "advanced": [
+     18,
+     24
+    ],
+    "advantages": [
+     5
+    ],
+    "affect": [
+     12
+    ],
+    "afternoon": [
+     1
+    ],
+    "agent": [
+     19
+    ],
+    "agreement": [
+     23
+    ],
+    "ai": [
+     15,
+     18,
+     20,
+     20,
+     21
+    ],
+    "all": [
+     3
+    ],
+    "allows": [
+     7
+    ],
+    "alongside": [
+     11
+    ],
+    "an": [
+     15,
+     20
+    ],
+    "analysis": [
+     20
+    ],
+    "and": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     7,
+     9,
+     9,
+     11,
+     11,
+     11,
+     12,
+     12,
+     13,
+     13,
+     13,
+     13
+    ],
+    "answer": [
+     15
+    ],
+    "as": [
+     19,
+     22
+    ],
+    "at": [
+     13
+    ],
+    "automate": [
+     20
+    ],
+    "backed": [
+     10
+    ],
+    "bank": [
+     19
+    ],
+    "base": [
+     20
+    ],
+    "based": [
+     3
+    ],
+    "be": [
+     15
+    ],
+    "become": [
+     11
+    ],
+    "begin": [
+     23
+    ],
+    "benefit": [
+     7
+    ],
+    "beyond": [
+     23
+    ],
+    "black": [
+     25
+    ],
+    "block": [
+     7
+    ],
+    "both": [
+     13
+    ],
+    "box": [
+     25
+    ],
+    "broad": [
+     3
+    ],
+    "build": [
+     4
+    ],
+    "burden": [
+     13
+    ],
+    "business": [
+     3,
+     16
+    ],
+    "businesses": [
+     16
+    ],
+    "by": [
+     26
+    ],
+    "call": [
+     1
+    ],
+    "can": [
+     9,
+     15
+    ],
+    "capability": [
+     7
+    ],
+    "carried": [
+     4
+    ],
+    "changes": [
+     17
+    ],
+    "channel": [
+     13
+    ],
+    "chose": [
+     18
+    ],
+    "co": [
+     17
+    ],
+    "commitment": [
+     26
+    ],
+    "commitments": [
+     13
+    ],
+    "company": [
+     5
+    ],
+    "competitor": [
+     11
+    ],
+    "complex": [
+     12
+    ],
+    "complexity": [
+     25
+    ],
+    "component": [
+     13
+    ],
+    "considered": [
+     15
+    ],
+    "consistent": [
+     17
+    ],
+    "continued": [
+     4,
+     26
+    ],
+    "continues": [
+     12,
+     21
+    ],
+    "cooling": [
+     25
+    ],
+    "cost": [
+     8,
+     12
+    ],
+    "costs": [
+     13
+    ],
+    "court": [
+     20,
+     20,
+     20
+    ],
+    "current": [
+     5
+    ],
+    "customer": [
+     8
+    ],
+    "customers": [
+     7,
+     9,
+     13,
+     13,
+     17,
+     22
+    ],
+    "data": [
+     14,
+     17,
+     20,
+     20,
+     20
+    ],
+    "decades": [
+     20
+    ],
+    "decision": [
+     13
+    ],
+    "defined": [
+     24
+    ],
+    "delivering": [
+     9,
+     25
+    ],
+    "demand": [
+     12
+    ],
+    "density": [
+     25
+    ],
+    "deploy": [
+     17
+    ],
+    "deployment": [
+     19
+    ],
+    "designed": [
+     21
+    ],
+    "developed": [
+     11
+    ],
+    "development": [
+     19
+    ],
+    "diagnose": [
+     17
+    ],
+    "directflash": [
+     7,
+     24
+    ],
+    "disruptive": [
+     7,
+     8
+    ],
+    "drives": [
+     7
+    ],
+    "earnings": [
+     1
+    ],
+    "easier": [
+     17
+    ],
+    "efficient": [
+     24
+    ],
+    "electronics": [
+     18
+    ],
+    "embraced": [
+     10
+    ],
+    "end": [
+     13
+    ],
+    "engine": [
+     11
+    ],
+    "enjoys": [
+     8
+    ],
+    "enterprise": [
+     11
+    ],
+    "environment": [
+     5
+    ],
+    "environments": [
+     19
+    ],
+    "escalate": [
+     13
+    ],
+    "estates": [
+     22
+    ],
+    "europe": [
+     8
+    ],
+    "evergreen": [
+     7,
+     10
+    ],
+    "everpure": [
+     1,
+     9
+    ],
+    "everyone": [
+     1
+    ],
+    "evolve": [
+     22
+    ],
+    "exa": [
+     21
+    ],
+    "example": [
+     8
+    ],
+    "existing": [
+     13
+    ],
+    "expand": [
+     21
+    ],
+    "file": [
+     7
+    ],
+    "financial": [
+     16
+    ],
+    "fiscal": [
+     1
+    ],
+    "flash": [
+     24
+    ],
+    "flashblade": [
+     18,
+     19,
+     21
+    ],
+    "fleet": [
+     17
+    ],
+    "flexible": [
+     8
+    ],
+    "for": [
+     8,
+     21,
+     25
+    ],
+    "forever": [
+     7
+    ],
+    "fourth": [
+     6
+    ],
+    "fragmented": [
+     14
+    ],
+    "from": [
+     4,
+     7
+    ],
+    "fully": [
+     10
+    ],
+    "fy28": [
+     23
+    ],
+    "generate": [
+     23
+    ],
+    "geographies": [
+     3
+    ],
+    "global": [
+     17,
+     19
+    ],
+    "globally": [
+     11
+    ],
+    "go": [
+     11
+    ],
+    "good": [
+     1
+    ],
+    "government": [
+     11
+    ],
+    "gpu": [
+     19
+    ],
+    "great": [
+     15
+    ],
+    "gross": [
+     13
+    ],
+    "grow": [
+     7
+    ],
+    "growing": [
+     6,
+     22
+    ],
+    "growth": [
+     3
+    ],
+    "hardware": [
+     8,
+     24
+    ],
+    "has": [
+     13
+    ],
+    "have": [
+     11
+    ],
+    "hdds": [
+     25
+    ],
+    "high": [
+     9
+    ],
+    "highest": [
+     21
+    ],
+    "honor": [
+     13
+    ],
+    "hours": [
+     20
+    ],
+    "how": [
+     5
+    ],
+    "hundreds": [
+     20
+    ],
+    "hyperscale": [
+     6
+    ],
+    "hyperscalers": [
+     25
+    ],
+    "in": [
+     12,
+     12,
+     16,
+     20,
+     22,
+     23
+    ],
+    "inconsistent": [
+     14
+    ],
+    "incorrect": [
+     14
+    ],
+    "increase": [
+     12
+    ],
+    "industry": [
+     12,
+     25
+    ],
+    "infrastructure": [
+     9
+    ],
+    "initiatives": [
+     18
+    ],
+    "innovation": [
+     11
+    ],
+    "internal": [
+     19
+    ],
+    "into": [
+     20
+    ],
+    "invoice": [
+     15
+    ],
+    "is": [
+     15,
+     24,
+     26
+    ],
+    "issues": [
+     17
+    ],
+    "it": [
+     7
+    ],
+    "its": [
+     7,
+     18
+    ],
+    "knowledge": [
+     20
+    ],
+    "labor": [
+     20
+    ],
+    "large": [
+     21
+    ],
+    "largest": [
+     8,
+     20
+    ],
+    "leading": [
+     25
+    ],
+    "leads": [
+     14
+    ],
+    "less": [
+     9
+    ],
+    "lets": [
+     17,
+     25
+    ],
+    "lifecycle": [
+     9
+    ],
+    "lifetime": [
+     25
+    ],
+    "long": [
+     8
+    ],
+    "lots": [
+     14
+    ],
+    "lower": [
+     13
+    ],
+    "lowering": [
+     8
+    ],
+    "made": [
+     26
+    ],
+    "maintaining": [
+     9
+    ],
+    "major": [
+     19
+    ],
+    "making": [
+     17
+    ],
+    "management": [
+     17,
+     24
+    ],
+    "managing": [
+     9
+    ],
+    "manual": [
+     14
+    ],
+    "margin": [
+     13
+    ],
+    "market": [
+     11,
+     11
+    ],
+    "markets": [
+     11
+    ],
+    "media": [
+     24
+    ],
+    "meeting": [
+     20
+    ],
+    "mid": [
+     11
+    ],
+    "million": [
+     2
+    ],
+    "model": [
+     10
+    ],
+    "momentum": [
+     4
+    ],
+    "monitor": [
+     17
+    ],
+    "more": [
+     9,
+     17,
+     17
+    ],
+    "moving": [
+     25
+    ],
+    "multiple": [
+     12
+    ],
+    "needs": [
+     21
+    ],
+    "never": [
+     7
+    ],
+    "newly": [
+     23
+    ],
+    "non": [
+     7
+    ],
+    "object": [
+     7
+    ],
+    "of": [
+     8,
+     8,
+     13,
+     14,
+     20,
+     20,
+     20,
+     20,
+     20,
+     20,
+     21,
+     25
+    ],
+    "old": [
+     7
+    ],
+    "on": [
+     2
+    ],
+    "one": [
+     8,
+     10,
+     20
+    ],
+    "operate": [
+     13
+    ],
+    "operating": [
+     2
+    ],
+    "operations": [
+     16
+    ],
+    "operators": [
+     8
+    ],
+    "opportunity": [
+     6
+    ],
+    "optimize": [
+     25
+    ],
+    "our": [
+     5,
+     6,
+     7,
+     9,
+     9,
+     10,
+     11,
+     12,
+     13,
+     13,
+     13,
+     13,
+     13,
+     17,
+     22
+    ],
+    "out": [
+     25
+    ],
+    "over": [
+     4
+    ],
+    "ownership": [
+     8
+    ],
+    "paired": [
+     24
+    ],
+    "partners": [
+     13
+    ],
+    "past": [
+     13
+    ],
+    "paul": [
+     0
+    ],
+    "performance": [
+     21,
+     24
+    ],
+    "petabytes": [
+     20
+    ],
+    "pilot": [
+     17
+    ],
+    "possible": [
+     26
+    ],
+    "power": [
+     25
+    ],
+    "pricing": [
+     5
+    ],
+    "privacy": [
+     20
+    ],
+    "product": [
+     13
+    ],
+    "products": [
+     3,
+     7
+    ],
+    "profit": [
+     2
+    ],
+    "promises": [
+     7
+    ],
+    "prompt": [
+     15
+    ],
+    "providing": [
+     24
+    ],
+    "pure1": [
+     17
+    ],
+    "purity": [
+     7
+    ],
+    "q1": [
+     4
+    ],
+    "q2": [
+     1
+    ],
+    "quality": [
+     24
+    ],
+    "quarter": [
+     4,
+     18
+    ],
+    "range": [
+     13
+    ],
+    "rapid": [
+     12
+    ],
+    "ready": [
+     20
+    ],
+    "reconciliation": [
+     14
+    ],
+    "records": [
+     20
+    ],
+    "refreshes": [
+     8
+    ],
+    "relationships": [
+     13
+    ],
+    "reliability": [
+     24
+    ],
+    "reliable": [
+     9,
+     24
+    ],
+    "require": [
+     16
+    ],
+    "requirements": [
+     20
+    ],
+    "research": [
+     18
+    ],
+    "resiliency": [
+     24
+    ],
+    "result": [
+     15
+    ],
+    "results": [
+     14
+    ],
+    "revenue": [
+     23
+    ],
+    "s": [
+     18,
+     19
+    ],
+    "sales": [
+     4
+    ],
+    "samsung": [
+     18
+    ],
+    "saving": [
+     20
+    ],
+    "scale": [
+     21
+    ],
+    "scaled": [
+     11
+    ],
+    "scaling": [
+     8
+    ],
+    "search": [
+     15
+    ],
+    "second": [
+     5
+    ],
+    "secure": [
+     17
+    ],
+    "see": [
+     22
+    ],
+    "segments": [
+     3
+    ],
+    "selected": [
+     19,
+     20
+    ],
+    "semiconductor": [
+     12
+    ],
+    "service": [
+     19
+    ],
+    "services": [
+     9
+    ],
+    "share": [
+     13
+    ],
+    "signed": [
+     23
+    ],
+    "significant": [
+     23
+    ],
+    "significantly": [
+     8
+    ],
+    "sla": [
+     10
+    ],
+    "software": [
+     24,
+     24
+    ],
+    "solidified": [
+     13
+    ],
+    "solutions": [
+     22
+    ],
+    "specialized": [
+     20
+    ],
+    "spend": [
+     9
+    ],
+    "ssds": [
+     25
+    ],
+    "standardize": [
+     19
+    ],
+    "standing": [
+     8
+    ],
+    "storage": [
+     9,
+     25
+    ],
+    "strategy": [
+     11
+    ],
+    "stream": [
+     20
+    ],
+    "streamline": [
+     20
+    ],
+    "streamlined": [
+     24
+    ],
+    "strict": [
+     20
+    ],
+    "strong": [
+     4
+    ],
+    "success": [
+     26
+    ],
+    "support": [
+     18
+    ],
+    "surged": [
+     2
+    ],
+    "systems": [
+     20
+    ],
+    "teams": [
+     9
+    ],
+    "technology": [
+     5
+    ],
+    "telecom": [
+     8
+    ],
+    "thank": [
+     0,
+     26
+    ],
+    "that": [
+     7,
+     7,
+     11
+    ],
+    "that's": [
+     10
+    ],
+    "the": [
+     4,
+     5,
+     9,
+     12,
+     13,
+     13,
+     20,
+     20,
+     20,
+     21,
+     25
+    ],
+    "their": [
+     8,
+     16,
+     19,
+     22,
+     25
+    ],
+    "they've": [
+     10
+    ],
+    "this": [
+     18,
+     23
+    ],
+    "throughout": [
+     4
+    ],
+    "tier": [
+     11
+    ],
+    "time": [
+     9,
+     9
+    ],
+    "to": [
+     1,
+     2,
+     4,
+     7,
+     9,
+     11,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "top": [
+     11
+    ],
+    "total": [
+     8
+    ],
+    "traction": [
+     22
+    ],
+    "transforming": [
+     20
+    ],
+    "trial": [
+     20
+    ],
+    "trust": [
+     26
+    ],
+    "unacceptable": [
+     15
+    ],
+    "underlying": [
+     9
+    ],
+    "unifies": [
+     7
+    ],
+    "unique": [
+     7
+    ],
+    "unstructured": [
+     20
+    ],
+    "upgrades": [
+     7
+    ],
+    "us": [
+     20
+    ],
+    "value": [
+     9
+    ],
+    "virtualization": [
+     22
+    ],
+    "vm": [
+     22
+    ],
+    "was": [
+     3
+    ],
+    "ways": [
+     12
+    ],
+    "we": [
+     11,
+     22
+    ],
+    "welcome": [
+     1
+    ],
+    "while": [
+     13,
+     15,
+     20
+    ],
+    "why": [
+     10
+    ],
+    "wide": [
+     17
+    ],
+    "will": [
+     23
+    ],
+    "with": [
+     7,
+     9,
+     13,
+     13,
+     24
+    ],
+    "without": [
+     8
+    ],
+    "workloads": [
+     25
+    ],
+    "year": [
+     2,
+     2
+    ],
+    "you": [
+     0,
+     26
+    ],
+    "your": [
+     26
+    ]
+   },
+   "excerpts": [
+    "Thank you Paul.",
+    "Good afternoon everyone and welcome to Everpure’s Q2 fiscal 2027 earnings call.",
+    "Operating profit surged 77% to $230 million year on year.",
+    "Growth was broad based across all geographies, products and business segments.",
+    "Strong sales momentum carried over from Q1 and continued to build throughout the quarter.",
+    "Second, how the current pricing environment advantages our technology and company.",
+    "And fourth, our growing hyperscale opportunity.",
+    "Purity unifies block, file, and object, it drives DirectFlash, and allows our customers to benefit from products that never grow old, with its unique Evergreen capability that promises non-disruptive upgrades forever.",
+    "For example, one of Europe’s largest telecom operators, a long-standing customer, enjoys flexible scaling without disruptive hardware refreshes, significantly lowering their total cost of ownership.",
+    "With Everpure managing the underlying infrastructure and lifecycle, our teams can spend less time maintaining storage and more time delivering reliable, high-value services to our customers”.",
+    "That’s why they’ve fully embraced our SLA backed Evergreen//One model.",
+    "Alongside that innovation, we have scaled and developed our go-to-market engine and strategy to become a top-tier competitor across mid-market, enterprise and government markets globally.",
+    "The rapid increase in semiconductor demand and cost continues to affect our industry in multiple and complex ways.",
+    "And our decision to honor our past and existing commitments, share the burden with our customers, and operate at the lower end of our product gross margin range while component costs escalate, has solidified our relationships with both customers and channel partners.",
+    "Fragmented and inconsistent data leads to lots of manual reconciliation and incorrect results.",
+    "While a 95% accurate answer to an AI search prompt can be considered a great result, a 95% accurate invoice is unacceptable.",
+    "Businesses require 100% accuracy in their financial and business operations.",
+    "Our Pure1 co-pilot lets customers monitor, diagnose issues, and deploy changes fleet-wide making global data management easier, more consistent, and more secure.",
+    "This quarter, Samsung Electronics chose FlashBlade//S to support its advanced AI and research initiatives.",
+    "And a major global bank selected FlashBlade//S to standardize their internal GPU-as-a-service, and agent development and deployment environments.",
+    "One of the largest trial court systems in the US selected Data Stream to streamline and automate AI-accelerated analysis of petabytes of unstructured data, saving hundreds of hours of specialized labor, and transforming decades of court records into an AI-ready knowledge base while meeting the court’s strict data privacy requirements.",
+    "FlashBlade//EXA, designed for the highest-performance needs of large-scale AI, continues to expand.",
+    "We see growing traction in our virtualization solutions as customers evolve their VM estates.",
+    "This newly signed agreement will begin to generate significant revenue in FY28 and beyond.",
+    "DirectFlash is software-defined flash: streamlined, efficient, advanced software providing media management, resiliency, performance, quality and reliability, paired with reliable hardware.",
+    "Moving the complexity out of black-box SSDs and HDDs lets hyperscalers optimize storage for their workloads, delivering industry-leading density, power, cooling, and lifetime.",
+    "Our continued success is made possible by your trust and commitment, thank you"
+   ],
+   "id": "p-q2fy27-prepared-remarks",
+   "msent": {
+    "100m": 1,
+    "1touch": 2,
+    "a": 21,
+    "ability": 3,
+    "about": 1,
+    "above": 1,
+    "accelerate": 3,
+    "accelerated": 3,
+    "acceleration": 3,
+    "access": 2,
+    "accuracy": 2,
+    "accurate": 1,
+    "achieved": 1,
+    "acquisition": 2,
+    "across": 5,
+    "additionally": 1,
+    "address": 1,
+    "adjusting": 1,
+    "adopting": 1,
+    "adoption": 1,
+    "advance": 1,
+    "advanced": 3,
+    "advancements": 1,
+    "advantages": 3,
+    "affect": 1,
+    "afternoon": 1,
+    "again": 1,
+    "agent": 1,
+    "agreement": 2,
+    "ahead": 1,
+    "ai": 18,
+    "all": 4,
+    "allow": 1,
+    "allows": 3,
+    "alone": 1,
+    "alongside": 1,
+    "also": 1,
+    "alternative": 1,
+    "am": 1,
+    "amid": 1,
+    "an": 5,
+    "analysis": 1,
+    "analyst": 1,
+    "analysts": 1,
+    "and": 63,
+    "announced": 1,
+    "another": 2,
+    "answer": 1,
+    "any": 1,
+    "appreciate": 1,
+    "apps": 1,
+    "architecture": 1,
+    "architectures": 1,
+    "are": 5,
+    "area": 2,
+    "areas": 3,
+    "as": 18,
+    "at": 4,
+    "attachments": 1,
+    "attributed": 1,
+    "august": 1,
+    "australia": 1,
+    "automate": 1,
+    "automatically": 1,
+    "availability": 1,
+    "available": 1,
+    "avenues": 1,
+    "backed": 1,
+    "backup": 1,
+    "bank": 1,
+    "base": 1,
+    "based": 3,
+    "be": 6,
+    "because": 2,
+    "become": 1,
+    "been": 1,
+    "before": 1,
+    "begin": 1,
+    "believe": 3,
+    "benefit": 1,
+    "between": 3,
+    "beyond": 4,
+    "billion": 2,
+    "black": 1,
+    "block": 1,
+    "both": 6,
+    "box": 1,
+    "brand": 1,
+    "breakout": 1,
+    "broad": 1,
+    "brought": 1,
+    "build": 2,
+    "building": 1,
+    "built": 1,
+    "burden": 1,
+    "business": 4,
+    "businesses": 1,
+    "by": 2,
+    "calendar": 1,
+    "call": 2,
+    "can": 4,
+    "capabilities": 3,
+    "capability": 2,
+    "capacity": 3,
+    "carried": 1,
+    "cause": 1,
+    "change": 1,
+    "changes": 1,
+    "channel": 1,
+    "charts": 1,
+    "chose": 2,
+    "chosen": 1,
+    "clara": 1,
+    "close": 1,
+    "cloud": 4,
+    "co": 1,
+    "combination": 2,
+    "commitment": 1,
+    "commitments": 2,
+    "committed": 1,
+    "company": 3,
+    "competitor": 1,
+    "competitors": 2,
+    "complex": 1,
+    "complexity": 1,
+    "comply": 1,
+    "component": 1,
+    "computing": 1,
+    "concept": 1,
+    "conference": 1,
+    "conferences": 1,
+    "confidence": 2,
+    "confident": 1,
+    "configured": 1,
+    "confirms": 1,
+    "consider": 1,
+    "considered": 1,
+    "consistent": 1,
+    "consistently": 1,
+    "consolidated": 1,
+    "consumption": 1,
+    "context": 3,
+    "contextualize": 1,
+    "continue": 5,
+    "continued": 3,
+    "continues": 4,
+    "contract": 1,
+    "control": 3,
+    "cooling": 1,
+    "core": 5,
+    "cost": 3,
+    "costs": 3,
+    "court": 1,
+    "current": 3,
+    "customer": 6,
+    "customers": 17,
+    "data": 23,
+    "decade": 2,
+    "decades": 1,
+    "decision": 1,
+    "defined": 1,
+    "deliver": 1,
+    "delivering": 2,
+    "demand": 6,
+    "demands": 1,
+    "density": 1,
+    "depends": 1,
+    "deploy": 1,
+    "deployment": 1,
+    "design": 1,
+    "designed": 1,
+    "details": 2,
+    "developed": 1,
+    "development": 1,
+    "diagnose": 1,
+    "different": 1,
+    "dilutes": 1,
+    "directflash": 5,
+    "directly": 1,
+    "discover": 1,
+    "discrepancies": 1,
+    "discussed": 1,
+    "disruptive": 2,
+    "distributed": 1,
+    "dollar": 1,
+    "dollars": 1,
+    "drives": 1,
+    "driving": 1,
+    "during": 1,
+    "dynamic": 1,
+    "earnings": 1,
+    "easier": 1,
+    "eb": 1,
+    "economics": 1,
+    "ecosystem": 1,
+    "effect": 1,
+    "efficient": 1,
+    "efficiently": 1,
+    "electronics": 1,
+    "elements": 1,
+    "embraced": 1,
+    "employees": 1,
+    "enable": 1,
+    "enabled": 1,
+    "enables": 1,
+    "enabling": 2,
+    "end": 1,
+    "endure": 1,
+    "engine": 1,
+    "enjoying": 1,
+    "enjoys": 1,
+    "entered": 1,
+    "enterprise": 9,
+    "enterprises": 2,
+    "environment": 5,
+    "environments": 4,
+    "era": 1,
+    "error": 1,
+    "escalate": 1,
+    "estates": 1,
+    "estimates": 1,
+    "europe": 1,
+    "even": 2,
+    "ever": 1,
+    "evergreen": 8,
+    "everpure": 17,
+    "every": 3,
+    "everyone": 1,
+    "everything": 1,
+    "evolve": 2,
+    "exa": 4,
+    "exabytes": 1,
+    "example": 2,
+    "exceeded": 1,
+    "exceeding": 1,
+    "excess": 1,
+    "exciting": 1,
+    "execution": 1,
+    "executive": 1,
+    "existing": 1,
+    "expand": 2,
+    "expanded": 3,
+    "expanding": 2,
+    "expansion": 1,
+    "expect": 2,
+    "expectations": 2,
+    "explicitly": 1,
+    "extend": 1,
+    "facing": 1,
+    "factors": 1,
+    "far": 3,
+    "fast": 1,
+    "faster": 1,
+    "feel": 1,
+    "file": 1,
+    "financial": 2,
+    "find": 2,
+    "first": 5,
+    "fiscal": 2,
+    "flash": 3,
+    "flasharray": 1,
+    "flashblade": 6,
+    "fleet": 2,
+    "flexibility": 1,
+    "flexible": 1,
+    "focusing": 1,
+    "footprint": 2,
+    "for": 26,
+    "forever": 1,
+    "forward": 1,
+    "foundation": 2,
+    "four": 1,
+    "fourth": 1,
+    "fragmented": 2,
+    "from": 7,
+    "full": 2,
+    "fully": 2,
+    "furthest": 1,
+    "fusion": 1,
+    "future": 3,
+    "fy27": 1,
+    "fy28": 2,
+    "gain": 1,
+    "gains": 1,
+    "gartner": 1,
+    "general": 1,
+    "generate": 1,
+    "geographies": 1,
+    "gives": 4,
+    "global": 5,
+    "globally": 1,
+    "go": 1,
+    "going": 1,
+    "good": 1,
+    "governed": 1,
+    "government": 1,
+    "gpu": 2,
+    "great": 1,
+    "greater": 2,
+    "gross": 1,
+    "groundbreaking": 1,
+    "grow": 3,
+    "growing": 6,
+    "grown": 2,
+    "growth": 16,
+    "guidance": 3,
+    "hardware": 2,
+    "has": 7,
+    "have": 9,
+    "hdds": 1,
+    "help": 1,
+    "here": 1,
+    "high": 3,
+    "higher": 2,
+    "highest": 4,
+    "honor": 1,
+    "hours": 1,
+    "how": 2,
+    "hundreds": 1,
+    "hyperscale": 4,
+    "hyperscaler": 3,
+    "hyperscalers": 2,
+    "i": 3,
+    "identifies": 1,
+    "immediately": 1,
+    "implies": 1,
+    "importantly": 1,
+    "in": 29,
+    "includes": 1,
+    "including": 1,
+    "inconsistent": 1,
+    "incorporated": 1,
+    "incorrect": 1,
+    "increase": 2,
+    "increases": 2,
+    "increasing": 1,
+    "increasingly": 1,
+    "indicates": 1,
+    "individual": 1,
+    "industry": 4,
+    "infrastructure": 2,
+    "initiatives": 1,
+    "innovation": 2,
+    "insight": 1,
+    "intelligence": 3,
+    "interest": 1,
+    "internal": 2,
+    "international": 2,
+    "into": 8,
+    "introduced": 1,
+    "invested": 1,
+    "investment": 1,
+    "investors": 1,
+    "invoice": 1,
+    "is": 14,
+    "issue": 1,
+    "issues": 1,
+    "it": 10,
+    "its": 6,
+    "june": 1,
+    "just": 1,
+    "key": 1,
+    "knowledge": 1,
+    "labor": 2,
+    "large": 4,
+    "largest": 3,
+    "last": 4,
+    "leader": 1,
+    "leadership": 1,
+    "leading": 1,
+    "leads": 1,
+    "legacy": 1,
+    "less": 2,
+    "let's": 2,
+    "lets": 3,
+    "lifecycle": 1,
+    "lifetime": 1,
+    "line": 1,
+    "long": 2,
+    "look": 2,
+    "lots": 1,
+    "lower": 2,
+    "lowering": 1,
+    "macro": 1,
+    "made": 2,
+    "magic": 1,
+    "maintaining": 1,
+    "major": 2,
+    "make": 3,
+    "making": 1,
+    "manage": 2,
+    "managed": 2,
+    "management": 4,
+    "managing": 2,
+    "manual": 1,
+    "many": 1,
+    "margin": 1,
+    "market": 9,
+    "markets": 1,
+    "massive": 1,
+    "media": 1,
+    "meet": 2,
+    "meeting": 2,
+    "metrics": 1,
+    "mid": 1,
+    "million": 1,
+    "model": 2,
+    "modern": 2,
+    "momentum": 3,
+    "monitor": 1,
+    "more": 5,
+    "most": 1,
+    "moving": 1,
+    "multiple": 2,
+    "named": 1,
+    "namely": 1,
+    "near": 1,
+    "need": 1,
+    "needs": 4,
+    "neoclouds": 2,
+    "never": 1,
+    "new": 4,
+    "newly": 1,
+    "next": 2,
+    "non": 2,
+    "now": 7,
+    "numbers": 1,
+    "nutanix": 2,
+    "nvidia": 1,
+    "object": 1,
+    "of": 32,
+    "off": 1,
+    "offered": 1,
+    "offering": 1,
+    "offerings": 1,
+    "old": 1,
+    "on": 13,
+    "once": 1,
+    "one": 9,
+    "only": 1,
+    "opening": 1,
+    "openshift": 1,
+    "operate": 3,
+    "operating": 1,
+    "operational": 1,
+    "operations": 3,
+    "operators": 1,
+    "opportunity": 3,
+    "optimize": 2,
+    "or": 1,
+    "order": 2,
+    "organization": 1,
+    "organizations": 1,
+    "other": 1,
+    "others": 1,
+    "our": 49,
+    "out": 2,
+    "outsized": 1,
+    "outstanding": 1,
+    "over": 7,
+    "own": 4,
+    "ownership": 1,
+    "paired": 1,
+    "particularly": 1,
+    "parties": 1,
+    "partner": 1,
+    "partners": 3,
+    "past": 1,
+    "paul": 1,
+    "paying": 1,
+    "per": 1,
+    "performance": 7,
+    "petabytes": 1,
+    "pilot": 1,
+    "platform": 1,
+    "platforms": 1,
+    "pleased": 1,
+    "point": 1,
+    "policies": 1,
+    "policy": 1,
+    "portfolio": 1,
+    "portworx": 1,
+    "position": 1,
+    "positioning": 1,
+    "posits": 1,
+    "possible": 1,
+    "power": 1,
+    "powering": 1,
+    "predictable": 1,
+    "predicted": 1,
+    "previous": 1,
+    "price": 2,
+    "prices": 1,
+    "pricing": 2,
+    "primacy": 4,
+    "privacy": 1,
+    "product": 7,
+    "products": 6,
+    "profit": 1,
+    "progress": 2,
+    "promises": 1,
+    "prompt": 1,
+    "proposition": 1,
+    "prospect": 1,
+    "prospects": 1,
+    "provide": 2,
+    "provider": 3,
+    "providers": 1,
+    "provides": 1,
+    "providing": 3,
+    "pure1": 1,
+    "purity": 2,
+    "puts": 1,
+    "q1": 1,
+    "q2": 2,
+    "q3": 1,
+    "q4": 2,
+    "quadrant": 1,
+    "qualify": 1,
+    "quality": 1,
+    "quarter": 6,
+    "quarters": 2,
+    "range": 3,
+    "rapid": 1,
+    "rate": 5,
+    "rates": 1,
+    "rather": 2,
+    "rationalize": 1,
+    "re": 1,
+    "ready": 3,
+    "reasons": 1,
+    "recognized": 1,
+    "reconciliation": 1,
+    "record": 1,
+    "records": 1,
+    "redhat": 2,
+    "refer": 1,
+    "referring": 1,
+    "refreshes": 1,
+    "relationships": 1,
+    "released": 1,
+    "reliability": 1,
+    "reliable": 2,
+    "reliably": 1,
+    "remainder": 1,
+    "remarkable": 1,
+    "reported": 1,
+    "reporting": 1,
+    "representing": 1,
+    "reputation": 1,
+    "require": 1,
+    "requirements": 1,
+    "research": 1,
+    "resiliency": 1,
+    "resilient": 1,
+    "result": 1,
+    "results": 1,
+    "revenue": 7,
+    "revised": 1,
+    "rise": 1,
+    "run": 3,
+    "s": 3,
+    "sales": 7,
+    "samsung": 1,
+    "santa": 1,
+    "saving": 1,
+    "saw": 2,
+    "scalability": 1,
+    "scale": 4,
+    "scaled": 1,
+    "scales": 1,
+    "scaling": 1,
+    "scheduled": 1,
+    "search": 1,
+    "second": 3,
+    "secure": 1,
+    "see": 2,
+    "seen": 2,
+    "segment": 1,
+    "segments": 1,
+    "selected": 3,
+    "selective": 1,
+    "semantics": 1,
+    "semiconductor": 1,
+    "senior": 1,
+    "september": 1,
+    "serve": 1,
+    "service": 7,
+    "services": 3,
+    "set": 1,
+    "sets": 1,
+    "share": 5,
+    "shared": 1,
+    "signals": 1,
+    "signed": 3,
+    "significant": 1,
+    "significantly": 2,
+    "similarities": 1,
+    "simplifying": 1,
+    "since": 2,
+    "single": 1,
+    "sla": 1,
+    "smallest": 1,
+    "software": 2,
+    "solidified": 1,
+    "solution": 1,
+    "solutions": 4,
+    "some": 3,
+    "sources": 2,
+    "sovereignty": 1,
+    "speak": 1,
+    "specialized": 1,
+    "specific": 1,
+    "spectrum": 1,
+    "spend": 1,
+    "spent": 1,
+    "ssds": 1,
+    "standardize": 1,
+    "standing": 1,
+    "starting": 1,
+    "stated": 1,
+    "steadily": 1,
+    "steady": 2,
+    "step": 1,
+    "stn": 1,
+    "storage": 11,
+    "strategically": 1,
+    "strategy": 3,
+    "stream": 2,
+    "streamline": 2,
+    "streamlined": 1,
+    "strength": 2,
+    "strict": 1,
+    "strong": 2,
+    "structure": 1,
+    "substantial": 1,
+    "substantially": 1,
+    "success": 1,
+    "such": 2,
+    "supplier": 1,
+    "suppliers": 1,
+    "supply": 3,
+    "support": 2,
+    "supporting": 1,
+    "surged": 1,
+    "sustainable": 1,
+    "systems": 4,
+    "take": 1,
+    "tarek": 1,
+    "tcv": 2,
+    "teams": 1,
+    "technology": 4,
+    "telecom": 1,
+    "terabytes": 1,
+    "term": 2,
+    "terms": 1,
+    "territory": 1,
+    "than": 4,
+    "thank": 3,
+    "that": 13,
+    "that's": 1,
+    "the": 38,
+    "their": 20,
+    "them": 2,
+    "themselves": 1,
+    "these": 2,
+    "they": 2,
+    "they've": 1,
+    "third": 2,
+    "this": 15,
+    "through": 1,
+    "throughout": 1,
+    "tier": 1,
+    "tight": 1,
+    "time": 3,
+    "timeframes": 1,
+    "to": 49,
+    "today": 1,
+    "too": 1,
+    "top": 3,
+    "total": 3,
+    "traction": 1,
+    "training": 1,
+    "transacting": 1,
+    "transforming": 1,
+    "trial": 1,
+    "trust": 1,
+    "trusting": 1,
+    "truth": 1,
+    "turn": 1,
+    "unacceptable": 1,
+    "unambiguous": 1,
+    "underlying": 1,
+    "underpin": 1,
+    "unified": 1,
+    "unifies": 1,
+    "unique": 1,
+    "uniquely": 1,
+    "university": 1,
+    "unstructured": 1,
+    "up": 1,
+    "upcoming": 1,
+    "upgrades": 1,
+    "us": 5,
+    "use": 1,
+    "useful": 1,
+    "user": 1,
+    "validated": 1,
+    "value": 3,
+    "vcf": 1,
+    "very": 2,
+    "virtualization": 3,
+    "vision": 1,
+    "vm": 1,
+    "vmware": 2,
+    "volume": 1,
+    "want": 1,
+    "was": 3,
+    "ways": 1,
+    "we": 24,
+    "we're": 1,
+    "week": 1,
+    "welcome": 1,
+    "well": 3,
+    "western": 1,
+    "what's": 1,
+    "where": 2,
+    "which": 4,
+    "while": 8,
+    "whole": 1,
+    "why": 3,
+    "wide": 1,
+    "will": 9,
+    "win": 3,
+    "with": 16,
+    "without": 2,
+    "workloads": 1,
+    "world": 1,
+    "year": 9,
+    "years": 1,
+    "yet": 1,
+    "you": 4,
+    "your": 1
+   },
+   "n_sentences": 90,
+   "source": "s21.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q2 FY2027 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2027/q2/Q2FY27-Prepared-Remarks.pdf",
+   "words": 2026
+  },
+  {
+   "counts": {
+    "1touch": 2,
+    "a": 11,
+    "ability": 2,
+    "above": 1,
+    "accelerate": 1,
+    "accelerated": 1,
+    "accelerating": 1,
+    "achieved": 1,
+    "acquisition": 1,
+    "across": 3,
+    "actions": 1,
+    "add": 1,
+    "adopt": 1,
+    "adoption": 1,
+    "advanced": 2,
+    "advancements": 1,
+    "advantages": 1,
+    "affected": 1,
+    "afternoon": 1,
+    "ai": 8,
+    "algorithmic": 1,
+    "all": 2,
+    "allows": 3,
+    "also": 3,
+    "american": 1,
+    "an": 2,
+    "analyst": 1,
+    "analytics": 1,
+    "and": 48,
+    "annually": 1,
+    "another": 2,
+    "any": 1,
+    "application": 2,
+    "applications": 1,
+    "appreciation": 1,
+    "april": 1,
+    "architectural": 1,
+    "architecture": 1,
+    "architectures": 1,
+    "are": 8,
+    "as": 20,
+    "asian": 1,
+    "associated": 1,
+    "at": 3,
+    "based": 4,
+    "be": 4,
+    "because": 1,
+    "been": 2,
+    "before": 1,
+    "begin": 1,
+    "beginning": 1,
+    "benefits": 4,
+    "better": 2,
+    "billion": 1,
+    "blend": 1,
+    "both": 2,
+    "bottom": 1,
+    "bridge": 1,
+    "broad": 1,
+    "broadly": 1,
+    "build": 3,
+    "building": 1,
+    "business": 2,
+    "businesses": 1,
+    "but": 3,
+    "by": 5,
+    "call": 2,
+    "capabilities": 2,
+    "cardconnect": 1,
+    "carefully": 1,
+    "catalogs": 1,
+    "centers": 1,
+    "certainty": 1,
+    "chain": 5,
+    "challenges": 1,
+    "challenging": 1,
+    "change": 1,
+    "channel": 1,
+    "choosing": 2,
+    "clara": 1,
+    "clear": 1,
+    "close": 1,
+    "closed": 1,
+    "cloud": 6,
+    "clouds": 2,
+    "collaboration": 1,
+    "commercial": 1,
+    "commitments": 1,
+    "compared": 1,
+    "competitive": 2,
+    "component": 3,
+    "comprehensively": 1,
+    "concern": 1,
+    "conference": 1,
+    "confidence": 3,
+    "consequently": 1,
+    "consistent": 1,
+    "contested": 1,
+    "continue": 2,
+    "continued": 3,
+    "continues": 2,
+    "contracts": 1,
+    "copies": 1,
+    "core": 1,
+    "cost": 3,
+    "costs": 6,
+    "created": 1,
+    "crisis": 5,
+    "current": 5,
+    "currently": 1,
+    "customer": 5,
+    "customers": 19,
+    "data": 15,
+    "day": 1,
+    "deals": 1,
+    "dedication": 1,
+    "degree": 1,
+    "delivers": 1,
+    "demand": 1,
+    "department": 1,
+    "details": 1,
+    "developing": 1,
+    "digits": 1,
+    "discussed": 1,
+    "displace": 1,
+    "double": 1,
+    "doubled": 2,
+    "driven": 2,
+    "due": 1,
+    "during": 2,
+    "dynamic": 1,
+    "e": 1,
+    "earlier": 1,
+    "earnings": 1,
+    "eclipsed": 1,
+    "efficiency": 1,
+    "employees": 2,
+    "enable": 2,
+    "enables": 2,
+    "end": 3,
+    "engineering": 1,
+    "enhanced": 2,
+    "enjoy": 1,
+    "enterprise": 6,
+    "entirely": 1,
+    "environment": 2,
+    "environments": 2,
+    "escalate": 1,
+    "etisalat": 1,
+    "even": 1,
+    "evergreen": 4,
+    "everpure": 7,
+    "everyone": 1,
+    "exa": 3,
+    "exceeded": 1,
+    "excellent": 1,
+    "expand": 2,
+    "expanding": 1,
+    "expansion": 1,
+    "expansions": 2,
+    "expect": 3,
+    "expectations": 1,
+    "expected": 1,
+    "explain": 1,
+    "explaining": 1,
+    "family": 1,
+    "far": 2,
+    "financial": 6,
+    "fintech": 1,
+    "firm": 1,
+    "fiscal": 2,
+    "fiserv": 1,
+    "flashblade": 4,
+    "flexibility": 2,
+    "for": 16,
+    "foresee": 1,
+    "formerly": 1,
+    "forward": 1,
+    "foundational": 1,
+    "from": 3,
+    "full": 3,
+    "further": 1,
+    "fusion": 3,
+    "gain": 1,
+    "gains": 1,
+    "gave": 1,
+    "geographies": 1,
+    "global": 3,
+    "good": 1,
+    "gpu": 2,
+    "gradual": 1,
+    "graphs": 1,
+    "great": 1,
+    "greater": 2,
+    "gross": 2,
+    "growth": 3,
+    "guidance": 2,
+    "half": 2,
+    "has": 7,
+    "have": 3,
+    "healthcare": 1,
+    "help": 2,
+    "here": 1,
+    "high": 2,
+    "higher": 1,
+    "highlighted": 1,
+    "highlights": 1,
+    "highperformance": 1,
+    "hold": 1,
+    "hyperscale": 5,
+    "i": 3,
+    "importance": 1,
+    "in": 25,
+    "include": 1,
+    "included": 1,
+    "including": 2,
+    "increase": 1,
+    "increased": 1,
+    "increases": 3,
+    "increasing": 1,
+    "increasingly": 1,
+    "industry": 1,
+    "infrastructure": 3,
+    "insatiable": 1,
+    "insight": 1,
+    "institution": 1,
+    "intensive": 1,
+    "intentions": 1,
+    "interest": 1,
+    "into": 2,
+    "investing": 1,
+    "investors": 1,
+    "is": 3,
+    "it": 3,
+    "its": 2,
+    "june": 1,
+    "kindled": 1,
+    "knowledge": 1,
+    "kubernetes": 1,
+    "large": 3,
+    "last": 3,
+    "later": 1,
+    "leading": 2,
+    "learning": 1,
+    "less": 1,
+    "letter": 2,
+    "lifetimes": 1,
+    "like": 1,
+    "likely": 1,
+    "line": 1,
+    "little": 1,
+    "logos": 1,
+    "long": 2,
+    "longer": 2,
+    "look": 1,
+    "lower": 3,
+    "machine": 1,
+    "macro": 1,
+    "make": 1,
+    "manage": 4,
+    "managed": 1,
+    "management": 2,
+    "many": 1,
+    "margin": 1,
+    "margins": 1,
+    "market": 3,
+    "markets": 2,
+    "marquee": 1,
+    "meeting": 1,
+    "mentioned": 1,
+    "million": 3,
+    "model": 1,
+    "modeling": 1,
+    "modern": 1,
+    "momentum": 3,
+    "month": 1,
+    "more": 8,
+    "most": 1,
+    "much": 1,
+    "multiple": 1,
+    "my": 1,
+    "nearly": 1,
+    "neo": 1,
+    "never": 1,
+    "new": 1,
+    "next": 1,
+    "north": 1,
+    "not": 2,
+    "now": 3,
+    "number": 2,
+    "obviously": 1,
+    "of": 29,
+    "off": 2,
+    "offering": 1,
+    "on": 10,
+    "one": 6,
+    "ontologies": 1,
+    "operate": 2,
+    "operating": 3,
+    "operational": 2,
+    "opportunities": 1,
+    "opportunity": 1,
+    "or": 1,
+    "order": 1,
+    "our": 40,
+    "outstanding": 1,
+    "over": 4,
+    "overall": 1,
+    "own": 3,
+    "pain": 1,
+    "particular": 1,
+    "particularly": 1,
+    "partner": 1,
+    "partners": 3,
+    "past": 1,
+    "paul": 1,
+    "peak": 1,
+    "performance": 4,
+    "philosophy": 1,
+    "platform": 1,
+    "position": 1,
+    "positively": 1,
+    "predict": 1,
+    "preferred": 1,
+    "prem": 1,
+    "preparation": 1,
+    "previously": 1,
+    "price": 4,
+    "prior": 1,
+    "private": 1,
+    "processed": 1,
+    "processes": 1,
+    "product": 5,
+    "products": 3,
+    "profit": 2,
+    "profiteer": 1,
+    "profiteers": 1,
+    "progress": 1,
+    "prospects": 1,
+    "provide": 1,
+    "provider": 1,
+    "providing": 2,
+    "provision": 1,
+    "published": 1,
+    "pure": 1,
+    "purity": 2,
+    "q1": 5,
+    "q3": 1,
+    "q4": 1,
+    "qualification": 1,
+    "quality": 2,
+    "quarter": 5,
+    "raises": 1,
+    "range": 2,
+    "rapidly": 1,
+    "rates": 1,
+    "reassured": 1,
+    "recent": 1,
+    "recover": 1,
+    "recovery": 1,
+    "reduce": 2,
+    "reflected": 1,
+    "reflecting": 1,
+    "reflects": 1,
+    "regarding": 1,
+    "reinforces": 1,
+    "relationships": 1,
+    "relatively": 1,
+    "reliability": 2,
+    "relies": 1,
+    "remainder": 1,
+    "remarkable": 1,
+    "remotely": 1,
+    "resources": 1,
+    "revenue": 5,
+    "revised": 1,
+    "rise": 2,
+    "rising": 1,
+    "role": 1,
+    "sales": 3,
+    "santa": 1,
+    "scale": 1,
+    "scheduled": 1,
+    "scored": 1,
+    "second": 2,
+    "seek": 1,
+    "seemingly": 1,
+    "seen": 2,
+    "selected": 1,
+    "semantics": 1,
+    "separated": 1,
+    "september": 1,
+    "service": 2,
+    "services": 2,
+    "set": 1,
+    "share": 2,
+    "shareholders": 1,
+    "shipments": 1,
+    "shortages": 1,
+    "showed": 1,
+    "significant": 2,
+    "significantly": 2,
+    "similar": 1,
+    "simplicity": 2,
+    "situation": 1,
+    "solution": 1,
+    "solutions": 1,
+    "space": 1,
+    "stable": 1,
+    "staff": 1,
+    "start": 1,
+    "started": 1,
+    "state": 1,
+    "stated": 1,
+    "steady": 1,
+    "storage": 4,
+    "strategic": 2,
+    "strategy": 1,
+    "strength": 6,
+    "strong": 4,
+    "subsidiary": 1,
+    "supplier": 1,
+    "suppliers": 2,
+    "supplies": 1,
+    "supply": 5,
+    "system": 1,
+    "tarek": 2,
+    "tariff": 1,
+    "tech": 1,
+    "technology": 2,
+    "term": 2,
+    "than": 5,
+    "thank": 2,
+    "that": 4,
+    "the": 37,
+    "their": 15,
+    "them": 2,
+    "these": 3,
+    "this": 9,
+    "throughout": 2,
+    "time": 1,
+    "titan": 1,
+    "to": 43,
+    "told": 1,
+    "top": 1,
+    "trading": 3,
+    "traditional": 1,
+    "transactions": 1,
+    "transition": 1,
+    "transparency": 1,
+    "transparent": 1,
+    "true": 1,
+    "truly": 1,
+    "trust": 2,
+    "trusted": 1,
+    "turmoil": 1,
+    "turn": 1,
+    "underscoring": 1,
+    "undoubtedly": 1,
+    "unmatched": 1,
+    "until": 1,
+    "up": 3,
+    "upcoming": 1,
+    "upfront": 1,
+    "us": 3,
+    "using": 1,
+    "utility": 1,
+    "value": 1,
+    "vendor": 1,
+    "very": 2,
+    "virtualized": 1,
+    "want": 1,
+    "wanted": 1,
+    "was": 2,
+    "we": 18,
+    "weather": 1,
+    "welcome": 1,
+    "well": 3,
+    "were": 3,
+    "whether": 1,
+    "which": 3,
+    "while": 2,
+    "wide": 1,
+    "will": 6,
+    "win": 1,
+    "wins": 2,
+    "with": 9,
+    "within": 2,
+    "work": 1,
+    "workloads": 1,
+    "would": 1,
+    "year": 17,
+    "years": 2,
+    "you": 1
+   },
+   "date": "2026-05-27",
+   "entries": {
+    "a": [
+     9,
+     12,
+     12,
+     12,
+     16
+    ],
+    "across": [
+     3
+    ],
+    "advanced": [
+     7
+    ],
+    "affected": [
+     8
+    ],
+    "afternoon": [
+     1
+    ],
+    "ai": [
+     7,
+     7
+    ],
+    "algorithmic": [
+     7
+    ],
+    "allows": [
+     13
+    ],
+    "american": [
+     12
+    ],
+    "an": [
+     14
+    ],
+    "and": [
+     1,
+     3,
+     6,
+     8,
+     9,
+     10,
+     12,
+     12,
+     12,
+     14,
+     14,
+     17,
+     17,
+     18,
+     18
+    ],
+    "any": [
+     17
+    ],
+    "april": [
+     9
+    ],
+    "are": [
+     15,
+     17
+    ],
+    "as": [
+     5,
+     6,
+     8,
+     12,
+     12
+    ],
+    "asian": [
+     12
+    ],
+    "associated": [
+     5
+    ],
+    "based": [
+     3,
+     6,
+     7
+    ],
+    "been": [
+     8
+    ],
+    "benefits": [
+     10
+    ],
+    "broad": [
+     3
+    ],
+    "business": [
+     14
+    ],
+    "businesses": [
+     3
+    ],
+    "by": [
+     3,
+     8
+    ],
+    "call": [
+     1
+    ],
+    "cardconnect": [
+     12
+    ],
+    "certainty": [
+     17
+    ],
+    "chain": [
+     9
+    ],
+    "challenging": [
+     17
+    ],
+    "change": [
+     17
+    ],
+    "cloud": [
+     11,
+     14
+    ],
+    "commitments": [
+     6
+    ],
+    "component": [
+     17
+    ],
+    "confidence": [
+     13
+    ],
+    "consequently": [
+     9
+    ],
+    "continue": [
+     16
+    ],
+    "continues": [
+     11,
+     14
+    ],
+    "contracts": [
+     10
+    ],
+    "core": [
+     3
+    ],
+    "cost": [
+     8
+    ],
+    "costs": [
+     10,
+     17
+    ],
+    "crisis": [
+     9
+    ],
+    "current": [
+     8,
+     18
+    ],
+    "currently": [
+     15
+    ],
+    "customer": [
+     4,
+     6,
+     7
+    ],
+    "customers": [
+     9,
+     14
+    ],
+    "data": [
+     11
+    ],
+    "degree": [
+     17
+    ],
+    "discussed": [
+     6
+    ],
+    "doubled": [
+     2
+    ],
+    "driven": [
+     3
+    ],
+    "due": [
+     14
+    ],
+    "during": [
+     9
+    ],
+    "dynamic": [
+     16
+    ],
+    "e": [
+     12
+    ],
+    "earnings": [
+     1
+    ],
+    "efficiency": [
+     14
+    ],
+    "enhanced": [
+     14
+    ],
+    "enterprise": [
+     11
+    ],
+    "environment": [
+     16
+    ],
+    "etisalat": [
+     12
+    ],
+    "evergreen": [
+     10
+    ],
+    "everpure": [
+     1
+    ],
+    "everyone": [
+     1
+    ],
+    "exa": [
+     7
+    ],
+    "expanding": [
+     14
+    ],
+    "expansions": [
+     12
+    ],
+    "expect": [
+     6
+    ],
+    "expected": [
+     5
+    ],
+    "explain": [
+     8
+    ],
+    "explaining": [
+     9
+    ],
+    "financial": [
+     7,
+     12
+    ],
+    "fintech": [
+     7
+    ],
+    "fiscal": [
+     1
+    ],
+    "fiserv": [
+     12
+    ],
+    "flashblade": [
+     7
+    ],
+    "flexibility": [
+     14
+    ],
+    "for": [
+     7,
+     7,
+     13
+    ],
+    "formerly": [
+     12
+    ],
+    "from": [
+     10,
+     18
+    ],
+    "gain": [
+     11
+    ],
+    "geographies": [
+     3
+    ],
+    "global": [
+     7
+    ],
+    "good": [
+     1
+    ],
+    "gpu": [
+     7
+    ],
+    "growth": [
+     3
+    ],
+    "has": [
+     8,
+     18,
+     18
+    ],
+    "healthcare": [
+     12
+    ],
+    "higher": [
+     13
+    ],
+    "highlighted": [
+     18
+    ],
+    "highperformance": [
+     7
+    ],
+    "hyperscale": [
+     5,
+     6,
+     14,
+     14
+    ],
+    "importance": [
+     18
+    ],
+    "in": [
+     6,
+     15,
+     16
+    ],
+    "include": [
+     12
+    ],
+    "included": [
+     5
+    ],
+    "increases": [
+     8
+    ],
+    "industry": [
+     8
+    ],
+    "infrastructure": [
+     7
+    ],
+    "institution": [
+     12
+    ],
+    "investing": [
+     15
+    ],
+    "it": [
+     12,
+     13
+    ],
+    "its": [
+     14
+    ],
+    "large": [
+     12,
+     14
+    ],
+    "last": [
+     6
+    ],
+    "leading": [
+     12
+    ],
+    "letter": [
+     9
+    ],
+    "lifetimes": [
+     10
+    ],
+    "little": [
+     5
+    ],
+    "logos": [
+     4
+    ],
+    "longer": [
+     10,
+     10
+    ],
+    "lower": [
+     10
+    ],
+    "macro": [
+     16
+    ],
+    "make": [
+     14
+    ],
+    "market": [
+     18
+    ],
+    "markets": [
+     7
+    ],
+    "million": [
+     2
+    ],
+    "modeling": [
+     7
+    ],
+    "momentum": [
+     11
+    ],
+    "more": [
+     13
+    ],
+    "multiple": [
+     15
+    ],
+    "nearly": [
+     2
+    ],
+    "new": [
+     4
+    ],
+    "north": [
+     12
+    ],
+    "now": [
+     17
+    ],
+    "of": [
+     12,
+     14,
+     17,
+     18
+    ],
+    "on": [
+     4,
+     6,
+     7,
+     9
+    ],
+    "one": [
+     7,
+     10
+    ],
+    "operate": [
+     16
+    ],
+    "operating": [
+     2
+    ],
+    "order": [
+     6
+    ],
+    "our": [
+     3,
+     5,
+     9,
+     11,
+     14,
+     14
+    ],
+    "over": [
+     2
+    ],
+    "partners": [
+     18
+    ],
+    "paul": [
+     0
+    ],
+    "performance": [
+     8
+    ],
+    "philosophy": [
+     9
+    ],
+    "position": [
+     9
+    ],
+    "positively": [
+     8
+    ],
+    "predict": [
+     17
+    ],
+    "price": [
+     8
+    ],
+    "product": [
+     6
+    ],
+    "products": [
+     5
+    ],
+    "profit": [
+     2
+    ],
+    "profiteers": [
+     18
+    ],
+    "progress": [
+     14
+    ],
+    "prospects": [
+     15
+    ],
+    "provider": [
+     12
+    ],
+    "providing": [
+     13
+    ],
+    "provision": [
+     13
+    ],
+    "published": [
+     9
+    ],
+    "q1": [
+     1,
+     5
+    ],
+    "q3": [
+     6
+    ],
+    "q4": [
+     6
+    ],
+    "qualification": [
+     15
+    ],
+    "quarter": [
+     6
+    ],
+    "rapidly": [
+     17
+    ],
+    "regarding": [
+     14
+    ],
+    "relatively": [
+     5
+    ],
+    "reliability": [
+     14
+    ],
+    "resources": [
+     15
+    ],
+    "revenue": [
+     5,
+     6
+    ],
+    "rise": [
+     6
+    ],
+    "sales": [
+     8
+    ],
+    "selected": [
+     7
+    ],
+    "separated": [
+     18
+    ],
+    "set": [
+     14
+    ],
+    "shortages": [
+     17
+    ],
+    "significant": [
+     15
+    ],
+    "significantly": [
+     6
+    ],
+    "solution": [
+     14
+    ],
+    "staff": [
+     13
+    ],
+    "steady": [
+     14
+    ],
+    "strategic": [
+     13
+    ],
+    "strategy": [
+     11
+    ],
+    "strength": [
+     3
+    ],
+    "subsidiary": [
+     12
+    ],
+    "supply": [
+     9
+    ],
+    "system": [
+     15
+    ],
+    "tarek": [
+     8
+    ],
+    "tech": [
+     14
+    ],
+    "thank": [
+     0
+    ],
+    "the": [
+     18,
+     18
+    ],
+    "their": [
+     7,
+     13
+    ],
+    "this": [
+     9
+    ],
+    "time": [
+     13
+    ],
+    "titan": [
+     14
+    ],
+    "to": [
+     1,
+     2,
+     6,
+     9,
+     11,
+     13,
+     14,
+     14,
+     16,
+     17
+    ],
+    "trading": [
+     7
+    ],
+    "transparency": [
+     18
+    ],
+    "true": [
+     18
+    ],
+    "trust": [
+     18
+    ],
+    "turmoil": [
+     18
+    ],
+    "up": [
+     4
+    ],
+    "upfront": [
+     10
+    ],
+    "using": [
+     7
+    ],
+    "value": [
+     13
+    ],
+    "very": [
+     16
+    ],
+    "was": [
+     3
+    ],
+    "we": [
+     6,
+     9,
+     15,
+     16
+    ],
+    "welcome": [
+     1
+    ],
+    "well": [
+     12
+    ],
+    "were": [
+     4
+    ],
+    "while": [
+     13
+    ],
+    "wide": [
+     8
+    ],
+    "will": [
+     8
+    ],
+    "wins": [
+     12
+    ],
+    "with": [
+     5,
+     13,
+     14,
+     15,
+     17
+    ],
+    "work": [
+     13
+    ],
+    "year": [
+     2,
+     2,
+     4,
+     4
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Thank you, Paul.",
+    "Good afternoon everyone and welcome to Everpure’s Q1 fiscal 2027 earnings call.",
+    "Operating profit nearly doubled year-over-year to $159 million.",
+    "Growth was driven by broad-based strength across our core businesses and geographies.",
+    "New customer logos were up 20% year-on-year.",
+    "As expected, Q1 included relatively little revenue associated with our hyperscale products.",
+    "As discussed last quarter, we expect hyperscale product revenue to rise significantly in Q3 and Q4, based on customer order commitments.",
+    "One FinTech customer using advanced GPU-based AI modeling for algorithmic trading on global financial markets selected FlashBlade//EXA for their highperformance AI infrastructure.",
+    "As Tarek will explain, current sales performance has been positively affected by industry-wide cost and price increases.",
+    "Consequently, on April 23 we published a letter to customers explaining our position and philosophy during this supply chain crisis.",
+    "Evergreen//One benefits from longer contracts, lower upfront costs and longer lifetimes.",
+    "Our Enterprise Data Cloud strategy continues to gain momentum.",
+    "Wins and expansions include CardConnect, a subsidiary of FiServ, and e& (formerly Etisalat), as well as a leading North American financial institution and a large Asian healthcare IT provider.",
+    "It allows their staff to provision with confidence, while providing more time for higher-value strategic work.",
+    "Regarding our hyperscale business, our solution continues to make steady progress with an expanding set of Hyperscale, Cloud and large Tech Titan customers due to its enhanced efficiency, flexibility and reliability.",
+    "We are currently investing significant resources in system qualification with multiple prospects.",
+    "We continue to operate in a very dynamic macro environment.",
+    "Costs and component shortages now change rapidly and are challenging to predict with any degree of certainty.",
+    "The current market turmoil has highlighted the importance of trust and transparency and has separated true partners from profiteers."
+   ],
+   "id": "p-everpure-q1fy27-prepared-remarks",
+   "msent": {
+    "1touch": 2,
+    "a": 9,
+    "ability": 2,
+    "above": 1,
+    "accelerate": 1,
+    "accelerated": 1,
+    "accelerating": 1,
+    "achieved": 1,
+    "acquisition": 1,
+    "across": 3,
+    "actions": 1,
+    "add": 1,
+    "adopt": 1,
+    "adoption": 1,
+    "advanced": 2,
+    "advancements": 1,
+    "advantages": 1,
+    "affected": 1,
+    "afternoon": 1,
+    "ai": 6,
+    "algorithmic": 1,
+    "all": 2,
+    "allows": 3,
+    "also": 3,
+    "american": 1,
+    "an": 2,
+    "analyst": 1,
+    "analytics": 1,
+    "and": 35,
+    "annually": 1,
+    "another": 2,
+    "any": 1,
+    "application": 2,
+    "applications": 1,
+    "appreciation": 1,
+    "april": 1,
+    "architectural": 1,
+    "architecture": 1,
+    "architectures": 1,
+    "are": 8,
+    "as": 16,
+    "asian": 1,
+    "associated": 1,
+    "at": 2,
+    "based": 4,
+    "be": 4,
+    "because": 1,
+    "been": 2,
+    "before": 1,
+    "begin": 1,
+    "beginning": 1,
+    "benefits": 4,
+    "better": 2,
+    "billion": 1,
+    "blend": 1,
+    "both": 2,
+    "bottom": 1,
+    "bridge": 1,
+    "broad": 1,
+    "broadly": 1,
+    "build": 3,
+    "building": 1,
+    "business": 2,
+    "businesses": 1,
+    "but": 3,
+    "by": 4,
+    "call": 2,
+    "capabilities": 2,
+    "cardconnect": 1,
+    "carefully": 1,
+    "catalogs": 1,
+    "centers": 1,
+    "certainty": 1,
+    "chain": 5,
+    "challenges": 1,
+    "challenging": 1,
+    "change": 1,
+    "channel": 1,
+    "choosing": 2,
+    "clara": 1,
+    "clear": 1,
+    "close": 1,
+    "closed": 1,
+    "cloud": 6,
+    "clouds": 2,
+    "collaboration": 1,
+    "commercial": 1,
+    "commitments": 1,
+    "compared": 1,
+    "competitive": 2,
+    "component": 3,
+    "comprehensively": 1,
+    "concern": 1,
+    "conference": 1,
+    "confidence": 3,
+    "consequently": 1,
+    "consistent": 1,
+    "contested": 1,
+    "continue": 2,
+    "continued": 3,
+    "continues": 2,
+    "contracts": 1,
+    "copies": 1,
+    "core": 1,
+    "cost": 3,
+    "costs": 5,
+    "created": 1,
+    "crisis": 4,
+    "current": 5,
+    "currently": 1,
+    "customer": 5,
+    "customers": 18,
+    "data": 11,
+    "day": 1,
+    "deals": 1,
+    "dedication": 1,
+    "degree": 1,
+    "delivers": 1,
+    "demand": 1,
+    "department": 1,
+    "details": 1,
+    "developing": 1,
+    "digits": 1,
+    "discussed": 1,
+    "displace": 1,
+    "double": 1,
+    "doubled": 2,
+    "driven": 2,
+    "due": 1,
+    "during": 2,
+    "dynamic": 1,
+    "e": 1,
+    "earlier": 1,
+    "earnings": 1,
+    "eclipsed": 1,
+    "efficiency": 1,
+    "employees": 2,
+    "enable": 2,
+    "enables": 2,
+    "end": 3,
+    "engineering": 1,
+    "enhanced": 2,
+    "enjoy": 1,
+    "enterprise": 5,
+    "entirely": 1,
+    "environment": 2,
+    "environments": 2,
+    "escalate": 1,
+    "etisalat": 1,
+    "even": 1,
+    "evergreen": 4,
+    "everpure": 7,
+    "everyone": 1,
+    "exa": 3,
+    "exceeded": 1,
+    "excellent": 1,
+    "expand": 2,
+    "expanding": 1,
+    "expansion": 1,
+    "expansions": 2,
+    "expect": 3,
+    "expectations": 1,
+    "expected": 1,
+    "explain": 1,
+    "explaining": 1,
+    "family": 1,
+    "far": 1,
+    "financial": 6,
+    "fintech": 1,
+    "firm": 1,
+    "fiscal": 2,
+    "fiserv": 1,
+    "flashblade": 4,
+    "flexibility": 2,
+    "for": 12,
+    "foresee": 1,
+    "formerly": 1,
+    "forward": 1,
+    "foundational": 1,
+    "from": 3,
+    "full": 2,
+    "further": 1,
+    "fusion": 3,
+    "gain": 1,
+    "gains": 1,
+    "gave": 1,
+    "geographies": 1,
+    "global": 3,
+    "good": 1,
+    "gpu": 2,
+    "gradual": 1,
+    "graphs": 1,
+    "great": 1,
+    "greater": 2,
+    "gross": 2,
+    "growth": 3,
+    "guidance": 1,
+    "half": 2,
+    "has": 6,
+    "have": 3,
+    "healthcare": 1,
+    "help": 2,
+    "here": 1,
+    "high": 2,
+    "higher": 1,
+    "highlighted": 1,
+    "highlights": 1,
+    "highperformance": 1,
+    "hold": 1,
+    "hyperscale": 4,
+    "i": 3,
+    "importance": 1,
+    "in": 21,
+    "include": 1,
+    "included": 1,
+    "including": 2,
+    "increase": 1,
+    "increased": 1,
+    "increases": 3,
+    "increasing": 1,
+    "increasingly": 1,
+    "industry": 1,
+    "infrastructure": 3,
+    "insatiable": 1,
+    "insight": 1,
+    "institution": 1,
+    "intensive": 1,
+    "intentions": 1,
+    "interest": 1,
+    "into": 2,
+    "investing": 1,
+    "investors": 1,
+    "is": 3,
+    "it": 3,
+    "its": 2,
+    "june": 1,
+    "kindled": 1,
+    "knowledge": 1,
+    "kubernetes": 1,
+    "large": 3,
+    "last": 3,
+    "later": 1,
+    "leading": 2,
+    "learning": 1,
+    "less": 1,
+    "letter": 2,
+    "lifetimes": 1,
+    "like": 1,
+    "likely": 1,
+    "line": 1,
+    "little": 1,
+    "logos": 1,
+    "long": 1,
+    "longer": 1,
+    "look": 1,
+    "lower": 3,
+    "machine": 1,
+    "macro": 1,
+    "make": 1,
+    "manage": 4,
+    "managed": 1,
+    "management": 2,
+    "many": 1,
+    "margin": 1,
+    "margins": 1,
+    "market": 3,
+    "markets": 2,
+    "marquee": 1,
+    "meeting": 1,
+    "mentioned": 1,
+    "million": 3,
+    "model": 1,
+    "modeling": 1,
+    "modern": 1,
+    "momentum": 3,
+    "month": 1,
+    "more": 8,
+    "most": 1,
+    "much": 1,
+    "multiple": 1,
+    "my": 1,
+    "nearly": 1,
+    "neo": 1,
+    "never": 1,
+    "new": 1,
+    "next": 1,
+    "north": 1,
+    "not": 2,
+    "now": 3,
+    "number": 2,
+    "obviously": 1,
+    "of": 23,
+    "off": 2,
+    "offering": 1,
+    "on": 9,
+    "one": 6,
+    "ontologies": 1,
+    "operate": 2,
+    "operating": 3,
+    "operational": 2,
+    "opportunities": 1,
+    "opportunity": 1,
+    "or": 1,
+    "order": 1,
+    "our": 27,
+    "outstanding": 1,
+    "over": 4,
+    "overall": 1,
+    "own": 3,
+    "pain": 1,
+    "particular": 1,
+    "particularly": 1,
+    "partner": 1,
+    "partners": 3,
+    "past": 1,
+    "paul": 1,
+    "peak": 1,
+    "performance": 4,
+    "philosophy": 1,
+    "platform": 1,
+    "position": 1,
+    "positively": 1,
+    "predict": 1,
+    "preferred": 1,
+    "prem": 1,
+    "preparation": 1,
+    "previously": 1,
+    "price": 3,
+    "prior": 1,
+    "private": 1,
+    "processed": 1,
+    "processes": 1,
+    "product": 5,
+    "products": 3,
+    "profit": 2,
+    "profiteer": 1,
+    "profiteers": 1,
+    "progress": 1,
+    "prospects": 1,
+    "provide": 1,
+    "provider": 1,
+    "providing": 2,
+    "provision": 1,
+    "published": 1,
+    "pure": 1,
+    "purity": 2,
+    "q1": 5,
+    "q3": 1,
+    "q4": 1,
+    "qualification": 1,
+    "quality": 2,
+    "quarter": 5,
+    "raises": 1,
+    "range": 2,
+    "rapidly": 1,
+    "rates": 1,
+    "reassured": 1,
+    "recent": 1,
+    "recover": 1,
+    "recovery": 1,
+    "reduce": 1,
+    "reflected": 1,
+    "reflecting": 1,
+    "reflects": 1,
+    "regarding": 1,
+    "reinforces": 1,
+    "relationships": 1,
+    "relatively": 1,
+    "reliability": 2,
+    "relies": 1,
+    "remainder": 1,
+    "remarkable": 1,
+    "remotely": 1,
+    "resources": 1,
+    "revenue": 5,
+    "revised": 1,
+    "rise": 2,
+    "rising": 1,
+    "role": 1,
+    "sales": 3,
+    "santa": 1,
+    "scale": 1,
+    "scheduled": 1,
+    "scored": 1,
+    "second": 2,
+    "seek": 1,
+    "seemingly": 1,
+    "seen": 2,
+    "selected": 1,
+    "semantics": 1,
+    "separated": 1,
+    "september": 1,
+    "service": 2,
+    "services": 2,
+    "set": 1,
+    "share": 2,
+    "shareholders": 1,
+    "shipments": 1,
+    "shortages": 1,
+    "showed": 1,
+    "significant": 2,
+    "significantly": 2,
+    "similar": 1,
+    "simplicity": 2,
+    "situation": 1,
+    "solution": 1,
+    "solutions": 1,
+    "space": 1,
+    "stable": 1,
+    "staff": 1,
+    "start": 1,
+    "started": 1,
+    "state": 1,
+    "stated": 1,
+    "steady": 1,
+    "storage": 4,
+    "strategic": 2,
+    "strategy": 1,
+    "strength": 5,
+    "strong": 4,
+    "subsidiary": 1,
+    "supplier": 1,
+    "suppliers": 2,
+    "supplies": 1,
+    "supply": 5,
+    "system": 1,
+    "tarek": 2,
+    "tariff": 1,
+    "tech": 1,
+    "technology": 2,
+    "term": 1,
+    "than": 5,
+    "thank": 2,
+    "that": 4,
+    "the": 21,
+    "their": 12,
+    "them": 2,
+    "these": 3,
+    "this": 9,
+    "throughout": 2,
+    "time": 1,
+    "titan": 1,
+    "to": 33,
+    "told": 1,
+    "top": 1,
+    "trading": 3,
+    "traditional": 1,
+    "transactions": 1,
+    "transition": 1,
+    "transparency": 1,
+    "transparent": 1,
+    "true": 1,
+    "truly": 1,
+    "trust": 2,
+    "trusted": 1,
+    "turmoil": 1,
+    "turn": 1,
+    "underscoring": 1,
+    "undoubtedly": 1,
+    "unmatched": 1,
+    "until": 1,
+    "up": 3,
+    "upcoming": 1,
+    "upfront": 1,
+    "us": 3,
+    "using": 1,
+    "utility": 1,
+    "value": 1,
+    "vendor": 1,
+    "very": 2,
+    "virtualized": 1,
+    "want": 1,
+    "wanted": 1,
+    "was": 2,
+    "we": 17,
+    "weather": 1,
+    "welcome": 1,
+    "well": 3,
+    "were": 3,
+    "whether": 1,
+    "which": 3,
+    "while": 2,
+    "wide": 1,
+    "will": 6,
+    "win": 1,
+    "wins": 2,
+    "with": 9,
+    "within": 2,
+    "work": 1,
+    "workloads": 1,
+    "would": 1,
+    "year": 10,
+    "years": 2,
+    "you": 1
+   },
+   "n_sentences": 56,
+   "source": "s21.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q1 FY2027 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2027/q1/Everpure-Q1FY27-Prepared-Remarks.pdf",
+   "words": 1180
+  },
+  {
+   "counts": {
+    "1touch": 2,
+    "30s": 1,
+    "7b": 1,
+    "9th": 1,
+    "a": 28,
+    "ability": 2,
+    "above": 1,
+    "accelerate": 2,
+    "accelerated": 1,
+    "accelerating": 1,
+    "access": 1,
+    "achieved": 2,
+    "acquire": 1,
+    "across": 4,
+    "addition": 1,
+    "additional": 1,
+    "addressing": 1,
+    "adds": 1,
+    "adopting": 1,
+    "advanced": 1,
+    "afternoon": 1,
+    "ago": 1,
+    "agreement": 1,
+    "ai": 11,
+    "align": 1,
+    "all": 9,
+    "allow": 2,
+    "almost": 1,
+    "alone": 1,
+    "also": 4,
+    "always": 1,
+    "am": 1,
+    "amid": 1,
+    "an": 3,
+    "analytics": 1,
+    "and": 62,
+    "announced": 1,
+    "any": 1,
+    "apply": 1,
+    "architecture": 6,
+    "are": 13,
+    "as": 15,
+    "at": 4,
+    "attract": 1,
+    "audited": 1,
+    "automate": 1,
+    "backup": 1,
+    "base": 1,
+    "based": 2,
+    "be": 1,
+    "because": 1,
+    "been": 1,
+    "believe": 2,
+    "benchmark": 2,
+    "benefit": 1,
+    "better": 2,
+    "beyond": 2,
+    "billion": 1,
+    "bit": 1,
+    "block": 1,
+    "both": 2,
+    "brand": 2,
+    "broad": 2,
+    "broadened": 1,
+    "broader": 2,
+    "building": 2,
+    "buildouts": 1,
+    "built": 1,
+    "business": 4,
+    "but": 2,
+    "by": 4,
+    "calendar": 1,
+    "call": 1,
+    "calls": 1,
+    "can": 4,
+    "capabilities": 2,
+    "capped": 1,
+    "care": 1,
+    "cases": 2,
+    "certification": 1,
+    "chain": 5,
+    "change": 1,
+    "chapter": 1,
+    "classification": 1,
+    "clear": 1,
+    "close": 1,
+    "cloud": 5,
+    "combined": 1,
+    "coming": 1,
+    "commercial": 1,
+    "commodity": 2,
+    "company": 2,
+    "compete": 1,
+    "competitive": 1,
+    "competitor": 1,
+    "competitors": 1,
+    "complexity": 1,
+    "component": 5,
+    "components": 1,
+    "comprehensive": 2,
+    "concentrated": 1,
+    "consistent": 4,
+    "constraints": 2,
+    "containers": 1,
+    "contest": 1,
+    "context": 1,
+    "contingency": 1,
+    "continue": 1,
+    "continued": 2,
+    "continues": 1,
+    "continuing": 1,
+    "continuous": 1,
+    "control": 2,
+    "core": 2,
+    "cost": 2,
+    "costs": 1,
+    "could": 1,
+    "cpu": 1,
+    "created": 1,
+    "creating": 1,
+    "critical": 1,
+    "customer": 6,
+    "customers": 18,
+    "cyber": 1,
+    "d": 1,
+    "data": 28,
+    "databases": 1,
+    "decade": 1,
+    "definitive": 1,
+    "delays": 1,
+    "deliver": 1,
+    "delivers": 1,
+    "demand": 3,
+    "deployment": 1,
+    "design": 1,
+    "detail": 2,
+    "details": 1,
+    "developed": 2,
+    "direct": 1,
+    "directflash": 2,
+    "discovery": 1,
+    "discuss": 1,
+    "discussions": 2,
+    "disruption": 2,
+    "disruptions": 1,
+    "distributed": 1,
+    "diversified": 1,
+    "dollar": 1,
+    "dozens": 1,
+    "dramatic": 1,
+    "dramatically": 1,
+    "driven": 4,
+    "driving": 1,
+    "eager": 1,
+    "earlier": 2,
+    "earnings": 1,
+    "easily": 1,
+    "economics": 1,
+    "effective": 1,
+    "efficiency": 1,
+    "efficiently": 1,
+    "employees": 1,
+    "empowering": 1,
+    "enable": 1,
+    "enables": 1,
+    "enabling": 1,
+    "end": 1,
+    "enhanced": 2,
+    "ensure": 1,
+    "enter": 1,
+    "entering": 3,
+    "enterprise": 13,
+    "entitled": 1,
+    "environment": 4,
+    "even": 1,
+    "evergreen": 6,
+    "everpure": 8,
+    "every": 1,
+    "everyone": 1,
+    "evolution": 1,
+    "exa": 4,
+    "exabytes": 1,
+    "exciting": 1,
+    "executing": 1,
+    "existing": 1,
+    "expanded": 2,
+    "expanding": 1,
+    "expect": 6,
+    "expectations": 1,
+    "extended": 1,
+    "extending": 1,
+    "extract": 1,
+    "extraordinary": 1,
+    "faces": 1,
+    "february": 1,
+    "file": 2,
+    "financial": 1,
+    "first": 2,
+    "fiscal": 2,
+    "flashblade": 3,
+    "flexibility": 2,
+    "focus": 1,
+    "focused": 2,
+    "for": 14,
+    "forward": 1,
+    "foundation": 1,
+    "franchise": 1,
+    "from": 7,
+    "full": 2,
+    "further": 1,
+    "fusion": 3,
+    "future": 1,
+    "fy26": 2,
+    "fy27": 5,
+    "gaining": 1,
+    "global": 3,
+    "going": 1,
+    "gold": 1,
+    "good": 1,
+    "governance": 3,
+    "government": 1,
+    "greater": 1,
+    "grew": 1,
+    "gross": 1,
+    "growth": 6,
+    "guidance": 2,
+    "half": 1,
+    "hardware": 2,
+    "has": 6,
+    "have": 12,
+    "headwind": 2,
+    "help": 2,
+    "high": 5,
+    "higher": 1,
+    "highest": 1,
+    "highly": 1,
+    "horizon": 1,
+    "house": 1,
+    "hyperscale": 4,
+    "hyperscaler": 1,
+    "hyperscalers": 1,
+    "i": 4,
+    "i'll": 1,
+    "identified": 1,
+    "image": 1,
+    "implemented": 1,
+    "improvements": 1,
+    "in": 38,
+    "include": 1,
+    "including": 3,
+    "incorporated": 1,
+    "increase": 1,
+    "increasing": 4,
+    "increasingly": 3,
+    "industry": 9,
+    "infrastructure": 4,
+    "innovation": 2,
+    "intelligent": 1,
+    "intelligently": 1,
+    "international": 1,
+    "into": 2,
+    "introduction": 1,
+    "invest": 1,
+    "invested": 1,
+    "investing": 2,
+    "investment": 2,
+    "investors": 1,
+    "invite": 1,
+    "is": 9,
+    "it": 2,
+    "its": 2,
+    "journey": 1,
+    "known": 1,
+    "kubernetes": 1,
+    "last": 1,
+    "later": 1,
+    "latest": 2,
+    "lead": 2,
+    "leading": 2,
+    "line": 1,
+    "long": 1,
+    "look": 1,
+    "low": 1,
+    "lower": 2,
+    "lowest": 1,
+    "loyalty": 1,
+    "macroeconomic": 1,
+    "made": 1,
+    "maintained": 1,
+    "majority": 1,
+    "make": 2,
+    "manage": 4,
+    "management": 5,
+    "margins": 1,
+    "market": 1,
+    "meaningful": 1,
+    "memory": 1,
+    "midpoint": 1,
+    "mlperf": 1,
+    "model": 2,
+    "modernize": 1,
+    "momentum": 5,
+    "more": 8,
+    "most": 1,
+    "moving": 1,
+    "much": 2,
+    "name": 2,
+    "nand": 1,
+    "necessary": 1,
+    "needs": 2,
+    "net": 1,
+    "new": 4,
+    "not": 1,
+    "now": 8,
+    "nps": 1,
+    "object": 2,
+    "of": 24,
+    "off": 1,
+    "offering": 1,
+    "offsets": 1,
+    "on": 9,
+    "one": 1,
+    "only": 1,
+    "operating": 3,
+    "operational": 2,
+    "other": 2,
+    "our": 60,
+    "outperform": 1,
+    "outstanding": 1,
+    "outstripped": 1,
+    "over": 3,
+    "own": 1,
+    "particularly": 1,
+    "partners": 1,
+    "partnership": 1,
+    "past": 2,
+    "paul": 1,
+    "per": 1,
+    "performance": 5,
+    "persist": 1,
+    "personas": 1,
+    "plane": 2,
+    "plans": 1,
+    "platform": 2,
+    "point": 1,
+    "policies": 1,
+    "policy": 1,
+    "position": 2,
+    "potential": 1,
+    "power": 1,
+    "practically": 1,
+    "prepare": 2,
+    "previous": 2,
+    "prices": 4,
+    "pricing": 3,
+    "product": 2,
+    "products": 2,
+    "progress": 1,
+    "promise": 1,
+    "promoter": 1,
+    "protect": 2,
+    "protects": 1,
+    "protocols": 1,
+    "proud": 1,
+    "proven": 1,
+    "provide": 2,
+    "provides": 2,
+    "providing": 1,
+    "published": 1,
+    "purity": 4,
+    "put": 1,
+    "q1": 1,
+    "q4": 3,
+    "quality": 1,
+    "quarter": 3,
+    "r": 1,
+    "raise": 1,
+    "raised": 1,
+    "range": 1,
+    "rapid": 2,
+    "rather": 2,
+    "reached": 1,
+    "ready": 1,
+    "reason": 1,
+    "rebranding": 1,
+    "recent": 1,
+    "recently": 1,
+    "recover": 1,
+    "reduce": 1,
+    "reduction": 2,
+    "reflect": 1,
+    "reflected": 1,
+    "reflecting": 1,
+    "reflects": 1,
+    "relationships": 1,
+    "release": 1,
+    "released": 1,
+    "reliable": 1,
+    "remains": 1,
+    "reminder": 1,
+    "represents": 1,
+    "resilience": 1,
+    "resilient": 1,
+    "resonate": 1,
+    "results": 1,
+    "revenue": 4,
+    "rise": 2,
+    "rising": 1,
+    "risk": 1,
+    "satisfaction": 1,
+    "scale": 2,
+    "score": 2,
+    "scores": 1,
+    "second": 1,
+    "sectors": 1,
+    "secured": 1,
+    "see": 2,
+    "serve": 1,
+    "services": 1,
+    "set": 2,
+    "sets": 1,
+    "shipment": 1,
+    "shortages": 2,
+    "simplify": 1,
+    "since": 1,
+    "single": 1,
+    "smoothly": 1,
+    "software": 5,
+    "solution": 1,
+    "solutions": 1,
+    "some": 1,
+    "source": 1,
+    "sources": 1,
+    "sovereignty": 1,
+    "specstorage": 1,
+    "spectrum": 1,
+    "stage": 1,
+    "standard": 1,
+    "standardize": 2,
+    "standardized": 1,
+    "standing": 1,
+    "stated": 1,
+    "storage": 12,
+    "story": 1,
+    "strategic": 2,
+    "strategy": 2,
+    "strength": 1,
+    "strengthened": 1,
+    "strong": 8,
+    "strongly": 1,
+    "structure": 1,
+    "subscriptions": 1,
+    "such": 1,
+    "supplier": 1,
+    "suppliers": 1,
+    "supply": 7,
+    "support": 3,
+    "supports": 1,
+    "systems": 3,
+    "tailwind": 2,
+    "tarek": 3,
+    "tech": 1,
+    "technologies": 1,
+    "technology": 6,
+    "tens": 2,
+    "terabyte": 1,
+    "terabytes": 1,
+    "testing": 1,
+    "than": 5,
+    "thank": 2,
+    "that": 8,
+    "the": 32,
+    "theaters": 1,
+    "their": 16,
+    "them": 2,
+    "these": 1,
+    "they": 1,
+    "this": 9,
+    "through": 3,
+    "time": 1,
+    "times": 1,
+    "titan": 1,
+    "to": 42,
+    "today": 2,
+    "together": 1,
+    "traditional": 1,
+    "translating": 1,
+    "transparent": 1,
+    "trust": 2,
+    "turning": 1,
+    "typical": 1,
+    "uncertainty": 1,
+    "unified": 3,
+    "unique": 1,
+    "universality": 1,
+    "unlock": 1,
+    "unpredictable": 1,
+    "us": 3,
+    "use": 3,
+    "value": 2,
+    "vendor": 1,
+    "very": 1,
+    "virtualization": 1,
+    "was": 3,
+    "we": 41,
+    "weathered": 1,
+    "week": 1,
+    "welcome": 1,
+    "well": 2,
+    "were": 1,
+    "what": 1,
+    "where": 3,
+    "which": 6,
+    "while": 2,
+    "who": 1,
+    "why": 1,
+    "will": 7,
+    "with": 17,
+    "workloads": 3,
+    "world": 2,
+    "year": 8,
+    "yet": 1,
+    "you": 2,
+    "your": 1
+   },
+   "date": "2026-02-25",
+   "entries": {
+    "1touch": [
+     13
+    ],
+    "9th": [
+     16
+    ],
+    "a": [
+     10,
+     12,
+     13,
+     19
+    ],
+    "ability": [
+     13
+    ],
+    "accelerate": [
+     13
+    ],
+    "access": [
+     8
+    ],
+    "achieved": [
+     4
+    ],
+    "acquire": [
+     13
+    ],
+    "across": [
+     11,
+     15
+    ],
+    "additional": [
+     17
+    ],
+    "addressing": [
+     17
+    ],
+    "afternoon": [
+     1
+    ],
+    "agreement": [
+     13
+    ],
+    "ai": [
+     4,
+     13,
+     15
+    ],
+    "all": [
+     7,
+     7,
+     7
+    ],
+    "always": [
+     8
+    ],
+    "an": [
+     2
+    ],
+    "and": [
+     1,
+     1,
+     3,
+     4,
+     6,
+     6,
+     7,
+     9,
+     10,
+     11,
+     11,
+     13,
+     15
+    ],
+    "announced": [
+     13
+    ],
+    "apply": [
+     11
+    ],
+    "architecture": [
+     11
+    ],
+    "audited": [
+     9
+    ],
+    "benchmark": [
+     4,
+     4
+    ],
+    "beyond": [
+     5,
+     11
+    ],
+    "brand": [
+     10
+    ],
+    "broadened": [
+     6
+    ],
+    "broader": [
+     14
+    ],
+    "building": [
+     20
+    ],
+    "buildouts": [
+     15
+    ],
+    "business": [
+     5
+    ],
+    "by": [
+     15,
+     19
+    ],
+    "call": [
+     1
+    ],
+    "can": [
+     11
+    ],
+    "care": [
+     10
+    ],
+    "cases": [
+     7
+    ],
+    "chain": [
+     17
+    ],
+    "cloud": [
+     11
+    ],
+    "coming": [
+     14
+    ],
+    "component": [
+     15,
+     16,
+     17
+    ],
+    "comprehensive": [
+     12
+    ],
+    "consistent": [
+     10
+    ],
+    "containers": [
+     7
+    ],
+    "cost": [
+     19
+    ],
+    "cpu": [
+     15
+    ],
+    "customer": [
+     7,
+     9,
+     10,
+     18
+    ],
+    "customers": [
+     8,
+     11,
+     13
+    ],
+    "data": [
+     11,
+     11,
+     12,
+     13,
+     19
+    ],
+    "databases": [
+     7
+    ],
+    "definitive": [
+     13
+    ],
+    "demand": [
+     15
+    ],
+    "design": [
+     17
+    ],
+    "detail": [
+     6
+    ],
+    "developed": [
+     10
+    ],
+    "direct": [
+     17
+    ],
+    "disruption": [
+     17
+    ],
+    "dramatic": [
+     16
+    ],
+    "dramatically": [
+     15
+    ],
+    "driven": [
+     11,
+     15
+    ],
+    "earlier": [
+     13
+    ],
+    "earnings": [
+     1
+    ],
+    "economics": [
+     18
+    ],
+    "effective": [
+     19
+    ],
+    "enhanced": [
+     19
+    ],
+    "ensure": [
+     8
+    ],
+    "enter": [
+     3
+    ],
+    "enterprise": [
+     11
+    ],
+    "environment": [
+     14
+    ],
+    "evergreen": [
+     18
+    ],
+    "everpure": [
+     1,
+     16
+    ],
+    "everyone": [
+     1
+    ],
+    "evolution": [
+     12
+    ],
+    "exa": [
+     4
+    ],
+    "expanded": [
+     6
+    ],
+    "expect": [
+     14
+    ],
+    "expectations": [
+     5
+    ],
+    "february": [
+     16
+    ],
+    "file": [
+     7
+    ],
+    "financial": [
+     6
+    ],
+    "fiscal": [
+     1
+    ],
+    "flashblade": [
+     4
+    ],
+    "flexibility": [
+     17
+    ],
+    "for": [
+     9,
+     10,
+     13
+    ],
+    "forward": [
+     20
+    ],
+    "from": [
+     12
+    ],
+    "fusion": [
+     11
+    ],
+    "fy26": [
+     5
+    ],
+    "fy27": [
+     3,
+     20
+    ],
+    "gold": [
+     9
+    ],
+    "good": [
+     1
+    ],
+    "governance": [
+     11,
+     12
+    ],
+    "grew": [
+     5
+    ],
+    "hardware": [
+     17
+    ],
+    "has": [
+     4,
+     15
+    ],
+    "have": [
+     6,
+     6,
+     8,
+     10
+    ],
+    "help": [
+     13
+    ],
+    "higher": [
+     19
+    ],
+    "highest": [
+     4
+    ],
+    "house": [
+     17
+    ],
+    "hyperscale": [
+     5
+    ],
+    "image": [
+     4
+    ],
+    "in": [
+     4,
+     5,
+     16,
+     17,
+     17,
+     20
+    ],
+    "including": [
+     7
+    ],
+    "increasing": [
+     15
+    ],
+    "industry": [
+     4,
+     15
+    ],
+    "infrastructure": [
+     12
+    ],
+    "innovation": [
+     10
+    ],
+    "intelligently": [
+     11
+    ],
+    "is": [
+     9,
+     10,
+     19
+    ],
+    "it": [
+     13
+    ],
+    "known": [
+     10
+    ],
+    "kubernetes": [
+     7
+    ],
+    "later": [
+     6
+    ],
+    "latest": [
+     8,
+     9
+    ],
+    "leading": [
+     4
+    ],
+    "line": [
+     16
+    ],
+    "long": [
+     17
+    ],
+    "look": [
+     20
+    ],
+    "lower": [
+     19
+    ],
+    "loyalty": [
+     9
+    ],
+    "macroeconomic": [
+     14
+    ],
+    "make": [
+     13
+    ],
+    "manage": [
+     11
+    ],
+    "management": [
+     12
+    ],
+    "meaningful": [
+     12
+    ],
+    "memory": [
+     15
+    ],
+    "mlperf": [
+     4
+    ],
+    "model": [
+     18
+    ],
+    "momentum": [
+     3,
+     20
+    ],
+    "moving": [
+     11
+    ],
+    "nand": [
+     15
+    ],
+    "net": [
+     9
+    ],
+    "object": [
+     7
+    ],
+    "of": [
+     13,
+     19
+    ],
+    "offsets": [
+     19
+    ],
+    "on": [
+     6,
+     16,
+     16,
+     19,
+     20
+    ],
+    "our": [
+     5,
+     5,
+     6,
+     6,
+     8,
+     9,
+     11,
+     13,
+     16,
+     17,
+     18,
+     19,
+     19
+    ],
+    "outstanding": [
+     2
+    ],
+    "outstripped": [
+     15
+    ],
+    "paul": [
+     0
+    ],
+    "per": [
+     19
+    ],
+    "performance": [
+     4
+    ],
+    "persist": [
+     14
+    ],
+    "policy": [
+     11
+    ],
+    "previous": [
+     19
+    ],
+    "prices": [
+     16,
+     16,
+     19
+    ],
+    "pricing": [
+     15,
+     18,
+     19
+    ],
+    "product": [
+     16
+    ],
+    "promoter": [
+     9
+    ],
+    "protect": [
+     11
+    ],
+    "protects": [
+     18
+    ],
+    "provides": [
+     17,
+     18
+    ],
+    "providing": [
+     19
+    ],
+    "published": [
+     4
+    ],
+    "purity": [
+     19
+    ],
+    "q4": [
+     1,
+     2
+    ],
+    "quality": [
+     10
+    ],
+    "quarter": [
+     2
+    ],
+    "raised": [
+     16
+    ],
+    "rapid": [
+     16
+    ],
+    "ready": [
+     13
+    ],
+    "recent": [
+     19
+    ],
+    "recently": [
+     4
+    ],
+    "reduction": [
+     19
+    ],
+    "reflecting": [
+     16
+    ],
+    "relationships": [
+     17
+    ],
+    "release": [
+     19
+    ],
+    "released": [
+     9
+    ],
+    "represents": [
+     12
+    ],
+    "results": [
+     4
+    ],
+    "rise": [
+     16
+    ],
+    "satisfaction": [
+     9
+    ],
+    "score": [
+     9
+    ],
+    "sets": [
+     11
+    ],
+    "solution": [
+     6
+    ],
+    "some": [
+     19
+    ],
+    "specstorage": [
+     4
+    ],
+    "standard": [
+     9
+    ],
+    "standardize": [
+     11
+    ],
+    "standardized": [
+     6
+    ],
+    "standing": [
+     17
+    ],
+    "storage": [
+     11
+    ],
+    "strategic": [
+     13
+    ],
+    "strong": [
+     3,
+     10,
+     10,
+     15
+    ],
+    "structure": [
+     6
+    ],
+    "supplier": [
+     17
+    ],
+    "supply": [
+     15,
+     17
+    ],
+    "support": [
+     7
+    ],
+    "systems": [
+     7,
+     7
+    ],
+    "tarek": [
+     6
+    ],
+    "tech": [
+     15
+    ],
+    "technology": [
+     8
+    ],
+    "terabyte": [
+     19
+    ],
+    "than": [
+     19
+    ],
+    "thank": [
+     0
+    ],
+    "that": [
+     10,
+     18,
+     19
+    ],
+    "the": [
+     4,
+     4,
+     8,
+     9,
+     13,
+     14,
+     14,
+     15,
+     16
+    ],
+    "their": [
+     11,
+     13
+    ],
+    "they": [
+     8
+    ],
+    "this": [
+     12,
+     13,
+     19,
+     20
+    ],
+    "through": [
+     14
+    ],
+    "titan": [
+     15
+    ],
+    "to": [
+     1,
+     8,
+     11,
+     12,
+     13,
+     13,
+     14,
+     14,
+     20
+    ],
+    "today": [
+     8
+    ],
+    "together": [
+     20
+    ],
+    "traditional": [
+     11
+    ],
+    "transparent": [
+     18
+    ],
+    "turning": [
+     14
+    ],
+    "uncertainty": [
+     14
+    ],
+    "unlock": [
+     13
+    ],
+    "us": [
+     17
+    ],
+    "use": [
+     7
+    ],
+    "value": [
+     13
+    ],
+    "virtualization": [
+     7
+    ],
+    "was": [
+     2
+    ],
+    "we": [
+     3,
+     6,
+     6,
+     7,
+     9,
+     10,
+     13,
+     14,
+     20
+    ],
+    "week": [
+     13
+    ],
+    "welcome": [
+     1
+    ],
+    "well": [
+     10
+    ],
+    "which": [
+     6,
+     9,
+     13
+    ],
+    "will": [
+     6,
+     13
+    ],
+    "with": [
+     3,
+     11
+    ],
+    "workloads": [
+     11,
+     19
+    ],
+    "year": [
+     14
+    ],
+    "you": [
+     0
+    ]
+   },
+   "excerpts": [
+    "Thank you, Paul.",
+    "Good afternoon everyone and welcome to Everpure’s Q4 and fiscal 2026 earnings call.",
+    "Q4 was an outstanding quarter!",
+    "And, we enter FY27 with strong momentum.",
+    "FlashBlade//EXA has achieved industry-leading MLPerf benchmark performance, and recently published the highest results in the SPECstorage AI Image benchmark.",
+    "Our hyperscale business grew beyond our expectations in FY26.",
+    "We have broadened and expanded our solution, and we have standardized on our financial structure, which Tarek will detail later.",
+    "We support all customer use cases including all databases, all virtualization, containers, file systems, object systems, and Kubernetes.",
+    "Today, they ensure our customers always have access to the latest technology.",
+    "We released our latest audited Net Promoter Score, which is the gold standard for customer loyalty and satisfaction.",
+    "We have developed a strong brand that is well known for quality, consistent innovation, and strong customer care.",
+    "With Fusion and our Enterprise Data Cloud architecture, customers can apply policy-driven governance across workloads, moving beyond traditional storage to standardize, protect, and intelligently manage their data sets.",
+    "This represents a meaningful evolution from infrastructure management to comprehensive data governance.",
+    "Earlier this week, we announced a definitive agreement to acquire 1touch, which will accelerate our ability to help customers unlock the strategic value of their data and make it ready for AI.",
+    "Turning to the broader environment, we expect macroeconomic uncertainty to persist through the coming year.",
+    "Strong component demand driven by tech titan AI buildouts has outstripped supply across the industry, dramatically increasing NAND, memory and CPU pricing.",
+    "Everpure raised prices on our product line on February 9th reflecting the dramatic and rapid rise in component prices.",
+    "Our long-standing and direct component supplier relationships and in-house hardware design provides us additional flexibility in addressing supply chain disruption.",
+    "Our Evergreen model provides transparent pricing that protects customer economics.",
+    "This recent release of Purity Enhanced Data Reduction offsets our higher pricing by providing a cost per effective terabyte that is lower than our previous prices on some workloads.",
+    "We look forward to building on this momentum together in FY27."
+   ],
+   "id": "p-q4fy26-everpure-prepared-remarks",
+   "msent": {
+    "1touch": 2,
+    "30s": 1,
+    "7b": 1,
+    "9th": 1,
+    "a": 24,
+    "ability": 2,
+    "above": 1,
+    "accelerate": 2,
+    "accelerated": 1,
+    "accelerating": 1,
+    "access": 1,
+    "achieved": 2,
+    "acquire": 1,
+    "across": 4,
+    "addition": 1,
+    "additional": 1,
+    "addressing": 1,
+    "adds": 1,
+    "adopting": 1,
+    "advanced": 1,
+    "afternoon": 1,
+    "ago": 1,
+    "agreement": 1,
+    "ai": 10,
+    "align": 1,
+    "all": 7,
+    "allow": 1,
+    "almost": 1,
+    "alone": 1,
+    "also": 4,
+    "always": 1,
+    "am": 1,
+    "amid": 1,
+    "an": 3,
+    "analytics": 1,
+    "and": 41,
+    "announced": 1,
+    "any": 1,
+    "apply": 1,
+    "architecture": 6,
+    "are": 13,
+    "as": 13,
+    "at": 4,
+    "attract": 1,
+    "audited": 1,
+    "automate": 1,
+    "backup": 1,
+    "base": 1,
+    "based": 2,
+    "be": 1,
+    "because": 1,
+    "been": 1,
+    "believe": 1,
+    "benchmark": 1,
+    "benefit": 1,
+    "better": 2,
+    "beyond": 2,
+    "billion": 1,
+    "bit": 1,
+    "block": 1,
+    "both": 2,
+    "brand": 2,
+    "broad": 2,
+    "broadened": 1,
+    "broader": 2,
+    "building": 2,
+    "buildouts": 1,
+    "built": 1,
+    "business": 4,
+    "but": 2,
+    "by": 4,
+    "calendar": 1,
+    "call": 1,
+    "calls": 1,
+    "can": 4,
+    "capabilities": 2,
+    "capped": 1,
+    "care": 1,
+    "cases": 2,
+    "certification": 1,
+    "chain": 4,
+    "change": 1,
+    "chapter": 1,
+    "classification": 1,
+    "clear": 1,
+    "close": 1,
+    "cloud": 5,
+    "combined": 1,
+    "coming": 1,
+    "commercial": 1,
+    "commodity": 2,
+    "company": 2,
+    "compete": 1,
+    "competitive": 1,
+    "competitor": 1,
+    "competitors": 1,
+    "complexity": 1,
+    "component": 5,
+    "components": 1,
+    "comprehensive": 2,
+    "concentrated": 1,
+    "consistent": 4,
+    "constraints": 2,
+    "containers": 1,
+    "contest": 1,
+    "context": 1,
+    "contingency": 1,
+    "continue": 1,
+    "continued": 2,
+    "continues": 1,
+    "continuing": 1,
+    "continuous": 1,
+    "control": 2,
+    "core": 2,
+    "cost": 2,
+    "costs": 1,
+    "could": 1,
+    "cpu": 1,
+    "created": 1,
+    "creating": 1,
+    "critical": 1,
+    "customer": 6,
+    "customers": 15,
+    "cyber": 1,
+    "d": 1,
+    "data": 18,
+    "databases": 1,
+    "decade": 1,
+    "definitive": 1,
+    "delays": 1,
+    "deliver": 1,
+    "delivers": 1,
+    "demand": 3,
+    "deployment": 1,
+    "design": 1,
+    "detail": 2,
+    "details": 1,
+    "developed": 2,
+    "direct": 1,
+    "directflash": 2,
+    "discovery": 1,
+    "discuss": 1,
+    "discussions": 2,
+    "disruption": 2,
+    "disruptions": 1,
+    "distributed": 1,
+    "diversified": 1,
+    "dollar": 1,
+    "dozens": 1,
+    "dramatic": 1,
+    "dramatically": 1,
+    "driven": 4,
+    "driving": 1,
+    "eager": 1,
+    "earlier": 2,
+    "earnings": 1,
+    "easily": 1,
+    "economics": 1,
+    "effective": 1,
+    "efficiency": 1,
+    "efficiently": 1,
+    "employees": 1,
+    "empowering": 1,
+    "enable": 1,
+    "enables": 1,
+    "enabling": 1,
+    "end": 1,
+    "enhanced": 2,
+    "ensure": 1,
+    "enter": 1,
+    "entering": 3,
+    "enterprise": 11,
+    "entitled": 1,
+    "environment": 4,
+    "even": 1,
+    "evergreen": 6,
+    "everpure": 8,
+    "every": 1,
+    "everyone": 1,
+    "evolution": 1,
+    "exa": 4,
+    "exabytes": 1,
+    "exciting": 1,
+    "executing": 1,
+    "existing": 1,
+    "expanded": 2,
+    "expanding": 1,
+    "expect": 5,
+    "expectations": 1,
+    "extended": 1,
+    "extending": 1,
+    "extract": 1,
+    "extraordinary": 1,
+    "faces": 1,
+    "february": 1,
+    "file": 2,
+    "financial": 1,
+    "first": 2,
+    "fiscal": 2,
+    "flashblade": 3,
+    "flexibility": 2,
+    "focus": 1,
+    "focused": 2,
+    "for": 12,
+    "forward": 1,
+    "foundation": 1,
+    "franchise": 1,
+    "from": 4,
+    "full": 2,
+    "further": 1,
+    "fusion": 3,
+    "future": 1,
+    "fy26": 2,
+    "fy27": 5,
+    "gaining": 1,
+    "global": 3,
+    "going": 1,
+    "gold": 1,
+    "good": 1,
+    "governance": 3,
+    "government": 1,
+    "greater": 1,
+    "grew": 1,
+    "gross": 1,
+    "growth": 6,
+    "guidance": 2,
+    "half": 1,
+    "hardware": 2,
+    "has": 5,
+    "have": 9,
+    "headwind": 2,
+    "help": 2,
+    "high": 5,
+    "higher": 1,
+    "highest": 1,
+    "highly": 1,
+    "horizon": 1,
+    "house": 1,
+    "hyperscale": 4,
+    "hyperscaler": 1,
+    "hyperscalers": 1,
+    "i": 3,
+    "i'll": 1,
+    "identified": 1,
+    "image": 1,
+    "implemented": 1,
+    "improvements": 1,
+    "in": 28,
+    "include": 1,
+    "including": 3,
+    "incorporated": 1,
+    "increase": 1,
+    "increasing": 4,
+    "increasingly": 3,
+    "industry": 8,
+    "infrastructure": 4,
+    "innovation": 2,
+    "intelligent": 1,
+    "intelligently": 1,
+    "international": 1,
+    "into": 2,
+    "introduction": 1,
+    "invest": 1,
+    "invested": 1,
+    "investing": 2,
+    "investment": 2,
+    "investors": 1,
+    "invite": 1,
+    "is": 9,
+    "it": 2,
+    "its": 2,
+    "journey": 1,
+    "known": 1,
+    "kubernetes": 1,
+    "last": 1,
+    "later": 1,
+    "latest": 2,
+    "lead": 1,
+    "leading": 2,
+    "line": 1,
+    "long": 1,
+    "look": 1,
+    "low": 1,
+    "lower": 2,
+    "lowest": 1,
+    "loyalty": 1,
+    "macroeconomic": 1,
+    "made": 1,
+    "maintained": 1,
+    "majority": 1,
+    "make": 2,
+    "manage": 4,
+    "management": 5,
+    "margins": 1,
+    "market": 1,
+    "meaningful": 1,
+    "memory": 1,
+    "midpoint": 1,
+    "mlperf": 1,
+    "model": 2,
+    "modernize": 1,
+    "momentum": 5,
+    "more": 7,
+    "most": 1,
+    "moving": 1,
+    "much": 2,
+    "name": 2,
+    "nand": 1,
+    "necessary": 1,
+    "needs": 2,
+    "net": 1,
+    "new": 4,
+    "not": 1,
+    "now": 7,
+    "nps": 1,
+    "object": 2,
+    "of": 20,
+    "off": 1,
+    "offering": 1,
+    "offsets": 1,
+    "on": 8,
+    "one": 1,
+    "only": 1,
+    "operating": 3,
+    "operational": 2,
+    "other": 2,
+    "our": 40,
+    "outperform": 1,
+    "outstanding": 1,
+    "outstripped": 1,
+    "over": 3,
+    "own": 1,
+    "particularly": 1,
+    "partners": 1,
+    "partnership": 1,
+    "past": 2,
+    "paul": 1,
+    "per": 1,
+    "performance": 5,
+    "persist": 1,
+    "personas": 1,
+    "plane": 1,
+    "plans": 1,
+    "platform": 2,
+    "point": 1,
+    "policies": 1,
+    "policy": 1,
+    "position": 2,
+    "potential": 1,
+    "power": 1,
+    "practically": 1,
+    "prepare": 2,
+    "previous": 2,
+    "prices": 3,
+    "pricing": 3,
+    "product": 2,
+    "products": 2,
+    "progress": 1,
+    "promise": 1,
+    "promoter": 1,
+    "protect": 2,
+    "protects": 1,
+    "protocols": 1,
+    "proud": 1,
+    "proven": 1,
+    "provide": 2,
+    "provides": 2,
+    "providing": 1,
+    "published": 1,
+    "purity": 4,
+    "put": 1,
+    "q1": 1,
+    "q4": 3,
+    "quality": 1,
+    "quarter": 3,
+    "r": 1,
+    "raise": 1,
+    "raised": 1,
+    "range": 1,
+    "rapid": 2,
+    "rather": 2,
+    "reached": 1,
+    "ready": 1,
+    "reason": 1,
+    "rebranding": 1,
+    "recent": 1,
+    "recently": 1,
+    "recover": 1,
+    "reduce": 1,
+    "reduction": 2,
+    "reflect": 1,
+    "reflected": 1,
+    "reflecting": 1,
+    "reflects": 1,
+    "relationships": 1,
+    "release": 1,
+    "released": 1,
+    "reliable": 1,
+    "remains": 1,
+    "reminder": 1,
+    "represents": 1,
+    "resilience": 1,
+    "resilient": 1,
+    "resonate": 1,
+    "results": 1,
+    "revenue": 3,
+    "rise": 2,
+    "rising": 1,
+    "risk": 1,
+    "satisfaction": 1,
+    "scale": 2,
+    "score": 2,
+    "scores": 1,
+    "second": 1,
+    "sectors": 1,
+    "secured": 1,
+    "see": 2,
+    "serve": 1,
+    "services": 1,
+    "set": 2,
+    "sets": 1,
+    "shipment": 1,
+    "shortages": 2,
+    "simplify": 1,
+    "since": 1,
+    "single": 1,
+    "smoothly": 1,
+    "software": 5,
+    "solution": 1,
+    "solutions": 1,
+    "some": 1,
+    "source": 1,
+    "sources": 1,
+    "sovereignty": 1,
+    "specstorage": 1,
+    "spectrum": 1,
+    "stage": 1,
+    "standard": 1,
+    "standardize": 2,
+    "standardized": 1,
+    "standing": 1,
+    "stated": 1,
+    "storage": 10,
+    "story": 1,
+    "strategic": 2,
+    "strategy": 2,
+    "strength": 1,
+    "strengthened": 1,
+    "strong": 7,
+    "strongly": 1,
+    "structure": 1,
+    "subscriptions": 1,
+    "such": 1,
+    "supplier": 1,
+    "suppliers": 1,
+    "supply": 6,
+    "support": 3,
+    "supports": 1,
+    "systems": 2,
+    "tailwind": 2,
+    "tarek": 3,
+    "tech": 1,
+    "technologies": 1,
+    "technology": 6,
+    "tens": 1,
+    "terabyte": 1,
+    "terabytes": 1,
+    "testing": 1,
+    "than": 5,
+    "thank": 2,
+    "that": 8,
+    "the": 23,
+    "theaters": 1,
+    "their": 10,
+    "them": 2,
+    "these": 1,
+    "they": 1,
+    "this": 9,
+    "through": 3,
+    "time": 1,
+    "times": 1,
+    "titan": 1,
+    "to": 27,
+    "today": 2,
+    "together": 1,
+    "traditional": 1,
+    "translating": 1,
+    "transparent": 1,
+    "trust": 2,
+    "turning": 1,
+    "typical": 1,
+    "uncertainty": 1,
+    "unified": 2,
+    "unique": 1,
+    "universality": 1,
+    "unlock": 1,
+    "unpredictable": 1,
+    "us": 3,
+    "use": 3,
+    "value": 2,
+    "vendor": 1,
+    "very": 1,
+    "virtualization": 1,
+    "was": 3,
+    "we": 32,
+    "weathered": 1,
+    "week": 1,
+    "welcome": 1,
+    "well": 2,
+    "were": 1,
+    "what": 1,
+    "where": 3,
+    "which": 6,
+    "while": 1,
+    "who": 1,
+    "why": 1,
+    "will": 6,
+    "with": 14,
+    "workloads": 3,
+    "world": 2,
+    "year": 7,
+    "yet": 1,
+    "you": 2,
+    "your": 1
+   },
+   "n_sentences": 65,
+   "source": "s21.q4cdn.com",
+   "source_type": "Earnings call prepared remarks",
+   "title": "Q4 FY2026 Earnings Call: CEO Prepared Remarks",
+   "type": "remarks",
+   "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2026/q4/Q4FY26-Everpure-Prepared-Remarks.pdf",
+   "words": 1383
+  }
+ ],
+ "excerpt_budget": 0.25,
+ "excerpts_per_word": 10,
+ "keep_numbers": false,
+ "note": "Derived data only: word counts and a limited excerpt set. Full text is not included; see each document's url.",
+ "slug": "giancarlo"
+}

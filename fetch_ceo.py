@@ -245,7 +245,7 @@ def ternus_extract(raw):
 
 # ---------------- Data-driven companies (ceos.json) -------------------------------------------
 import zipfile, io
-from ceo_extract import transcript_section, letter_body, speaker_turns
+from ceo_extract import transcript_section, transcript_sections, letter_body, speaker_turns, volozh_letter_from_pdf
 CONFIG = json.loads((ROOT / "ceos.json").read_text(encoding="utf-8"))["companies"]
 CONFIG = [_c for _c in CONFIG if not _c.get("fetcher")]       # e.g. past CEOs built by fetch_ceo_filings.py
 for _c in CONFIG:
@@ -362,10 +362,24 @@ def pages_list(cfg):
                 out.append({"url": u, "period": c["period"], "hint": ""}); break
     return out
 
+
+def urls_list(cfg):
+    """discover.urls may be a list of strings or dicts with url, date, period, title."""
+    out = []
+    for u in cfg["discover"]["urls"]:
+        if isinstance(u, str):
+            out.append({"url": u, "period": "", "hint": u})
+            continue
+        item = {"url": u["url"], "period": u.get("period") or "", "hint": u.get("date") or u.get("hint") or u["url"]}
+        if u.get("date"): item["date"] = u["date"]
+        if u.get("title"): item["title"] = u["title"]
+        out.append(item)
+    return out
+
 def generic_list(slug):
     cfg = PEOPLE[slug]["cfg"]
     return sorted({"q4": q4_list, "links": links_list, "pattern": pattern_list, "pages": pages_list,
-            "urls": lambda c: [{"url": u, "period": "", "hint": u} for u in c["discover"]["urls"]]}[cfg["discover"]["type"]](cfg),
+            "urls": urls_list}[cfg["discover"]["type"]](cfg),
                   key=order_key, reverse=True)
 
 def generic_fetch(slug, c, d):
@@ -374,7 +388,7 @@ def generic_fetch(slug, c, d):
     raw = get(c["url"], binary=True)
     ext = ".pdf" if raw[:4] == b"%PDF" else ".docx" if raw[:2] == b"PK" else ".html"
     text = doc_text(raw)
-    date = find_date(c.get("hint"), text[:6000])
+    date = c.get("date") or find_date(c.get("hint"), text[:6000])
     if not date and raw[:4] == b"%PDF":
         date = pdf_date(raw)
         k = order_key(c)                                   # sanity: within ~100 days after the quarter it covers
@@ -387,13 +401,23 @@ def generic_fetch(slug, c, d):
     if not date: raise ValueError("no date found")
     if date < cfg.get("docs_since", cfg["since"]): raise ValueError(f"{date} is before {cfg['name']} became CEO ({cfg['since']})")
     if cfg.get("until") and date > cfg["until"]: raise ValueError(f"{date} is after {cfg['name']} left as CEO ({cfg['until']})")
-    if cfg["kind"] == "letter":
+    if cfg.get("extract") == "volozh_letter":
+        raw_path = d / "raw" / (c["id"] + ext)
+        atomic_write(raw_path, raw)
+        paras = volozh_letter_from_pdf(raw_path)
+        title = c.get("title") or f"{c.get('period') or date[:4]} Letter to Shareholders"
+    elif cfg["kind"] == "letter":
         paras = letter_body(text, cfg["signer"])
         if not re.search(re.escape(cfg["signer"].split()[-1]), text): raise ValueError("not signed by " + cfg["signer"])
         ym = re.search(r"(20\d\d)", urllib.parse.unquote(c["url"]).rsplit("/", 1)[-1])
-        title = f"{int(ym.group(1)) if ym else int(date[:4]) - 1} Letter to Shareholders"
+        title = c.get("title") or f"{int(ym.group(1)) if ym else int(date[:4]) - 1} Letter to Shareholders"
     else:
-        paras = speaker_turns(text, cfg["ceo"]) if cfg["kind"] == "turns" else transcript_section(text, cfg["ceo"])
+        if cfg["kind"] == "turns":
+            paras = speaker_turns(text, cfg["ceo"])
+        elif cfg.get("all_sections"):
+            paras = transcript_sections(text, cfg["ceo"])
+        else:
+            paras = transcript_section(text, cfg["ceo"])
         per = c.get("period") or ""
         k = order_key(c)
         if not per and k[1] and not k[2]:
@@ -408,7 +432,7 @@ def generic_fetch(slug, c, d):
         if not per and not cfg.get("fiscal") and cfg["discover"].get("fiscal_end_month", 12) == 12:   # calendar-year reporter: call date -> prior quarter
             cm, cy = int(date[5:7]), int(date[:4]); qn = (cm - 1) // 3
             per = f"Q{qn} {cy}" if qn else f"Q4 {cy - 1}"
-        title = (f"{per} Earnings Call" if per else f"Earnings Call, {datetime.strptime(date, '%Y-%m-%d'):%b %-d, %Y}") + (": Remarks and Q&A Answers" if cfg["kind"] == "turns" else ": CEO Prepared Remarks")
+        title = c.get("title") or ((f"{per} Earnings Call" if per else f"Earnings Call, {datetime.strptime(date, '%Y-%m-%d'):%b %-d, %Y}") + (": Remarks and Q&A Answers" if cfg["kind"] == "turns" else ": CEO Prepared Remarks"))
     atomic_write(d / "raw" / (c["id"] + ext), raw)
     note = {"note": cfg["note_before_since"]} if cfg.get("note_before_since") and date < cfg["since"] else {}
     return {"title": title, "date": date} | note | ({"date_basis": "transcript file date (call date not printed)"} if c.get("date_basis") else {}), paras
