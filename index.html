@@ -247,6 +247,15 @@ tr[data-w]:hover td{background:#f6efe0}tr.active td{background:var(--hl)}
 #azAll:hover{border-color:var(--rule)}
 #azAll[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
 #azAll[hidden]{display:none!important}
+#azsc{display:flex;align-items:center;min-width:0;position:relative;flex:1 1 auto}
+#azsc:has(#az[hidden]){display:none!important}
+#azsc .azarr{appearance:none;flex:none;box-sizing:border-box;width:18px;height:32px;margin:0;padding:0;border:0;border-radius:4px;background:transparent;color:var(--ink);font:700 18px/1 Arial,Helvetica,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+#azsc .azarr[hidden]{display:none!important}
+#azsc .azarr:disabled{opacity:.35;cursor:default}
+#azsc .azarr:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+#azsc.az-left::before,#azsc.az-right::after{content:"";position:absolute;top:0;bottom:0;width:16px;pointer-events:none;z-index:1}
+#azsc.az-left::before{left:18px;background:linear-gradient(90deg,var(--card),transparent)}
+#azsc.az-right::after{right:18px;background:linear-gradient(90deg,transparent,var(--card))}
 #az[hidden]{display:none!important}
 @container (max-width:285px){
  .pk.has-az{display:block}
@@ -432,7 +441,8 @@ button.only{background:transparent;color:var(--ink);border:1px solid var(--rule)
 #pfilter{margin:0 0 10px}#pfilter[hidden],#idx[hidden],#porder[hidden]{display:none!important}
 #porder{display:flex;align-items:center;justify-content:space-between;gap:8px 12px;flex-wrap:nowrap;margin:0 0 8px;width:100%;box-sizing:border-box;align-self:stretch}
 #porder .porder-lbl{flex:1 1 auto;min-width:0;font-size:12.5px;line-height:1.35;color:var(--muted)}
-#porderBtn{flex:none;margin-left:auto;appearance:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:8px 11px;min-height:36px;cursor:pointer}
+#porderBtn{flex:none;margin-left:auto;appearance:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:8px 11px;min-height:36px;cursor:pointer;position:relative;overflow:visible}
+#porderBtn::after{content:"";position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #ff5449 transparent transparent;pointer-events:none}
 #porderBtn:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .pk.has-az #porder{grid-column:1/-1;grid-row:4}
 @media (max-width:640px){#porderBtn{min-height:40px}}
@@ -1512,6 +1522,7 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
 @media (max-width:640px){
   /* mm229: one-row scrollable A–Z (empty letters hidden) with the sort toggle on the right */
   html body .pk.has-az #azwrap{display:flex;align-items:center;gap:6px;width:100%;min-width:0;margin:0 0 4px;box-sizing:border-box}
+  html body .pk.has-az #azsc{display:flex;align-items:center;flex:1 1 auto;min-width:0;position:relative}
   html body .pk.has-az #az{display:flex!important;flex:1 1 auto;flex-wrap:nowrap!important;align-items:center;gap:0!important;min-width:0;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;padding:0!important;margin:0!important;border-left:0!important;-webkit-overflow-scrolling:touch;grid-template-columns:none!important}
   html body .pk.has-az #az::-webkit-scrollbar{display:none}
   html body .pk.has-az #az[hidden]{display:none!important}
@@ -1548,7 +1559,8 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
   html body .pk.popen #azwrap{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:auto auto;align-items:center;column-gap:0;row-gap:2px;width:100%;min-width:0;margin:0 0 4px;box-sizing:border-box}
   html body .pk.popen #azbar{display:contents}
   html body .pk.popen #azAll{grid-column:1;grid-row:1;margin:0}
-  html body .pk.popen #az{grid-column:2;grid-row:1;min-width:0}
+  html body .pk.popen #azsc{grid-column:2;grid-row:1;min-width:0}
+  html body .pk.popen #az{min-width:0;flex:1 1 auto}
   html body .pk.popen #aztools{display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-start;grid-column:3;grid-row:1/-1;align-self:start;flex:0 0 auto;flex-shrink:0;gap:2px;max-width:none;width:auto;margin:0 0 0 6px}
   html body .pk.popen #aztools:not(:has(#porder:not([hidden]))){display:none}
   html body .pk.popen #porder{max-width:none!important;width:auto!important;margin:0!important}
@@ -1579,10 +1591,12 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
   html body .pk.has-az{display:block}
   html body .pk.has-az #azwrap{display:flex;align-items:center;gap:8px;width:100%;min-width:0;margin:0 0 6px;box-sizing:border-box}
   html body .pk.has-az #azwrap:not(:has(#az:not([hidden]))){display:none}
-  html body .pk.has-az #azbar{display:flex!important;flex:1 1 auto;flex-wrap:nowrap!important;align-items:center;gap:1px!important;min-width:0;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;padding:0!important;margin:0!important;border-left:0!important;-webkit-overflow-scrolling:touch}
-  html body .pk.has-az #azbar::-webkit-scrollbar{display:none}
+  html body .pk.has-az #azbar{display:flex!important;flex:1 1 auto;flex-wrap:nowrap!important;align-items:center;gap:1px!important;min-width:0;overflow:visible!important;padding:0!important;margin:0!important;border-left:0!important}
   html body .pk.has-az #azbar:has(#az[hidden]){display:none!important}
-  html body .pk.has-az #az{display:flex!important;flex:0 0 auto;flex-wrap:nowrap!important;align-items:center;gap:1px!important;min-width:0;overflow:visible!important;padding:0!important;margin:0!important;border-left:0!important;grid-template-columns:none!important;grid-column:auto;grid-row:auto}
+  html body .pk.has-az #azsc{display:flex;align-items:center;flex:1 1 auto;min-width:0;position:relative}
+  html body .pk.has-az #azsc .azarr{height:34px}
+  html body .pk.has-az #az{display:flex!important;flex:1 1 auto;flex-wrap:nowrap!important;align-items:center;gap:1px!important;min-width:0;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;padding:0!important;margin:0!important;border-left:0!important;-webkit-overflow-scrolling:touch;grid-template-columns:none!important;grid-column:auto;grid-row:auto}
+  html body .pk.has-az #az::-webkit-scrollbar{display:none}
   html body .pk.has-az #az[hidden]{display:none!important}
   html body .pk.has-az #az button,html body .pk.has-az #azAll{flex:none!important;width:32px!important;min-width:32px!important;height:34px!important;min-height:34px!important;font-size:13px!important;border-radius:6px;padding:0!important}
   html body .pk.has-az #az button::before{inset:1px;border-radius:5px}
@@ -1628,7 +1642,9 @@ html body .rfoot a.rplay:focus-visible{outline:2px solid #fff;outline-offset:2px
 <div id="pfilter" hidden><input type="search" id="psearch" placeholder="Search name, company or ticker" aria-label="Search people" autocomplete="off">
 <div id="idx" role="group" aria-label="Filter by stock index"></div></div>
 <div id="azwrap"><div id="azbar" role="toolbar" aria-label="Filter by last name" aria-controls="persons"><button type="button" class="all" id="azAll" data-l="" aria-pressed="true" hidden title="Show everyone">All</button>
-<div id="az" hidden></div></div>
+<div id="azsc"><button type="button" class="azarr" id="azPrev" aria-label="Earlier letters" hidden>‹</button>
+<div id="az" hidden></div>
+<button type="button" class="azarr" id="azNext" aria-label="More letters" hidden>›</button></div></div>
 <div id="aztools"><div id="porder" hidden><span class="porder-lbl" id="porderLbl">Ordered by company size (market value)</span><button type="button" id="porderBtn" aria-label="Sort CEOs alphabetically by last name">ALPHABETICAL</button></div></div>
 <div id="pMore" hidden><button type="button" id="pMoreBtn" aria-expanded="false">Show all</button></div></div>
 <div class="tf-row" id="persons"><span class="lbl">Person</span></div>
@@ -1763,7 +1779,7 @@ const matchQ=p=>{if(!pq)return true;const h=[p.name,p.org,p.ticker,p.role,p.grou
 const lastName=p=>(p.sort_name||p.name.replace(/,?\s+(Jr|Sr)\.?$|,?\s+(II|III|IV)$/,'').trim().split(' ').pop()).toUpperCase();
 function renderAZ(allIn,inCat){
   const az=$('az'),allBtn=$('azAll'),bar=$('azbar'),use=allIn.length>=8;     // only for the bigger categories (CEOs, US Government), not the five Fed Chairmen
-  az.hidden=!use;if(allBtn)allBtn.hidden=!use;(az.closest('.pk')||az.parentElement).classList.toggle('has-az',use);if(!use){azSel='';return}
+  az.hidden=!use;if(allBtn)allBtn.hidden=!use;(az.closest('.pk')||az.parentElement).classList.toggle('has-az',use);if(!use){azSel='';syncAzScroll();return}
   const have=new Set(inCat.map(p=>lastName(p)[0]));
   if(azSel&&!have.has(azSel))azSel='';
   const L='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -1777,7 +1793,22 @@ function renderAZ(allIn,inCat){
     if(e.key==='ArrowRight'||e.key==='ArrowDown')j=(i+1)%btns.length;else if(e.key==='ArrowLeft'||e.key==='ArrowUp')j=(i-1+btns.length)%btns.length;
     else if(e.key==='Home')j=0;else if(e.key==='End')j=btns.length-1;else if(e.key==='Escape'&&azSel){azSel='';renderPicker();allBtn&&allBtn.focus();e.preventDefault();return}
     if(j>=0){e.preventDefault();btns[i].tabIndex=-1;btns[j].tabIndex=0;btns[j].focus()}};
+  requestAnimationFrame(syncAzScroll);
 }
+function syncAzScroll(){   // mm234: show ‹ › + edge fades when the letter row overflows; dim arrows at the ends
+  const sc=$('az'),box=$('azsc'),prev=$('azPrev'),next=$('azNext');
+  if(!sc||!box||!prev||!next)return;
+  if(sc.hidden){box.classList.remove('az-left','az-right','az-overflow');prev.hidden=next.hidden=true;return}
+  const max=Math.max(0,sc.scrollWidth-sc.clientWidth),over=max>2,sl=sc.scrollLeft;
+  const canL=over&&sl>2,canR=over&&sl<max-2;
+  box.classList.toggle('az-overflow',over);
+  box.classList.toggle('az-left',canL);
+  box.classList.toggle('az-right',canR);
+  prev.hidden=!over;next.hidden=!over;
+  prev.disabled=!canL;next.disabled=!canR;
+  prev.setAttribute('aria-disabled',String(!canL));next.setAttribute('aria-disabled',String(!canR));
+}
+function pageAz(dir){const sc=$('az');if(!sc)return;sc.scrollBy({left:dir*Math.max(Math.round(sc.clientWidth*.75),120),behavior:'smooth'})}
 function renderPicker(){
   if(azCat!==P.category){azCat=P.category;azSel='';idxSel='';pq='';pOpen=keepOpen;keepOpen=false;$('psearch').value=''}
   $('cats').innerHTML=CATS.map(c=>{
@@ -1843,6 +1874,11 @@ function scrollSelChip(){   // mm45: keep the selected speaker chip visible insi
   else if(br.bottom>hr.bottom-4)host.scrollTop+=br.bottom-hr.bottom+8;
 }
 $('porderBtn').onclick=()=>{ceoAlpha=!ceoAlpha;renderPicker()};
+$('azPrev')&&($('azPrev').onclick=()=>pageAz(-1));
+$('azNext')&&($('azNext').onclick=()=>pageAz(1));
+$('az')&&$('az').addEventListener('scroll',syncAzScroll,{passive:true});
+addEventListener('resize',syncAzScroll);
+
 $('pMoreBtn').onclick=()=>{const pk=document.querySelector('#picker .pk');if(!pk)return;pk.classList.toggle('pall');syncPMore();if(!pk.classList.contains('pall'))scrollSelChip()};
 $('psearch').addEventListener('input',e=>{pq=e.target.value.trim();renderPicker()});
 $('psearch').addEventListener('keydown',e=>{if(e.key==='Enter'){const b=$('persons').querySelector('button.chip');if(b){e.preventDefault();setPerson(b.dataset.person)}}
